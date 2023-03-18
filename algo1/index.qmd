@@ -4,3 +4,20 @@ title: Algorithmique (partie 1) - Programme
 
 ## Points traités dans cette séquence
 
+Le concept de méthode algorithmique est introduit ; de nouveaux exemples seront vus en 
+terminale. Quelques algorithmes classiques sont étudiés. L’étude de leurs coûts respectifs 
+prend tout son sens dans le cas de données nombreuses, qui peuvent être 
+préférentiellement des données ouvertes.
+
+Il est nécessaire de montrer l’intérêt de prouver la correction d’un algorithme pour lequel on 
+dispose d’une spécification précise, notamment en mobilisant la notion d’invariant sur des 
+exemples simples. La nécessité de prouver la terminaison d’un programme est mise en 
+évidence dès qu’on utilise une boucle non bornée (ou, en terminale, des fonctions 
+récursives) grâce à la mobilisation de la notion de variant sur des exemples simples. 
+
+|Contenus |Capacités attendues| Commentaires|
+| :---| :---| :---|
+| Parcours séquentiel d’un tableau| Écrire un algorithme de recherche d’une occurrence sur des valeurs de type quelconque. Écrire un algorithme de recherche d’un extremum, de calcul d’une moyenne. |On montre que le coût est linéaire.|
+| Tris par insertion, par sélection| Écrire un algorithme de tri. Décrire un invariant de boucle qui prouve la correction des tris par insertion, par sélection.| La terminaison de ces algorithmes est à justifier. On montre que leur coût est quadratique dans le pire cas.|
+| Recherche dichotomique dans un tableau trié| Montrer la terminaison de la recherche dichotomique à l’aide d’un variant de boucle.|Des assertions peuvent être utilisées. La preuve de la correction peut être présentée par le professeur|
+
