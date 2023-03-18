@@ -1,0 +1,67 @@
+project:
+  type: website
+
+website:
+  title: "NSI - Première"
+  favicon: favicon.ico
+  page-navigation: true
+  site-url: https://flallemand.fr/PNSI
+  repo-url: https://github.com/fabricelallemand15/quarto_PNSI
+  repo-actions: [edit, issue]
+  navbar:
+    search: false
+    background: "#2c3e50"
+    left:
+      - href: index.qmd
+        text: "{{< fa house-chimney-window >}} Accueil"
+      - href: https://python.flallemand.fr/
+        text: "{{< fa brands python >}} Console Python"
+      - href: https://notebook.flallemand.fr/
+        text: "{{< fa pen-to-square >}} Notebook Python"
+      - href: ressources.qmd
+        text: "{{< fa info >}} Ressources"
+  sidebar: 
+    style: floating
+    collapse-level: 1
+    alignment: left
+    contents: 
+      - section: "S6-Algorithmique (1)"
+        contents: 
+            - algo1/index.qmd
+  page-footer: 
+    left:
+      - href: http://creativecommons.org/licenses/by/4.0/
+        text: <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    right: 
+      - text: "Mentions légales"
+        href: about.qmd
+      - icon: github
+        href: https://github.com/fabricelallemand15/quarto_PNSI
+  cookie-consent: true
+
+bibliography: references.bib 
+
+format:
+  html:
+    lang: fr
+    link-external-icon: true
+    theme:
+      light: [flatly, theme_light.scss]
+      dark: [darkly, theme_dark.scss]
+    css: styles.css
+    toc: true
+    grid:
+      sidebar-width: 250px
+      body-width: 1000px
+      margin-width: 300px
+    filters: 
+      - lightbox
+    lightbox: auto
+    code-block-border-left: "#31BAE9"
+    code-block-bg: true
+  pdf:
+    papersize: a4
+
+
+
+
