@@ -1,5 +1,5 @@
 ---
-title: Algorithmique (partie 1) - Programme
+title: Programme
 ---
 
 ## Points traités dans cette séquence
