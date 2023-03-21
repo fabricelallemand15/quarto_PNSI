@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://flallemand.fr/PNSI/about.html</loc>
-    <lastmod>2023-03-18T20:50:37.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/index.html</loc>
-    <lastmod>2023-03-21T20:58:31.007Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/ressources.html</loc>
-    <lastmod>2023-03-18T20:51:02.257Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/algo1/index.html</loc>
-    <lastmod>2023-03-20T05:40:14.700Z</lastmod>
+    <lastmod>2023-03-21T21:41:06.413Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/algo1/generalites.html</loc>
-    <lastmod>2023-03-21T15:40:55.537Z</lastmod>
+    <lastmod>2023-03-21T21:41:29.291Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/algo1/index.html</loc>
+    <lastmod>2023-03-21T21:41:39.022Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/algo1/parcoursTableau.html</loc>
+    <lastmod>2023-03-21T21:54:32.113Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/index.html</loc>
+    <lastmod>2023-03-21T21:42:06.516Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/ressources.html</loc>
+    <lastmod>2023-03-21T21:42:14.981Z</lastmod>
   </url>
 </urlset>
