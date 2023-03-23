@@ -30,6 +30,7 @@ website:
             - algo1/index.qmd
             - algo1/generalites.qmd
             - algo1/parcoursTableau.qmd
+            - algo1/tris.qmd
   page-footer: 
     left:
       - href: http://creativecommons.org/licenses/by/4.0/

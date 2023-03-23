@@ -96,5 +96,26 @@
     "title": "Sources utilisées",
     "section": "",
     "text": "Pour rédiger ce cours et préparer les exercices, TP, projets présentés ici, j’ai utilisé de nombreuses sources que je vais essayer de citer ici, sans prétendre être exhaustif.\n\nDocuments d’accompagnement Eduscol.\nContenus du MOOC “Numérique et Sciences Informatiques : les fondamentaux” de l’INRIA, disponible sur la plateforme fun-mooc.\nApprendre à programmer avec Python 3, Gérard Swinnen, éditions Eyrolles, 2012. Disponible en ligne\nLe site interstices : https://interstices.info/.\nLes images et illustrations sont soit produites par mes soins, soit issues de Pixabay ou de Wikimedia commons ou encore de Pexels et, dans tous les cas, libres de droits.\nCours de David Roche.\nCours de Frédéric Junier.\nCours de Van Zuijlen Stéphan.\nCours de Konieczko Quentin\nCours de Olivier Lécluse\nCours du Lycée Blaise Pascal de Clermont-Ferrand\nCours du lycée Champollion de Grenoble\nCours du site Lyceum\nCours du site Mon Lycée Numérique\nCours du Lycée Stanislas de Wissembourg\nCours d’informatique de François Brucker (école Centrale de Marseille)\nCours de Philippe Rigaux sur les bases de données.\nCours de Gilles Lassus\nLe site MDN Web Docs : excellentissime ressource pour tout apprendre sur les langages HTML, CSS, Javascript et le protocole HTTP.\nLe site de M. JANVIER."
+  },
+  {
+    "objectID": "algo1/tris.html",
+    "href": "algo1/tris.html",
+    "title": "Algorithmes de tris",
+    "section": "",
+    "text": "Dans cette partie du cours, nous allons étudier deux algorithmes de tris : le tri par insertion et le tri par sélection.\nÉtant donné un tableau de nombres, l’objectif est d’écrire une fonction qui renvoie un tableau contenant les mêmes nombres mais dans l’ordre croissant."
+  },
+  {
+    "objectID": "algo1/tris.html#tri-par-insertion",
+    "href": "algo1/tris.html#tri-par-insertion",
+    "title": "Algorithmes de tris",
+    "section": "1. Tri par insertion",
+    "text": "1. Tri par insertion\n\nLe principe\n\n\n\n\n\n\nPrincipe de l’algorithme\n\n\n\nEn commençant par le deuxième élément du tableau :\n\nOn compare l’élément courant avec l’élément précédent.\nSi l’élément courant est plus petit, on échange les deux éléments.\nOn continue à comparer et échanger l’élément courant avec les éléments précédents jusqu’à ce que l’élément courant soit plus grand que l’élément précédent.\n\n\n\n\n\n\n\n\n\n\nProgrammation\n\ndef tri_insertion(tableau: list) -&gt; list:\n    \"\"\"Tri en place par insertion le tableau passé en paramètre.\"\"\"\n1    for i in range(1, len(tableau)):\n2        j = i\n3        while j &gt; 0 and tableau[j] &lt; tableau[j-1]:\n4            tableau[j], tableau[j-1] = tableau[j-1], tableau[j]\n5            j -= 1\n    return tableau\n\n\n1\n\nOn commence à l’indice 1 qui correspond au deuxième élément du tableau.\n\n2\n\nOn stocke l’indice courant dans une variable j pour pouvoir le modifier.\n\n3\n\nTant que l’indice courant est supérieur à 0 et que l’élément courant est plus petit que l’élément précédent, on échange les deux éléments.\n\n4\n\nOn échange les deux éléments.\n\n5\n\nL’élément courant est maintenant l’élément précédent, on décrémente donc l’indice courant.\n\n\n\n\nTest de l’algorithme :\n\ntri_insertion([5, 2, 4, 6, 1, 3])\n\n[1, 2, 3, 4, 5, 6]\n\n\n\n\nPreuve de terminaison\nMontrons que l’algorithme termine.\nD’une part, il est certain que la boucle for, boucle bornée par nature, se termine. D’autre part, la boucle while se termine aussi. La variable j peut être est un variant de boucle. À chaque itération, sa valeur de diminue de 1 : elle finit donc toujours par atteindre 0.\nLa terminaison de l’algorithme est donc prouvée.\n\n\nPreuve de correction\nMontrons que l’algorithme trie bien le tableau.\nPour cela, considérons la propriété suivante : à chaque itération, le sous-tableau composé des i premiers éléments est trié. Montrons que cette propriété est un invariant de boucle.\n\nInitialisation : au début de l’algorithme, le sous-tableau composé uniquement du premier élément est trié.\nConservation : supposons que le le sous-tableau composé des i premiers éléments est trié : \\([e_0, e_1, \\ldots, e_{i-1}]\\) avec \\(e_0\\leqslant e_1\\leqslant \\ldots \\leqslant e_{i-1}\\). L’algorithme considère alors l’élément \\(e_i\\) et le compare avec les éléments précédents. Si \\(e_i\\) est plus petit que \\(e_{i-1}\\), on échange les deux éléments. On continue alors à comparer \\(e_i\\) avec les éléments précédents jusqu’à ce que \\(e_i\\) soit plus grand que l’élément précédent. Le sous-tableau composé des i+1 premiers éléments est alors trié.\nTermination : à la fin de l’algorithme i a la valeur n-1 ce qui correspond à l’indice du dernier élément du tableau. Le sous-tableau composé des n premiers éléments est donc trié. Or, n est le nombre d’éléments du tableau, donc le tableau entier est trié.\n\nLa correction de l’algorithme est donc prouvée.\n\n\nComplexité"
+  },
+  {
+    "objectID": "algo1/tris.html#tri-par-sélection",
+    "href": "algo1/tris.html#tri-par-sélection",
+    "title": "Algorithmes de tris",
+    "section": "2. Tri par sélection",
+    "text": "2. Tri par sélection"
   }
 ]
