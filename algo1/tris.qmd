@@ -37,6 +37,8 @@ format:
         reference-location: document
         keep-tex: true
 format-links: [pdf, tex]
+execute: 
+  cache: true
 ---
 
 Dans cette partie du cours, nous allons étudier deux algorithmes de tris : le tri par insertion et le tri par sélection.
@@ -67,6 +69,12 @@ Animation du tri par insertion :
 <link rel="stylesheet" href="assets_insertion/index.df145779.css">
 
 <div id="insertion"></div>
+
+**Exemple** : Soit à trier le tableau $[5,2,7,3]$.
+
+* On commence par le deuxième élément du tableau, c'est-à-dire l'élément 2. On compare l'élément 2 avec l'élément 5. L'élément 2 est plus petit que l'élément 5, on échange les deux éléments. Le tableau est donc $[2,5,7,3]$.
+* On continue avec l'élément 7. L'élément 7 est plus grand que l'élément 5, on ne fait rien.
+* On continue avec l'élément 3. L'élément 3 est plus petit que l'élément 7, on échange les deux éléments. Le tableau est donc $[2,5,3,7]$. On continue à comparer et échanger l'élément 3 avec les éléments précédents jusqu'à ce que l'élément 3 soit plus grand que l'élément 5. Le tableau est donc $[2,3,5,7]$. L'algorithme est terminé. Le tableau est trié.
 
 ### Programmation
 
@@ -108,13 +116,23 @@ Pour cela, considérons la propriété suivante : à chaque itération, le sous-
 
 * **Initialisation** : au début de l'algorithme, le sous-tableau composé uniquement du premier élément est trié.
 * **Conservation** : supposons que le le sous-tableau composé des `i` premiers éléments est trié : $[e_0, e_1, \ldots, e_{i-1}]$ avec $e_0\leqslant e_1\leqslant \ldots \leqslant e_{i-1}$. L'algorithme considère alors l'élément $e_i$ et le compare avec les éléments précédents. Si $e_i$ est plus petit que $e_{i-1}$, on échange les deux éléments. On continue alors à comparer $e_i$ avec les éléments précédents jusqu'à ce que $e_i$ soit plus grand que l'élément précédent. Le sous-tableau composé des `i+1` premiers éléments est alors trié.
-* **Termination** : à la fin de l'algorithme `i` a la valeur `n-1` ce qui correspond à l'indice du dernier élément du tableau. Le sous-tableau composé des `n` premiers éléments est donc trié. Or, `n` est le nombre d'éléments du tableau, donc le tableau entier est trié.
+* **Conclusion** : à la fin de l'algorithme `i` a la valeur `n-1` ce qui correspond à l'indice du dernier élément du tableau. Le sous-tableau composé des `n` premiers éléments est donc trié. Or, `n` est le nombre d'éléments du tableau, donc le tableau entier est trié.
 
 La correction de l'algorithme est donc prouvée.
 
 ### Complexité
 
+On recherche la complexité dans **le pire des cas**. Le pire des cas est le cas où le tableau de départ est rangé dans l'ordre décroissant.
 
+Notons $n$ la taille du tableau de départ.
+
+La boucle `for` comporte $n-1$ itérations.
+
+Dans le cas où le tableau de départ est rangé dans l'ordre décroissant, la boucle `while` comporte 1 opération, puis 2, puis 3, etc. jusqu'à $n-1$ opérations pour la dernière itération. On obtient donc la somme suivante pour le nombre total d'opérations :
+
+$$1+2+3+\ldots+(n-1)=\frac{n(n-1)}{2}$$
+
+Sachant que $\frac{n(n-1)}{2} = \frac{n^2-n}{2}$, il s'agit donc d'une **complexité quadratique**, en $\mathcal{O}(n^2)$.
 
 ## 2. Tri par sélection
 
@@ -122,3 +140,120 @@ La correction de l'algorithme est donc prouvée.
 <link rel="stylesheet" href="assets_selection/index.df145779.css">
 
 <div id="selection"></div>
+
+### Le principe
+
+::: {.callout-important}
+## Principe de l'algorithme
+
+En commençant par le premier élément du tableau :
+
+  * On recherche le plus petit élément parmi les éléments suivants du tableau.
+  * On échange l'élément courant avec le plus petit élément.
+:::
+
+**Exemple** : Soit à trier le tableau $[5,2,3,7]$.
+
+* On commence par le premier élément, 5. On recherche le plus petit élément parmi les éléments suivants du tableau, c'est-à-dire 2. On échange 5 et 2 : le tableau est maintenant $[2,5,3,7]$.
+* L'élément courant est maintenant le deuxième du tableau, c'est donc encore 5. On recherche le plus petit élément parmi les éléments suivants du tableau, c'est-à-dire 3. On échange 5 et 3 : le tableau est maintenant $[2,3,5,7]$.
+* L'élément courant est maintenant le troisième du tableau, c'est donc encore 5. On recherche le plus petit élément parmi les éléments suivants du tableau, mais aucun n'est plus petit que 5. On ne fait donc rien.
+* L'élément courant est maintenant le dernier du tableau, c'est donc 7. On ne fait donc rien et le tableau est trié.
+
+### Programmation
+
+```{python}
+def tri_selection(tableau: list) -> list:
+    """Trie en place par sélection le tableau passé en paramètre."""
+    for i in range(len(tableau)): # <1>
+        min = i # <2>
+        for j in range(i+1, len(tableau)): # <3>
+            if tableau[j] < tableau[min]: # <4>
+                min = j
+        tableau[i], tableau[min] = tableau[min], tableau[i] # <5>
+    return tableau
+```
+1. On commence à l'indice 0 qui correspond au premier élément du tableau.
+2. On stocke l'indice courant dans une variable `min` pour pouvoir le modifier.
+3. On parcourt le tableau à partir de l'indice `i+1` jusqu'à la fin.
+4. Si l'élément courant est plus petit que l'élément stocké dans `min`, on met à jour `min`.
+5. On échange les deux éléments.
+
+Test de l'algorithme :
+
+```{python}
+tri_selection([5, 2, 4, 6, 1, 3])
+```
+
+### Preuve de terminaison
+
+L'algorithme se termine puisqu'il comporte deux boucles `for` qui sont toutes deux bornées par nature.
+
+### Preuve de correction
+
+Montrons que l'algorithme trie bien le tableau.
+
+Pour cela, considérons la propriété suivante : à chaque itération, le sous-tableau composé des `i` premiers éléments est trié. Montrons que cette propriété est un **invariant de boucle**.
+
+* **Initialisation** : au début de l'algorithme, le sous-tableau composé uniquement du premier élément est trié.
+* **Conservation** : supposons que le le sous-tableau composé des `i` premiers éléments est trié : $[e_0, e_1, \ldots, e_{i-1}]$ avec $e_0\leqslant e_1\leqslant \ldots \leqslant e_{i-1}$. Par construction, tous les éléments suivants sont supérieurs à $e_{i-1}$. L'algorithme considère alors l'élément $e_i$ et le compare avec les éléments suivants. Si un élément est plus petit que $e_i$, on échange les deux éléments. Le sous-tableau composé des `i+1` premiers éléments est alors trié.
+* **Conslusion** : à la fin de l'algorithme `i` a la valeur `n-1` ce qui correspond à l'indice du dernier élément du tableau. Le sous-tableau composé des `n` premiers éléments est donc trié. Or, `n` est le nombre d'éléments du tableau, donc le tableau entier est trié.
+
+La correction de l'algorithme est donc prouvée.
+
+### Complexité
+
+On recherche la complexité dans **le pire des cas**. Le pire des cas est le cas où le tableau de départ est rangé dans l'ordre décroissant.
+
+Notons $n$ la taille du tableau de départ.
+
+La boucle `for i` comporte $n-1$ itérations. La boucle `for j` comporte $n-1$ itérations pour la première itération, puis $n-2$ itérations pour la seconde itération, etc. jusqu'à 1 opération pour la dernière itération. On obtient donc la somme suivante pour le nombre total d'opérations :
+
+$$n-1+(n-2)+(n-3)+\ldots+1=\frac{n(n-1)}{2}$$
+
+Sachant que $\frac{n(n-1)}{2} = \frac{n^2-n}{2}$, il s'agit donc d'une **complexité quadratique**, en $\mathcal{O}(n^2)$.
+
+## 3. Observation expérimentale de la complexité
+
+### Tri par insertion
+
+```{python}
+import timeit
+import matplotlib.pyplot as plt
+
+tailles = [i for i in range(1, 500)]
+temps = []
+# on applique le tri dans le pire des cas : tableau trié dans l'ordre décroissant
+for n in tailles:
+    temps.append(timeit.timeit(
+        "tri_insertion([n-k for k in range(n)])",
+        globals=globals(),
+        number=1
+    ))
+plt.plot(tailles, temps)
+plt.xlabel("Taille du tableau")
+plt.ylabel("Temps d'exécution (en secondes)")
+plt.show()
+```
+
+### Tri par sélection
+
+```{python}
+import timeit
+import matplotlib.pyplot as plt
+
+tailles = [i for i in range(1, 500)]
+temps = []
+# on applique le tri dans le pire des cas : tableau trié dans l'ordre décroissant
+for n in tailles:
+    temps.append(timeit.timeit(
+        "tri_selection([n-k for k in range(n)])",
+        globals=globals(),
+        number=1
+    ))
+plt.plot(tailles, temps)
+plt.xlabel("Taille du tableau")
+plt.ylabel("Temps d'exécution (en secondes)")
+plt.show()
+```
+
+Dans les deux cas, la forme grossièrement parabolique de la courbe est caractéristique de la complexité quadratique.

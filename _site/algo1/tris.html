@@ -64,6 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../algo1/recherche.html" rel="next">
 <link href="../algo1/parcoursTableau.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
@@ -79,6 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -214,6 +218,12 @@ cookieconsent.run({
  <span class="menu-text">Algorithmes de tris</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../algo1/recherche.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Recherche dichotomique dans un tableau trié</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -234,7 +244,19 @@ cookieconsent.run({
   <li><a href="#preuve-de-correction" id="toc-preuve-de-correction" class="nav-link" data-scroll-target="#preuve-de-correction">Preuve de correction</a></li>
   <li><a href="#complexité" id="toc-complexité" class="nav-link" data-scroll-target="#complexité">Complexité</a></li>
   </ul></li>
-  <li><a href="#tri-par-sélection" id="toc-tri-par-sélection" class="nav-link" data-scroll-target="#tri-par-sélection">2. Tri par sélection</a></li>
+  <li><a href="#tri-par-sélection" id="toc-tri-par-sélection" class="nav-link" data-scroll-target="#tri-par-sélection">2. Tri par sélection</a>
+  <ul class="collapse">
+  <li><a href="#le-principe-1" id="toc-le-principe-1" class="nav-link" data-scroll-target="#le-principe-1">Le principe</a></li>
+  <li><a href="#programmation-1" id="toc-programmation-1" class="nav-link" data-scroll-target="#programmation-1">Programmation</a></li>
+  <li><a href="#preuve-de-terminaison-1" id="toc-preuve-de-terminaison-1" class="nav-link" data-scroll-target="#preuve-de-terminaison-1">Preuve de terminaison</a></li>
+  <li><a href="#preuve-de-correction-1" id="toc-preuve-de-correction-1" class="nav-link" data-scroll-target="#preuve-de-correction-1">Preuve de correction</a></li>
+  <li><a href="#complexité-1" id="toc-complexité-1" class="nav-link" data-scroll-target="#complexité-1">Complexité</a></li>
+  </ul></li>
+  <li><a href="#observation-expérimentale-de-la-complexité" id="toc-observation-expérimentale-de-la-complexité" class="nav-link" data-scroll-target="#observation-expérimentale-de-la-complexité">3. Observation expérimentale de la complexité</a>
+  <ul class="collapse">
+  <li><a href="#tri-par-insertion-1" id="toc-tri-par-insertion-1" class="nav-link" data-scroll-target="#tri-par-insertion-1">Tri par insertion</a></li>
+  <li><a href="#tri-par-sélection-1" id="toc-tri-par-sélection-1" class="nav-link" data-scroll-target="#tri-par-sélection-1">Tri par sélection</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action">Faire part d'un problème</a></p></div></div><div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="tris.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -288,6 +310,12 @@ Principe de l’algorithme
 <div id="insertion">
 
 </div>
+<p><strong>Exemple</strong> : Soit à trier le tableau <span class="math inline">\([5,2,7,3]\)</span>.</p>
+<ul>
+<li>On commence par le deuxième élément du tableau, c’est-à-dire l’élément 2. On compare l’élément 2 avec l’élément 5. L’élément 2 est plus petit que l’élément 5, on échange les deux éléments. Le tableau est donc <span class="math inline">\([2,5,7,3]\)</span>.</li>
+<li>On continue avec l’élément 7. L’élément 7 est plus grand que l’élément 5, on ne fait rien.</li>
+<li>On continue avec l’élément 3. L’élément 3 est plus petit que l’élément 7, on échange les deux éléments. Le tableau est donc <span class="math inline">\([2,5,3,7]\)</span>. On continue à comparer et échanger l’élément 3 avec les éléments précédents jusqu’à ce que l’élément 3 soit plus grand que l’élément 5. Le tableau est donc <span class="math inline">\([2,3,5,7]\)</span>. L’algorithme est terminé. Le tableau est trié.</li>
+</ul>
 </section>
 <section id="programmation" class="level3">
 <h3 class="anchored" data-anchor-id="programmation">Programmation</h3>
@@ -328,7 +356,7 @@ Principe de l’algorithme
 <p>Test de l’algorithme :</p>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>tri_insertion([<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">3</span>])</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="24">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
 </div>
 </div>
@@ -346,12 +374,18 @@ Principe de l’algorithme
 <ul>
 <li><strong>Initialisation</strong> : au début de l’algorithme, le sous-tableau composé uniquement du premier élément est trié.</li>
 <li><strong>Conservation</strong> : supposons que le le sous-tableau composé des <code>i</code> premiers éléments est trié : <span class="math inline">\([e_0, e_1, \ldots, e_{i-1}]\)</span> avec <span class="math inline">\(e_0\leqslant e_1\leqslant \ldots \leqslant e_{i-1}\)</span>. L’algorithme considère alors l’élément <span class="math inline">\(e_i\)</span> et le compare avec les éléments précédents. Si <span class="math inline">\(e_i\)</span> est plus petit que <span class="math inline">\(e_{i-1}\)</span>, on échange les deux éléments. On continue alors à comparer <span class="math inline">\(e_i\)</span> avec les éléments précédents jusqu’à ce que <span class="math inline">\(e_i\)</span> soit plus grand que l’élément précédent. Le sous-tableau composé des <code>i+1</code> premiers éléments est alors trié.</li>
-<li><strong>Termination</strong> : à la fin de l’algorithme <code>i</code> a la valeur <code>n-1</code> ce qui correspond à l’indice du dernier élément du tableau. Le sous-tableau composé des <code>n</code> premiers éléments est donc trié. Or, <code>n</code> est le nombre d’éléments du tableau, donc le tableau entier est trié.</li>
+<li><strong>Conclusion</strong> : à la fin de l’algorithme <code>i</code> a la valeur <code>n-1</code> ce qui correspond à l’indice du dernier élément du tableau. Le sous-tableau composé des <code>n</code> premiers éléments est donc trié. Or, <code>n</code> est le nombre d’éléments du tableau, donc le tableau entier est trié.</li>
 </ul>
 <p>La correction de l’algorithme est donc prouvée.</p>
 </section>
 <section id="complexité" class="level3">
 <h3 class="anchored" data-anchor-id="complexité">Complexité</h3>
+<p>On recherche la complexité dans <strong>le pire des cas</strong>. Le pire des cas est le cas où le tableau de départ est rangé dans l’ordre décroissant.</p>
+<p>Notons <span class="math inline">\(n\)</span> la taille du tableau de départ.</p>
+<p>La boucle <code>for</code> comporte <span class="math inline">\(n-1\)</span> itérations.</p>
+<p>Dans le cas où le tableau de départ est rangé dans l’ordre décroissant, la boucle <code>while</code> comporte 1 opération, puis 2, puis 3, etc. jusqu’à <span class="math inline">\(n-1\)</span> opérations pour la dernière itération. On obtient donc la somme suivante pour le nombre total d’opérations :</p>
+<p><span class="math display">\[1+2+3+\ldots+(n-1)=\frac{n(n-1)}{2}\]</span></p>
+<p>Sachant que <span class="math inline">\(\frac{n(n-1)}{2} = \frac{n^2-n}{2}\)</span>, il s’agit donc d’une <strong>complexité quadratique</strong>, en <span class="math inline">\(\mathcal{O}(n^2)\)</span>.</p>
 </section>
 </section>
 <section id="tri-par-sélection" class="level2">
@@ -361,8 +395,163 @@ Principe de l’algorithme
 <div id="selection">
 
 </div>
+<section id="le-principe-1" class="level3">
+<h3 class="anchored" data-anchor-id="le-principe-1">Le principe</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Principe de l’algorithme
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En commençant par le premier élément du tableau :</p>
+<ul>
+<li>On recherche le plus petit élément parmi les éléments suivants du tableau.</li>
+<li>On échange l’élément courant avec le plus petit élément.</li>
+</ul>
+</div>
+</div>
+<p><strong>Exemple</strong> : Soit à trier le tableau <span class="math inline">\([5,2,3,7]\)</span>.</p>
+<ul>
+<li>On commence par le premier élément, 5. On recherche le plus petit élément parmi les éléments suivants du tableau, c’est-à-dire 2. On échange 5 et 2 : le tableau est maintenant <span class="math inline">\([2,5,3,7]\)</span>.</li>
+<li>L’élément courant est maintenant le deuxième du tableau, c’est donc encore 5. On recherche le plus petit élément parmi les éléments suivants du tableau, c’est-à-dire 3. On échange 5 et 3 : le tableau est maintenant <span class="math inline">\([2,3,5,7]\)</span>.</li>
+<li>L’élément courant est maintenant le troisième du tableau, c’est donc encore 5. On recherche le plus petit élément parmi les éléments suivants du tableau, mais aucun n’est plus petit que 5. On ne fait donc rien.</li>
+<li>L’élément courant est maintenant le dernier du tableau, c’est donc 7. On ne fait donc rien et le tableau est trié.</li>
+</ul>
+</section>
+<section id="programmation-1" class="level3">
+<h3 class="anchored" data-anchor-id="programmation-1">Programmation</h3>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tri_selection(tableau: <span class="bu">list</span>) <span class="op">-&gt;</span> <span class="bu">list</span>:</span>
+<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Trie en place par sélection le tableau passé en paramètre."""</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-3-3" class="code-annotation-target"><a href="#annotated-cell-3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(tableau)):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-3-4" class="code-annotation-target"><a href="#annotated-cell-3-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">min</span> <span class="op">=</span> i</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-3-5" class="code-annotation-target"><a href="#annotated-cell-3-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i<span class="op">+</span><span class="dv">1</span>, <span class="bu">len</span>(tableau)):</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-3-6" class="code-annotation-target"><a href="#annotated-cell-3-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> tableau[j] <span class="op">&lt;</span> tableau[<span class="bu">min</span>]:</span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7" aria-hidden="true" tabindex="-1"></a>                <span class="bu">min</span> <span class="op">=</span> j</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="5" onclick="event.preventDefault();">5</a><span id="annotated-cell-3-8" class="code-annotation-target"><a href="#annotated-cell-3-8" aria-hidden="true" tabindex="-1"></a>        tableau[i], tableau[<span class="bu">min</span>] <span class="op">=</span> tableau[<span class="bu">min</span>], tableau[i]</span>
+<span id="annotated-cell-3-9"><a href="#annotated-cell-3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tableau</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="3" data-code-annotation="1">On commence à l’indice 0 qui correspond au premier élément du tableau.</span>
+</dd>
+<dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="4" data-code-annotation="2">On stocke l’indice courant dans une variable <code>min</code> pour pouvoir le modifier.</span>
+</dd>
+<dt data-target-cell="annotated-cell-3" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="5" data-code-annotation="3">On parcourt le tableau à partir de l’indice <code>i+1</code> jusqu’à la fin.</span>
+</dd>
+<dt data-target-cell="annotated-cell-3" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="6" data-code-annotation="4">Si l’élément courant est plus petit que l’élément stocké dans <code>min</code>, on met à jour <code>min</code>.</span>
+</dd>
+<dt data-target-cell="annotated-cell-3" data-target-annotation="5">5</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="8" data-code-annotation="5">On échange les deux éléments.</span>
+</dd>
+</dl>
+</div>
+</div>
+<p>Test de l’algorithme :</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tri_selection([<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">3</span>])</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
+</div>
+</div>
+</section>
+<section id="preuve-de-terminaison-1" class="level3">
+<h3 class="anchored" data-anchor-id="preuve-de-terminaison-1">Preuve de terminaison</h3>
+<p>L’algorithme se termine puisqu’il comporte deux boucles <code>for</code> qui sont toutes deux bornées par nature.</p>
+</section>
+<section id="preuve-de-correction-1" class="level3">
+<h3 class="anchored" data-anchor-id="preuve-de-correction-1">Preuve de correction</h3>
+<p>Montrons que l’algorithme trie bien le tableau.</p>
+<p>Pour cela, considérons la propriété suivante : à chaque itération, le sous-tableau composé des <code>i</code> premiers éléments est trié. Montrons que cette propriété est un <strong>invariant de boucle</strong>.</p>
+<ul>
+<li><strong>Initialisation</strong> : au début de l’algorithme, le sous-tableau composé uniquement du premier élément est trié.</li>
+<li><strong>Conservation</strong> : supposons que le le sous-tableau composé des <code>i</code> premiers éléments est trié : <span class="math inline">\([e_0, e_1, \ldots, e_{i-1}]\)</span> avec <span class="math inline">\(e_0\leqslant e_1\leqslant \ldots \leqslant e_{i-1}\)</span>. Par construction, tous les éléments suivants sont supérieurs à <span class="math inline">\(e_{i-1}\)</span>. L’algorithme considère alors l’élément <span class="math inline">\(e_i\)</span> et le compare avec les éléments suivants. Si un élément est plus petit que <span class="math inline">\(e_i\)</span>, on échange les deux éléments. Le sous-tableau composé des <code>i+1</code> premiers éléments est alors trié.</li>
+<li><strong>Conslusion</strong> : à la fin de l’algorithme <code>i</code> a la valeur <code>n-1</code> ce qui correspond à l’indice du dernier élément du tableau. Le sous-tableau composé des <code>n</code> premiers éléments est donc trié. Or, <code>n</code> est le nombre d’éléments du tableau, donc le tableau entier est trié.</li>
+</ul>
+<p>La correction de l’algorithme est donc prouvée.</p>
+</section>
+<section id="complexité-1" class="level3">
+<h3 class="anchored" data-anchor-id="complexité-1">Complexité</h3>
+<p>On recherche la complexité dans <strong>le pire des cas</strong>. Le pire des cas est le cas où le tableau de départ est rangé dans l’ordre décroissant.</p>
+<p>Notons <span class="math inline">\(n\)</span> la taille du tableau de départ.</p>
+<p>La boucle <code>for i</code> comporte <span class="math inline">\(n-1\)</span> itérations. La boucle <code>for j</code> comporte <span class="math inline">\(n-1\)</span> itérations pour la première itération, puis <span class="math inline">\(n-2\)</span> itérations pour la seconde itération, etc. jusqu’à 1 opération pour la dernière itération. On obtient donc la somme suivante pour le nombre total d’opérations :</p>
+<p><span class="math display">\[n-1+(n-2)+(n-3)+\ldots+1=\frac{n(n-1)}{2}\]</span></p>
+<p>Sachant que <span class="math inline">\(\frac{n(n-1)}{2} = \frac{n^2-n}{2}\)</span>, il s’agit donc d’une <strong>complexité quadratique</strong>, en <span class="math inline">\(\mathcal{O}(n^2)\)</span>.</p>
+</section>
+</section>
+<section id="observation-expérimentale-de-la-complexité" class="level2">
+<h2 class="anchored" data-anchor-id="observation-expérimentale-de-la-complexité">3. Observation expérimentale de la complexité</h2>
+<section id="tri-par-insertion-1" class="level3">
+<h3 class="anchored" data-anchor-id="tri-par-insertion-1">Tri par insertion</h3>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> timeit</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>tailles <span class="op">=</span> [i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">500</span>)]</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>temps <span class="op">=</span> []</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># on applique le tri dans le pire des cas : tableau trié dans l'ordre décroissant</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> tailles:</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    temps.append(timeit.timeit(</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"tri_insertion([n-k for k in range(n)])"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">globals</span><span class="op">=</span><span class="bu">globals</span>(),</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        number<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>plt.plot(tailles, temps)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Taille du tableau"</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Temps d'exécution (en secondes)"</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="tris_files/figure-html/cell-6-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="tris_files/figure-html/cell-6-output-1.png" class="quarto-discovered-preview-image figure-img" width="598" height="429"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="tri-par-sélection-1" class="level3">
+<h3 class="anchored" data-anchor-id="tri-par-sélection-1">Tri par sélection</h3>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> timeit</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>tailles <span class="op">=</span> [i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">500</span>)]</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>temps <span class="op">=</span> []</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># on applique le tri dans le pire des cas : tableau trié dans l'ordre décroissant</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> tailles:</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    temps.append(timeit.timeit(</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"tri_selection([n-k for k in range(n)])"</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">globals</span><span class="op">=</span><span class="bu">globals</span>(),</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        number<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>plt.plot(tailles, temps)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Taille du tableau"</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Temps d'exécution (en secondes)"</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="tris_files/figure-html/cell-7-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="tris_files/figure-html/cell-7-output-1.png" width="598" height="429" class="figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Dans les deux cas, la forme grossièrement parabolique de la courbe est caractéristique de la complexité quadratique.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -736,6 +925,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../algo1/recherche.html" class="pagination-link">
+        <span class="nav-page-text">Recherche dichotomique dans un tableau trié</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -764,6 +956,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});</script>
 
 
 
