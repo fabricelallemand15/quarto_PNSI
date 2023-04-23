@@ -84,6 +84,8 @@ cookieconsent.run({
 </script> 
   
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -199,8 +201,16 @@ cookieconsent.run({
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="exos_tris.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#fa-desktop-exercice-1" id="toc-fa-desktop-exercice-1" class="nav-link active" data-scroll-target="#fa-desktop-exercice-1"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 1</a></li>
+  <li><a href="#fa-desktop-exercice-2-le-tri-à-bulles" id="toc-fa-desktop-exercice-2-le-tri-à-bulles" class="nav-link" data-scroll-target="#fa-desktop-exercice-2-le-tri-à-bulles"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 2 : le tri à bulles</a></li>
+  <li><a href="#fa-desktop-t.p.-bilan-et-compléments" id="toc-fa-desktop-t.p.-bilan-et-compléments" class="nav-link" data-scroll-target="#fa-desktop-t.p.-bilan-et-compléments"><i class="fa-solid fa-desktop" aria-label="desktop"></i> T.P. : Bilan et compléments</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action">Faire part d'un problème</a></p></div></div><div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="exos_tris.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -222,8 +232,63 @@ cookieconsent.run({
 
 </header>
 
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-desktop" aria-label="desktop"></i> sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> doivent être résolus par écrit.</em></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notebook Capytale pour les exercices 1 et 2 : <button type="button" class="btn btn-light"><a href="https://capytale2.ac-paris.fr/web/c/136d-1599664" target="_blank">Capytale</a> </button></p>
+</div>
+</div>
+<section id="fa-desktop-exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="fa-desktop-exercice-1"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 1</h2>
+<p><strong>Cet exercice est à faire dans Capytale.</strong></p>
+<p>Écrire une fonction <code>trie_chaine</code> qui prend en argument une <strong>liste</strong> de chaînes de caractères et qui <strong>modifie</strong> cette liste en la triant en fonction du nombre de lettres. Cette fonction ne renvoie rien.</p>
+<p>Tester la fonction avec la liste <code>["un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix"]</code>.</p>
+</section>
+<section id="fa-desktop-exercice-2-le-tri-à-bulles" class="level2">
+<h2 class="anchored" data-anchor-id="fa-desktop-exercice-2-le-tri-à-bulles"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 2 : le tri à bulles</h2>
+<p><strong>Cet exercice est à faire dans Capytale.</strong></p>
+<p>L’algorithme de tri à bulles est le suivant :</p>
+<ul>
+<li>On parcourt la liste de gauche à droite.</li>
+<li>Si deux éléments consécutifs sont dans le mauvais ordre, on les échange.</li>
+<li>Si, à l’étape précédente, au moins un échange a eu lieu, on recommence à l’étape 1.</li>
+<li>Sinon, la liste est triée et on arrête.</li>
+</ul>
+<ol type="1">
+<li>Écrire toutes les étapes du tri à bulles pour la liste <code>[5, 3, 2, 4, 1]</code>.</li>
+<li>Soit <span class="math inline">\(n\)</span> un entier naturel non nul et <span class="math inline">\(L\)</span> une liste de <span class="math inline">\(n\)</span> entiers rangés dans l’ordre décroissant (pire des cas). Combien d’échanges sont nécessaires pour trier <span class="math inline">\(L\)</span> dans l’ordre croissant ? En déduire une évaluation de la complexité de cet algorithme.</li>
+<li>Écrire une fonction <code>tri_bulles</code> qui prend en argument une <strong>liste</strong> de nombres et qui <strong>modifie</strong> cette liste en la triant par ordre croissant en utilisant l’algorithme du tri à bulles. Cette fonction ne renvoie rien.</li>
+<li>Ajouter une variable <code>compteur</code> dans la fonction <code>tri_bulles</code> qui compte le nombre d’échanges effectués. Ce nombre doit être renvoyé par la fonction. Tester la fonction avec la liste <code>[5, 3, 2, 4, 1]</code> et vérifier que le compteur vaut bien 6.</li>
+</ol>
+</section>
+<section id="fa-desktop-t.p.-bilan-et-compléments" class="level2">
+<h2 class="anchored" data-anchor-id="fa-desktop-t.p.-bilan-et-compléments"><i class="fa-solid fa-desktop" aria-label="desktop"></i> T.P. : Bilan et compléments</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notebook Capytale pour ce T.P. : <button type="button" class="btn btn-light"><a href="https://capytale2.ac-paris.fr/web/c/a99d-1599680" target="_blank">Capytale</a> </button></p>
+<p>Ce T.P. est à faire dans Capytale en suivant le lien ci-dessus.</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -611,7 +676,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </li>  
 </ul>
     </div>   
-    <div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action">Faire part d'un problème</a></p></div></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

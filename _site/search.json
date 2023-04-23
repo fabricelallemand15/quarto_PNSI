@@ -7,6 +7,34 @@
     "text": "About this site"
   },
   {
+    "objectID": "algo1/exos_tris.html",
+    "href": "algo1/exos_tris.html",
+    "title": "Exercices - Algorithmes de tris",
+    "section": "",
+    "text": "Les exercices précédés du symbole  sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole  doivent être résolus par écrit."
+  },
+  {
+    "objectID": "algo1/exos_tris.html#fa-desktop-exercice-1",
+    "href": "algo1/exos_tris.html#fa-desktop-exercice-1",
+    "title": "Exercices - Algorithmes de tris",
+    "section": " Exercice 1",
+    "text": "Exercice 1\nCet exercice est à faire dans Capytale.\nÉcrire une fonction trie_chaine qui prend en argument une liste de chaînes de caractères et qui modifie cette liste en la triant en fonction du nombre de lettres. Cette fonction ne renvoie rien.\nTester la fonction avec la liste [\"un\", \"deux\", \"trois\", \"quatre\", \"cinq\", \"six\", \"sept\", \"huit\", \"neuf\", \"dix\"]."
+  },
+  {
+    "objectID": "algo1/exos_tris.html#fa-desktop-exercice-2-le-tri-à-bulles",
+    "href": "algo1/exos_tris.html#fa-desktop-exercice-2-le-tri-à-bulles",
+    "title": "Exercices - Algorithmes de tris",
+    "section": " Exercice 2 : le tri à bulles",
+    "text": "Exercice 2 : le tri à bulles\nCet exercice est à faire dans Capytale.\nL’algorithme de tri à bulles est le suivant :\n\nOn parcourt la liste de gauche à droite.\nSi deux éléments consécutifs sont dans le mauvais ordre, on les échange.\nSi, à l’étape précédente, au moins un échange a eu lieu, on recommence à l’étape 1.\nSinon, la liste est triée et on arrête.\n\n\nÉcrire toutes les étapes du tri à bulles pour la liste [5, 3, 2, 4, 1].\nSoit \\(n\\) un entier naturel non nul et \\(L\\) une liste de \\(n\\) entiers rangés dans l’ordre décroissant (pire des cas). Combien d’échanges sont nécessaires pour trier \\(L\\) dans l’ordre croissant ? En déduire une évaluation de la complexité de cet algorithme.\nÉcrire une fonction tri_bulles qui prend en argument une liste de nombres et qui modifie cette liste en la triant par ordre croissant en utilisant l’algorithme du tri à bulles. Cette fonction ne renvoie rien.\nAjouter une variable compteur dans la fonction tri_bulles qui compte le nombre d’échanges effectués. Ce nombre doit être renvoyé par la fonction. Tester la fonction avec la liste [5, 3, 2, 4, 1] et vérifier que le compteur vaut bien 6."
+  },
+  {
+    "objectID": "algo1/exos_tris.html#fa-desktop-t.p.-bilan-et-compléments",
+    "href": "algo1/exos_tris.html#fa-desktop-t.p.-bilan-et-compléments",
+    "title": "Exercices - Algorithmes de tris",
+    "section": " T.P. : Bilan et compléments",
+    "text": "T.P. : Bilan et compléments\n\n\n\n\n\n\nImportant\n\n\n\nNotebook Capytale pour ce T.P. : Capytale \nCe T.P. est à faire dans Capytale en suivant le lien ci-dessus."
+  },
+  {
     "objectID": "algo1/generalites.html",
     "href": "algo1/generalites.html",
     "title": "Notions de base (Cours)",
@@ -131,6 +159,13 @@
     "title": "Algorithmes de tris",
     "section": "3. Observation expérimentale de la complexité",
     "text": "3. Observation expérimentale de la complexité\n\nTri par insertion\n\nimport timeit\nimport matplotlib.pyplot as plt\n\ntailles = [i for i in range(1, 500)]\ntemps = []\n# on applique le tri dans le pire des cas : tableau trié dans l'ordre décroissant\nfor n in tailles:\n    temps.append(timeit.timeit(\n        \"tri_insertion([n-k for k in range(n)])\",\n        globals=globals(),\n        number=1\n    ))\nplt.plot(tailles, temps)\nplt.xlabel(\"Taille du tableau\")\nplt.ylabel(\"Temps d'exécution (en secondes)\")\nplt.show()\n\n\n\n\n\n\n\n\n\n\nTri par sélection\n\nimport timeit\nimport matplotlib.pyplot as plt\n\ntailles = [i for i in range(1, 500)]\ntemps = []\n# on applique le tri dans le pire des cas : tableau trié dans l'ordre décroissant\nfor n in tailles:\n    temps.append(timeit.timeit(\n        \"tri_selection([n-k for k in range(n)])\",\n        globals=globals(),\n        number=1\n    ))\nplt.plot(tailles, temps)\nplt.xlabel(\"Taille du tableau\")\nplt.ylabel(\"Temps d'exécution (en secondes)\")\nplt.show()\n\n\n\n\n\n\n\n\nDans les deux cas, la forme grossièrement parabolique de la courbe est caractéristique de la complexité quadratique."
+  },
+  {
+    "objectID": "algo1/tris.html#compléments",
+    "href": "algo1/tris.html#compléments",
+    "title": "Algorithmes de tris",
+    "section": "Compléments",
+    "text": "Compléments\nSur le site interstices.info un article très complet sur les algorithmes de tri, avec des animations pour mieux comprendre."
   },
   {
     "objectID": "index.html",
