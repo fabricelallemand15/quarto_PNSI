@@ -339,23 +339,23 @@ Principe de l’algorithme
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-lines="3" data-code-cell="annotated-cell-1">On commence à l’indice 1 qui correspond au deuxième élément du tableau.</span>
+<span data-code-lines="3" data-code-cell="annotated-cell-1" data-code-annotation="1">On commence à l’indice 1 qui correspond au deuxième élément du tableau.</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-annotation="2" data-code-lines="4" data-code-cell="annotated-cell-1">On stocke l’indice courant dans une variable <code>j</code> pour pouvoir le modifier.</span>
+<span data-code-lines="4" data-code-cell="annotated-cell-1" data-code-annotation="2">On stocke l’indice courant dans une variable <code>j</code> pour pouvoir le modifier.</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-annotation="3" data-code-lines="5" data-code-cell="annotated-cell-1">Tant que l’indice courant est supérieur à 0 et que l’élément courant est plus petit que l’élément précédent, on échange les deux éléments.</span>
+<span data-code-lines="5" data-code-cell="annotated-cell-1" data-code-annotation="3">Tant que l’indice courant est supérieur à 0 et que l’élément courant est plus petit que l’élément précédent, on échange les deux éléments.</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-annotation="4" data-code-lines="6" data-code-cell="annotated-cell-1">On échange les deux éléments.</span>
+<span data-code-lines="6" data-code-cell="annotated-cell-1" data-code-annotation="4">On échange les deux éléments.</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-annotation="5" data-code-lines="7" data-code-cell="annotated-cell-1">L’élément courant est maintenant l’élément précédent, on décrémente donc l’indice courant.</span>
+<span data-code-lines="7" data-code-cell="annotated-cell-1" data-code-annotation="5">L’élément courant est maintenant l’élément précédent, on décrémente donc l’indice courant.</span>
 </dd>
 </dl>
 </div>
@@ -370,8 +370,8 @@ Principe de l’algorithme
 </section>
 <section id="preuve-de-terminaison" class="level3">
 <h3 class="anchored" data-anchor-id="preuve-de-terminaison">Preuve de terminaison</h3>
-<p>Montrons que l’algorithme termine.</p>
-<p>D’une part, il est certain que la boucle <code>for</code>, boucle bornée par nature, se termine. D’autre part, la boucle <code>while</code> se termine aussi. La variable <code>j</code> peut être est un <strong>variant de boucle</strong>. À chaque itération, sa valeur de diminue de 1 : elle finit donc toujours par atteindre 0.</p>
+<p>Montrons que l’algorithme se termine.</p>
+<p>D’une part, il est certain que la boucle <code>for</code>, boucle bornée par nature, se termine. D’autre part, la boucle <code>while</code> se termine aussi. La variable <code>j</code> est un <strong>variant de boucle</strong>. À chaque itération, sa valeur diminue de 1 : elle finit donc toujours par atteindre 0.</p>
 <p>La terminaison de l’algorithme est donc prouvée.</p>
 </section>
 <section id="preuve-de-correction" class="level3">
@@ -445,23 +445,23 @@ Principe de l’algorithme
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-lines="3" data-code-cell="annotated-cell-3">On commence à l’indice 0 qui correspond au premier élément du tableau.</span>
+<span data-code-lines="3" data-code-cell="annotated-cell-3" data-code-annotation="1">On commence à l’indice 0 qui correspond au premier élément du tableau.</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-annotation="2" data-code-lines="4" data-code-cell="annotated-cell-3">On stocke l’indice courant dans une variable <code>min</code> pour pouvoir le modifier.</span>
+<span data-code-lines="4" data-code-cell="annotated-cell-3" data-code-annotation="2">On stocke l’indice courant dans une variable <code>min</code> pour pouvoir le modifier.</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-annotation="3" data-code-lines="5" data-code-cell="annotated-cell-3">On parcourt le tableau à partir de l’indice <code>i+1</code> jusqu’à la fin.</span>
+<span data-code-lines="5" data-code-cell="annotated-cell-3" data-code-annotation="3">On parcourt le tableau à partir de l’indice <code>i+1</code> jusqu’à la fin.</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-annotation="4" data-code-lines="6" data-code-cell="annotated-cell-3">Si l’élément courant est plus petit que l’élément stocké dans <code>min</code>, on met à jour <code>min</code>.</span>
+<span data-code-lines="6" data-code-cell="annotated-cell-3" data-code-annotation="4">Si l’élément courant est plus petit que l’élément stocké dans <code>min</code>, on met à jour <code>min</code>.</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-annotation="5" data-code-lines="8" data-code-cell="annotated-cell-3">On échange les deux éléments.</span>
+<span data-code-lines="8" data-code-cell="annotated-cell-3" data-code-annotation="5">On échange les deux éléments.</span>
 </dd>
 </dl>
 </div>
@@ -967,7 +967,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":true,"openEffect":"zoom"});</script>
 
 
 

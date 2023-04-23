@@ -102,9 +102,9 @@ tri_insertion([5, 2, 4, 6, 1, 3])
 
 ### Preuve de terminaison
 
-Montrons que l'algorithme termine.
+Montrons que l'algorithme se termine.
 
-D'une part, il est certain que la boucle `for`, boucle bornée par nature, se termine. D'autre part, la boucle `while` se termine aussi. La variable `j` peut être est un **variant de boucle**. À chaque itération, sa valeur de diminue de 1 : elle finit donc toujours par atteindre 0.
+D'une part, il est certain que la boucle `for`, boucle bornée par nature, se termine. D'autre part, la boucle `while` se termine aussi. La variable `j` est un **variant de boucle**. À chaque itération, sa valeur diminue de 1 : elle finit donc toujours par atteindre 0.
 
 La terminaison de l'algorithme est donc prouvée.
 
