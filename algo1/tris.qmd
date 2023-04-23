@@ -257,3 +257,7 @@ plt.show()
 ```
 
 Dans les deux cas, la forme grossièrement parabolique de la courbe est caractéristique de la complexité quadratique.
+
+## Compléments
+
+[Sur le site interstices.info](https://interstices.info/les-algorithmes-de-tri/) un article très complet sur les algorithmes de tri, avec des animations pour mieux comprendre.
