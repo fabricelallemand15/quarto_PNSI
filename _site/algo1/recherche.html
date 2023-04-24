@@ -400,7 +400,7 @@ Principe de l’algorithme
 <section id="complexité" class="level3">
 <h3 class="anchored" data-anchor-id="complexité">Complexité</h3>
 <p>Pour évaluer la complexité de cet algorithme, nous allons évaluer le nombre d’itérations nécessaires en fonction de la taille <span class="math inline">\(n\)</span> du tableau, dans le pire des cas, c’est-à-dire lorsque la valeur recherchée n’est pas dans le tableau.</p>
-<p>À chaque étape, la taille du sous-tableau contenant potentiellement la valeur recherchée est divisée par deux. Au bout de <span class="math inline">\(k\)</span> étapes, la taille du sous-tableau est donc de <span class="math inline">\(\frac{n}{2^k}\)</span> environ. Si la valeur recherchée n’est pas dans le tableau, alors on finit par arriver à un tableau de taille 1 et la boucle se termine au tour suivant. Soit <span class="math inline">\(k\)</span> le nombre d’itérations nécessaires pour que la taille du sous-tableau soit de 1. On a donc <span class="math inline">\(\frac{n}{2^k}\)</span>, et par conséquent <span class="math inline">\(n=2^k\)</span>. On en déduit que <span class="math inline">\(k=\log_2 n\)</span>.</p>
+<p>À chaque étape, la taille du sous-tableau contenant potentiellement la valeur recherchée est divisée par deux. Au bout de <span class="math inline">\(k\)</span> étapes, la taille du sous-tableau est donc de <span class="math inline">\(\frac{n}{2^k}\)</span> environ. Si la valeur recherchée n’est pas dans le tableau, alors on finit par arriver à un tableau de taille 1 et la boucle se termine au tour suivant. Soit <span class="math inline">\(k\)</span> le nombre d’itérations nécessaires pour que la taille du sous-tableau soit de 1. On a donc <span class="math inline">\(\frac{n}{2^k}\approx 1\)</span>, et par conséquent <span class="math inline">\(n=2^k\)</span>. On en déduit que <span class="math inline">\(k=\log_2 n\)</span>.</p>
 <p>L’algorithme de recherche dichotomique est donc en <span class="math inline">\(\mathcal{O}(\log n)\)</span>. On parle de <strong>complexité logarithmique</strong>. Cette complexité est meilleure que la complexité linéaire.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -863,7 +863,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
 
 
 

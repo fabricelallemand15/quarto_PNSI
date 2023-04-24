@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/algo1/recherche.html</loc>
-    <lastmod>2023-04-23T20:02:19.542Z</lastmod>
+    <lastmod>2023-04-23T20:47:15.712Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/algo1/tris.html</loc>
@@ -35,5 +35,9 @@
   <url>
     <loc>https://flallemand.fr/PNSI/ressources.html</loc>
     <lastmod>2023-04-23T20:02:53.954Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/algo1/exos_recherche.html</loc>
+    <lastmod>2023-04-24T05:44:56.826Z</lastmod>
   </url>
 </urlset>

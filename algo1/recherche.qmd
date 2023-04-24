@@ -165,7 +165,7 @@ L'algorithme est donc correct.
 
 Pour évaluer la complexité de cet algorithme, nous allons évaluer le nombre d'itérations nécessaires en fonction de la taille $n$ du tableau, dans le pire des cas, c'est-à-dire lorsque la valeur recherchée n'est pas dans le tableau.
 
-À chaque étape, la taille du sous-tableau contenant potentiellement la valeur recherchée est divisée par deux. Au bout de $k$ étapes, la taille du sous-tableau est donc de $\frac{n}{2^k}$ environ. Si la valeur recherchée n'est pas dans le tableau, alors on finit par arriver à un tableau de taille 1 et la boucle se termine au tour suivant. Soit $k$ le nombre d'itérations nécessaires pour que la taille du sous-tableau soit de 1. On a donc $\frac{n}{2^k}$, et par conséquent $n=2^k$. On en déduit que $k=\log_2 n$.
+À chaque étape, la taille du sous-tableau contenant potentiellement la valeur recherchée est divisée par deux. Au bout de $k$ étapes, la taille du sous-tableau est donc de $\frac{n}{2^k}$ environ. Si la valeur recherchée n'est pas dans le tableau, alors on finit par arriver à un tableau de taille 1 et la boucle se termine au tour suivant. Soit $k$ le nombre d'itérations nécessaires pour que la taille du sous-tableau soit de 1. On a donc $\frac{n}{2^k}\approx 1$, et par conséquent $n=2^k$. On en déduit que $k=\log_2 n$.
 
 L'algorithme de recherche dichotomique est donc en $\mathcal{O}(\log n)$. On parle de **complexité logarithmique**. Cette complexité est meilleure que la complexité linéaire.
 

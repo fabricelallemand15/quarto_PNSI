@@ -33,6 +33,7 @@ website:
             - algo1/tris.qmd
             - algo1/exos_tris.qmd
             - algo1/recherche.qmd
+            - algo1/exos_recherche.qmd
   page-footer: 
     left:
       - href: http://creativecommons.org/licenses/by/4.0/
