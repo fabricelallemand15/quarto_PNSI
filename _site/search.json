@@ -7,6 +7,20 @@
     "text": "About this site"
   },
   {
+    "objectID": "algo1/exos_recherche.html",
+    "href": "algo1/exos_recherche.html",
+    "title": "Exercices - Recherche dichotomique",
+    "section": "",
+    "text": "Les exercices précédés du symbole  sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole  doivent être résolus par écrit."
+  },
+  {
+    "objectID": "algo1/exos_recherche.html#fa-desktop-t.p.-bilan-et-compléments",
+    "href": "algo1/exos_recherche.html#fa-desktop-t.p.-bilan-et-compléments",
+    "title": "Exercices - Recherche dichotomique",
+    "section": " T.P. : Bilan et compléments",
+    "text": "T.P. : Bilan et compléments\n\n\n\n\n\n\nImportant\n\n\n\nNotebook Capytale pour ce T.P. : Capytale \nCe T.P. est à faire dans Capytale en suivant le lien ci-dessus."
+  },
+  {
     "objectID": "algo1/exos_tris.html",
     "href": "algo1/exos_tris.html",
     "title": "Exercices - Algorithmes de tris",
@@ -180,19 +194,5 @@
     "title": "Sources utilisées",
     "section": "",
     "text": "Pour rédiger ce cours et préparer les exercices, TP, projets présentés ici, j’ai utilisé de nombreuses sources que je vais essayer de citer ici, sans prétendre être exhaustif.\n\nDocuments d’accompagnement Eduscol.\nContenus du MOOC “Numérique et Sciences Informatiques : les fondamentaux” de l’INRIA, disponible sur la plateforme fun-mooc.\nApprendre à programmer avec Python 3, Gérard Swinnen, éditions Eyrolles, 2012. Disponible en ligne\nLe site interstices : https://interstices.info/.\nLes images et illustrations sont soit produites par mes soins, soit issues de Pixabay ou de Wikimedia commons ou encore de Pexels et, dans tous les cas, libres de droits.\nCours de David Roche.\nCours de Frédéric Junier.\nCours de Van Zuijlen Stéphan.\nCours de Konieczko Quentin\nCours de Olivier Lécluse\nCours du Lycée Blaise Pascal de Clermont-Ferrand\nCours du lycée Champollion de Grenoble\nCours du site Lyceum\nCours du site Mon Lycée Numérique\nCours du Lycée Stanislas de Wissembourg\nCours d’informatique de François Brucker (école Centrale de Marseille)\nCours de Philippe Rigaux sur les bases de données.\nCours de Gilles Lassus\nLe site MDN Web Docs : excellentissime ressource pour tout apprendre sur les langages HTML, CSS, Javascript et le protocole HTTP.\nLe site de M. JANVIER."
-  },
-  {
-    "objectID": "algo1/exos_recherche.html",
-    "href": "algo1/exos_recherche.html",
-    "title": "Exercices - Recherche dichotomique",
-    "section": "",
-    "text": "Les exercices précédés du symbole  sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole  doivent être résolus par écrit."
-  },
-  {
-    "objectID": "algo1/exos_recherche.html#fa-desktop-t.p.-bilan-et-compléments",
-    "href": "algo1/exos_recherche.html#fa-desktop-t.p.-bilan-et-compléments",
-    "title": "Exercices - Recherche dichotomique",
-    "section": " T.P. : Bilan et compléments",
-    "text": "T.P. : Bilan et compléments\n\n\n\n\n\n\nImportant\n\n\n\nNotebook Capytale pour ce T.P. : Capytale \nCe T.P. est à faire dans Capytale en suivant le lien ci-dessus."
   }
 ]
