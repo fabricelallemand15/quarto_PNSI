@@ -34,6 +34,12 @@ website:
             - algo1/exos_tris.qmd
             - algo1/recherche.qmd
             - algo1/exos_recherche.qmd
+      - section: "S7-Traitement des données en tables"
+        contents: 
+          - tables/index.qmd
+          - tables/tables_cours.qmd
+          - tables/tables_quiz.qmd
+          - tables/tables_exos.qmd
   page-footer: 
     left:
       - href: http://creativecommons.org/licenses/by/4.0/
@@ -65,8 +71,8 @@ format:
     lightbox: auto
     code-block-border-left: "#31BAE9"
     code-block-bg: true
-  pdf:
-    papersize: a4
+  # pdf:
+  #   papersize: a4
 
 
 

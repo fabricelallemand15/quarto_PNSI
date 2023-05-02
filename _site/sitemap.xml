@@ -2,42 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://flallemand.fr/PNSI/about.html</loc>
-    <lastmod>2023-04-24T05:50:54.000Z</lastmod>
+    <lastmod>2023-05-02T07:01:33.447Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/algo1/exos_recherche.html</loc>
-    <lastmod>2023-04-24T05:51:06.000Z</lastmod>
+    <lastmod>2023-05-02T07:01:35.457Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/algo1/exos_tris.html</loc>
-    <lastmod>2023-04-24T05:51:18.000Z</lastmod>
+    <lastmod>2023-05-02T07:01:36.282Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/algo1/generalites.html</loc>
-    <lastmod>2023-04-24T05:51:45.000Z</lastmod>
+    <lastmod>2023-05-02T07:01:43.735Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/algo1/index.html</loc>
-    <lastmod>2023-04-24T05:51:55.000Z</lastmod>
+    <lastmod>2023-05-02T07:01:45.614Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/algo1/parcoursTableau.html</loc>
-    <lastmod>2023-04-24T05:52:15.866Z</lastmod>
+    <lastmod>2023-05-02T07:01:52.495Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/algo1/recherche.html</loc>
-    <lastmod>2023-04-24T05:52:36.000Z</lastmod>
+    <lastmod>2023-05-02T07:01:55.178Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/algo1/tris.html</loc>
-    <lastmod>2023-04-24T05:52:58.956Z</lastmod>
+    <lastmod>2023-05-02T07:01:57.867Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/index.html</loc>
-    <lastmod>2023-04-24T05:53:09.045Z</lastmod>
+    <lastmod>2023-05-02T07:01:59.631Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/ressources.html</loc>
-    <lastmod>2023-04-24T05:53:17.643Z</lastmod>
+    <lastmod>2023-05-02T07:02:00.388Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/tables/index.html</loc>
+    <lastmod>2023-05-02T07:02:01.242Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/tables/tables_cours.html</loc>
+    <lastmod>2023-05-02T07:02:05.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/tables/tables_exos.html</loc>
+    <lastmod>2023-05-02T07:02:06.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/tables/tables_quiz.html</loc>
+    <lastmod>2023-05-02T07:02:09.314Z</lastmod>
   </url>
 </urlset>
