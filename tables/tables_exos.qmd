@@ -19,7 +19,7 @@ _Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être 
 
 ::: {.callout-important}
 
-Notebook Capytale pour les exercices 1 et 2 : <button type="button" class="btn btn-light">[Capytale](){target="_blank"} </button>
+Notebook Capytale pour les exercices 1 et 2 : <button type="button" class="btn btn-light">[Capytale](https://capytale2.ac-paris.fr/web/c/0681-1609936){target="_blank"} </button>
 
 :::
 
