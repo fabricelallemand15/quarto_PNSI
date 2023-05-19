@@ -40,6 +40,12 @@ website:
           - tables/tables_cours.qmd
           - tables/tables_quiz.qmd
           - tables/tables_exos.qmd
+      - section: "S8-Réseaux"
+        contents: 
+          - reseaux/index.qmd
+          - reseaux/reseaux_archi.qmd
+          - reseaux/reseaux_protocole.qmd
+          - reseaux/reseaux_exos.qmd
   page-footer: 
     left:
       - href: http://creativecommons.org/licenses/by/4.0/
