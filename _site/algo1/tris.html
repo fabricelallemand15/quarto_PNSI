@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.11">
+<meta name="generator" content="quarto-1.4.84">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -116,6 +116,8 @@ cookieconsent.run({
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
+  ,
+"language":"fr"
   });
 });
 </script> 
@@ -128,7 +130,6 @@ cookieconsent.run({
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
-
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -415,23 +416,23 @@ Principe de l’algorithme
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-cell="annotated-cell-1" data-code-lines="3">On commence à l’indice 1 qui correspond au deuxième élément du tableau.</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="3" data-code-annotation="1">On commence à l’indice 1 qui correspond au deuxième élément du tableau.</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-annotation="2" data-code-cell="annotated-cell-1" data-code-lines="4">On stocke l’indice courant dans une variable <code>j</code> pour pouvoir le modifier.</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="4" data-code-annotation="2">On stocke l’indice courant dans une variable <code>j</code> pour pouvoir le modifier.</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-annotation="3" data-code-cell="annotated-cell-1" data-code-lines="5">Tant que l’indice courant est supérieur à 0 et que l’élément courant est plus petit que l’élément précédent, on échange les deux éléments.</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="5" data-code-annotation="3">Tant que l’indice courant est supérieur à 0 et que l’élément courant est plus petit que l’élément précédent, on échange les deux éléments.</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-annotation="4" data-code-cell="annotated-cell-1" data-code-lines="6">On échange les deux éléments.</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="6" data-code-annotation="4">On échange les deux éléments.</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-annotation="5" data-code-cell="annotated-cell-1" data-code-lines="7">L’élément courant est maintenant l’élément précédent, on décrémente donc l’indice courant.</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="7" data-code-annotation="5">L’élément courant est maintenant l’élément précédent, on décrémente donc l’indice courant.</span>
 </dd>
 </dl>
 </div>
@@ -521,23 +522,23 @@ Principe de l’algorithme
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-cell="annotated-cell-3" data-code-lines="3">On commence à l’indice 0 qui correspond au premier élément du tableau.</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="3" data-code-annotation="1">On commence à l’indice 0 qui correspond au premier élément du tableau.</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-annotation="2" data-code-cell="annotated-cell-3" data-code-lines="4">On stocke l’indice courant dans une variable <code>min</code> pour pouvoir le modifier.</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="4" data-code-annotation="2">On stocke l’indice courant dans une variable <code>min</code> pour pouvoir le modifier.</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-annotation="3" data-code-cell="annotated-cell-3" data-code-lines="5">On parcourt le tableau à partir de l’indice <code>i+1</code> jusqu’à la fin.</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="5" data-code-annotation="3">On parcourt le tableau à partir de l’indice <code>i+1</code> jusqu’à la fin.</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-annotation="4" data-code-cell="annotated-cell-3" data-code-lines="6">Si l’élément courant est plus petit que l’élément stocké dans <code>min</code>, on met à jour <code>min</code>.</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="6" data-code-annotation="4">Si l’élément courant est plus petit que l’élément stocké dans <code>min</code>, on met à jour <code>min</code>.</span>
 </dd>
 <dt data-target-cell="annotated-cell-3" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-annotation="5" data-code-cell="annotated-cell-3" data-code-lines="8">On échange les deux éléments.</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="8" data-code-annotation="5">On échange les deux éléments.</span>
 </dd>
 </dl>
 </div>
@@ -685,6 +686,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -751,13 +779,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -873,19 +903,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children.length > 2) {
-          for (let i = 0; i < 2; i++) {
-            container.appendChild(note.children[i].cloneNode(true));
+      if (note !== null) {
+        if (id.startsWith('sec-')) {
+          // Special case sections, only their first couple elements
+          const container = document.createElement("div");
+          if (note.children && note.children.length > 2) {
+            for (let i = 0; i < 2; i++) {
+              container.appendChild(note.children[i].cloneNode(true));
+            }
+            return container.innerHTML
+          } else {
+            return note.innerHTML;
           }
-          return container.innerHTML
         } else {
           return note.innerHTML;
         }
       } else {
-        return note.innerHTML;
+        return "";
       }
     });
   }
@@ -1028,7 +1062,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
-
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../algo1/parcoursTableau.html" class="pagination-link">
@@ -1047,15 +1080,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
+    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/">
+<p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
+</a>
   </li>  
 </ul>
     </div>   
-    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-center">
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../about.html">Mentions légales</a>
+    <a class="nav-link" href="../about.html">
+<p>Mentions légales</p>
+</a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/fabricelallemand15/quarto_PNSI">
@@ -1067,7 +1106,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","loop":true,"selector":".lightbox","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":true,"closeEffect":"zoom"});</script>
 
 
 

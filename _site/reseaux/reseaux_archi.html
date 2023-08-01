@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.11">
+<meta name="generator" content="quarto-1.4.84">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -101,6 +101,8 @@ cookieconsent.run({
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
+  ,
+"language":"fr"
   });
 });
 </script> 
@@ -113,7 +115,6 @@ cookieconsent.run({
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
-
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -370,7 +371,7 @@ Résultat du ping
 <div class="callout-body-container callout-body">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="ft1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="ft1.png" class="img-fluid figure-img"></a></p>
+<p><a href="ft1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="ft1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -390,7 +391,7 @@ Résultat du ping
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="hub.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="hub.png" class="img-fluid figure-img"></a></p>
+<p><a href="hub.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="hub.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <ul>
@@ -398,7 +399,7 @@ Résultat du ping
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="switch.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="switch.png" class="img-fluid figure-img"></a></p>
+<p><a href="switch.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="switch.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
@@ -408,14 +409,14 @@ Résultat du ping
 <p>Rajoutons un deuxième sous-réseau de la manière suivante (penser à bien renommer les switchs).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="f2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="f2.png" class="img-fluid figure-img"></a></p>
+<p><a href="f2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="f2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p><strong>Comment relier ces deux sous-réseaux ?</strong></p>
 <p>Une réponse pas si bête : avec un câble entre les deux switchs !</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="f3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="f3.png" class="img-fluid figure-img"></a></p>
+<p><a href="f3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="f3.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>Testons cette hypothèse en essayant d’envoyer un ping à la machine <code>192.168.1.2</code> depuis la machine <code>192.168.0.1</code>.</p>
@@ -433,7 +434,7 @@ Résultat du ping
 <div class="callout-body-container callout-body">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="ft2.png" class="img-fluid figure-img"></a></p>
+<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="ft2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>Cela ne marche pas. L’ordinateur <strong>refuse</strong> d’envoyer le ping vers la machine <code>192.168.1.2</code>.</p>
@@ -456,7 +457,7 @@ Résultat du ping
 <div class="callout-body-container callout-body">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="ft3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="ft3.png" class="img-fluid figure-img"></a></p>
+<p><a href="ft3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="ft3.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>Cela marche. Les paquets sont bien acheminés.</p>
@@ -469,7 +470,7 @@ Résultat du ping
 <p>Dans Filius, lors de l’attribution de l’adresse IP à une machine, une ligne nous permet de spécifier le <strong>masque de sous-réseau</strong> (appelé simplement « Masque » dans Filius). C’est ce masque qui va permettre de déterminer si une machine appartient à un sous-réseau ou non, en fonction de son adresse IP.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="f4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="f4.png" class="img-fluid figure-img"></a></p>
+<p><a href="f4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="f4.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <section id="explication-basique" class="level4">
@@ -502,7 +503,7 @@ Résultat du ping
 <div class="callout-body-container callout-body">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="ft4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="ft4.png" class="img-fluid figure-img"></a></p>
+<p><a href="ft4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="ft4.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>Cela marche. Les deux machines appartiennent maintenant au même sous-réseau.</p>
@@ -610,7 +611,7 @@ Définition
 <p><strong>Exemple</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="ex_reseau.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="image"><img src="ex_reseau.png" class="img-fluid figure-img"></a></p>
+<p><a href="ex_reseau.png" class="lightbox" title="image" data-gallery="quarto-lightbox-gallery-11"><img src="ex_reseau.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">image</figcaption>
 </figure>
 </div>
@@ -622,7 +623,7 @@ Définition
 <p>Pour que les machines de deux réseaux différents puissent être connectées, on va utiliser un dispositif équipé de <strong>deux cartes réseaux</strong>, situé à cheval entre les deux sous-réseaux. Cet équipement de réseau est appelé <strong>routeur</strong> ou <strong>passerelle</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="routeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="routeur.png" class="img-fluid figure-img"></a></p>
+<p><a href="routeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="routeur.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <section id="principe-de-fonctionnement" class="level3">
@@ -638,14 +639,14 @@ Définition
 <p>Dans notre exemple, l’adresse <code>172.16.52.3</code> n’est pas dans le sous-réseau de <code>192.168.0.1</code>. Le message va donc transiter par le routeur.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="routeur2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="routeur2.png" class="img-fluid figure-img"></a></p>
+<p><a href="routeur2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="routeur2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
 <section id="illustration-avec-filius" class="level3">
 <h3 class="anchored" data-anchor-id="illustration-avec-filius">3.2 Illustration avec Filius</h3>
 <ul>
-<li><p>Rajoutons un routeur entre le SwitchA et le SwitchB. <a href="f5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="f5.png" class="img-fluid"></a></p></li>
+<li><p>Rajoutons un routeur entre le SwitchA et le SwitchB. <a href="f5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="f5.png" class="img-fluid"></a></p></li>
 <li><p>Configuration du routeur :</p>
 <ul>
 <li>L’interface reliée au Switch A doit avoir une adresse du sous-réseau A. On donne souvent une adresse finissant par <code>254</code>, qui est en quelque sorte la dernière adresse du réseau (en effet l’adresse en <code>255</code> est appelée adresse de <strong>broadcast</strong>, utilisée pour envoyer un ping en une seule fois à l’intégralité d’un sous-réseau).<br>
@@ -654,7 +655,7 @@ Définition
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="flsrouteur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="flsrouteur.png" class="img-fluid figure-img"></a></p>
+<p><a href="flsrouteur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="flsrouteur.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <ul>
@@ -676,7 +677,7 @@ Résultat du ping
 <div class="callout-body-container callout-body">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="ft2.png" class="img-fluid figure-img"></a></p>
+<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="ft2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>Cela ne marche pas. La carte réseau refuse d’envoyer les paquets, car elle ne sait pas où les envoyer.</p>
@@ -686,7 +687,7 @@ Résultat du ping
 <p>Pourquoi cet échec ? Parce que nous devons dire à chaque machine qu’une passerelle est maintenant disponible pour pouvoir sortir de son propre sous-réseau. Il faut donc aller sur la machine <code>192.168.0.1</code> et lui donner l’adresse de sa passerelle, qui est <code>192.168.0.254</code>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="passerelle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="passerelle.png" class="img-fluid figure-img"></a></p>
+<p><a href="passerelle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="passerelle.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>Attention, il faut faire de même pour <code>192.168.1.2</code> (avec la bonne passerelle…)<br>
@@ -694,7 +695,7 @@ Testons à nouveau le ping… Cette fois cela marche.</p>
 <p>Plus intéressant : effectuons un <code>traceroute</code> entre <code>192.168.0.1</code> et <code>192.168.1.2</code>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="traceroute.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="traceroute.png" class="img-fluid figure-img"></a></p>
+<p><a href="traceroute.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="traceroute.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>On constate que la machine <code>192.168.1.2</code> est atteignable en deux sauts depuis <code>192.168.0.1</code>, en passant par la passerelle <code>192.168.0.254</code></p>
@@ -706,20 +707,20 @@ Testons à nouveau le ping… Cette fois cela marche.</p>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="boxmaison.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="boxmaison.png" class="img-fluid figure-img"></a></p>
+<p><a href="boxmaison.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="boxmaison.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>L’image ci-dessous présente le résultat de la commande <code>ipconfig</code> sous Windows. On y retrouve l’adresse IP locale <code>192.168.9.103</code>, le masque de sous-réseau <code>255.255.255.0</code> et l’adresse de la passerelle <code>192.168.9.1</code>.<br>
-<a href="imgpasserelle.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="imgpasserelle.jpg" class="img-fluid"></a></p>
+<a href="imgpasserelle.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="imgpasserelle.jpg" class="img-fluid"></a></p>
 </section>
 <section id="annexe-rajout-dun-serveur-dns" class="level3">
 <h3 class="anchored" data-anchor-id="annexe-rajout-dun-serveur-dns">3.3 Annexe : rajout d’un serveur DNS</h3>
 <section id="ajout-dun-serveur-web" class="level4">
 <h4 class="anchored" data-anchor-id="ajout-dun-serveur-web">3.3.1 Ajout d’un serveur web</h4>
 <ul>
-<li><p>Connectons un ordinateur au SwitchB, sur l’adresse <code>192.168.1.30</code> et installons dessus un Serveur web et démarrons-le. <a href="serveurweb.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="serveurweb.png" class="img-fluid"></a></p></li>
+<li><p>Connectons un ordinateur au SwitchB, sur l’adresse <code>192.168.1.30</code> et installons dessus un Serveur web et démarrons-le. <a href="serveurweb.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="serveurweb.png" class="img-fluid"></a></p></li>
 <li><p>Sur la machine <code>192.168.0.1</code>, rajoutons un Navigateur Web. En tapant dans la barre d’adresse l’adresse IP du Serveur web, la page d’accueil de Filius s’affiche.<br>
-<a href="nav1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="nav1.png" class="img-fluid"></a></p></li>
+<a href="nav1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="nav1.png" class="img-fluid"></a></p></li>
 </ul>
 <p>Lors d’une utilisation classique d’un navigateur web, c’est une url mémorisable qui s’affiche, et non une adresse IP : on retient en effet plus facilement <code>https://www.google.com/</code> que <code>http://216.58.213.131</code>, qui renvoient pourtant à la même adresse.</p>
 <p>La machine qui assure ce rôle d’annuaire entre les serveurs web et leur adresse IP s’appelle un <strong>serveur DNS</strong>. Pour pouvoir indexer la totalité des sites internet, son rôle est structuré de manière hiérarchique.</p>
@@ -728,13 +729,13 @@ Testons à nouveau le ping… Cette fois cela marche.</p>
 <h4 class="anchored" data-anchor-id="ajout-dun-serveur-dns">3.3.1 Ajout d’un serveur DNS</h4>
 <ul>
 <li><p>Rajoutons un serveur DNS minimal, qui n’aura dans son annuaire d’un seul site. Il faut pour cela raccorder une nouvelle machine (mais une machine déjà sur le réseau aurait très bien pu jouer ce rôle), et installer dessus un serveur DNS.<br>
-<a href="dns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="dns.png" class="img-fluid"></a></p></li>
+<a href="dns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="dns.png" class="img-fluid"></a></p></li>
 <li><p>Sur ce serveur DNS, associons l’adresse <code>http://www.vivelansi.fr</code> à l’adresse IP <code>192.168.1.30</code>.<br>
-<a href="vivelansi.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="vivelansi.png" class="img-fluid"></a></p></li>
+<a href="vivelansi.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="vivelansi.png" class="img-fluid"></a></p></li>
 <li><p>De retour sur notre machine <code>192.168.0.1</code>, spécifions maintenant l’adresse du serveur DNS :<br>
-<a href="specdns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="specdns.png" class="img-fluid"></a></p></li>
+<a href="specdns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="specdns.png" class="img-fluid"></a></p></li>
 <li><p>Depuis le navigateur web de la machine <code>192.168.0.1</code>, le site <code>http://www.vivelansi.fr</code> est maintenant accessible.<br>
-<a href="dnsex.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="dnsex.png" class="img-fluid"></a></p></li>
+<a href="dnsex.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="dnsex.png" class="img-fluid"></a></p></li>
 </ul>
 </section>
 </section>
@@ -792,6 +793,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -860,13 +888,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -982,19 +1012,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children.length > 2) {
-          for (let i = 0; i < 2; i++) {
-            container.appendChild(note.children[i].cloneNode(true));
+      if (note !== null) {
+        if (id.startsWith('sec-')) {
+          // Special case sections, only their first couple elements
+          const container = document.createElement("div");
+          if (note.children && note.children.length > 2) {
+            for (let i = 0; i < 2; i++) {
+              container.appendChild(note.children[i].cloneNode(true));
+            }
+            return container.innerHTML
+          } else {
+            return note.innerHTML;
           }
-          return container.innerHTML
         } else {
           return note.innerHTML;
         }
       } else {
-        return note.innerHTML;
+        return "";
       }
     });
   }
@@ -1155,15 +1189,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
+    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/">
+<p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
+</a>
   </li>  
 </ul>
     </div>   
-    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-center">
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../about.html">Mentions légales</a>
+    <a class="nav-link" href="../about.html">
+<p>Mentions légales</p>
+</a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/fabricelallemand15/quarto_PNSI">
@@ -1175,7 +1215,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"descPosition":"bottom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 

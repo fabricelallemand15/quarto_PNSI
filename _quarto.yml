@@ -25,6 +25,142 @@ website:
     collapse-level: 1
     alignment: left
     contents: 
+      - section: "Ch. 1 - Systèmes d'exploitation"
+        contents: 
+          - 01_os/index.qmd
+          - 01_os/OS_cours.qmd
+          - 01_os/OS_exos.qmd
+      - section: "Ch. 2 - Python, constructions élémentaires"
+        contents: 
+          - 02_python/index.qmd
+          - 02_python/python_cours.qmd
+          - 02_python/python_exos.qmd
+      - section: "Ch. 3 - Spécification et mise au point de programmes"
+        contents: 
+          - 03_spec/index.qmd
+          - 03_spec/spec_cours.qmd
+          - 03_spec/spec_exos.qmd
+      - section: "Ch. 4 - Diversité et unité des langages de programmation"
+        contents: 
+          - 04_langages/index.qmd
+          - 04_langages/langages_cours.qmd
+          - 04_langages/langages_exos.qmd
+      - section: "Ch. 5 - Écriture d'un entier positif dans une base $b$" 
+        contents: 
+          - 05_base/index.qmd
+          - 05_base/base_cours.qmd
+          - 05_base/base_exos.qmd
+      - section: "Ch. 6 - Représentation binaire d'un entier relatif"
+        contents: 
+          - 06_relatif/index.qmd
+          - 06_relatif/relatif_cours.qmd
+          - 06_relatif/relatif_exos.qmd
+      - section: "Ch. 7 - Représentation approximative des nombres réels : flottants"
+        contents: 
+          - 07_flottants/index.qmd
+          - 07_flottants/flottants_cours.qmd
+          - 07_flottants/flottants_exos.qmd
+      - section: "Ch. 8 - Booléens"
+        contents: 
+          - 08_booleens/index.qmd
+          - 08_booleens/booleens_cours.qmd
+          - 08_booleens/booleens_exos.qmd
+      - section: "Ch. 9 - Représentation d'un texte en machine"
+        contents: 
+          - 09_texte/index.qmd
+          - 09_texte/texte_cours.qmd
+          - 09_texte/texte_exos.qmd
+      - section: "Ch. 10 - Modèle d'architecture de von Neumann"
+        contents: 
+          - 10_vonNeumann/index.qmd
+          - 10_vonNeumann/vonNeumann_cours.qmd
+          - 10_vonNeumann/vonNeumann_exos.qmd
+      - section: "Ch. 11 - p-uplets"
+        contents: 
+          - 11_p-uplets/index.qmd
+          - 11_p-uplets/p-uplets_cours.qmd
+          - 11_p-uplets/p-uplets_exos.qmd
+      - section: "Ch. 12 - Tableaux"
+        contents: 
+          - 12_tableaux/index.qmd
+          - 12_tableaux/tableaux_cours.qmd
+          - 12_tableaux/tableaux_exos.qmd
+      - section: "Ch. 13 - Dictionnaires"
+        contents: 
+          - 13_dictionnaires/index.qmd
+          - 13_dictionnaires/dictionnaires_cours.qmd
+          - 13_dictionnaires/dictionnaires_exos.qmd
+      - section: "Ch. 14 - Éléments généraux d'algorithmique"
+        contents: 
+          - 14_algo/index.qmd
+          - 14_algo/algo_cours.qmd
+          - 14_algo/algo_exos.qmd
+      - section: "Ch. 15 - Parcours séquentiel d'un tableau"
+        contents: 
+          - 15_parcours/index.qmd
+          - 15_parcours/parcours_cours.qmd
+          - 15_parcours/parcours_exos.qmd
+      - section: "Ch. 16 - Algorithmes de tris"
+        contents: 
+          - 16_tris/index.qmd
+          - 16_tris/tris_cours.qmd
+          - 16_tris/tris_exos.qmd
+      - section: "Ch. 17 - Recherche dichotomique"
+        contents: 
+          - 17_recherche/index.qmd
+          - 17_recherche/recherche_cours.qmd
+          - 17_recherche/recherche_exos.qmd
+      - section: "Ch. 18 - Le langage HTML"
+        contents: 
+          - 18_html/index.qmd
+          - 18_html/html_cours.qmd
+          - 18_html/html_exos.qmd
+      - section: "Ch. 19 - Le couple HTML / CSS"
+        contents: 
+          - 19_css/index.qmd
+          - 19_css/css_cours.qmd
+          - 19_css/css_exos.qmd
+      - section: "Ch. 20 - Interactions dans une page Web - Javascript"
+        contents: 
+          - 20_js/index.qmd
+          - 20_js/js_cours.qmd
+          - 20_js/js_exos.qmd
+      - section: "Ch. 21 - Interaction client-serveur et formulaires d'une page Web"
+        contents: 
+          - 21_client-serveur/index.qmd
+          - 21_client-serveur/client-serveur_cours.qmd
+          - 21_client-serveur/client-serveur_exos.qmd
+      - section: "Ch. 22 - Traitement de données en tables"
+        contents: 
+          - 22_tables/index.qmd
+          - 22_tables/tables_cours.qmd
+          - 22_tables/tables_exos.qmd
+      - section: "Ch. 23 - Architecture d'un réseau"
+        contents: 
+          - 23_reseaux/index.qmd
+          - 23_reseaux/reseaux_cours.qmd
+          - 23_reseaux/reseaux_exos.qmd
+      - section: "Ch. 24 - Protocoles de communication"
+        contents: 
+          - 24_protocoles/index.qmd
+          - 24_protocoles/protocoles_cours.qmd
+          - 24_protocoles/protocoles_exos.qmd
+      - section: "Ch. 25 - Algorithme des $k$ plus proches voisins"
+        contents: 
+          - 25_kppv/index.qmd
+          - 25_kppv/kppv_cours.qmd
+          - 25_kppv/kppv_exos.qmd
+      - section: "Ch. 26 - Algorithmes gloutons"
+        contents: 
+          - 26_gloutons/index.qmd
+          - 26_gloutons/gloutons_cours.qmd
+          - 26_gloutons/gloutons_exos.qmd
+      - section: "Ch. 27 - Interfaces homme-machine"
+        contents: 
+          - 27_ihm/index.qmd
+          - 27_ihm/ihm_cours.qmd
+          - 27_ihm/ihm_exos.qmd
+          
       - section: "S6-Algorithmique (1)"
         contents: 
             - algo1/index.qmd
@@ -79,7 +215,3 @@ format:
     code-block-bg: true
   # pdf:
   #   papersize: a4
-
-
-
-

@@ -1,0 +1,9 @@
+---
+title: Programme
+---
+
+## Points traités dans cette séquence
+
+|Contenus |Capacités attendues| Commentaires|
+| :---| :---| :---|
+|Transmission de données dans un réseau. Protocoles de communication. Architecture d’un réseau|Mettre en évidence l’intérêt du découpage des données en paquets et de leur encapsulation. Dérouler le fonctionnement d’un protocole simple de récupération de perte de paquets (bit alterné). Simuler ou mettre en oeuvre un réseau.|Le protocole peut être expliqué et simulé en mode débranché. Le lien est fait avec ce qui a été vu en classe de seconde sur le protocole TCP/IP. Le rôle des différents constituants du réseau local de l’établissement est présenté.|
