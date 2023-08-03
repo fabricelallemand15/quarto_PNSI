@@ -1,0 +1,86 @@
+---
+title: Exercices
+---
+
+_Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+
+_Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
+
+## {{< fa solid pencil-alt >}} QCM
+
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=28" width="959" height="380" frameborder="0" allowfullscreen="allowfullscreen" title="linux 1"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=29" width="959" height="380" frameborder="0" allowfullscreen="allowfullscreen" title="linux 2"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=30" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="linux 3"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=31" width="959" height="420" frameborder="0" allowfullscreen="allowfullscreen" title="linux 4"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=32" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="linux 5"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+## {{< fa solid pencil-alt >}} Exercice 1
+
+En utilisant l'arborescence ci-dessous, quelle est la commande à saisir si le répertoire courant est le répertoire "home" et que vous "voulez vous rendre" dans le répertoire "Documents" (vous utiliserez d'abord un chemin absolu puis un chemin relatif).
+
+![](arborescence.png)
+
+-----------------------------------------
+
+:::{.callout-warning}
+## Consignes pour les exercices 2 et 3
+
+Les exercices 2 et 3 doivent être réalisés sur un système Linux.
+
+**Remarque** : dans le terminal, la flèche "montante" du clavier permet de remonter dans l'historique des commandes et la touche de tabulation permet la complétion automatique des commandes et des chemins.
+:::
+
+----------------------------------------
+
+## {{< fa desktop >}} Exercice 2
+
+Faites les actions suivantes en utilisant des lignes de commande. **Pour chaque question, recopier la liste des commandes utilisées**.
+
+* Rendez-vous dans votre répertoire personnel `/home` ;
+* Créez un répertoire ``doc`` ;
+* Placez-vous dans le répertoire ``doc`` ;
+* Créez un répertoire ``texte`` ;
+* Créez un répertoire ``mesDoc`` ;
+* Placez-vous dans le répertoire ``texte`` ;
+* Créez un fichier ``toto.txt`` ;
+* Ouvrez l'éditeur de texte `nano` pour éditer le fichier ``toto.txt`` : pour cela, entrer la commande `nano toto.txt` dans le terminal.
+* Entrez le texte "Bonjour Linux !", enregistrez (CTRL O et valider) et quittez (CTRL X) `nano`.
+* Affichez dans le terminal le contenu du fichier `toto.txt`.
+* Placez-vous dans le répertoire ``doc`` ;
+* Copiez le fichier ``toto.txt`` dans le répertoire ``mesDoc`` ;
+* Placez-vous dans le répertoire ``mesDoc`` et vérifiez que le fichier ``toto.txt`` est bien présent dans ce répertoire ;
+* Placez-vous dans le répertoire ``doc`` ;
+* Effacez le fichier ``toto.txt`` du répertoire ``texte`` ;
+* Déplacez le fichier ``toto.txt`` du répertoire ``mesDoc`` vers le répertoire ``doc`` ;
+* Effacez le répertoire ``mesDoc`` ;
+* Effacez le répertoire ``texte`` ;
+* Effacez le fichier ``toto.txt``.
+
+-------------------------------------
+
+## {{< fa desktop >}} Exercice 3
+
+Faites les actions suivantes en utilisant des lignes de commande (en partant de votre répertoire de travail). Recopier la liste des commandes utilisées.
+
+* Créez un répertoire ``doc`` ;
+* Placez-vous dans le répertoire ``doc`` et créez un fichier ``toto.txt`` ;
+* Listez les droits (r, w et x) pour les différents utilisateurs (u, g et o) sur le fichier ``toto.txt`` ;
+* Supprimez le droit en lecture pour les utilisateurs g sur le fichier ``toto.txt``.
+
+-------------------------------------
+
+## {{< fa pencil-alt >}} Exercice 4
+
+On donne les éléments ci-dessous, obtenus en utilisant la commande `ls -l` :
+
+```bash
+-rwx------ 1 toto eleves 512K sept. 10 10:53 fichier1
+-rw-r--r-- 1 lena eleves 41M sept. 10 10:27 fichier2
+-rwx--x--x 1 john profs 2M sept. 5 10:02 fichier3
+```
+
+Pour chacun des fichiers, donner le nom de l'utilisateur auquel il appartient, les droits qu'il a sur le fichier, ceux du groupe et des autres.

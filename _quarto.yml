@@ -34,7 +34,12 @@ website:
         contents: 
           - 02_python/index.qmd
           - 02_python/python_cours.qmd
-          - 02_python/python_exos.qmd
+          - 02_python/python_bases_exos_1.qmd
+          - 02_python/python_bases_exos_2.qmd
+          - 02_python/python_bases_exos_3.qmd
+          - 02_python/python_bases_exos_4.qmd
+          - 02_python/python_bases_quiz.qmd
+          - 02_python/supplements.qmd
       - section: "Ch. 3 - Spécification et mise au point de programmes"
         contents: 
           - 03_spec/index.qmd

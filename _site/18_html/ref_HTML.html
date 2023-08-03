@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.287">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>NSI - Première - Référence des principales balises HTML</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.ico" rel="icon">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"fr"
+  });
+});
+</script> 
+  
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">NSI - Première</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
+ <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../ressources.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Référence des principales balises HTML</li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Ch. 1 - Systèmes d’exploitation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_os/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_os/OS_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_os/OS_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Ch. 2 - Python, constructions élémentaires</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_exos_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - fiche 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_exos_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - fiche 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_exos_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - fiche 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_exos_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - fiche 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - Quiz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/supplements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices supplémentaires</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Ch. 3 - Spécification et mise au point de programmes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">03_spec/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">03_spec/spec_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">03_spec/spec_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">Ch. 4 - Diversité et unité des langages de programmation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">04_langages/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">04_langages/langages_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">04_langages/langages_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+ <span class="menu-text">Ch. 5 - Écriture d’un entier positif dans une base <span class="math inline">\(b\)</span></span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">05_base/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">05_base/base_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">05_base/base_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+ <span class="menu-text">Ch. 6 - Représentation binaire d’un entier relatif</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">06_relatif/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">06_relatif/relatif_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">06_relatif/relatif_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+ <span class="menu-text">Ch. 7 - Représentation approximative des nombres réels : flottants</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">07_flottants/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">07_flottants/flottants_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">07_flottants/flottants_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+ <span class="menu-text">Ch. 8 - Booléens</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">08_booleens/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">08_booleens/booleens_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">08_booleens/booleens_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
+ <span class="menu-text">Ch. 9 - Représentation d’un texte en machine</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">09_texte/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">09_texte/texte_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">09_texte/texte_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
+ <span class="menu-text">Ch. 10 - Modèle d’architecture de von Neumann</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">10_vonNeumann/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">10_vonNeumann/vonNeumann_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">10_vonNeumann/vonNeumann_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+ <span class="menu-text">Ch. 11 - p-uplets</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">11_p-uplets/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">11_p-uplets/p-uplets_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">11_p-uplets/p-uplets_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false">
+ <span class="menu-text">Ch. 12 - Tableaux</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">12_tableaux/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">12_tableaux/tableaux_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">12_tableaux/tableaux_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
+ <span class="menu-text">Ch. 13 - Dictionnaires</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">13_dictionnaires/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">13_dictionnaires/dictionnaires_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">13_dictionnaires/dictionnaires_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false">
+ <span class="menu-text">Ch. 14 - Éléments généraux d’algorithmique</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../14_algo/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">14_algo/algo_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">14_algo/algo_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false">
+ <span class="menu-text">Ch. 15 - Parcours séquentiel d’un tableau</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../15_parcours/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">15_parcours/parcours_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">15_parcours/parcours_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false">
+ <span class="menu-text">Ch. 16 - Algorithmes de tris</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../16_tris/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">16_tris/tris_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">16_tris/tris_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" aria-expanded="false">
+ <span class="menu-text">Ch. 17 - Recherche dichotomique</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../17_recherche/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">17_recherche/recherche_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">17_recherche/recherche_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="false">
+ <span class="menu-text">Ch. 18 - Le langage HTML</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">18_html/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">18_html/html_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">18_html/html_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false">
+ <span class="menu-text">Ch. 19 - Le couple HTML / CSS</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">19_css/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">19_css/css_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">19_css/css_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" aria-expanded="false">
+ <span class="menu-text">Ch. 20 - Interactions dans une page Web - Javascript</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">20_js/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">20_js/js_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">20_js/js_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false">
+ <span class="menu-text">Ch. 21 - Interaction client-serveur et formulaires d’une page Web</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">21_client-serveur/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">21_client-serveur/client-serveur_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">21_client-serveur/client-serveur_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">
+ <span class="menu-text">Ch. 22 - Traitement de données en tables</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S7-Traitement de données en tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../22_tables/tables_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Traitements de données en tables (cours)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../22_tables/tables_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - Traitements de données en tables</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false">
+ <span class="menu-text">Ch. 23 - Architecture d’un réseau</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../23_reseaux/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">23_reseaux/reseaux_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">23_reseaux/reseaux_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false">
+ <span class="menu-text">Ch. 24 - Protocoles de communication</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../24_protocoles/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">24_protocoles/protocoles_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">24_protocoles/protocoles_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false">
+ <span class="menu-text">Ch. 25 - Algorithme des <span class="math inline">\(k\)</span> plus proches voisins</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">25_kppv/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">25_kppv/kppv_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">25_kppv/kppv_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false">
+ <span class="menu-text">Ch. 26 - Algorithmes gloutons</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">26_gloutons/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">26_gloutons/gloutons_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">26_gloutons/gloutons_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" aria-expanded="false">
+ <span class="menu-text">Ch. 27 - Interfaces homme-machine</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">27_ihm/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">27_ihm/ihm_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">27_ihm/ihm_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false">
+ <span class="menu-text">S6-Algorithmique (1)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/generalites.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/parcoursTableau.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/tris.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/exos_tris.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/recherche.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/exos_recherche.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" aria-expanded="false">
+ <span class="menu-text">S7-Traitement des données en tables</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-29" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">tables/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">tables/tables_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">tables/tables_quiz.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">tables/tables_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" aria-expanded="false">
+ <span class="menu-text">S8-Réseaux</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-30" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">reseaux/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">reseaux/reseaux_archi.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">reseaux/reseaux_protocole.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">reseaux/reseaux_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#racine-principale" id="toc-racine-principale" class="nav-link active" data-scroll-target="#racine-principale">Racine principale</a></li>
+  <li><a href="#métadonnées" id="toc-métadonnées" class="nav-link" data-scroll-target="#métadonnées">Métadonnées</a></li>
+  <li><a href="#structure-du-document" id="toc-structure-du-document" class="nav-link" data-scroll-target="#structure-du-document">Structure du document</a></li>
+  <li><a href="#contenu-textuel" id="toc-contenu-textuel" class="nav-link" data-scroll-target="#contenu-textuel">Contenu textuel</a></li>
+  <li><a href="#sémantique-du-texte-en-ligne" id="toc-sémantique-du-texte-en-ligne" class="nav-link" data-scroll-target="#sémantique-du-texte-en-ligne">Sémantique du texte en ligne</a></li>
+  <li><a href="#images-et-médias" id="toc-images-et-médias" class="nav-link" data-scroll-target="#images-et-médias">Images et médias</a></li>
+  <li><a href="#contenu-embarqué" id="toc-contenu-embarqué" class="nav-link" data-scroll-target="#contenu-embarqué">Contenu embarqué</a></li>
+  <li><a href="#élément-interactif" id="toc-élément-interactif" class="nav-link" data-scroll-target="#élément-interactif">Élément interactif</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Référence des principales balises HTML</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+<p>Cette page répertorie les éléments HTML principaux, qui sont créés à l’aide de balises. Ils sont regroupés par fonction pour vous aider à trouver facilement ce que vous avez en tête.</p>
+<p>Pour une liste complète, reportez-vous au <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element" target="_blank">site de Mozilla</a> (excellente ressource en français). Les informations de cette page sont extraites de ce site.</p>
+<section id="racine-principale" class="level2">
+<h2 class="anchored" data-anchor-id="racine-principale">Racine principale</h2>
+<p>!!! danger “Principales balises HTML”</p>
+<pre><code>| **Balise** | **Description** |
+|--------|--------|
+|`&lt;html&gt;`|   L'élément HTML **`&lt;html&gt;`** représente la racine d'un document HTML. Tout autre élément du document doit être un descendant de cet élément.|</code></pre>
+<!--  -->
+</section>
+<section id="métadonnées" class="level2">
+<h2 class="anchored" data-anchor-id="métadonnées">Métadonnées</h2>
+<p>Les métadonnées contiennent des informations à propos de la page. Elles comprennent des informations sur les styles, les scripts et les données qui aident les programmes (moteur de recherche, navigateurs, etc.) à utiliser et à rendre la page. Les métadonnées relatives aux styles et aux scripts peuvent être définies dans la page ou renvoyer à un autre fichier contenant ces informations.</p>
+<p>!!! danger “Principales balises HTML”</p>
+<pre><code>| **Balise** | **Description** |
+|--------|--------|
+|`&lt;head&gt;`|     L'élément HTML **`&lt;head&gt;`** fournit des informations générales (métadonnées) sur le document, incluant son titre et des liens ou des définitions vers des scripts et feuilles de style.
+|`&lt;link&gt;`|     L'élément HTML **`&lt;link&gt;`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers une feuille de style, vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
+|`&lt;style&gt;`|   L'élément HTML **`&lt;style&gt;`** contient des informations de mise en forme pour un document ou une partie d'un document. Par défaut, les instructions de mise en forme écrites dans cet élément sont écrites en CSS.
+|`&lt;title&gt;`|   L'élément **`&lt;title&gt;`** définit le titre du document (qui est affiché dans la barre de titre du navigateur ou dans l'onglet de la page). Cet élément ne peut contenir que du texte, les balises qu'il contiendrait seraient ignorées.</code></pre>
+<!--  -->
+</section>
+<section id="structure-du-document" class="level2">
+<h2 class="anchored" data-anchor-id="structure-du-document">Structure du document</h2>
+<p>Organiser le contenu d’une page en différentes sections permet d’avoir une structure logique au sein d’un document. Grâce à ces éléments, on peut créer un plan pour la page, ajouter des titres pour identifier les sections et également gérer un en-tête et un bas de page.</p>
+<p>On remarquera que, en dehors des balises de titres, ces éléments HTML ne modifient pas du tout la mise en forme du texte qu’elles contiennent. Ce sont des balises <strong>sémantiques</strong> : elles servent à donner du <strong>sens</strong> au contenu, pour le rédacteur de la page. Elles guident aussi l’indexation de la page par les moteurs de recherche.</p>
+<p>!!! danger “Principales balises HTML”</p>
+<pre><code>| **Balise** | **Description** |
+|--------|--------|
+|`&lt;body&gt;`|   L'élément HTML **`&lt;body&gt;`** représente le contenu principal du document HTML. Il ne peut y avoir qu'un élément `&lt;body&gt;` par document.
+|`&lt;header&gt;`|L'élément HTML **`&lt;header&gt;`** représente du contenu introductif, généralement un groupe de contenu introductif ou de contenu aidant à la navigation. Il peut contenir des éléments de titre, mais aussi d'autres éléments tels qu'un logo, un formulaire de recherche, le nom d'auteur, etc.
+|`&lt;footer&gt;`| L'élément HTML **`&lt;footer&gt;`** représente le pied de page de la section ou de la racine de sectionnement la plus proche. Un élément `&lt;footer&gt;` contient habituellement des informations sur l'autrice ou l'auteur de la section, les données relatives au droit d'auteur  ou les liens vers d'autres documents en relation. 
+|`&lt;h1&gt;`, `&lt;h2&gt;`, `&lt;h3&gt;`, `&lt;h4&gt;`, `&lt;h5&gt;`, `&lt;h6&gt;`|   Les éléments **`&lt;h1&gt;`** à **`&lt;h6&gt;`** représentent six niveaux de titres dans un document, `&lt;h1&gt;` est le plus important et `&lt;h6&gt;` est le moins important. Un élément de titre décrit brièvement le sujet de la section qu'il introduit.
+`&lt;main&gt;`|L'élément HTML **`&lt;main&gt;`** représente le contenu majoritaire du `body` du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document.
+|`&lt;nav&gt;`|L'élément HTML **`&lt;nav&gt;`** représente une section d'une page ayant des liens vers d'autres pages ou des fragments de cette page. Autrement dit, c'est une section destinée à la navigation dans un document .
+|`&lt;section&gt;`|L'élément HTML **`&lt;section&gt;`** représente une section générique d'un document, par exemple un groupe de contenu thématique. Une section commence généralement avec un titre.</code></pre>
+<!--  -->
+</section>
+<section id="contenu-textuel" class="level2">
+<h2 class="anchored" data-anchor-id="contenu-textuel">Contenu textuel</h2>
+<p>Le contenu HTML textuel permet d’organiser des blocs ou des sections de contenu entre la balise ouvrante <code>&lt;body&gt;</code> et la balise fermante <code>&lt;/body&gt;</code>. Ces éléments sont cruciaux pour l’accessibilité et le référencement car ils permettent d’identifier le sens du contenu.</p>
+<p>!!! danger “Principales balises HTML”</p>
+<pre><code>| **Balise** | **Description** |
+|-------------|-------------|
+|`&lt;blockquote&gt;`|L'élément HTML **`&lt;blockquote&gt;`**  indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation. Une URL indiquant la source de la citation peut être donnée grâce à l'attribut **`cite`** tandis qu'un texte représentant la source peut être donné via l'élément **`&lt;cite&gt;`**.
+|`&lt;dd&gt;`| L'élément HTML **`&lt;dd&gt;`** fournit la description, la définition ou la valeur du terme précédent **`&lt;dt&gt;`** dans une liste de description **`&lt;dl&gt;`**.
+|`&lt;div&gt;`| L'élément HTML **`&lt;div&gt;`**  est le conteneur générique de contenu. Il n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de CSS.
+|`&lt;dl&gt;`|L'élément HTML **`&lt;dl&gt;`** représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments **`&lt;dt&gt;`**) et leurs descriptions ou définitions (fournies par des éléments **`&lt;dd&gt;`**). On utilisera par exemple cet élément pour implémenter un glossaire.
+|`&lt;dt&gt;`| L'élément HTML **`&lt;dt&gt;`** identifie un terme dans une liste de définitions ou de descriptions. Cet élément n'apparaît qu'en tant qu'élément enfant d'un élément **`&lt;dl&gt;`** et est généralement suivi d'un élément **`&lt;dd&gt;`**. Plusieurs éléments **`&lt;dt&gt;`** qui se suivent indiqueront qu'ils partagent la définition/description fournie par le prochain élément **`&lt;dd&gt;`**.
+|`&lt;li&gt;`| L'élément HTML **`&lt;li&gt;`** est utilisé pour représenter un élément dans une liste. Il doit être contenu dans un élément parent : une liste ordonnée **`&lt;ol&gt;`**, une liste non ordonnée **`&lt;ul&gt;`** ou un menu **`&lt;menu&gt;`**. Dans les menus et les listes non ordonnées, les éléments de liste sont habituellement affichés en utilisant des puces. Dans les listes ordonnées, ils sont habituellement affichés avec compteur croissant à gauche, tel qu'un nombre ou une lettre.
+|`&lt;menu&gt;`| L'élément HTML **`&lt;menu&gt;`** est une alternative sémantique à **`&lt;ul&gt;`**, mais est traité par les navigateurs, et en termes d'accessibilité comme un élément **`&lt;ul&gt;`**. Il représente une liste d'éléments non-ordonnée (chaque élément de la liste étant représenté par un élément **`&lt;li&gt;`**).
+|`&lt;ol&gt;`|L'élément HTML **`&lt;ol&gt;`** représente une liste ordonnée. Les éléments d'une telle liste sont généralement affichés avec un indicateur ordinal pouvant prendre la forme de nombres, de lettres, de chiffres romains ou de points. La mise en forme de la numérotation n'est pas utilisée dans la description HTML mais dans la feuille de style CSS associée grâce à la propriété `list-style-type`.
+|`&lt;p&gt;`| L'élément HTML **`&lt;p&gt;`** représente un paragraphe de texte. Les paragraphes sont généralement représentés comme des blocs et séparés par un espace vertical, leur première ligne est également parfois indentée. Les paragraphes sont des éléments blocs.
+|`&lt;pre&gt;`|L'élément HTML **`&lt;pre&gt;`** représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.
+|`&lt;ul&gt;`| L'élément HTML **`&lt;ul&gt;`** représente une liste d'éléments sans ordre particulier. Il est souvent représenté par une liste à puces.</code></pre>
+<!--  -->
+</section>
+<section id="sémantique-du-texte-en-ligne" class="level2">
+<h2 class="anchored" data-anchor-id="sémantique-du-texte-en-ligne">Sémantique du texte en ligne</h2>
+<p>Les éléments pour le texte en ligne peuvent être utilisés pour définir la signification, la structure ou la mise en forme d’un terme, d’une ligne ou d’un fragment de texte.</p>
+<p>!!! danger “Principales balises HTML” | <strong>Balise</strong> | <strong>Description</strong> | |——–|——–| |<code>&lt;a&gt;</code>| L’élément HTML <strong><code>&lt;a&gt;</code></strong> (pour ancre ou <em>anchor</em> en anglais), avec son attribut <code>href</code>, crée un lien hypertexte vers des pages web, des fichiers, des adresses e-mail, des emplacements se trouvant dans la même page, ou tout ce qu’une URL peut adresser. Le contenu de chaque élément <code>&lt;a&gt;</code> <strong>doit</strong> indiquer la destination du lien. Si l’attribut <code>href</code> est présent, appuyer sur la touche entrée en se concentrant sur l’élément <code>&lt;a&gt;</code> l’activera. |<code>&lt;abbr&gt;</code>| L’élément HTML <strong><code>&lt;abbr&gt;</code></strong> (<strong>abréviation</strong> en français) représente une abréviation ou un acronyme ; l’attribut facultatif <code>title</code> peut fournir une explication ou une description de l’abréviation. S’il est présent, <code>title</code> doit contenir cette description complète et rien d’autre. |<code>&lt;br&gt;</code>| L’élément HTML <strong><code>&lt;br&gt;</code></strong> crée un saut de ligne (un retour chariot) dans le texte. Il s’avère utile lorsque les sauts de ligne ont une importance (par exemple lorsqu’on écrit une adresse ou un poème). |<code>&lt;cite&gt;</code>| L’élément <strong><code>&lt;cite&gt;</code></strong> contient le titre d’une œuvre telle qu’un livre, une chanson, un film, une sculpture… Cet élément doit inclure le titre de l’œuvre. |<code>&lt;code&gt;</code>| L’élément HTML <strong><code>&lt;code&gt;</code></strong> représente un court fragment de code machine. Par défaut, l’agent utilisateur utilise une police à chasse fixe (<em>monospace</em>) afin d’afficher le texte contenu dans cet élément. |<code>&lt;em&gt;</code>| L’élément HTML <strong><code>&lt;em&gt;</code></strong> (pour emphase) est utilisé afin de marquer un texte sur lequel on veut insister. Les éléments <code>&lt;em&gt;</code> peuvent être imbriqués, chaque degré d’imbrication indiquant un degré d’insistance plus élevé. |<code>&lt;i&gt;</code>| L’élément HTML <strong><code>&lt;i&gt;</code></strong> représente un morceau de texte qui se différencie du texte principal. Cela peut par exemple être le cas pour des termes techniques, des phrases dans une langue étrangère ou encore l’expression des pensées d’un personnage. Le contenu de cet élément est généralement affiché en italique. |<code>&lt;kbd&gt;</code>| L’élément HTML <strong><code>&lt;kbd&gt;</code></strong> représente une plage de texte en ligne indiquant la saisie de texte par l’utilisateur à partir d’un clavier, d’une saisie vocale ou de tout autre dispositif de saisie de texte. Par convention, le user agent rend par défaut le contenu d’un élément <code>&lt;kbd&gt;</code> en utilisant sa police monospace, bien que cela ne soit pas requis par le standard HTML. |<code>&lt;mark&gt;</code>| L’élément HTML <strong><code>&lt;mark&gt;</code></strong> représente un texte marqué ou surligné à cause de sa pertinence dans le contexte. Il peut par exemple être utilisé afin d’indiquer les correspondances d’un mot-clé recherché au sein d’un document. |<code>&lt;s&gt;</code>| L’élément HTML <strong><code>&lt;s&gt;</code></strong> permet d’afficher du texte qui est barré car il n’est plus pertinent ou car il est obsolète. <code>&lt;s&gt;</code> ne doit pas être employé pour indiquer des éditions dans un document . |<code>&lt;small&gt;</code>| L’élément HTML <strong><code>&lt;small&gt;</code></strong> permet de représenter des commentaires ou des textes à écrire en petits caractères (des termes d’un contrat, des mentions relatives au droit d’auteur, etc.) quelle que soit la présentation. |<code>&lt;span&gt;</code>| L’élément HTML <strong><code>&lt;span&gt;</code></strong> est un conteneur générique en ligne (<em>inline</em>) pour les contenus phrasés. Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs <code>class</code> ou <code>id</code> et aux règles CSS) ou parce qu’ils partagent certaines valeurs d’attribut comme <code>lang</code>. Il doit uniquement être utilisé lorsqu’aucun autre élément sémantique n’est approprié. <code>&lt;span&gt;</code> est très proche de l’élément <code>&lt;div&gt;</code>, mais l’élément <code>&lt;div&gt;</code> est un élément de bloc, alors que <code>&lt;span&gt;</code> est un élément en ligne. |<code>&lt;strong&gt;</code>| L’élément HTML <strong><code>&lt;strong&gt;</code></strong> indique que le texte a une importance particulière ou un certain sérieux voire un caractère urgent. Cela se traduit généralement par un affichage en gras. |<code>&lt;sub&gt;</code>| L’élément HTML <strong><code>&lt;sub&gt;</code></strong> est utilisé, pour des raisons typographiques, afin d’afficher du texte en indice (sous la ligne de base et généralement plus petit) par rapport au bloc de texte environnant. |<code>&lt;sup&gt;</code>| L’élément HTML <strong><code>&lt;sup&gt;</code></strong> est utilisé, pour des raisons typographiques, afin d’afficher du texte en exposant (plus haut et généralement plus petit) par rapport au bloc de texte environnant. <!--  --></p>
+</section>
+<section id="images-et-médias" class="level2">
+<h2 class="anchored" data-anchor-id="images-et-médias">Images et médias</h2>
+<p>HTML prend en charge différents fichiers multimédias pour les images, les fichiers audio et vidéo.</p>
+<p>!!! danger “Principales balises HTML” | <strong>Balise</strong> | <strong>Description</strong> | |——–|——–| |<code>&lt;area&gt;</code>| L’élément HTML <strong><code>&lt;area&gt;</code></strong> définit une zone particulière d’une image et peut lui associer un [lien hypertexte]. Cet élément n’est utilisé qu’au sein d’un élément <strong><code>&lt;map&gt;</code></strong>. |<code>&lt;audio&gt;</code>| L’élément HTML <strong><code>&lt;audio&gt;</code></strong> est utilisé afin d’intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l’attribut <code>src</code> ou l’élément <code>&lt;source&gt;</code> : le navigateur choisira celle qui convient le mieux. |<code>&lt;img&gt;</code>| L’élément HTML <strong><code>&lt;img&gt;</code></strong> permet d’intégrer une image dans un document. |<code>&lt;map&gt;</code>| L’élément HTML <strong><code>&lt;map&gt;</code></strong> est utilisé avec des éléments <code>&lt;area&gt;</code> afin de définir une image cliquable divisée en régions. |<code>&lt;video&gt;</code>| L’élément HTML <strong><code>&lt;video&gt;</code></strong> intègre un contenu vidéo dans un document. <!--  --></p>
+</section>
+<section id="contenu-embarqué" class="level2">
+<h2 class="anchored" data-anchor-id="contenu-embarqué">Contenu embarqué</h2>
+<p>En plus du contenu multimédia, un document HTML peut embarquer d’autres contenus (bien que les interactions soient plutôt limitées).</p>
+<p>!!! danger “Principales balises HTML” | <strong>Balise</strong> | <strong>Description</strong> | |——–|——–| | <code>&lt;embed&gt;</code>| L’élément HTML <strong><code>&lt;embed&gt;</code></strong> permet d’intégrer du contenu externe à cet endroit dans le document (par exemple un fichier PDF). | <code>&lt;iframe&gt;</code>| L’élément HTML <strong><code>&lt;iframe&gt;</code></strong> représente un contexte de navigation imbriqué qui permet en fait d’obtenir une page HTML intégrée dans la page courante. Souvent utilisé pour intégrer une vidéo provenant d’une plateforme de streaming. <!--  --></p>
+</section>
+<section id="élément-interactif" class="level2">
+<h2 class="anchored" data-anchor-id="élément-interactif">Élément interactif</h2>
+<p>Pour finir voici une dernière balise utile :</p>
+<p>!!! danger “Principales balises HTML” | <strong>Balise</strong> | <strong>Description</strong> | |——–|——–| |<code>&lt;details&gt;</code>| L ’élément HTML <strong><code>&lt;details&gt;</code></strong> est utilisé comme un outil permettant de révéler une information. Un résumé ou un intitulé peuvent être fournis grâce à un élément <code>&lt;summary&gt;</code>. |<code>&lt;summary&gt;</code>| L ’élément HTML <strong><code>&lt;summary&gt;</code></strong> représente une boîte permettant de révéler le contenu d ’un résumé ou d ’une légende pour le contenu d ’un élément <code>details</code>. En cliquant sur l ’élément <code>&lt;summary&gt;</code>, on passe de l ’état affiché à l ’état masqué (et vice versa) de l ’élément <code>&lt;details&gt;</code> parent. <!--  --></p>
+<p>!!! info “Remarque” * Les balises concernant les tableaux ne sont pas répertoriées ici. Voir le <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element" target="_blank">site de Mozilla</a> en cas de besoin. * Les balises concernant les <strong>formulaires</strong> et les <strong>scripts</strong> seront étudiées plus tard au cours de la séquence. <!--  --></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/">
+<p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+<p>Mentions légales</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/quarto_PNSI">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.287">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>NSI - Première - Architecture d’un réseau</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.ico" rel="icon">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"fr"
+  });
+});
+</script> 
+  
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">NSI - Première</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
+ <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../ressources.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Architecture d’un réseau</li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Ch. 1 - Systèmes d’exploitation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_os/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_os/OS_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_os/OS_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Ch. 2 - Python, constructions élémentaires</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_exos_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - fiche 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_exos_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - fiche 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_exos_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - fiche 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_exos_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - fiche 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - Quiz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/supplements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices supplémentaires</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Ch. 3 - Spécification et mise au point de programmes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">03_spec/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">03_spec/spec_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">03_spec/spec_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">Ch. 4 - Diversité et unité des langages de programmation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">04_langages/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">04_langages/langages_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">04_langages/langages_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+ <span class="menu-text">Ch. 5 - Écriture d’un entier positif dans une base <span class="math inline">\(b\)</span></span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">05_base/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">05_base/base_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">05_base/base_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+ <span class="menu-text">Ch. 6 - Représentation binaire d’un entier relatif</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">06_relatif/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">06_relatif/relatif_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">06_relatif/relatif_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+ <span class="menu-text">Ch. 7 - Représentation approximative des nombres réels : flottants</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">07_flottants/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">07_flottants/flottants_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">07_flottants/flottants_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+ <span class="menu-text">Ch. 8 - Booléens</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">08_booleens/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">08_booleens/booleens_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">08_booleens/booleens_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
+ <span class="menu-text">Ch. 9 - Représentation d’un texte en machine</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">09_texte/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">09_texte/texte_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">09_texte/texte_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
+ <span class="menu-text">Ch. 10 - Modèle d’architecture de von Neumann</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">10_vonNeumann/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">10_vonNeumann/vonNeumann_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">10_vonNeumann/vonNeumann_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+ <span class="menu-text">Ch. 11 - p-uplets</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">11_p-uplets/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">11_p-uplets/p-uplets_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">11_p-uplets/p-uplets_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false">
+ <span class="menu-text">Ch. 12 - Tableaux</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">12_tableaux/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">12_tableaux/tableaux_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">12_tableaux/tableaux_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
+ <span class="menu-text">Ch. 13 - Dictionnaires</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">13_dictionnaires/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">13_dictionnaires/dictionnaires_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">13_dictionnaires/dictionnaires_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false">
+ <span class="menu-text">Ch. 14 - Éléments généraux d’algorithmique</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../14_algo/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">14_algo/algo_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">14_algo/algo_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false">
+ <span class="menu-text">Ch. 15 - Parcours séquentiel d’un tableau</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../15_parcours/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">15_parcours/parcours_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">15_parcours/parcours_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false">
+ <span class="menu-text">Ch. 16 - Algorithmes de tris</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../16_tris/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">16_tris/tris_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">16_tris/tris_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" aria-expanded="false">
+ <span class="menu-text">Ch. 17 - Recherche dichotomique</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../17_recherche/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">17_recherche/recherche_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">17_recherche/recherche_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="false">
+ <span class="menu-text">Ch. 18 - Le langage HTML</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">18_html/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">18_html/html_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">18_html/html_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false">
+ <span class="menu-text">Ch. 19 - Le couple HTML / CSS</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">19_css/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">19_css/css_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">19_css/css_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" aria-expanded="false">
+ <span class="menu-text">Ch. 20 - Interactions dans une page Web - Javascript</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">20_js/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">20_js/js_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">20_js/js_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false">
+ <span class="menu-text">Ch. 21 - Interaction client-serveur et formulaires d’une page Web</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">21_client-serveur/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">21_client-serveur/client-serveur_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">21_client-serveur/client-serveur_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">
+ <span class="menu-text">Ch. 22 - Traitement de données en tables</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S7-Traitement de données en tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../22_tables/tables_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Traitements de données en tables (cours)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../22_tables/tables_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - Traitements de données en tables</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false">
+ <span class="menu-text">Ch. 23 - Architecture d’un réseau</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../23_reseaux/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">23_reseaux/reseaux_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">23_reseaux/reseaux_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false">
+ <span class="menu-text">Ch. 24 - Protocoles de communication</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../24_protocoles/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">24_protocoles/protocoles_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">24_protocoles/protocoles_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false">
+ <span class="menu-text">Ch. 25 - Algorithme des <span class="math inline">\(k\)</span> plus proches voisins</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">25_kppv/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">25_kppv/kppv_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">25_kppv/kppv_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false">
+ <span class="menu-text">Ch. 26 - Algorithmes gloutons</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">26_gloutons/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">26_gloutons/gloutons_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">26_gloutons/gloutons_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" aria-expanded="false">
+ <span class="menu-text">Ch. 27 - Interfaces homme-machine</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">27_ihm/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">27_ihm/ihm_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">27_ihm/ihm_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false">
+ <span class="menu-text">S6-Algorithmique (1)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/generalites.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/parcoursTableau.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/tris.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/exos_tris.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/recherche.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/exos_recherche.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" aria-expanded="false">
+ <span class="menu-text">S7-Traitement des données en tables</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-29" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">tables/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">tables/tables_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">tables/tables_quiz.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">tables/tables_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" aria-expanded="false">
+ <span class="menu-text">S8-Réseaux</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-30" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">reseaux/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">reseaux/reseaux_archi.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">reseaux/reseaux_protocole.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">reseaux/reseaux_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#premier-réseau-local" id="toc-premier-réseau-local" class="nav-link active" data-scroll-target="#premier-réseau-local">1. Premier réseau local</a>
+  <ul class="collapse">
+  <li><a href="#la-carte-réseau-et-son-adresse-mac" id="toc-la-carte-réseau-et-son-adresse-mac" class="nav-link" data-scroll-target="#la-carte-réseau-et-son-adresse-mac">1.1. La carte réseau et son adresse MAC</a></li>
+  <li><a href="#switch-hub-quelle-différence" id="toc-switch-hub-quelle-différence" class="nav-link" data-scroll-target="#switch-hub-quelle-différence">1.2. Switch, hub, quelle différence ?</a></li>
+  </ul></li>
+  <li><a href="#un-deuxième-sous-réseau" id="toc-un-deuxième-sous-réseau" class="nav-link" data-scroll-target="#un-deuxième-sous-réseau">2. Un deuxième sous-réseau</a>
+  <ul class="collapse">
+  <li><a href="#notion-de-masque-de-sous-réseau" id="toc-notion-de-masque-de-sous-réseau" class="nav-link" data-scroll-target="#notion-de-masque-de-sous-réseau">2.1. Notion de masque de sous-réseau</a></li>
+  <li><a href="#écriture-des-masques-de-sous-réseau-notation-cidr" id="toc-écriture-des-masques-de-sous-réseau-notation-cidr" class="nav-link" data-scroll-target="#écriture-des-masques-de-sous-réseau-notation-cidr">2.2 Écriture des masques de sous-réseau : notation CIDR</a></li>
+  <li><a href="#adresses-ip-et-masques-ce-quil-faut-retenir" id="toc-adresses-ip-et-masques-ce-quil-faut-retenir" class="nav-link" data-scroll-target="#adresses-ip-et-masques-ce-quil-faut-retenir">2.3 Adresses IP et masques : ce qu’il faut retenir</a></li>
+  </ul></li>
+  <li><a href="#un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur" id="toc-un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur" class="nav-link" data-scroll-target="#un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur">3. Un vrai réseau contenant deux sous-réseaux distincts : la nécessité d’un routeur</a>
+  <ul class="collapse">
+  <li><a href="#principe-de-fonctionnement" id="toc-principe-de-fonctionnement" class="nav-link" data-scroll-target="#principe-de-fonctionnement">3.1 Principe de fonctionnement</a></li>
+  <li><a href="#illustration-avec-filius" id="toc-illustration-avec-filius" class="nav-link" data-scroll-target="#illustration-avec-filius">3.2 Illustration avec Filius</a></li>
+  <li><a href="#annexe-rajout-dun-serveur-dns" id="toc-annexe-rajout-dun-serveur-dns" class="nav-link" data-scroll-target="#annexe-rajout-dun-serveur-dns">3.3 Annexe : rajout d’un serveur DNS</a></li>
+  </ul></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Architecture d’un réseau</h1>
+<p class="subtitle lead">S8 - Réseaux</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+<p>Ce cours a pour but de présenter la constitution classique d’un réseau et les équipements associés. La partie relative aux protocoles utilisés lors des échanges entre deux machines est détaillée dans le cours suivant.</p>
+<p>Il est basé sur le cours de <span class="citation" data-cites="lassus_premiere">LASSUS (<a href="#ref-lassus_premiere" role="doc-biblioref">2021</a>)</span>.</p>
+<section id="premier-réseau-local" class="level2">
+<h2 class="anchored" data-anchor-id="premier-réseau-local">1. Premier réseau local</h2>
+<p>Au sein du logiciel <a href="https://www.lernsoftware-filius.de/Herunterladen">Filius</a>, créons le réseau local ci-dessous :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="f1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="f1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Testons le <code>ping</code> de la machine <code>192.168.0.1</code> vers la machine <code>192.168.0.3</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Résultat du ping
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="ft1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="ft1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<section id="la-carte-réseau-et-son-adresse-mac" class="level3">
+<h3 class="anchored" data-anchor-id="la-carte-réseau-et-son-adresse-mac">1.1. La carte réseau et son adresse MAC</h3>
+<p>Chaque ordinateur sur le réseau dispose d’une adresse MAC (Media Access Control), qui est une valeur <strong>unique</strong> attribuée à sa carte réseau (Ethernet, Wifi, 4G, 5G, …) <strong>lors de sa fabrication en usine</strong>.</p>
+<p>Cette adresse est codée sur 48 bits, présentés sous la forme de 6 octets en hexadécimal. Exemple : <code>fc:aa:14:75:45:a5</code></p>
+<p>Les trois premiers octets correspondent au code du fabricant.</p>
+<p>Un site comme <a href="https://www.macvendorlookup.com/" target="_blank">https://www.macvendorlookup.com/</a> vous permet de retrouver le fabricant d’une adresse MAC quelconque.</p>
+</section>
+<section id="switch-hub-quelle-différence" class="level3">
+<h3 class="anchored" data-anchor-id="switch-hub-quelle-différence">1.2. Switch, hub, quelle différence ?</h3>
+<ul>
+<li>Au sein d’un <strong>hub Ethernet</strong> (de moins en moins vendus), il n’y a <strong>aucune analyse</strong> des données qui transitent : il s’agit simplement d’un dédoublement des fils de cuivre (tout comme une multiprise électrique). L’intégralité des messages est donc envoyée à l’intégralité des ordinateurs du réseau, même s’ils ne sont pas concernés.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="hub.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="hub.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ul>
+<li>Au sein d’un <strong>switch Ethernet</strong>, une analyse est effectuée sur la trame qui est à distribuer. Lors d’un branchement d’un nouvel ordinateur sur le switch, celui-ci récupère son adresse MAC, ce qui lui permet de <strong>trier</strong> les messages et de ne les distribuer qu’au bon destinataire.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="switch.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="switch.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="un-deuxième-sous-réseau" class="level2">
+<h2 class="anchored" data-anchor-id="un-deuxième-sous-réseau">2. Un deuxième sous-réseau</h2>
+<p>Rajoutons un deuxième sous-réseau de la manière suivante (penser à bien renommer les switchs).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="f2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="f2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p><strong>Comment relier ces deux sous-réseaux ?</strong></p>
+<p>Une réponse pas si bête : avec un câble entre les deux switchs !</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="f3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="f3.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Testons cette hypothèse en essayant d’envoyer un ping à la machine <code>192.168.1.2</code> depuis la machine <code>192.168.0.1</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Résultat du ping
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="ft2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Cela ne marche pas. L’ordinateur <strong>refuse</strong> d’envoyer le ping vers la machine <code>192.168.1.2</code>.</p>
+<p><em>(nous le verrons plus loin : car elle n’est pas dans son sous-réseau)</em></p>
+</div>
+</div>
+</div>
+<p>Temporairement, renommons la machine <code>192.168.1.2</code> en <code>192.168.0.33</code>. Testons à nouveau le ping depuis la machine <code>192.168.0.1</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Résultat du ping
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="ft3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="ft3.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Cela marche. Les paquets sont bien acheminés.</p>
+</div>
+</div>
+</div>
+<p>Dans la deuxième situation, les machines sont considérées comme faisant partie du même sous-réseau. Dans la première situation, elles sont considérées comme faisant partie de deux sous-réseaux différents. Mais comment est-ce déterminé ? C’est ce que nous allons voir dans la suite.</p>
+<section id="notion-de-masque-de-sous-réseau" class="level3">
+<h3 class="anchored" data-anchor-id="notion-de-masque-de-sous-réseau">2.1. Notion de masque de sous-réseau</h3>
+<p>Dans Filius, lors de l’attribution de l’adresse IP à une machine, une ligne nous permet de spécifier le <strong>masque de sous-réseau</strong> (appelé simplement « Masque » dans Filius). C’est ce masque qui va permettre de déterminer si une machine appartient à un sous-réseau ou non, en fonction de son adresse IP.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="f4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="f4.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<section id="explication-basique" class="level4">
+<h4 class="anchored" data-anchor-id="explication-basique">2.1.1 Explication basique</h4>
+<ul>
+<li>Si le masque est <code>255.255.255.0</code>, toutes les machines partageant les mêmes <strong>trois</strong> premiers nombres de leur adresse IP appartiendront au même sous-réseau. Comme ceci est le réglage par défaut de Filius, cela explique pourquoi <code>192.168.0.33</code> et <code>192.168.0.1</code> sont sur le même sous-réseau, et pourquoi <code>192.168.1.2</code> et <code>192.168.0.1</code> ne sont pas sur le même sous-réseau.</li>
+</ul>
+<p>Dans cette configuration, 256 machines peuvent donc appartenir au même sous-réseau (ce n’est pas tout à fait le cas, car les adresses finissant par 0 ou par 255 sont réservées).</p>
+<ul>
+<li>Si le masque est <code>255.255.0.0</code>, toutes les machines partageant les mêmes <strong>deux</strong> premiers nombres de leur adresse IP appartiendront au même sous-réseau.</li>
+</ul>
+<p>Dans cette configuration, 65 536 machines peuvent être dans le même sous-réseau. (car 256^2=65536)</p>
+<p><strong>Exercice</strong></p>
+<ul>
+<li>Renommons <code>192.168.0.33</code> en <code>192.168.1.2</code> et modifions son masque en <code>255.255.0.0</code>.</li>
+<li>Modifions aussi le masque de <code>192.168.0.1</code> en <code>255.255.0.0</code>.</li>
+<li>Testons le ping de <code>192.168.0.1</code> vers <code>192.168.1.2</code>.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Résultat du ping
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="ft4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="ft4.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Cela marche. Les deux machines appartiennent maintenant au même sous-réseau.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="explication-avancée" class="level4">
+<h4 class="anchored" data-anchor-id="explication-avancée">2.1.2 Explication avancée</h4>
+<p>Lorsqu’une machine A veut envoyer un message à une machine B, elle doit déterminer si cette machine :</p>
+<ul>
+<li>appartient au même sous-réseau : auquel cas le message est envoyé directement via un ou plusieurs switchs.</li>
+<li>n’appartient pas au même sous-réseau : auquel cas le message doit d’abord transiter par un routeur (voir 3.)</li>
+</ul>
+<p>Quelle opération permet de distinguer cette appartenance à un même sous-réseau ?</p>
+<p>Appelons <code>IP_A</code> et <code>IP_B</code> les adresses IP respectives des machines A et B.</p>
+<p>Appelons <code>M</code> le masque de sous-réseau.</p>
+<p>Nommons <code>&amp;</code> l’opérateur de conjonction entre nombres binaires : il s’agit d’un <code>ET</code> bit à bit.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Propriété
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A et B appartiennent au même sous-réseau ⇔ <code>IP_A &amp; M = IP_B &amp; M</code></p>
+</div>
+</div>
+<p><strong>Exemple</strong> : considérons trois machines A, B, C d’IP respectives <code>192.168.129.10</code>, <code>192.168.135.200</code> et <code>192.168.145.1</code>, configurées avec un masque de sous-réseau égal à <code>255.255.248.0</code>.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>machine A</th>
+<th>machine B</th>
+<th>machine C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IP</td>
+<td>192.168.129.10</td>
+<td>192.168.135.200</td>
+<td>192.168.145.1</td>
+</tr>
+<tr class="even">
+<td>M</td>
+<td>255.255.248.0</td>
+<td>255.255.248.0</td>
+<td>255.255.248.0</td>
+</tr>
+<tr class="odd">
+<td>IP &amp; M</td>
+<td>192.168.128.0</td>
+<td>192.168.128.0</td>
+<td>192.168.144.0</td>
+</tr>
+</tbody>
+</table>
+<p>Règles de calcul pour le <code>ET</code> bit à bit :</p>
+<ul>
+<li>pour tout octet <code>x</code>, <code>x &amp; 255 = x</code> et <code>x &amp; 0 = 0</code>.</li>
+<li><code>129 &amp; 248</code> s’écrit en binaire <code>10000001 &amp; 11111000</code> qui vaut <code>10000000</code>, soit <code>128</code> en décimal.</li>
+</ul>
+<p><strong>Conclusion</strong> : les machines A et B sont sous le même sous-réseau, mais pas la machine C.</p>
+</section>
+<section id="cohérence-entre-les-deux-explications" class="level4">
+<h4 class="anchored" data-anchor-id="cohérence-entre-les-deux-explications">2.1.3 Cohérence entre les deux explications</h4>
+<p>Lorsqu’un masque de sous-réseau est égal à <code>255.255.255.0</code>, l’opération de conjonction <code>&amp;</code> avec chaque IP ne laissera intacts que les 3 premiers octets, le dernier sera égal à 0. Donc si deux adresses s’écrivent <code>A.B.C.X</code> et <code>A.B.C.Y</code>, elles appartiendront au même sous-réseau (c’est le cas de <code>192.168.0.33</code> et <code>192.168.0.1</code>).</p>
+</section>
+</section>
+<section id="écriture-des-masques-de-sous-réseau-notation-cidr" class="level3">
+<h3 class="anchored" data-anchor-id="écriture-des-masques-de-sous-réseau-notation-cidr">2.2 Écriture des masques de sous-réseau : notation CIDR</h3>
+<p>D’après ce qui précède, 2 informations sont nécessaires pour déterminer le sous-réseau auquel appartient une machine : son IP et le masque de sous-réseau.</p>
+<p>Une convention de notation permet d’écrire simplement ces deux renseignements : <strong>la notation CIDR</strong>.</p>
+<p><strong>Exemple</strong> : Une machine d’IP <code>192.168.0.33</code> avec un masque de sous-réseau <code>255.255.255.0</code> sera désignée par <code>192.168.0.33 / 24</code> en notation CIDR.</p>
+<p>Le suffixe <code>/ 24</code> signifie que le masque de sous-réseau commence par 24 bits consécutifs de valeur 1 : le reste des bits (donc 8 bits) est mis à 0.</p>
+<p>Autrement dit, ce masque vaut <code>11111111.11111111.11111111.00000000</code> , soit <code>255.255.255.0</code>.</p>
+<p>De la même manière, le suffixe <code>/ 16</code> donnera un masque de <code>11111111.11111111.00000000.00000000</code> , soit <code>255.255.0.0</code>.</p>
+<p>Ou encore, un suffixe <code>/ 21</code> donnera un masque de <code>11111111.11111111.11111000.00000000</code> , soit <code>255.255.248.0</code>.</p>
+</section>
+<section id="adresses-ip-et-masques-ce-quil-faut-retenir" class="level3">
+<h3 class="anchored" data-anchor-id="adresses-ip-et-masques-ce-quil-faut-retenir">2.3 Adresses IP et masques : ce qu’il faut retenir</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Définition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Les ordinateurs s’identifient sur les réseaux à l’aide d’une adresse IP (Internet Protocol).</li>
+<li>Suivant la norme <strong>IPv4</strong>, les adresses IP sont encodées sur 4 octets : on parle d’<strong>IPv4</strong>.</li>
+<li>Chaque octet pouvant varier de la valeur (décimale) 0 à 255, cela signifie que les adresses IP théoriquement possibles vont de <code>0.0.0.0</code> à <code>255.255.255.255</code>.</li>
+<li>Il y a donc <span class="math inline">\(256^4=4 294 967 296\)</span> adresses possibles. On a longtemps cru que ce nombre serait suffisant. Ce n’est plus le cas, on est donc en train de passer sur des adresses à 6 octets (en hexadécimal) : voir la <a href="https://fr.wikipedia.org/wiki/Adresse_IPv6">norme IPv6</a>.</li>
+</ul>
+</div>
+</div>
+<p><strong>Exemple</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="ex_reseau.png" class="lightbox" title="image" data-gallery="quarto-lightbox-gallery-11"><img src="ex_reseau.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">image</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur" class="level2">
+<h2 class="anchored" data-anchor-id="un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur">3. Un vrai réseau contenant deux sous-réseaux distincts : la nécessité d’un routeur</h2>
+<p>Notre solution initiale (relier les deux switchs par un câble pour unifier les deux sous-réseaux) n’est pas viable à l’échelle d’un réseau planétaire.</p>
+<p>Pour que les machines de deux réseaux différents puissent être connectées, on va utiliser un dispositif équipé de <strong>deux cartes réseaux</strong>, situé à cheval entre les deux sous-réseaux. Cet équipement de réseau est appelé <strong>routeur</strong> ou <strong>passerelle</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="routeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="routeur.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<section id="principe-de-fonctionnement" class="level3">
+<h3 class="anchored" data-anchor-id="principe-de-fonctionnement">3.1 Principe de fonctionnement</h3>
+<p>Imaginons que la machine <code>192.168.0.1 / 24</code> veuille communiquer avec la machine <code>172.16.52.3 / 24</code>.</p>
+<p>L’observation du masque de sous-réseau de la machine <code>192.168.0.1 / 24</code> nous apprend qu’elle ne peut communiquer qu’avec les adresses de la forme <code>192.168.0.X / 24</code>, où <code>X</code> est un nombre entre 0 et 255.</p>
+<p>Les 3 étapes du <strong>routage</strong> :</p>
+<ul>
+<li>Lorsque qu’une machine A veut envoyer un message à une machine B, elle va tout d’abord vérifier si cette machine appartient à son réseau local. Si c’est le cas, le message est envoyé par l’intermédiaire du switch qui relie les deux machines.</li>
+<li>Si la machine B n’est pas trouvée sur le réseau local de la machine A, le message va être acheminé vers le routeur, par l’intermédiaire de son adresse de passerelle (qui est bien une adresse appartenant au sous-réseau de A).</li>
+<li>De là, le routeur va regarder si la machine B appartient au deuxième sous-réseau auquel il est connecté. Si c’est le cas, le message est distribué, sinon, le routeur va donner le message à un autre routeur auquel il est connecté et va le charger de distribuer ce message : c’est le procédé (complexe) de routage qui sera abordé en classe de Terminale.</li>
+</ul>
+<p>Dans notre exemple, l’adresse <code>172.16.52.3</code> n’est pas dans le sous-réseau de <code>192.168.0.1</code>. Le message va donc transiter par le routeur.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="routeur2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="routeur2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="illustration-avec-filius" class="level3">
+<h3 class="anchored" data-anchor-id="illustration-avec-filius">3.2 Illustration avec Filius</h3>
+<ul>
+<li><p>Rajoutons un routeur entre le SwitchA et le SwitchB. <a href="f5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="f5.png" class="img-fluid"></a></p></li>
+<li><p>Configuration du routeur :</p>
+<ul>
+<li>L’interface reliée au Switch A doit avoir une adresse du sous-réseau A. On donne souvent une adresse finissant par <code>254</code>, qui est en quelque sorte la dernière adresse du réseau (en effet l’adresse en <code>255</code> est appelée adresse de <strong>broadcast</strong>, utilisée pour envoyer un ping en une seule fois à l’intégralité d’un sous-réseau).<br>
+</li>
+<li>On donne donc l’adresse <code>192.168.0.254</code> pour l’interface reliée au Switch A, et <code>192.168.1.254</code> pour l’interface reliée au Switch B.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="flsrouteur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="flsrouteur.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ul>
+<li><p>Dans l’onglet général, sélectionner « Routage automatique ».</p></li>
+<li><p>Ainsi configuré notre routeur peut jouer le rôle de <strong>passerelle</strong> entre les deux sous-réseaux.</p></li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Résultat du ping
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="ft2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Cela ne marche pas. La carte réseau refuse d’envoyer les paquets, car elle ne sait pas où les envoyer.</p>
+</div>
+</div>
+</div>
+<p>Pourquoi cet échec ? Parce que nous devons dire à chaque machine qu’une passerelle est maintenant disponible pour pouvoir sortir de son propre sous-réseau. Il faut donc aller sur la machine <code>192.168.0.1</code> et lui donner l’adresse de sa passerelle, qui est <code>192.168.0.254</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="passerelle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="passerelle.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Attention, il faut faire de même pour <code>192.168.1.2</code> (avec la bonne passerelle…)<br>
+Testons à nouveau le ping… Cette fois cela marche.</p>
+<p>Plus intéressant : effectuons un <code>traceroute</code> entre <code>192.168.0.1</code> et <code>192.168.1.2</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="traceroute.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="traceroute.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>On constate que la machine <code>192.168.1.2</code> est atteignable en deux sauts depuis <code>192.168.0.1</code>, en passant par la passerelle <code>192.168.0.254</code></p>
+<p><strong>Cas d’un réseau domestique</strong></p>
+<p>Chez vous, la box de votre opérateur joue simultanément le rôle de switch et de routeur :</p>
+<ul>
+<li>switch, car elle répartit la connexion entre les différents dispositifs (ordinateurs branchés en ethernet, smartphone en wifi, tv connectée…)</li>
+<li>routeur, car elle fait le lien entre ce sous-réseau domestique (les appareils de votre maison) et le réseau internet.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="boxmaison.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="boxmaison.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>L’image ci-dessous présente le résultat de la commande <code>ipconfig</code> sous Windows. On y retrouve l’adresse IP locale <code>192.168.9.103</code>, le masque de sous-réseau <code>255.255.255.0</code> et l’adresse de la passerelle <code>192.168.9.1</code>.<br>
+<a href="imgpasserelle.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="imgpasserelle.jpg" class="img-fluid"></a></p>
+</section>
+<section id="annexe-rajout-dun-serveur-dns" class="level3">
+<h3 class="anchored" data-anchor-id="annexe-rajout-dun-serveur-dns">3.3 Annexe : rajout d’un serveur DNS</h3>
+<section id="ajout-dun-serveur-web" class="level4">
+<h4 class="anchored" data-anchor-id="ajout-dun-serveur-web">3.3.1 Ajout d’un serveur web</h4>
+<ul>
+<li><p>Connectons un ordinateur au SwitchB, sur l’adresse <code>192.168.1.30</code> et installons dessus un Serveur web et démarrons-le. <a href="serveurweb.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="serveurweb.png" class="img-fluid"></a></p></li>
+<li><p>Sur la machine <code>192.168.0.1</code>, rajoutons un Navigateur Web. En tapant dans la barre d’adresse l’adresse IP du Serveur web, la page d’accueil de Filius s’affiche.<br>
+<a href="nav1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="nav1.png" class="img-fluid"></a></p></li>
+</ul>
+<p>Lors d’une utilisation classique d’un navigateur web, c’est une url mémorisable qui s’affiche, et non une adresse IP : on retient en effet plus facilement <code>https://www.google.com/</code> que <code>http://216.58.213.131</code>, qui renvoient pourtant à la même adresse.</p>
+<p>La machine qui assure ce rôle d’annuaire entre les serveurs web et leur adresse IP s’appelle un <strong>serveur DNS</strong>. Pour pouvoir indexer la totalité des sites internet, son rôle est structuré de manière hiérarchique.</p>
+</section>
+<section id="ajout-dun-serveur-dns" class="level4">
+<h4 class="anchored" data-anchor-id="ajout-dun-serveur-dns">3.3.1 Ajout d’un serveur DNS</h4>
+<ul>
+<li><p>Rajoutons un serveur DNS minimal, qui n’aura dans son annuaire d’un seul site. Il faut pour cela raccorder une nouvelle machine (mais une machine déjà sur le réseau aurait très bien pu jouer ce rôle), et installer dessus un serveur DNS.<br>
+<a href="dns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="dns.png" class="img-fluid"></a></p></li>
+<li><p>Sur ce serveur DNS, associons l’adresse <code>http://www.vivelansi.fr</code> à l’adresse IP <code>192.168.1.30</code>.<br>
+<a href="vivelansi.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="vivelansi.png" class="img-fluid"></a></p></li>
+<li><p>De retour sur notre machine <code>192.168.0.1</code>, spécifions maintenant l’adresse du serveur DNS :<br>
+<a href="specdns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="specdns.png" class="img-fluid"></a></p></li>
+<li><p>Depuis le navigateur web de la machine <code>192.168.0.1</code>, le site <code>http://www.vivelansi.fr</code> est maintenant accessible.<br>
+<a href="dnsex.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="dnsex.png" class="img-fluid"></a></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="sources" class="level2">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Sources</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-lassus_premiere" class="csl-entry" role="listitem">
+LASSUS, Gilles. 2021. <span>«&nbsp;Première NSI - Lycée François Mauriac - Bordeaux&nbsp;»</span>. <a href="https://glassus.github.io/premiere_nsi/">https://glassus.github.io/premiere_nsi/</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/">
+<p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+<p>Mentions légales</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/quarto_PNSI">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+
+
+
+
+</body></html>

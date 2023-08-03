@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.287">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>NSI - Première – naturels_cours</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.ico" rel="icon">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"fr"
+  });
+});
+</script> 
+  
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">NSI - Première</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
+ <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../ressources.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Ch. 1 - Systèmes d’exploitation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_os/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_os/OS_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01_os/OS_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Ch. 2 - Python, constructions élémentaires</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_exos_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - fiche 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_exos_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - fiche 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_exos_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - fiche 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_exos_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - fiche 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bases_quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - Quiz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/supplements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices supplémentaires</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Ch. 3 - Spécification et mise au point de programmes</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">03_spec/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">03_spec/spec_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">03_spec/spec_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">Ch. 4 - Diversité et unité des langages de programmation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">04_langages/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">04_langages/langages_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">04_langages/langages_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+ <span class="menu-text">Ch. 5 - Écriture d’un entier positif dans une base <span class="math inline">\(b\)</span></span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">05_base/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">05_base/base_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">05_base/base_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+ <span class="menu-text">Ch. 6 - Représentation binaire d’un entier relatif</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">06_relatif/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">06_relatif/relatif_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">06_relatif/relatif_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+ <span class="menu-text">Ch. 7 - Représentation approximative des nombres réels : flottants</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">07_flottants/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">07_flottants/flottants_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">07_flottants/flottants_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+ <span class="menu-text">Ch. 8 - Booléens</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">08_booleens/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">08_booleens/booleens_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">08_booleens/booleens_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
+ <span class="menu-text">Ch. 9 - Représentation d’un texte en machine</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">09_texte/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">09_texte/texte_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">09_texte/texte_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
+ <span class="menu-text">Ch. 10 - Modèle d’architecture de von Neumann</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">10_vonNeumann/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">10_vonNeumann/vonNeumann_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">10_vonNeumann/vonNeumann_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+ <span class="menu-text">Ch. 11 - p-uplets</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">11_p-uplets/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">11_p-uplets/p-uplets_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">11_p-uplets/p-uplets_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false">
+ <span class="menu-text">Ch. 12 - Tableaux</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">12_tableaux/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">12_tableaux/tableaux_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">12_tableaux/tableaux_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
+ <span class="menu-text">Ch. 13 - Dictionnaires</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">13_dictionnaires/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">13_dictionnaires/dictionnaires_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">13_dictionnaires/dictionnaires_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false">
+ <span class="menu-text">Ch. 14 - Éléments généraux d’algorithmique</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../14_algo/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">14_algo/algo_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">14_algo/algo_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false">
+ <span class="menu-text">Ch. 15 - Parcours séquentiel d’un tableau</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../15_parcours/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">15_parcours/parcours_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">15_parcours/parcours_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false">
+ <span class="menu-text">Ch. 16 - Algorithmes de tris</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../16_tris/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">16_tris/tris_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">16_tris/tris_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" aria-expanded="false">
+ <span class="menu-text">Ch. 17 - Recherche dichotomique</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../17_recherche/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">17_recherche/recherche_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">17_recherche/recherche_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="false">
+ <span class="menu-text">Ch. 18 - Le langage HTML</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">18_html/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">18_html/html_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">18_html/html_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false">
+ <span class="menu-text">Ch. 19 - Le couple HTML / CSS</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">19_css/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">19_css/css_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">19_css/css_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" aria-expanded="false">
+ <span class="menu-text">Ch. 20 - Interactions dans une page Web - Javascript</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">20_js/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">20_js/js_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">20_js/js_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false">
+ <span class="menu-text">Ch. 21 - Interaction client-serveur et formulaires d’une page Web</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">21_client-serveur/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">21_client-serveur/client-serveur_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">21_client-serveur/client-serveur_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">
+ <span class="menu-text">Ch. 22 - Traitement de données en tables</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">S7-Traitement de données en tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../22_tables/tables_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Traitements de données en tables (cours)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../22_tables/tables_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - Traitements de données en tables</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false">
+ <span class="menu-text">Ch. 23 - Architecture d’un réseau</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../23_reseaux/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">23_reseaux/reseaux_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">23_reseaux/reseaux_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false">
+ <span class="menu-text">Ch. 24 - Protocoles de communication</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../24_protocoles/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">24_protocoles/protocoles_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">24_protocoles/protocoles_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false">
+ <span class="menu-text">Ch. 25 - Algorithme des <span class="math inline">\(k\)</span> plus proches voisins</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">25_kppv/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">25_kppv/kppv_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">25_kppv/kppv_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false">
+ <span class="menu-text">Ch. 26 - Algorithmes gloutons</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">26_gloutons/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">26_gloutons/gloutons_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">26_gloutons/gloutons_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" aria-expanded="false">
+ <span class="menu-text">Ch. 27 - Interfaces homme-machine</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">27_ihm/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">27_ihm/ihm_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">27_ihm/ihm_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false">
+ <span class="menu-text">S6-Algorithmique (1)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/generalites.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/parcoursTableau.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/tris.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/exos_tris.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/recherche.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">algo1/exos_recherche.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" aria-expanded="false">
+ <span class="menu-text">S7-Traitement des données en tables</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-29" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">tables/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">tables/tables_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">tables/tables_quiz.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">tables/tables_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" aria-expanded="false">
+ <span class="menu-text">S8-Réseaux</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-30" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">reseaux/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">reseaux/reseaux_archi.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">reseaux/reseaux_protocole.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">reseaux/reseaux_exos.qmd</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#la-base-10" id="toc-la-base-10" class="nav-link" data-scroll-target="#la-base-10">2. La base 10</a></li>
+  <li><a href="#généralisation" id="toc-généralisation" class="nav-link" data-scroll-target="#généralisation">3. Généralisation</a>
+  <ul class="collapse">
+  <li><a href="#passage-de-la-base-b-à-la-base-10" id="toc-passage-de-la-base-b-à-la-base-10" class="nav-link" data-scroll-target="#passage-de-la-base-b-à-la-base-10">Passage de la base <span class="math inline">\(b\)</span> à la base 10</a></li>
+  <li><a href="#passage-de-la-base-10-à-la-base-b" id="toc-passage-de-la-base-10-à-la-base-b" class="nav-link" data-scroll-target="#passage-de-la-base-10-à-la-base-b">Passage de la base 10 à la base <span class="math inline">\(b\)</span></a></li>
+  </ul></li>
+  <li><a href="#la-base-2" id="toc-la-base-2" class="nav-link" data-scroll-target="#la-base-2">4. La base 2</a>
+  <ul class="collapse">
+  <li><a href="#conversion-de-la-base-2-à-la-base-10" id="toc-conversion-de-la-base-2-à-la-base-10" class="nav-link" data-scroll-target="#conversion-de-la-base-2-à-la-base-10">Conversion de la base 2 à la base 10</a></li>
+  <li><a href="#conversion-de-la-base-10-à-la-base-2" id="toc-conversion-de-la-base-10-à-la-base-2" class="nav-link" data-scroll-target="#conversion-de-la-base-10-à-la-base-2">Conversion de la base 10 à la base 2</a></li>
+  </ul></li>
+  <li><a href="#la-base-16" id="toc-la-base-16" class="nav-link" data-scroll-target="#la-base-16">5. La base 16</a></li>
+  <li><a href="#quelques-remarques-pour-finir" id="toc-quelques-remarques-pour-finir" class="nav-link" data-scroll-target="#quelques-remarques-pour-finir">6. Quelques remarques pour finir</a>
+  <ul class="collapse">
+  <li><a href="#chiffres-de-poids-fort-de-poids-faible" id="toc-chiffres-de-poids-fort-de-poids-faible" class="nav-link" data-scroll-target="#chiffres-de-poids-fort-de-poids-faible">Chiffres de poids fort, de poids faible</a></li>
+  <li><a href="#multiplier-par-la-base" id="toc-multiplier-par-la-base" class="nav-link" data-scroll-target="#multiplier-par-la-base">Multiplier par la base</a></li>
+  <li><a href="#combien-de-nombres-représentables-sur-n-bits" id="toc-combien-de-nombres-représentables-sur-n-bits" class="nav-link" data-scroll-target="#combien-de-nombres-représentables-sur-n-bits">Combien de nombres représentables sur <span class="math inline">\(n\)</span> bits ?</a></li>
+  </ul></li>
+  <li><a href="#addition-posée-en-binaire" id="toc-addition-posée-en-binaire" class="nav-link" data-scroll-target="#addition-posée-en-binaire">7. Addition posée en binaire</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
+<p>Un ordinateur est une machine qui traite de l’information. Pour comprendre comment, nous devons d’abord expliquer comment l’information est représentée.</p>
+<p>En effet, il faut bien faire la différence entre l’information et sa représentation. Par exemple, si on considère la valeur 17, tout le monde pensera à représenter cette valeur par les chiffres 1 et 7.</p>
+<p>Mais on peut imaginer beaucoup d’autres possibilités, par exemple, les chiffres romains, la numération inca, ou encore le binaire. Et bien d’autres…</p>
+</section>
+<section id="la-base-10" class="level2">
+<h2 class="anchored" data-anchor-id="la-base-10">2. La base 10</h2>
+<p>La représentation usuelle des nombres est une représentation <em>décimale</em> et <em>positionnelle</em>. Cela signifie :</p>
+<ol type="1">
+<li><p>que les nombres sont représentés par une séquence de <em>chiffres</em> de <span class="math inline">\(0\)</span> à <span class="math inline">\(9\)</span> inclus. Il y a bien <em>dix</em> chiffres différents utilisés, d’où le terme <em>décimal</em> ;</p></li>
+<li><p>que la <em>position</em> de chaque chiffre dans la séquence permet d’associer ce chiffre à une <em>puissance de 10</em>.</p></li>
+</ol>
+<p>Dans cette représentation usuelle, 10 est appelé la <em>base</em>. On parle aussi de représentation en base 10.</p>
+<p>!!! tip “Exemple” Par exemple, la représentation :</p>
+<pre><code>$$1234$$
+
+signifie que le nombre est composé de:
+
+* $4$ unités, ou $4\times 10^0$;
+* $3$ dizaines, ou $3\times 10^1$;
+* $2$ centaines, ou $2\times 10^2$;
+* $1$ millier, ou $1\times 10^3$;
+
+Ce qui s'écrit : $1234 = 1\times 10^3 + 2\times 10^2 + 3\times 10^1 + 4\times 10^0$</code></pre>
+<p>On voit donc que les puissances de <span class="math inline">\(10\)</span> associées aux différentes positions (aux différents chiffres) vont en décroissant quand on lit le nombre de gauche à droite, et que la puissance <span class="math inline">\(10^0\)</span> correspond au chiffre des unités.</p>
+<p>On note également que la base donne le nombre de chiffres que l’on peut utiliser pour représenter les nombres. En base 10, on peut utiliser 10 chiffres différents, à savoir les chiffres de <span class="math inline">\(0\)</span> à <span class="math inline">\(9\)</span> inclus.</p>
+</section>
+<section id="généralisation" class="level2">
+<h2 class="anchored" data-anchor-id="généralisation">3. Généralisation</h2>
+<p>Ces idées se généralisent dans n’importe quelle base. Fixons à partir de maintenant une base <span class="math inline">\(b\geq 2\)</span>.</p>
+<p>Nous allons maintenant rencontrer des nombres écrits dans différentes bases. Pour éviter les confusions, nous indiquerons la base utilisée en indice. Le nombre de l’exemple ci-dessous s’écrit donc <span class="math inline">\(1234_{10}\)</span>.</p>
+<p>En base <span class="math inline">\(b\)</span>, nous utiliserons <span class="math inline">\(b\)</span> chiffres : <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(b-1\)</span>.</p>
+<p>Le nombre :</p>
+<p><span class="math display">\[{d_n\cdots d_0}_b\]</span></p>
+<p>représente la valeur :</p>
+<p><span class="math display">\[N = d_n\times b^n + d_{n-1}\times b^{n-1}+\cdots+d_0\times b^0\]</span></p>
+<p>où tous les <span class="math inline">\(d_i\)</span> sont des chiffres dans <span class="math inline">\(\{0,\ldots b-1\}\)</span>.</p>
+<p>!!! tip “Exemple” En base 5, il y a cinq chiffres : 0, 1, 2, 3 et 4.</p>
+<pre><code>Comptons un peu en base 5 : 
+
+| Base 10 | Base 5 | |
+|:---:|:---:|:---:|
+|0| 0| Pas de différence ... |
+|1| 1| Pas de différence ... |
+|2| 2| Pas de différence ... |
+|3| 3| Pas de différence ... |
+|4| 4| Pas de différence ... |
+|5| 10| Plus de possibilité pour les unités, on ajoute un chiffre à gauche |
+|6| 11| On augmente les unités |
+|7| 12| On augmente les unités |
+|8| 13| On augmente les unités |
+|9|14| On augmente les unités |
+|10| 20| On ne peut plus augmenter les unités, on augmente le chiffre de rang suivant |</code></pre>
+<p>!!! question “Exercice” Quel sera le premier entier, en base 10, qui s’écrit en base 5 avec trois chiffres ? Avec quatre chiffres ?</p>
+<section id="passage-de-la-base-b-à-la-base-10" class="level3">
+<h3 class="anchored" data-anchor-id="passage-de-la-base-b-à-la-base-10">Passage de la base <span class="math inline">\(b\)</span> à la base 10</h3>
+<p>Pour passer de la base <span class="math inline">\(b\)</span> à la base 10, c’est facile, ils suffit d’utiliser la définition :</p>
+<p><span class="math display">\[{d_n\cdots d_0}_b = (d_n\times b^n + d_{n-1}\times b^{n-1}+\cdots+d_0\times b^0)_{10}\]</span></p>
+<p>!!! tip “Exemple” Exemple avec la base 5.</p>
+<pre><code>Considérons le nombre $N=134_5$. Par définition, on a : 
+
+$$N=4\times 5^0 + 3\times 5^1 + 1\times 5^2 = 4+15+25=44_{10}$$</code></pre>
+</section>
+<section id="passage-de-la-base-10-à-la-base-b" class="level3">
+<h3 class="anchored" data-anchor-id="passage-de-la-base-10-à-la-base-b">Passage de la base 10 à la base <span class="math inline">\(b\)</span></h3>
+<p>C’est un peu plus difficile. Pour convertir un nombre donné en base 10 dans une base <span class="math inline">\(b\)</span>, on procède par <strong>divisions euclidiennes successives par <span class="math inline">\(b\)</span></strong>. Les restes obtenus sont les chiffres de l’écriture du nombre en base <span class="math inline">\(b\)</span>.</p>
+<p>!!! tip “Exemple” On reste avec <span class="math inline">\(b=5\)</span>. Soit <span class="math inline">\(N=64_{10}\)</span> : on souhaite écrire <span class="math inline">\(N\)</span> en base 5.</p>
+<pre><code>On effectue pour cela la suite de divisions suivante : 
+
+![image50](../../../assets/images/chgt_base.svg)
+
+On continue les divisions successives jusqu'à obtenir un quotient nul.
+
+Les restes successifs (sur fond bleu) forment le nombre en base 5, **en les lisant de la droite vers la gauche** : $64_{10}=224_5$.</code></pre>
+<p>Voyons maintenant les exemples de la base 2 et de la base 16 qui sont les plus utilisées en informatique.</p>
+</section>
+</section>
+<section id="la-base-2" class="level2">
+<h2 class="anchored" data-anchor-id="la-base-2">4. La base 2</h2>
+<p>En base 2, nous ne disposons donc que des deux chiffres 0 et 1. On parle de système <strong>binaire</strong>.</p>
+<p>Un chiffre binaire, <em>binary digit</em> en anglais est appelé en abrégé un <strong>bit</strong>.</p>
+<p>Voir <a href="https://www.flallemand.fr/wp/2022/06/19/mesurer-la-quantite-dinformation/" target="_blank">cet article du blog</a> au sujet des unités de mesures binaires.</p>
+<p>Voici comment compter jusqu’à 10 en base 2 :</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Nombre en décimal</th>
+<th style="text-align: center;">Nombre en binaire</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">Pas de différence …</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Pas de différence …</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">Le premier rang ayant été rempli, on passe au suivant !</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">On re-remplit le rang 1.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">Le rang 2 est plein, le rang 1 aussi, qu’à cela ne tienne, on passe au suivant.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">On continue en suivant la même méthode.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">On continue en suivant la même méthode.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">111</td>
+<td style="text-align: center;">On continue en suivant la même méthode.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">On commence le rang 4.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1001</td>
+<td style="text-align: center;">On continue comme tout à l’heure.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">1010</td>
+<td style="text-align: center;">On continue comme tout à l’heure.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+</tr>
+</tbody>
+</table>
+<p>Les nombres en base 2 ont très vite beaucoup de chiffres. Pour faciliter la lecture, on a l’habitude de regrouper ces chiffres par paquets de 4 à partir de la droite.</p>
+<section id="conversion-de-la-base-2-à-la-base-10" class="level3">
+<h3 class="anchored" data-anchor-id="conversion-de-la-base-2-à-la-base-10">Conversion de la base 2 à la base 10</h3>
+<p>Dans ce sens, la conversion est facile, il suffit d’appliquer la définition.</p>
+<p>Prenons le nombre <span class="math inline">\(1101\; 0011_2\)</span>. Il s’étale sur 8 bits, on applique la méthode générale :</p>
+<p><span class="math inline">\(1101\; 0011_2 = 1\times 2^7 + 1\times 2^6 + 0\times 2^5 + 1\times 2^4 + 0\times 2^3 + 0\times 2^2 + 1\times 2^1 + 1\times 2^1 = 211_{10}\)</span>.</p>
+</section>
+<section id="conversion-de-la-base-10-à-la-base-2" class="level3">
+<h3 class="anchored" data-anchor-id="conversion-de-la-base-10-à-la-base-2">Conversion de la base 10 à la base 2</h3>
+<p>On procède par divisions euclidiennes successives.</p>
+<p>Convertissons <span class="math inline">\(47_{10}\)</span> en base 2 :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../../assets/images/chgt_base2.svg" class="lightbox" title="image80" data-gallery="quarto-lightbox-gallery-1"><img src="../../../assets/images/chgt_base2.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">image80</figcaption>
+</figure>
+</div>
+<p>On a donc <span class="math inline">\(47_{10}=10\;1111_2\)</span>.</p>
+</section>
+</section>
+<section id="la-base-16" class="level2">
+<h2 class="anchored" data-anchor-id="la-base-16">5. La base 16</h2>
+<p>Comme nous l’avons déjà vu, l’écriture d’un nombre en base 2 est longue. Pour avoir des nombres plus “compacts” tout en restant lié au binaire, les informaticiens utilisent souvent la base 16 : c’est le système hexadécimal.</p>
+<p>En base 16, on utilise 16 chiffres, alors que notre numération usuelle, en base 10, n’en possède que 10. Quels symboles choisir pour les 6 chiffres manquants ? On utilise les six premières lettres de l’alphabet !</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Binaire (base 2)</th>
+<th style="text-align: center;">Décimal (base 10)</th>
+<th style="text-align: center;">Hexadécimal (base 16)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">111</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1001</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1010</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">A</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1011</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">B</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1100</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">C</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1101</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">D</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1110</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">E</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1111</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+<p>On observe que <strong>tous</strong> les chiffres de la base 16 sont <strong>tous</strong> les nombres que l’on peut coder en binaire sur 4 bits. Dans l’écriture en base 2 d’un nombre, on a vu que les bits sont regroupés par quatre pour plus de lisibilité : <span class="math inline">\(1101\; 0011_2\)</span>. Chaque groupe de quatre correspond donc à un chiffre en base 16. On a donc <span class="math inline">\(1101\; 0011_2 = D3_{16}\)</span>.</p>
+<p>Les méthodes de conversion restent les mêmes.</p>
+</section>
+<section id="quelques-remarques-pour-finir" class="level2">
+<h2 class="anchored" data-anchor-id="quelques-remarques-pour-finir">6. Quelques remarques pour finir</h2>
+<section id="chiffres-de-poids-fort-de-poids-faible" class="level3">
+<h3 class="anchored" data-anchor-id="chiffres-de-poids-fort-de-poids-faible">Chiffres de poids fort, de poids faible</h3>
+<p>Dans la représentation positionnelle usuelle, le chiffre le plus à gauche est associé à une puissance plus élevée de la base. On parle donc de chiffre de “poids fort” ; le chiffre étant associé à la puissance la plus faible est appel chiffre de “poids faible”. En particulier, en binaire, on parle de <strong>bit de poids fort</strong> et <strong>bit de poids faible</strong>.</p>
+</section>
+<section id="multiplier-par-la-base" class="level3">
+<h3 class="anchored" data-anchor-id="multiplier-par-la-base">Multiplier par la base</h3>
+<p>Dans toutes les bases, on peut aisément multiplier par la base en ajoutant des zéros à droite :</p>
+<p>!!! note “À retenir” Dans toute base <span class="math inline">\(b\)</span>, ajouter <span class="math inline">\(k\)</span> zéros <strong>à droite</strong> revient à <strong>multiplier</strong> par <span class="math inline">\(b^k\)</span>.</p>
+<p>Par exemple, en binaire, multiplier par 2 revient à ajouter un zéro à la fin du nombre tout comme on ajoute un zéro à la fin du nombre écrit en base 10 quand on la multiplie par 10.</p>
+</section>
+<section id="combien-de-nombres-représentables-sur-n-bits" class="level3">
+<h3 class="anchored" data-anchor-id="combien-de-nombres-représentables-sur-n-bits">Combien de nombres représentables sur <span class="math inline">\(n\)</span> bits ?</h3>
+<p>Enfin, l’observation suivante aura toute son importance dans la suite.</p>
+<p>Considérons par exemple la base 2 : combien de nombres différents peut-on écrire avec <span class="math inline">\(n\)</span> bits ?</p>
+<p>Chaque bit ayant deux valeurs possibles (0 ou 1), nous obtenons <span class="math inline">\(2^n\)</span> nombres distincts.</p>
+<p><span class="math display">\[\underbrace{0\cdots 0_2}_{n\text{ chiffres}} = 0\]</span></p>
+<p>à:</p>
+<p><span class="math display">\[\underbrace{1\cdots 1_b}_{n\text{ chiffres}} = 2^n-1.\]</span></p>
+<p>!!! note “À retenir” En base <span class="math inline">\(2\)</span>, il y a <span class="math inline">\(2^n\)</span> nombres (entiers positifs) représentables sur <span class="math inline">\(n\)</span> bits : les nombres de <span class="math inline">\(0\)</span> à <span class="math inline">\(2^n-1\)</span>.</p>
+<p>!!! question “Exercice” Démontrer que <span class="math inline">\(\underbrace{1\cdots 1_2}_{n\text{ chiffres}} = 2^n-1.\)</span></p>
+<p>??? success “Réponse” Nous allons démontrer le résultat général en base <span class="math inline">\(b\)</span>.</p>
+<pre><code>On a : $\underbrace{(b-1)\cdots (b-1)_b}_{n\text{ chiffres}} = (b-1)\times b^{n-1}+\ldots+(b-1)\times b^1+(b-1)\times b^0$. D'où, en développant chacun des produits :
+
+$$\underbrace{(b-1)\cdots (b-1)_b}_{n\text{ chiffres}} = b^{n}-b^{n-1}+b^{n-1}-b^{n-2}+\ldots+b^2-b+b-1.$$
+
+Les termes se simplifient tous, sauf le premier et le dernier. On a donc :
+
+$$\underbrace{(b-1)\cdots (b-1)_b}_{n\text{ chiffres}} = b^n-1.$$</code></pre>
+</section>
+</section>
+<section id="addition-posée-en-binaire" class="level2">
+<h2 class="anchored" data-anchor-id="addition-posée-en-binaire">7. Addition posée en binaire</h2>
+<p>On peut poser une addition en base 2 avec la même technique que pour l’addition des nombres écrits en base 10. L’addition des bits suit les règles suivantes :</p>
+<ul>
+<li><span class="math inline">\(0+0\)</span> donne <span class="math inline">\(0\)</span> avec une retenue égale à <span class="math inline">\(0\)</span> ;</li>
+<li><span class="math inline">\(0+1\)</span> donne <span class="math inline">\(1\)</span> avec une retenue égale à <span class="math inline">\(0\)</span> ;</li>
+<li><span class="math inline">\(1+0\)</span> donne <span class="math inline">\(1\)</span> avec une retenue égale à <span class="math inline">\(0\)</span> ;</li>
+<li><span class="math inline">\(1+1\)</span> donne <span class="math inline">\(0\)</span> avec une retenue égale à <span class="math inline">\(1\)</span>.</li>
+</ul>
+<p>Exemple de l’addition de <span class="math inline">\(11_{10}=1011_2\)</span> et de <span class="math inline">\(13_{10}=1101_2\)</span> (les retenues sont en rouge) :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../../../assets/images/add_bin3.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="../../../assets/images/add_bin3.svg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>La somme obtenue <span class="math inline">\(1\;1000_2\)</span> correspond bien à l’entier <span class="math inline">\(24_{10}\)</span> codé en binaire. On remarque qu’il a fallu un bit supplémentaire pour coder la somme. Si on travaille avec une taille d’entiers fixe de 4 bits, alors le bit de poids fort sera ignoré, et on obtiendra seulement <span class="math inline">\(1000_2\)</span> comme résultat, c’est-à-dire 8. Autrement dit, sur 4 bits, quand on dépasse la capacité de <span class="math inline">\(2^4-1=15\)</span>, on repart de zéro : <span class="math inline">\(24=2^4+8\)</span>. On dit que le calcul se fait <strong>modulo <span class="math inline">\(2^4\)</span></strong>.</p>
+<p>En complément, vous pouvez regarder la vidéo “Le binaire, c’est quoi ?” dans cet <a href="https://www.flallemand.fr/wp/2022/07/02/la-chaine-youtube-codeur-pro/">article</a>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/">
+<p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+<p>Mentions légales</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/quarto_PNSI">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":true,"selector":".lightbox"});</script>
+
+
+
+
+</body></html>
