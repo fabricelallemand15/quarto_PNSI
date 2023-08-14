@@ -45,6 +45,8 @@ website:
           - 03_spec/index.qmd
           - 03_spec/spec_cours.qmd
           - 03_spec/spec_exos.qmd
+          - 03_spec/spec_quiz.qmd
+          - 03_spec/TP_dessine_ta_rue.qmd
       - section: "Ch. 4 - Diversité et unité des langages de programmation"
         contents: 
           - 04_langages/index.qmd
@@ -165,28 +167,6 @@ website:
           - 27_ihm/index.qmd
           - 27_ihm/ihm_cours.qmd
           - 27_ihm/ihm_exos.qmd
-          
-      - section: "S6-Algorithmique (1)"
-        contents: 
-            - algo1/index.qmd
-            - algo1/generalites.qmd
-            - algo1/parcoursTableau.qmd
-            - algo1/tris.qmd
-            - algo1/exos_tris.qmd
-            - algo1/recherche.qmd
-            - algo1/exos_recherche.qmd
-      - section: "S7-Traitement des données en tables"
-        contents: 
-          - tables/index.qmd
-          - tables/tables_cours.qmd
-          - tables/tables_quiz.qmd
-          - tables/tables_exos.qmd
-      - section: "S8-Réseaux"
-        contents: 
-          - reseaux/index.qmd
-          - reseaux/reseaux_archi.qmd
-          - reseaux/reseaux_protocole.qmd
-          - reseaux/reseaux_exos.qmd
   page-footer: 
     left:
       - href: http://creativecommons.org/licenses/by/4.0/

@@ -1,10 +1,14 @@
-_Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+---
+title: Exercices
+---
 
-_Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit._
+_Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+
+_Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
 
 **Fiche d'exercices sur la spécification et la mise au point des fonctions.**
 
-## :fontawesome-solid-computer: Exercice 1
+## {{< fa desktop >}} Exercice 1
 
 1. Dans la console Python, importer toutes les fonctions du module `statistics` qui, comme son nom l'indique, permet de réaliser quelques calculs statistiques !
 2. Taper ensuite les commandes permettant d'afficher les spécifications des fonctions `mean` (calcul de la moyenne), `median` (calcul de la médiane) et `quantiles` (calcul des quantiles).
@@ -12,7 +16,7 @@ _Les exercices précédés du symbole :octicons-pencil-16: doivent être résolu
 
 ------------------------------------------------
 
-## :octicons-pencil-16: Exercice 2
+## {{< fa solid pencil-alt >}} Exercice 2
 
 La fonction `punition()` affiche une phrase de punition un certain nombre de fois donné en paramètre.
 
@@ -34,7 +38,7 @@ def punition(nombrecopies) :
 
 ----------------------------------------
 
-## :fontawesome-solid-computer: Exercice 3
+## {{< fa desktop >}} Exercice 3
 
 L’Indice de Masse Corporelle se calcule par la formule $IMC = \frac{masse}{taille^2}$, où la masse est en kilogrammes et la taille en mètres. Un IMC est considéré comme normal s’il est compris entre 18,5
 et 25. En dessous de 18,5, la personne est en sous-poids et au-dessus de 25 elle est en sur-poids.
@@ -47,16 +51,10 @@ une masse de `m` kilogrammes et une taille de `t` mètres : classe 0 pour sous-p
 
 --------
 
-## :fontawesome-solid-computer: Exercice 4
+## {{< fa desktop >}} Exercice 4
 
 Écrire une fonction `mention(note)` et sa spécification qui prend en paramètre une note et renvoie la chaîne de caractères ’R’ si $note < 10$, ’A’ si $10 \leqslant note < 12$, ’AB’ si $12\leqslant note < 14$, ’B’ si $14 \leqslant note < 16$ et ’TB’ sinon.
 
 On vérifiera d’abord que la note passée en paramètre est comprise entre 0 et 20.
 
 Proposer un jeu de tests unitaires pour cette fonction.
-
--------------------------
-
-## Corrigés
-
-[Voir le corrigé](https://flallemand.fr/notebook/?from=https://flallemand.fr/nsi/assets/notebooks/specif_tests_exos_CORR.ipynb){target=_blank .md-button .md-button--primary}

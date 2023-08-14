@@ -38,3 +38,10 @@ body {
 #outlined-basic-label{
     background: white;
 }
+
+.mermaid-js {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+}

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – tp_dessine_ta_rue</title>
+<title>NSI - Première - T.P. Dessine ta rue !</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../14_algo/index.html" rel="next">
+<link href="../03_spec/spec_quiz.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -144,7 +146,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../03_spec/index.html">Ch. 3 - Spécification et mise au point de programmes</a></li><li class="breadcrumb-item"><a href="../03_spec/TP_dessine_ta_rue.html">T.P. Dessine ta rue !</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -246,22 +248,43 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Ch. 3 - Spécification et mise au point de programmes</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">03_spec/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../03_spec/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">03_spec/spec_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../03_spec/spec_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">03_spec/spec_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../03_spec/spec_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03_spec/spec_quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quiz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03_spec/TP_dessine_ta_rue.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">T.P. Dessine ta rue !</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -771,84 +794,6 @@ cookieconsent.run({
   </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false">
- <span class="menu-text">S6-Algorithmique (1)</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false" aria-label="Basculer la section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
- <span class="menu-text">algo1/index.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">algo1/generalites.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">algo1/parcoursTableau.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">algo1/tris.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">algo1/exos_tris.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">algo1/recherche.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">algo1/exos_recherche.qmd</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" aria-expanded="false">
- <span class="menu-text">S7-Traitement des données en tables</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" aria-expanded="false" aria-label="Basculer la section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-29" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
- <span class="menu-text">tables/index.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">tables/tables_cours.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">tables/tables_quiz.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">tables/tables_exos.qmd</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" aria-expanded="false">
- <span class="menu-text">S8-Réseaux</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" aria-expanded="false" aria-label="Basculer la section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-30" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
- <span class="menu-text">reseaux/index.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">reseaux/reseaux_archi.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">reseaux/reseaux_protocole.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">reseaux/reseaux_exos.qmd</span>
-  </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -860,14 +805,46 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../03_spec/index.html">Ch. 3 - Spécification et mise au point de programmes</a></li><li class="breadcrumb-item"><a href="../03_spec/TP_dessine_ta_rue.html">T.P. Dessine ta rue !</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">T.P. Dessine ta rue !</h1>
+</div>
 
 
-<p>!!! success “Objectifs” * Explorer l’utilisation d’une bibliothèque (exemple de la bibliothèque <code>turtle</code>). * Utiliser la documentation d’une bibliothèque. * Appliquer les connaissances du cours : création de fonctions, spécifications, … * Travailler en autonomie, travailler en groupe.</p>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Objectifs
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Explorer l’utilisation d’une bibliothèque (exemple de la bibliothèque <code>turtle</code>).</li>
+<li>Utiliser la documentation d’une bibliothèque.</li>
+<li>Appliquer les connaissances du cours : création de fonctions, spécifications, …</li>
+<li>Travailler en autonomie, travailler en groupe.</li>
+</ul>
+</div>
+</div>
 <p>L’objectif de ce T.P. est de construire un programme qui génère une illustration du type ci-dessous.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../../assets/images/ma_rue.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="image50"><img src="../../../assets/images/ma_rue.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">image50</figcaption>
+<p><a href="ma_rue.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="ma_rue.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>Le travail doit se faire en groupes. Il y a beaucoup de fonctions à coder, il faut donc se partager le travail ! À vous de vous organiser sachant que :</p>
@@ -883,9 +860,25 @@ cookieconsent.run({
 <li>des images représentant le rendu attendu pour chaque fonction.</li>
 </ul></li>
 </ul>
-<p>!!! danger “Critères d’évaluation” * Capacité à s’organiser et à travailler en groupe. * Respect des contraintes du sujet. * Concision du code : plus c’est long, moins c’est bon.</p>
-<p><a href="../../../assets/zip/TP_Collectif_Turtle.zip" class="md-button md-button--primary">:fontawesome-solid-file-zipper: Dossier zip à télécharger :fontawesome-solid-file-zipper:</a></p>
-<p><iframe src="../../../assets/pdf/TP_Collectif_Turtle.pdf" width="100%" height="500px"> </iframe></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Critères d’évaluation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Capacité à s’organiser et à travailler en groupe.</li>
+<li>Respect des contraintes du sujet.</li>
+<li>Concision du code : plus c’est long, moins c’est bon.</li>
+</ul>
+</div>
+</div>
+<p><a href="TP_Collectif_Turtle.zip"><i class="fa-solid fa-file-zipper" aria-label="file-zipper"></i> Dossier zip à télécharger <i class="fa-solid fa-file-zipper" aria-label="file-zipper"></i></a></p>
+<p><iframe src="TP_Collectif_Turtle.pdf" width="100%" height="500px"> </iframe></p>
 <p><strong>Source</strong> : <a href="http://revue.sesamath.net/spip.php?article1476">MathémaTICE n°80</a>, mai 2022, d’après une idée d’<a href="http://www.ostralo.net/">Adrien Willm</a>, avec quelques modifications effectuées par l’équipe d’Aurillac.</p>
 
 
@@ -1366,6 +1359,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../03_spec/spec_quiz.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Quiz</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../14_algo/index.html" class="pagination-link">
+        <span class="nav-page-text">Programme</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1398,7 +1403,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 

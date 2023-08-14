@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – specif_tests_exos</title>
+<title>NSI - Première - Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../03_spec/spec_exos.html" rel="next">
+<link href="../03_spec/index.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -78,6 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -123,6 +128,9 @@ cookieconsent.run({
 });
 </script> 
   
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -175,7 +183,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../03_spec/index.html">Ch. 3 - Spécification et mise au point de programmes</a></li><li class="breadcrumb-item"><a href="../03_spec/spec_cours.html">Cours</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -277,22 +285,43 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Ch. 3 - Spécification et mise au point de programmes</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">03_spec/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../03_spec/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">03_spec/spec_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../03_spec/spec_cours.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">03_spec/spec_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../03_spec/spec_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03_spec/spec_quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quiz</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03_spec/TP_dessine_ta_rue.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">T.P. Dessine ta rue !</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -802,84 +831,6 @@ cookieconsent.run({
   </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false">
- <span class="menu-text">S6-Algorithmique (1)</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false" aria-label="Basculer la section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
- <span class="menu-text">algo1/index.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">algo1/generalites.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">algo1/parcoursTableau.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">algo1/tris.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">algo1/exos_tris.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">algo1/recherche.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">algo1/exos_recherche.qmd</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" aria-expanded="false">
- <span class="menu-text">S7-Traitement des données en tables</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" aria-expanded="false" aria-label="Basculer la section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-29" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
- <span class="menu-text">tables/index.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">tables/tables_cours.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">tables/tables_quiz.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">tables/tables_exos.qmd</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" aria-expanded="false">
- <span class="menu-text">S8-Réseaux</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" aria-expanded="false" aria-label="Basculer la section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-30" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
- <span class="menu-text">reseaux/index.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">reseaux/reseaux_archi.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">reseaux/reseaux_protocole.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">reseaux/reseaux_exos.qmd</span>
-  </li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -890,72 +841,217 @@ cookieconsent.run({
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#fontawesome-solid-computer-exercice-1" id="toc-fontawesome-solid-computer-exercice-1" class="nav-link active" data-scroll-target="#fontawesome-solid-computer-exercice-1">:fontawesome-solid-computer: Exercice 1</a></li>
-  <li><a href="#octicons-pencil-16-exercice-2" id="toc-octicons-pencil-16-exercice-2" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-2">:octicons-pencil-16: Exercice 2</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-3" id="toc-fontawesome-solid-computer-exercice-3" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-3">:fontawesome-solid-computer: Exercice 3</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-4" id="toc-fontawesome-solid-computer-exercice-4" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-4">:fontawesome-solid-computer: Exercice 4</a></li>
-  <li><a href="#corrigés" id="toc-corrigés" class="nav-link" data-scroll-target="#corrigés">Corrigés</a></li>
+  <li><a href="#prototyper-une-fonction" id="toc-prototyper-une-fonction" class="nav-link active" data-scroll-target="#prototyper-une-fonction">1. Prototyper une fonction</a>
+  <ul class="collapse">
+  <li><a href="#fonction-comme-boîte-noire" id="toc-fonction-comme-boîte-noire" class="nav-link" data-scroll-target="#fonction-comme-boîte-noire">Fonction comme boîte noire</a></li>
+  <li><a href="#spécifications-dune-fonction" id="toc-spécifications-dune-fonction" class="nav-link" data-scroll-target="#spécifications-dune-fonction">Spécifications d’une fonction</a></li>
+  <li><a href="#vérification-des-préconditions" id="toc-vérification-des-préconditions" class="nav-link" data-scroll-target="#vérification-des-préconditions">Vérification des préconditions</a></li>
+  </ul></li>
+  <li><a href="#mise-au-point-de-programmes" id="toc-mise-au-point-de-programmes" class="nav-link" data-scroll-target="#mise-au-point-de-programmes">2. Mise au point de programmes</a>
+  <ul class="collapse">
+  <li><a href="#jeux-de-tests" id="toc-jeux-de-tests" class="nav-link" data-scroll-target="#jeux-de-tests">Jeux de tests</a></li>
+  <li><a href="#utilisation-des-fonctionnalités-de-lide" id="toc-utilisation-des-fonctionnalités-de-lide" class="nav-link" data-scroll-target="#utilisation-des-fonctionnalités-de-lide">Utilisation des fonctionnalités de l’IDE</a></li>
+  <li><a href="#documentation-du-programme" id="toc-documentation-du-programme" class="nav-link" data-scroll-target="#documentation-du-programme">Documentation du programme</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../03_spec/index.html">Ch. 3 - Spécification et mise au point de programmes</a></li><li class="breadcrumb-item"><a href="../03_spec/spec_cours.html">Cours</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Cours</h1>
+</div>
 
 
-<p><em>Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
-<p><em>Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit.</em></p>
-<p><strong>Fiche d’exercices sur la spécification et la mise au point des fonctions.</strong></p>
-<section id="fontawesome-solid-computer-exercice-1" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-1">:fontawesome-solid-computer: Exercice 1</h2>
-<ol type="1">
-<li>Dans la console Python, importer toutes les fonctions du module <code>statistics</code> qui, comme son nom l’indique, permet de réaliser quelques calculs statistiques !</li>
-<li>Taper ensuite les commandes permettant d’afficher les spécifications des fonctions <code>mean</code> (calcul de la moyenne), <code>median</code> (calcul de la médiane) et <code>quantiles</code> (calcul des quantiles).</li>
-<li>Recopier ces spécifications.</li>
-</ol>
-<hr>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+<section id="prototyper-une-fonction" class="level2">
+<h2 class="anchored" data-anchor-id="prototyper-une-fonction">1. Prototyper une fonction</h2>
+<section id="fonction-comme-boîte-noire" class="level3">
+<h3 class="anchored" data-anchor-id="fonction-comme-boîte-noire">Fonction comme boîte noire</h3>
+<p>Une fonction peut être considérée comme une <strong>boîte noire</strong> qui, à partir de <strong>données</strong>, renvoie une <strong>sortie</strong>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+  A(Entrées) --&gt; F[Fonction];
+  F --&gt; B(Sortie);
+  style F fill:#000,color:#fff
+  style A fill:#fff
+  style B fill:#fff
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>La fonction ne gère pas la provenance des entrées ni la destination des sorties (variable, affichage, fichier, …) : elle peut donc être utilisée dans différentes configurations d’entrées/sorties.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+À savoir
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Les entrées d’une fonction sont appelées ses <strong>paramètres</strong> ou ses <strong>arguments</strong>.</p>
+</div>
+</div>
 </section>
-<section id="octicons-pencil-16-exercice-2" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-2">:octicons-pencil-16: Exercice 2</h2>
-<p>La fonction <code>punition()</code> affiche une phrase de punition un certain nombre de fois donné en paramètre.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> punition(nombrecopies) : </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> compteur <span class="kw">in</span> <span class="bu">range</span> (<span class="dv">1</span>,nombrecopies<span class="op">+</span><span class="dv">1</span>,<span class="dv">1</span>) :</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Je ne dois pas bavarder en classe."</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol type="1">
-<li><p>Parmi les appels suivants, lesquels vont provoquer une erreur ?</p>
+<section id="spécifications-dune-fonction" class="level3">
+<h3 class="anchored" data-anchor-id="spécifications-dune-fonction">Spécifications d’une fonction</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Définition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Spécifier</strong> une fonction, c’est la <strong>documenter</strong> en :</p>
 <ul>
-<li><code>punition("Marcello")</code></li>
-<li><code>punition(200)</code></li>
-<li><code>punition( )</code></li>
-<li><code>punition(3.5)</code></li>
-<li><code>punition(-10)</code></li>
-</ul></li>
-<li><p>Ajouter dans la fonction un <code>assert</code> de précondition avec une phrase d’erreur et le tester.</p></li>
-</ol>
-<hr>
+<li>décrivant ce qu’elle fait</li>
+<li>énumérant les entrées attendues et leur type</li>
+<li>précisant des conditions sur les entrées : on parle de <strong>préconditions</strong></li>
+<li>donnant le type de la valeur retournée</li>
+<li>précisant des conditions sur la valeur retournée : on parle de <strong>postconditions</strong></li>
+</ul>
+</div>
+</div>
+<p>En Python, la spécification d’une fonction se fait juste sous sa signature sous la forme d’une chaîne de caractères encadrée de triples guillemets (appelée en anglais <strong>docstring</strong>), comme dans l’exemple ci-dessous :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_trois_nombres(m, n, p):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie la somme des trois entiers m, n et p</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    ----------</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    m : type int</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    n : type int</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    p : type int</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    -------</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">    type int</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> m <span class="op">+</span> n <span class="op">+</span> p</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Depuis la version 3.5 de Python, on peut préciser les types attendus pour les entrées et le type de la sortie avec des annotations simples. Cela permet d’alléger la spécification et d’écrire une docstring plus compacte.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_trois_nombres(m: <span class="bu">int</span>, n: <span class="bu">int</span>, p: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Renvoie la somme des trois entiers m, n et p"""</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> m <span class="op">+</span> n <span class="op">+</span> p</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>La chaîne de documentation d’une fonction est utilisée par la fonction <code>help</code> de Python pour renseigner l’utilisateur.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span><span class="bu">help</span>(add_trois_nombres)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Help on function add_trois_nombres <span class="kw">in</span> module __main__:</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>add_trois_nombres(m: <span class="bu">int</span>, n: <span class="bu">int</span>, p: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">int</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    Renvoie la somme des trois entiers m, n et p</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Les fonctions Python prédéfinies possèdent également une spécification que l’on peut consulter avec la fonction <code>help</code>.</p>
 </section>
-<section id="fontawesome-solid-computer-exercice-3" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-3">:fontawesome-solid-computer: Exercice 3</h2>
-<p>L’Indice de Masse Corporelle se calcule par la formule <span class="math inline">\(IMC = \frac{masse}{taille^2}\)</span>, où la masse est en kilogrammes et la taille en mètres. Un IMC est considéré comme normal s’il est compris entre 18,5 et 25. En dessous de 18,5, la personne est en sous-poids et au-dessus de 25 elle est en sur-poids.</p>
-<ol type="1">
-<li>Écrire une fonction d’en-tête <code>imc(m, t)</code> qui renvoie la classification de l’IMC correspondant à une masse de <code>m</code> kilogrammes et une taille de <code>t</code> mètres : classe 0 pour sous-poids, 1 pour normal et 2 pour surpoids.</li>
-<li>Détailler précisément la spécification de cette fonction et proposer des préconditions pertinentes à tester.</li>
-<li>Écrire une fonction <code>test_IMC()</code> mettant en oeuvre un jeu de tests unitaires pour la fonction <code>imc(m, t)</code>.</li>
-</ol>
-<hr>
+<section id="vérification-des-préconditions" class="level3">
+<h3 class="anchored" data-anchor-id="vérification-des-préconditions">Vérification des préconditions</h3>
+<p>La spécification d’une fonction telle qu’elle est présentée ci-dessus est juste indicative et n’empêche pas un utilisateur de notre fonction de l’appeler avec des paramètres qui ne vérifient pas les préconditions, ce qui peut, dans la suite du programme, engendrer des erreurs.</p>
+<p>Il est possible de vérifier les préconditions à l’intérieur de la fonction avec l’instruction <code>assert</code>.</p>
+<p>Une telle instruction se compose d’une condition (une expression booléenne) éventuellement suivie d’une virgule et d’une phrase en langue naturelle, sous forme d’une chaîne de caractères. L’instruction <code>assert</code> teste si sa condition est satisfaite. Si c’est le cas, elle ne fait rien et sinon elle <strong>arrête immédiatement l’exécution du programme</strong> en affichant éventuellement la phrase qui lui est associée.</p>
+<p>Tester par exemple la fonction ci-dessous avec des arguments entiers, puis avec des arguments non entiers.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_trois_nombres(m: <span class="bu">int</span>, n: <span class="bu">int</span>, p: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Renvoie la somme des trois entiers n, m et p"""</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">type</span>(m) <span class="op">==</span> <span class="bu">int</span>, <span class="st">'m doit être un entier'</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">type</span>(n) <span class="op">==</span> <span class="bu">int</span>, <span class="st">'n doit être un entier'</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">type</span>(p) <span class="op">==</span> <span class="bu">int</span>, <span class="st">'p doit être un entier'</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> m <span class="op">+</span> n <span class="op">+</span> p</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remarque
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Lorsqu’on vérifie les préconditions sur les arguments au début du code d’une fonction, on parle de <strong>programmation défensive</strong>.</p>
+</div>
+</div>
 </section>
-<section id="fontawesome-solid-computer-exercice-4" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-4">:fontawesome-solid-computer: Exercice 4</h2>
-<p>Écrire une fonction <code>mention(note)</code> et sa spécification qui prend en paramètre une note et renvoie la chaîne de caractères ’R’ si <span class="math inline">\(note &lt; 10\)</span>, ’A’ si <span class="math inline">\(10 \leqslant note &lt; 12\)</span>, ’AB’ si <span class="math inline">\(12\leqslant note &lt; 14\)</span>, ’B’ si <span class="math inline">\(14 \leqslant note &lt; 16\)</span> et ’TB’ sinon.</p>
-<p>On vérifiera d’abord que la note passée en paramètre est comprise entre 0 et 20.</p>
-<p>Proposer un jeu de tests unitaires pour cette fonction.</p>
-<hr>
 </section>
-<section id="corrigés" class="level2">
-<h2 class="anchored" data-anchor-id="corrigés">Corrigés</h2>
-<p><a href="https://flallemand.fr/notebook/?from=https://flallemand.fr/nsi/assets/notebooks/specif_tests_exos_CORR.ipynb" class="md-button md-button--primary" target="_blank">Voir le corrigé</a></p>
+<section id="mise-au-point-de-programmes" class="level2">
+<h2 class="anchored" data-anchor-id="mise-au-point-de-programmes">2. Mise au point de programmes</h2>
+<section id="jeux-de-tests" class="level3">
+<h3 class="anchored" data-anchor-id="jeux-de-tests">Jeux de tests</h3>
+<p>Lors du développement d’un programme, il est nécessaire de savoir localiser les erreurs afin d’en comprendre l’origine et de pouvoir les corriger.</p>
+<p>Outre les messages d’erreurs standard retournés pas Python, l’utilisation d’<strong>assertions sur des jeux de tests</strong> permet aussi d’aider à la mise au point d’une fonction ou d’un programme.</p>
+<p>Il s’agit de tester les postconditions de la fonction sur une série d’exemples bien choisis. On parle alors de <strong>tests unitaires</strong>. Si l’un des tests unitaires est faux, alors il y a une erreur dans la fonction. Si tous les tests unitaires sont validés, il reste des risques de bugs car un <strong>jeu de tests</strong> ne peut en général pas couvrir toutes les possibilités existantes.</p>
+<p>On peut rassembler ces tests unitaires dans une fonction ou un module.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_trois_nombres(m: <span class="bu">int</span>, n: <span class="bu">int</span>, p: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Renvoie la somme des trois entiers n, m et p"""</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">type</span>(m) <span class="op">==</span> <span class="bu">int</span>, <span class="st">'m doit être un entier'</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">type</span>(n) <span class="op">==</span> <span class="bu">int</span>, <span class="st">'n doit être un entier'</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">type</span>(p) <span class="op">==</span> <span class="bu">int</span>, <span class="st">'p doit être un entier'</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> m <span class="op">+</span> n <span class="op">+</span> p</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_add():</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Jeu de tests unitaires pour la fonction add_trois_nombres"""</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> add_trois_nombres(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="dv">6</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> add_trois_nombres(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>) <span class="op">==</span> <span class="dv">15</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> add_trois_nombres(<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>) <span class="op">==</span> <span class="dv">24</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Tests unitaires réussis"</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>test_add()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remarques et compléments
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si l’une des instructions <code>assert</code> n’était pas vérifiée, alors l’exécution de la fonction de test serait interrompue et le message final ne serait pas affiché.</p>
+<p>On peut traiter de façon plus fine les erreurs dans un script Python en utilisant les instructions du type :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    instruction1</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> nom_de_l_exception:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    instruction2</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>où <code>nom_de_l_exception</code> est une des exceptions (erreurs) natives de Python dont la liste se trouve dans la <a href="https://docs.python.org/fr/3/library/exceptions.html#concrete-exceptions" target="_blank">documentation</a>.</p>
+<p>Pour plus d’informations sur <code>try ... except</code>, voir <a href="https://docs.python.org/3/tutorial/errors.html" target="_blank">la documentation</a>.</p>
+</div>
+</div>
+</section>
+<section id="utilisation-des-fonctionnalités-de-lide" class="level3">
+<h3 class="anchored" data-anchor-id="utilisation-des-fonctionnalités-de-lide">Utilisation des fonctionnalités de l’IDE</h3>
+<p>Selon l’éditeur utilisé pour écrire le programme, il est souvent possible d’exécuter un programme an mode débogage (debug), pas à pas, et d’observer en temps réel l’évolution du contenu des variables. Ces fonctionnalités facilitent grandement la mise au point d’un programme.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="thonny_explo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Explorateur de variable dans Thonny"><img src="thonny_explo.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Explorateur de variable dans Thonny</figcaption>
+</figure>
+</div>
+</section>
+<section id="documentation-du-programme" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-du-programme">Documentation du programme</h3>
+<p>Lors du développement d’un programme ou d’un projet, il est souvent utile, pour comprendre et corriger des erreurs, d’ajouter dans le code des sorties et des affichages (fonction <code>print</code>) qui peuvent permettre de connaître l’état d’une variable particulière à un endroit précis du programme. <strong>C’est une méthode très simple et très efficace pour trouver des erreurs dans un programme !</strong></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1434,6 +1530,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../03_spec/index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../03_spec/spec_exos.html" class="pagination-link">
+        <span class="nav-page-text">Exercices</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1466,6 +1574,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 
