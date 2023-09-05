@@ -1,5 +1,8 @@
 ---
 title: Cours
+docx: 
+    reference-doc: custom-reference-doc.docx
+    lang: fr
 ---
 
 ## 1. À quoi sert un système d'exploitation ?
@@ -103,13 +106,13 @@ Sous Windows, nous avons par exemple le terminal PowerShell.
 
 ![](powershell.png){width=50%}
 
-Sous Linux, suivant la distribution utilisée, le terminal peut posséder des noms différents (Terminal, Konsole, ...). L'image ci-dessous montre le terminal de la distribution Lubuntu, appelé Qterminal :
+Sous Linux, suivant la distribution utilisée, le terminal peut posséder des noms différents (Terminal, Konsole, ...). L'image ci-dessous montre le terminal de la distribution Ubuntu, appelé Gnome Terminal :
 
-![](Qterminal.jpg){width=50%}
+![](terminal.png){width=50%}
 
 **Remarque** : les commandes que nous allons étudier sont des commandes de base du shell pour Linux. Cependant, dans les versions récentes de Windows, PowerShell est capable d'interpréter ces commandes et elles fonctionneront donc parfaitement aussi.
 
-Sur l'image ci-dessus, nous voyons le terminal de l'utilisateur "fabrice" qui utilise un ordinateur qui se nomme "fabrice-linux" ("fabrice@fabrice-linux").
+Sur l'image ci-dessus, nous voyons le terminal de l'utilisateur "fabrice" qui utilise un ordinateur qui se nomme "inspiron" ("fabrice@inspiron").
 
 ## 4. Arborescence du système de fichier
 
@@ -156,7 +159,7 @@ Il est important de savoir que si le double point ("../") permet de remonter d'u
 
 :::{.callout-tip}
 ## Touche Tab
-Dans un terminal, on peut compléter automatiquement une commande ou un chemin en utilisant la touche de tabulation : {{< bi indent >}}
+Dans un terminal, on peut compléter automatiquement une commande ou un chemin en utilisant la touche de tabulation. Par exemple, si vous tapez ``cd /home/fab`` puis que vous appuyez sur la touche de tabulation, le chemin sera complété automatiquement en ``cd /home/fabrice``.
 :::
 
 ## 5. Les commandes pour manipuler les fichiers et les répertoires
@@ -225,7 +228,7 @@ La commande ``cp`` permet de copier un fichier. La commande est de la forme ``cp
 
 ### i. La commande mv
 
-La commande ``mv`` (move) permet de déplacer un fichier dans un répertoire. Par exemple un ``mv toto.txt titi`` déplacera le fichier ``toto.txt`` dans le répertoire ``titi`` (attention on parle bien de déplacement pas de copie). Elle permet aussi de renommer un fichier ou un répertoire d'il n'y a pas de déplacement.
+La commande ``mv`` (move) permet de déplacer un fichier dans un répertoire. Par exemple un ``mv toto.txt titi`` déplacera le fichier ``toto.txt`` dans le répertoire ``titi`` (attention on parle bien de déplacement pas de copie). Elle permet aussi de renommer un fichier ou un répertoire s'il n'y a pas de déplacement.
 
 ### j. La commande man
 
@@ -260,7 +263,7 @@ Il est possible d'utiliser la commande ``ls`` avec l'option ``-l`` afin d'avoir 
 Prenons la première ligne :
 
 ```bash
--rw-rw-r-- 1 fabrice fabrice     0 juil.  1 22:01 exercice.txt
+-rw-rw-r-- 1 fabrice fabrice     0 sept.  4 06:57 exercice.txt
 ```
 
 Lisons cette ligne de gauche à droite :
@@ -273,13 +276,13 @@ Lisons cette ligne de gauche à droite :
 - le premier "fabrice" représente le nom du propriétaire du fichier ;
 - le second "fabrice" représente le nom du groupe lié au fichier ;
 - le "0" représente la taille du fichier en octet (ici notre fichier est vide) ;
-- "juil.  1 22:01" donne la date et l'heure de la dernière modification du fichier ;
+- "sept.  4 06:57" donne la date et l'heure de la dernière modification du fichier ;
 - "exercice.txt" est le nom du fichier.
 
 Prenons la deuxième ligne :
 
 ```bash
-drwxrwxr-x 2 fabrice fabrice  4096 juil.  1 21:12 Loisirs
+drwxrwxr-x 2 fabrice fabrice  4096 sept.  4 06:48 Loisirs
 ```
 
 Lisons cette ligne de gauche à droite :
@@ -292,10 +295,10 @@ Lisons cette ligne de gauche à droite :
 - le premier "fabrice" représente le nom du propriétaire du répertoire ;
 - le second "fabrice" représente le nom du groupe lié au répertoire ;
 - le "4096" représente la taille du répertoire en octets ;
-- "juil.  1 21:12" donne la date et l'heure de la dernière modification du contenu du répertoire ;
+- "sept.  4 06:48" donne la date et l'heure de la dernière modification du contenu du répertoire ;
 - "Loisirs" est le nom du répertoire
 
-Il est important de ne pas perdre de vu que l'utilisateur **root** a la possibilité de modifier les droits de tous les utilisateurs.
+Il est important de ne pas perdre de vue que l'utilisateur **root** a la possibilité de modifier les droits de tous les utilisateurs.
 
 Le propriétaire d'un fichier peut modifier les permissions d'un fichier ou d'un répertoire à l'aide de la commande ``chmod``. Pour utiliser cette commande, il est nécessaire de connaître certains symboles :
 
@@ -323,6 +326,6 @@ Il est possible de combiner les symboles :
 chmod g-wx toto.txt
 ```
 
-La commande ``chmod`` ci-dessus permet de supprimer la permission "écriture" et la permission "exécution" pour le fichier *toto.txt* "au groupe lié au fichier".
+La commande ``chmod`` ci-dessus permet de supprimer la permission "écriture" et la permission "exécution" pour le fichier *toto.txt* au groupe lié au fichier.
 
 Une fois de plus, "root" a tous les droits sur l'ensemble des fichiers et des répertoires, il peut donc utiliser la commande ``chmod`` sur tous les répertoires et tous les fichiers.

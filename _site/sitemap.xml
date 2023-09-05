@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/16_tris/tris.html</loc>
-    <lastmod>2023-05-02T05:58:15.170Z</lastmod>
+    <lastmod>2023-08-20T15:19:10.453Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/16_tris/exos_tris.html</loc>
@@ -178,7 +178,7 @@
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/01_os/OS_cours.html</loc>
-    <lastmod>2023-08-02T20:33:33.916Z</lastmod>
+    <lastmod>2023-09-04T08:00:32.246Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/ressources.html</loc>
@@ -226,7 +226,7 @@
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/01_os/OS_exos.html</loc>
-    <lastmod>2023-08-02T20:51:43.786Z</lastmod>
+    <lastmod>2023-09-02T18:58:53.140Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/02_python/python_bases.html</loc>
@@ -399,5 +399,9 @@
   <url>
     <loc>https://flallemand.fr/PNSI/about.html</loc>
     <lastmod>2023-08-14T18:34:23.043Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/01_os/quiz.html</loc>
+    <lastmod>2023-09-04T08:48:10.066Z</lastmod>
   </url>
 </urlset>

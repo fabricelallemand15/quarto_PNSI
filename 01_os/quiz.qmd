@@ -1,0 +1,159 @@
+---
+title: "Questionnaire : avez-vous bien étudié le cours ?"
+---
+
+1. Quel est le rôle des applications dans un système informatique ?
+a) Faire l'interface entre le matériel et l'utilisateur
+b) Offrir des fonctionnalités adaptées aux besoins des utilisateurs
+c) Isoler le code utilisateur du matériel
+
+2. Pourquoi est-il important d'isoler le code utilisateur du matériel ?
+a) Pour permettre de changer le matériel de façon transparente pour l'utilisateur
+b) Pour assurer l'intégrité des données
+c) Pour permettre à tous les programmes de s'exécuter de façon équitable
+
+3. Quel est le rôle de l'Unité Centrale (UC) dans un ordinateur ?
+a) Stocker les données
+b) Traiter les informations
+c) Assurer la communication avec les périphériques
+
+4. Qu'est-ce que les pilotes de périphériques ?
+a) Des logiciels permettant de stocker des données
+b) Des logiciels permettant de traiter les informations
+c) Des logiciels permettant de communiquer avec les périphériques
+
+5. Quelle est la différence entre un OS propriétaire et un OS libre ?
+a) Un OS propriétaire est gratuit, tandis qu'un OS libre est payant
+b) Un OS propriétaire est développé par une communauté de développeurs, tandis qu'un OS libre est développé par une entreprise
+c) Un OS propriétaire est soumis à des restrictions d'utilisation, tandis qu'un OS libre peut être utilisé, modifié et distribué librement
+
+6. Quel est le premier logiciel qui démarre lorsqu'on allume un ordinateur ?
+a) Une application
+b) Un système d'exploitation
+c) Un pilote de périphérique
+
+7. Comment était fourni le système d'exploitation des ordinateurs personnels dans les années 80-90 du 20ᵉ siècle ?
+a) Sur un disque dur
+b) Sur une disquette de démarrage
+c) Sur une clé USB
+
+8. Quelle est la différence entre un chemin absolu et un chemin relatif ?
+a) Un chemin absolu indique le chemin depuis la racine, tandis qu'un chemin relatif indique le chemin depuis un répertoire quelconque
+b) Un chemin absolu indique le chemin depuis un répertoire quelconque, tandis qu'un chemin relatif indique le chemin depuis la racine
+c) Un chemin absolu est utilisé pour accéder à un fichier, tandis qu'un chemin relatif est utilisé pour accéder à un répertoire
+
+9. Comment indiquer le chemin absolu d'un fichier dans l'arborescence ?
+a) En indiquant le chemin depuis un répertoire quelconque
+b) En indiquant le chemin depuis la racine
+c) En utilisant des points pour remonter dans l'arborescence
+
+10. Comment indiquer le chemin relatif pour accéder à un fichier depuis un répertoire quelconque ?
+a) En indiquant le chemin depuis la racine
+b) En utilisant des points pour remonter dans l'arborescence
+c) En indiquant le chemin depuis le répertoire courant
+
+11. Supposons que vous ayez un fichier nommé "mon_cv.pdf" dans le répertoire "Documents" de votre compte utilisateur "pierre". Quel est le chemin absolu pour accéder à ce fichier ?
+a) /home/pierre/Documents/mon_cv.pdf
+b) /Documents/pierre/mon_cv.pdf
+c) /pierre/Documents/mon_cv.pdf
+
+12. Supposons que vous soyez dans le répertoire "Images" et que vous vouliez accéder au fichier "photo.jpg" qui se trouve dans le répertoire "Vacances" qui est lui-même dans le répertoire "Documents". Les répertoires "Images" et "Documents" sont tous les deux situés dans votre dossier utilisateur. Quel est le chemin relatif pour accéder à ce fichier ?
+a) ../Documents/Vacances/photo.jpg
+b) ../Vacances/Documents/photo.jpg
+c) ../Documents/photo.jpg/Vacances
+
+13. Supposons que vous soyez dans le répertoire "Musique" et que vous vouliez accéder au fichier "mon_film.mp4" qui se trouve dans le répertoire "Vidéos". Les dossiers "Musique" et "Vidéos" sont tous les deux dans le répertoire "marie". Quel est le chemin absolu et le chemin relatif pour accéder à ce fichier ?
+a) Chemin absolu : /home/marie/Vidéos/mon_film.mp4 ; Chemin relatif : ../../marie/Vidéos/mon_film.mp4
+b) Chemin absolu : /home/Vidéos/marie/mon_film.mp4 ; Chemin relatif : ../../marie/Vidéos/mon_film.mp4
+c) Chemin absolu : /home/marie/musique/Vidéos/mon_film.mp4 ; Chemin relatif : ../../marie/Vidéos/mon_film.mp4
+
+14. Que permet de faire la commande "cd" ?
+a) Elle permet de créer un répertoire
+b) Elle permet de supprimer un fichier
+c) Elle permet de changer le répertoire courant
+
+15. Comment utiliser la commande "cd" pour accéder au répertoire "Documents" depuis le répertoire personnel de l'utilisateur "pierre" ?
+a) cd /Documents/pierre
+b) cd Documents/pierre
+c) cd /home/pierre/Documents
+
+15. Que permet de faire la commande "ls" ?
+a) Elle permet de créer un répertoire
+b) Elle permet de supprimer un fichier
+c) Elle permet d'afficher le contenu d'un répertoire
+
+16. Que permet de faire la commande "pwd" ?
+a) Elle permet de connaître le répertoire courant
+b) Elle permet de créer un répertoire
+c) Elle permet de supprimer un fichier
+
+17. Que permet de faire la commande "mkdir" ?
+a) Elle permet de créer un fichier
+b) Elle permet de supprimer un répertoire
+c) Elle permet de créer un répertoire
+
+18. Supposons que vous soyez dans le répertoire "Documents" et que vous vouliez accéder au répertoire "Images" qui se trouve dans le répertoire "pierre". Quelle commande "cd" devez-vous utiliser ?
+a) cd /pierre/Images
+b) cd Images/pierre
+c) cd /home/pierre/Images
+
+19. Supposons que vous soyez dans le répertoire "Musique" et que vous vouliez afficher le contenu du répertoire "Photos" qui se trouve dans le répertoire "pierre". Quelle commande "ls" devez-vous utiliser ?
+a) ls /pierre/Photos
+b) ls Photos/pierre
+c) ls /home/pierre/Photos
+
+20. Supposons que vous vouliez créer un répertoire nommé "Photos" dans le répertoire "pierre". Quelle commande "mkdir" devez-vous utiliser ?
+a) mkdir /pierre/Photos
+b) mkdir Photos/pierre
+c) mkdir /home/pierre/Photos
+
+21. Supposons que vous vouliez supprimer le fichier "mon_fichier.txt" qui se trouve dans le répertoire "Documents" de votre compte utilisateur "pierre". Quelle commande "rm" devez-vous utiliser ?
+a) rm /home/pierre/Documents/mon_fichier.txt
+b) rm Documents/pierre/mon_fichier.txt
+c) rm /pierre/Documents/mon_fichier.txt
+
+22. Qu'est-ce qu'un système multi-utilisateurs ?
+a) Un système qui permet à plusieurs ordinateurs de travailler ensemble
+b) Un système qui permet à plusieurs utilisateurs de partager un même ordinateur
+c) Un système qui permet à un utilisateur de se connecter à plusieurs ordinateurs en même temps
+
+23. Qu'est-ce qu'un super utilisateur ?
+a) Un utilisateur qui a des droits limités sur le système
+b) Un utilisateur qui peut modifier tous les droits sur le système
+c) Un utilisateur qui ne peut pas se connecter au système
+
+24. Comment peut-on gérer les droits des utilisateurs sur un système d'exploitation ?
+a) En créant des groupes d'utilisateurs
+b) En attribuant des droits particuliers à chaque utilisateur
+c) Les deux réponses précédentes sont correctes
+
+25. Quelle est la commande pour obtenir la documentation d'une autre commande ?
+a) cd
+b) ls
+c) man
+
+26. Supposons que vous soyez l'utilisateur "marie" et que vous vouliez modifier le contenu du fichier "mon_fichier.txt" qui se trouve dans le répertoire "Documents". Cependant, vous n'avez pas les droits en écriture sur ce fichier. Comment pouvez-vous obtenir ces droits ?
+a) En demandant à l'administrateur de vous les attribuer
+b) En modifiant les droits du fichier avec la commande "chmod"
+c) En copiant le fichier dans votre répertoire personnel et en modifiant la copie
+
+27. Supposons que vous exécutiez la commande "ls -l" dans le répertoire "Documents" de votre compte utilisateur et que vous obteniez le résultat suivant pour le fichier "mon_fichier.txt" :
+-rw-r--r-- 1 marie marie 1024 sept. 10 14:30 mon_fichier.txt
+Quels sont les droits de lecture, d'écriture et d'exécution pour l'utilisateur "marie" sur ce fichier ?
+a) Lecture et écriture
+b) Lecture seulement
+c) Lecture, écriture et exécution
+
+28. Supposons que vous exécutiez la commande "ls -l" dans le répertoire "Images" de votre compte utilisateur et que vous obteniez le résultat suivant pour le fichier "photo.jpg" :
+-rwxr-x--- 1 pierre amis 2048 sept. 10 15:00 photo.jpg
+Quels sont les droits de lecture, d'écriture et d'exécution pour le groupe "amis" sur ce fichier ?
+a) Lecture seulement
+b) Lecture et exécution
+c) Lecture, écriture et exécution
+
+29. Supposons que vous exécutiez la commande "ls -l" dans le répertoire "Musique" de votre compte utilisateur et que vous obteniez le résultat suivant pour le fichier "chanson.mp3" :
+-rw-rw---- 1 marie amis 4096 sept. 10 16:00 chanson.mp3
+Quels sont les droits de lecture, d'écriture et d'exécution pour les autres utilisateurs (ceux qui ne sont ni l'utilisateur "marie" ni membres du groupe "amis") sur ce fichier ?
+a) Lecture seulement
+b) Lecture et écriture
+c) Aucun droit

@@ -1,5 +1,9 @@
 ---
 title: Exercices
+format:
+    docx: 
+        reference-doc: ../custom-reference-doc.docx
+        lang: fr
 ---
 
 _Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._

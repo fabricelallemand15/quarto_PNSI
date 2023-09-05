@@ -198,5 +198,3 @@ format:
     lightbox: auto
     code-block-border-left: "#31BAE9"
     code-block-bg: true
-  # pdf:
-  #   papersize: a4
