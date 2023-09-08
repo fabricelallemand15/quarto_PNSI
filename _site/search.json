@@ -2686,5 +2686,47 @@
     "title": "Spécialité NSI - Première",
     "section": "",
     "text": "Bienvenue !\nCe site est destiné à regrouper les cours et les exercices concernant l’enseignement de spécialité NSI de première du lycée Émile Duclaux d’Aurillac.\nLien vers l’ENT du lycée : https://cas.ent.auvergnerhonealpes.fr/login\nLien vers Capytale : https://capytale2.ac-paris.fr/web/c-auth/list\nLien vers Replit : https://replit.com/team/premiere-nsi\nLien vers le programme officiel : Programme officiel première NSI"
+  },
+  {
+    "objectID": "01_os/OS_exos.html",
+    "href": "01_os/OS_exos.html",
+    "title": "Exercices",
+    "section": "",
+    "text": "Les exercices précédés du symbole  sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole  doivent être résolus par écrit."
+  },
+  {
+    "objectID": "01_os/OS_exos.html#qcm",
+    "href": "01_os/OS_exos.html#qcm",
+    "title": "Exercices",
+    "section": " QCM",
+    "text": "QCM"
+  },
+  {
+    "objectID": "01_os/OS_exos.html#exercice-1",
+    "href": "01_os/OS_exos.html#exercice-1",
+    "title": "Exercices",
+    "section": " Exercice 1",
+    "text": "Exercice 1\nEn utilisant l’arborescence ci-dessous, quelle est la commande à saisir si le répertoire courant est le répertoire “home” et que vous “voulez vous rendre” dans le répertoire “Documents” (vous utiliserez d’abord un chemin absolu puis un chemin relatif).\n\n\n\n\n\n\n\n\n\n\n\n\nConsignes pour les exercices 2 et 3\n\n\n\nLes exercices 2 et 3 doivent être réalisés sur un système Linux.\nRemarque : dans le terminal, la flèche “montante” du clavier permet de remonter dans l’historique des commandes et la touche de tabulation permet la complétion automatique des commandes et des chemins."
+  },
+  {
+    "objectID": "01_os/OS_exos.html#exercice-2",
+    "href": "01_os/OS_exos.html#exercice-2",
+    "title": "Exercices",
+    "section": " Exercice 2",
+    "text": "Exercice 2\nFaites les actions suivantes en utilisant des lignes de commande. Pour chaque question, recopier la liste des commandes utilisées.\n\nRendez-vous dans votre répertoire personnel /home ;\nCréez un répertoire doc ;\nPlacez-vous dans le répertoire doc ;\nCréez un répertoire texte ;\nCréez un répertoire mesDoc ;\nPlacez-vous dans le répertoire texte ;\nCréez un fichier toto.txt ;\nOuvrez l’éditeur de texte nano pour éditer le fichier toto.txt : pour cela, entrer la commande nano toto.txt dans le terminal.\nEntrez le texte “Bonjour Linux !”, enregistrez (CTRL O et valider) et quittez (CTRL X) nano.\nAffichez dans le terminal le contenu du fichier toto.txt.\nPlacez-vous dans le répertoire doc ;\nCopiez le fichier toto.txt dans le répertoire mesDoc ;\nPlacez-vous dans le répertoire mesDoc et vérifiez que le fichier toto.txt est bien présent dans ce répertoire ;\nPlacez-vous dans le répertoire doc ;\nEffacez le fichier toto.txt du répertoire texte ;\nDéplacez le fichier toto.txt du répertoire mesDoc vers le répertoire doc ;\nEffacez le répertoire mesDoc ;\nEffacez le répertoire texte ;\nEffacez le fichier toto.txt."
+  },
+  {
+    "objectID": "01_os/OS_exos.html#exercice-3",
+    "href": "01_os/OS_exos.html#exercice-3",
+    "title": "Exercices",
+    "section": " Exercice 3",
+    "text": "Exercice 3\nFaites les actions suivantes en utilisant des lignes de commande (en partant de votre répertoire de travail). Recopier la liste des commandes utilisées.\n\nCréez un répertoire doc ;\nPlacez-vous dans le répertoire doc et créez un fichier toto.txt ;\nListez les droits (r, w et x) pour les différents utilisateurs (u, g et o) sur le fichier toto.txt ;\nSupprimez le droit en lecture pour les utilisateurs g sur le fichier toto.txt."
+  },
+  {
+    "objectID": "01_os/OS_exos.html#exercice-4",
+    "href": "01_os/OS_exos.html#exercice-4",
+    "title": "Exercices",
+    "section": " Exercice 4",
+    "text": "Exercice 4\nOn donne les éléments ci-dessous, obtenus en utilisant la commande ls -l :\n-rwx------ 1 toto eleves 512K sept. 10 10:53 fichier1\n-rw-r--r-- 1 lena eleves 41M sept. 10 10:27 fichier2\n-rwx--x--x 1 john profs 2M sept. 5 10:02 fichier3\nPour chacun des fichiers, donner le nom de l’utilisateur auquel il appartient, les droits qu’il a sur le fichier, ceux du groupe et des autres."
   }
 ]
