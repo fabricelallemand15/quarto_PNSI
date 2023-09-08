@@ -22,7 +22,7 @@ Remarquons enfin que le mot _algorithme_ vient d'Al-Khwârizmî (en arabe : ال
 
 Il existe de nombreux langages de programmation et, même en utilisant un même langage, un algorithme peut être programmé de différentes façons. Un algorithme donné peut donc correspondre à de très nombreux programmes informatiques différents.
 
-Cependant, un ordinateur n'est qu'une machine électrique qui ne peut comprendre directement que des suites d'instructions exprimées en langage machine par des suites de 0 et de 1. Le rôle d'un langage de programmation est de fournir au programmeur une **syntaxe** et une **grammaire** pour lui permettre d'exprimer des instructions de manière plus facilement compréhensible pour un être humain. Ce programme est ensuite traduit en langage machine, puis exécuté.
+Cependant, un ordinateur n'est qu'une machine électrique qui ne peut directement comprendre que des suites d'instructions exprimées en langage machine par des suites de 0 et de 1. Le rôle d'un langage de programmation est de fournir au programmeur une **syntaxe** et une **grammaire** pour lui permettre d'exprimer des instructions de manière plus facilement compréhensible pour un être humain. Ce programme est ensuite traduit en langage machine, puis exécuté.
 
 Cette traduction est faite, suivant les langages, par un **compilateur** (programme qui crée un fichier exécutable à partir du code source) ou par un **interpréteur** (programme qui lit, traduit et exécute immédiatement une à une les instructions du code source).
 
@@ -38,11 +38,11 @@ Le langage Python a été créé en 1989 par l'informaticien néerlandais [Guido
 
 Dans un programme, on utilise des variables pour stocker des données.
 
-Une variable est déterminée par un nom de variable que l'on peut choisir librement. Il est néanmoins conseillé de choisir un nom **court et auto-descriptif** afin de comprendre à la lecture le rôle de cette variable. 
+Une variable est déterminée par un nom de variable que l'on peut librement choisir. Il est néanmoins conseillé de choisir un nom **court et auto-descriptif** afin de comprendre à la lecture le rôle de cette variable. 
 
 Un nom de variable ne peut pas commencer par un chiffre et ne doit pas contenir de caractères spéciaux autres que "_" ou d'espace.
 
-Il est conseillé d'utiliser plutôt des lettres minuscules, en séparant les mots par le caractère ”_” ou en utilisant des majuscules à l'intérieur du nom. Une variable prévue pour contenir un prix de revient pourra par exemple être nommée `prix_de_revient` ou `prixDeRevient`. Des recommendations précises de style de programmation Python sont rassemblées à cette adresse : [https://peps.python.org/pep-0008/](https://peps.python.org/pep-0008/){target=_blank}.
+Il est conseillé d'utiliser plutôt des lettres minuscules, en séparant les mots par le caractère ”_” ou en utilisant des majuscules à l'intérieur du nom. Une variable prévue pour contenir un prix de revient pourra par exemple être nommée `prix_de_revient` ou `prixDeRevient`. Des recommandations précises de style de programmation Python sont rassemblées à cette adresse : [https://peps.python.org/pep-0008/](https://peps.python.org/pep-0008/){target=_blank}.
 
 :::{.callout-important}
 ## À retenir
@@ -242,7 +242,7 @@ Les opérateurs de comparaison renvoient des booléens.
 :::{.callout-warning}
 ## ATTENTION
 
-Notez le double égal `==` qui permet de distinguer un test d'égalité d'une affectation (association d'une valeur à un nom (variable). Le fait de confondre le "simple égal" et le "double égal" est une erreur classique qu'il faut éviter.
+Notez le double égal `==` qui permet de distinguer un test d'égalité d'une affectation (association d'une valeur à un nom (variable)). Le fait de confondre le "simple égal" et le "double égal" est une erreur classique qu'il faut éviter.
 :::
 
 Il est aussi possible de combiner plusieurs opérateurs booléens grâce aux opérateurs logiques `or` et `and`. On peut représenter le fonctionnement de ces opérateurs dans un tableau, appelé **table de vérité** :
@@ -297,9 +297,9 @@ else:
 	instruction2
 ```
 
-Si "test" est True alors "instruction1" est exécuté et "instruction2" est ignoré.
+Si "test" est True alors "instruction1" est exécutée et "instruction2" est ignorée.
 
-Sinon (sous-entendu que "test" est False) "instruction2" est exécuté et "instruction1" est ignoré.
+Sinon (sous-entendu que "test" est False) "instruction2" est exécutée et "instruction1" est ignorée.
 
 ![](flowchart_if_else.svg)
 
@@ -417,7 +417,7 @@ Quand `expression` deviendra `False` on passera directement à `suite programme`
 
 ![](flowchart_while.svg){width=30%}
 
-Que se passe-t-il si `expression` ne devient jamais `False` ?  On entre alors dans  une boucle "infinie" : c'est une erreur classique en programmation (aucun programme "bien fait" ne tombe dans une boucle infinie, s'il y a une boucle infinie, c'est qu'il y a forcement une erreur dans votre programme). C'est la raison pour laquelle je n'appelle pas ces boucles des boucles _non bornées_ comme on le trouve souvent : en effet, une boucle `while` est bornée, mais **on ne sait pas à l'avance combien de fois on va passer dans la boucle**. Ce nombre de passages dans la boucle dépend de l'évaluation de `expression`.
+Que se passe-t-il si `expression` ne devient jamais `False` ?  On entre alors dans  une boucle "infinie" : c'est une erreur classique en programmation (aucun programme "bien fait" ne tombe dans une boucle infinie, s'il y a une boucle infinie, c'est qu'il y a forcément une erreur dans votre programme). C'est la raison pour laquelle on n'appelle pas ces boucles des boucles _non bornées_ : en effet, une boucle `while` est bornée, mais **on ne sait pas à l'avance combien de fois on va passer dans la boucle**. Ce nombre de passages dans la boucle dépend de l'évaluation de `expression`.
 
 Considérons le programme suivant :
 
@@ -591,7 +591,7 @@ a = aire_triangle(2, 3)
 print(a)
 ```
 
-**Remarque** : Python propose des fonction prêtes à être utilisées par le programmeur : les fonctions natives (**built-in function** en anglais). Nous avons déjà eu l'occasion d'en voir deux avec `type` (qui renvoie le type d'une variable) et `str` qui renvoie la chaîne de caractère obtenue à partir d'un nombre (`str(4)` renvoie le caractère "4"). Il existe beaucoup d'autres fonctions natives Python (il en existe plus de 50). Nous pouvons en citer deux autres :
+**Remarque** : Python propose des fonction prêtes à être utilisées par le programmeur : les fonctions natives (**built-in functions** en anglais). Nous avons déjà eu l'occasion d'en voir deux avec `type` (qui renvoie le type d'une variable) et `str` qui renvoie la chaîne de caractère obtenue à partir d'un nombre (`str(4)` renvoie le caractère "4"). Il existe beaucoup d'autres fonctions natives Python (il en existe plus de 50). Nous pouvons en citer deux autres :
 
 - la fonction `len` prend en paramètre une chaîne de caractères et renvoie le nombre de caractères présents dans cette chaîne de caractères (par exemple `len("azerty")` renvoie 5)
 
@@ -772,7 +772,7 @@ Ce programme permet d'afficher la valeur 3 à l'écran.
 
 Quand on cherche à utiliser une variable dans une fonction, le système va d'abord chercher si cette variable se "trouve" dans l'espace local de la fonction, puis, s'il ne la trouve pas dans cet espace local, le système va aller rechercher la variable dans l'espace global. Pour le `print(i)` situé dans la fonction le système ne trouve pas de variable i dans l'espace local de la fonction `ma_fonc`, il passe donc à l'espace global et trouve la variable i (nous avons donc 3 qui s'affiche). 
 
-Il est important de bien comprendre que dans la programme ci-dessous le système trouve une variable i dans l'espace local de la fonction, la "recherche" de la variable i se serait arrêtée là :
+Il est important de bien comprendre que dans le programme ci-dessous le système trouve une variable i dans l'espace local de la fonction, la "recherche" de la variable i se serait arrêtée là :
 
 ```python
 i = 3
@@ -816,7 +816,7 @@ On évitera également l'emploi du mot-clef `global` car cette utilisation peut 
 
 Lorsqu'on écrit un programme, python crée un **espace de noms** ( _namespace_ ) dans lequel les noms des variables et des fonctions définies dans ce programme sont stockés.
 
-À l'intérieur de chaque fonction, il est possible de définir aussi des variables. Un nouvel espace de noms, **complètement indépendant** de l'espace de noms principal est crée pour chaque fonction.
+À l'intérieur de chaque fonction, il est possible de définir aussi des variables. Un nouvel espace de noms, **complètement indépendant** de l'espace de noms principal est créé pour chaque fonction.
 
 Par conséquent, une variable définie à l'intérieur d'une fonction n'est pas accessible depuis le programme principal et elle n'existe plus lorsque l'exécution de la fonction est terminée (même si elle porte le même nom qu'une variable du programme principal). On dit qu'il s'agit d'une variable **locale**.
 :::
