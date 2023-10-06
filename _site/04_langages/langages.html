@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – langages</title>
+<title>NSI - Première - Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../14_algo/index.html" rel="next">
+<link href="../04_langages/index.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -178,7 +180,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../04_langages/index.html">Ch. 4 - Diversité et unité des langages de programmation</a></li><li class="breadcrumb-item"><a href="../04_langages/langages.html">Cours</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -213,7 +215,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../01_os/OS_exos.docx" class="sidebar-item-text sidebar-link">
+  <a href="../01_os/OS_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices</span></a>
   </div>
 </li>
@@ -321,22 +323,25 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">Ch. 4 - Diversité et unité des langages de programmation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">04_langages/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../04_langages/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">04_langages/langages_cours.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">04_langages/langages_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../04_langages/langages.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -845,32 +850,57 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../04_langages/index.html">Ch. 4 - Diversité et unité des langages de programmation</a></li><li class="breadcrumb-item"><a href="../04_langages/langages.html">Cours</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Cours</h1>
+</div>
 
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 <p>Il existe de très nombreux langages de programmation différents. Chaque langage a ses particularités propres, mais certaines ressemblances peuvent également être observées.</p>
 <p>Voici un arbre généalogique des principaux langages, tiré des documents d’accompagnement du programme de première :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../../assets/images/genea_langages.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="image50"><img src="../../../assets/images/genea_langages.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">image50</figcaption>
+<p><a href="genea_langages.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="genea_langages.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <section id="popularité-des-principaux-langages" class="level2">
 <h2 class="anchored" data-anchor-id="popularité-des-principaux-langages">1. Popularité des principaux langages</h2>
-<p>L’entreprise néerlandaise TIOBE propose un indice de popularité des principaux langages de programmation. Voici comment cet indice est présenté sur <a href="https://www.tiobe.com/tiobe-index/">son site</a> :</p>
-<p>!!! cite “Citation” L’indice TIOBE Programming Community est un indicateur de la popularité des langages de programmation. L’indice est mis à jour une fois par mois. Les évaluations sont basées sur le nombre d’ingénieurs qualifiés dans l’utilisation de chaque langage dans le monde entier, de cours et de fournisseurs tiers. Les moteurs de recherche populaires tels que Google, Bing, Yahoo!, Wikipedia, Amazon, YouTube et Baidu sont utilisés pour calculer les évaluations. Il est important de noter que l’indice TIOBE ne concerne pas le meilleur langage de programmation ou le langage dans lequel la plupart des lignes de code ont été écrites.</p>
-<pre><code>L’indice peut être utilisé pour vérifier si vos compétences en programmation sont toujours à jour ou pour prendre une décision stratégique sur le langage de programmation à adopter lorsque vous commencez à construire un nouveau système logiciel. La définition de l’indice TIOBE peut être trouvée [ici](https://www.tiobe.com/tiobe-index/programminglanguages_definition/).</code></pre>
+<p>L’entreprise néerlandaise TIOBE propose un indice de popularité des principaux langages de programmation. Voici comment cet indice est présenté sur <a href="https://www.tiobe.com/tiobe-index/" target="_blank">son site</a> :</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Citation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>L’indice TIOBE Programming Community est un indicateur de la popularité des langages de programmation. L’indice est mis à jour une fois par mois. Les évaluations sont basées sur le nombre d’ingénieurs qualifiés dans l’utilisation de chaque langage dans le monde entier, de cours et de fournisseurs tiers. Les moteurs de recherche populaires tels que Google, Bing, Yahoo!, Wikipedia, Amazon, YouTube et Baidu sont utilisés pour calculer les évaluations. Il est important de noter que l’indice TIOBE ne concerne pas le meilleur langage de programmation ou le langage dans lequel la plupart des lignes de code ont été écrites.</p>
+<p>L’indice peut être utilisé pour vérifier si vos compétences en programmation sont toujours à jour ou pour prendre une décision stratégique sur le langage de programmation à adopter lorsque vous commencez à construire un nouveau système logiciel. La définition de l’indice TIOBE peut être trouvée <a href="https://www.tiobe.com/tiobe-index/programminglanguages_definition/" target="_blank">ici</a>.</p>
+</div>
+</div>
 <p>Voici le classement des dix premiers langages selon l’indice TIOBE en mai 2022 et le graphique de son évolution :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../../assets/images/tiobe_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="tableau"><img src="../../../assets/images/tiobe_1.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">tableau</figcaption>
+<p><a href="tiobe_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="tiobe_1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../../assets/images/tiobe_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="tableau"><img src="../../../assets/images/tiobe_2.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">tableau</figcaption>
+<p><a href="tiobe_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="tiobe_2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
@@ -878,9 +908,39 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="différentes-implémentations-dun-même-algorithme">2. Différentes implémentations d’un même algorithme</h2>
 <p>Pour découvrir et comparer quelques langages de programmation, nous allons nous intéresser à l’algorithme suivant dont l’objet est de tester si un nombre entier positif <span class="math inline">\(n\)</span> donné en argument est premier ou non. On procède pour cela en testant la divisibilité par les entiers inférieurs ou égaux à <span class="math inline">\(\sqrt{n}\)</span>. Si <span class="math inline">\(n\)</span> ne possède aucun diviseur (autre que 1) inférieur ou égal à <span class="math inline">\(\sqrt{n}\)</span>, alors <span class="math inline">\(n\)</span> est premier.</p>
 <p>L’algorithme représenté ci dessous (on traite directement le cas <span class="math inline">\(n=2\)</span> et on élimine tous les multiples de 2):</p>
-<p>!!! Example “Algorithme en pseudo-code” <code>title="Pseudo-code"     Fonction is_prime(n)         Début             Si n = 2, Alors                 Retourne Vrai             FinSi             Si n &lt; 2 ou 2 divise n, Alors                 Retourne Faux             FinSi             Pour k variant de 3 à la partie entière de racine_carrée(n), avec un pas de 2, Faire                 Si k divise n, alors                     Retourne Faux                 FinSi             FinPour             Retourne Vrai         Fin</code></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Algorithme en pseudo-code
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre class="title=&quot;pseudo-code&quot;"><code>Fonction is_prime(n)
+    Début
+        Si n = 2, Alors
+            Retourne Vrai
+        FinSi
+        Si n &lt; 2 ou 2 divise n, Alors
+            Retourne Faux
+        FinSi
+        Pour k variant de 3 à la partie entière de racine_carrée(n), avec un pas de 2, Faire
+            Si k divise n, alors
+                Retourne Faux
+            FinSi
+        FinPour
+        Retourne Vrai
+    Fin</code></pre>
+</div>
+</div>
 <p>Voici maintenant sa traduction dans quelques langages de programmation. À chaque fois, nous avons essayé de suivre au plus près la structure de programmation de l’algorithme en pseudo-code.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Langage Python</strong></pre>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_prime(n):</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">2</span>:</span>
@@ -891,51 +951,82 @@ cookieconsent.run({
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> n <span class="op">%</span> k <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Dans le script ci-dessous, écrit en C, on retrouve le même algorithme. Le code fonctionne en C ou en C++ (on peut considérer que C est un sous-ensemble de C++). <a href="../../../assets/autres/primes.cpp">(Fichier complet à télécharger pour tester)</a> :</p>
-<p>````C title=“C ou C++” #include &lt;math.h&gt;</p>
-<p>bool is_prime(unsigned int n) { unsigned int k; if (n == 2) return true; if (n &lt; 2 || n % 2 == 0) return false; for (k = 3; k &lt;= sqrt(n) + 1; k += 2) if (n % k == 0) return false; return true; }</p>
-<pre><code>
-La même chose en C# [(fichier complet à télécharger pour tester)](../../../assets/autres/primes.cs) :
-
-````C#
-using static System.Math;
-
-static bool is_Prime(int n)
-        {
-            if (n == 2) return true;
-            if (n &lt; 2 || n % 2 == 0) return false;
-            for (int k = 3; k &lt;= Math.Sqrt(n) + 1; k += 2)            
-                if (n % k == 0) return false;            
-            return true;
-        }</code></pre>
-<p>Passons à Java <a href="../../../assets/autres/primes.java">(fichier complet à télécharger pour tester)</a> :</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="dt">boolean</span> <span class="fu">is_prime</span><span class="op">(</span><span class="dt">long</span> n<span class="op">){</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span><span class="op">(</span>n <span class="op">==</span> <span class="dv">2</span><span class="op">){</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span><span class="op">(</span>n <span class="op">&lt;</span> <span class="dv">2</span> <span class="op">||</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span><span class="op">){</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span><span class="dt">long</span> k<span class="op">=</span> <span class="dv">3</span><span class="op">;</span> k <span class="op">&lt;=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span><span class="op">(</span>n<span class="op">)</span> <span class="op">+</span> <span class="dv">1</span><span class="op">;</span> k<span class="op">+=</span> <span class="dv">2</span><span class="op">){</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span><span class="op">(</span>n <span class="op">%</span> k <span class="op">==</span> <span class="dv">0</span><span class="op">){</span> <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span> <span class="op">}</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Voici maintenant un peu de Javascript <a href="../../../assets/autres/primes.js">(fichier complet à télécharger pour tester)</a> :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">is_prime</span>(n) {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="op">==</span> <span class="dv">2</span>) {</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> ((n <span class="op">&lt;</span> <span class="dv">2</span>) <span class="op">||</span> (n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>)) {</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">var</span> k <span class="op">=</span> <span class="dv">3</span><span class="op">;</span> k <span class="op">&lt;=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(n)<span class="op">;</span> k <span class="op">+=</span> <span class="dv">2</span>) {</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (n <span class="op">%</span> k <span class="op">==</span> <span class="dv">0</span>)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+</div>
+<p>Dans le script ci-dessous, écrit en C, on retrouve le même algorithme. Le code fonctionne en C ou en C++ (on peut considérer que C est un sous-ensemble de C++). <a href="primes.cpp" target="_blank">(Fichier complet à télécharger pour tester)</a> :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Langage C</strong></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode C code-with-copy"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;math.h&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> is_prime<span class="op">(</span><span class="dt">unsigned</span> <span class="dt">int</span> n<span class="op">)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">unsigned</span> <span class="dt">int</span> k<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>n <span class="op">==</span> <span class="dv">2</span><span class="op">)</span> <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>n <span class="op">&lt;</span> <span class="dv">2</span> <span class="op">||</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span>k <span class="op">=</span> <span class="dv">3</span><span class="op">;</span> k <span class="op">&lt;=</span> sqrt<span class="op">(</span>n<span class="op">)</span> <span class="op">+</span> <span class="dv">1</span><span class="op">;</span> k <span class="op">+=</span> <span class="dv">2</span><span class="op">)</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>n <span class="op">%</span> k <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>La même chose en C# <a href="primes.cs" target="_blank">(fichier complet à télécharger pour tester)</a> :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Langage C#</strong></pre>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cs code-with-copy"><code class="sourceCode cs"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">static</span> System<span class="op">.</span><span class="fu">Math</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">static</span> <span class="dt">bool</span> <span class="fu">is_Prime</span><span class="op">(</span><span class="dt">int</span> n<span class="op">)</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="kw">if</span> <span class="op">(</span>n <span class="op">==</span> <span class="dv">2</span><span class="op">)</span> <span class="kw">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="kw">if</span> <span class="op">(</span>n <span class="op">&lt;</span> <span class="dv">2</span> <span class="op">||</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="kw">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>            <span class="kw">for</span> <span class="op">(</span><span class="dt">int</span> k <span class="op">=</span> <span class="dv">3</span><span class="op">;</span> k <span class="op">&lt;=</span> Math<span class="op">.</span><span class="fu">Sqrt</span><span class="op">(</span>n<span class="op">)</span> <span class="op">+</span> <span class="dv">1</span><span class="op">;</span> k <span class="op">+=</span> <span class="dv">2</span><span class="op">)</span>            </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>                <span class="kw">if</span> <span class="op">(</span>n <span class="op">%</span> k <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="kw">return</span> <span class="kw">false</span><span class="op">;</span>            </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>            <span class="kw">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Passons à Java <a href="primes.java" target="_blank">(fichier complet à télécharger pour tester)</a> :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Langage Java</strong></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode Java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="dt">boolean</span> <span class="fu">is_prime</span><span class="op">(</span><span class="dt">long</span> n<span class="op">){</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span><span class="op">(</span>n <span class="op">==</span> <span class="dv">2</span><span class="op">){</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span><span class="op">(</span>n <span class="op">&lt;</span> <span class="dv">2</span> <span class="op">||</span> n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span><span class="op">){</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span><span class="dt">long</span> k<span class="op">=</span> <span class="dv">3</span><span class="op">;</span> k <span class="op">&lt;=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span><span class="op">(</span>n<span class="op">)</span> <span class="op">+</span> <span class="dv">1</span><span class="op">;</span> k<span class="op">+=</span> <span class="dv">2</span><span class="op">){</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span><span class="op">(</span>n <span class="op">%</span> k <span class="op">==</span> <span class="dv">0</span><span class="op">){</span> <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span> <span class="op">}</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>En Basic (version visual Basic) <a href="../../../assets/autres/primes.vb">(fichier complet à télécharger pour tester)</a> :</p>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Voici maintenant un peu de Javascript <a href="primes.js" target="_blank">(fichier complet à télécharger pour tester)</a> :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Langage Javascript</strong></pre>
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">is_prime</span>(n) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="op">==</span> <span class="dv">2</span>) {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> ((n <span class="op">&lt;</span> <span class="dv">2</span>) <span class="op">||</span> (n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>)) {</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">var</span> k <span class="op">=</span> <span class="dv">3</span><span class="op">;</span> k <span class="op">&lt;=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sqrt</span>(n)<span class="op">;</span> k <span class="op">+=</span> <span class="dv">2</span>) {</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (n <span class="op">%</span> k <span class="op">==</span> <span class="dv">0</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>En Basic (version visual Basic) <a href="primes.vb" target="_blank">(fichier complet à télécharger pour tester)</a> :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Langage Visual Basic</strong></pre>
+</div>
 <pre class="vbscript"><code>Function is_prime(n)
     If n = 2 Then
         is_prime = True
@@ -951,48 +1042,93 @@ static bool is_Prime(int n)
         Next
     End If
 End Function</code></pre>
-<p>En Fortran <a href="../../../assets/autres/primes.f90">(fichier complet à télécharger pour tester)</a> :</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode fortran code-with-copy"><code class="sourceCode fortranfixed"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FUNCTION</span> is_prime(n)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">LOGICAL</span> <span class="dt">::</span> is_prime</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">INTEGER</span>, <span class="dt">INTENT(IN)</span> <span class="dt">::</span> n</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">INTEGER</span> <span class="dt">::</span> k</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">IF</span>(n<span class="op">==</span><span class="dv">2</span>) <span class="kw">THEN</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    is_prime <span class="kw">=</span> <span class="cn">.TRUE.</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ELSE IF</span>(n <span class="op">&lt;</span> <span class="dv">2</span> <span class="op">.OR.</span> <span class="bu">MOD</span>(n,<span class="dv">2</span>) <span class="op">==</span> <span class="dv">0</span>) <span class="kw">THEN</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    is_prime <span class="kw">=</span> <span class="cn">.FALSE.</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ELSE</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    is_prime <span class="kw">=</span> <span class="cn">.TRUE.</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">DO</span> k <span class="kw">=</span> <span class="dv">3</span>, <span class="bu">INT</span>(<span class="bu">SQRT</span>(<span class="dt">REAL(n)</span>)) <span class="kw">+</span> <span class="dv">1</span>, <span class="dv">2</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">IF</span>(<span class="bu">MOD</span>(n,k) <span class="op">==</span> <span class="dv">0</span>) <span class="kw">THEN</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>            is_prime <span class="kw">=</span> <span class="cn">.FALSE.</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>            <span class="kw">EXIT</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="kw">END IF</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">END DO</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">END IF</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="kw">END FUNCTION</span> is_prime</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>En Pascal <a href="../../../assets/autres/primes.pas">(fichier complet à télécharger pour tester)</a> :</p>
-<p><code>pascal title="Pascal" function is_prime(n: integer): boolean; var   k: integer; begin   if n = 2 then     is_prime := true   else if (n &lt; 2) or (n mod 2 = 0) then     is_prime := false   else begin     is_prime := true; k := 3;     while k &lt;= sqrt(n) + 1 do begin       if n mod k = 0 then begin        is_prime := false; exit       end;       k := k + 2     end   end end;</code></p>
-<p>Pour finir, en OCaml <a href="../../../assets/autres/primes.ml">(fichier complet à télécharger pour tester)</a> :</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode ocaml code-with-copy"><code class="sourceCode ocaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> is_prime n =</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">if</span> n = <span class="dv">2</span> <span class="kw">then</span> <span class="kw">true</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">else</span> <span class="kw">if</span> n &lt; <span class="dv">2</span> || n <span class="kw">mod</span> <span class="dv">2</span> = <span class="dv">0</span> <span class="kw">then</span> <span class="kw">false</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">else</span> <span class="kw">begin</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> reponse = <span class="dt">ref</span> <span class="kw">true</span> <span class="kw">in</span> </span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> k = <span class="dv">3</span> <span class="kw">to</span> <span class="dv">1</span> + <span class="dt">int_of_float</span> (<span class="dt">sqrt</span> (<span class="dt">float_of_int</span> n)) <span class="kw">do</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> n <span class="kw">mod</span> k = <span class="dv">0</span> <span class="kw">then</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>            reponse := <span class="kw">false</span>;</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">done</span>;</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    !reponse;</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span>;</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>;;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>!!! question “Exercice” Notre langage d’étude est Python. Repérer, dans les dix programmes ci-dessous des points communs et des différences. Vous présenterez vos résultats dans un tableau et vous compléterez ce travail en présentant brièvement chacun des langages cités (date de création, domaine d’application, …).</p>
+</div>
+<p>En Fortran <a href="primes.f90" target="_blank">(fichier complet à télécharger pour tester)</a> :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Langage Fortran</strong></pre>
+</div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode fortran code-with-copy"><code class="sourceCode fortranfixed"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FUNCTION</span> is_prime(n)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">LOGICAL</span> <span class="dt">::</span> is_prime</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">INTEGER</span>, <span class="dt">INTENT(IN)</span> <span class="dt">::</span> n</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">INTEGER</span> <span class="dt">::</span> k</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">IF</span>(n<span class="op">==</span><span class="dv">2</span>) <span class="kw">THEN</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    is_prime <span class="kw">=</span> <span class="cn">.TRUE.</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ELSE IF</span>(n <span class="op">&lt;</span> <span class="dv">2</span> <span class="op">.OR.</span> <span class="bu">MOD</span>(n,<span class="dv">2</span>) <span class="op">==</span> <span class="dv">0</span>) <span class="kw">THEN</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    is_prime <span class="kw">=</span> <span class="cn">.FALSE.</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ELSE</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    is_prime <span class="kw">=</span> <span class="cn">.TRUE.</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">DO</span> k <span class="kw">=</span> <span class="dv">3</span>, <span class="bu">INT</span>(<span class="bu">SQRT</span>(<span class="dt">REAL(n)</span>)) <span class="kw">+</span> <span class="dv">1</span>, <span class="dv">2</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">IF</span>(<span class="bu">MOD</span>(n,k) <span class="op">==</span> <span class="dv">0</span>) <span class="kw">THEN</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>            is_prime <span class="kw">=</span> <span class="cn">.FALSE.</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>            <span class="kw">EXIT</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>        <span class="kw">END IF</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">END DO</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">END IF</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="kw">END FUNCTION</span> is_prime</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>En Pascal <a href="primes.pas" target="_blank">(fichier complet à télécharger pour tester)</a> :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Langage Pascal</strong></pre>
+</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode pascal code-with-copy"><code class="sourceCode pascal"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> is_prime(n: <span class="dt">integer</span>): <span class="dt">boolean</span>;</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  k: <span class="dt">integer</span>;</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">begin</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">if</span> n = <span class="dv">2</span> <span class="kw">then</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    is_prime := <span class="kw">true</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">else</span> <span class="kw">if</span> (n &lt; <span class="dv">2</span>) <span class="kw">or</span> (n <span class="kw">mod</span> <span class="dv">2</span> = <span class="dv">0</span>) <span class="kw">then</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    is_prime := <span class="kw">false</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">else</span> <span class="kw">begin</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    is_prime := <span class="kw">true</span>; k := <span class="dv">3</span>;</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">while</span> k &lt;= sqrt(n) + <span class="dv">1</span> <span class="kw">do</span> <span class="kw">begin</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>      <span class="kw">if</span> n <span class="kw">mod</span> k = <span class="dv">0</span> <span class="kw">then</span> <span class="kw">begin</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>       is_prime := <span class="kw">false</span>; <span class="kw">exit</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>      <span class="kw">end</span>;</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>      k := k + <span class="dv">2</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">end</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Pour finir, en OCaml <a href="primes.ml" target="_blank">(fichier complet à télécharger pour tester)</a> :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Langage OCaml</strong></pre>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode ocaml code-with-copy"><code class="sourceCode ocaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> is_prime n =</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">if</span> n = <span class="dv">2</span> <span class="kw">then</span> <span class="kw">true</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">else</span> <span class="kw">if</span> n &lt; <span class="dv">2</span> || n <span class="kw">mod</span> <span class="dv">2</span> = <span class="dv">0</span> <span class="kw">then</span> <span class="kw">false</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">else</span> <span class="kw">begin</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> reponse = <span class="dt">ref</span> <span class="kw">true</span> <span class="kw">in</span> </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">for</span> k = <span class="dv">3</span> <span class="kw">to</span> <span class="dv">1</span> + <span class="dt">int_of_float</span> (<span class="dt">sqrt</span> (<span class="dt">float_of_int</span> n)) <span class="kw">do</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> n <span class="kw">mod</span> k = <span class="dv">0</span> <span class="kw">then</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>            reponse := <span class="kw">false</span>;</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">done</span>;</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    !reponse;</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span>;</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>;;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notre langage d’étude est Python. Repérer, dans les dix programmes ci-dessous des points communs et des différences. Vous présenterez vos résultats dans un tableau et vous effectuerez ce travail en présentant brièvement chacun des langages cités (date de création, domaine d’application, …).</p>
+</div>
+</div>
 </section>
 <section id="compléments" class="level2">
 <h2 class="anchored" data-anchor-id="compléments">Compléments</h2>
 <ul>
-<li>Le site <a href="http://rosettacode.org/wiki/Rosetta_Code">RosettaCode.org</a> propose un très grand nombre d’algorithmes traduits dans un très grand nombre de langages. Les programmes présentés ici en sont inspirés, avec quelques modifications.</li>
-<li>La page Wikipedia <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">“Hello, World!” program</a> présente le fameux programme affichant la phrase “Hello, World!” à l’écran dans de très nombreux langages de programmation.</li>
+<li>Le site <a href="http://rosettacode.org/wiki/Rosetta_Code" target="_blank">RosettaCode.org</a> propose un très grand nombre d’algorithmes traduits dans un très grand nombre de langages. Les programmes présentés ici en sont inspirés, avec quelques modifications.</li>
+<li>La page Wikipedia <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program" target="_blank">“Hello, World!” program</a> présente le fameux programme affichant la phrase “Hello, World!” à l’écran dans de très nombreux langages de programmation.</li>
 </ul>
 
 
@@ -1474,6 +1610,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../04_langages/index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../14_algo/index.html" class="pagination-link">
+        <span class="nav-page-text">Programme</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1506,7 +1654,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":true,"closeEffect":"zoom"});</script>
 
 
 

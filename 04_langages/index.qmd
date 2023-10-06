@@ -1,0 +1,9 @@
+---
+title: Programme
+---
+
+## Programme
+
+| Contenus | Capacités attendues | Commentaires |
+|------- |--------- |------ |
+| Diversité et unité des langages de programmation | Repérer, dans un nouveau langage de programmation, les traits communs et les traits particuliers à ce langage. | Les manières dont un même programme simple s’écrit dans différents langages sont comparées. |

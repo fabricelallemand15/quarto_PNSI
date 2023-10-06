@@ -177,7 +177,7 @@ C’est enfin fini !
 
 ### {{< fa desktop >}}  Exercice 10
 
-_Dans cet exercice, répondre à chaque question en écrivant une programme utilisant une boucle `for`, puis un programme utilisant une boucle `while`._
+_Dans cet exercice, répondre à chaque question en écrivant un programme utilisant une boucle `for`, puis un programme utilisant une boucle `while`._
 
 1. Écrire un programme qui affiche les 20 premiers termes de la table de multiplication par 6.
 2. Écrire un programme qui affiche une suite de 12 nombres dont chacun est égal au triple du

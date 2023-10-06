@@ -50,8 +50,7 @@ website:
       - section: "Ch. 4 - Diversité et unité des langages de programmation"
         contents: 
           - 04_langages/index.qmd
-          - 04_langages/langages_cours.qmd
-          - 04_langages/langages_exos.qmd
+          - 04_langages/langages.qmd
       - section: "Ch. 5 - Écriture d'un entier positif dans une base $b$" 
         contents: 
           - 05_base/index.qmd

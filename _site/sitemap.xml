@@ -166,7 +166,7 @@
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/04_langages/index.html</loc>
-    <lastmod>2023-01-19T18:47:33.000Z</lastmod>
+    <lastmod>2023-10-06T10:07:08.599Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/03_spec/spec_quiz.html</loc>
@@ -186,7 +186,7 @@
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/02_python/python_bases_exos_3.html</loc>
-    <lastmod>2023-08-03T20:45:11.881Z</lastmod>
+    <lastmod>2023-09-20T06:26:23.307Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/02_python/python_bases_exos_1.html</loc>
@@ -195,6 +195,10 @@
   <url>
     <loc>https://flallemand.fr/PNSI/02_python/index.html</loc>
     <lastmod>2023-08-02T21:01:28.709Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/01_os/OS_exos.html</loc>
+    <lastmod>2023-09-08T20:10:54.527Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/01_os/index.html</loc>
@@ -218,7 +222,7 @@
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/02_python/python_bases_exos_4.html</loc>
-    <lastmod>2023-08-03T20:49:24.795Z</lastmod>
+    <lastmod>2023-09-25T08:46:42.597Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/02_python/python_cours.html</loc>
@@ -238,7 +242,7 @@
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/04_langages/langages.html</loc>
-    <lastmod>2023-01-19T18:47:33.000Z</lastmod>
+    <lastmod>2023-10-06T10:02:48.602Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/05_base/naturels_cours.html</loc>
@@ -399,9 +403,5 @@
   <url>
     <loc>https://flallemand.fr/PNSI/index.html</loc>
     <lastmod>2023-08-01T19:51:49.822Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/01_os/OS_exos.html</loc>
-    <lastmod>2023-09-08T20:10:54.527Z</lastmod>
   </url>
 </urlset>
