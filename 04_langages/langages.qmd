@@ -20,7 +20,7 @@ L’indice TIOBE Programming Community est un indicateur de la popularité des l
 L’indice peut être utilisé pour vérifier si vos compétences en programmation sont toujours à jour ou pour prendre une décision stratégique sur le langage de programmation à adopter lorsque vous commencez à construire un nouveau système logiciel. La définition de l’indice TIOBE peut être trouvée [ici](https://www.tiobe.com/tiobe-index/programminglanguages_definition/){target="_blank"}.
 :::
 
-Voici le classement des dix premiers langages selon l'indice TIOBE en mai 2022 et le graphique de son évolution :
+Voici le classement des dix premiers langages selon l'indice TIOBE en septembre 2023 et le graphique de son évolution :
 
 ![](tiobe_1.png)
 
@@ -54,7 +54,9 @@ Fonction is_prime(n)
 ````
 :::
 
-Voici maintenant sa traduction dans quelques langages de programmation. À chaque fois, nous avons essayé de suivre au plus près la structure de programmation de l'algorithme en pseudo-code.
+Voici maintenant sa traduction dans quelques langages de programmation. À chaque fois, nous avons essayé de suivre au plus près la structure de programmation de l'algorithme en pseudo-code. Dans chaque exemple, une fonction est définie, puis elle est exécutée pour vérifier que le nombre 37 est premier. Le résultat est affiché à l'écran.
+
+### Python
 
 ````{.python filename="Langage Python"}
 from math import sqrt
@@ -68,11 +70,16 @@ def is_prime(n):
         if n % k == 0:
             return False
     return True
-````
 
-Dans le script ci-dessous, écrit en C, on retrouve le même algorithme. Le code fonctionne en C ou en C++ (on peut considérer que C est un sous-ensemble de C++). [(Fichier complet à télécharger pour tester)](primes.cpp){target="_blank"} :
+print(is_prime(37)
+````
+### C, C++
+
+Dans le script ci-dessous, écrit en C, on retrouve le même algorithme. Le code fonctionne en C ou en C++ (on peut considérer que C est un sous-ensemble de C++). [Cliquer ici pour tester ce code en ligne](https://tio.run/##hZDNTsMwEITvfopRUYSjQlXKgUMSngQJ5WdDrcSb4p8T5dmDnaC0kYrwyfp2dnZ260dX1@N4p7jufUPIrWvUsDu@ihWqhqFfQ126YyQilqDs@8koTdKzVR9MDRQ7cCq@BMJb0S6bmGohGUWBQwpDzhuGM56uizkOOJ/BSMInKPeLsi17@yttBwPZocBzhg55AftpnOQUWzxFso0TJuXFOAn8L79Vlm8hYmRdKpY3l2GvKzJx@svcPp3DkPW9C3S5y6xLM7GsN2suyYKOXSs3iQdZF6aAB10ZCgXSiszujTcPWHxiC4XQt/r5PjqcSvuvy/XG@7DuOP4A){target="_blank"} :
 
 ````{.C filename="Langage C"}
+#include <stdio.h>
+#include <stdbool.h>
 #include <math.h>
 
 bool is_prime(unsigned int n)
@@ -84,41 +91,91 @@ bool is_prime(unsigned int n)
         if (n % k == 0) return false;
     return true;
 }
-````
 
-La même chose en C# [(fichier complet à télécharger pour tester)](primes.cs){target="_blank"} :
+int main()
+{
+    unsigned int number = 91;
+    bool result = is_prime(number);
 
-````{.cs filename="Langage C#"}
-using static System.Math;
+    if (result)
+        printf("%u est un nombre premier.\n", number);
+    else
+        printf("%u n'est pas un nombre premier.\n", number);
 
-static bool is_Prime(int n)
-        {
-            if (n == 2) return true;
-            if (n < 2 || n % 2 == 0) return false;
-            for (int k = 3; k <= Math.Sqrt(n) + 1; k += 2)            
-                if (n % k == 0) return false;            
-            return true;
-        }
-````
-
-Passons à Java [(fichier complet à télécharger pour tester)](primes.java){target="_blank"} :
-
-````{.Java filename="Langage Java"}
-public static boolean is_prime(long n){
-    if(n == 2){
-        return true;
-    }
-    else if(n < 2 || n % 2 == 0){
-        return false;
-    }
-    for(long k= 3; k <= Math.sqrt(n) + 1; k+= 2){
-        if(n % k == 0){ return false; }
-    }
-    return true;
+    return 0;
 }
 ````
 
-Voici maintenant un peu de Javascript [(fichier complet à télécharger pour tester)](primes.js){target="_blank"} :
+<iframe src="https://tio.run/##hZDNTsMwEITvfopRUYSjQlXKgUMSngQJ5WdDrcSb4p8T5dmDnaC0kYrwyfp2dnZ260dX1@N4p7jufUPIrWvUsDu@ihWqhqFfQ126YyQilqDs@8koTdKzVR9MDRQ7cCq@BMJb0S6bmGohGUWBQwpDzhuGM56uizkOOJ/BSMInKPeLsi17@yttBwPZocBzhg55AftpnOQUWzxFso0TJuXFOAn8L79Vlm8hYmRdKpY3l2GvKzJx@svcPp3DkPW9C3S5y6xLM7GsN2suyYKOXSs3iQdZF6aAB10ZCgXSiszujTcPWHxiC4XQt/r5PjqcSvuvy/XG@7DuOP4A" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+### C\#
+
+La même chose en C# [Cliquer ici pour tester ce code en ligne](https://tio.run/##jZJNTsMwEIX3OcVTRUWiipafBYs0C8QWpIouWCI3mRaL2G7HNhJqeyDOwcGCk4j0TyC8SeT55r03k@T2IjdMVeWt1AtMP6wjlUZRXgprMWGzYKGidYRwrBNO5pgZU0LalwlLRbHUDjpp6i1VHzlHrJFluE7A5DxrOPaUHgFjXGOzgUY/vAT6sqPnorR7@NwwGqc3ZLhJw2Oc4VG41@F0xS7WCQa4qq8HtWXXtnPq151/GJyE3Eb7I78bWQQ/qeOTSevxvZoR18lud4rNlpisL12odOtq2SSNDlbRcofB7422pqThM0tHD1JTfNZbt@1bkHXwGtqoGROWTEoSD3vJzp/CfP/X0@e14lLYX1Q7pdEId86RLgLgNcEKaWVgjWesPKEUyFsj1FXCnFhRoyyV@vospAg/GGkXHed6IlE0sZKfL7Ctqm8){target="_blank"} :
+
+````{.cs filename="Langage C#"}
+using System;
+
+class Program
+{
+    static bool is_Prime(int n)
+    {
+        if (n == 2) return true;
+        if (n < 2 || n % 2 == 0) return false;
+        for (int k = 3; k <= Math.Sqrt(n) + 1; k += 2)
+            if (n % k == 0) return false;
+        return true;
+    }
+
+    static void Main()
+    {
+        int number = 91;
+        bool result = is_Prime(number);
+
+        if (result)
+            Console.WriteLine($"{number} est un nombre premier.");
+        else
+            Console.WriteLine($"{number} n'est pas un nombre premier.");
+
+        // Attendre une saisie pour que la console ne se ferme pas immédiatement
+        Console.ReadLine();
+    }
+}
+````
+
+<iframe src="https://tio.run/##jZJNTsMwEIX3OcVTRUWiipafBYs0C8QWpIouWCI3mRaL2G7HNhJqeyDOwcGCk4j0TyC8SeT55r03k@T2IjdMVeWt1AtMP6wjlUZRXgprMWGzYKGidYRwrBNO5pgZU0LalwlLRbHUDjpp6i1VHzlHrJFluE7A5DxrOPaUHgFjXGOzgUY/vAT6sqPnorR7@NwwGqc3ZLhJw2Oc4VG41@F0xS7WCQa4qq8HtWXXtnPq151/GJyE3Eb7I78bWQQ/qeOTSevxvZoR18lud4rNlpisL12odOtq2SSNDlbRcofB7422pqThM0tHD1JTfNZbt@1bkHXwGtqoGROWTEoSD3vJzp/CfP/X0@e14lLYX1Q7pdEId86RLgLgNcEKaWVgjWesPKEUyFsj1FXCnFhRoyyV@vospAg/GGkXHed6IlE0sZKfL7Ctqm8" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+### Java
+
+Passons à Java [Cliquer ici pour tester ce code en ligne](https://tio.run/##lZFRS8MwFIXf@ysOg2HLsOh88KHrTxCE@SY@pFs6szVpvbkZiOtvr8narU5hYF4Sku/ec8/JVuzF7Xa967pVJazFMyktX6RlfEUR/LIsWK1Q1HUlhYGyRyJWhmESD2FYqkRskOeYJyDJjgyYnMx@AQvMcTjAYOoPnr4706Wo7A@8rAlHlR1yPGR@W@R4Evye2g/i2GvPcB@uZ0HyXDYqTUPlFYE/Q7a94cYVlTc8@N7Xag0tlImXTMpsXt8gaGMvnIconC4khUkfR4VTZiStq9g/nsLr6SSLLsLpsUsry0/LUqe147Tx8lyZodi7nyB8kzMwtS5IoiGplaR0kowjSG/5Hw3NTWjZCHulbRu1Udd9Aw){target="_blank"} :
+
+````{.Java filename="Langage Java"}
+class PrimeTest {
+
+    static boolean isPrime(int n) {
+        if (n == 2) return true;
+        if (n < 2 || n % 2 == 0) return false;
+        for (int k = 3; k <= Math.sqrt(n) + 1; k += 2)
+            if (n % k == 0) return false;
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int number = 37;
+        boolean result = isPrime(number);
+
+        if (result)
+            System.out.println(number + " est un nombre premier.");
+        else
+            System.out.println(number + " n'est pas un nombre premier.");
+    }
+}
+````
+
+<iframe src="https://tio.run/##lZFRS8MwFIXf@ysOg2HLsOh88KHrTxCE@SY@pFs6szVpvbkZiOtvr8narU5hYF4Sku/ec8/JVuzF7Xa967pVJazFMyktX6RlfEUR/LIsWK1Q1HUlhYGyRyJWhmESD2FYqkRskOeYJyDJjgyYnMx@AQvMcTjAYOoPnr4706Wo7A@8rAlHlR1yPGR@W@R4Evye2g/i2GvPcB@uZ0HyXDYqTUPlFYE/Q7a94cYVlTc8@N7Xag0tlImXTMpsXt8gaGMvnIconC4khUkfR4VTZiStq9g/nsLr6SSLLsLpsUsry0/LUqe147Tx8lyZodi7nyB8kzMwtS5IoiGplaR0kowjSG/5Hw3NTWjZCHulbRu1Udd9Aw" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+### Javascript
+
+Voici maintenant un peu de Javascript [Cliquer ici pour tester ce code en ligne](https://tio.run/##bY/BDoIwEETvfMVcSEqMxMBBE@gn@A2mIUWr2OK2cBG@HVtRQ9TTZmfnZWbPohe2ItW6db@bprrTlVNGQ9lDS@oqmU5wjwBVg2lwjmzeAZKuIw1HnSy8MEI2Vj593lgG3zAEJkYWuE3yBdbC@xfkfKwNgfWCcAFHXvhRcuyFO6X2Rs63CdJqUeNdLQ5EiHmpvzk@6W/xaIyiymhrGpk25sg@r@fbJJmmBw){target="_blank"} :
 
 ````{.javascript filename="Langage Javascript"}
 function is_prime(n) {
@@ -134,55 +191,109 @@ function is_prime(n) {
     return true;
   }
 }
+
+console.log(is_prime(37))
 ````
 
-En Basic (version visual Basic) [(fichier complet à télécharger pour tester)](primes.vb){target="_blank"} :
+<iframe src="https://tio.run/##bY/BDoIwEETvfMVcSEqMxMBBE@gn@A2mIUWr2OK2cBG@HVtRQ9TTZmfnZWbPohe2ItW6db@bprrTlVNGQ9lDS@oqmU5wjwBVg2lwjmzeAZKuIw1HnSy8MEI2Vj593lgG3zAEJkYWuE3yBdbC@xfkfKwNgfWCcAFHXvhRcuyFO6X2Rs63CdJqUeNdLQ5EiHmpvzk@6W/xaIyiymhrGpk25sg@r@fbJJmmBw" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-````{.vbscript filename="Langage Visual Basic"}
-Function is_prime(n)
-    If n = 2 Then
-        is_prime = True
-    ElseIf n < 2 Or n Mod 2 = 0 Then
-        is_prime = False
-    Else
-        is_prime = True
-        For k = 3 To Int(Math.Sqrt(n)) + 1 Step 2
-            If n Mod k = 0 Then
-                is_prime = False
-                Exit For
-            End If
-        Next
-    End If
-End Function
+### Basic
+
+En Basic (version visual Basic) [Cliquer ici pour tester ce code en ligne](https://tio.run/##jVNNT8JAEL33V0w4SBsjUTx4kQMiJCSiiZB4NFs6yIbubNkPw1/yd/jD6m5LSxtQnNN0Z96bN/PSz/hqKRXm@UwmNkWYMU5lGgTgYmJpabgk4Po9U1xgSDDUMCWDH6ginz9ImSKjot3HdAUEA@jDYo2HVx8Vh6sulMW6Nk41Fqh7h3pRLnESXDqA6z9JJswBWyz/GlfsJRVsXOEWFhJGbp1wxsy6N98qE1IUwSXcwNxgBv0WrN7PC9ycFnhWaDPGO268mKPimBI3qfX8jDsTnKj7tPKpdG1u48LJMKr7H7kAsiJG1fDPH@Cu1aJQ29Q0bHUtB@sLfBQ0rd4Djq4wkqQdQe9NcYNPnCo0XEAHUBuwBCRFrBAyhYKj6nWi3738k466njBj@gxpebL6uwtDY5AS120JQTOuuQNKq2BrEVIGy3Iq@CrCCpVz04/hQnx/JZwZFEgHTyqRr8iSQmNU@@McCQKf7H@uPP8B){target="_blank"} :
+
+````{.vb filename="Langage Visual Basic"}
+Module MainModule
+
+    Function is_prime(n As Integer) As Boolean
+        If n = 2 Then
+            is_prime = True
+        ElseIf n < 2 Or n Mod 2 = 0 Then
+            is_prime = False
+        Else
+            is_prime = True
+            For k = 3 To CInt(Math.Sqrt(n)) + 1 Step 2
+                If n Mod k = 0 Then
+                    is_prime = False
+                    Exit For
+                End If
+            Next
+        End If
+    End Function
+
+    Sub Main()
+        Dim number As Integer = 37
+        Dim result As Boolean = is_prime(number)
+
+        If result Then
+            Console.WriteLine(number & " est un nombre premier.")
+        Else
+            Console.WriteLine(number & " n'est pas un nombre premier.")
+        End If
+
+        ' Attendre une saisie pour que la console ne se ferme pas immédiatement
+        Console.ReadLine()
+    End Sub
+
+End Module
 ````
 
-En Fortran [(fichier complet à télécharger pour tester)](primes.f90){target="_blank"} :
+<iframe src="https://tio.run/##jVNNT8JAEL33V0w4SBsjUTx4kQMiJCSiiZB4NFs6yIbubNkPw1/yd/jD6m5LSxtQnNN0Z96bN/PSz/hqKRXm@UwmNkWYMU5lGgTgYmJpabgk4Po9U1xgSDDUMCWDH6ginz9ImSKjot3HdAUEA@jDYo2HVx8Vh6sulMW6Nk41Fqh7h3pRLnESXDqA6z9JJswBWyz/GlfsJRVsXOEWFhJGbp1wxsy6N98qE1IUwSXcwNxgBv0WrN7PC9ycFnhWaDPGO268mKPimBI3qfX8jDsTnKj7tPKpdG1u48LJMKr7H7kAsiJG1fDPH@Cu1aJQ29Q0bHUtB@sLfBQ0rd4Djq4wkqQdQe9NcYNPnCo0XEAHUBuwBCRFrBAyhYKj6nWi3738k466njBj@gxpebL6uwtDY5AS120JQTOuuQNKq2BrEVIGy3Iq@CrCCpVz04/hQnx/JZwZFEgHTyqRr8iSQmNU@@McCQKf7H@uPP8B" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+### Fortran
+
+En Fortran [Cliquer ici pour tester ce code en ligne](https://tio.run/##fVLBbsIwDL3nKywuS1hXbewwCY1D1QYWqU1YCNpuE0hhqlgDSuH7u6TpoNMGPcXP79nPdjc7e7Arc/e5CY@mmUsxk0kBxao0CIAV85ylTAEXnCIH5GLG0iSH8Risro9fB0/iis6o9Jg5VmttPTG8YAKPTy4KXBeV9cfelpXGIU88lU0BBwIB9UK5gwDeJFMUDyMYkq5WBAPQ9QGOBsyuWlsNe6urUtt44BQ0X9ArQnPjpftVfUnOM@cDoVRwlTC@8L6mS54qJnjPNGlb9Jbwk2rxbhFR@@AKM07apfSTHtiigLi5DUwmMOrNDaeSbluxkksat7ifr1M8wwhiIWMoRIZN5OWuyP3FItPEac9VrrYByARs/dnaKfDiVSosaZK72QmBW3hw/TpmmKAzsf3HxBUj4aPvTJ3C7gTnIBOoh3dH@nMUhDz8679tmm8){target="_blank"} :
 
 ````{.fortran filename="Langage Fortran"}
-FUNCTION is_prime(n)
+PROGRAM Main
+  IMPLICIT NONE
+
+  LOGICAL :: result
+  INTEGER :: number
+
+  number = 91
+  result = is_prime(number)
+
+  IF (result) THEN
+    WRITE(*, *) number, " est un nombre premier."
+  ELSE
+    WRITE(*, *) number, " n'est pas un nombre premier."
+  END IF
+
+CONTAINS
+
+  FUNCTION is_prime(n)
     LOGICAL :: is_prime
     INTEGER, INTENT(IN) :: n
     INTEGER :: k
 
-    IF(n==2) THEN
-    is_prime = .TRUE.
-    ELSE IF(n < 2 .OR. MOD(n,2) == 0) THEN
-    is_prime = .FALSE.
+    IF (n == 2) THEN
+      is_prime = .TRUE.
+    ELSE IF (n < 2 .OR. MOD(n, 2) == 0) THEN
+      is_prime = .FALSE.
     ELSE
-    is_prime = .TRUE.
-    DO k = 3, INT(SQRT(REAL(n))) + 1, 2
-        IF(MOD(n,k) == 0) THEN
-            is_prime = .FALSE.
-            EXIT
+      is_prime = .TRUE.
+      DO k = 3, INT(SQRT(REAL(n))) + 1, 2
+        IF (MOD(n, k) == 0) THEN
+          is_prime = .FALSE.
+          EXIT
         END IF
-    END DO
+      END DO
     END IF
-END FUNCTION is_prime
+
+  END FUNCTION is_prime
+
+END PROGRAM Main
 ````
 
-En Pascal [(fichier complet à télécharger pour tester)](primes.pas){target="_blank"} :
+<iframe src="https://tio.run/##fVLBbsIwDL3nKywuS1hXbewwCY1D1QYWqU1YCNpuE0hhqlgDSuH7u6TpoNMGPcXP79nPdjc7e7Arc/e5CY@mmUsxk0kBxao0CIAV85ylTAEXnCIH5GLG0iSH8Risro9fB0/iis6o9Jg5VmttPTG8YAKPTy4KXBeV9cfelpXGIU88lU0BBwIB9UK5gwDeJFMUDyMYkq5WBAPQ9QGOBsyuWlsNe6urUtt44BQ0X9ArQnPjpftVfUnOM@cDoVRwlTC@8L6mS54qJnjPNGlb9Jbwk2rxbhFR@@AKM07apfSTHtiigLi5DUwmMOrNDaeSbluxkksat7ifr1M8wwhiIWMoRIZN5OWuyP3FItPEac9VrrYByARs/dnaKfDiVSosaZK72QmBW3hw/TpmmKAzsf3HxBUj4aPvTJ3C7gTnIBOoh3dH@nMUhDz8679tmm8" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+### Pascal
+
+En Pascal [Cliquer ici pour tester ce code en ligne](https://tio.run/##dVLBUoNADL3zFe8GjNrRenCmtP/gwbuzQKg7LFkMi/XvcXcLtI71AsnLe8lLoFdDpcxD01fT1Is9iurwKrqjNxpckSTNyJXTlqGH9z7gGe@g2dGRJN@htNaQ4iL5UpIA7VorkpKOmj2mGzAO2MJ9UMixtsLuACcjeZDMQIGZMfbY5rASws7WXnfAY35b3CgvW9TLvL/9i4i2IX0@x6cPbcgj@0jgKhs@xWWc57jDE2p71WxeIFhpg5Xo5Ff9hqdiLdG3dktGXC9hNNP6adszMpfiKz7mg/LYlSRXVwWEhtG4q9MvXs7cuOXLhRjyy7eLlNy3j2vNjPW2J9GODM@0e6TwPwFGBtuuFEIv1GmSTZrPR/9HxWkahL0aborjeCFVG47bbpJp@gE){target="_blank"} :
 
 ````{.pascal filename="Langage Pascal"}
+program PrimeTest;
+
 function is_prime(n: integer): boolean;
 var
   k: integer;
@@ -192,33 +303,65 @@ begin
   else if (n < 2) or (n mod 2 = 0) then
     is_prime := false
   else begin
-    is_prime := true; k := 3;
-    while k <= sqrt(n) + 1 do begin
+    is_prime := true;
+    k := 3;
+    while k <= trunc(sqrt(n)) + 1 do begin
       if n mod k = 0 then begin
-       is_prime := false; exit
+        is_prime := false;
+        exit;
       end;
-      k := k + 2
-    end
-  end
+      k := k + 2;
+    end;
+  end;
 end;
+
+var
+  number: integer;
+  result: boolean;
+begin
+  number := 91;
+  result := is_prime(number);
+
+  if result then
+    writeln(number, ' est un nombre premier.')
+  else
+    writeln(number, ' n''est pas un nombre premier.');
+
+  readln;
+end.
 ````
 
-Pour finir, en OCaml [(fichier complet à télécharger pour tester)](primes.ml){target="_blank"} :
+<iframe src="https://tio.run/##dVLBUoNADL3zFe8GjNrRenCmtP/gwbuzQKg7LFkMi/XvcXcLtI71AsnLe8lLoFdDpcxD01fT1Is9iurwKrqjNxpckSTNyJXTlqGH9z7gGe@g2dGRJN@htNaQ4iL5UpIA7VorkpKOmj2mGzAO2MJ9UMixtsLuACcjeZDMQIGZMfbY5rASws7WXnfAY35b3CgvW9TLvL/9i4i2IX0@x6cPbcgj@0jgKhs@xWWc57jDE2p71WxeIFhpg5Xo5Ff9hqdiLdG3dktGXC9hNNP6adszMpfiKz7mg/LYlSRXVwWEhtG4q9MvXs7cuOXLhRjyy7eLlNy3j2vNjPW2J9GODM@0e6TwPwFGBtuuFEIv1GmSTZrPR/9HxWkahL0aborjeCFVG47bbpJp@gE" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+### OCaml
+
+Pour finir, en OCaml [Cliquer ici pour tester ce code en ligne](https://tio.run/##fZBNTsQwDIX3PcVjJMRUSCN@FkiE3oEDIFUtdSCaxClJupu7FycNZQWb5uU92/lq/z44u66WEkzs52AcgdE1gNFZ4AHpkxgpLCQm2Uhb8iLJ5SLC@Ulkh7utUA9S8lM50odhuQD5gUCzZ3E7UbpMRE21DziL/4jkcY9b8VPvda@tHxKO8SvIt1yyKyG4bTH50lxRM8d556gJ9kefux0N0smkirqqeSbmqVGqaTLqsS07yJIXN1LIcE8b7vYrcbFJzN@lbWWlQnhqwY7yGoRan@Zy4HA9gWLCwmDvxkCYAzlD4fTGhzqq7vCPbr7J/fMQ/5@h1Lp@Aw){target="_blank"} :
 
 ````{.ocaml filename="Langage OCaml"}
 let is_prime n =
   if n = 2 then true
   else if n < 2 || n mod 2 = 0 then false
   else begin
-    let reponse = ref true in 
+    let reponse = ref true in
     for k = 3 to 1 + int_of_float (sqrt (float_of_int n)) do
-        if n mod k = 0 then
-            reponse := false;
+      if n mod k = 0 then
+        reponse := false
     done;
-    !reponse;
-    end;
+    !reponse
+  end
+;;
+
+let () =
+  let number = 91 in
+  let result = is_prime number in
+  if result then
+    Printf.printf "%d est un nombre premier.\n" number
+  else
+    Printf.printf "%d n'est pas un nombre premier.\n" number
 ;;
 ````
+
+<iframe src="https://tio.run/##fZBNTsQwDIX3PcVjJMRUSCN@FkiE3oEDIFUtdSCaxClJupu7FycNZQWb5uU92/lq/z44u66WEkzs52AcgdE1gNFZ4AHpkxgpLCQm2Uhb8iLJ5SLC@Ulkh7utUA9S8lM50odhuQD5gUCzZ3E7UbpMRE21DziL/4jkcY9b8VPvda@tHxKO8SvIt1yyKyG4bTH50lxRM8d556gJ9kefux0N0smkirqqeSbmqVGqaTLqsS07yJIXN1LIcE8b7vYrcbFJzN@lbWWlQnhqwY7yGoRan@Zy4HA9gWLCwmDvxkCYAzlD4fTGhzqq7vCPbr7J/fMQ/5@h1Lp@Aw" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 :::{.callout-caution}
 ## Exercice
