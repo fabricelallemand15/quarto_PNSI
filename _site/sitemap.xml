@@ -157,100 +157,96 @@
     <lastmod>2023-01-19T18:47:33.000Z</lastmod>
   </url>
   <url>
-    <loc>https://flallemand.fr/PNSI/05_base/naturels_essentiel.html</loc>
-    <lastmod>2023-01-19T18:47:33.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/05_base/index.html</loc>
-    <lastmod>2023-10-12T21:19:18.190Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/04_langages/index.html</loc>
-    <lastmod>2023-10-06T10:07:08.599Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/03_spec/spec_quiz.html</loc>
-    <lastmod>2023-08-04T20:47:06.658Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/03_spec/spec_cours.html</loc>
-    <lastmod>2023-08-04T20:41:16.893Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/02_python/supplements.html</loc>
-    <lastmod>2023-08-03T20:59:04.730Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/02_python/python_bases_quiz.html</loc>
-    <lastmod>2023-08-03T20:51:05.904Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/02_python/python_bases_exos_3.html</loc>
-    <lastmod>2023-09-20T06:26:23.307Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/02_python/python_bases_exos_1.html</loc>
-    <lastmod>2023-09-08T20:08:22.785Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/02_python/index.html</loc>
-    <lastmod>2023-08-02T21:01:28.709Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/01_os/OS_exos.html</loc>
-    <lastmod>2023-09-08T20:10:54.527Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/01_os/index.html</loc>
-    <lastmod>2023-08-01T20:41:28.241Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/01_os/OS_cours.html</loc>
-    <lastmod>2023-09-04T08:00:32.246Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/01_os/quiz.html</loc>
-    <lastmod>2023-09-04T08:48:57.039Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/02_python/python_bases.html</loc>
-    <lastmod>2023-01-19T18:47:33.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/02_python/python_bases_exos_2.html</loc>
-    <lastmod>2023-09-15T11:34:31.732Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/02_python/python_bases_exos_4.html</loc>
-    <lastmod>2023-09-25T08:46:42.597Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/02_python/python_cours.html</loc>
-    <lastmod>2023-09-15T20:10:14.199Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/03_spec/index.html</loc>
-    <lastmod>2023-08-04T19:56:28.666Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/03_spec/spec_exos.html</loc>
-    <lastmod>2023-08-04T20:45:27.293Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/03_spec/TP_dessine_ta_rue.html</loc>
-    <lastmod>2023-08-04T20:57:33.565Z</lastmod>
+    <loc>https://flallemand.fr/PNSI/05_base/base_exos.html</loc>
+    <lastmod>2023-10-12T21:18:52.380Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/04_langages/langages.html</loc>
     <lastmod>2023-10-09T05:19:23.685Z</lastmod>
   </url>
   <url>
-    <loc>https://flallemand.fr/PNSI/05_base/naturels_cours.html</loc>
+    <loc>https://flallemand.fr/PNSI/03_spec/TP_dessine_ta_rue.html</loc>
+    <lastmod>2023-08-04T20:57:33.565Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/03_spec/spec_exos.html</loc>
+    <lastmod>2023-08-04T20:45:27.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/03_spec/index.html</loc>
+    <lastmod>2023-08-04T19:56:28.666Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/02_python/python_cours.html</loc>
+    <lastmod>2023-09-15T20:10:14.199Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/02_python/python_bases_exos_4.html</loc>
+    <lastmod>2023-09-25T08:46:42.597Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/02_python/python_bases_exos_2.html</loc>
+    <lastmod>2023-09-15T11:34:31.732Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/02_python/python_bases.html</loc>
     <lastmod>2023-01-19T18:47:33.000Z</lastmod>
   </url>
   <url>
-    <loc>https://flallemand.fr/PNSI/05_base/naturels_exos.html</loc>
-    <lastmod>2023-01-19T18:47:33.000Z</lastmod>
+    <loc>https://flallemand.fr/PNSI/01_os/quiz.html</loc>
+    <lastmod>2023-09-04T08:48:57.039Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/01_os/OS_cours.html</loc>
+    <lastmod>2023-09-04T08:00:32.246Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/01_os/index.html</loc>
+    <lastmod>2023-08-01T20:41:28.241Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/01_os/OS_exos.html</loc>
+    <lastmod>2023-09-08T20:10:54.527Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/02_python/index.html</loc>
+    <lastmod>2023-08-02T21:01:28.709Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/02_python/python_bases_exos_1.html</loc>
+    <lastmod>2023-09-08T20:08:22.785Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/02_python/python_bases_exos_3.html</loc>
+    <lastmod>2023-09-20T06:26:23.307Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/02_python/python_bases_quiz.html</loc>
+    <lastmod>2023-08-03T20:51:05.904Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/02_python/supplements.html</loc>
+    <lastmod>2023-08-03T20:59:04.730Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/03_spec/spec_cours.html</loc>
+    <lastmod>2023-08-04T20:41:16.893Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/03_spec/spec_quiz.html</loc>
+    <lastmod>2023-08-04T20:47:06.658Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/04_langages/index.html</loc>
+    <lastmod>2023-10-06T10:07:08.599Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/05_base/base_cours.html</loc>
+    <lastmod>2023-10-12T21:13:56.175Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/05_base/index.html</loc>
+    <lastmod>2023-10-12T21:19:18.190Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/06_relatif/relatifs_cours.html</loc>
@@ -403,13 +399,5 @@
   <url>
     <loc>https://flallemand.fr/PNSI/index.html</loc>
     <lastmod>2023-08-01T19:51:49.822Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/05_base/base_cours.html</loc>
-    <lastmod>2023-10-12T21:13:56.175Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/PNSI/05_base/base_exos.html</loc>
-    <lastmod>2023-10-12T21:18:52.380Z</lastmod>
   </url>
 </urlset>

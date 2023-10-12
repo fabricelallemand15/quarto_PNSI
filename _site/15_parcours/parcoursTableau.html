@@ -349,14 +349,23 @@ cookieconsent.run({
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">05_base/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../05_base/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">05_base/base_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../05_base/base_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">05_base/base_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../05_base/base_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -868,7 +877,7 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="recherche-dune-occurrence">1. Recherche d’une occurrence</h2>
 <p>Considérons un tableau. On souhaite disposer d’un algorithme permettant de rechercher une occurrence d’une valeur donnée dans ce tableau. Plus précisément, nous allons définir une fonction qui recherche une valeur donnée dans un tableau et qui retourne le tableau des indices des occurrences de cette valeur dans le tableau. Dans le cas où la valeur n’est pas présente dans le tableau, la fonction retournera un tableau vide.</p>
 <p>La méthode est très simple. On parcourt le tableau en testant à chaque fois si la valeur courante est égale à la valeur recherchée. Si c’est le cas, on ajoute l’indice de la valeur courante dans le tableau des indices des occurrences.</p>
-<div id="5d53c26c" class="cell" data-execution_count="1">
+<div id="4dbc67d4" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> occurrences(tab, val):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Retourne un tableau contenant les indices des occurrences de val dans tab"""</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    indices <span class="op">=</span> []</span>
@@ -878,7 +887,7 @@ cookieconsent.run({
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> indices</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Exemple d’utilisation :</p>
-<div id="d39cfbe4" class="cell" data-execution_count="2">
+<div id="74955dd0" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> [<span class="st">"DO"</span>, <span class="st">"RE"</span>, <span class="st">"MI"</span>, <span class="st">"FA"</span>, <span class="st">"SOL"</span>, <span class="st">"LA"</span>, <span class="st">"SI"</span>, <span class="st">"DO"</span>]</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(occurrences(tab, <span class="st">"DO"</span>))</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(occurrences(tab, <span class="st">"MI"</span>))</span>
@@ -894,7 +903,7 @@ cookieconsent.run({
 <section id="recherche-dun-extremum" class="level2">
 <h2 class="anchored" data-anchor-id="recherche-dun-extremum">2. Recherche d’un extremum</h2>
 <p>Dans cette partie, nous considérons un tableau dont les éléments sont des nombres. Nous allons définir une fonction qui recherche le plus grand élément du tableau. Pour cela, on commence par choisir comme maximum temporaire le premier élément du tableau. On parcourt ensuite le tableau en testant à chaque fois si la valeur courante est plus grande que le maximum temporaire. Si c’est le cas, on met à jour le maximum temporaire avec la valeur courante.</p>
-<div id="999e9e39" class="cell" data-execution_count="3">
+<div id="0204f9ab" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="bu">max</span>(tab):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Retourne le plus grand élément du tableau"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> tab[<span class="dv">0</span>]</span>
@@ -904,7 +913,7 @@ cookieconsent.run({
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> m</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Exemple d’utilisation :</p>
-<div id="797c9c86" class="cell" data-execution_count="4">
+<div id="39215ca3" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> [<span class="dv">201</span>, <span class="dv">203</span>, <span class="dv">35</span>, <span class="dv">448</span>, <span class="dv">55</span>, <span class="dv">16</span>, <span class="dv">2023</span>, <span class="dv">14</span>, <span class="dv">999</span>, <span class="dv">100</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">max</span>(tab))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -916,7 +925,7 @@ cookieconsent.run({
 <section id="calcul-dune-moyenne" class="level2">
 <h2 class="anchored" data-anchor-id="calcul-dune-moyenne">3. Calcul d’une moyenne</h2>
 <p>Dans cette partie, nous considérons un tableau dont les éléments sont des nombres. Nous allons définir une fonction qui calcule la moyenne des éléments du tableau.</p>
-<div id="9abd6a9b" class="cell" data-execution_count="5">
+<div id="58ccc589" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> moyenne(tab):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Retourne la moyenne des éléments du tableau"""</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> <span class="dv">0</span></span>
@@ -925,7 +934,7 @@ cookieconsent.run({
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s <span class="op">/</span> <span class="bu">len</span>(tab)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Exemple d’utilisation :</p>
-<div id="718952a2" class="cell" data-execution_count="6">
+<div id="b65deaef" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> [<span class="dv">201</span>, <span class="dv">203</span>, <span class="dv">35</span>, <span class="dv">448</span>, <span class="dv">55</span>, <span class="dv">16</span>, <span class="dv">2023</span>, <span class="dv">14</span>, <span class="dv">999</span>, <span class="dv">100</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(moyenne(tab))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
