@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première - Programme</title>
+<title>NSI - Première - Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../05_base/base_cours.html" rel="next">
-<link href="../04_langages/langages.html" rel="prev">
+<link href="../05_base/base_exos.html" rel="next">
+<link href="../05_base/index.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -46,6 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -143,7 +146,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../05_base/index.html">Ch. 5 - Écriture d’un entier positif dans une base <span class="math inline">\(b\)</span></a></li><li class="breadcrumb-item"><a href="../05_base/index.html">02-Représentation de données - types et valeurs de base</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../05_base/index.html">Ch. 5 - Écriture d’un entier positif dans une base <span class="math inline">\(b\)</span></a></li><li class="breadcrumb-item"><a href="../05_base/base_cours.html">Cours</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -318,13 +321,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../05_base/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../05_base/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">02-Représentation de données - types et valeurs de base</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../05_base/base_cours.html" class="sidebar-item-text sidebar-link">
+  <a href="../05_base/base_cours.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Cours</span></a>
   </div>
 </li>
@@ -813,16 +816,35 @@ cookieconsent.run({
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#programme" id="toc-programme" class="nav-link active" data-scroll-target="#programme">Programme</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#la-base-10" id="toc-la-base-10" class="nav-link" data-scroll-target="#la-base-10">2. La base 10</a></li>
+  <li><a href="#généralisation" id="toc-généralisation" class="nav-link" data-scroll-target="#généralisation">3. Généralisation</a>
+  <ul class="collapse">
+  <li><a href="#passage-de-la-base-b-à-la-base-10" id="toc-passage-de-la-base-b-à-la-base-10" class="nav-link" data-scroll-target="#passage-de-la-base-b-à-la-base-10">Passage de la base <span class="math inline">\(b\)</span> à la base 10</a></li>
+  <li><a href="#passage-de-la-base-10-à-la-base-b" id="toc-passage-de-la-base-10-à-la-base-b" class="nav-link" data-scroll-target="#passage-de-la-base-10-à-la-base-b">Passage de la base 10 à la base <span class="math inline">\(b\)</span></a></li>
+  </ul></li>
+  <li><a href="#la-base-2" id="toc-la-base-2" class="nav-link" data-scroll-target="#la-base-2">4. La base 2</a>
+  <ul class="collapse">
+  <li><a href="#conversion-de-la-base-2-à-la-base-10" id="toc-conversion-de-la-base-2-à-la-base-10" class="nav-link" data-scroll-target="#conversion-de-la-base-2-à-la-base-10">Conversion de la base 2 à la base 10</a></li>
+  <li><a href="#conversion-de-la-base-10-à-la-base-2" id="toc-conversion-de-la-base-10-à-la-base-2" class="nav-link" data-scroll-target="#conversion-de-la-base-10-à-la-base-2">Conversion de la base 10 à la base 2</a></li>
+  </ul></li>
+  <li><a href="#la-base-16" id="toc-la-base-16" class="nav-link" data-scroll-target="#la-base-16">5. La base 16</a></li>
+  <li><a href="#quelques-remarques-pour-finir" id="toc-quelques-remarques-pour-finir" class="nav-link" data-scroll-target="#quelques-remarques-pour-finir">6. Quelques remarques pour finir</a>
+  <ul class="collapse">
+  <li><a href="#chiffres-de-poids-fort-de-poids-faible" id="toc-chiffres-de-poids-fort-de-poids-faible" class="nav-link" data-scroll-target="#chiffres-de-poids-fort-de-poids-faible">Chiffres de poids fort, de poids faible</a></li>
+  <li><a href="#multiplier-par-la-base" id="toc-multiplier-par-la-base" class="nav-link" data-scroll-target="#multiplier-par-la-base">Multiplier par la base</a></li>
+  <li><a href="#combien-de-nombres-représentables-sur-n-bits" id="toc-combien-de-nombres-représentables-sur-n-bits" class="nav-link" data-scroll-target="#combien-de-nombres-représentables-sur-n-bits">Combien de nombres représentables sur <span class="math inline">\(n\)</span> bits ?</a></li>
+  </ul></li>
+  <li><a href="#addition-posée-en-binaire" id="toc-addition-posée-en-binaire" class="nav-link" data-scroll-target="#addition-posée-en-binaire">7. Addition posée en binaire</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../05_base/index.html">Ch. 5 - Écriture d’un entier positif dans une base <span class="math inline">\(b\)</span></a></li><li class="breadcrumb-item"><a href="../05_base/index.html">02-Représentation de données - types et valeurs de base</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../05_base/index.html">Ch. 5 - Écriture d’un entier positif dans une base <span class="math inline">\(b\)</span></a></li><li class="breadcrumb-item"><a href="../05_base/base_cours.html">Cours</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Programme</h1>
+<h1 class="title">Cours</h1>
 </div>
 
 
@@ -838,50 +860,496 @@ cookieconsent.run({
 
 </header>
 
-<section id="programme" class="level2">
-<h2 class="anchored" data-anchor-id="programme">Programme</h2>
-<p>Toute machine informatique manipule une représentation des données dont l’unité minimale est le bit 0/1, ce qui permet d’unifier logique et calcul. Les données de base sont représentées selon un codage dépendant de leur nature : entiers, flottants, caractères et chaînes de caractères. Le codage conditionne la taille des différentes valeurs en mémoire.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
+<p>Un ordinateur est une machine qui traite de l’information. Pour comprendre comment, nous devons d’abord expliquer comment l’information est représentée.</p>
+<p>En effet, il faut bien faire la différence entre l’information et sa représentation. Par exemple, si on considère la valeur 17, tout le monde pensera à représenter cette valeur par les chiffres 1 et 7.</p>
+<p>Mais on peut imaginer beaucoup d’autres possibilités, par exemple, les chiffres romains, la numération inca, ou encore le binaire. Et bien d’autres…</p>
+</section>
+<section id="la-base-10" class="level2">
+<h2 class="anchored" data-anchor-id="la-base-10">2. La base 10</h2>
+<p>La représentation usuelle des nombres est une représentation <strong>décimale</strong> et <strong>positionnelle</strong>. Cela signifie :</p>
+<ol type="1">
+<li><p>que les nombres sont représentés par une séquence de <em>chiffres</em> de <span class="math inline">\(0\)</span> à <span class="math inline">\(9\)</span> inclus. Il y a bien <em>dix</em> chiffres différents utilisés, d’où le terme <em>décimal</em> ;</p></li>
+<li><p>que la <em>position</em> de chaque chiffre dans la séquence permet d’associer ce chiffre à une <em>puissance de 10</em>.</p></li>
+</ol>
+<p>Dans cette représentation usuelle, 10 est appelé la <strong>base</strong>. On parle aussi de représentation en base 10.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exemple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Par exemple, la représentation :</p>
+<p><span class="math display">\[1234\]</span></p>
+<p>signifie que le nombre est composé de:</p>
+<ul>
+<li><span class="math inline">\(4\)</span> unités, ou <span class="math inline">\(4\times 10^0\)</span>;</li>
+<li><span class="math inline">\(3\)</span> dizaines, ou <span class="math inline">\(3\times 10^1\)</span>;</li>
+<li><span class="math inline">\(2\)</span> centaines, ou <span class="math inline">\(2\times 10^2\)</span>;</li>
+<li><span class="math inline">\(1\)</span> millier, ou <span class="math inline">\(1\times 10^3\)</span>;</li>
+</ul>
+<p>Ce qui s’écrit : <span class="math inline">\(1234 = 1\times 10^3 + 2\times 10^2 + 3\times 10^1 + 4\times 10^0\)</span></p>
+</div>
+</div>
+<p>On voit donc que les puissances de <span class="math inline">\(10\)</span> associées aux différentes positions (aux différents chiffres) vont en décroissant quand on lit le nombre de gauche à droite, et que la puissance <span class="math inline">\(10^0\)</span> correspond au chiffre des unités.</p>
+<p>On note également que la base donne le nombre de chiffres que l’on peut utiliser pour représenter les nombres. En base 10, on peut utiliser 10 chiffres différents, à savoir les chiffres de <span class="math inline">\(0\)</span> à <span class="math inline">\(9\)</span> inclus.</p>
+</section>
+<section id="généralisation" class="level2">
+<h2 class="anchored" data-anchor-id="généralisation">3. Généralisation</h2>
+<p>Ces idées se généralisent dans n’importe quelle base. Fixons à partir de maintenant une base <span class="math inline">\(b\geq 2\)</span>.</p>
+<p>Nous allons maintenant rencontrer des nombres écrits dans différentes bases. Pour éviter les confusions, nous indiquerons la base utilisée en indice. Le nombre de l’exemple ci-dessous s’écrit donc <span class="math inline">\(1234_{10}\)</span>.</p>
+<p>En base <span class="math inline">\(b\)</span>, nous utiliserons <span class="math inline">\(b\)</span> chiffres : <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(b-1\)</span>.</p>
+<p>Le nombre :</p>
+<p><span class="math display">\[{d_n\cdots d_0}_b\]</span></p>
+<p>représente la valeur :</p>
+<p><span class="math display">\[N = d_n\times b^n + d_{n-1}\times b^{n-1}+\cdots+d_0\times b^0\]</span></p>
+<p>où tous les <span class="math inline">\(d_i\)</span> sont des chiffres dans <span class="math inline">\(\{0,\ldots b-1\}\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exemple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En base 5, il y a cinq chiffres : 0, 1, 2, 3 et 4.</p>
+<p>Comptons un peu en base 5 :</p>
 <table class="table">
 <colgroup>
-<col style="width: 31%">
-<col style="width: 40%">
-<col style="width: 27%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Contenus</th>
-<th>Capacités attendues</th>
-<th>Commentaires</th>
+<th style="text-align: center;">Base 10</th>
+<th style="text-align: center;">Base 5</th>
+<th style="text-align: center;"></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Écriture d’un entier positif dans une base b ⩾ 2</td>
-<td>Passer de la représentation d’une base dans une autre.</td>
-<td>Les bases 2, 10 et 16 sont privilégiées.</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">Pas de différence …</td>
 </tr>
 <tr class="even">
-<td>Représentation binaire d’un entier relatif</td>
-<td>Évaluer le nombre de bits nécessaires à l’écriture en base 2 d’un entier, de la somme ou du produit de deux nombres entiers. Utiliser le complément à 2.</td>
-<td>Il s’agit de décrire les tailles courantes des entiers (8, 16, 32 ou 64 bits). Il est possible d’évoquer la représentation des entiers de taille arbitraire de Python.</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Pas de différence …</td>
 </tr>
 <tr class="odd">
-<td>Représentation approximative des nombres réels : notion de nombre flottant</td>
-<td>Calculer sur quelques exemples la représentation de nombres réels : 0.1, 0.25 ou 1/3.</td>
-<td>0.2 + 0.1 n’est pas égal à 0.3. Il faut éviter de tester l’égalité de deux flottants. Aucune connaissance précise de la norme IEEE-754 n’est exigible.</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">Pas de différence …</td>
 </tr>
 <tr class="even">
-<td>Valeurs booléennes : 0, 1. Opérateurs booléens : and, or, not. Expressions booléennes</td>
-<td>Dresser la table d’une expression booléenne.</td>
-<td>Le ou exclusif (xor) est évoqué. Quelques applications directes comme l’addition binaire sont présentées. L’attention des élèves est attirée sur le caractère séquentiel de certains opérateurs booléens.</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">Pas de différence …</td>
 </tr>
 <tr class="odd">
-<td>Représentation d’un texte en machine. Exemples des encodages ASCII, ISO-8859-1, Unicode</td>
-<td>Identifier l’intérêt des différents systèmes d’encodage. Convertir un fichier texte dans différents formats d’encodage.</td>
-<td>Aucune connaissance précise des normes d’encodage n’est exigible.</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">Pas de différence …</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">Plus de possibilité pour les unités, on ajoute un chiffre à gauche</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">On augmente les unités</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">On augmente les unités</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">On augmente les unités</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">On augmente les unités</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">On ne peut plus augmenter les unités, on augmente le chiffre de rang suivant</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quel sera le premier entier, en base 10, qui s’écrit en base 5 avec trois chiffres ? Avec quatre chiffres ?</p>
+</div>
+</div>
+<section id="passage-de-la-base-b-à-la-base-10" class="level3">
+<h3 class="anchored" data-anchor-id="passage-de-la-base-b-à-la-base-10">Passage de la base <span class="math inline">\(b\)</span> à la base 10</h3>
+<p>Pour passer de la base <span class="math inline">\(b\)</span> à la base 10, c’est facile, il suffit d’utiliser la définition :</p>
+<p><span class="math display">\[{d_n\cdots d_0}_b = (d_n\times b^n + d_{n-1}\times b^{n-1}+\cdots+d_0\times b^0)_{10}\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exemple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Exemple avec la base 5.</p>
+<p>Considérons le nombre <span class="math inline">\(N=134_5\)</span>. Par définition, on a :</p>
+<p><span class="math display">\[N=4\times 5^0 + 3\times 5^1 + 1\times 5^2 = 4+15+25=44_{10}\]</span></p>
+</div>
+</div>
+</section>
+<section id="passage-de-la-base-10-à-la-base-b" class="level3">
+<h3 class="anchored" data-anchor-id="passage-de-la-base-10-à-la-base-b">Passage de la base 10 à la base <span class="math inline">\(b\)</span></h3>
+<p>C’est un peu plus difficile. Pour convertir un nombre donné en base 10 dans une base <span class="math inline">\(b\)</span>, on procède par <strong>divisions euclidiennes successives par <span class="math inline">\(b\)</span></strong>. Les restes obtenus sont les chiffres de l’écriture du nombre en base <span class="math inline">\(b\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exemple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On reste avec <span class="math inline">\(b=5\)</span>. Soit <span class="math inline">\(N=64_{10}\)</span> : on souhaite écrire <span class="math inline">\(N\)</span> en base 5.</p>
+<p>On effectue pour cela la suite de divisions suivante :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="chgt_base.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="chgt_base.svg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>On continue les divisions successives jusqu’à obtenir un quotient nul.</p>
+<p>Les restes successifs (sur fond bleu) forment le nombre en base 5, <strong>en les lisant de la droite vers la gauche</strong> : <span class="math inline">\(64_{10}=224_5\)</span>.</p>
+</div>
+</div>
+<p>Voyons maintenant les exemples de la base 2 et de la base 16 qui sont les plus utilisées en informatique.</p>
+</section>
+</section>
+<section id="la-base-2" class="level2">
+<h2 class="anchored" data-anchor-id="la-base-2">4. La base 2</h2>
+<p>En base 2, nous ne disposons donc que des deux chiffres 0 et 1. On parle de système <strong>binaire</strong>.</p>
+<p>Un chiffre binaire, <em>binary digit</em> en anglais est appelé en abrégé un <strong>bit</strong>.</p>
+<p>Voir <a href="https://www.flallemand.fr/wp/2022/06/19/mesurer-la-quantite-dinformation/" target="_blank">cet article du blog</a> au sujet des unités de mesures binaires.</p>
+<p>Voici comment compter jusqu’à 10 en base 2 :</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Nombre en décimal</th>
+<th style="text-align: center;">Nombre en binaire</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">Pas de différence …</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Pas de différence …</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">Le premier rang ayant été rempli, on passe au suivant !</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">On re-remplit le rang 1.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">Le rang 2 est plein, le rang 1 aussi, qu’à cela ne tienne, on passe au suivant.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">On continue en suivant la même méthode.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">On continue en suivant la même méthode.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">111</td>
+<td style="text-align: center;">On continue en suivant la même méthode.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">On commence le rang 4.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1001</td>
+<td style="text-align: center;">On continue comme tout à l’heure.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">1010</td>
+<td style="text-align: center;">On continue comme tout à l’heure.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+</tr>
+</tbody>
+</table>
+<p>Les nombres en base 2 ont très vite beaucoup de chiffres. Pour faciliter la lecture, on a l’habitude de regrouper ces chiffres par paquets de 4 à partir de la droite.</p>
+<section id="conversion-de-la-base-2-à-la-base-10" class="level3">
+<h3 class="anchored" data-anchor-id="conversion-de-la-base-2-à-la-base-10">Conversion de la base 2 à la base 10</h3>
+<p>Dans ce sens, la conversion est facile, il suffit d’appliquer la définition.</p>
+<p>Prenons le nombre <span class="math inline">\(1101\; 0011_2\)</span>. Il s’étale sur 8 bits, on applique la méthode générale :</p>
+<p><span class="math inline">\(1101\; 0011_2 = 1\times 2^7 + 1\times 2^6 + 0\times 2^5 + 1\times 2^4 + 0\times 2^3 + 0\times 2^2 + 1\times 2^1 + 1\times 2^1 = 211_{10}\)</span>.</p>
+</section>
+<section id="conversion-de-la-base-10-à-la-base-2" class="level3">
+<h3 class="anchored" data-anchor-id="conversion-de-la-base-10-à-la-base-2">Conversion de la base 10 à la base 2</h3>
+<p>On procède par divisions euclidiennes successives.</p>
+<p>Convertissons <span class="math inline">\(47_{10}\)</span> en base 2 :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="chgt_base2.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="chgt_base2.svg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>On a donc <span class="math inline">\(47_{10}=10\;1111_2\)</span>.</p>
+</section>
+</section>
+<section id="la-base-16" class="level2">
+<h2 class="anchored" data-anchor-id="la-base-16">5. La base 16</h2>
+<p>Comme nous l’avons déjà vu, l’écriture d’un nombre en base 2 est longue. Pour avoir des nombres plus “compacts” tout en restant lié au binaire, les informaticiens utilisent souvent la base 16 : c’est le système hexadécimal.</p>
+<p>En base 16, on utilise 16 chiffres, alors que notre numération usuelle, en base 10, n’en possède que 10. Quels symboles choisir pour les 6 chiffres manquants ? On utilise les six premières lettres de l’alphabet !</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Binaire (base 2)</th>
+<th style="text-align: center;">Décimal (base 10)</th>
+<th style="text-align: center;">Hexadécimal (base 16)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">101</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">110</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">111</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1001</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1010</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">A</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1011</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">B</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1100</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">C</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1101</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">D</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1110</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">E</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1111</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+<p>On observe que <strong>tous</strong> les chiffres de la base 16 sont <strong>tous</strong> les nombres que l’on peut coder en binaire sur 4 bits. Dans l’écriture en base 2 d’un nombre, on a vu que les bits sont regroupés par quatre pour plus de lisibilité : <span class="math inline">\(1101\; 0011_2\)</span>. Chaque groupe de quatre correspond donc à un chiffre en base 16. On a donc <span class="math inline">\(1101\; 0011_2 = D3_{16}\)</span>.</p>
+<p>Les méthodes de conversion restent les mêmes.</p>
+</section>
+<section id="quelques-remarques-pour-finir" class="level2">
+<h2 class="anchored" data-anchor-id="quelques-remarques-pour-finir">6. Quelques remarques pour finir</h2>
+<section id="chiffres-de-poids-fort-de-poids-faible" class="level3">
+<h3 class="anchored" data-anchor-id="chiffres-de-poids-fort-de-poids-faible">Chiffres de poids fort, de poids faible</h3>
+<p>Dans la représentation positionnelle usuelle, le chiffre le plus à gauche est associé à une puissance plus élevée de la base. On parle donc de chiffre de “poids fort” ; le chiffre étant associé à la puissance la plus faible est appel chiffre de “poids faible”. En particulier, en binaire, on parle de <strong>bit de poids fort</strong> et <strong>bit de poids faible</strong>.</p>
+</section>
+<section id="multiplier-par-la-base" class="level3">
+<h3 class="anchored" data-anchor-id="multiplier-par-la-base">Multiplier par la base</h3>
+<p>Dans toutes les bases, on peut aisément multiplier par la base en ajoutant des zéros à droite :</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+À retenir
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans toute base <span class="math inline">\(b\)</span>, ajouter <span class="math inline">\(k\)</span> zéros <strong>à droite</strong> revient à <strong>multiplier</strong> par <span class="math inline">\(b^k\)</span>.</p>
+</div>
+</div>
+<p>Par exemple, en binaire, multiplier par 2 revient à ajouter un zéro à la fin du nombre tout comme on ajoute un zéro à la fin du nombre écrit en base 10 quand on la multiplie par 10.</p>
+</section>
+<section id="combien-de-nombres-représentables-sur-n-bits" class="level3">
+<h3 class="anchored" data-anchor-id="combien-de-nombres-représentables-sur-n-bits">Combien de nombres représentables sur <span class="math inline">\(n\)</span> bits ?</h3>
+<p>Enfin, l’observation suivante aura toute son importance dans la suite.</p>
+<p>Considérons par exemple la base 2 : combien de nombres différents peut-on écrire avec <span class="math inline">\(n\)</span> bits ?</p>
+<p>Chaque bit ayant deux valeurs possibles (0 ou 1), nous obtenons <span class="math inline">\(2^n\)</span> nombres distincts.</p>
+<p><span class="math display">\[\underbrace{0\cdots 0_2}_{n\text{ chiffres}} = 0\]</span></p>
+<p>à:</p>
+<p><span class="math display">\[\underbrace{1\cdots 1_b}_{n\text{ chiffres}} = 2^n-1.\]</span></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+À retenir
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En base <span class="math inline">\(2\)</span>, il y a <span class="math inline">\(2^n\)</span> nombres (entiers positifs) représentables sur <span class="math inline">\(n\)</span> bits : les nombres de <span class="math inline">\(0\)</span> à <span class="math inline">\(2^n-1\)</span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Démontrer que <span class="math inline">\(\underbrace{1\cdots 1_2}_{n\text{ chiffres}} = 2^n-1.\)</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Réponse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Nous allons démontrer le résultat général en base <span class="math inline">\(b\)</span>.</p>
+<p>On a : <span class="math inline">\(\underbrace{(b-1)\cdots (b-1)_b}_{n\text{ chiffres}} = (b-1)\times b^{n-1}+\ldots+(b-1)\times b^1+(b-1)\times b^0\)</span>. D’où, en développant chacun des produits :</p>
+<p><span class="math display">\[\underbrace{(b-1)\cdots (b-1)_b}_{n\text{ chiffres}} = b^{n}-b^{n-1}+b^{n-1}-b^{n-2}+\ldots+b^2-b+b-1.\]</span></p>
+<p>Les termes se simplifient tous, sauf le premier et le dernier. On a donc :</p>
+<p><span class="math display">\[\underbrace{(b-1)\cdots (b-1)_b}_{n\text{ chiffres}} = b^n-1.\]</span></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="addition-posée-en-binaire" class="level2">
+<h2 class="anchored" data-anchor-id="addition-posée-en-binaire">7. Addition posée en binaire</h2>
+<p>On peut poser une addition en base 2 avec la même technique que pour l’addition des nombres écrits en base 10. L’addition des bits suit les règles suivantes :</p>
+<ul>
+<li><span class="math inline">\(0+0\)</span> donne <span class="math inline">\(0\)</span> avec une retenue égale à <span class="math inline">\(0\)</span> ;</li>
+<li><span class="math inline">\(0+1\)</span> donne <span class="math inline">\(1\)</span> avec une retenue égale à <span class="math inline">\(0\)</span> ;</li>
+<li><span class="math inline">\(1+0\)</span> donne <span class="math inline">\(1\)</span> avec une retenue égale à <span class="math inline">\(0\)</span> ;</li>
+<li><span class="math inline">\(1+1\)</span> donne <span class="math inline">\(0\)</span> avec une retenue égale à <span class="math inline">\(1\)</span>.</li>
+</ul>
+<p>Exemple de l’addition de <span class="math inline">\(11_{10}=1011_2\)</span> et de <span class="math inline">\(13_{10}=1101_2\)</span> (les retenues sont en rouge) :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="add_bin3.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="add_bin3.svg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>La somme obtenue <span class="math inline">\(1\;1000_2\)</span> correspond bien à l’entier <span class="math inline">\(24_{10}\)</span> codé en binaire. On remarque qu’il a fallu un bit supplémentaire pour coder la somme. Si on travaille avec une taille d’entiers fixe de 4 bits, alors le bit de poids fort sera ignoré, et on obtiendra seulement <span class="math inline">\(1000_2\)</span> comme résultat, c’est-à-dire 8. Autrement dit, sur 4 bits, quand on dépasse la capacité de <span class="math inline">\(2^4-1=15\)</span>, on repart de zéro : <span class="math inline">\(24=2^4+8\)</span>. On dit que le calcul se fait <strong>modulo <span class="math inline">\(2^4\)</span></strong>.</p>
+<p>En complément, vous pouvez regarder la vidéo “Le binaire, c’est quoi ?” dans cet <a href="https://www.flallemand.fr/wp/2022/07/02/la-chaine-youtube-codeur-pro/">article</a>.</p>
 
 
 </section>
@@ -1364,13 +1832,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../04_langages/langages.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cours</span>
+      <a href="../05_base/index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">02-Représentation de données - types et valeurs de base</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../05_base/base_cours.html" class="pagination-link">
-        <span class="nav-page-text">Cours</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../05_base/base_exos.html" class="pagination-link">
+        <span class="nav-page-text">:octicons-pencil-16: Exercice 1</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1406,6 +1874,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":true,"openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 

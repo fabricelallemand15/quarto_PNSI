@@ -1052,14 +1052,14 @@
   {
     "objectID": "05_base/index.html",
     "href": "05_base/index.html",
-    "title": "02-Représentation de données - types et valeurs de base",
+    "title": "Programme",
     "section": "",
     "text": "Toute machine informatique manipule une représentation des données dont l’unité minimale est le bit 0/1, ce qui permet d’unifier logique et calcul. Les données de base sont représentées selon un codage dépendant de leur nature : entiers, flottants, caractères et chaînes de caractères. Le codage conditionne la taille des différentes valeurs en mémoire.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nÉcriture d’un entier positif dans une base b ⩾ 2\nPasser de la représentation d’une base dans une autre.\nLes bases 2, 10 et 16 sont privilégiées.\n\n\nReprésentation binaire d’un entier relatif\nÉvaluer le nombre de bits nécessaires à l’écriture en base 2 d’un entier, de la somme ou du produit de deux nombres entiers. Utiliser le complément à 2.\nIl s’agit de décrire les tailles courantes des entiers (8, 16, 32 ou 64 bits). Il est possible d’évoquer la représentation des entiers de taille arbitraire de Python.\n\n\nReprésentation approximative des nombres réels : notion de nombre flottant\nCalculer sur quelques exemples la représentation de nombres réels : 0.1, 0.25 ou 1/3.\n0.2 + 0.1 n’est pas égal à 0.3. Il faut éviter de tester l’égalité de deux flottants. Aucune connaissance précise de la norme IEEE-754 n’est exigible.\n\n\nValeurs booléennes : 0, 1. Opérateurs booléens : and, or, not. Expressions booléennes\nDresser la table d’une expression booléenne.\nLe ou exclusif (xor) est évoqué. Quelques applications directes comme l’addition binaire sont présentées. L’attention des élèves est attirée sur le caractère séquentiel de certains opérateurs booléens.\n\n\nReprésentation d’un texte en machine. Exemples des encodages ASCII, ISO-8859-1, Unicode\nIdentifier l’intérêt des différents systèmes d’encodage. Convertir un fichier texte dans différents formats d’encodage.\nAucune connaissance précise des normes d’encodage n’est exigible."
   },
   {
     "objectID": "05_base/index.html#programme",
     "href": "05_base/index.html#programme",
-    "title": "02-Représentation de données - types et valeurs de base",
+    "title": "Programme",
     "section": "",
     "text": "Toute machine informatique manipule une représentation des données dont l’unité minimale est le bit 0/1, ce qui permet d’unifier logique et calcul. Les données de base sont représentées selon un codage dépendant de leur nature : entiers, flottants, caractères et chaînes de caractères. Le codage conditionne la taille des différentes valeurs en mémoire.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nÉcriture d’un entier positif dans une base b ⩾ 2\nPasser de la représentation d’une base dans une autre.\nLes bases 2, 10 et 16 sont privilégiées.\n\n\nReprésentation binaire d’un entier relatif\nÉvaluer le nombre de bits nécessaires à l’écriture en base 2 d’un entier, de la somme ou du produit de deux nombres entiers. Utiliser le complément à 2.\nIl s’agit de décrire les tailles courantes des entiers (8, 16, 32 ou 64 bits). Il est possible d’évoquer la représentation des entiers de taille arbitraire de Python.\n\n\nReprésentation approximative des nombres réels : notion de nombre flottant\nCalculer sur quelques exemples la représentation de nombres réels : 0.1, 0.25 ou 1/3.\n0.2 + 0.1 n’est pas égal à 0.3. Il faut éviter de tester l’égalité de deux flottants. Aucune connaissance précise de la norme IEEE-754 n’est exigible.\n\n\nValeurs booléennes : 0, 1. Opérateurs booléens : and, or, not. Expressions booléennes\nDresser la table d’une expression booléenne.\nLe ou exclusif (xor) est évoqué. Quelques applications directes comme l’addition binaire sont présentées. L’attention des élèves est attirée sur le caractère séquentiel de certains opérateurs booléens.\n\n\nReprésentation d’un texte en machine. Exemples des encodages ASCII, ISO-8859-1, Unicode\nIdentifier l’intérêt des différents systèmes d’encodage. Convertir un fichier texte dans différents formats d’encodage.\nAucune connaissance précise des normes d’encodage n’est exigible."
   },
@@ -2721,5 +2721,180 @@
     "title": "Spécialité NSI - Première",
     "section": "",
     "text": "Bienvenue !\nCe site est destiné à regrouper les cours et les exercices concernant l’enseignement de spécialité NSI de première du lycée Émile Duclaux d’Aurillac.\nLien vers l’ENT du lycée : https://cas.ent.auvergnerhonealpes.fr/login\nLien vers Capytale : https://capytale2.ac-paris.fr/web/c-auth/list\nLien vers Replit : https://replit.com/team/premiere-nsi\nLien vers le programme officiel : Programme officiel première NSI"
+  },
+  {
+    "objectID": "05_base/base_cours.html",
+    "href": "05_base/base_cours.html",
+    "title": "Cours",
+    "section": "",
+    "text": "Un ordinateur est une machine qui traite de l’information. Pour comprendre comment, nous devons d’abord expliquer comment l’information est représentée.\nEn effet, il faut bien faire la différence entre l’information et sa représentation. Par exemple, si on considère la valeur 17, tout le monde pensera à représenter cette valeur par les chiffres 1 et 7.\nMais on peut imaginer beaucoup d’autres possibilités, par exemple, les chiffres romains, la numération inca, ou encore le binaire. Et bien d’autres…"
+  },
+  {
+    "objectID": "05_base/base_cours.html#introduction",
+    "href": "05_base/base_cours.html#introduction",
+    "title": "Cours",
+    "section": "",
+    "text": "Un ordinateur est une machine qui traite de l’information. Pour comprendre comment, nous devons d’abord expliquer comment l’information est représentée.\nEn effet, il faut bien faire la différence entre l’information et sa représentation. Par exemple, si on considère la valeur 17, tout le monde pensera à représenter cette valeur par les chiffres 1 et 7.\nMais on peut imaginer beaucoup d’autres possibilités, par exemple, les chiffres romains, la numération inca, ou encore le binaire. Et bien d’autres…"
+  },
+  {
+    "objectID": "05_base/base_cours.html#la-base-10",
+    "href": "05_base/base_cours.html#la-base-10",
+    "title": "Cours",
+    "section": "2. La base 10",
+    "text": "2. La base 10\nLa représentation usuelle des nombres est une représentation décimale et positionnelle. Cela signifie :\n\nque les nombres sont représentés par une séquence de chiffres de \\(0\\) à \\(9\\) inclus. Il y a bien dix chiffres différents utilisés, d’où le terme décimal ;\nque la position de chaque chiffre dans la séquence permet d’associer ce chiffre à une puissance de 10.\n\nDans cette représentation usuelle, 10 est appelé la base. On parle aussi de représentation en base 10.\n\n\n\n\n\n\nExemple\n\n\n\nPar exemple, la représentation :\n\\[1234\\]\nsignifie que le nombre est composé de:\n\n\\(4\\) unités, ou \\(4\\times 10^0\\);\n\\(3\\) dizaines, ou \\(3\\times 10^1\\);\n\\(2\\) centaines, ou \\(2\\times 10^2\\);\n\\(1\\) millier, ou \\(1\\times 10^3\\);\n\nCe qui s’écrit : \\(1234 = 1\\times 10^3 + 2\\times 10^2 + 3\\times 10^1 + 4\\times 10^0\\)\n\n\nOn voit donc que les puissances de \\(10\\) associées aux différentes positions (aux différents chiffres) vont en décroissant quand on lit le nombre de gauche à droite, et que la puissance \\(10^0\\) correspond au chiffre des unités.\nOn note également que la base donne le nombre de chiffres que l’on peut utiliser pour représenter les nombres. En base 10, on peut utiliser 10 chiffres différents, à savoir les chiffres de \\(0\\) à \\(9\\) inclus."
+  },
+  {
+    "objectID": "05_base/base_cours.html#généralisation",
+    "href": "05_base/base_cours.html#généralisation",
+    "title": "Cours",
+    "section": "3. Généralisation",
+    "text": "3. Généralisation\nCes idées se généralisent dans n’importe quelle base. Fixons à partir de maintenant une base \\(b\\geq 2\\).\nNous allons maintenant rencontrer des nombres écrits dans différentes bases. Pour éviter les confusions, nous indiquerons la base utilisée en indice. Le nombre de l’exemple ci-dessous s’écrit donc \\(1234_{10}\\).\nEn base \\(b\\), nous utiliserons \\(b\\) chiffres : \\(0\\), \\(1\\), \\(2\\), …, \\(b-1\\).\nLe nombre :\n\\[{d_n\\cdots d_0}_b\\]\nreprésente la valeur :\n\\[N = d_n\\times b^n + d_{n-1}\\times b^{n-1}+\\cdots+d_0\\times b^0\\]\noù tous les \\(d_i\\) sont des chiffres dans \\(\\{0,\\ldots b-1\\}\\).\n\n\n\n\n\n\nExemple\n\n\n\nEn base 5, il y a cinq chiffres : 0, 1, 2, 3 et 4.\nComptons un peu en base 5 :\n\n\n\n\n\n\n\n\nBase 10\nBase 5\n\n\n\n\n\n0\n0\nPas de différence …\n\n\n1\n1\nPas de différence …\n\n\n2\n2\nPas de différence …\n\n\n3\n3\nPas de différence …\n\n\n4\n4\nPas de différence …\n\n\n5\n10\nPlus de possibilité pour les unités, on ajoute un chiffre à gauche\n\n\n6\n11\nOn augmente les unités\n\n\n7\n12\nOn augmente les unités\n\n\n8\n13\nOn augmente les unités\n\n\n9\n14\nOn augmente les unités\n\n\n10\n20\nOn ne peut plus augmenter les unités, on augmente le chiffre de rang suivant\n\n\n\n\n\n\n\n\n\n\n\nExercice\n\n\n\nQuel sera le premier entier, en base 10, qui s’écrit en base 5 avec trois chiffres ? Avec quatre chiffres ?\n\n\n\nPassage de la base \\(b\\) à la base 10\nPour passer de la base \\(b\\) à la base 10, c’est facile, il suffit d’utiliser la définition :\n\\[{d_n\\cdots d_0}_b = (d_n\\times b^n + d_{n-1}\\times b^{n-1}+\\cdots+d_0\\times b^0)_{10}\\]\n\n\n\n\n\n\nExemple\n\n\n\nExemple avec la base 5.\nConsidérons le nombre \\(N=134_5\\). Par définition, on a :\n\\[N=4\\times 5^0 + 3\\times 5^1 + 1\\times 5^2 = 4+15+25=44_{10}\\]\n\n\n\n\nPassage de la base 10 à la base \\(b\\)\nC’est un peu plus difficile. Pour convertir un nombre donné en base 10 dans une base \\(b\\), on procède par divisions euclidiennes successives par \\(b\\). Les restes obtenus sont les chiffres de l’écriture du nombre en base \\(b\\).\n\n\n\n\n\n\nExemple\n\n\n\nOn reste avec \\(b=5\\). Soit \\(N=64_{10}\\) : on souhaite écrire \\(N\\) en base 5.\nOn effectue pour cela la suite de divisions suivante :\n\n\n\n\n\nOn continue les divisions successives jusqu’à obtenir un quotient nul.\nLes restes successifs (sur fond bleu) forment le nombre en base 5, en les lisant de la droite vers la gauche : \\(64_{10}=224_5\\).\n\n\nVoyons maintenant les exemples de la base 2 et de la base 16 qui sont les plus utilisées en informatique."
+  },
+  {
+    "objectID": "05_base/base_cours.html#la-base-2",
+    "href": "05_base/base_cours.html#la-base-2",
+    "title": "Cours",
+    "section": "4. La base 2",
+    "text": "4. La base 2\nEn base 2, nous ne disposons donc que des deux chiffres 0 et 1. On parle de système binaire.\nUn chiffre binaire, binary digit en anglais est appelé en abrégé un bit.\nVoir cet article du blog au sujet des unités de mesures binaires.\nVoici comment compter jusqu’à 10 en base 2 :\n\n\n\n\n\n\n\n\nNombre en décimal\nNombre en binaire\n\n\n\n\n\n0\n0\nPas de différence …\n\n\n1\n1\nPas de différence …\n\n\n2\n10\nLe premier rang ayant été rempli, on passe au suivant !\n\n\n3\n11\nOn re-remplit le rang 1.\n\n\n4\n100\nLe rang 2 est plein, le rang 1 aussi, qu’à cela ne tienne, on passe au suivant.\n\n\n5\n101\nOn continue en suivant la même méthode.\n\n\n6\n110\nOn continue en suivant la même méthode.\n\n\n7\n111\nOn continue en suivant la même méthode.\n\n\n8\n1000\nOn commence le rang 4.\n\n\n9\n1001\nOn continue comme tout à l’heure.\n\n\n10\n1010\nOn continue comme tout à l’heure.\n\n\n…\n…\n…\n\n\n\nLes nombres en base 2 ont très vite beaucoup de chiffres. Pour faciliter la lecture, on a l’habitude de regrouper ces chiffres par paquets de 4 à partir de la droite.\n\nConversion de la base 2 à la base 10\nDans ce sens, la conversion est facile, il suffit d’appliquer la définition.\nPrenons le nombre \\(1101\\; 0011_2\\). Il s’étale sur 8 bits, on applique la méthode générale :\n\\(1101\\; 0011_2 = 1\\times 2^7 + 1\\times 2^6 + 0\\times 2^5 + 1\\times 2^4 + 0\\times 2^3 + 0\\times 2^2 + 1\\times 2^1 + 1\\times 2^1 = 211_{10}\\).\n\n\nConversion de la base 10 à la base 2\nOn procède par divisions euclidiennes successives.\nConvertissons \\(47_{10}\\) en base 2 :\n\n\n\n\n\nOn a donc \\(47_{10}=10\\;1111_2\\)."
+  },
+  {
+    "objectID": "05_base/base_cours.html#la-base-16",
+    "href": "05_base/base_cours.html#la-base-16",
+    "title": "Cours",
+    "section": "5. La base 16",
+    "text": "5. La base 16\nComme nous l’avons déjà vu, l’écriture d’un nombre en base 2 est longue. Pour avoir des nombres plus “compacts” tout en restant lié au binaire, les informaticiens utilisent souvent la base 16 : c’est le système hexadécimal.\nEn base 16, on utilise 16 chiffres, alors que notre numération usuelle, en base 10, n’en possède que 10. Quels symboles choisir pour les 6 chiffres manquants ? On utilise les six premières lettres de l’alphabet !\n\n\n\nBinaire (base 2)\nDécimal (base 10)\nHexadécimal (base 16)\n\n\n\n\n0\n0\n0\n\n\n1\n1\n1\n\n\n10\n2\n2\n\n\n11\n3\n3\n\n\n100\n4\n4\n\n\n101\n5\n5\n\n\n110\n6\n6\n\n\n111\n7\n7\n\n\n1000\n8\n8\n\n\n1001\n9\n9\n\n\n1010\n10\nA\n\n\n1011\n11\nB\n\n\n1100\n12\nC\n\n\n1101\n13\nD\n\n\n1110\n14\nE\n\n\n1111\n15\nF\n\n\n\nOn observe que tous les chiffres de la base 16 sont tous les nombres que l’on peut coder en binaire sur 4 bits. Dans l’écriture en base 2 d’un nombre, on a vu que les bits sont regroupés par quatre pour plus de lisibilité : \\(1101\\; 0011_2\\). Chaque groupe de quatre correspond donc à un chiffre en base 16. On a donc \\(1101\\; 0011_2 = D3_{16}\\).\nLes méthodes de conversion restent les mêmes."
+  },
+  {
+    "objectID": "05_base/base_cours.html#quelques-remarques-pour-finir",
+    "href": "05_base/base_cours.html#quelques-remarques-pour-finir",
+    "title": "Cours",
+    "section": "6. Quelques remarques pour finir",
+    "text": "6. Quelques remarques pour finir\n\nChiffres de poids fort, de poids faible\nDans la représentation positionnelle usuelle, le chiffre le plus à gauche est associé à une puissance plus élevée de la base. On parle donc de chiffre de “poids fort” ; le chiffre étant associé à la puissance la plus faible est appel chiffre de “poids faible”. En particulier, en binaire, on parle de bit de poids fort et bit de poids faible.\n\n\nMultiplier par la base\nDans toutes les bases, on peut aisément multiplier par la base en ajoutant des zéros à droite :\n\n\n\n\n\n\nÀ retenir\n\n\n\nDans toute base \\(b\\), ajouter \\(k\\) zéros à droite revient à multiplier par \\(b^k\\).\n\n\nPar exemple, en binaire, multiplier par 2 revient à ajouter un zéro à la fin du nombre tout comme on ajoute un zéro à la fin du nombre écrit en base 10 quand on la multiplie par 10.\n\n\nCombien de nombres représentables sur \\(n\\) bits ?\nEnfin, l’observation suivante aura toute son importance dans la suite.\nConsidérons par exemple la base 2 : combien de nombres différents peut-on écrire avec \\(n\\) bits ?\nChaque bit ayant deux valeurs possibles (0 ou 1), nous obtenons \\(2^n\\) nombres distincts.\n\\[\\underbrace{0\\cdots 0_2}_{n\\text{ chiffres}} = 0\\]\nà:\n\\[\\underbrace{1\\cdots 1_b}_{n\\text{ chiffres}} = 2^n-1.\\]\n\n\n\n\n\n\nÀ retenir\n\n\n\nEn base \\(2\\), il y a \\(2^n\\) nombres (entiers positifs) représentables sur \\(n\\) bits : les nombres de \\(0\\) à \\(2^n-1\\).\n\n\n\n\n\n\n\n\nExercice\n\n\n\nDémontrer que \\(\\underbrace{1\\cdots 1_2}_{n\\text{ chiffres}} = 2^n-1.\\)\n\n\n\n\n\n\n\n\nRéponse\n\n\n\n\n\nNous allons démontrer le résultat général en base \\(b\\).\nOn a : \\(\\underbrace{(b-1)\\cdots (b-1)_b}_{n\\text{ chiffres}} = (b-1)\\times b^{n-1}+\\ldots+(b-1)\\times b^1+(b-1)\\times b^0\\). D’où, en développant chacun des produits :\n\\[\\underbrace{(b-1)\\cdots (b-1)_b}_{n\\text{ chiffres}} = b^{n}-b^{n-1}+b^{n-1}-b^{n-2}+\\ldots+b^2-b+b-1.\\]\nLes termes se simplifient tous, sauf le premier et le dernier. On a donc :\n\\[\\underbrace{(b-1)\\cdots (b-1)_b}_{n\\text{ chiffres}} = b^n-1.\\]"
+  },
+  {
+    "objectID": "05_base/base_cours.html#addition-posée-en-binaire",
+    "href": "05_base/base_cours.html#addition-posée-en-binaire",
+    "title": "Cours",
+    "section": "7. Addition posée en binaire",
+    "text": "7. Addition posée en binaire\nOn peut poser une addition en base 2 avec la même technique que pour l’addition des nombres écrits en base 10. L’addition des bits suit les règles suivantes :\n\n\\(0+0\\) donne \\(0\\) avec une retenue égale à \\(0\\) ;\n\\(0+1\\) donne \\(1\\) avec une retenue égale à \\(0\\) ;\n\\(1+0\\) donne \\(1\\) avec une retenue égale à \\(0\\) ;\n\\(1+1\\) donne \\(0\\) avec une retenue égale à \\(1\\).\n\nExemple de l’addition de \\(11_{10}=1011_2\\) et de \\(13_{10}=1101_2\\) (les retenues sont en rouge) :\n\n\n\n\n\nLa somme obtenue \\(1\\;1000_2\\) correspond bien à l’entier \\(24_{10}\\) codé en binaire. On remarque qu’il a fallu un bit supplémentaire pour coder la somme. Si on travaille avec une taille d’entiers fixe de 4 bits, alors le bit de poids fort sera ignoré, et on obtiendra seulement \\(1000_2\\) comme résultat, c’est-à-dire 8. Autrement dit, sur 4 bits, quand on dépasse la capacité de \\(2^4-1=15\\), on repart de zéro : \\(24=2^4+8\\). On dit que le calcul se fait modulo \\(2^4\\).\nEn complément, vous pouvez regarder la vidéo “Le binaire, c’est quoi ?” dans cet article."
+  },
+  {
+    "objectID": "05_base/base_exos.html",
+    "href": "05_base/base_exos.html",
+    "title": "Exercices",
+    "section": "",
+    "text": "Les exercices précédés du symbole  sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole  doivent être résolus par écrit."
+  },
+  {
+    "objectID": "05_base/base_exos.html#octicons-pencil-16-exercice-1",
+    "href": "05_base/base_exos.html#octicons-pencil-16-exercice-1",
+    "title": "NSI - Première",
+    "section": ":octicons-pencil-16: Exercice 1",
+    "text": ":octicons-pencil-16: Exercice 1\nConvertir en base 2 :\n\n\\(23_{10}\\)\n\\(2\\;025_{10}\\)\n\\(40\\;500_{10}\\)"
+  },
+  {
+    "objectID": "05_base/base_exos.html#octicons-pencil-16-exercice-2",
+    "href": "05_base/base_exos.html#octicons-pencil-16-exercice-2",
+    "title": "NSI - Première",
+    "section": ":octicons-pencil-16: Exercice 2",
+    "text": ":octicons-pencil-16: Exercice 2\nConvertir en base 10 :\n\n\\(111_2\\)\n\\(11\\;0001_2\\)\n\\(1101\\;0101_2\\)"
+  },
+  {
+    "objectID": "05_base/base_exos.html#octicons-pencil-16-exercice-3",
+    "href": "05_base/base_exos.html#octicons-pencil-16-exercice-3",
+    "title": "NSI - Première",
+    "section": ":octicons-pencil-16: Exercice 3",
+    "text": ":octicons-pencil-16: Exercice 3\nConvertir en base 10 :\n\n\\(23_{16}\\)\n\\(E85_{16}\\)\n\\(FAB15_{16}\\)"
+  },
+  {
+    "objectID": "05_base/base_exos.html#octicons-pencil-16-exercice-4",
+    "href": "05_base/base_exos.html#octicons-pencil-16-exercice-4",
+    "title": "NSI - Première",
+    "section": ":octicons-pencil-16: Exercice 4",
+    "text": ":octicons-pencil-16: Exercice 4\nConvertir en base 16 :\n\n\\(16_{10}\\)\n\\(2\\;022_{10}\\).\n\\(65\\;724_{10}\\)."
+  },
+  {
+    "objectID": "05_base/base_exos.html#octicons-pencil-16-exercice-5",
+    "href": "05_base/base_exos.html#octicons-pencil-16-exercice-5",
+    "title": "NSI - Première",
+    "section": ":octicons-pencil-16: Exercice 5",
+    "text": ":octicons-pencil-16: Exercice 5\nConvertir en base 16 les nombres binaires suivants :\n\n\\(1\\;1011_2\\)\n\\(1100\\;1010\\;0001\\;1100_2\\)"
+  },
+  {
+    "objectID": "05_base/base_exos.html#octicons-pencil-16-exercice-6",
+    "href": "05_base/base_exos.html#octicons-pencil-16-exercice-6",
+    "title": "NSI - Première",
+    "section": ":octicons-pencil-16: Exercice 6",
+    "text": ":octicons-pencil-16: Exercice 6\nPoser et effectuer les additions suivantes :\n\n\\(111_2+1011_2\\)\n\\(1011\\;0111_2+111\\;0100_2\\)\n\\(1101_2+1\\;1001_2\\)\n\\(1\\;0111_2+11\\;0110_2+11\\;1101_2\\)"
+  },
+  {
+    "objectID": "05_base/base_exos.html#octicons-pencil-16-exercice-7",
+    "href": "05_base/base_exos.html#octicons-pencil-16-exercice-7",
+    "title": "NSI - Première",
+    "section": ":octicons-pencil-16: Exercice 7",
+    "text": ":octicons-pencil-16: Exercice 7\nDans un certain langage de programmation, les entiers naturels sont codés sur un octet. Parmi les additions suivantes, lesquelles vont provoquer un dépassement de capacité (overflow error) ?\n\n\\(1111\\;1011 + 1001\\;1111\\)\n\\(1001\\;1011 + 0111\\;1011\\)\n\\(0011\\;1011 + 1001\\;1001\\)\n\\(1010\\;1011 + 0001\\;0100\\)"
+  },
+  {
+    "objectID": "05_base/base_exos.html#octicons-pencil-16-exercice-8",
+    "href": "05_base/base_exos.html#octicons-pencil-16-exercice-8",
+    "title": "NSI - Première",
+    "section": ":octicons-pencil-16: Exercice 8",
+    "text": ":octicons-pencil-16: Exercice 8\nEn procédant comme pour les nombres écrits en base 10, poser la multiplication suivante :\n\\[1\\;1101_2\\times 111_2\\]"
+  },
+  {
+    "objectID": "05_base/base_exos.html#exercice-1",
+    "href": "05_base/base_exos.html#exercice-1",
+    "title": "Exercices",
+    "section": " Exercice 1",
+    "text": "Exercice 1\nConvertir en base 2 :\n\n\\(23_{10}\\)\n\\(2\\;025_{10}\\)\n\\(40\\;500_{10}\\)"
+  },
+  {
+    "objectID": "05_base/base_exos.html#exercice-2",
+    "href": "05_base/base_exos.html#exercice-2",
+    "title": "Exercices",
+    "section": " Exercice 2",
+    "text": "Exercice 2\nConvertir en base 10 :\n\n\\(111_2\\)\n\\(11\\;0001_2\\)\n\\(1101\\;0101_2\\)"
+  },
+  {
+    "objectID": "05_base/base_exos.html#exercice-3",
+    "href": "05_base/base_exos.html#exercice-3",
+    "title": "Exercices",
+    "section": " Exercice 3",
+    "text": "Exercice 3\nConvertir en base 10 :\n\n\\(23_{16}\\)\n\\(E85_{16}\\)\n\\(FAB15_{16}\\)"
+  },
+  {
+    "objectID": "05_base/base_exos.html#exercice-4",
+    "href": "05_base/base_exos.html#exercice-4",
+    "title": "Exercices",
+    "section": " Exercice 4",
+    "text": "Exercice 4\nConvertir en base 16 :\n\n\\(16_{10}\\)\n\\(2\\;022_{10}\\).\n\\(65\\;724_{10}\\)."
+  },
+  {
+    "objectID": "05_base/base_exos.html#exercice-5",
+    "href": "05_base/base_exos.html#exercice-5",
+    "title": "Exercices",
+    "section": " Exercice 5",
+    "text": "Exercice 5\nConvertir en base 16 les nombres binaires suivants :\n\n\\(1\\;1011_2\\)\n\\(1100\\;1010\\;0001\\;1100_2\\)"
+  },
+  {
+    "objectID": "05_base/base_exos.html#exercice-6",
+    "href": "05_base/base_exos.html#exercice-6",
+    "title": "Exercices",
+    "section": " Exercice 6",
+    "text": "Exercice 6\nPoser et effectuer les additions suivantes :\n\n\\(111_2+1011_2\\)\n\\(1011\\;0111_2+111\\;0100_2\\)\n\\(1101_2+1\\;1001_2\\)\n\\(1\\;0111_2+11\\;0110_2+11\\;1101_2\\)"
+  },
+  {
+    "objectID": "05_base/base_exos.html#exercice-7",
+    "href": "05_base/base_exos.html#exercice-7",
+    "title": "Exercices",
+    "section": " Exercice 7",
+    "text": "Exercice 7\nDans un certain langage de programmation, les entiers naturels sont codés sur un octet. Parmi les additions suivantes, lesquelles vont provoquer un dépassement de capacité (overflow error) ?\n\n\\(1111\\;1011 + 1001\\;1111\\)\n\\(1001\\;1011 + 0111\\;1011\\)\n\\(0011\\;1011 + 1001\\;1001\\)\n\\(1010\\;1011 + 0001\\;0100\\)"
+  },
+  {
+    "objectID": "05_base/base_exos.html#exercice-8",
+    "href": "05_base/base_exos.html#exercice-8",
+    "title": "Exercices",
+    "section": " Exercice 8",
+    "text": "Exercice 8\nEn procédant comme pour les nombres écrits en base 10, poser la multiplication suivante :\n\\[1\\;1101_2\\times 111_2\\]"
   }
 ]

@@ -162,7 +162,7 @@
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/05_base/index.html</loc>
-    <lastmod>2023-01-19T18:47:33.000Z</lastmod>
+    <lastmod>2023-10-12T21:19:18.190Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/04_langages/index.html</loc>
@@ -242,7 +242,7 @@
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/04_langages/langages.html</loc>
-    <lastmod>2023-10-06T21:04:44.888Z</lastmod>
+    <lastmod>2023-10-09T05:19:23.685Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/05_base/naturels_cours.html</loc>
@@ -403,5 +403,13 @@
   <url>
     <loc>https://flallemand.fr/PNSI/index.html</loc>
     <lastmod>2023-08-01T19:51:49.822Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/05_base/base_cours.html</loc>
+    <lastmod>2023-10-12T21:13:56.175Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/05_base/base_exos.html</loc>
+    <lastmod>2023-10-12T21:18:52.380Z</lastmod>
   </url>
 </urlset>
