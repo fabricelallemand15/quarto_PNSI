@@ -59,8 +59,8 @@ website:
       - section: "Ch. 6 - Représentation binaire d'un entier relatif"
         contents: 
           - 06_relatif/index.qmd
-          - 06_relatif/relatif_cours.qmd
-          - 06_relatif/relatif_exos.qmd
+          - 06_relatif/relatifs_cours.qmd
+          - 06_relatif/relatifs_exos.qmd
       - section: "Ch. 7 - Représentation approximative des nombres réels : flottants"
         contents: 
           - 07_flottants/index.qmd
