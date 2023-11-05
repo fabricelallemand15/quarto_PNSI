@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première - 2. Représentation des entiers relatifs (cours)</title>
+<title>NSI - Première - Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +144,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">2. Représentation des entiers relatifs (cours)</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Cours</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -829,7 +829,7 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">2. Représentation des entiers relatifs (cours)</h1>
+<h1 class="title">Cours</h1>
 </div>
 
 
@@ -850,12 +850,24 @@ cookieconsent.run({
 <section id="première-idée-le-bit-de-signe" class="level2">
 <h2 class="anchored" data-anchor-id="première-idée-le-bit-de-signe">1. Première idée : le bit de signe</h2>
 <p>Une première idée consiste à décider que : lorsqu’on travaille avec une représentation binaire sur <span class="math inline">\(n\)</span> bits, on réserve le bit de poids fort pour coder le signe. 1 va coder le signe <span class="math inline">\(-\)</span> et 0 le signe <span class="math inline">\(+\)</span>. Les <span class="math inline">\(n-1\)</span> bits restants codent la valeur absolue du nombre.</p>
-<p>!!! tip “Exemple” En travaillant sur 8 bits (soit 1 octet), l’entier positif <span class="math inline">\(5_{10}\)</span> sera codé par <span class="math inline">\(0000\;0101_2\)</span> et l’entier négatif <span class="math inline">\(-5_{10}\)</span> sera codé par <span class="math inline">\(1000\;0101_2\)</span>.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exemple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En travaillant sur 8 bits (soit 1 octet), l’entier positif <span class="math inline">\(5_{10}\)</span> sera codé par <span class="math inline">\(0000\;0101_2\)</span> et l’entier négatif <span class="math inline">\(-5_{10}\)</span> sera codé par <span class="math inline">\(1000\;0101_2\)</span>.</p>
+</div>
+</div>
 <p>Cette première idée est une mauvaise idée ! En effet, que dire des deux entiers <span class="math inline">\(0000\;0000_2\)</span> et <span class="math inline">\(1000\;0000_2\)</span> ? Ils sont égaux, respectivement à <span class="math inline">\(+0\)</span> et à <span class="math inline">\(-0\)</span>, donc ils sont égaux. Il n’est pas souhaitable qu’un même nombre possède deux représentations différentes.</p>
 <p>De plus, cette représentation pose un autre problème plus grave ! Considérons par exemple le codage de <span class="math inline">\(3_{10}\)</span> sur 4 bits. On a <span class="math inline">\(3_{10} = 0011_2\)</span> et donc <span class="math inline">\(-3_{10} = 1011_2\)</span>. Calculons maintenant leur somme : on s’attend à trouver zéro :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../../assets/images/add_bin.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../../../assets/images/add_bin.svg" class="img-fluid figure-img"></a></p>
+<p><a href="add_bin.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="add_bin.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>mais le résultat correspond à la représentation de <span class="math inline">\(-4\)</span> !</p>
@@ -865,9 +877,37 @@ cookieconsent.run({
 <section id="le-principe" class="level3">
 <h3 class="anchored" data-anchor-id="le-principe">Le principe</h3>
 <p>Pour représenter un entier relatif <span class="math inline">\(R\)</span> en base 2, on commence par choisir le nombre de bits <span class="math inline">\(n\)</span> de la représentation.</p>
-<p>!!! info “Définition et règles de représentation” * Le complément à <span class="math inline">\(2\)</span> d’un nombre <span class="math inline">\(R\)</span> est le nombre <span class="math inline">\(2^n-R\)</span>. * Les nombres positifs sont représentés par leur codage binaire usuel. * Les nombres négatifs sont représentés par le complément à <span class="math inline">\(2\)</span> de leur valeur absolue.</p>
-<p>!!! tip “Exemple” Considérons le codage de l’entier <span class="math inline">\(+12\)</span> sur 8 bits. Il s’agit d’un entier positif, on le code donc comme vu précédemment et on obtient : <span class="math inline">\(+12_{10} = 0000\;1100_2\)</span>.</p>
-<pre><code>Considérons $-12$ maintenant. Son complément à 2 vaut $2^8-12=244$ dont la représentation binaire est $1111\;0100_2$. $-12$ est donc représenté par le nombre $1111\;0100_2$ en binaire sur 8 bits.</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Définition et règles de représentation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Le complément à <span class="math inline">\(2\)</span> d’un nombre <span class="math inline">\(R\)</span> est le nombre <span class="math inline">\(2^n-R\)</span>.</li>
+<li>Les nombres positifs sont représentés par leur codage binaire usuel.</li>
+<li>Les nombres négatifs sont représentés par le complément à <span class="math inline">\(2\)</span> de leur valeur absolue.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exemple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Considérons le codage de l’entier <span class="math inline">\(+12\)</span> sur 8 bits. Il s’agit d’un entier positif, on le code donc comme vu précédemment et on obtient : <span class="math inline">\(+12_{10} = 0000\;1100_2\)</span>.</p>
+<p>Considérons <span class="math inline">\(-12\)</span> maintenant. Son complément à 2 vaut <span class="math inline">\(2^8-12=244\)</span> dont la représentation binaire est <span class="math inline">\(1111\;0100_2\)</span>. <span class="math inline">\(-12\)</span> est donc représenté par le nombre <span class="math inline">\(1111\;0100_2\)</span> en binaire sur 8 bits.</p>
+</div>
+</div>
 <p><strong>“Truc” pratique</strong> : pour obtenir la représentation d’un nombre négatif, par exemple de <span class="math inline">\(-12\)</span> :</p>
 <ul>
 <li>on commence par coder sa valeur absolue 12 : <span class="math inline">\(0000\;1100\)</span> ;</li>
@@ -884,7 +924,7 @@ cookieconsent.run({
 <p>Reprenons l’exemple de l’entier <span class="math inline">\(3_{10} = 0011_2\)</span> codé sur 4 bits. <span class="math inline">\(-3_{10}\)</span> sera codé par <span class="math inline">\(2^4-3=13\)</span>, donc par <span class="math inline">\(1101_2\)</span>. On obtient bien zéro en les additionnant (on oublie la dernière retenue car on reste sur 4 bits) :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../../assets/images/add_bin2.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="../../../assets/images/add_bin2.svg" class="img-fluid figure-img"></a></p>
+<p><a href="add_bin2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="add_bin2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </section>
@@ -900,8 +940,7 @@ cookieconsent.run({
 <p>Sur un axe gradué, voici comment les nombres relatifs s’organisent :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../../assets/images/complt_a_2.svg" class="lightbox" title="image100" data-gallery="quarto-lightbox-gallery-3"><img src="../../../assets/images/complt_a_2.svg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">image100</figcaption>
+<p><a href="cplt_deux.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="cplt_deux.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>On remarque que :</p>
@@ -1458,7 +1497,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":true,"openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 

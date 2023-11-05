@@ -1017,14 +1017,14 @@
   {
     "objectID": "06_relatif/index.html",
     "href": "06_relatif/index.html",
-    "title": "02-Représentation de données - types et valeurs de base",
+    "title": "Programme",
     "section": "",
     "text": "Toute machine informatique manipule une représentation des données dont l’unité minimale est le bit 0/1, ce qui permet d’unifier logique et calcul. Les données de base sont représentées selon un codage dépendant de leur nature : entiers, flottants, caractères et chaînes de caractères. Le codage conditionne la taille des différentes valeurs en mémoire.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nÉcriture d’un entier positif dans une base b ⩾ 2\nPasser de la représentation d’une base dans une autre.\nLes bases 2, 10 et 16 sont privilégiées.\n\n\nReprésentation binaire d’un entier relatif\nÉvaluer le nombre de bits nécessaires à l’écriture en base 2 d’un entier, de la somme ou du produit de deux nombres entiers. Utiliser le complément à 2.\nIl s’agit de décrire les tailles courantes des entiers (8, 16, 32 ou 64 bits). Il est possible d’évoquer la représentation des entiers de taille arbitraire de Python.\n\n\nReprésentation approximative des nombres réels : notion de nombre flottant\nCalculer sur quelques exemples la représentation de nombres réels : 0.1, 0.25 ou 1/3.\n0.2 + 0.1 n’est pas égal à 0.3. Il faut éviter de tester l’égalité de deux flottants. Aucune connaissance précise de la norme IEEE-754 n’est exigible.\n\n\nValeurs booléennes : 0, 1. Opérateurs booléens : and, or, not. Expressions booléennes\nDresser la table d’une expression booléenne.\nLe ou exclusif (xor) est évoqué. Quelques applications directes comme l’addition binaire sont présentées. L’attention des élèves est attirée sur le caractère séquentiel de certains opérateurs booléens.\n\n\nReprésentation d’un texte en machine. Exemples des encodages ASCII, ISO-8859-1, Unicode\nIdentifier l’intérêt des différents systèmes d’encodage. Convertir un fichier texte dans différents formats d’encodage.\nAucune connaissance précise des normes d’encodage n’est exigible."
   },
   {
     "objectID": "06_relatif/index.html#programme",
     "href": "06_relatif/index.html#programme",
-    "title": "02-Représentation de données - types et valeurs de base",
+    "title": "Programme",
     "section": "",
     "text": "Toute machine informatique manipule une représentation des données dont l’unité minimale est le bit 0/1, ce qui permet d’unifier logique et calcul. Les données de base sont représentées selon un codage dépendant de leur nature : entiers, flottants, caractères et chaînes de caractères. Le codage conditionne la taille des différentes valeurs en mémoire.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nÉcriture d’un entier positif dans une base b ⩾ 2\nPasser de la représentation d’une base dans une autre.\nLes bases 2, 10 et 16 sont privilégiées.\n\n\nReprésentation binaire d’un entier relatif\nÉvaluer le nombre de bits nécessaires à l’écriture en base 2 d’un entier, de la somme ou du produit de deux nombres entiers. Utiliser le complément à 2.\nIl s’agit de décrire les tailles courantes des entiers (8, 16, 32 ou 64 bits). Il est possible d’évoquer la représentation des entiers de taille arbitraire de Python.\n\n\nReprésentation approximative des nombres réels : notion de nombre flottant\nCalculer sur quelques exemples la représentation de nombres réels : 0.1, 0.25 ou 1/3.\n0.2 + 0.1 n’est pas égal à 0.3. Il faut éviter de tester l’égalité de deux flottants. Aucune connaissance précise de la norme IEEE-754 n’est exigible.\n\n\nValeurs booléennes : 0, 1. Opérateurs booléens : and, or, not. Expressions booléennes\nDresser la table d’une expression booléenne.\nLe ou exclusif (xor) est évoqué. Quelques applications directes comme l’addition binaire sont présentées. L’attention des élèves est attirée sur le caractère séquentiel de certains opérateurs booléens.\n\n\nReprésentation d’un texte en machine. Exemples des encodages ASCII, ISO-8859-1, Unicode\nIdentifier l’intérêt des différents systèmes d’encodage. Convertir un fichier texte dans différents formats d’encodage.\nAucune connaissance précise des normes d’encodage n’est exigible."
   },
@@ -1703,37 +1703,37 @@
   {
     "objectID": "06_relatif/relatifs_cours.html",
     "href": "06_relatif/relatifs_cours.html",
-    "title": "2. Représentation des entiers relatifs (cours)",
+    "title": "Cours",
     "section": "",
     "text": "Nous allons maintenant étudier la représentation des entiers relatifs en base 2.\nTout le problème est de coder le signe du nombre, et plus seulement sa valeur."
   },
   {
     "objectID": "06_relatif/relatifs_cours.html#première-idée-le-bit-de-signe",
     "href": "06_relatif/relatifs_cours.html#première-idée-le-bit-de-signe",
-    "title": "2. Représentation des entiers relatifs (cours)",
+    "title": "Cours",
     "section": "1. Première idée : le bit de signe",
-    "text": "1. Première idée : le bit de signe\nUne première idée consiste à décider que : lorsqu’on travaille avec une représentation binaire sur \\(n\\) bits, on réserve le bit de poids fort pour coder le signe. 1 va coder le signe \\(-\\) et 0 le signe \\(+\\). Les \\(n-1\\) bits restants codent la valeur absolue du nombre.\n!!! tip “Exemple” En travaillant sur 8 bits (soit 1 octet), l’entier positif \\(5_{10}\\) sera codé par \\(0000\\;0101_2\\) et l’entier négatif \\(-5_{10}\\) sera codé par \\(1000\\;0101_2\\).\nCette première idée est une mauvaise idée ! En effet, que dire des deux entiers \\(0000\\;0000_2\\) et \\(1000\\;0000_2\\) ? Ils sont égaux, respectivement à \\(+0\\) et à \\(-0\\), donc ils sont égaux. Il n’est pas souhaitable qu’un même nombre possède deux représentations différentes.\nDe plus, cette représentation pose un autre problème plus grave ! Considérons par exemple le codage de \\(3_{10}\\) sur 4 bits. On a \\(3_{10} = 0011_2\\) et donc \\(-3_{10} = 1011_2\\). Calculons maintenant leur somme : on s’attend à trouver zéro :\n\n\n\n\n\nmais le résultat correspond à la représentation de \\(-4\\) !"
+    "text": "1. Première idée : le bit de signe\nUne première idée consiste à décider que : lorsqu’on travaille avec une représentation binaire sur \\(n\\) bits, on réserve le bit de poids fort pour coder le signe. 1 va coder le signe \\(-\\) et 0 le signe \\(+\\). Les \\(n-1\\) bits restants codent la valeur absolue du nombre.\n\n\n\n\n\n\nExemple\n\n\n\nEn travaillant sur 8 bits (soit 1 octet), l’entier positif \\(5_{10}\\) sera codé par \\(0000\\;0101_2\\) et l’entier négatif \\(-5_{10}\\) sera codé par \\(1000\\;0101_2\\).\n\n\nCette première idée est une mauvaise idée ! En effet, que dire des deux entiers \\(0000\\;0000_2\\) et \\(1000\\;0000_2\\) ? Ils sont égaux, respectivement à \\(+0\\) et à \\(-0\\), donc ils sont égaux. Il n’est pas souhaitable qu’un même nombre possède deux représentations différentes.\nDe plus, cette représentation pose un autre problème plus grave ! Considérons par exemple le codage de \\(3_{10}\\) sur 4 bits. On a \\(3_{10} = 0011_2\\) et donc \\(-3_{10} = 1011_2\\). Calculons maintenant leur somme : on s’attend à trouver zéro :\n\n\n\n\n\nmais le résultat correspond à la représentation de \\(-4\\) !"
   },
   {
     "objectID": "06_relatif/relatifs_cours.html#le-complément-à-2",
     "href": "06_relatif/relatifs_cours.html#le-complément-à-2",
-    "title": "2. Représentation des entiers relatifs (cours)",
+    "title": "Cours",
     "section": "2. Le complément à 2",
-    "text": "2. Le complément à 2\n\nLe principe\nPour représenter un entier relatif \\(R\\) en base 2, on commence par choisir le nombre de bits \\(n\\) de la représentation.\n!!! info “Définition et règles de représentation” * Le complément à \\(2\\) d’un nombre \\(R\\) est le nombre \\(2^n-R\\). * Les nombres positifs sont représentés par leur codage binaire usuel. * Les nombres négatifs sont représentés par le complément à \\(2\\) de leur valeur absolue.\n!!! tip “Exemple” Considérons le codage de l’entier \\(+12\\) sur 8 bits. Il s’agit d’un entier positif, on le code donc comme vu précédemment et on obtient : \\(+12_{10} = 0000\\;1100_2\\).\nConsidérons $-12$ maintenant. Son complément à 2 vaut $2^8-12=244$ dont la représentation binaire est $1111\\;0100_2$. $-12$ est donc représenté par le nombre $1111\\;0100_2$ en binaire sur 8 bits.\n“Truc” pratique : pour obtenir la représentation d’un nombre négatif, par exemple de \\(-12\\) :\n\non commence par coder sa valeur absolue 12 : \\(0000\\;1100\\) ;\non inverse tous les bits : \\(1111\\;0011\\) ;\non ajoute 1 (attention aux retenues !) : \\(1111\\;0100\\).\n\nDe plus, ce truc fonctionne dans les deux sens : en partant d’un nombre négatif, on retrouve aussi son opposé :\n\non considère \\(-12\\) : \\(1111\\;0100\\) ;\non inverse tous les bits : \\(0000\\;1011\\) ;\non ajoute 1 : \\(1111\\;1100\\). On retrouve bien 12.\n\nAvec cette convention, zéro n’a plus qu’une seule représentation. De plus, on peut poser des additions de façon habituelle.\nReprenons l’exemple de l’entier \\(3_{10} = 0011_2\\) codé sur 4 bits. \\(-3_{10}\\) sera codé par \\(2^4-3=13\\), donc par \\(1101_2\\). On obtient bien zéro en les additionnant (on oublie la dernière retenue car on reste sur 4 bits) :\n\n\n\n\n\n\n\nCombien de nombres ?\nNous savons que, sur \\(n\\) bits, nous pouvons représenter \\(2^n\\) entiers naturels : tous les entiers de \\(0\\) à \\(2^n-1\\).\nAvec le complément à 2 :\n\nla première moitié de ces entiers va représenter les \\(2^{n-1}\\) premiers entiers positifs : de \\(0\\) à \\(2^{n-1}-1\\),\nla seconde moitié va représenter les \\(2^{n-1}\\) premiers entiers négatifs : de \\(-1\\) à \\(-2^{n-1}\\).\n\nAvec le complément à deux, \\(-1\\) sera représenté par \\(2^n-1\\), soit \\(11111\\ldots 1111\\).\nSur un axe gradué, voici comment les nombres relatifs s’organisent :\n\n\n\nimage100\n\n\nOn remarque que :\n\nla représentation d’un nombre positif commence par un bit de poids fort égal à 0.\nla représentation d’un nombre négatif commence par un bit de poids fort égal à 1."
+    "text": "2. Le complément à 2\n\nLe principe\nPour représenter un entier relatif \\(R\\) en base 2, on commence par choisir le nombre de bits \\(n\\) de la représentation.\n\n\n\n\n\n\nDéfinition et règles de représentation\n\n\n\n\nLe complément à \\(2\\) d’un nombre \\(R\\) est le nombre \\(2^n-R\\).\nLes nombres positifs sont représentés par leur codage binaire usuel.\nLes nombres négatifs sont représentés par le complément à \\(2\\) de leur valeur absolue.\n\n\n\n\n\n\n\n\n\nExemple\n\n\n\nConsidérons le codage de l’entier \\(+12\\) sur 8 bits. Il s’agit d’un entier positif, on le code donc comme vu précédemment et on obtient : \\(+12_{10} = 0000\\;1100_2\\).\nConsidérons \\(-12\\) maintenant. Son complément à 2 vaut \\(2^8-12=244\\) dont la représentation binaire est \\(1111\\;0100_2\\). \\(-12\\) est donc représenté par le nombre \\(1111\\;0100_2\\) en binaire sur 8 bits.\n\n\n“Truc” pratique : pour obtenir la représentation d’un nombre négatif, par exemple de \\(-12\\) :\n\non commence par coder sa valeur absolue 12 : \\(0000\\;1100\\) ;\non inverse tous les bits : \\(1111\\;0011\\) ;\non ajoute 1 (attention aux retenues !) : \\(1111\\;0100\\).\n\nDe plus, ce truc fonctionne dans les deux sens : en partant d’un nombre négatif, on retrouve aussi son opposé :\n\non considère \\(-12\\) : \\(1111\\;0100\\) ;\non inverse tous les bits : \\(0000\\;1011\\) ;\non ajoute 1 : \\(1111\\;1100\\). On retrouve bien 12.\n\nAvec cette convention, zéro n’a plus qu’une seule représentation. De plus, on peut poser des additions de façon habituelle.\nReprenons l’exemple de l’entier \\(3_{10} = 0011_2\\) codé sur 4 bits. \\(-3_{10}\\) sera codé par \\(2^4-3=13\\), donc par \\(1101_2\\). On obtient bien zéro en les additionnant (on oublie la dernière retenue car on reste sur 4 bits) :\n\n\n\n\n\n\n\nCombien de nombres ?\nNous savons que, sur \\(n\\) bits, nous pouvons représenter \\(2^n\\) entiers naturels : tous les entiers de \\(0\\) à \\(2^n-1\\).\nAvec le complément à 2 :\n\nla première moitié de ces entiers va représenter les \\(2^{n-1}\\) premiers entiers positifs : de \\(0\\) à \\(2^{n-1}-1\\),\nla seconde moitié va représenter les \\(2^{n-1}\\) premiers entiers négatifs : de \\(-1\\) à \\(-2^{n-1}\\).\n\nAvec le complément à deux, \\(-1\\) sera représenté par \\(2^n-1\\), soit \\(11111\\ldots 1111\\).\nSur un axe gradué, voici comment les nombres relatifs s’organisent :\n\n\n\n\n\nOn remarque que :\n\nla représentation d’un nombre positif commence par un bit de poids fort égal à 0.\nla représentation d’un nombre négatif commence par un bit de poids fort égal à 1."
   },
   {
     "objectID": "06_relatif/relatifs_cours.html#cas-concrets",
     "href": "06_relatif/relatifs_cours.html#cas-concrets",
-    "title": "2. Représentation des entiers relatifs (cours)",
+    "title": "Cours",
     "section": "3. Cas concrets",
     "text": "3. Cas concrets\nCouramment, les entiers sont codés sur 8, 16, 32 ou 64 bits dans les langages de programmation usuels.\n\n\n\nEn codant sur …\nOn peut aller de …\njusqu’à …\n\n\n\n\n8 bits\n-128\n127\n\n\n16 bits\n-32 768\n32 767\n\n\n32 bits\n-2 147 483 648\n2 147 483 647\n\n\n64 bits\n-9 223 372 036 854 775 808\n9 223 372 036 854 775 807\n\n\n\nEn Python, la taille des entiers avec lesquels on peut travailler n’est limitée que par la mémoire disponible. Dans d’autres langages, il faut déclarer des variables de types différents en fonction des limites de valeurs envisagées. Par exemple en C, un char codera sur un octet un entier compris entre \\(-128\\) et \\(127\\), et un short int codera sur 2 octets un entier compris entre \\(-32\\; 768\\) et \\(32\\;767\\). long int utilisera 4 octets."
   },
   {
     "objectID": "06_relatif/relatifs_exos.html",
     "href": "06_relatif/relatifs_exos.html",
-    "title": "NSI - Première",
+    "title": "Exercices",
     "section": "",
-    "text": "Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit."
+    "text": "Les exercices précédés du symbole  sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole  doivent être résolus par écrit."
   },
   {
     "objectID": "06_relatif/relatifs_exos.html#octicons-pencil-16-exercice-1",
@@ -2700,5 +2700,33 @@
     "title": "Spécialité NSI - Première",
     "section": "",
     "text": "Bienvenue !\nCe site est destiné à regrouper les cours et les exercices concernant l’enseignement de spécialité NSI de première du lycée Émile Duclaux d’Aurillac.\nLien vers l’ENT du lycée : https://cas.ent.auvergnerhonealpes.fr/login\nLien vers Capytale : https://capytale2.ac-paris.fr/web/c-auth/list\nLien vers Replit : https://replit.com/team/premiere-nsi\nLien vers le programme officiel : Programme officiel première NSI"
+  },
+  {
+    "objectID": "06_relatif/relatifs_cours.html#définition-et-règles-de-représentation",
+    "href": "06_relatif/relatifs_cours.html#définition-et-règles-de-représentation",
+    "title": "Représentation des entiers relatifs (cours)",
+    "section": "Définition et règles de représentation",
+    "text": "Définition et règles de représentation\n\nLe complément à \\(2\\) d’un nombre \\(R\\) est le nombre \\(2^n-R\\).\nLes nombres positifs sont représentés par leur codage binaire usuel.\nLes nombres négatifs sont représentés par le complément à \\(2\\) de leur valeur absolue."
+  },
+  {
+    "objectID": "06_relatif/relatifs_exos.html#exercice-1",
+    "href": "06_relatif/relatifs_exos.html#exercice-1",
+    "title": "Exercices",
+    "section": " Exercice 1",
+    "text": "Exercice 1\n\nÉcrire les entiers relatifs suivants en complément à 2, sur 8 bits :\n\n\\(-69\\)\n\\(124\\)\n\\(-125\\)\n\\(-26\\)\n\nConvertir en base 10 les entiers relatifs suivants exprimés en complément à 2, sur 8 bits.\n\n\\(0000\\; 1101\\)\n\\(1000\\;1011\\)\n\\(1111\\;1111\\)\n\\(1001\\;1000\\)"
+  },
+  {
+    "objectID": "06_relatif/relatifs_exos.html#exercice-2",
+    "href": "06_relatif/relatifs_exos.html#exercice-2",
+    "title": "Exercices",
+    "section": " Exercice 2",
+    "text": "Exercice 2\nPoser et effectuer la soustraction suivante en binaire sur un octet : 96−84."
+  },
+  {
+    "objectID": "06_relatif/relatifs_exos.html#exercice-3",
+    "href": "06_relatif/relatifs_exos.html#exercice-3",
+    "title": "Exercices",
+    "section": " Exercice 3",
+    "text": "Exercice 3\nDans cet exercice, on code les entiers relatifs sur 2 octets.\n\nDéterminer la représentation de l’entier \\(-47\\).\nCombien de nombres strictement positifs peut-on coder ? Préciser le plus petit et le plus grand.\nCombien de nombres strictement négatifs peut-on coder ? Préciser le plus petit et le plus grand."
   }
 ]
