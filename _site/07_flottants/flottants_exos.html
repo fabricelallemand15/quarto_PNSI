@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – flottants_exos</title>
+<title>NSI - Première - Exercices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -143,7 +177,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/flottants_exos.html">:octicons-pencil-16: Exercice 1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/flottants_exos.html">Exercices</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -377,19 +411,19 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../07_flottants/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">02-Représentation de données - types et valeurs de base</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../07_flottants/flottants_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3. Représentation des réels</span></a>
+ <span class="menu-text">Cours</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../07_flottants/flottants_exos.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">:octicons-pencil-16: Exercice 1</span></a>
+ <span class="menu-text">Exercices</span></a>
   </div>
 </li>
       </ul>
@@ -834,22 +868,38 @@ cookieconsent.run({
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#octicons-pencil-16-exercice-1" id="toc-octicons-pencil-16-exercice-1" class="nav-link active" data-scroll-target="#octicons-pencil-16-exercice-1">:octicons-pencil-16: Exercice 1</a></li>
-  <li><a href="#octicons-pencil-16-exercice-2" id="toc-octicons-pencil-16-exercice-2" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-2">:octicons-pencil-16: Exercice 2</a></li>
-  <li><a href="#octicons-pencil-16-exercice-3" id="toc-octicons-pencil-16-exercice-3" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-3">:octicons-pencil-16: Exercice 3</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-4" id="toc-fontawesome-solid-computer-exercice-4" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-4">:fontawesome-solid-computer: Exercice 4</a></li>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link active" data-scroll-target="#exercice-1"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 1</a></li>
+  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</a></li>
+  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</a></li>
+  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/flottants_exos.html">Exercices</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Exercices</h1>
+</div>
 
 
-<p><em>Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
-<p><em>Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit.</em></p>
-<section id="octicons-pencil-16-exercice-1" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-1">:octicons-pencil-16: Exercice 1</h2>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-desktop" aria-label="desktop"></i> sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> doivent être résolus par écrit.</em></p>
+<section id="exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 1</h2>
 <p>Déterminer l’écriture en base 10 des nombres binaires suivants :</p>
 <ol type="1">
 <li><span class="math inline">\(11,01_2\)</span></li>
@@ -859,8 +909,8 @@ cookieconsent.run({
 </ol>
 <hr>
 </section>
-<section id="octicons-pencil-16-exercice-2" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-2">:octicons-pencil-16: Exercice 2</h2>
+<section id="exercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</h2>
 <p>Déterminer l’écriture binaire des nombres décimaux suivants :</p>
 <ol type="1">
 <li><span class="math inline">\(7,125_{10}\)</span></li>
@@ -870,8 +920,8 @@ cookieconsent.run({
 </ol>
 <hr>
 </section>
-<section id="octicons-pencil-16-exercice-3" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-3">:octicons-pencil-16: Exercice 3</h2>
+<section id="exercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</h2>
 <p>Déterminer la représentation binaire des nombres décimaux suivants selon la norme IEEE-754 sur 32 bits.</p>
 <ol type="1">
 <li><span class="math inline">\(0,9218_{10}\)</span></li>
@@ -883,10 +933,10 @@ cookieconsent.run({
 </ol>
 <hr>
 </section>
-<section id="fontawesome-solid-computer-exercice-4" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-4">:fontawesome-solid-computer: Exercice 4</h2>
+<section id="exercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</h2>
 <p>Dans la console Python, taper :</p>
-<pre class="pycon"><code>&gt;&gt;&gt; 0.1 + 0.2</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.2</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Quel résultat est affiché ? Expliquer !</p>
 
 
@@ -1371,7 +1421,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../07_flottants/flottants_cours.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">3. Représentation des réels</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cours</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

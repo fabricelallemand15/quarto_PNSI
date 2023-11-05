@@ -1,8 +1,12 @@
-_Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+---
+title: "Exercices"
+---
 
-_Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit._
+_Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._
 
-## :octicons-pencil-16: Exercice 1
+_Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
+
+## {{< fa solid pencil-alt >}} Exercice 1
 
 Déterminer l'écriture en base 10 des nombres binaires suivants :
 
@@ -13,7 +17,7 @@ Déterminer l'écriture en base 10 des nombres binaires suivants :
 
 ------------------------------------
 
-## :octicons-pencil-16: Exercice 2
+## {{< fa solid pencil-alt >}} Exercice 2
 
 Déterminer l'écriture binaire des nombres décimaux suivants :
 
@@ -24,7 +28,7 @@ Déterminer l'écriture binaire des nombres décimaux suivants :
 
 -----------------------------------
 
-## :octicons-pencil-16: Exercice 3
+## {{< fa solid pencil-alt >}} Exercice 3
 
 Déterminer la représentation binaire des nombres décimaux suivants selon la norme IEEE-754 sur 32 bits.
 
@@ -37,12 +41,12 @@ Déterminer la représentation binaire des nombres décimaux suivants selon la n
 
 -------------------------------------
 
-## :fontawesome-solid-computer: Exercice 4
+## {{< fa desktop >}} Exercice 4
 
 Dans la console Python, taper :
 
-````pycon
+```python
 >>> 0.1 + 0.2
-````
+```
 
 Quel résultat est affiché ? Expliquer !

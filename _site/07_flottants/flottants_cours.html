@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première - 3. Représentation des réels</title>
+<title>NSI - Première - Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -46,6 +80,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -143,7 +180,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/flottants_cours.html">3. Représentation des réels</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/flottants_cours.html">Cours</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -383,7 +420,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../07_flottants/flottants_cours.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">3. Représentation des réels</span></a>
+ <span class="menu-text">Cours</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -843,9 +880,9 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/flottants_cours.html">3. Représentation des réels</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/flottants_cours.html">Cours</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">3. Représentation des réels</h1>
+<h1 class="title">Cours</h1>
 </div>
 
 
@@ -867,24 +904,31 @@ cookieconsent.run({
 <section id="conversion-en-base-2" class="level2">
 <h2 class="anchored" data-anchor-id="conversion-en-base-2">1. Conversion en base 2</h2>
 <p>Comment écrire un nombre décimal en base 2 ?</p>
-<p>!!! success “Exemple”</p>
-<pre><code>Prenons par exemple $x=10,125_{10}$. Tout comme pour les entiers, cette écriture peut se décomposer suivant les puissances de 10 : $x=10,125 = 1\times 10^1 + 0\times 10^0 + 1\times 10^{-1} + 2\times 10^{-2} + 5\times 10^{-3}$.
-
-L'écriture sous forme de flottant en base 2 repose sur le même type de décomposition, mais avec des puissances de 2.
-
-Pour la partie entière, nous savons faire : $10_{10}=1010_2$.
-
-Pour la partie décimale :
-
-* on multiplie $0,125$ par $2$ : $0,125\times 2 = 0,25$ : partie entière $0$.
-* on multiplie $0,25$ par $2$ : $0,25\times 2 = 0,5$ : partie entière $0$.
-* on multiplie $0,5$ par $2$ : $0,5\times 2 = 1$ : partie entière $1$.
-* on s'arrête car il n'y a plus de partie décimale.
-
-La suite des parties entières obtenues forme la partie décimale de l'écriture binaire : 
-
-$$10,125_{10} = 1010,001_2 = 1\times 2^3 + 0\times 2^2 + 1\times 2^1 + 0\times 2^0 + 0\times 2^{-1}+0\times 2^{-2}+1\times 2^{-3}$$</code></pre>
-<p>Il se peut que l’algorithme précédent aboutisse ne se termine jamais. Par exemple pour <span class="math inline">\(x=0,35\)</span> nous obtenons <span class="math inline">\(0\)</span> pour la partie entière, puis :</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exemple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Prenons par exemple <span class="math inline">\(x=10,125_{10}\)</span>. Tout comme pour les entiers, cette écriture peut se décomposer suivant les puissances de 10 : <span class="math inline">\(x=10,125 = 1\times 10^1 + 0\times 10^0 + 1\times 10^{-1} + 2\times 10^{-2} + 5\times 10^{-3}\)</span>.</p>
+<p>L’écriture sous forme de flottant en base 2 repose sur le même type de décomposition, mais avec des puissances de 2.</p>
+<p>Pour la partie entière, nous savons faire : <span class="math inline">\(10_{10}=1010_2\)</span>.</p>
+<p>Pour la partie décimale :</p>
+<ul>
+<li>on multiplie <span class="math inline">\(0,125\)</span> par <span class="math inline">\(2\)</span> : <span class="math inline">\(0,125\times 2 = 0,25\)</span> : partie entière <span class="math inline">\(0\)</span>.</li>
+<li>on multiplie <span class="math inline">\(0,25\)</span> par <span class="math inline">\(2\)</span> : <span class="math inline">\(0,25\times 2 = 0,5\)</span> : partie entière <span class="math inline">\(0\)</span>.</li>
+<li>on multiplie <span class="math inline">\(0,5\)</span> par <span class="math inline">\(2\)</span> : <span class="math inline">\(0,5\times 2 = 1\)</span> : partie entière <span class="math inline">\(1\)</span>.</li>
+<li>on s’arrête car il n’y a plus de partie décimale.</li>
+</ul>
+<p>La suite des parties entières obtenues forme la partie décimale de l’écriture binaire :</p>
+<p><span class="math display">\[10,125_{10} = 1010,001_2 = 1\times 2^3 + 0\times 2^2 + 1\times 2^1 + 0\times 2^0 + 0\times 2^{-1}+0\times 2^{-2}+1\times 2^{-3}\]</span></p>
+</div>
+</div>
+<p>Il se peut que l’algorithme précédent ne se termine jamais. Par exemple pour <span class="math inline">\(x=0,35\)</span> nous obtenons <span class="math inline">\(0\)</span> pour la partie entière, puis :</p>
 <ul>
 <li><span class="math inline">\(0,35\times 2 = 0,7\)</span> donc <span class="math inline">\(0\)</span> ;</li>
 <li><span class="math inline">\(0,7\times 2 = 1,4\)</span> donc <span class="math inline">\(1\)</span> pour la partie entière ;</li>
@@ -894,17 +938,25 @@ $$10,125_{10} = 1010,001_2 = 1\times 2^3 + 0\times 2^2 + 1\times 2^1 + 0\times 2
 <li><span class="math inline">\(0,2\times 2 = 0,4\)</span> donc <span class="math inline">\(0\)</span> : on retrouve donc le résultat de la troisième étape et donc l’algorithme va boucler indéfiniment :</li>
 </ul>
 <p><span class="math display">\[0,35_{10} =  0,0101100110110110110110...\]</span></p>
-<p>!!! danger “À retenir” La représentation binaire est parfois infinie. En machine, elle est donc forcément tronquée et limitée à un certain nombre de bits. La représentation est alors <strong>approximative</strong> !</p>
-<pre><code>Exemple pour vous en convaincre : 
-
-````pycon
-&gt;&gt;&gt; x = 0.1 + 0.2
-&gt;&gt;&gt; y = 0.3
-&gt;&gt;&gt; x == y
-False
-````
-
-Morale : :warning::warning::warning: **On évitera toujours de comparer des flottants en Python.** :warning::warning::warning:</code></pre>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+À retenir
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La représentation binaire est parfois infinie. En machine, elle est donc forcément tronquée et limitée à un certain nombre de bits. La représentation est alors <strong>approximative</strong> !</p>
+<p>Exemple pour vous en convaincre :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.2</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">==</span> y</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="va">False</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Morale : <i class="fa-solid fa-triangle-exclamation" aria-label="triangle-exclamation"></i> <i class="fa-solid fa-triangle-exclamation" aria-label="triangle-exclamation"></i> <i class="fa-solid fa-triangle-exclamation" aria-label="triangle-exclamation"></i> <strong>On évitera toujours de comparer des flottants en Python.</strong> <i class="fa-solid fa-triangle-exclamation" aria-label="triangle-exclamation"></i> <i class="fa-solid fa-triangle-exclamation" aria-label="triangle-exclamation"></i> <i class="fa-solid fa-triangle-exclamation" aria-label="triangle-exclamation"></i></p>
+</div>
+</div>
 </section>
 <section id="conversion-de-la-base-2-à-la-base-10" class="level2">
 <h2 class="anchored" data-anchor-id="conversion-de-la-base-2-à-la-base-10">2. Conversion de la base 2 à la base 10</h2>
@@ -924,25 +976,67 @@ Morale : :warning::warning::warning: **On évitera toujours de comparer des flot
 <p>Le principe de la représentation binaire des décimaux est le même, mais tout est en base 2, les puissances de 10 sont donc remplacées par des puissances de 2.</p>
 <p>C’est la norme internationale IEEE-754 définit les formats de représentation des nombres à virgule flottante.</p>
 <p>Considérons un nombre binaire <span class="math inline">\(x\)</span>. Nous l’écrivons sous la forme <span class="math inline">\(\pm 1,XXXXXX\times 2^e\)</span> : c’est la “notation scientifique binaire”. Dans cette écriture, nous avons le signe, la suite des chiffres après la virgule qui s’appelle <strong>la mantisse</strong> <span class="math inline">\(m=XXXXXX\)</span> et l’exposant <span class="math inline">\(e\)</span>.</p>
-<p>!!! info “Représentation des flottants” Avant de pouvoir représenter un flottant, il faut choisir un format. Considérons une représentation sur 32 bits (usuellement on utilise 32 bits ou 64 bits).</p>
-<pre><code>* Le bit de poids fort est le bit de signe : si ce bit est à 1, le nombre est négatif, et s'il est à 0, le nombre est positif.
-* Les 8 bits suivants représentent l'exposant.
-* Les 23 bits suivants (bits de poids faible) représentent la mantisse.
-
-![](IEEE754_simple_precision.png){ width = 100% }</code></pre>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Représentation des flottants
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Avant de pouvoir représenter un flottant, il faut choisir un format. Considérons une représentation sur 32 bits (usuellement on utilise 32 bits ou 64 bits).</p>
+<ul>
+<li>Le bit de poids fort est le bit de signe : si ce bit est à 1, le nombre est négatif, et s’il est à 0, le nombre est positif.</li>
+<li>Les 8 bits suivants représentent l’exposant.</li>
+<li>Les 23 bits suivants (bits de poids faible) représentent la mantisse.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="IEEE754_simple_precision.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="IEEE754_simple_precision.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</div>
+</div>
 <p>On a bien au total <span class="math inline">\(1+8+23 = 32\)</span> bits.</p>
 <p>Reste à voir comment est codé l’exposant. Il faut en effet prévoir que celui-ci peut être négatif. La norme ne code pas l’exposant comme nous l’avons vu pour les entiers relatifs.</p>
-<p>!!! info “Calcul de l’exposant” Pour un codage sur 32 bits, l’exposant est codé en <strong>excès à 127</strong> : cela signifie que l’on peut coder uniquement les exposants compris entre <span class="math inline">\(-126\)</span> et <span class="math inline">\(+127\)</span> et qu’un exposant <span class="math inline">\(e\)</span> est codé par la représentation binaire de <span class="math inline">\(e+127\)</span>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Calcul de l’exposant
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour un codage sur 32 bits, l’exposant est codé en <strong>excès à 127</strong> : cela signifie que l’on peut coder uniquement les exposants compris entre <span class="math inline">\(-126\)</span> et <span class="math inline">\(+127\)</span> et qu’un exposant <span class="math inline">\(e\)</span> est codé par la représentation binaire de <span class="math inline">\(e+127\)</span>.</p>
+</div>
+</div>
 <p>On peut coder 256 entiers sur 8 bits : on pourrait donc aller de <span class="math inline">\(-127\)</span> à <span class="math inline">\(+128\)</span> mais ces deux valeurs sont des valeurs réservées qui ne doivent donc pas être utilisées.</p>
 <p>Le principe de l’excès à 127 permet de se ramener à un nombre positif pour l’exposant.</p>
-<p>!!! success “Exemple” Considérons le nombre <span class="math inline">\(10,125_{10} = 1010,001_2\)</span> obtenu au début de ce chapitre. Cherchons quelle est sa représentation sur 32 bits (tout ce qui suit est écrit en base 2) :</p>
-<pre><code>* Tout d'abord nous l'écrivons sous la forme "scientifique" : $1010,001=1,010001\times 2^3$.
-* Le signe est positif : le bit de poids fort sera donc 0.
-* L'exposant vaut 3, codé par $3+127=130$ sur 8 bits (1 octet), ce qui donne : $130_{10}=1000 0010_2$ codage auquel on ajoute des zéros **à gauche** pour obtenir 8 bits si le nombre de chiffres est inférieur à 8.
-* La mantisse est égale à $010001$ : on complète par des zéros **à droite** pour arriver à 23 bits. On met cette fois-ci des zéros à droites : ils ne changent pas la valeur de la mantisse car il ne faut pas oublier qu'il s'agit de chiffres **après** la virgule ! Cela donne : $0100 0100 0000 0000 0000 000$.
-* On met tout ensemble : le nombre $10,125$ est codé par :
-
-$$0100\; 0001\; 0010\; 0010\; 0000\; 0000\; 0000\; 0000$$</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exemple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Considérons le nombre <span class="math inline">\(10,125_{10} = 1010,001_2\)</span> obtenu au début de ce chapitre. Cherchons quelle est sa représentation sur 32 bits (tout ce qui suit est écrit en base 2) :</p>
+<ul>
+<li>Tout d’abord nous l’écrivons sous la forme “scientifique” : <span class="math inline">\(1010,001=1,010001\times 2^3\)</span>.</li>
+<li>Le signe est positif : le bit de poids fort sera donc 0.</li>
+<li>L’exposant vaut 3, codé par <span class="math inline">\(3+127=130\)</span> sur 8 bits (1 octet), ce qui donne : <span class="math inline">\(130_{10}=1000 0010_2\)</span> codage auquel on ajoute des zéros <strong>à gauche</strong> pour obtenir 8 bits si le nombre de chiffres est inférieur à 8.</li>
+<li>La mantisse est égale à <span class="math inline">\(010001\)</span> : on complète par des zéros <strong>à droite</strong> pour arriver à 23 bits. On met cette fois-ci des zéros à droites : ils ne changent pas la valeur de la mantisse car il ne faut pas oublier qu’il s’agit de chiffres <strong>après</strong> la virgule ! Cela donne : <span class="math inline">\(0100 0100 0000 0000 0000 000\)</span>.</li>
+<li>On met tout ensemble : le nombre <span class="math inline">\(10,125\)</span> est codé par :</li>
+</ul>
+<p><span class="math display">\[0100\; 0001\; 0010\; 0010\; 0000\; 0000\; 0000\; 0000\]</span></p>
+</div>
+</div>
 <p>Cette écriture est un peu longue. On peut la compacter en écrivant ce nombre en hexadécimal. On rappelle que chaque bloc de 4 bit donne un chiffre de l’écriture en base 16.</p>
 <p>Cela donne : <span class="math inline">\(41220000_{16}\)</span>.</p>
 
@@ -1469,6 +1563,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});</script>
 
 
 
