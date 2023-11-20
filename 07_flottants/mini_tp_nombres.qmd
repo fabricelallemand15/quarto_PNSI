@@ -1,0 +1,5 @@
+---
+title : "TP : Bases 2, 10 et 16 en Python"
+---
+
+[Ce T.P. est disponible dans Capytale.](https://capytale2.ac-paris.fr/web/c/147b-2247630)

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.274">
+<meta name="generator" content="quarto-1.4.506">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -80,23 +80,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Pas de résultats",
     "search-matching-documents-text": "documents trouvés",
@@ -139,7 +140,7 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
@@ -153,35 +154,40 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+    <a class="nav-link" href="https://python.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../ressources.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+    <a class="nav-link" href="../ressources.html"> 
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/tables_cours.html">Traitements de données en tables (cours)</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -189,7 +195,7 @@ cookieconsent.run({
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -429,6 +435,12 @@ cookieconsent.run({
  <span class="menu-text">Exercices</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../07_flottants/mini_tp_nombres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TP : Bases 2, 10 et 16 en Python</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -441,14 +453,23 @@ cookieconsent.run({
       </div>
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/booleens_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/booleens_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/booleens_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/booleens_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -461,8 +482,11 @@ cookieconsent.run({
       </div>
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">09_texte/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../09_texte/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
  <span class="menu-text">09_texte/texte_cours.qmd</span>
   </li>
@@ -864,7 +888,7 @@ cookieconsent.run({
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -919,6 +943,7 @@ cookieconsent.run({
 
 </header>
 
+
 <section id="table-de-données-et-indexation" class="level2">
 <h2 class="anchored" data-anchor-id="table-de-données-et-indexation">1. Table de données et indexation</h2>
 <section id="vocabulaire" class="level3">
@@ -947,8 +972,8 @@ Définition
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="tableur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="tableur"><img src="tableur.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">tableur</figcaption>
+<p><a href="tableur.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1" title="tableur"><img src="tableur.png" class="img-fluid figure-img" alt="tableur"></a></p>
+<figcaption>tableur</figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -990,7 +1015,7 @@ Exemple
 <div class="code-with-filename-file">
 <pre><strong>etablissements.csv</strong></pre>
 </div>
-<pre class="csv"><code>code,nom,statut,codepostal,commune,latitude,longitude
+<pre class="csv" data-filename="etablissements.csv"><code>code,nom,statut,codepostal,commune,latitude,longitude
 0150424E,Ecole maternelle de La Fontaine,Public,15000,AURILLAC,44.93215113696133,2.4472797795526975
 0150426G,Ecole élémentaire La Jordanne,Public,15000,AURILLAC,44.91746484780829,2.4412899019318455
 0150713U,Ecole élémentaire Belbex,Public,15000,AURILLAC,44.91692385174704,2.420740047835959
@@ -1040,7 +1065,7 @@ Définition
 <li><strong>Lecture</strong></li>
 </ul>
 <p>On peut extraire les attributs et la table contenus dans le fichier <code>educ_cantal.csv</code> avec le code ci-dessous :</p>
-<div id="125f2d2b" class="cell" data-execution_count="2">
+<div id="45191f72" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ouverture du fichier en mode lecture</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>fichier <span class="op">=</span> <span class="bu">open</span>(<span class="st">'educ_cantal.csv'</span>, mode<span class="op">=</span><span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># extraction de la ligne des attributs</span></span>
@@ -1053,7 +1078,7 @@ Définition
 <p>La fonction <code>open</code> permet de créer un objet <code>fichier</code> qu’on peut parcourir ligne par ligne avec un curseur : d’abord la première ligne avec <code>fichier.readline()</code> puis les lignes suivantes en itérant sur <code>fichier</code>. Il est important de préciser <strong>l’encodage du fichier</strong>, par défaut c’est celui du système d’exploitation.</p>
 <p>Chaque ligne est une chaîne de caractères découpée en liste de champs selon le délimiteur passé en paramètre à la méthode <code>split</code>. Le caractère de saut de lignes a d’abord été supprimé avec la méthode <code>rstrip</code>.</p>
 <p>On récupère ainsi les attributs comme un tableau de type <code>list</code> et la table comme un tableau d’enregistrements qui sont eux-mêmes des tableaux. Notons que toutes les valeurs sont des chaînes de caractères et qu’il faudra convertir certaines pour les traiter !</p>
-<div id="62f6dca3" class="cell" data-execution_count="3">
+<div id="1c00d0fa" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(attributs)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(table[<span class="dv">18</span>])</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(table[:<span class="dv">2</span>])</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1067,7 +1092,7 @@ Définition
 <li><strong>Écriture</strong></li>
 </ul>
 <p>On peut ensuite recopier les attributs et la table dans un autre fichier <code>educ_cantal_copie.csv</code> avec le code ci-dessous :</p>
-<div id="fd2361f9" class="cell" data-execution_count="4">
+<div id="4560074b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="bu">open</span>(<span class="st">'educ_cantal_copie.csv'</span>, mode<span class="op">=</span><span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf8'</span>, newline<span class="op">=</span><span class="st">''</span>) <span class="co"># ouverture du fichier en mode écriture</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>premiere_ligne <span class="op">=</span> <span class="st">','</span>.join(attributs) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>g.write(premiere_ligne)</span>
@@ -1088,7 +1113,7 @@ Définition
 </ul>
 <p>Le code ci-dessous permet d’extraire directement la table d’un fichier CSV dans une structure de données qui est un <strong>tableau de dictionnaires</strong> : chaque enregistrement est un dictionnaire dont les clefs sont les attributs listés sur la première ligne du fichier.</p>
 <p>Remarque : pour les versions de Python 3.6 et 3.7 uniquement, les dictionnaires renvoyés sont spécifiques, de type <code>OrderedDict</code>, et on prendra soin de les convertir en dictionnaires standard avec <code>dict</code> en entrant : <code>table = [dict(enregistrement) for ...]</code>.</p>
-<div id="30794b7f" class="cell" data-execution_count="5">
+<div id="46c3785a" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'educ_cantal.csv'</span>, mode<span class="op">=</span><span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
@@ -1097,7 +1122,7 @@ Définition
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>f.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>La structure de données représentant la table est un <strong>tableau de dictionnaires</strong> : l’accès aux enregistrements se fait par index et à leurs attributs par clef : très efficace (coût constant) et code lisible. Notons que toutes les valeurs restent des chaînes de caractères et qu’il faudra convertir certaines pour les traiter !</p>
-<div id="81ba87b4" class="cell" data-execution_count="6">
+<div id="50b6adab" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># premier enregistrement de type dictionnaire</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(table[<span class="dv">18</span>])</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># tableu de dictionnaires : extrait</span></span>
@@ -1117,7 +1142,7 @@ Lycée polyvalent de Haute Auvergne</code></pre>
 <li><strong>Écriture</strong></li>
 </ul>
 <p>L’écriture d’un tableau de dictionnaires partageant les mêmes clefs sous forme de table dans un fichier CSV, s’effectue de façon symétrique à travers un objet <code>DictWriter</code>. À titre, d’exemple, on recopie la table extraite précédemment dans un autre fichier CSV. Depuis Python 3.7, le parcours des clefs d’un dictionnaire est garanti dans le même ordre que celui d’insertion donc on peut récupérer la liste des attributs avec <code>list(table[0].keys())</code></p>
-<div id="b068cf9c" class="cell" data-execution_count="7">
+<div id="aabafaa0" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="bu">open</span>(<span class="st">'educ_cantal_copie2.csv'</span>, mode<span class="op">=</span><span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>attributs <span class="op">=</span> <span class="bu">list</span>(table[<span class="dv">0</span>].keys())</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>writer <span class="op">=</span> csv.DictWriter(g, delimiter<span class="op">=</span><span class="st">','</span>, fieldnames<span class="op">=</span>attributs)  <span class="co"># création de l'objet writer</span></span>
@@ -1130,7 +1155,7 @@ Lycée polyvalent de Haute Auvergne</code></pre>
 <li><strong>Remarque</strong></li>
 </ul>
 <p>Le module <code>csv</code> permet aussi d’extraire une table d’un fichier CSV sous forme de <strong>tableau de tableaux</strong> comme dans la méthode précédente. Le découpage des lignes/enregistrements selon le délimiteur est intégré ce qui simplifie le code.</p>
-<div id="2d59437f" class="cell" data-execution_count="8">
+<div id="9da2a90b" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'educ_cantal.csv'</span>, mode<span class="op">=</span><span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>reader <span class="op">=</span> csv.reader(f, delimiter<span class="op">=</span><span class="st">','</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> [ligne <span class="cf">for</span> ligne <span class="kw">in</span> reader]</span>
@@ -1160,7 +1185,7 @@ Définition
 <section id="exemple-de-sélection" class="level3">
 <h3 class="anchored" data-anchor-id="exemple-de-sélection">Exemple de sélection</h3>
 <p>Supposons qu’on dispose d’une table enregistrée dans une liste de dictionnaires :</p>
-<div id="6669b5fd" class="cell" data-execution_count="9">
+<div id="d0346205" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Table1 <span class="op">=</span> [</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'Nom'</span>: <span class="st">'Joe'</span>, <span class="st">'Anglais'</span>: <span class="st">'17'</span>, <span class="st">'Info'</span>: <span class="st">'18'</span>, <span class="st">'Maths'</span>: <span class="st">'16'</span>},</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'Nom'</span>: <span class="st">'Zoé'</span>, <span class="st">'Anglais'</span>: <span class="st">'15'</span>, <span class="st">'Info'</span>: <span class="st">'17'</span>, <span class="st">'Maths'</span>: <span class="st">'19'</span>},</span>
@@ -1170,14 +1195,14 @@ Définition
 </div>
 <p>On souhaite extraire la liste des enregistrements des élèves ayant eu au moins 16 en maths.</p>
 <p>On peut le faire “à la main” :</p>
-<div id="02c8e860" class="cell" data-execution_count="10">
+<div id="b0298b57" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>au_moins_16_en_maths <span class="op">=</span> []</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> enregistrement <span class="kw">in</span> Table1:</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">int</span>(enregistrement[<span class="st">'Maths'</span>]) <span class="op">&gt;=</span> <span class="dv">16</span>:</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        au_moins_16_en_maths.append(enregistrement)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Le résultat est encore une table :</p>
-<div id="5db2ee4e" class="cell" data-execution_count="11">
+<div id="d6b45149" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>au_moins_16_en_maths</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>[{'Nom': 'Joe', 'Anglais': '17', 'Info': '18', 'Maths': '16'},
@@ -1185,7 +1210,7 @@ Définition
 </div>
 </div>
 <p>On peut le faire avec une liste en compréhension :</p>
-<div id="dabb1e33" class="cell" data-execution_count="12">
+<div id="72d85c73" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>au_moins_16_en_maths <span class="op">=</span> [enre <span class="cf">for</span> enre <span class="kw">in</span> Table1 <span class="cf">if</span> <span class="bu">int</span>(enre[<span class="st">'Maths'</span>]) <span class="op">&gt;=</span> <span class="dv">16</span>]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Le résultat est identique.</p>
@@ -1197,7 +1222,7 @@ Définition
 <ul>
 <li>à la main :</li>
 </ul>
-<div id="f40561a4" class="cell" data-execution_count="13">
+<div id="8bcefa53" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>notes_maths <span class="op">=</span> []</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> enregistrement <span class="kw">in</span> Table1:</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    notes_maths.append(enregistrement[<span class="st">'Maths'</span>])</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1205,7 +1230,7 @@ Définition
 <ul>
 <li>par compréhension :</li>
 </ul>
-<div id="08aa4033" class="cell" data-execution_count="14">
+<div id="2114ef52" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>notes_maths <span class="op">=</span> [enre[<span class="st">'Maths'</span>] <span class="cf">for</span> enre <span class="kw">in</span> Table1]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Dans les deux cas le résultat est la liste [‘16’, ‘19’, ‘14’, ‘10’].</p>
@@ -1241,20 +1266,20 @@ Solution
 <ol type="1">
 <li>Avec une boucle :</li>
 </ol>
-<div id="fda7087c" class="cell" data-execution_count="15">
+<div id="9cbfde93" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>nom_avec_o <span class="op">=</span> []</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> enregistrement <span class="kw">in</span> Table1:</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'o'</span> <span class="kw">in</span> enregistrement[<span class="st">'Nom'</span>]:</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>        nom_avec_o.append(enregistrement)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>En compréhension :</p>
-<div id="03b4e631" class="cell" data-execution_count="16">
+<div id="1fdb8ee9" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>nom_avec_o <span class="op">=</span> [enre <span class="cf">for</span> enre <span class="kw">in</span> Table1 <span class="cf">if</span> <span class="st">'o'</span> <span class="kw">in</span> enre[<span class="st">'Nom'</span>]]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="1">
 <li>Liste des noms :</li>
 </ol>
-<div id="cf9acc44" class="cell" data-execution_count="17">
+<div id="70696e9d" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># avec une boucle</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>liste_noms <span class="op">=</span> []</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> enregistrement <span class="kw">in</span> Table1:</span>
@@ -1264,7 +1289,7 @@ Solution
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>liste_noms <span class="op">=</span> [enre[<span class="st">'Nom'</span>] <span class="cf">for</span> enre <span class="kw">in</span> Table1]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>paires info/maths</p>
-<div id="37a011f0" class="cell" data-execution_count="18">
+<div id="1b67f29b" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># avec une boucle</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>liste_paires <span class="op">=</span> []</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> enregistrement <span class="kw">in</span> Table1:</span>
@@ -1289,7 +1314,7 @@ Solution
 <li><code>key = ...</code> pour préciser selon quel critère une liste doit être triée.</li>
 </ul>
 <p>Quelques exemples :</p>
-<div id="732b2192" class="cell" data-execution_count="19">
+<div id="26a53c01" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>ma_liste <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">3</span>, <span class="dv">71</span>, <span class="dv">96</span>]</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">sorted</span>(ma_liste))</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">sorted</span>(ma_liste, reverse<span class="op">=</span><span class="va">True</span>))</span>
@@ -1325,13 +1350,13 @@ Avertissement
 <section id="tri-suivant-plusieurs-colonnes" class="level3">
 <h3 class="anchored" data-anchor-id="tri-suivant-plusieurs-colonnes">3.2. Tri suivant plusieurs colonnes</h3>
 <p>Considérons la table suivante :</p>
-<div id="2fcfef8a" class="cell" data-execution_count="20">
+<div id="e49336f9" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> [{<span class="st">'élève'</span> : <span class="st">'guido'</span>, <span class="st">'langage'</span> : <span class="st">'python'</span>, <span class="st">'note'</span> : <span class="dv">19</span>},</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>         {<span class="st">'élève'</span> : <span class="st">'monty'</span>, <span class="st">'langage'</span> : <span class="st">'python'</span>, <span class="st">'note'</span> : <span class="dv">20</span>},</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>         {<span class="st">'élève'</span> : <span class="st">'brian'</span>, <span class="st">'langage'</span> : <span class="st">'c'</span>, <span class="st">'note'</span> : <span class="dv">20</span>}]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>On souhaite trier en fonction du langage dans l’ordre alphabétique, puis de la note dans l’ordre croissant. La fonction donnée en argument <code>key</code> doit alors retourner la couple ordonné des deux attributs voulus :</p>
-<div id="ab0a285a" class="cell" data-execution_count="21">
+<div id="a7d9fb34" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cle_langage_note(enre):</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (enre[<span class="st">'langage'</span>], enre[<span class="st">'note'</span>])</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1343,7 +1368,7 @@ Avertissement
 </div>
 </div>
 <p>Si l’on souhaite trier dans l’ordre croissant suivant l’attribut langage et décroissant suivant l’attribut note, on procède en deux étapes :</p>
-<div id="33fa15d7" class="cell" data-execution_count="22">
+<div id="a121b742" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cle_langage(enre):</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> enre[<span class="st">'langage'</span>]</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1372,7 +1397,7 @@ Avertissement
 <li>à éviter les doublons : cas d’un enregistrement qui se trouverait dans les deux tables initiales.</li>
 </ul>
 <p>Sous l’hypothèse qu’il n’y a pas de doublons, le code ci-dessous procède à cette fusion :</p>
-<div id="c2478b91" class="cell" data-execution_count="23">
+<div id="f266726b" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fusion_tables(table1: <span class="bu">list</span>, table2: <span class="bu">list</span>) <span class="op">-&gt;</span> <span class="bu">list</span>:</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""table 1 et table 2 ont les mêmes descripteurs</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co">    il n'y a pas de doublons"""</span></span>
@@ -1484,7 +1509,7 @@ Définition
 </div>
 </div>
 <p>La <strong>jointure</strong> s’obtient avec deux boucles imbriquées : on parcourt tous les couples constitués d’enregistrements de la première puis de la seconde table et on filtre à l’aide d’une instruction conditionnelle.</p>
-<div id="d7791627" class="cell" data-execution_count="24">
+<div id="823148cc" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> copy <span class="im">import</span> deepcopy</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>Table1 <span class="op">=</span> [{<span class="st">'Nom'</span>: <span class="st">'Joe'</span>, <span class="st">'Anglais'</span>: <span class="st">'17'</span>, <span class="st">'Info'</span>: <span class="st">'18'</span>, <span class="st">'Maths'</span>: <span class="st">'16'</span>},</span>
@@ -1748,6 +1773,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1797,15 +1837,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
+        typesetMath(container);
         return container.innerHTML
       } else {
+        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -1814,6 +1884,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
+      typesetMath(note);
       return note.innerHTML;
     }
   }
@@ -1856,6 +1927,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -1927,6 +2021,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1984,30 +2104,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // default icon
-          link.classList.add("external");
-      }
-    }
 });
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../22_tables/index.html" class="pagination-link">
+      <a href="../22_tables/index.html" class="pagination-link  aria-label=" s7-traitement="" de="" données="" en="" tables"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">S7-Traitement de données en tables</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../22_tables/tables_exos.html" class="pagination-link">
+      <a href="../22_tables/tables_exos.html" class="pagination-link" aria-label="Exercices - Traitements de données en tables">
         <span class="nav-page-text">Exercices - Traitements de données en tables</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -2044,7 +2150,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false});</script>
 
 
 

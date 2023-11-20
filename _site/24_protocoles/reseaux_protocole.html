@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.274">
+<meta name="generator" content="quarto-1.4.506">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -63,23 +64,24 @@ div.csl-indent {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Pas de résultats",
     "search-matching-documents-text": "documents trouvés",
@@ -122,7 +124,7 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
@@ -136,35 +138,40 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+    <a class="nav-link" href="https://python.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../ressources.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+    <a class="nav-link" href="../ressources.html"> 
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Protocoles de communication</li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -172,7 +179,7 @@ cookieconsent.run({
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -412,6 +419,12 @@ cookieconsent.run({
  <span class="menu-text">Exercices</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../07_flottants/mini_tp_nombres.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TP : Bases 2, 10 et 16 en Python</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -424,14 +437,23 @@ cookieconsent.run({
       </div>
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/booleens_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/booleens_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/booleens_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/booleens_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -444,8 +466,11 @@ cookieconsent.run({
       </div>
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">09_texte/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../09_texte/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
  <span class="menu-text">09_texte/texte_cours.qmd</span>
   </li>
@@ -847,7 +872,7 @@ cookieconsent.run({
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -896,6 +921,7 @@ cookieconsent.run({
 
 </header>
 
+
 <p>Ce cours est basé sur le cours de <span class="citation" data-cites="lassus_premiere">LASSUS (<a href="#ref-lassus_premiere" role="doc-biblioref">2021</a>)</span>.</p>
 <section id="modèle-osi-modèle-internet" class="level2">
 <h2 class="anchored" data-anchor-id="modèle-osi-modèle-internet">1. Modèle OSI, modèle Internet</h2>
@@ -906,18 +932,10 @@ cookieconsent.run({
 </ul>
 <p>Ces deux modèles coïncident suivant le schéma ci-dessus. Ce sont des modèles théoriques. Leur utilisation dans la pratique est parfois plus floue, avec des protocoles à cheval sur plusieurs couches.</p>
 <p>Dans la suite de ce cours, nous évoquerons les couches par leur numéro dans le modèle OSI.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="OSI.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="OSI.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="OSI.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="OSI.png" class="img-fluid"></a></p>
 <p>Lors de son émission, un message va subir successivement toutes les transformations effectuées par chaque couche, depuis sa création (couche 7) jusqu’à sa transmission physique (couche 1).</p>
 <p>Lorsque ce même message sera réceptionné, les transformations seront effectuées dans l’ordre inverse, jusqu’à la présentation du message au destinataire.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="memeOSI.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="memeOSI.jpeg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="memeOSI.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="memeOSI.jpeg" class="img-fluid"></a></p>
 <ul>
 <li><p><strong>couches 7-6-5 — couches application-présentation-session :</strong> Ces couches (réunies dans le modèle Internet en une couche unique «application» ) regroupent les protocoles nécessaires à la bonne mise en forme d’un message (au sens large) avant sa transmission. Ces protocoles peuvent être de nature très différente : protocole HTTP pour la transmisson de pages web, protocole FTP pour le transfert de fichiers, protocoles POP ou IMAP pour le courrier électronique… <br></p></li>
 <li><p><strong>couche 4 — couche transport :</strong><br>
@@ -946,94 +964,46 @@ C’est la couche où le message est transmis physiquement d’un point à un au
 <ul>
 <li>Relions une machine <code>192.168.0.10</code> d’adresse MAC <code>BC:81:81:42:9C:31</code> à une machine <code>192.168.0.11</code> d’adresse MAC <code>2A:AB:AC:27:D6:A7</code> à travers un switch.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="K1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="K1.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="K1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="K1.png" class="img-fluid"></a></p>
 <ul>
 <li>Observons la table SAT de notre switch : elle est vide, car aucune machine n’a encore cherché à communiquer.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="K2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="K2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="K2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="K2.png" class="img-fluid"></a></p>
 <ul>
 <li>Lançons un ping depuis <code>192.168.0.10</code> vers <code>192.168.0.11</code> et observons les données échangées :</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="K3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="K3.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="K3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="K3.png" class="img-fluid"></a></p>
 <ul>
 <li>Observons de plus près la première ligne de données échangées.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="K4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="K4.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="K4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="K4.png" class="img-fluid"></a></p>
 <p>Cette première ligne est une requête <strong>ARP</strong>. ARP est un protocole qui s’interface entre la couche 3 / réseau (appelée dans la capture d’écran <em>Internet</em>) et la couche 2 / liaison (appelée dans la capture d’écran <em>Réseau</em>). Comme indiqué dans le commentaire, elle consiste à un appel à tout le réseau : “Est-ce que quelqu’un ici possède l’IP <code>192.168.0.11</code> ?</p>
 <p><strong>Message 1 : « Qui possède l’IP <code>192.168.0.11</code> ? »</strong></p>
 <p>Il faut comprendre à cette étape que l’adresse IP est totalement inutile pour répérer un ordinateur dans un sous-réseau. Ce sont les adresses MAC qui permettent de se repérer dans un sous-réseau. Les adresses IP, elles, permettront éventuellement d’acheminer le message jusqu’au bon sous-réseau (elles n’intéressent donc que les routeurs).</p>
 <p>Revenons à notre ping vers <code>192.168.0.11</code>.</p>
 <p>La commande <code>arp -a</code> effectuée dans un terminal de la machine <code>192.168.0.10</code> nous permet de voir qu’elle ne connaît encore personne dans son sous-réseau. La table de correspondance IP ⮀ MAC ne contient que l’adresse de broadcast <code>255.255.255.255</code>, qui permet d’envoyer un message à tout le réseau.<br>
-<a href="K5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="K5.png" class="img-fluid"></a></p>
+<img src="K5.png" class="img-fluid"></p>
 <p>Constatant qu’elle ne sait pas quelle est l’adresse MAC de <code>192.168.0.11</code>, la machine <code>192.168.0.10</code> commence donc par envoyer un message à <strong>tout</strong> le sous-réseau, par l’adresse MAC de broadcast <code>FF:FF:FF:FF:FF:FF</code>. Le switch va lui aussi relayer ce message à tous les équipements qui lui sont connectés (dans notre cas, un seul ordinateur).</p>
 <p><strong>Message 2 : « Moi ! »</strong></p>
 <p>La machine <code>192.168.0.11</code> s’est reconnue dans le message de broadcast de la machine <code>192.168.0.10</code>. Elle lui répond pour lui donner son adresse MAC.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="K6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="K6.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="K6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="K6.png" class="img-fluid"></a></p>
 <p>À partir de ce moment, la machine <code>192.168.0.10</code> sait comment communiquer avec <code>192.168.0.11</code>. Elle l’écrit dans sa table <code>arp</code>, afin de ne plus avoir à émettre le message n°1 :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="K7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="K7.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="K7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="K7.png" class="img-fluid"></a></p>
 <p>Le switch, qui a vu passer sur ses ports 0 et 1 des messages venant des cartes MAC <code>BC:81:81:42:9C:31</code> et <code>2A:AB:AC:27:D6:A7</code>, peut mettre à jour sa table SAT :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="K9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="K9.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="K9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="K9.png" class="img-fluid"></a></p>
 <p>Par la suite, il saura sur quel port rediriger les messages destinés à ces deux adresses MAC. Un switch est un équipement de réseau de la couche 2 du modèle OSI, il ne sait pas lire les adresses IP : il ne travaille qu’avec les adresses MAC.</p>
 <p><strong>Message 3 : le ping est envoyé</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="K8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="K8.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="K8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="K8.png" class="img-fluid"></a></p>
 <p>Schématisons cette trame Ethernet (couche 2 du modèle OSI) :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="trame1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="trame1.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="trame1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="trame1.png" class="img-fluid"></a></p>
 <p><strong>Message 4 : le pong est retourné</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="K10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="K10.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="trame2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="trame2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="K10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="K10.png" class="img-fluid"></a></p>
+<p><a href="trame2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="trame2.png" class="img-fluid"></a></p>
 </section>
 <section id="ping-à-travers-un-routeur" class="level3">
 <h3 class="anchored" data-anchor-id="ping-à-travers-un-routeur">2.2. Ping à travers un routeur</h3>
 <p>Vous pouvez télécharger le fichier <a href="ping_routeur.fls">ping_routeur.fls</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="schema_routeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="schema_routeur.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="schema_routeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="schema_routeur.png" class="img-fluid"></a></p>
 <p>L’objectif est d’observer les différentes trames lors d’un ping entre :</p>
 <ul>
 <li>la machine <code>192.168.0.1 / 24</code> (adresse MAC <code>F9:E1:D6:0B:29:03</code> ) et</li>
@@ -1054,20 +1024,12 @@ C’est la couche où le message est transmis physiquement d’un point à un au
 </ul>
 <p><strong>Étape 0 : le routeur signale sa présence</strong></p>
 <p>Lors de l’observation des messages reçus ou émis par la machine <code>192.168.0.1</code>, on peut être intrigué par ce tout premier message reçu, émis par le routeur :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="K11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="K11.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="K11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="K11.png" class="img-fluid"></a></p>
 <p>On peut y distinguer les 4 couches du modèle Internet. Le routeur, par ce message distribué à tous les éléments du sous-réseau A (il envoie un message équivalent sur son sous-réseau B), déclare sa présence, et le fait qu’il possède deux interfaces, une pour chaque réseau. Il se positionne ainsi comme une passerelle : «c’est par moi qu’il faudra passer si vous voulez sortir de votre sous-réseau». Dans cette trame envoyée figure son adresse MAC, de sorte que tous les membres de son sous-réseau pourront donc communiquer avec lui.</p>
 <p><strong>Étape 1 : de <code>192.168.0.1</code> vers le routeur</strong></p>
 <p>La machine <code>192.168.0.1 / 24</code> calcule que la machine <code>192.168.1.1 / 24</code> avec laquelle elle veut communiquer n’est <strong>pas</strong> dans son sous-réseau. Elle va donc envoyer son message à sa passerelle, qui est l’adresse du routeur dans son sous-réseau.</p>
 <p>Cette première trame est :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="trame3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="trame3.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="trame3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="trame3.png" class="img-fluid"></a></p>
 <p><strong>Étape 2 : le routeur décapsule la trame</strong></p>
 <p>Le routeur est un équipement de réseau de couche 3 (couche réseau). Il doit observer le contenu du paquet IP (sans remonter jusqu’au contenu du message) pour savoir, suivant le procédé de <strong>routage</strong> (voir cours de Terminale), où acheminer ce paquet.</p>
 <p>Dans notre cas, l’adresse IP <code>192.168.1.1</code>de destination lui est accessible : elle fait partie de son sous-réseau B.</p>
@@ -1092,17 +1054,9 @@ NAT : translation d’adresse
 <li>l’adresse MAC de destination : il va mettre l’adresse MAC de <code>192.168.1.1</code> (qu’il aura peut-être récupérée au préalable par le protocole ARP)</li>
 </ul>
 <p>Cette deuxième trame est donc :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="trame4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="trame4.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="trame4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="trame4.png" class="img-fluid"></a></p>
 <p>On peut observer dans Filius cette trame, en se positionnant sur l’interface <code>192.168.1.254</code> du routeur, ou sur <code>192.168.1.1</code> :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="K12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="K12.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="K12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="K12.png" class="img-fluid"></a></p>
 <p>En suivant le même principe, la machine <code>192.168.1.1</code> pourra envoyer son <em>pong</em>.</p>
 </section>
 </section>
@@ -1118,21 +1072,13 @@ NAT : translation d’adresse
 </section>
 <section id="situation-idéale" class="level3">
 <h3 class="anchored" data-anchor-id="situation-idéale">2. Situation idéale</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="ideale.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="ideale.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="ideale.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="ideale.png" class="img-fluid"></a></p>
 <p>Dans cette situation, les sous-messages arrivent tous à destination dans le bon ordre. La transmission est correcte.</p>
 </section>
 <section id="situation-réelle" class="level3">
 <h3 class="anchored" data-anchor-id="situation-réelle">3. Situation réelle</h3>
 <p>Mais parfois, les choses ne se passent pas toujours aussi bien. Car si on maîtrise parfaitement le timing de l’envoi des sous-messages d’Alice, on ne sait pas combien de temps vont mettre ces sous-messages pour arriver, ni même (attention je vais passer dans un tunnel) s’ils ne vont pas être détruits en route.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="realite.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="realite.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="realite.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="realite.png" class="img-fluid"></a></p>
 <p>Le sous-message M0 est arrivé après le M1, le message M2 n’est jamais arrivé…</p>
 <p>Que faire ?</p>
 <p>Écartons l’idée de numéroter les sous-messages, afin que Bob puisse remettre dans l’ordre les messages arrivés, ou même redemander spécifiquement des sous-messages perdus. C’est ce que réalise le protocole TCP (couche 4 — transport), c’est très efficace, mais cher en ressources. Essayons de trouver une solution plus basique.</p>
@@ -1140,20 +1086,12 @@ NAT : translation d’adresse
 <section id="solution-naïve" class="level3">
 <h3 class="anchored" data-anchor-id="solution-naïve">3. Solution naïve…</h3>
 <p>Pourquoi ne pas demander à Bob d’envoyer un signal pour dire à Alice qu’il vient bien de recevoir son sous-message ? Nous appelerons ce signal ACK (comme <em>acknowledgement</em>, traduisible par «accusé de réception»). Ce signal ACK permettra à Alice de renvoyer un message qu’elle considérera comme perdu :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="naive.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="naive.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="naive.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="naive.png" class="img-fluid"></a></p>
 <p>N’ayant pas reçu le ACK consécutif à son message M1, Alice suppose (avec raison) que ce message n’est pas parvenu jusqu’à Bob, et donc renvoie le message M1.</p>
 </section>
 <section id="mais-peu-efficace" class="level3">
 <h3 class="anchored" data-anchor-id="mais-peu-efficace">4. Mais peu efficace…</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="naivebad.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="naivebad.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="naivebad.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="naivebad.png" class="img-fluid"></a></p>
 <p>Le deuxième ACK de Bob a mis trop de temps pour arriver (ou s’est perdu en route) et donc Alice a supposé que son sous-message M1 n’était pas arrivé. Elle l’a donc renvoyé, et Bob se retrouve avec deux fois le sous-message M1. La transmission est incorrecte. En faisant transiter un message entre Bob et Alice, nous multiplions par 2 la probabilité que des problèmes techniques de transmission interviennent. Et pour l’instant rien ne nous permet de les détecter.</p>
 </section>
 <section id="bob-prend-le-contrôle" class="level3">
@@ -1169,28 +1107,16 @@ NAT : translation d’adresse
 <p>Observons ce protocole dans plusieurs cas :</p>
 <section id="cas-où-le-sous-message-est-perdu" class="level5">
 <h5 class="anchored" data-anchor-id="cas-où-le-sous-message-est-perdu">5.1 Cas où le sous-message est perdu</h5>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="alt2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="alt2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="alt2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="alt2.png" class="img-fluid"></a></p>
 </section>
 <section id="cas-où-le-ack-est-perdu" class="level5">
 <h5 class="anchored" data-anchor-id="cas-où-le-ack-est-perdu">5.2 Cas où le ACK est perdu</h5>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="alt1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="alt1.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="alt1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="alt1.png" class="img-fluid"></a></p>
 <p>Le protocole a bien détecté le doublon du sous-message M1.</p>
 </section>
 <section id="cas-où-un-sous-message-est-en-retard" class="level5">
 <h5 class="anchored" data-anchor-id="cas-où-un-sous-message-est-en-retard">5.3 Cas où un sous-message est en retard</h5>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="alt3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="alt3.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="alt3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="alt3.png" class="img-fluid"></a></p>
 <p>Le protocole a bien détecté le doublon du sous-message M1… mais que se passerait-il si notre premier sous-message M1 était <em>encore plus</em> en retard ?</p>
 </section>
 </section>
@@ -1206,7 +1132,7 @@ NAT : translation d’adresse
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Sources</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Sources</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-lassus_premiere" class="csl-entry" role="listitem">
 LASSUS, Gilles. 2021. <span>«&nbsp;Première NSI - Lycée François Mauriac - Bordeaux&nbsp;»</span>. <a href="https://glassus.github.io/premiere_nsi/">https://glassus.github.io/premiere_nsi/</a>.
 </div>
@@ -1434,6 +1360,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1483,15 +1424,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
+        typesetMath(container);
         return container.innerHTML
       } else {
+        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -1500,6 +1471,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
+      typesetMath(note);
       return note.innerHTML;
     }
   }
@@ -1542,6 +1514,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -1613,6 +1608,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1670,20 +1691,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // default icon
-          link.classList.add("external");
-      }
-    }
 });
 </script>
 </div> <!-- /content -->
@@ -1718,7 +1725,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});</script>
 
 
 

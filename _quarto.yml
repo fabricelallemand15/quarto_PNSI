@@ -67,6 +67,7 @@ website:
           - 07_flottants/index.qmd
           - 07_flottants/flottants_cours.qmd
           - 07_flottants/flottants_exos.qmd
+          - 07_flottants/mini_tp_nombres.qmd
       - section: "Ch. 8 - Booléens"
         contents: 
           - 08_booleens/index.qmd
