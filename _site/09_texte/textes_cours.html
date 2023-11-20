@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.274">
+<meta name="generator" content="quarto-1.4.506">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première - 5. Représentation d’un texte en machine</title>
+<title>NSI - Première - Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -78,23 +78,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Pas de résultats",
     "search-matching-documents-text": "documents trouvés",
@@ -137,7 +138,7 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
@@ -151,35 +152,40 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+    <a class="nav-link" href="https://python.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../ressources.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+    <a class="nav-link" href="../ressources.html"> 
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">5. Représentation d’un texte en machine</li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Cours</li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -187,7 +193,7 @@ cookieconsent.run({
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -439,14 +445,23 @@ cookieconsent.run({
       </div>
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/booleens_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/booleens_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/booleens_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/booleens_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -459,8 +474,11 @@ cookieconsent.run({
       </div>
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">09_texte/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../09_texte/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
  <span class="menu-text">09_texte/texte_cours.qmd</span>
   </li>
@@ -862,7 +880,7 @@ cookieconsent.run({
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -882,7 +900,7 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">5. Représentation d’un texte en machine</h1>
+<h1 class="title">Cours</h1>
 </div>
 
 
@@ -898,6 +916,7 @@ cookieconsent.run({
 
 </header>
 
+
 <p>Une chaîne de caractères est une suite ordonnée de caractères. Ces caractères peuvent être :</p>
 <ul>
 <li>des lettres minuscules ou majuscules ;</li>
@@ -907,10 +926,23 @@ cookieconsent.run({
 <p>En machine, les caractères, comme toute autre <em>information</em>, est codée de façon numérique par un nombre binaire.</p>
 <p>Le problème qui se pose est que les lettres de l’alphabet, par exemple, ne sont pas les mêmes dans toutes les langues et des caractères. Il faut pouvoir coder des caractères aussi divers que : é, à, ô, ß, <span class="math inline">\(\Delta\)</span>, ﺾ, ネ, 乻.</p>
 <p>Différents systèmes d’<strong>encodage</strong> des caractères existent.</p>
-<p>!!! danger “À retenir” Une représentation informatique des caractères nécessite d’associer à chaque caractère une unique séquence d’octets. Cette conversion s’effectue à l’aide d’une <strong>table de codage</strong> et d’un <strong>encodage</strong>.</p>
-<pre><code>* Une table de codage ou jeu de caractères ou charset, associe un entier nommé point de code à un
-caractère.
-* Un encodage associe à un point de code une séquence d'octets.</code></pre>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+À retenir
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une représentation informatique des caractères nécessite d’associer à chaque caractère une unique séquence d’octets. Cette conversion s’effectue à l’aide d’une <strong>table de codage</strong> et d’un <strong>encodage</strong>.</p>
+<ul>
+<li>Une table de codage ou jeu de caractères ou charset, associe un entier nommé point de code à un caractère.</li>
+<li>Un encodage associe à un point de code une séquence d’octets.</li>
+</ul>
+</div>
+</div>
 <p>Pour une table de codage, il peut exister plusieurs encodages : ce sera le cas pour la table Unicode, présentée ci-dessous, pour laquelle plusieurs encodages existent (UTF-8, UTF-16, …).</p>
 <section id="le-code-ascii" class="level2">
 <h2 class="anchored" data-anchor-id="le-code-ascii">1. Le code ASCII</h2>
@@ -921,11 +953,7 @@ caractère.
 <p>Les chiffres sont codés par le nombre binaire <span class="math inline">\(0011\;XXXX_2\)</span> où <span class="math inline">\(XXXX_2\)</span> est la valeur du chiffre en binaire. Par exemple 5 est codé par <span class="math inline">\(0011\;0101_2\)</span>.</p>
 <p>Le code ASCII d’un caractère étant composé de 8 bits, il peut aussi être représenté par un nombre hexadécimal à deux chiffres.</p>
 <p>Voici la table ASCII complète :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../../assets/images/table_ASCII.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../../../assets/images/table_ASCII.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="table_ASCII.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="table_ASCII.png" class="img-fluid"></a></p>
 <p>Le code ASCII est suffisant pour écrire un texte en anglais ou pour écrire un programme informatique et il est encore très largement utilisé de nos jours, car il a l’avantage d’être léger.</p>
 <p>Cependant, il est insuffisant pour représenter d’autres langues que l’anglais : pas de caractères accentués, de c-cédille, pas de caractères grecs, hébreux, arabes, chinois, …</p>
 </section>
@@ -947,11 +975,7 @@ caractère.
 <p>Les 128 premiers caractères de la table UTF-8 sont compatibles avec le codage ASCII. Ainsi le codage UTF-8 d’un texte ne comportant que des caractères présents dans la table ASCII sera le même que le codage ASCII de ce texte.</p>
 <p>Ce ne sera pas vrai pour un texte ISO-8859-1.</p>
 <p>Il importe donc, quand on veut décoder un texte, de savoir quel est le codage utilisé sous peine de décoder improprement les caractères, ce qui arrive par exemple lorsque l’encodage d’une page web n’est pas bien reconnu par le navigateur :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../../assets/images/erreur_encodage.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="../../../assets/images/erreur_encodage.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="erreur_encodage.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="erreur_encodage.png" class="img-fluid"></a></p>
 <p>On représente en général un code UTF-8 sous la forme <code>U+XXXX</code> où XXXX est un nombre écrit en hexadécimal.</p>
 <p>En voici quelques exemples :</p>
 <table class="table">
@@ -985,106 +1009,112 @@ caractère.
 </tr>
 </tbody>
 </table>
-<p>Le site <a href="unicode-table.com/fr">unicode-table.com/fr</a> liste tous les caractères de la table Unicode.</p>
-<p>!!! note “Remarque” Depuis sa version 3, Python utilise l’encodage UTF-8 pour les chaînes de caractères.</p>
-<pre><code>Nous disposons en Python de deux fonctions liées à ce codage :
-
-* `chr(x)` : retourne le caractère codé par l'entier $x$ écrit en base 10 ;
-* `ord(c)` : retourne l'entier correspondant au caractère c (de type str).
-
-````pycon
-&gt;&gt;&gt; chr(244)
-'ô'
-&gt;&gt;&gt; ord("€")
-8364
-````</code></pre>
+<p>Le site <a href="https://symbl.cc/en/unicode/table/" target="_blank">symbl.cc</a> liste tous les caractères de la table Unicode.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remarque
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Depuis sa version 3, Python utilise l’encodage UTF-8 pour les chaînes de caractères.</p>
+<p>Nous disposons en Python de deux fonctions liées à ce codage :</p>
+<ul>
+<li><code>chr(x)</code> : retourne le caractère codé par l’entier <span class="math inline">\(x\)</span> écrit en base 10 ;</li>
+<li><code>ord(c)</code> : retourne l’entier correspondant au caractère c (de type str).</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">chr</span>(<span class="dv">244</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">'ô'</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">ord</span>(<span class="st">"€"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dv">8364</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </section>
 <section id="convertir-un-fichier-dun-encodage-à-un-autre" class="level2">
 <h2 class="anchored" data-anchor-id="convertir-un-fichier-dun-encodage-à-un-autre">4. Convertir un fichier d’un encodage à un autre</h2>
-<p>Pour convertir un fichier d’un encodage à un autre, on peut utiliser l’éditeur Notepad++ dans lequel on trouve un menu “Encodage” comprenant par exemple une commande “convertir en UTF-8”.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../../assets/images/notepad_encodage.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="../../../assets/images/notepad_encodage.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p>Pour convertir un fichier d’un encodage à un autre, on peut utiliser l’éditeur Notepad++ (sous Windows) ou son clone Notepadqq (sous Linux) dans lequel on trouve un menu “Encodage” comprenant par exemple une commande “convertir en UTF-8”.</p>
+<p><a href="notepad_encodage.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="notepad_encodage.png" class="img-fluid"></a></p>
 </section>
 <section id="ouverture-dun-fichier-texte-en-python" class="level2">
 <h2 class="anchored" data-anchor-id="ouverture-dun-fichier-texte-en-python">5. Ouverture d’un fichier texte en Python</h2>
 <p>Une bonne compréhension du problème de l’encodage des caractères permet d’éviter certaines erreurs lors de l’utilisation de fichiers textes en Python.</p>
 <p>Considérons par exemple deux fichiers textes <code>texte_ascii.txt</code> et <code>texte_utf-8.txt</code> contenant le même texte, l’un étant encodé en ASCII étendu (c’est-à-dire en ISO-8859-1) et l’autre en UTF-8.</p>
 <p>Le programme ci-dessous ouvre ces fichiers l’un après l’autre et affiche leur contenu dans la console interactive.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> io <span class="im">import</span> <span class="bu">open</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"texte_ascii.txt"</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> f.readlines():</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(ligne)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>f.close()</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"---------"</span>)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"texte_utf-8.txt"</span>)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> f.readlines():</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(ligne)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>f.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> io <span class="im">import</span> <span class="bu">open</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"texte_ascii.txt"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> f.readlines():</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(ligne)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>f.close()</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"---------"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"texte_utf-8.txt"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> f.readlines():</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(ligne)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>f.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Tout d’abord, le programme est exécuté sous Windows :</p>
-<pre class="pycon"><code>Ceci est un fichier texte
-
-encodé au format ASCII étendu
-
-Voici quelques mots avec des caractères spéciaux
-
-comme par exemple forçat ou encore Niño ...
----------
-Ceci est un fichier texte
-
-encodÃ© au format UTF-8 Ã©tendu
-
-Voici quelques mots avec des caractÃ¨res spÃ©ciaux
-
-comme par exemple forÃ§at ou encore NiÃ±o ...</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Ceci est un fichier texte</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>encodé au <span class="bu">format</span> ASCII étendu</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Voici quelques mots avec des caractères spéciaux</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>comme par exemple forçat ou encore Niño ...</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">---------</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>Ceci est un fichier texte</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>encodÃ© au <span class="bu">format</span> UTF<span class="op">-</span><span class="dv">8</span> Ã©tendu</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>Voici quelques mots avec des caractÃ¨res spÃ©ciaux</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>comme par exemple forÃ§at ou encore NiÃ±o ...</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Et maintenant sous Linux :</p>
-<pre class="pycon"><code>Traceback (most recent call last):
-  File "/usr/lib/python3.10/idlelib/run.py", line 578, in runcode
-    exec(code, self.locals)
-  File "/home/fabrice/windows/lecture_fichier.py", line 4, in &lt;module&gt;
-    for ligne in f.readlines():
-  File "/usr/lib/python3.10/codecs.py", line 322, in decode
-    (result, consumed) = self._buffer_decode(data, self.errors, final)
-UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 32: invalid continuation byte</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/usr/lib/python3.10/idlelib/run.py"</span>, line <span class="dv">578</span>, <span class="kw">in</span> runcode</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">exec</span>(code, <span class="va">self</span>.<span class="bu">locals</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/home/fabrice/windows/lecture_fichier.py"</span>, line <span class="dv">4</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ligne <span class="kw">in</span> f.readlines():</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/usr/lib/python3.10/codecs.py"</span>, line <span class="dv">322</span>, <span class="kw">in</span> decode</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    (result, consumed) <span class="op">=</span> <span class="va">self</span>._buffer_decode(data, <span class="va">self</span>.errors, final)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="pp">UnicodeDecodeError</span>: <span class="st">'utf-8'</span> codec can<span class="st">'t decode byte 0xe9 in position 32: invalid continuation byte</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Pourquoi cette différence ? La fonction <code>open</code> de Python essaie de lire le fichier texte en utilisant l’encodage du système d’exploitation dans lequel Python est utilisé.</p>
 <ul>
 <li>Sous Windows, l’encodage du système est un dérivé de ISO-8859-1. Le fichier ASCII est donc bien lu et affiché, le fichier UTF-8, lui, est bien lu, mais les caractères ne sont pas affichés correctement.</li>
 <li>Sous Linux, l’encodage du système est UTF-8. Le fichier ASCII provoque une erreur en lecture car Python s’attend par défaut à lire des caractères encodés en UTF-8.</li>
 </ul>
 <p>Pour éviter ce type de problème et assurer la portabilité d’un programme d’un système d’exploitation à un autre, il est préférable de toujours indiquer l’encodage à la fonction <code>open</code>. Le programme suivant fonctionnera sous les deux systèmes et provoquera l’affichage attendu.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> io <span class="im">import</span> <span class="bu">open</span></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> io <span class="im">import</span> <span class="bu">open</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"texte_ascii.txt"</span>, encoding<span class="op">=</span><span class="st">"ISO-8859-1"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> f.readlines():</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(ligne)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>f.close()</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"---------"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"texte_utf-8.txt"</span>, encoding<span class="op">=</span><span class="st">"UTF-8"</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> f.readlines():</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(ligne)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>f.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Ceci est un fichier texte</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"texte_ascii.txt"</span>, encoding<span class="op">=</span><span class="st">"ISO-8859-1"</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> f.readlines():</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(ligne)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>f.close()</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"---------"</span>)</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"texte_utf-8.txt"</span>, encoding<span class="op">=</span><span class="st">"UTF-8"</span>)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> f.readlines():</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(ligne)</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>f.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre class="pycon"><code>Ceci est un fichier texte
-
-encodé au format ASCII étendu
-
-Voici quelques mots avec des caractères spéciaux
-
-comme par exemple forçat ou encore Niño ...
----------
-Ceci est un fichier texte
-
-encodé au format UTF-8 étendu
-
-Voici quelques mots avec des caractères spéciaux
-
-comme par exemple forçat ou encore Niño ...</code></pre>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>encodé au <span class="bu">format</span> ASCII étendu</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>Voici quelques mots avec des caractères spéciaux</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>comme par exemple forçat ou encore Niño ...</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="op">---------</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>Ceci est un fichier texte</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>encodé au <span class="bu">format</span> UTF<span class="op">-</span><span class="dv">8</span> étendu</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>Voici quelques mots avec des caractères spéciaux</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>comme par exemple forçat ou encore Niño ...</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
@@ -1313,6 +1343,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1362,15 +1407,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
+        typesetMath(container);
         return container.innerHTML
       } else {
+        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -1379,6 +1454,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
+      typesetMath(note);
       return note.innerHTML;
     }
   }
@@ -1421,6 +1497,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -1492,6 +1591,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1549,20 +1674,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // default icon
-          link.classList.add("external");
-      }
-    }
 });
 </script>
 </div> <!-- /content -->
@@ -1597,7 +1708,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
 
 
 

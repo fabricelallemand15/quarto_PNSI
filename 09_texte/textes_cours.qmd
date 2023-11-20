@@ -1,5 +1,5 @@
 ---
-title: 5. Représentation d'un texte en machine
+title: Cours
 ---
 
 Une chaîne de caractères est une suite ordonnée de caractères. Ces caractères peuvent être :
@@ -14,12 +14,14 @@ Le problème qui se pose est que les lettres de l'alphabet, par exemple, ne sont
 
 Différents systèmes d'**encodage** des caractères existent.
 
-!!! danger "À retenir"
-    Une représentation informatique des caractères nécessite d'associer à chaque caractère une unique séquence d'octets. Cette conversion s'effectue à l'aide d'une **table de codage** et d'un **encodage**.
+:::{.callout-warning}
+## À retenir
+Une représentation informatique des caractères nécessite d'associer à chaque caractère une unique séquence d'octets. Cette conversion s'effectue à l'aide d'une **table de codage** et d'un **encodage**.
 
-    * Une table de codage ou jeu de caractères ou charset, associe un entier nommé point de code à un
-    caractère.
-    * Un encodage associe à un point de code une séquence d'octets.
+* Une table de codage ou jeu de caractères ou charset, associe un entier nommé point de code à un
+caractère.
+* Un encodage associe à un point de code une séquence d'octets.
+:::
 
 Pour une table de codage, il peut exister plusieurs encodages : ce sera le cas pour la table Unicode, présentée ci-dessous, pour laquelle plusieurs encodages existent (UTF-8, UTF-16, ...).
 
@@ -39,7 +41,7 @@ Le code ASCII d'un caractère étant composé de 8 bits, il peut aussi être rep
 
 Voici la table ASCII complète : 
 
-![](../../../assets/images/table_ASCII.png)
+![](table_ASCII.png)
 
 Le code ASCII est suffisant pour écrire un texte en anglais ou pour écrire un programme informatique et il est encore très largement utilisé de nos jours, car il a l'avantage d'être léger.
 
@@ -70,7 +72,7 @@ Ce ne sera pas vrai pour un texte ISO-8859-1.
 
 Il importe donc, quand on veut décoder un texte, de savoir quel est le codage utilisé sous peine de décoder improprement les caractères, ce qui arrive par exemple lorsque l'encodage d'une page web n'est pas bien reconnu par le navigateur :
 
-![](../../../assets/images/erreur_encodage.png)
+![](erreur_encodage.png)
 
 On représente en général un code UTF-8 sous la forme `U+XXXX` où XXXX est un nombre écrit en hexadécimal.
 
@@ -83,28 +85,30 @@ En voici quelques exemples :
 | U+30CD | ネ | Japonais katakana 
 | U+4E7B | 乻 | Chinois |
 
-Le site [unicode-table.com/fr](unicode-table.com/fr) liste tous les caractères de la table Unicode.
+Le site [symbl.cc](https://symbl.cc/en/unicode/table/){target="_blank"} liste tous les caractères de la table Unicode.
 
-!!! note "Remarque"
-    Depuis sa version 3, Python utilise l'encodage UTF-8 pour les chaînes de caractères.
+:::{.callout-note}
+## Remarque
+Depuis sa version 3, Python utilise l'encodage UTF-8 pour les chaînes de caractères.
 
-    Nous disposons en Python de deux fonctions liées à ce codage :
+Nous disposons en Python de deux fonctions liées à ce codage :
 
-    * `chr(x)` : retourne le caractère codé par l'entier $x$ écrit en base 10 ;
-    * `ord(c)` : retourne l'entier correspondant au caractère c (de type str).
+* `chr(x)` : retourne le caractère codé par l'entier $x$ écrit en base 10 ;
+* `ord(c)` : retourne l'entier correspondant au caractère c (de type str).
 
-    ````pycon
-    >>> chr(244)
-    'ô'
-    >>> ord("€")
-    8364
-    ````
+````python
+>>> chr(244)
+'ô'
+>>> ord("€")
+8364
+````
+:::
 
 ## 4. Convertir un fichier d'un encodage à un autre
 
-Pour convertir un fichier d'un encodage à un autre, on peut utiliser l'éditeur Notepad++ dans lequel on trouve un menu "Encodage" comprenant par exemple une commande "convertir en UTF-8".
+Pour convertir un fichier d'un encodage à un autre, on peut utiliser l'éditeur Notepad++ (sous Windows) ou son clone Notepadqq (sous Linux) dans lequel on trouve un menu "Encodage" comprenant par exemple une commande "convertir en UTF-8".
 
-![](../../../assets/images/notepad_encodage.png)
+![](notepad_encodage.png)
 
 ## 5. Ouverture d'un fichier texte en Python
 
@@ -132,7 +136,7 @@ f.close()
 
 Tout d'abord, le programme est exécuté sous Windows :
 
-````pycon
+````python
 Ceci est un fichier texte
 
 encodé au format ASCII étendu
@@ -152,7 +156,7 @@ comme par exemple forÃ§at ou encore NiÃ±o ...
 
 Et maintenant sous Linux :
 
-````pycon
+````python
 Traceback (most recent call last):
   File "/usr/lib/python3.10/idlelib/run.py", line 578, in runcode
     exec(code, self.locals)
@@ -186,7 +190,7 @@ for ligne in f.readlines():
 f.close()
 ````
 
-````pycon
+````python
 Ceci est un fichier texte
 
 encodé au format ASCII étendu

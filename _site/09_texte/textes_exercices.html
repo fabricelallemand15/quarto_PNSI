@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.274">
+<meta name="generator" content="quarto-1.4.506">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – textes_exercices</title>
+<title>NSI - Première - Exercices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -52,12 +86,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Pas de résultats",
     "search-matching-documents-text": "documents trouvés",
@@ -100,7 +135,7 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
@@ -114,35 +149,40 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+    <a class="nav-link" href="https://python.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../ressources.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+    <a class="nav-link" href="../ressources.html"> 
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Exercices</li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -150,7 +190,7 @@ cookieconsent.run({
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -402,14 +442,23 @@ cookieconsent.run({
       </div>
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/booleens_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/booleens_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/booleens_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/booleens_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -422,8 +471,11 @@ cookieconsent.run({
       </div>
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">09_texte/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../09_texte/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
  <span class="menu-text">09_texte/texte_cours.qmd</span>
   </li>
@@ -825,49 +877,70 @@ cookieconsent.run({
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#fontawesome-solid-computer-exercice-1" id="toc-fontawesome-solid-computer-exercice-1" class="nav-link active" data-scroll-target="#fontawesome-solid-computer-exercice-1">:fontawesome-solid-computer: Exercice 1</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-2" id="toc-fontawesome-solid-computer-exercice-2" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-2">:fontawesome-solid-computer: Exercice 2</a></li>
-  <li><a href="#octicons-pencil-16-exercice-3" id="toc-octicons-pencil-16-exercice-3" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-3">:octicons-pencil-16: Exercice 3</a></li>
-  <li><a href="#octicons-pencil-16-exercice-4" id="toc-octicons-pencil-16-exercice-4" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-4">:octicons-pencil-16: Exercice 4</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-5" id="toc-fontawesome-solid-computer-exercice-5" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-5">:fontawesome-solid-computer: Exercice 5</a></li>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link active" data-scroll-target="#exercice-1"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 1</a></li>
+  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 2</a></li>
+  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</a></li>
+  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 4</a></li>
+  <li><a href="#exercice-5" id="toc-exercice-5" class="nav-link" data-scroll-target="#exercice-5"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 5</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Exercices</h1>
+</div>
 
 
-<p><em>Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
-<p><em>Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit.</em></p>
-<section id="fontawesome-solid-computer-exercice-1" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-1">:fontawesome-solid-computer: Exercice 1</h2>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-desktop" aria-label="desktop"></i> sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> doivent être résolus par écrit.</em></p>
+<section id="exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 1</h2>
 <p>Écrire une procédure qui affiche à l’écran la table des 128 caractères ASCII sur 8 lignes de 16 colonnes, avec deux boucles <code>for</code> imbriquées et la fonction <code>chr()</code>.</p>
-<hr>
 </section>
-<section id="fontawesome-solid-computer-exercice-2" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-2">:fontawesome-solid-computer: Exercice 2</h2>
+<section id="exercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 2</h2>
 <p>L’encodage consiste à coder un caractère par un nombre. Il ne faut pas confondre cette opération de <strong>numérisation</strong> avec le <strong>chiffrement</strong>, ou <strong>cryptage</strong>, qui consiste aussi à remplacer des caractères par des nombres, mais de telle façon que le décodage ne puisse se faire que par le destinataire du message. La numérisation est cependant le plus souvent la première étape du chiffrement.</p>
 <p>Considérons le procédé <strong>rot-13</strong> qui consiste à remplacer une lettre codée par l’entier <span class="math inline">\(n\)</span> par la lettre codée par l’entier <span class="math inline">\(n+13\)</span> (on se limite aux caractères de la table ASCII).</p>
 <p>Comme l’alphabet latin compte 26 lettres, le déchiffrement se fait exactement par la même opération.</p>
 <p>Pour trouver que l’image par rot-13 du caractère ‘R’ est ‘E’ :</p>
 <ul>
-<li>on calcule d’abord le rang alphabétique du caractère : <code>pycon     &gt;&gt;&gt; ord('R') - ord('A')     17</code></li>
-<li>puis on ajoute 13 à ce rang et on prend le reste dans la division euclidienne par 26 : <code>pycon     &gt;&gt;&gt; (ord('R') - ord('A') + 13) % 26     4</code></li>
-<li>enfin on retrouve le rang du caractère associé au rang alphabétique calculé : <code>pycon     &gt;&gt;&gt; chr(ord('A') + 4)     'E'</code></li>
+<li><p>on calcule d’abord le rang alphabétique du caractère :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">ord</span>(<span class="st">'R'</span>) <span class="op">-</span> <span class="bu">ord</span>(<span class="st">'A'</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">17</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>puis on ajoute 13 à ce rang et on prend le reste dans la division euclidienne par 26 :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> (<span class="bu">ord</span>(<span class="st">'R'</span>) <span class="op">-</span> <span class="bu">ord</span>(<span class="st">'A'</span>) <span class="op">+</span> <span class="dv">13</span>) <span class="op">%</span> <span class="dv">26</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>enfin on retrouve le rang du caractère associé au rang alphabétique calculé :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">chr</span>(<span class="bu">ord</span>(<span class="st">'A'</span>) <span class="op">+</span> <span class="dv">4</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">'E'</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 <p>Écrire une fonction <code>rot13(chaine)</code> qui chiffre ou déchiffre la chaîne (en majuscules ou convertie en majuscules avec <code>chaine.upper())</code> passée en paramètre, avec l’algorithme rot13.</p>
-<hr>
 </section>
-<section id="octicons-pencil-16-exercice-3" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-3">:octicons-pencil-16: Exercice 3</h2>
+<section id="exercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</h2>
 <ol type="1">
 <li><p>Sur une page web qui s’affiche sur notre navigateur on peut lire :</p>
 <p>« En consÃ©quence, l’AssemblÃ©e Nationale reconnaÃ®t et dÃ©clare, en prÃ©sence »</p>
@@ -886,10 +959,9 @@ cookieconsent.run({
 <li><label><input type="checkbox">Il n’est passer compatible avec la plupart des systèmes informatiques</label></li>
 </ul></li>
 </ol>
-<hr>
 </section>
-<section id="octicons-pencil-16-exercice-4" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-4">:octicons-pencil-16: Exercice 4</h2>
+<section id="exercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 4</h2>
 <ol type="1">
 <li>Parmi les caractères ci-dessous, lequel ne fait pas partie du code ASCII ?
 <ul class="task-list">
@@ -913,14 +985,14 @@ cookieconsent.run({
 <li><label><input type="checkbox">il permet de coder différentes polices de caractères</label></li>
 </ul></li>
 </ol>
-<hr>
 </section>
-<section id="fontawesome-solid-computer-exercice-5" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-5">:fontawesome-solid-computer: Exercice 5</h2>
-<p>En Python, pour saisir directement un caractère à partir de son point de code Unicode, on peut utiliser des séquences d’échappement spéciales : ‘’ si le point de code peut s’écrire avec 4 chiffres hexadécimaux, ou ‘’ s’il faut plus de quatre chiffres, en remplissant par des 0 à gauche les positions vides sur les huit possibles.</p>
+<section id="exercice-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-5"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 5</h2>
+<p>En Python, pour saisir directement un caractère à partir de son point de code Unicode, on peut utiliser des séquences d’échappement spéciales : ‘\uxxxx’ si le point de code peut s’écrire avec 4 chiffres hexadécimaux, ou ‘\Uxxxxxxxx’ s’il faut plus de quatre chiffres, en remplissant par des 0 à gauche les positions vides sur les huit possibles.</p>
 <ol type="1">
-<li>Tester l’instruction ci-dessous dans une console Python : <code>py     print("\U0001f600")</code></li>
-<li>Écrire un code Python qui affiche tous les caractères dont le point de code est compris entre <code>U+1F600</code> et <code>U+1F64F</code> sur des lignes de 16 caractères par colonne.</li>
+<li><p>Tester l’instruction ci-dessous dans une console Python :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\U0001f600</span><span class="st">"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Écrire un code Python qui affiche tous les caractères dont le point de code est compris entre <code>U+1F600</code> et <code>U+1F64F</code> sur des lignes de 16 caractères par colonne.</p></li>
 </ol>
 
 
@@ -1150,6 +1222,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1199,15 +1286,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
+        typesetMath(container);
         return container.innerHTML
       } else {
+        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -1216,6 +1333,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
+      typesetMath(note);
       return note.innerHTML;
     }
   }
@@ -1258,6 +1376,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -1329,6 +1470,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1386,20 +1553,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // default icon
-          link.classList.add("external");
-      }
-    }
 });
 </script>
 </div> <!-- /content -->

@@ -8,6 +8,7 @@ website:
   site-url: https://flallemand.fr/PNSI
   repo-url: https://github.com/fabricelallemand15/quarto_PNSI
   repo-actions: [issue]
+  reader-mode: true
   navbar:
     search: false
     background: "#2c3e50"
