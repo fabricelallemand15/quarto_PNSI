@@ -3134,5 +3134,71 @@
     "title": "Mentions légales",
     "section": "",
     "text": "Mentions légales\n\nSite personnel de Fabrice LALLEMAND, Lycée Emile DUCLAUX, 16 avenue Henri MONDOR, 15000 AURILLAC, téléphone 04 71 48 22 22.\nCe site est hébergé en Auvergne par o2switch."
+  },
+  {
+    "objectID": "09_texte/textes_exos.html",
+    "href": "09_texte/textes_exos.html",
+    "title": "Exercices",
+    "section": "",
+    "text": "Les exercices précédés du symbole  sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole  doivent être résolus par écrit.",
+    "crumbs": [
+      "Ch. 9 - Représentation d'un texte en machine",
+      "Exercices"
+    ]
+  },
+  {
+    "objectID": "09_texte/textes_exos.html#exercice-1",
+    "href": "09_texte/textes_exos.html#exercice-1",
+    "title": "Exercices",
+    "section": " Exercice 1",
+    "text": "Exercice 1\nÉcrire une procédure qui affiche à l’écran la table des 128 caractères ASCII sur 8 lignes de 16 colonnes, avec deux boucles for imbriquées et la fonction chr().",
+    "crumbs": [
+      "Ch. 9 - Représentation d'un texte en machine",
+      "Exercices"
+    ]
+  },
+  {
+    "objectID": "09_texte/textes_exos.html#exercice-2",
+    "href": "09_texte/textes_exos.html#exercice-2",
+    "title": "Exercices",
+    "section": " Exercice 2",
+    "text": "Exercice 2\nL’encodage consiste à coder un caractère par un nombre. Il ne faut pas confondre cette opération de numérisation avec le chiffrement, ou cryptage, qui consiste aussi à remplacer des caractères par des nombres, mais de telle façon que le décodage ne puisse se faire que par le destinataire du message. La numérisation est cependant le plus souvent la première étape du chiffrement.\nConsidérons le procédé rot-13 qui consiste à remplacer une lettre codée par l’entier \\(n\\) par la lettre codée par l’entier \\(n+13\\) (on se limite aux caractères de la table ASCII).\nComme l’alphabet latin compte 26 lettres, le déchiffrement se fait exactement par la même opération.\nPour trouver que l’image par rot-13 du caractère ‘R’ est ‘E’ :\n\non calcule d’abord le rang alphabétique du caractère :\n&gt;&gt;&gt; ord('R') - ord('A')\n17\npuis on ajoute 13 à ce rang et on prend le reste dans la division euclidienne par 26 :\n&gt;&gt;&gt; (ord('R') - ord('A') + 13) % 26\n4\nenfin on retrouve le rang du caractère associé au rang alphabétique calculé :\n&gt;&gt;&gt; chr(ord('A') + 4)\n'E'\n\nÉcrire une fonction rot13(chaine) qui chiffre ou déchiffre la chaîne (en majuscules ou convertie en majuscules avec chaine.upper()) passée en paramètre, avec l’algorithme rot13.",
+    "crumbs": [
+      "Ch. 9 - Représentation d'un texte en machine",
+      "Exercices"
+    ]
+  },
+  {
+    "objectID": "09_texte/textes_exos.html#exercice-3",
+    "href": "09_texte/textes_exos.html#exercice-3",
+    "title": "Exercices",
+    "section": " Exercice 3",
+    "text": "Exercice 3\n\nSur une page web qui s’affiche sur notre navigateur on peut lire :\n« En consÃ©quence, l’AssemblÃ©e Nationale reconnaÃ®t et dÃ©clare, en prÃ©sence »\nQuelle peut être la cause des affichages étranges de cette page ?\n\nl’encodage des caractères n’est pas celui attendu par le navigateur\nle texte original est en japonais\nla taille des caractères n’est pas celle attendue par le navigateur\nla connexion à Internet présente des coupures\n\nLe code ASCII permet de représenter en binaire les caractères alphanumériques. Quel est son principal inconvénient ?\n\nIl utilise beaucoup de bits.\nIl ne différencie pas les majuscules des minuscules.\nIl ne représente pas les caractères accentués.\nIl n’est passer compatible avec la plupart des systèmes informatiques",
+    "crumbs": [
+      "Ch. 9 - Représentation d'un texte en machine",
+      "Exercices"
+    ]
+  },
+  {
+    "objectID": "09_texte/textes_exos.html#exercice-4",
+    "href": "09_texte/textes_exos.html#exercice-4",
+    "title": "Exercices",
+    "section": " Exercice 4",
+    "text": "Exercice 4\n\nParmi les caractères ci-dessous, lequel ne fait pas partie du code ASCII ?\n\na\nB\n@\né\n\nLaquelle de ces affirmations concernant le codage UTF-8 des caractères est vraie ?\n\nle codage UTF-8 est sur 7 bits\nle codage UTF-8 est sur 8 bits\nle codage UTF-8 est sur 1 à 4 octets\nle codage UTF-8 est sur 8 octets\n\nQuel est un avantage du codage UTF-8 par rapport au codage ASCII ?\n\nil permet de coder un caractère sur un octet au lieu de deux\nil permet de coder les majuscules\nil permet de coder tous les caractères\nil permet de coder différentes polices de caractères",
+    "crumbs": [
+      "Ch. 9 - Représentation d'un texte en machine",
+      "Exercices"
+    ]
+  },
+  {
+    "objectID": "09_texte/textes_exos.html#exercice-5",
+    "href": "09_texte/textes_exos.html#exercice-5",
+    "title": "Exercices",
+    "section": " Exercice 5",
+    "text": "Exercice 5\nEn Python, pour saisir directement un caractère à partir de son point de code Unicode, on peut utiliser des séquences d’échappement spéciales : ‘\\uxxxx’ si le point de code peut s’écrire avec 4 chiffres hexadécimaux, ou ‘\\Uxxxxxxxx’ s’il faut plus de quatre chiffres, en remplissant par des 0 à gauche les positions vides sur les huit possibles.\n\nTester l’instruction ci-dessous dans une console Python :\nprint(\"\\U0001f600\")\nÉcrire un code Python qui affiche tous les caractères dont le point de code est compris entre U+1F600 et U+1F64F sur des lignes de 16 caractères par colonne.",
+    "crumbs": [
+      "Ch. 9 - Représentation d'un texte en machine",
+      "Exercices"
+    ]
   }
 ]
