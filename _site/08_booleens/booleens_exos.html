@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.274">
+<meta name="generator" content="quarto-1.4.506">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – booleens_exos</title>
+<title>NSI - Première - Exercices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../10_vonNeumann/index.html" rel="next">
+<link href="../08_booleens/booleens_cours.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -86,12 +88,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Pas de résultats",
     "search-matching-documents-text": "documents trouvés",
@@ -134,7 +137,7 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
@@ -148,20 +151,20 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+    <a class="nav-link" href="https://python.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../ressources.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+    <a class="nav-link" href="../ressources.html"> 
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -172,11 +175,11 @@ cookieconsent.run({
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../08_booleens/index.html">Ch. 8 - Booléens</a></li><li class="breadcrumb-item"><a href="../08_booleens/booleens_exos.html">Exercices</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -184,7 +187,7 @@ cookieconsent.run({
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -428,22 +431,31 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
  <span class="menu-text">Ch. 8 - Booléens</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/booleens_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/booleens_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">08_booleens/booleens_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../08_booleens/booleens_exos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -859,34 +871,51 @@ cookieconsent.run({
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#octicons-pencil-16-exercice-1" id="toc-octicons-pencil-16-exercice-1" class="nav-link active" data-scroll-target="#octicons-pencil-16-exercice-1">:octicons-pencil-16: Exercice 1</a></li>
-  <li><a href="#octicons-pencil-16-exercice-2" id="toc-octicons-pencil-16-exercice-2" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-2">:octicons-pencil-16: Exercice 2</a></li>
-  <li><a href="#octicons-pencil-16-exercice-3" id="toc-octicons-pencil-16-exercice-3" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-3">:octicons-pencil-16: Exercice 3</a></li>
-  <li><a href="#octicons-pencil-16-exercice-4" id="toc-octicons-pencil-16-exercice-4" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-4">:octicons-pencil-16: Exercice 4</a></li>
-  <li><a href="#octicons-pencil-16-exercice-5" id="toc-octicons-pencil-16-exercice-5" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-5">:octicons-pencil-16: Exercice 5</a></li>
-  <li><a href="#octicons-pencil-16-exercice-6" id="toc-octicons-pencil-16-exercice-6" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-6">:octicons-pencil-16: Exercice 6</a></li>
-  <li><a href="#octicons-pencil-16-exercice-7" id="toc-octicons-pencil-16-exercice-7" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-7">:octicons-pencil-16: Exercice 7</a></li>
-  <li><a href="#octicons-pencil-16-exercice-8" id="toc-octicons-pencil-16-exercice-8" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-8">:octicons-pencil-16: Exercice 8</a></li>
-  <li><a href="#octicons-pencil-16-exercice-9" id="toc-octicons-pencil-16-exercice-9" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-9">:octicons-pencil-16: Exercice 9</a></li>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link active" data-scroll-target="#exercice-1"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 1</a></li>
+  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</a></li>
+  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</a></li>
+  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 4</a></li>
+  <li><a href="#exercice-5" id="toc-exercice-5" class="nav-link" data-scroll-target="#exercice-5"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 5</a></li>
+  <li><a href="#exercice-6" id="toc-exercice-6" class="nav-link" data-scroll-target="#exercice-6"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 6</a></li>
+  <li><a href="#exercice-7" id="toc-exercice-7" class="nav-link" data-scroll-target="#exercice-7"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 7</a></li>
+  <li><a href="#exercice-8" id="toc-exercice-8" class="nav-link" data-scroll-target="#exercice-8"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 8</a></li>
+  <li><a href="#exercice-9" id="toc-exercice-9" class="nav-link" data-scroll-target="#exercice-9"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 9</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../08_booleens/index.html">Ch. 8 - Booléens</a></li><li class="breadcrumb-item"><a href="../08_booleens/booleens_exos.html">Exercices</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Exercices</h1>
+</div>
 
 
-<p><em>Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
-<p><em>Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit.</em></p>
-<section id="octicons-pencil-16-exercice-1" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-1">:octicons-pencil-16: Exercice 1</h2>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-desktop" aria-label="desktop"></i> sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> doivent être résolus par écrit.</em></p>
+<section id="exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 1</h2>
 <ol type="1">
 <li>Construire la table de vérité de l’expression : a OU (NON b)</li>
 <li>Construire la table de vérité de l’expression : NON a ET (b OU c)</li>
@@ -895,18 +924,18 @@ cookieconsent.run({
 </ol>
 <hr>
 </section>
-<section id="octicons-pencil-16-exercice-2" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-2">:octicons-pencil-16: Exercice 2</h2>
+<section id="exercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</h2>
 <p>Donner la valeur des expressions booléennes suivantes :</p>
-<pre class="pycon"><code>&gt;&gt;&gt; (1 &gt; 2) and (3 &lt; 5)
-&gt;&gt;&gt; ((4 - 7) &gt;= 2) or (2 != 1 + 1)
-&gt;&gt;&gt; a = 223
-&gt;&gt;&gt; b = 455
-&gt;&gt;&gt; a != (b // 2)</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> (<span class="dv">1</span> <span class="op">&gt;</span> <span class="dv">2</span>) <span class="kw">and</span> (<span class="dv">3</span> <span class="op">&lt;</span> <span class="dv">5</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> ((<span class="dv">4</span> <span class="op">-</span> <span class="dv">7</span>) <span class="op">&gt;=</span> <span class="dv">2</span>) <span class="kw">or</span> (<span class="dv">2</span> <span class="op">!=</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="dv">223</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="dv">455</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">!=</span> (b <span class="op">//</span> <span class="dv">2</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 </section>
-<section id="octicons-pencil-16-exercice-3" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-3">:octicons-pencil-16: Exercice 3</h2>
+<section id="exercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</h2>
 <p>On considère la table de vérité de l’expression booléenne Z ci-dessous :</p>
 <table class="table">
 <thead>
@@ -929,8 +958,8 @@ cookieconsent.run({
 <p>Exprimer Z à l’aide des fonctions booléennes ET, OU, NON.</p>
 <hr>
 </section>
-<section id="octicons-pencil-16-exercice-4" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-4">:octicons-pencil-16: Exercice 4</h2>
+<section id="exercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 4</h2>
 <p>On considère la table de vérité de l’expression U ci-dessous :</p>
 <table class="table">
 <thead>
@@ -953,8 +982,8 @@ cookieconsent.run({
 <p>Exprimer U à l’aide des fonctions booléennes ET, OU, NON.</p>
 <hr>
 </section>
-<section id="octicons-pencil-16-exercice-5" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-5">:octicons-pencil-16: Exercice 5</h2>
+<section id="exercice-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-5"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 5</h2>
 <p>On considère l’extrait de code suivant :</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (a <span class="op">&lt;</span> <span class="dv">20</span>) <span class="kw">or</span> (b <span class="op">&gt;</span> <span class="dv">50</span>):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    ......</span>
@@ -968,8 +997,8 @@ cookieconsent.run({
 </ul>
 <hr>
 </section>
-<section id="octicons-pencil-16-exercice-6" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-6">:octicons-pencil-16: Exercice 6</h2>
+<section id="exercice-6" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-6"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 6</h2>
 <p>Si A et B sont des variables booléennes, laquelle de ces expressions booléennes est équivalente à (not A) or B ?</p>
 <ul class="task-list">
 <li><label><input type="checkbox">(A and B) or (not A and B)</label></li>
@@ -979,8 +1008,8 @@ cookieconsent.run({
 </ul>
 <hr>
 </section>
-<section id="octicons-pencil-16-exercice-7" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-7">:octicons-pencil-16: Exercice 7</h2>
+<section id="exercice-7" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-7"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 7</h2>
 <p>Quelle table de vérité correspond à l’expression (NON(A) OU B) ?</p>
 <p><em>Remarque : dans les tables proposées, la première colonne donne les valeurs de A, la première ligne les valeurs de B.</em></p>
 <ul class="task-list">
@@ -1075,19 +1104,19 @@ cookieconsent.run({
 </ul>
 <hr>
 </section>
-<section id="octicons-pencil-16-exercice-8" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-8">:octicons-pencil-16: Exercice 8</h2>
-<p>Parmi les quatre expressions suivantes, laquelle s’évalue en <code>#!python True</code> ?</p>
+<section id="exercice-8" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-8"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 8</h2>
+<p>Parmi les quatre expressions suivantes, laquelle s’évalue en <code>True</code> ?</p>
 <ul class="task-list">
-<li><label><input type="checkbox"><code>#!python False and (True and False)</code></label></li>
-<li><label><input type="checkbox"><code>#!python False or (True and False)</code></label></li>
-<li><label><input type="checkbox"><code>#!python True and (True and False)</code></label></li>
-<li><label><input type="checkbox"><code>#!python True or (True and False)</code></label></li>
+<li><label><input type="checkbox"><code>False and (True and False)</code></label></li>
+<li><label><input type="checkbox"><code>False or (True and False)</code></label></li>
+<li><label><input type="checkbox"><code>True and (True and False)</code></label></li>
+<li><label><input type="checkbox"><code>True or (True and False)</code></label></li>
 </ul>
 <hr>
 </section>
-<section id="octicons-pencil-16-exercice-9" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-9">:octicons-pencil-16: Exercice 9</h2>
+<section id="exercice-9" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-9"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 9</h2>
 <p>À quelle affectation sont équivalentes les instructions suivantes, où <code>a</code>, <code>b</code> sont des variables entières et <code>c</code> une variable booléenne ?</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> a<span class="op">==</span>b:</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> <span class="va">True</span></span>
@@ -1096,10 +1125,10 @@ cookieconsent.run({
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> <span class="va">False</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul class="task-list">
-<li><label><input type="checkbox"><code>#!python c = (a==b) or (a &gt; b+10)</code></label></li>
-<li><label><input type="checkbox"><code>#!python c = (a==b) and (a &gt; b+10)</code></label></li>
-<li><label><input type="checkbox"><code>#!python c = not(a==b)</code></label></li>
-<li><label><input type="checkbox"><code>#!python c = not(a &gt; b+10)</code></label></li>
+<li><label><input type="checkbox"><code>c = (a==b) or (a &gt; b+10)</code></label></li>
+<li><label><input type="checkbox"><code>c = (a==b) and (a &gt; b+10)</code></label></li>
+<li><label><input type="checkbox"><code>c = not(a==b)</code></label></li>
+<li><label><input type="checkbox"><code>c = not(a &gt; b+10)</code></label></li>
 </ul>
 
 
@@ -1329,6 +1358,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1378,15 +1422,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
+        typesetMath(container);
         return container.innerHTML
       } else {
+        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -1395,6 +1469,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
+      typesetMath(note);
       return note.innerHTML;
     }
   }
@@ -1437,6 +1512,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -1508,6 +1606,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1565,22 +1689,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // default icon
-          link.classList.add("external");
-      }
-    }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../08_booleens/booleens_cours.html" class="pagination-link  aria-label=" cours"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cours</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../10_vonNeumann/index.html" class="pagination-link" aria-label="03-Architectures matérielles et systèmes d'exploitation">
+        <span class="nav-page-text">03-Architectures matérielles et systèmes d’exploitation</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

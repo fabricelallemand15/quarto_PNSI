@@ -1,8 +1,13 @@
-_Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+---
+title: "Exercices"
+---
 
-_Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit._
+_Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._
 
-## :octicons-pencil-16: Exercice 1
+_Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
+
+
+## {{< fa solid pencil-alt >}} Exercice 1
 
 1. Construire la table de vérité de l'expression : a OU (NON b)
 2. Construire la table de vérité de l'expression : NON a ET (b OU c)
@@ -11,11 +16,11 @@ _Les exercices précédés du symbole :octicons-pencil-16: doivent être résolu
 
 --------------------------------------
 
-## :octicons-pencil-16: Exercice 2
+## {{< fa solid pencil-alt >}} Exercice 2
 
 Donner la valeur des expressions booléennes suivantes :
 
-````pycon
+````python
 >>> (1 > 2) and (3 < 5)
 >>> ((4 - 7) >= 2) or (2 != 1 + 1)
 >>> a = 223
@@ -25,7 +30,7 @@ Donner la valeur des expressions booléennes suivantes :
 
 ------------------------------------------
 
-## :octicons-pencil-16: Exercice 3
+## {{< fa solid pencil-alt >}} Exercice 3
 
 On considère la table de vérité de l'expression booléenne Z ci-dessous :
 
@@ -38,7 +43,7 @@ Exprimer Z à l'aide des fonctions booléennes ET, OU, NON.
 
 -------------------------------------
 
-## :octicons-pencil-16: Exercice 4
+## {{< fa solid pencil-alt >}} Exercice 4
 
 On considère la table de vérité de l'expression U ci-dessous :
 
@@ -51,7 +56,7 @@ Exprimer U à l'aide des fonctions booléennes ET, OU, NON.
 
 ---------------------------------------------
 
-## :octicons-pencil-16: Exercice 5
+## {{< fa solid pencil-alt >}} Exercice 5
 
 On considère l'extrait de code suivant :
 
@@ -70,7 +75,7 @@ Quelles conditions permettent de mettre fin à cette boucle ?
 
 ----------------------------------------
 
-## :octicons-pencil-16: Exercice 6
+## {{< fa solid pencil-alt >}} Exercice 6
 
 Si A et B sont des variables booléennes, laquelle de ces expressions booléennes est équivalente à (not A) or B ?
 
@@ -81,7 +86,7 @@ Si A et B sont des variables booléennes, laquelle de ces expressions booléenne
 
 -------------------------------------------------
 
-## :octicons-pencil-16: Exercice 7
+## {{< fa solid pencil-alt >}} Exercice 7
 
 Quelle table de vérité correspond à l'expression (NON(A) OU B) ?
 
@@ -117,18 +122,18 @@ _Remarque : dans les tables proposées, la première colonne donne les valeurs d
 
 -----------------------------------
 
-## :octicons-pencil-16: Exercice 8
+## {{< fa solid pencil-alt >}} Exercice 8
 
-Parmi les quatre expressions suivantes, laquelle s'évalue en `#!python True` ?
+Parmi les quatre expressions suivantes, laquelle s'évalue en `True` ?
 
-* [ ] `#!python False and (True and False)`
-* [ ] `#!python False or (True and False)`
-* [ ] `#!python True and (True and False)`
-* [ ] `#!python True or (True and False)`
+* [ ] `False and (True and False)`
+* [ ] `False or (True and False)`
+* [ ] `True and (True and False)`
+* [ ] `True or (True and False)`
 
 ----------------------------------------------------
 
-## :octicons-pencil-16: Exercice 9
+## {{< fa solid pencil-alt >}} Exercice 9
 
 À quelle affectation sont équivalentes les instructions suivantes, où ``a``, ``b`` sont des variables entières et ``c`` une variable booléenne ?
 
@@ -141,7 +146,7 @@ else:
 	c = False
 ````
 
-* [ ] `#!python c = (a==b) or (a > b+10)`
-* [ ] `#!python c = (a==b) and (a > b+10)`
-* [ ] `#!python c = not(a==b)`
-* [ ] `#!python c = not(a > b+10)`
+* [ ] `c = (a==b) or (a > b+10)`
+* [ ] `c = (a==b) and (a > b+10)`
+* [ ] `c = not(a==b)`
+* [ ] `c = not(a > b+10)`
