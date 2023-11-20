@@ -76,8 +76,8 @@ website:
       - section: "Ch. 9 - Représentation d'un texte en machine"
         contents: 
           - 09_texte/index.qmd
-          - 09_texte/texte_cours.qmd
-          - 09_texte/texte_exos.qmd
+          - 09_texte/textes_cours.qmd
+          - 09_texte/textes_exos.qmd
       - section: "Ch. 10 - Modèle d'architecture de von Neumann"
         contents: 
           - 10_vonNeumann/index.qmd
