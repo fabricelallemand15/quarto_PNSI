@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.506">
+<meta name="generator" content="quarto-1.4.274">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -78,24 +78,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
+  "limit": 20,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "Pas de résultats",
     "search-matching-documents-text": "documents trouvés",
@@ -138,7 +137,7 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
@@ -152,20 +151,20 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
-<span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/"> 
-<span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
+ <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
-<span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../ressources.html"> 
-<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+    <a class="nav-link" href="../ressources.html" rel="" target="">
+ <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -181,11 +180,11 @@ cookieconsent.run({
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Activité 4 : Formulaires Web</li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -193,7 +192,7 @@ cookieconsent.run({
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -492,8 +491,11 @@ cookieconsent.run({
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">09_texte/textes_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../09_texte/textes_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -889,7 +891,7 @@ cookieconsent.run({
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -926,7 +928,6 @@ cookieconsent.run({
 
 </header>
 
-
 <p>!!! danger “Objectifs de cette activité” À l’issue de cette activité, vous saurez :</p>
 <pre><code>* créer un formulaire simple ;
 * comprendre son fonctionnement ;
@@ -943,8 +944,8 @@ cookieconsent.run({
 <p>Dans cette activité, nous allons créer un formulaire de récupération de mot de passe oublié. Faisons un croquis :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../assets/images/formulaire.drawio.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="Croquis du formulaire"><img src="../../assets/images/formulaire.drawio.svg" class="img-fluid figure-img" alt="Croquis du formulaire"></a></p>
-<figcaption>Croquis du formulaire</figcaption>
+<p><a href="../../assets/images/formulaire.drawio.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Croquis du formulaire"><img src="../../assets/images/formulaire.drawio.svg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Croquis du formulaire</figcaption>
 </figure>
 </div>
 <p>Notre formulaire contiendra deux champs de texte et un bouton. Nous demandons à l’utilisateur son identifiant et son e-mail. Appuyer sur le bouton enverra les données à un serveur Web.</p>
@@ -954,19 +955,19 @@ cookieconsent.run({
 <p>Tout d’abord, créons le HTML pour notre formulaire. Nous utiliserons les éléments HTML suivants : <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, et <code>&lt;button&gt;</code>.</p>
 <p>Cliquer sur <a href="https://replit.com/team/premiere-nsi/Formulaire-web">ce lien pour accéder au Replit dans lequel cette activité sera réalisée</a>.</p>
 <p>Tous les formulaires commencent par un élément <strong><code>&lt;form&gt;</code></strong> de la forme :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">""</span><span class="ot"> method</span><span class="op">=</span><span class="st">"post"</span><span class="dt">&gt;</span>…<span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span> <span class="er">action</span><span class="ot">=</span><span class="st">""</span> <span class="er">method</span><span class="ot">=</span><span class="st">"post"</span><span class="dt">&gt;</span>…<span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Cet élément définit un formulaire. C’est un élément <strong>conteneur</strong>, mais spécifiquement pour contenir des formulaires ; il prend également en charge certains attributs spécifiques pour configurer le comportement du formulaire. Tous ses attributs sont facultatifs, mais il est courant de toujours définir au moins les attributs <strong>action</strong> et <strong>method</strong></p>
 <ul>
 <li>L’attribut <strong>action</strong> définit l’emplacement (URL) où les données collectées du formulaire doivent être envoyées lors de sa soumission. Pour l’instant, nous avons laissé cet attribut vide.</li>
 <li>L’attribut <strong>method</strong> définit la méthode HTTP avec laquelle envoyer les données (généralement GET ou POST).</li>
 </ul>
 <p>Pour l’instant, ajoutez le code HTML ci-dessous dans le fichier <code>index.html</code>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">""</span><span class="ot"> method</span><span class="op">=</span><span class="st">"get"</span><span class="dt">&gt;</span></span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span> <span class="er">action</span><span class="ot">=</span><span class="st">""</span> <span class="er">method</span><span class="ot">=</span><span class="st">"get"</span><span class="dt">&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Mot de passe oublié<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> for</span><span class="op">=</span><span class="st">"identifiant"</span><span class="dt">&gt;</span>Identifiant<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"identifiant"</span><span class="ot"> name</span><span class="op">=</span><span class="st">"user_id"</span><span class="ot"> </span><span class="dt">/&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> for</span><span class="op">=</span><span class="st">"mail"</span><span class="dt">&gt;</span>E-mail:<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"email"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"mail"</span><span class="ot"> name</span><span class="op">=</span><span class="st">"user_email"</span><span class="ot"> </span><span class="dt">/&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">label</span> <span class="er">for</span><span class="ot">=</span><span class="st">"identifiant"</span><span class="dt">&gt;</span>Identifiant<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span> <span class="er">type</span><span class="ot">=</span><span class="st">"text"</span> <span class="er">id</span><span class="ot">=</span><span class="st">"identifiant"</span> <span class="er">name</span><span class="ot">=</span><span class="st">"user_id"</span> <span class="dt">/&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">label</span> <span class="er">for</span><span class="ot">=</span><span class="st">"mail"</span><span class="dt">&gt;</span>E-mail:<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span> <span class="er">type</span><span class="ot">=</span><span class="st">"email"</span> <span class="er">id</span><span class="ot">=</span><span class="st">"mail"</span> <span class="er">name</span><span class="ot">=</span><span class="st">"user_email"</span> <span class="dt">/&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Notre formulaire de contact n’est pas complexe : la partie saisie de données contient deux champs de texte <strong><code>&lt;input&gt;</code></strong>, chacun avec un <strong><code>&lt;label&gt;</code></strong> correspondant :</p>
 <ul>
@@ -985,7 +986,7 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="ajout-du-bouton">Ajout du bouton</h2>
 <p>Le balisage de notre formulaire est presque terminé ; il suffit d’ajouter un bouton pour permettre à l’utilisateur d’envoyer, ou “soumettre”, ses données une fois qu’il a rempli le formulaire. Ceci est fait en utilisant l’élément <strong><code>&lt;button&gt;</code></strong>.</p>
 <p>Ajoutez ce qui suit juste avant la balise de fermeture <strong><code>&lt;/form&gt;</code></strong> :</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> type</span><span class="op">=</span><span class="st">"submit"</span><span class="dt">&gt;</span>Récupérer mon mot de passe<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span> <span class="er">type</span><span class="ot">=</span><span class="st">"submit"</span><span class="dt">&gt;</span>Récupérer mon mot de passe<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>L’élément <strong><code>&lt;button&gt;</code></strong> accepte également un attribut <strong>type</strong> — celui-ci accepte l’une des trois valeurs : submit, reset, ou button.</p>
 <ul>
 <li>Un clic sur un bouton <strong>submit</strong> (la valeur par défaut) envoie les données du formulaire vers la page web définie par l’attribut <strong>action</strong> de l’élément <strong><code>&lt;/form&gt;</code></strong>.</li>
@@ -998,7 +999,7 @@ cookieconsent.run({
 <p>Pour le moment, le formulaire a l’air plutôt moche.</p>
 <p>Nous allons utiliser un fichier de style au format CSS pour le rendre plus agréable.</p>
 <p>Tout d’abord, créer dans le Replit un fichier nommé <code>style.css</code> et lier ce fichier au fichier HTML en ajoutant la ligne suivante dans l’entête de celui-ci :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"style.css"</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"style.css"</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Dans le fichier <code>style.css</code>, ajoutez le CSS suivant :</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>form {</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">/* Centre le formulaire sur la page */</span></span>
@@ -1050,13 +1051,13 @@ cookieconsent.run({
 <p>Nous fournissons un attribut <strong>name</strong> pour chaque contrôle de formulaire. Les noms sont importants à la fois côté client et côté serveur ; ils indiquent au navigateur quel nom donner à chaque donnée et, côté serveur, ils laissent le serveur gérer chaque donnée par son nom. Les données du formulaire sont envoyées au serveur sous forme de paires nom/valeur.</p>
 <p>Pour nommer les données dans un formulaire, vous devez utiliser l’attribut <strong>name</strong> sur chaque widget de formulaire qui collectera une donnée spécifique.</p>
 <p>Regardons notre code de formulaire : modifiez comme indiqué ci-dessous la valeur de l’attribut <strong>action</strong> afin que les données soient envoyées à la page <code>http://nsi.flallemand.fr/divers/acti4_forms.php</code> :</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">"http://nsi.flallemand.fr/divers/acti4_forms.php"</span><span class="ot"> method</span><span class="op">=</span><span class="st">"get"</span><span class="dt">&gt;</span></span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span> <span class="er">action</span><span class="ot">=</span><span class="st">"http://nsi.flallemand.fr/divers/acti4_forms.php"</span> <span class="er">method</span><span class="ot">=</span><span class="st">"get"</span><span class="dt">&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Mot de passe oublié<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> for</span><span class="op">=</span><span class="st">"identifiant"</span><span class="dt">&gt;</span>Identifiant<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"identifiant"</span><span class="ot"> name</span><span class="op">=</span><span class="st">"user_id"</span><span class="ot"> </span><span class="dt">/&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> for</span><span class="op">=</span><span class="st">"mail"</span><span class="dt">&gt;</span>E-mail:<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"email"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"mail"</span><span class="ot"> name</span><span class="op">=</span><span class="st">"user_email"</span><span class="ot"> </span><span class="dt">/&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> type</span><span class="op">=</span><span class="st">"submit"</span><span class="dt">&gt;</span>Récupérer mon mot de passe<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">label</span> <span class="er">for</span><span class="ot">=</span><span class="st">"identifiant"</span><span class="dt">&gt;</span>Identifiant<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">input</span> <span class="er">type</span><span class="ot">=</span><span class="st">"text"</span> <span class="er">id</span><span class="ot">=</span><span class="st">"identifiant"</span> <span class="er">name</span><span class="ot">=</span><span class="st">"user_id"</span> <span class="dt">/&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">label</span> <span class="er">for</span><span class="ot">=</span><span class="st">"mail"</span><span class="dt">&gt;</span>E-mail:<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">input</span> <span class="er">type</span><span class="ot">=</span><span class="st">"email"</span> <span class="er">id</span><span class="ot">=</span><span class="st">"mail"</span> <span class="er">name</span><span class="ot">=</span><span class="st">"user_email"</span> <span class="dt">/&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span> <span class="er">type</span><span class="ot">=</span><span class="st">"submit"</span><span class="dt">&gt;</span>Récupérer mon mot de passe<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Dans notre exemple, le formulaire enverra 2 données nommées “user_id” et ” user_email”. Ces données seront envoyées à l’URL <code>http://nsi.flallemand.fr/divers/acti4_forms.php</code> en utilisant la méthode HTTP GET.</p>
 <p>Côté serveur, le script à l’URL <code>http://nsi.flallemand.fr/divers/acti4_forms.php</code> recevra les données sous la forme d’une liste de 2 éléments clé/valeur contenus dans la requête HTTP. La façon dont ce script traitera ces données dépend de vous. Chaque langage côté serveur (PHP, Python, Ruby, Java, C#, etc.) possède son propre mécanisme de gestion des données de formulaire. Nous n’allons pas approfondir ce sujet ici.</p>
@@ -1089,7 +1090,7 @@ cookieconsent.run({
 <p>Observer l’URL affichée dans la barre d’adresse du navigateur. Que constatez-vous ?</p>
 <p>Pour éviter cet affichage dans la barre d’adresse, on utilise plutôt la méthode HTTP POST pour l’envoi de données de formulaires.</p>
 <p>Pour cela, modifier l’attribut <strong>method</strong> dans le fichier <code>index.html</code> :</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">"http://nsi.flallemand.fr/divers/acti4_forms_bis.php"</span><span class="ot"> method</span><span class="op">=</span><span class="st">"post"</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span> <span class="er">action</span><span class="ot">=</span><span class="st">"http://nsi.flallemand.fr/divers/acti4_forms_bis.php"</span> <span class="er">method</span><span class="ot">=</span><span class="st">"post"</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>On modifie aussi l’attribut <strong>action</strong> car le code PHP pour extraire les données transmises par la méthode POST n’est pas exactement le même.</p>
 <p>Tester à nouveau cette nouvelle version du formulaire et observer l’URL affiché dans la barre d’adresse.</p>
 <p>!!! danger “Remarque” En réalité, la méthode POST n’est pas plus sécurisée que la méthode GET. Certes, les entrées du formulaire ne sont plus affichées dans l’URL, mais elles sont transmises dans le corps de la requête en clair : l’utilisation des outils de développement du navigateur vous le montrera.</p>
@@ -1323,21 +1324,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // default icon
-          link.classList.add("external");
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1387,45 +1373,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
-    if (id === null || id.startsWith('sec-')) {
+    if (id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
         }
-        typesetMath(container);
         return container.innerHTML
       } else {
-        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -1434,7 +1390,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
       return note.innerHTML;
     }
   }
@@ -1477,29 +1432,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
       }
     }, function(instance) {
     });
@@ -1571,32 +1503,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1654,6 +1560,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->
@@ -1688,7 +1608,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
