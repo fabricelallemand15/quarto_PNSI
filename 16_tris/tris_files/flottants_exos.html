@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première - TP : Bases 2, 10 et 16 en Python</title>
+<title>NSI - Première - Exercices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../08_booleens/index.html" rel="next">
-<link href="../07_flottants/flottants_exos.html" rel="prev">
+<link href="../07_flottants/mini_tp_nombres.html" rel="next">
+<link href="../07_flottants/flottants_cours.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -148,7 +182,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/mini_tp_nombres.html">TP : Bases 2, 10 et 16 en Python</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/flottants_exos.html">Exercices</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -393,13 +427,13 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../07_flottants/flottants_exos.html" class="sidebar-item-text sidebar-link">
+  <a href="../07_flottants/flottants_exos.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Exercices</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../07_flottants/mini_tp_nombres.html" class="sidebar-item-text sidebar-link active">
+  <a href="../07_flottants/mini_tp_nombres.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TP : Bases 2, 10 et 16 en Python</span></a>
   </div>
 </li>
@@ -479,11 +513,8 @@ cookieconsent.run({
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../10_p-uplets/p_uplets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
-  </div>
-</li>
+ <span class="menu-text">10_p-uplets/p-uplets.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../10_p-uplets/exos_tuples.html" class="sidebar-item-text sidebar-link">
@@ -892,14 +923,23 @@ cookieconsent.run({
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="mini_tp_nombres.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link active" data-scroll-target="#exercice-1"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 1</a></li>
+  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</a></li>
+  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</a></li>
+  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="flottants_exos.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/mini_tp_nombres.html">TP : Bases 2, 10 et 16 en Python</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/flottants_exos.html">Exercices</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">TP : Bases 2, 10 et 16 en Python</h1>
+<h1 class="title">Exercices</h1>
 </div>
 
 
@@ -915,9 +955,51 @@ cookieconsent.run({
 
 </header>
 
-<p><a href="https://capytale2.ac-paris.fr/web/c/147b-2247630">Ce T.P. est disponible dans Capytale.</a></p>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-desktop" aria-label="desktop"></i> sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> doivent être résolus par écrit.</em></p>
+<section id="exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 1</h2>
+<p>Déterminer l’écriture en base 10 des nombres binaires suivants :</p>
+<ol type="1">
+<li><span class="math inline">\(11,01_2\)</span></li>
+<li><span class="math inline">\(10,11_2\)</span></li>
+<li><span class="math inline">\(1001,101_2\)</span></li>
+<li><span class="math inline">\(101,0111_2\)</span></li>
+</ol>
+<hr>
+</section>
+<section id="exercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</h2>
+<p>Déterminer l’écriture binaire des nombres décimaux suivants :</p>
+<ol type="1">
+<li><span class="math inline">\(7,125_{10}\)</span></li>
+<li><span class="math inline">\(10,75_{10}\)</span></li>
+<li><span class="math inline">\(3,375_{10}\)</span></li>
+<li><span class="math inline">\(6,1875_{10}\)</span></li>
+</ol>
+<hr>
+</section>
+<section id="exercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</h2>
+<p>Déterminer la représentation binaire des nombres décimaux suivants selon la norme IEEE-754 sur 32 bits.</p>
+<ol type="1">
+<li><span class="math inline">\(0,9218_{10}\)</span></li>
+<li><span class="math inline">\(0,002125_{10}\)</span></li>
+<li><span class="math inline">\(45,218_{10}\)</span>.</li>
+<li><span class="math inline">\(126,725_{10}\)</span>.</li>
+<li><span class="math inline">\(0,1_{10}\)</span>.</li>
+<li><span class="math inline">\(\frac{1}{3}_{10}\)</span>.</li>
+</ol>
+<hr>
+</section>
+<section id="exercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</h2>
+<p>Dans la console Python, taper :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.2</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Quel résultat est affiché ? Expliquer !</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1397,13 +1479,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../07_flottants/flottants_exos.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercices</span>
+      <a href="../07_flottants/flottants_cours.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cours</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../08_booleens/index.html" class="pagination-link">
-        <span class="nav-page-text">Programme</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../07_flottants/mini_tp_nombres.html" class="pagination-link">
+        <span class="nav-page-text">TP : Bases 2, 10 et 16 en Python</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1421,7 +1503,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

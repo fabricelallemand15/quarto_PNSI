@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première - TP : Bases 2, 10 et 16 en Python</title>
+<title>NSI - Première – tp_stegano</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../08_booleens/index.html" rel="next">
-<link href="../07_flottants/flottants_exos.html" rel="prev">
+<link href="../12_dictionnaires/index.html" rel="next">
+<link href="../11_tableaux/exos_tabs.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -46,6 +80,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -148,7 +185,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/mini_tp_nombres.html">TP : Bases 2, 10 et 16 en Python</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../11_tableaux/index.html">Ch. 11 - Tableaux</a></li><li class="breadcrumb-item"><a href="../11_tableaux/TP_Stegano.html">Mini-projet : Stéganographie {#mini-projet–stéganographie}</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -372,13 +409,13 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
  <span class="menu-text">Ch. 7 - Représentation approximative des nombres réels : flottants</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../07_flottants/index.html" class="sidebar-item-text sidebar-link">
@@ -399,7 +436,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../07_flottants/mini_tp_nombres.html" class="sidebar-item-text sidebar-link active">
+  <a href="../07_flottants/mini_tp_nombres.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TP : Bases 2, 10 et 16 en Python</span></a>
   </div>
 </li>
@@ -479,11 +516,8 @@ cookieconsent.run({
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../10_p-uplets/p_uplets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
-  </div>
-</li>
+ <span class="menu-text">10_p-uplets/p-uplets.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../10_p-uplets/exos_tuples.html" class="sidebar-item-text sidebar-link">
@@ -494,13 +528,13 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="true">
  <span class="menu-text">Ch. 11 - Tableaux</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../11_tableaux/index.html" class="sidebar-item-text sidebar-link">
@@ -521,7 +555,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../11_tableaux/TP_Stegano.html" class="sidebar-item-text sidebar-link">
+  <a href="../11_tableaux/TP_Stegano.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Mini-projet : Stéganographie {#mini-projet–stéganographie}</span></a>
   </div>
 </li>
@@ -892,32 +926,265 @@ cookieconsent.run({
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="mini_tp_nombres.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#mini-projet--stéganographie" id="toc-mini-projet--stéganographie" class="nav-link active" data-scroll-target="#mini-projet--stéganographie">Mini-projet : Stéganographie</a>
+  <ul class="collapse">
+  <li><a href="#1-le-module-pil" id="toc-1-le-module-pil" class="nav-link" data-scroll-target="#1-le-module-pil">1. Le module PIL</a>
+  <ul class="collapse">
+  <li><a href="#quest-ce-que-la-librairie-pil-" id="toc-quest-ce-que-la-librairie-pil-" class="nav-link" data-scroll-target="#quest-ce-que-la-librairie-pil-">Qu’est-ce que la librairie PIL ?</a></li>
+  <li><a href="#commandes-utiles-pour-une-utilisation-de-base" id="toc-commandes-utiles-pour-une-utilisation-de-base" class="nav-link" data-scroll-target="#commandes-utiles-pour-une-utilisation-de-base">Commandes utiles pour une utilisation de base</a></li>
+  </ul></li>
+  <li><a href="#2-stéganographie-dans-une-image-en-niveaux-de-gris" id="toc-2-stéganographie-dans-une-image-en-niveaux-de-gris" class="nav-link" data-scroll-target="#2-stéganographie-dans-une-image-en-niveaux-de-gris">2. Stéganographie dans une image en niveaux de gris</a></li>
+  <li><a href="#le-principe" id="toc-le-principe" class="nav-link" data-scroll-target="#le-principe">Le principe</a></li>
+  <li><a href="#mini-projet" id="toc-mini-projet" class="nav-link" data-scroll-target="#mini-projet">Mini-projet</a></li>
+  <li><a href="#défi-" id="toc-défi-" class="nav-link" data-scroll-target="#défi-">Défi !!!</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="TP_Stegano.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/mini_tp_nombres.html">TP : Bases 2, 10 et 16 en Python</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">TP : Bases 2, 10 et 16 en Python</h1>
+
+
+<section id="mini-projet--stéganographie" class="level1">
+<h1>Mini-projet : Stéganographie</h1>
+<p>Cette activité est fortement inspirée du dossier paru sur le site <a href="http://www.bibmath.net/crypto/index.php?action=affiche&amp;quoi=stegano/index">bibmath</a>.</p>
+<p>Les images utilisées sont toutes issues du site <a href="https://pixabay.com/">Pixabay</a> et libres de droits.</p>
+<p>La <strong>stéganographie</strong>, du grec <em>stegano</em> (dissimuler), est une méthode de cryptographie qui consiste, plutôt que de crypter un message, à le cacher dans une image selon un procédé plus ou moins complexe.</p>
+<p>On s’intéresse en particulier à la dissimulation d’une image dans une autre image.</p>
+<p>Avant de commencer, il est nécessaire de prendre en main le module Python PIL (Python Imaging Library) qui permet de manipuler des images.</p>
+<section id="1-le-module-pil" class="level2">
+<h2 class="anchored" data-anchor-id="1-le-module-pil">1. Le module PIL</h2>
+<section id="quest-ce-que-la-librairie-pil-" class="level3">
+<h3 class="anchored" data-anchor-id="quest-ce-que-la-librairie-pil-">Qu’est-ce que la librairie PIL ?</h3>
+<p>PIL est l’acronyme pour Python Imaging Library. Il s’agit d’une librairie additionnelle qui fournit des fonctions de traitement d’images et de manipulations graphiques à Python. Elle supporte de nombreux formats d’images.</p>
+<p>La “véritable” bibliothèque PIL, c’est-à-dire la bibliothèque d’origine, n’a jamais été portée pour Python 3. Nous utiliserons donc une version dérivée, nommée Pillow (les informaticiens ont beaucoup d’humour...) qui est, elle, compatible avec les dernières versions de Python 3. On pourra consulter <a href="https://python-pillow.org/">le site de Pillow</a>. La bibliothèque Pillow est déjà installée dans la distribution EduPython.</p>
+<p>!!! danger “Attention”</p>
+<pre><code>**Toutes les images utilisées dans ce mini-projet sont téléchargeables en cliquant ici : [images.zip](./images.zip)**
+
+**Pour faire ce travail, il est nécessaire d'avoir téléchargé les images et de les avoir placées dans le même dossier que votre programme.**
+
+**Le travail pourra être fait dans EduPython, ou dans la console Python accessible dans le menu ci-dessus. Dans ce cas, les images devront être chargées dans la console en utilisant le bouton représentant un dossier.**</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./pillow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./pillow.png" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
+</section>
+<section id="commandes-utiles-pour-une-utilisation-de-base" class="level3">
+<h3 class="anchored" data-anchor-id="commandes-utiles-pour-une-utilisation-de-base">Commandes utiles pour une utilisation de base</h3>
+<p>Avant toute chose, on importera la bibliothèque en ajoutant la ligne suivante en début de programme :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Exemple d’ouverture d’un fichier et accès à ses informations</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ouverture du fichier image</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">"chat.png"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># nom du fichier</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(img.filename)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># taille du fichier</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(img.size)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(img.width)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(img.height)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage de l'image</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>img.show()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./chat.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="./chat.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ul>
+<li><p>Un fichier image peut avoir trois <strong>modes</strong> différents :</p>
+<ul>
+<li>“l” (lettre l minuscule) pour un fichier en noir et blanc (uniquement deux couleurs) ;</li>
+<li>“L” pour un fichier en niveaux de gris ;</li>
+<li>“RGB” pour une image en couleur.</li>
+</ul>
+<p>Une image est représentée par un tableau de pixels. Chaque pixel est repéré par ses coordonnées <span class="math inline">\((x;y)\)</span> où <span class="math inline">\(x\)</span> est la ligne où se trouve le pixel et <span class="math inline">\(y\)</span> la colonne. Chaque pixel possède une <strong>valeur</strong>.</p>
+<p>Dans le cas d’une image en noir et blanc, la valeur d’un pixel est 0 (blanc) ou 1 (noir).</p>
+<p>Dans le cas d’une image en niveaux de gris, la valeur d’un pixel est un entier compris entre 0 (noir) et 255 (blanc).</p>
+<p>Dans le cas d’une image en couleurs RGB, la valeur d’un pixel est un <strong>3-uplet</strong> <span class="math inline">\((R, G, B)\)</span> dans lequel chaque élément est un entier compris entre 0 et 255 qui représente respectivement la prorportion de rouge, de vert et de bleu dans la couleur du pixel en question.</p></li>
+<li><p>Accéder à la valeur d’un pixel : <code>img.getpixel((x, y))</code>. Cette fonction retourne un entier (dans le cas d’une image noir et blanc ou en niveaux de gris) ou un triplet (dans le cas d’une image en couleurs). Attention à la syntaxe : il n’y a qu’un seul argument, qui est un couple de coordonnées (donc doubles parenthèses).</p></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(img.mode)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>img.getpixel((<span class="dv">48</span>,<span class="dv">75</span>)) <span class="co"># attention aux parenthèses !</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Commandes pour créer un fichier image et définir la valeur de ses pixels :</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>largeur <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>hauteur <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Création d'une nouvelle image en niveaux de gris en mémoire</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>nouvelle_image <span class="op">=</span> Image.new(<span class="st">"L"</span>, (largeur, hauteur))</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Définition de la valeur d'un pixel particulier</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>nouvelle_image.putpixel((<span class="dv">48</span>,<span class="dv">75</span>), <span class="dv">189</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Double boucle pour parcourir tous les pixels et affecter une valeur aléatoire</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> randint</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(largeur):</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(hauteur):</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        nouvelle_image.putpixel((i,j), randint(<span class="dv">0</span>,<span class="dv">255</span>))</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Enregistrement du fichier</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>nouvelle_image.save(<span class="st">"mon_image.png"</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage dans le notebook</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>nouvelle_image.show()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./mon_image.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="./mon_image.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="2-stéganographie-dans-une-image-en-niveaux-de-gris" class="level2">
+<h2 class="anchored" data-anchor-id="2-stéganographie-dans-une-image-en-niveaux-de-gris">2. Stéganographie dans une image en niveaux de gris</h2>
+</section>
+<section id="le-principe" class="level2">
+<h2 class="anchored" data-anchor-id="le-principe">Le principe</h2>
+<p>Considérons deux images en niveau de gris. Chaque pixel est donc codé par un entier compris en 0 et 255. Nous supposons de plus ces deux images de même taille.</p>
+<p>La première image <code>image1.pgm</code> est la suivante (dimensions : 640x426) :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="image1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="image1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>La seconde image <code>image2.pgm</code> est la suivante (dimensions : 640x426) :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="image2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="image2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Nous utilisons des images au format PGM qui est non compressé. L’utilisation d’un format compressé du type JPG ou PNG empêcherait notre méthode de fonctionner. Ce type d’image s’affiche dans le logiciel GIMP.</p>
+<p>L’objectif est de cacher l’image 2 dans l’image 1. Comment faire ?</p>
+<p>Chaque pixel de chacune des deux images est codé par un entier compris entre 0 et 255. Écrit en base 2, cet entier s’écrit avec 8 chiffres (en ajoutant éventuellement des zéros inutiles au début du nombre). Prenons par exemple un pixel de la première image codé par le nombre binaire <code>1011 0101</code> : les quatre premiers chiffres ont plus de poids dans la valeur de ce nombre que les quatre derniers puisqu’ils sont associés à de plus grandes puissances de 2. Nous les appellerons <strong>bits de poids lourds</strong>. Les quatre derniers sont donc des <strong>bits de poids faible</strong>.</p>
+<p>Si on remplace ce nombre par un nombre dont on ne modifie que les quatre bits de poids faible (les quatre derniers), alors l’image sera assez peu modifiée. C’est cette remarque qui permet de cacher l’image 2 dans l’image 1. Il suffit de créer une nouvelle image dont chaque pixel est formé des bits de poids lourd de chacune des deux images de départ.</p>
+<p>Pour chaque pixel des deux images :</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Image 1</th>
+<th>Image 2</th>
+<th>Image cryptée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1011</strong> 0101</td>
+<td><em>0110</em> 1100</td>
+<td><strong>1011</strong> <em>0110</em></td>
+</tr>
+</tbody>
+</table>
+<p>Comme on n’a modifié que les bits de poids faible de l’image 1, l’image cryptée ressemblera beaucoup à l’image 1, mais un programmeur averti saura en extraire l’image 2 ...</p>
+<p>Voici, à gauche, l’image 1 et, à droite, l’image cryptée (la pauvre vache est perdue dans la ville !).</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Image 1</th>
+<th>Image cryptée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="./image1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="./image1.png" class="img-fluid"></a></td>
+<td><a href="./stegano.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="./stegano.png" class="img-fluid"></a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mini-projet" class="level2">
+<h2 class="anchored" data-anchor-id="mini-projet">Mini-projet</h2>
+<p>Ta mission, si tu l’acceptes, consiste en deux choses :</p>
+<ol type="1">
+<li>Programmer un algorithme permettant de créer l’image cryptée à partir des deux images de départ. Il s’agit de définir une <strong>fonction</strong> qui prend en <strong>arguments</strong> deux images de mêmes dimensions et qui <strong>retourne</strong> l’image cryptée.</li>
+<li>Programmer un algorithme permettant de retrouver l’image cachée dans une image cryptée. Il s’agit de définir une <strong>fonction</strong> qui prend en <strong>argument</strong> une image cryptée et qui <strong>retourne</strong> l’image cachée.</li>
+</ol>
+<p>En cas de besoin, quelques indications :</p>
+<ul>
+<li>La fonction <code>bin()</code> permet de convertir un entier en sa représentation binaire sous forme de chaîne de caractères. Cependant, le résultat ne contient pas les zéros inutiles en début de chaîne !!! Par exemple <code>bin(45)</code> retourne <code>'0b101101'</code>.</li>
+<li>Pour accéder aux éléments d’une chaîne de caractères, on utilise les crochets comme pour les tableaux. Un indice négatif indique que l’on part de la fin de la chaîne. Par exemple, si <code>mot = "indication"</code>, <code>mot[2:-2]</code> retourne <code>"dicati"</code>.</li>
+</ul>
+<p>Une première étape dans la réalisation de ce projet consiste donc en l’écriture d’une fonction permettant d’obtenir la représentation binaire d’un entier compris entre 0 et 255 sous la forme d’une chaîne de caractères de longueur exactement 8. Tu peux compléter la fonction ci-dessous.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bin_8_car(x):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""x est un entier compris entre 0 et 255</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">    la fonction renvoie une chaîne de 8 caractères</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">    représentant x en binaire"""</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    nb <span class="op">=</span> <span class="bu">bin</span>(x)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    nb <span class="op">=</span> nb[<span class="dv">2</span>:] <span class="co"># on enlève '0b'</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># on ajoute des zéros pour arriver à 8 caractères</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> ... :</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        nb <span class="op">=</span> ... <span class="op">+</span> nb</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> nb</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Exécute les tests ci-dessous pour vérifier la fonction.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tests de la fonction bin_8_car</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> bin_8_car(<span class="dv">54</span>) <span class="op">==</span> <span class="st">"00110110"</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> bin_8_car(<span class="dv">255</span>) <span class="op">==</span> <span class="st">"11111111"</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Tests réussis !"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Compléte ci-dessous la fonction <code>crypte</code> réalisant la première tâche demandée :</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> crypte(img1, img2):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Cette fonction cache l'image 2 dans l'image 1"""</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    largeur, hauteur <span class="op">=</span> img1.size</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    imgCrypt <span class="op">=</span> Image.new(<span class="st">"L"</span>, (largeur, hauteur))</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(...):</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(...):</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>            pixel_img1 <span class="op">=</span> img1.getpixel((i,j))</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>            pixel_img2 <span class="op">=</span> img2.getpixel((i,j))</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>            ...</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>            ...</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>            ...</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>            imgCrypt.putpixel((i,j), ...)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> imgCrypt</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test de la fonction crypte : il est normal que cela prenne quelques secondes</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ici, on cache l'image de la vache dans l'image de la ville</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>img1 <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">'image1.pgm'</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>img2<span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">'image2.pgm'</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>image_cryptee <span class="op">=</span> crypte(img1, img2)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>image_cryptee.save(<span class="st">"vache_perdue.pgm"</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>image_cryptee</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Compléte ci-dessous la fonction <code>decrypte</code> réalisant la seconde tâche demandée :</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decrypte(imgCrypt):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Cette fonction retourne l'image cachée dans imgCrypt"""</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    largeur, hauteur <span class="op">=</span> imgCrypt.size</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    img <span class="op">=</span> Image.new(<span class="st">"L"</span>, (largeur, hauteur))</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> img</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pour tester cette fonction, voici une image en niveaux de gris qui contient un message secret. Le fichier est nommé <code>image_crypte.pgm</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./image_crypte.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="./image_crypte.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># test de la fonction decrypte</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ou ouvre une image qui contient une image cryptée</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>imageCryptee <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">"image_crypte.pgm"</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># on décrypte</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>image <span class="op">=</span> decrypte(imageCryptee)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># on affiche l'image qui était cachée</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>image</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Maintenant, tu peux t’amuser à créer d’autres images cryptées et à les décrypter pour tester tes fonctions sur plusieurs exemples.</p>
+</section>
+<section id="défi-" class="level2">
+<h2 class="anchored" data-anchor-id="défi-">Défi !!!</h2>
+<p>Dans une image en couleur au format <code>RGB</code>, chaque pixel est codé par trois entiers compris entre 0 et 255.</p>
+<p>On peut donc y cacher trois images en niveaux de gris différentes : une dans chaque composante de couleur.</p>
+<p>En suivant cette idée, j’ai caché trois messages dans l’image ci-dessous, nommée <code>defi_steg.ppm</code>. Sauras-tu retrouver les trois messages cachés ?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="defi_steg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="defi_steg.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">### à compléter ...</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decrypte_image_couleurs(img):</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-<p><a href="https://capytale2.ac-paris.fr/web/c/147b-2247630">Ce T.P. est disponible dans Capytale.</a></p>
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1397,13 +1664,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../07_flottants/flottants_exos.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercices</span>
+      <a href="../11_tableaux/exos_tabs.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">:octicons-pencil-16: Exercice 1</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../08_booleens/index.html" class="pagination-link">
-        <span class="nav-page-text">Programme</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../12_dictionnaires/index.html" class="pagination-link">
+        <span class="nav-page-text">S4-Représentation de données - types construits</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1421,7 +1688,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1439,6 +1706,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":true,"closeEffect":"zoom"});</script>
 
 
 

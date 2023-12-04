@@ -81,7 +81,7 @@ website:
       - section: "Ch. 10 - p-uplets"
         contents: 
           - 10_p-uplets/index.qmd
-          - 10_p-uplets/p-uplets.qmd
+          - 10_p-uplets/p_uplets.qmd
           - 10_p-uplets/exos_tuples.qmd
       - section: "Ch. 11 - Tableaux"
         contents: 

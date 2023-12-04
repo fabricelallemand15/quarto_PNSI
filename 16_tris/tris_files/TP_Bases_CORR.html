@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première - TP : Bases 2, 10 et 16 en Python</title>
+<title>NSI - Première - TP : Bases 2, 10 et 16 en Python - Correction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../08_booleens/index.html" rel="next">
-<link href="../07_flottants/flottants_exos.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -148,7 +180,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/mini_tp_nombres.html">TP : Bases 2, 10 et 16 en Python</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">TP : Bases 2, 10 et 16 en Python - Correction</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -372,13 +404,13 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
  <span class="menu-text">Ch. 7 - Représentation approximative des nombres réels : flottants</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../07_flottants/index.html" class="sidebar-item-text sidebar-link">
@@ -399,7 +431,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../07_flottants/mini_tp_nombres.html" class="sidebar-item-text sidebar-link active">
+  <a href="../07_flottants/mini_tp_nombres.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TP : Bases 2, 10 et 16 en Python</span></a>
   </div>
 </li>
@@ -479,11 +511,8 @@ cookieconsent.run({
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../10_p-uplets/p_uplets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
-  </div>
-</li>
+ <span class="menu-text">10_p-uplets/p-uplets.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../10_p-uplets/exos_tuples.html" class="sidebar-item-text sidebar-link">
@@ -892,14 +921,24 @@ cookieconsent.run({
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="mini_tp_nombres.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link active" data-scroll-target="#exercice-1">Exercice 1</a></li>
+  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2">Exercice 2</a></li>
+  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3">Exercice 3</a></li>
+  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4">Exercice 4</a></li>
+  <li><a href="#problème" id="toc-problème" class="nav-link" data-scroll-target="#problème">Problème</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="TP_Bases_CORR.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../07_flottants/index.html">Ch. 7 - Représentation approximative des nombres réels : flottants</a></li><li class="breadcrumb-item"><a href="../07_flottants/mini_tp_nombres.html">TP : Bases 2, 10 et 16 en Python</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">TP : Bases 2, 10 et 16 en Python</h1>
+<h1 class="title">TP : Bases 2, 10 et 16 en Python - Correction</h1>
 </div>
 
 
@@ -915,9 +954,434 @@ cookieconsent.run({
 
 </header>
 
-<p><a href="https://capytale2.ac-paris.fr/web/c/147b-2247630">Ce T.P. est disponible dans Capytale.</a></p>
+<section id="exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1">Exercice 1</h2>
+<ol type="1">
+<li>Lire la documentation des fonctions Python <code>bin()</code>, <code>hex()</code> et <code>int()</code>.</li>
+<li>Prévoir ce qui s’affichera après chacune des instructions ci-dessous, puis tester en console :</li>
+</ol>
+<pre class="pycon"><code>&gt;&gt;&gt; bin(123)
+&gt;&gt;&gt; int("0b1111")
+&gt;&gt;&gt; int("0b10101", 2)
+&gt;&gt;&gt; bin(0)
+&gt;&gt;&gt; int("0b101211", 2)
+&gt;&gt;&gt; hex(2022)
+&gt;&gt;&gt; int("0xABC", 16)</code></pre>
+<div id="de200774" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">bin</span>(<span class="dv">123</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>'0b1111011'</code></pre>
+</div>
+</div>
+<div id="aa0abb07" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(<span class="st">b'1111'</span>)  <span class="co"># erreur dans l'énoncé</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>1111</code></pre>
+</div>
+</div>
+<div id="1317887d" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(<span class="st">"0b10101"</span>, <span class="dv">2</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>21</code></pre>
+</div>
+</div>
+<div id="724bdecb" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">bin</span>(<span class="dv">0</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>'0b0'</code></pre>
+</div>
+</div>
+<div id="d9c3998c" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(<span class="st">"0b101211"</span>, <span class="dv">2</span>) <span class="co"># le chiffre 2 n'existe pas en base 2 !</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>47</code></pre>
+</div>
+</div>
+<div id="49daac3a" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">hex</span>(<span class="dv">2022</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>'0x7e6'</code></pre>
+</div>
+</div>
+<div id="80775879" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(<span class="st">"0xABC"</span>, <span class="dv">16</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>2748</code></pre>
+</div>
+</div>
+</section>
+<section id="exercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2">Exercice 2</h2>
+<p>Le but de cet exercice est d’étudier une fonction permettant de convertir en base 2 un nombre entier naturel donné en base 10.</p>
+<p>On donne ci-dessous le code de la fonction <code>dec_to_bin</code> :</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dec_to_bin(n):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    chaine_bin <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    nombre <span class="op">=</span> n</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> nombre <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        r <span class="op">=</span> nombre <span class="op">%</span> <span class="dv">2</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>        nombre <span class="op">=</span> nombre <span class="op">//</span> <span class="dv">2</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        chaine_bin <span class="op">=</span> <span class="bu">str</span>(r) <span class="op">+</span> chaine_bin</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> chaine_bin</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="1">
+<li><p>Tester cette fonction avec quelques valeurs de <span class="math inline">\(n\)</span> et vérifier qu’elle effectue bien la conversion attendue.</p></li>
+<li><p>Quel est la méthode utilisée ? Faire le lien avec un des exemples du cours.</p></li>
+<li><p>On souhaite convertir le nombre <span class="math inline">\(n=105\)</span> en binaire. Recopier et compléter le tableau d’état des variables lors de l’appel <code>dec_to_bin(105)</code>. L’étape zéro correspond à l’initialisation, l’étape 1 à l’état des variables <strong>après</strong> le premier passage dans la boucle <code>while</code>.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Etape</th>
+<th style="text-align: center;"><code>chaine_bin</code></th>
+<th style="text-align: center;"><code>nombre</code></th>
+<th style="text-align: center;"><code>r</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">“”</td>
+<td style="text-align: center;">102</td>
+<td style="text-align: center;">/</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+<td style="text-align: center;">…</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Modifier la fonction afin que le préfixe <code>0b</code> soit présent dans la chaîne retournée.</p></li>
+</ol>
+<div id="e231bcf9" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dec_to_bin(n):</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    chaine_bin <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    nombre <span class="op">=</span> n</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> nombre <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>        r <span class="op">=</span> nombre <span class="op">%</span> <span class="dv">2</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>        nombre <span class="op">=</span> nombre <span class="op">//</span> <span class="dv">2</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>        chaine_bin <span class="op">=</span> <span class="bu">str</span>(r) <span class="op">+</span> chaine_bin</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> chaine_bin</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="a0689ebf" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>dec_to_bin(<span class="dv">4</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>'100'</code></pre>
+</div>
+</div>
+<div id="c232f24f" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>dec_to_bin(<span class="dv">21</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>'10101'</code></pre>
+</div>
+</div>
+<p>La méthode utilisée est celle des divisions successives en conservant les restes. C’est la méthode utilisée dans le cours.</p>
+<p>Tableau d’exécution pour <span class="math inline">\(n=105\)</span> :</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Etape</th>
+<th style="text-align: center;"><code>chaine_bin</code></th>
+<th style="text-align: center;"><code>nombre</code></th>
+<th style="text-align: center;"><code>r</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">“”</td>
+<td style="text-align: center;">105</td>
+<td style="text-align: center;">/</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">“1”</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">“01”</td>
+<td style="text-align: center;">26</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">“001”</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">“1001”</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">“01001”</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">“101001”</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">“1101001”</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<div id="59e41047" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérification</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>dec_to_bin(<span class="dv">105</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>'1101001'</code></pre>
+</div>
+</div>
+<div id="3ee4d889" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Modification demandée</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dec_to_bin_modif(n):</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    chaine_bin <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    nombre <span class="op">=</span> n</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> nombre <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>        r <span class="op">=</span> nombre <span class="op">%</span> <span class="dv">2</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>        nombre <span class="op">=</span> nombre <span class="op">//</span> <span class="dv">2</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>        chaine_bin <span class="op">=</span> <span class="bu">str</span>(r) <span class="op">+</span> chaine_bin</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"0b"</span><span class="op">+</span>chaine_bin</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérification</span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dec_to_bin_modif(<span class="dv">105</span>))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0b1101001</code></pre>
+</div>
+</div>
+</section>
+<section id="exercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3">Exercice 3</h2>
+<ol type="1">
+<li><p>Écrire une fonction qui respecte les spécifications indiquées :</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_2_bits(a: <span class="bu">int</span>, b: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">str</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""a et b sont des bits égaux à 0 ou 1</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co">    retourne une chaine représentant en base 2</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co">    la somme de a et de b"""</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Écrire une fonction analogue <code>add_3_bits(a, b, c)</code> qui retourne la somme de trois bits.</p></li>
+</ol>
+<div id="a8d2952f" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a> <span class="kw">def</span> add_2_bits(a: <span class="bu">int</span>, b: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""a et b sont des bits égaux à 0 ou 1</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="co">         retourne une chaine représentant en base 2</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co">         la somme de a et de b"""</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> a <span class="op">==</span> <span class="dv">1</span> <span class="kw">and</span> b <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>            rep <span class="op">=</span> <span class="st">"10"</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> a <span class="op">==</span> <span class="dv">1</span> <span class="kw">or</span> b <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>            rep <span class="op">=</span> <span class="st">"1"</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>            rep <span class="op">=</span> <span class="st">"0"</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> rep</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérification</span></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> add_2_bits(<span class="dv">0</span>,<span class="dv">0</span>) <span class="op">==</span> <span class="st">"0"</span></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> add_2_bits(<span class="dv">1</span>,<span class="dv">0</span>) <span class="op">==</span> <span class="st">"1"</span></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> add_2_bits(<span class="dv">0</span>,<span class="dv">1</span>) <span class="op">==</span> <span class="st">"1"</span></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> add_2_bits(<span class="dv">1</span>,<span class="dv">1</span>) <span class="op">==</span> <span class="st">"10"</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="0a61f6da" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_3_bits(a: <span class="bu">int</span>, b: <span class="bu">int</span>, c: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">==</span> <span class="dv">1</span> <span class="kw">and</span> b <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> c <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"11"</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"10"</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> a <span class="op">==</span> <span class="dv">1</span> <span class="kw">or</span> b <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> c <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"10"</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"1"</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> c <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"1"</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"0"</span></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérification</span></span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> add_3_bits(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>) <span class="op">==</span> <span class="st">"0"</span></span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> add_3_bits(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>) <span class="op">==</span> <span class="st">"1"</span></span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> add_3_bits(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>) <span class="op">==</span> <span class="st">"1"</span></span>
+<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> add_3_bits(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>) <span class="op">==</span> <span class="st">"1"</span></span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> add_3_bits(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>) <span class="op">==</span> <span class="st">"10"</span></span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> add_3_bits(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>) <span class="op">==</span> <span class="st">"10"</span></span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> add_3_bits(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>) <span class="op">==</span> <span class="st">"10"</span></span>
+<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> add_3_bits(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>) <span class="op">==</span> <span class="st">"11"</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="exercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4">Exercice 4</h2>
+<p>Coder la fonction <code>complement_deux</code> spécifiée ci-dessous. Vous pourrez utiliser la fonction <code>dec_to_bin</code> définie à l’exercice 2 (sans le préfixe <code>0b</code>). Votre code devra tester les préconditions indiquées sur l’entier <span class="math inline">\(n\)</span>.</p>
+<p>Un jeu de tests unitaires est proposé ci-dessous : il permet de vérifier que votre fonction retourne bien ce qui est attendu.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> complement_deux(n:<span class="bu">int</span>, nbits:<span class="bu">int</span>)<span class="op">-&gt;</span><span class="bu">str</span>:</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie la notation en compléments à 2 de l'entier relatif n</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co">    sous la forme d'une chaîne de caractères</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co">    ----------</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="co">    n : int Précondition -2**(nbits-1) &lt;= n &lt; 2**(nbits-1)</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="co">    nbits : int</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="co">    -------</span></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="co">    type str de longueur nbits</span></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(complement_deux(<span class="op">-</span><span class="dv">12</span>,<span class="dv">8</span>))</span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Jeu de tests unitaires</span></span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="dv">0</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"00000000"</span></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="dv">5</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"00000101"</span></span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="dv">2</span><span class="op">**</span><span class="dv">7</span> <span class="op">-</span> <span class="dv">1</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"01111111"</span></span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="op">-</span><span class="dv">2</span><span class="op">**</span><span class="dv">7</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"10000000"</span></span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="dv">2</span><span class="op">**</span><span class="dv">7</span> <span class="op">-</span> <span class="dv">2</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"01111110"</span></span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="op">-</span><span class="dv">2</span><span class="op">**</span><span class="dv">7</span> <span class="op">+</span> <span class="dv">1</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"10000001"</span></span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="op">-</span><span class="dv">1</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"11111111"</span></span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="op">-</span><span class="dv">2</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"11111110"</span></span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bravo ! Tous les tests sont réussis !"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Sortie attendue à l’exécution :</p>
+<pre class="pycon"><code>11110100
+Bravo ! Tous les tests sont réussis !</code></pre>
+<div id="9c37951c" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> complement_deux(n:<span class="bu">int</span>, nbits:<span class="bu">int</span>)<span class="op">-&gt;</span><span class="bu">str</span>:</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie la notation en compléments à 2 de l'entier relatif n</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co">    sous la forme d'une chaîne de caractères</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co">    ----------</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="co">    n : int Précondition -2**(nbits-1) &lt;= n &lt; 2**(nbits-1)</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="co">    nbits : int</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="co">    -------</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="co">    type str de longueur nbits</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Vérification de préconditions</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">type</span>(n) <span class="op">==</span> <span class="bu">int</span> <span class="kw">and</span> (<span class="op">-</span><span class="dv">2</span><span class="op">**</span>(nbits<span class="op">-</span><span class="dv">1</span>) <span class="op">&lt;=</span> n <span class="op">&lt;</span> <span class="dv">2</span><span class="op">**</span>(nbits<span class="op">-</span><span class="dv">1</span>))</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">type</span>(nbits) <span class="op">==</span> <span class="bu">int</span></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&gt;=</span><span class="dv">0</span>: <span class="co"># n est positif</span></span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>        rep <span class="op">=</span> dec_to_bin(n)</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>: <span class="co"># n est négatif</span></span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>        cplt <span class="op">=</span> <span class="dv">2</span><span class="op">**</span>nbits <span class="op">-</span> <span class="bu">abs</span>(n)</span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>        rep <span class="op">=</span> dec_to_bin(cplt)</span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># On complète la chaîne pour arriver à nbits</span></span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="bu">len</span>(rep) <span class="op">&lt;</span> nbits:</span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>        rep <span class="op">=</span> <span class="st">"0"</span> <span class="op">+</span> rep</span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> rep</span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(complement_deux(<span class="op">-</span><span class="dv">12</span>,<span class="dv">8</span>))</span>
+<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Jeu de tests unitaires</span></span>
+<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="dv">0</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"00000000"</span></span>
+<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="dv">5</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"00000101"</span></span>
+<span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="dv">2</span><span class="op">**</span><span class="dv">7</span> <span class="op">-</span> <span class="dv">1</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"01111111"</span></span>
+<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="op">-</span><span class="dv">2</span><span class="op">**</span><span class="dv">7</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"10000000"</span></span>
+<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="dv">2</span><span class="op">**</span><span class="dv">7</span> <span class="op">-</span> <span class="dv">2</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"01111110"</span></span>
+<span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="op">-</span><span class="dv">2</span><span class="op">**</span><span class="dv">7</span> <span class="op">+</span> <span class="dv">1</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"10000001"</span></span>
+<span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="op">-</span><span class="dv">1</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"11111111"</span></span>
+<span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> complement_deux(<span class="op">-</span><span class="dv">2</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">"11111110"</span></span>
+<span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bravo ! Tous les tests sont réussis !"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>11110100
+Bravo ! Tous les tests sont réussis !</code></pre>
+</div>
+</div>
+</section>
+<section id="problème" class="level2">
+<h2 class="anchored" data-anchor-id="problème">Problème</h2>
+<p>Écrire une fonction <code>ieee_754(x)</code> qui prend en entrée un flottant x (en base 10) et qui retourne une chaine de caractères correspondant à la représentation de <span class="math inline">\(x\)</span> selon la norme IEEE-754 sur 32 bits.</p>
+<p><em>Conseils : vous pourrez décomposer le problème en plusieurs fonctions séparées pour traiter les étapes une par une.</em></p>
+<div id="a4a3f492" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ieee_754(x: <span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Convertit le flottant x en binaire selon la norme ieee 754 sur 32 bits</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Résultat retourné sous forme de chaîne de caractères"""</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># bit de signe</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="op">&gt;=</span> <span class="dv">0</span>:</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>        chaine <span class="op">=</span> <span class="st">"0  "</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>        chaine <span class="op">=</span> <span class="st">"1  "</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">abs</span>(<span class="bu">int</span>(x)) <span class="co"># partie entière de x</span></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> <span class="bu">abs</span>(x) <span class="op">-</span> n <span class="co"># partie décimale de x</span></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>    n_bin <span class="op">=</span> dec_to_bin(n) <span class="co"># partir entière de x en binaire</span></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># conversion en binaire de la partie décimale f, on se limite à 100 bits maximum</span></span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>    f_bin <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> f <span class="op">!=</span> <span class="dv">0</span> <span class="kw">and</span> <span class="bu">len</span>(f_bin) <span class="op">&lt;</span> <span class="dv">100</span>:</span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a>        f <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> f</span>
+<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>        f_bin <span class="op">=</span> f_bin <span class="op">+</span> <span class="bu">str</span>(<span class="bu">int</span>(f))</span>
+<span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a>        f <span class="op">=</span> f <span class="op">-</span> <span class="bu">int</span>(f)</span>
+<span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb33-23"><a href="#cb33-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># calcul de l'exposant</span></span>
+<span id="cb33-24"><a href="#cb33-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&gt;=</span> <span class="dv">1</span>:</span>
+<span id="cb33-25"><a href="#cb33-25" aria-hidden="true" tabindex="-1"></a>        e <span class="op">=</span> <span class="bu">len</span>(n_bin) <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb33-26"><a href="#cb33-26" aria-hidden="true" tabindex="-1"></a>        <span class="co"># mantisse</span></span>
+<span id="cb33-27"><a href="#cb33-27" aria-hidden="true" tabindex="-1"></a>        m <span class="op">=</span> n_bin[<span class="dv">1</span>:] <span class="op">+</span> f_bin</span>
+<span id="cb33-28"><a href="#cb33-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb33-29"><a href="#cb33-29" aria-hidden="true" tabindex="-1"></a>        <span class="co"># cas d'un nombre de partie entière nulle</span></span>
+<span id="cb33-30"><a href="#cb33-30" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on cherche le premier 1 dans la partie fractionnaire</span></span>
+<span id="cb33-31"><a href="#cb33-31" aria-hidden="true" tabindex="-1"></a>        e <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb33-32"><a href="#cb33-32" aria-hidden="true" tabindex="-1"></a>        compteur <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb33-33"><a href="#cb33-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> f_bin[compteur] <span class="op">==</span> <span class="st">"0"</span>:</span>
+<span id="cb33-34"><a href="#cb33-34" aria-hidden="true" tabindex="-1"></a>            compteur <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb33-35"><a href="#cb33-35" aria-hidden="true" tabindex="-1"></a>        e <span class="op">=</span> <span class="op">-</span> (compteur <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb33-36"><a href="#cb33-36" aria-hidden="true" tabindex="-1"></a>        m <span class="op">=</span> f_bin[compteur<span class="op">+</span><span class="dv">1</span>:]</span>
+<span id="cb33-37"><a href="#cb33-37" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb33-38"><a href="#cb33-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># codage de l'exposant</span></span>
+<span id="cb33-39"><a href="#cb33-39" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print(f"exposant : {e}")</span></span>
+<span id="cb33-40"><a href="#cb33-40" aria-hidden="true" tabindex="-1"></a>    e <span class="op">=</span> e <span class="op">+</span> <span class="dv">127</span></span>
+<span id="cb33-41"><a href="#cb33-41" aria-hidden="true" tabindex="-1"></a>    e_bin <span class="op">=</span> <span class="bu">bin</span>(e)[<span class="dv">2</span>:]</span>
+<span id="cb33-42"><a href="#cb33-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="bu">len</span>(e_bin) <span class="op">&lt;</span> <span class="dv">8</span>:</span>
+<span id="cb33-43"><a href="#cb33-43" aria-hidden="true" tabindex="-1"></a>        e_bin <span class="op">=</span> <span class="st">"0"</span> <span class="op">+</span> e_bin</span>
+<span id="cb33-44"><a href="#cb33-44" aria-hidden="true" tabindex="-1"></a>    chaine <span class="op">=</span> chaine <span class="op">+</span> e_bin <span class="op">+</span> <span class="st">"  "</span></span>
+<span id="cb33-45"><a href="#cb33-45" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb33-46"><a href="#cb33-46" aria-hidden="true" tabindex="-1"></a>    <span class="co"># mantisse : on renvoie une mantisse de taille 23 bits</span></span>
+<span id="cb33-47"><a href="#cb33-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(m) <span class="op">&gt;</span> <span class="dv">23</span>:</span>
+<span id="cb33-48"><a href="#cb33-48" aria-hidden="true" tabindex="-1"></a>        m <span class="op">=</span> m[:<span class="dv">23</span>]</span>
+<span id="cb33-49"><a href="#cb33-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="bu">len</span>(m) <span class="op">&lt;</span> <span class="dv">23</span>:</span>
+<span id="cb33-50"><a href="#cb33-50" aria-hidden="true" tabindex="-1"></a>        m <span class="op">=</span> m <span class="op">+</span> <span class="st">"0"</span></span>
+<span id="cb33-51"><a href="#cb33-51" aria-hidden="true" tabindex="-1"></a>    chaine <span class="op">=</span> chaine <span class="op">+</span> m</span>
+<span id="cb33-52"><a href="#cb33-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> chaine</span>
+<span id="cb33-53"><a href="#cb33-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-54"><a href="#cb33-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-55"><a href="#cb33-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérification avec quelques exemples</span></span>
+<span id="cb33-56"><a href="#cb33-56" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> [<span class="fl">0.9218</span>, <span class="fl">0.002125</span>, <span class="fl">45.218</span>, <span class="fl">126.725</span>, <span class="fl">0.1</span>, <span class="fl">0.333333333333333333333333333</span>, <span class="op">-</span><span class="fl">2.5</span>]</span>
+<span id="cb33-57"><a href="#cb33-57" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> nb:</span>
+<span id="cb33-58"><a href="#cb33-58" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"codage de </span><span class="sc">{</span>item<span class="sc">}</span><span class="ss"> :  </span><span class="sc">{</span>ieee_754(item)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>codage de 0.9218 :  0  01111110  11010111111101100010101
+codage de 0.002125 :  0  01110110  00010110100001110010101
+codage de 45.218 :  0  10000100  01101001101111100111011
+codage de 126.725 :  0  10000101  11111010111001100110011
+codage de 0.1 :  0  01111011  10011001100110011001100
+codage de 0.3333333333333333 :  0  01111101  01010101010101010101010
+codage de -2.5 :  1  10000000  01000000000000000000000</code></pre>
+</div>
+</div>
+<p><strong>Remarque</strong> : le site <a href="https://www.ultimatesolver.com/en/ieee-754">https://www.ultimatesolver.com/en/ieee-754</a> permet de vérifier ces réponses.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1395,18 +1859,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../07_flottants/flottants_exos.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercices</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../08_booleens/index.html" class="pagination-link">
-        <span class="nav-page-text">Programme</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1421,7 +1873,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
