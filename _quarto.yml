@@ -78,26 +78,27 @@ website:
           - 09_texte/index.qmd
           - 09_texte/textes_cours.qmd
           - 09_texte/textes_exos.qmd
-      - section: "Ch. 10 - Modèle d'architecture de von Neumann"
+      - section: "Ch. 10 - p-uplets"
         contents: 
-          - 10_vonNeumann/index.qmd
-          - 10_vonNeumann/vonNeumann_cours.qmd
-          - 10_vonNeumann/vonNeumann_exos.qmd
-      - section: "Ch. 11 - p-uplets"
+          - 10_p-uplets/index.qmd
+          - 10_p-uplets/p-uplets.qmd
+          - 10_p-uplets/exos_tuples.qmd
+      - section: "Ch. 11 - Tableaux"
         contents: 
-          - 11_p-uplets/index.qmd
-          - 11_p-uplets/p-uplets_cours.qmd
-          - 11_p-uplets/p-uplets_exos.qmd
-      - section: "Ch. 12 - Tableaux"
+          - 11_tableaux/index.qmd
+          - 11_tableaux/tableaux.qmd
+          - 11_tableaux/exos_tabs.qmd
+          - 11_tableaux/TP_Stegano.qmd
+      - section: "Ch. 12 - Dictionnaires"
         contents: 
-          - 12_tableaux/index.qmd
-          - 12_tableaux/tableaux_cours.qmd
-          - 12_tableaux/tableaux_exos.qmd
-      - section: "Ch. 13 - Dictionnaires"
+          - 12_dictionnaires/index.qmd
+          - 12_dictionnaires/dicos.qmd
+          - 12_dictionnaires/exos_dicos.qmd
+      - section: "Ch. 13 - Modèle d'architecture de von Neumann"
         contents: 
-          - 13_dictionnaires/index.qmd
-          - 13_dictionnaires/dictionnaires_cours.qmd
-          - 13_dictionnaires/dictionnaires_exos.qmd
+          - 13_vonNeumann/index.qmd
+          - 13_vonNeumann/vonNeumann_cours.qmd
+          - 13_vonNeumann/vonNeumann_exos.qmd
       - section: "Ch. 14 - Éléments généraux d'algorithmique"
         contents: 
           - 14_algo/index.qmd
@@ -199,3 +200,4 @@ format:
     lightbox: auto
     code-block-border-left: "#31BAE9"
     code-block-bg: true
+  docx: default
