@@ -576,114 +576,114 @@
   {
     "objectID": "11_tableaux/tableaux.html",
     "href": "11_tableaux/tableaux.html",
-    "title": "NSI - Première",
+    "title": "Cours",
     "section": "",
-    "text": "!!! danger “Tableaux et listes”\n!!! info “Définition” Un tableau est une suite ordonnée d’éléments qui sont tous du même type."
+    "text": "Tableaux et listes\n\n\n\nDans ce cours, conformément au programme, nous allons employer le terme “tableau”. Ce terme désigne une structure de données abstraite en informatique. Dans le langage Python, on utilise des objets du type list pour cette structure. Cependant, les objets de type list en Python sont bien plus que des tableaux au sens du cours. Pour éviter toute confusion, notamment par rapport à d’autres structures de données qui seront abordées en terminale, nous nous efforcerons d’employer “tableau” à la place de “liste”."
   },
   {
     "objectID": "11_tableaux/tableaux.html#création-dun-tableau",
     "href": "11_tableaux/tableaux.html#création-dun-tableau",
-    "title": "NSI - Première",
+    "title": "Cours",
     "section": "1. Création d’un tableau",
     "text": "1. Création d’un tableau\nPour créer un tableau en Python, nous utilisons un objet de type list. Un tel objet ressemble à un p-uplet : un ensemble ordonné d’éléments avec des indices pour les repérer. Les éléments d’un tableau sont séparés par des virgules et entourés de crochets.\n&gt;&gt;&gt; tab1 = [\"a\", \"b\", \"c\"] # un tableau à 3 éléments\n&gt;&gt;&gt; tab2 = [1] # un tableau contenant un seul élément\n&gt;&gt;&gt; tab3 = [[1, 2], [3, 4]] # un tableau de tableaux\n&gt;&gt;&gt; tab_vide = [] # un tableau vide\nPour créer rapidement un tableau d’entiers, nous pouvons utiliser les fonctions list et range.\n&gt;&gt;&gt; tab = list(range(2, 10, 3)) # [2, 5, 8]\nPour ajouter les éléments un par un en fin de tableau, nous pouvons utiliser la méthode append :\nmultiples_de_3 = [0, 3]\nmultiples_de_3.append(6) # [0, 3, 6]"
   },
   {
     "objectID": "11_tableaux/tableaux.html#construction-par-compréhension",
     "href": "11_tableaux/tableaux.html#construction-par-compréhension",
-    "title": "NSI - Première",
+    "title": "Cours",
     "section": "2. Construction par compréhension",
-    "text": "2. Construction par compréhension\nIl est aussi possible de créer un tableau par compréhension. Il s’agit de décrire les éléments du tableaux par une boucle, des conditions, …\nL’instruction de base s’écrit sous la forme [expression(i) for i in objet]. Ce type de construction est très spécifique au langage Python. En voici deux exemples :\nmultiples_de_3 = [3 * i for i in range(100)]\nmultiples_de_6 = [2 * n for n in multiples_de_3]\nSi on dispose d’une fonction f et d’un tableau d’abscisses x :\nimages = [f(x) for x in abscisses]\nOn peut aussi ajouter des conditions. Par exemple l’instruction ci-dessous est une autre façon de définir le tableau des multiples de 3 :\nmultiples_de_3 = [n for n in range(301) if n % 3 == 0]"
+    "text": "2. Construction par compréhension\nIl est aussi possible de créer un tableau par compréhension. Il s’agit de décrire les éléments du tableau par une boucle, des conditions, …\nL’instruction de base s’écrit sous la forme [expression(i) for i in objet]. Ce type de construction est très spécifique au langage Python. En voici deux exemples :\nmultiples_de_3 = [3 * i for i in range(100)]\nmultiples_de_6 = [2 * n for n in multiples_de_3]\nSi on dispose d’une fonction f et d’un tableau d’abscisses x :\nimages = [f(x) for x in abscisses]\nOn peut aussi ajouter des conditions. Par exemple l’instruction ci-dessous est une autre façon de définir le tableau des multiples de 3 :\nmultiples_de_3 = [n for n in range(301) if n % 3 == 0]"
   },
   {
     "objectID": "11_tableaux/tableaux.html#utilisation-des-tableaux",
     "href": "11_tableaux/tableaux.html#utilisation-des-tableaux",
-    "title": "NSI - Première",
+    "title": "Cours",
     "section": "3. Utilisation des tableaux",
     "text": "3. Utilisation des tableaux\nLa fonction len renvoie la longueur d’un tableau, le nombre d’éléments du tableau.\nOn accède aux différents éléments d’un tableau avec les indices comme pour les p-uplets. Dans le cas d’un tableau de tableaux, on utilise des doubles crochets : tab[1][0].\n&gt;&gt;&gt; tab = [\"a\", \"b\", \"c\"]\n&gt;&gt;&gt; tab[1]\n'b'\n&gt;&gt;&gt; tab = [[\"a\", \"b\"], [\"c\", \"d\"]]\n&gt;&gt;&gt; tab[1][0]\n'c'\nÀ la différence des tuples, un tableau est un objet modifiable (on dit mutable en anglais). On peut donc réaffecter un élément d’un tableau déjà créé.\n&gt;&gt;&gt; tab = [1, 2, 3, 4]\n&gt;&gt;&gt; tab[0] = 17\n&gt;&gt;&gt; tab\n[17, 2, 3, 4]"
   },
   {
     "objectID": "11_tableaux/tableaux.html#opérations-sur-les-tableaux",
     "href": "11_tableaux/tableaux.html#opérations-sur-les-tableaux",
-    "title": "NSI - Première",
+    "title": "Cours",
     "section": "4. Opérations sur les tableaux",
-    "text": "4. Opérations sur les tableaux\nLe type d’une variable définit les valeurs qui peuvent être affectées à cette variable ainsi que les opérateurs et les fonctions utilisables. Les fonctions propres à un type donné sont appelées des méthodes. La fonction len par exemple, s’applique aux chaînes de caractères, aux p-uplets, aux tableaux. La méthode append, présentée plus haut, est par contre propre aux tableaux.\nAttention à la syntaxe : on écrit len(tab), mais tab.append(...). Le nom de la variable est suivi d’un point puis du nom de la méthode. Cette notation est issue de la programmation orientée objets qui sera abordée en terminale.\nVoici quelques méthodes pour le tableaux :\n&gt;&gt;&gt; tab = [\"a\", \"b\", \"c\"]\n&gt;&gt;&gt; tab.insert(1, \"d\") # insertion à l'indice 1 de l'élément \"d\"\n&gt;&gt;&gt; tab\n['a', 'd', 'b', 'c']\n&gt;&gt;&gt; tab.remove(\"b\") # suppression de la première occurrence de l'élément \"b\"\n&gt;&gt;&gt; tab\n['a', 'd', 'c']\n&gt;&gt;&gt; x = tab.pop() # supprime et retourne le dernier élément\n&gt;&gt;&gt; x\n'c'\n&gt;&gt;&gt; tab\n['a', 'd']\n&gt;&gt;&gt; tab.reverse() # renverse l'ordre des éléments\n&gt;&gt;&gt; tab\n['d', 'a']\n&gt;&gt;&gt; tab.sort() # trie les éléments dans l'ordre croissant ou alphabétique\n&gt;&gt;&gt; tab\n['a', 'd']\nToutes ces méthodes modifient la liste initiale contrairement aux opérateurs de concaténation + et * avec lesquels une nouvelle liste est créée. Ces deux opérateurs s’utilisent comme avec les p-uplets.\nNotons qu’il est aussi possible de trier une liste sans la modifier avec la fonction sorted qui crée une nouvelle liste.\n&gt;&gt;&gt; tab = [5, 2, 7, 4]\n&gt;&gt;&gt; tri = sorted(tab)\n&gt;&gt;&gt; tab\n[5, 2, 7, 4]\n&gt;&gt;&gt; tri\n[2, 4, 5, 7]"
+    "text": "4. Opérations sur les tableaux\nLe type d’une variable définit les valeurs qui peuvent être affectées à cette variable ainsi que les opérateurs et les fonctions utilisables. Les fonctions propres à un type donné sont appelées des méthodes. La fonction len par exemple, s’applique aux chaînes de caractères, aux p-uplets, aux tableaux. La méthode append, présentée plus haut, est par contre propre aux tableaux.\nAttention à la syntaxe : on écrit len(tab), mais tab.append(...). Le nom de la variable est suivi d’un point puis du nom de la méthode. Cette notation est issue de la programmation orientée objets qui sera abordée en terminale.\nVoici quelques méthodes pour le tableau :\n&gt;&gt;&gt; tab = [\"a\", \"b\", \"c\"]\n&gt;&gt;&gt; tab.insert(1, \"d\") # insertion à l'indice 1 de l'élément \"d\"\n&gt;&gt;&gt; tab\n['a', 'd', 'b', 'c']\n&gt;&gt;&gt; tab.remove(\"b\") # suppression de la première occurrence de l'élément \"b\"\n&gt;&gt;&gt; tab\n['a', 'd', 'c']\n&gt;&gt;&gt; x = tab.pop() # supprime et retourne le dernier élément\n&gt;&gt;&gt; x\n'c'\n&gt;&gt;&gt; tab\n['a', 'd']\n&gt;&gt;&gt; tab.reverse() # renverse l'ordre des éléments\n&gt;&gt;&gt; tab\n['d', 'a']\n&gt;&gt;&gt; tab.sort() # trie les éléments dans l'ordre croissant ou alphabétique\n&gt;&gt;&gt; tab\n['a', 'd']\nToutes ces méthodes modifient la liste initiale contrairement aux opérateurs de concaténation + et * avec lesquels une nouvelle liste est créée. Ces deux opérateurs s’utilisent comme avec les p-uplets.\nNotons qu’il est aussi possible de trier une liste sans la modifier avec la fonction sorted qui crée une nouvelle liste.\n&gt;&gt;&gt; tab = [5, 2, 7, 4]\n&gt;&gt;&gt; tri = sorted(tab)\n&gt;&gt;&gt; tab\n[5, 2, 7, 4]\n&gt;&gt;&gt; tri\n[2, 4, 5, 7]"
   },
   {
     "objectID": "11_tableaux/tableaux.html#copie-dun-tableau",
     "href": "11_tableaux/tableaux.html#copie-dun-tableau",
-    "title": "NSI - Première",
+    "title": "Cours",
     "section": "5. Copie d’un tableau",
     "text": "5. Copie d’un tableau\nUn tableau peut donc être modifié par une méthode. On peut aussi modifier l’un de ses éléments par affectation.\n&gt;&gt;&gt; tab = [\"a\", \"b\", \"c\"]\n&gt;&gt;&gt; tab[1] = \"d\"\n&gt;&gt;&gt; tab\n[\"a\", \"d\", \"c\"]\nCeci oblige à une grande attention en particulier dans la création de copie de tableau. Observons le code suivant :\n&gt;&gt;&gt; tab1 = [\"a\", \"b\", \"c\"]\n&gt;&gt;&gt; tab2 = tab1\n&gt;&gt;&gt; tab1[1] = \"d\"\n&gt;&gt;&gt; tab2\n[\"a\", \"d\", \"c\"]\nDans cet exemple, un même tableau a deux noms et tab2 n’est pas une copie de tab1 : il s’agit juste d’une nouvelle étiquette qui pointe vers le même contenu de la mémoire.\n\n\nPour obtenir une vraie copie, il faut créer un nouveau tableau.\nPour effectuer une vraie copie d’une liste simple, on peut entrer :\n&gt;&gt;&gt; tab2 = list(tab1)\n\n\nPour des tableaux de tableaux, cependant, cette copie simple ne suffira pas car les éléments du tableau, qui sont eux-mêmes des tableaux, ne seront pas vraiment copiés. Pour y parvenir, si nécessaire, on utilise la fonction deepcopy de la bibliothèque copy.\n&gt;&gt;&gt; from copy import deepcopy\n&gt;&gt;&gt; tab1 = [[\"a\", \"b\"], [\"c\", \"d\"]]\n&gt;&gt;&gt; tab2 = deepcopy(liste1)\n&gt;&gt;&gt; tab2[1][0] = \"e\"\n&gt;&gt;&gt; tab2\n[[\"a\", \"b\"], [\"e\", \"d\"]]\n&gt;&gt;&gt; tab1\n[[\"a\", \"b\"], [\"c\", \"d\"]"
   },
   {
     "objectID": "11_tableaux/tableaux.html#parcours-dun-tableau-avec-une-boucle-for",
     "href": "11_tableaux/tableaux.html#parcours-dun-tableau-avec-une-boucle-for",
-    "title": "NSI - Première",
+    "title": "Cours",
     "section": "6. Parcours d’un tableau avec une boucle for",
-    "text": "6. Parcours d’un tableau avec une boucle for\nUne boucle for permet de parcourir chacun des éléments d’un tableau. On peut soit boucler sur les indices des éléments du tableau, soit sur les éléments eux-mêmes.\n&gt;&gt;&gt; t = [1,2,3,4]\n&gt;&gt;&gt; for k in t:  # boucle sur les éléments\n        print(k)\n1\n2\n3\n4\n&gt;&gt;&gt; for i in range(len(t)): # boucle sur les indices\n        print(t[i])\n1\n2\n3\n4\n!!! bug “À retenir” * Un tableau une structure ordonnée qui permet de contenir plusieurs éléments qui sont tous accessibles. * Tous les éléments d’un tableau sont du même type. Un tableau peut contenir d’autres tableaux. * Un tableau est modifiable : on peut procéder à une affectation de la forme t[i]=valeur"
+    "text": "6. Parcours d’un tableau avec une boucle for\nUne boucle for permet de parcourir chacun des éléments d’un tableau. On peut soit boucler sur les indices des éléments du tableau, soit sur les éléments eux-mêmes.\n&gt;&gt;&gt; t = [1,2,3,4]\n&gt;&gt;&gt; for k in t:  # boucle sur les éléments\n        print(k)\n1\n2\n3\n4\n&gt;&gt;&gt; for i in range(len(t)): # boucle sur les indices\n        print(t[i])\n1\n2\n3\n4\n\n\n\n\n\n\nÀ retenir\n\n\n\n\nUn tableau une structure ordonnée qui permet de contenir plusieurs éléments qui sont tous accessibles.\nTous les éléments d’un tableau sont du même type. Un tableau peut contenir d’autres tableaux.\nUn tableau est modifiable : on peut procéder à une affectation de la forme t[i]=valeur"
   },
   {
     "objectID": "11_tableaux/tableaux.html#remarques-sur-les-tableaux-de-tableaux",
     "href": "11_tableaux/tableaux.html#remarques-sur-les-tableaux-de-tableaux",
-    "title": "NSI - Première",
+    "title": "Cours",
     "section": "7. Remarques sur les tableaux de tableaux",
     "text": "7. Remarques sur les tableaux de tableaux\nVoici un exemple de tableau de tableaux :\nm = [[1, 3, 4], [5 ,6 ,8], [2, 1, 3], [7, 8, 15]]\nLe premier élément du tableau ci-dessus est bien un tableau ([1, 3, 4]), le deuxième élément est aussi un tableau ([5, 6, 8])…\nIl est souvent plus pratique de présenter ces “tableaux de tableaux” comme ci-dessous :\nm = [[1, 3, 4],\n     [5, 6, 8],\n     [2, 1, 3],\n     [7, 8, 15]]\nNous obtenons ainsi quelque chose qui ressemble beaucoup à un “objet mathématique” très utilisé : une matrice, tableau de nombres composé de lignes et de colonnes.\nL’instruction m[1] retourne le deuxième élément du tableau m, c’est-à-dire le tableau [5, 6, 8].\nPour accéder au troisième élément de ce dernier tableau, il faut donc entrer l’instruction m[1][2] qui va renvoyer 8.\nOn accède donc aux éléments du tableau de nombres en indexant m avec le numéro de la ligne puis le numéro de la colonne (comptés à partir de zéro).\nIl est possible de parcourir l’ensemble des éléments d’une matrice à l’aide d’une “double boucle for” :\nm = [[1, 3, 4],\n     [5, 6, 8],\n     [2, 1, 3],\n     [7, 8, 15]]\nnb_colonne = 3\nnb_ligne = 4\nfor i in range(0, nb_ligne):\n    for j in range(0, nb_colonne):\n        a = m[i][j]\n        print(a)\nL’exécution de ce programme donnera le résultat suivant :\n1\n3\n4\n5\n6\n8\n2\n1\n3\n7\n8\n15\nNous avons bien parcouru l’ensemble des éléments du tableau m.\nCette double boucle for est une structure complexe, mais pourtant assez répandue. N’hésitez pas à consacrer quelques minutes à son analyse.\nCe type de tableau à deux dimensions est utilisé pour coder les images sous forme d’images matricielles. Les curieux peuvent en apprendre plus à ce sujet en étudiant la vidéo suivante proposée sur Lumni (dans laquelle le narrateur dit “liste” au lieu de “tableau”)."
   },
   {
     "objectID": "11_tableaux/exos_tabs.html",
     "href": "11_tableaux/exos_tabs.html",
-    "title": "NSI - Première",
+    "title": "Exercices",
     "section": "",
-    "text": "Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit."
+    "text": "Les exercices précédés du symbole  sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole  doivent être résolus par écrit."
   },
   {
-    "objectID": "11_tableaux/exos_tabs.html#octicons-pencil-16-exercice-1",
-    "href": "11_tableaux/exos_tabs.html#octicons-pencil-16-exercice-1",
-    "title": "NSI - Première",
-    "section": ":octicons-pencil-16: Exercice 1",
-    "text": ":octicons-pencil-16: Exercice 1\nDonner les valeurs des tableaux T1, T2, T3, T4, T5, T6 suivants écrits en compréhension :\nT1 = [3 * i for i in range(10)]\nT2 = ['A' for i in range(7)]\nT3 = [randint(1, 6) for k in range(10)]\nT4 = [10 ** i for i in range(5)]\nT5 = [x * x for x in T4]\nListe = [-5, 2, 3, -7, 42, 7]\nT6 = [elt for elt in Liste if elt &gt; 0]"
+    "objectID": "11_tableaux/exos_tabs.html#exercice-1",
+    "href": "11_tableaux/exos_tabs.html#exercice-1",
+    "title": "Exercices",
+    "section": " Exercice 1",
+    "text": "Exercice 1\nDonner les valeurs des tableaux T1, T2, T3, T4, T5, T6 suivants écrits en compréhension :\nT1 = [3 * i for i in range(10)]\nT2 = ['A' for i in range(7)]\nT3 = [randint(1, 6) for k in range(10)]\nT4 = [10 ** i for i in range(5)]\nT5 = [x * x for x in T4]\nListe = [-5, 2, 3, -7, 42, 7]\nT6 = [elt for elt in Liste if elt &gt; 0]"
   },
   {
-    "objectID": "11_tableaux/exos_tabs.html#fontawesome-solid-computer-exercice-2",
-    "href": "11_tableaux/exos_tabs.html#fontawesome-solid-computer-exercice-2",
-    "title": "NSI - Première",
-    "section": ":fontawesome-solid-computer: Exercice 2",
-    "text": ":fontawesome-solid-computer: Exercice 2\nChercher la différence entre les deux commandes python suivantes :\nT1 = [[0] * 5 for i in range(3)]\nT2 = [[0] * 5] * 3\nOn pourra observer les résultats de l’affectation de tableau[0][1]=7 pour les deux tableaux."
+    "objectID": "11_tableaux/exos_tabs.html#exercice-2",
+    "href": "11_tableaux/exos_tabs.html#exercice-2",
+    "title": "Exercices",
+    "section": " Exercice 2",
+    "text": "Exercice 2\nChercher la différence entre les deux commandes python suivantes :\nT1 = [[0] * 5 for i in range(3)]\nT2 = [[0] * 5] * 3\nOn pourra observer les résultats de l’affectation de tableau[0][1]=7 pour les deux tableaux."
   },
   {
-    "objectID": "11_tableaux/exos_tabs.html#fontawesome-solid-computer-exercice-3",
-    "href": "11_tableaux/exos_tabs.html#fontawesome-solid-computer-exercice-3",
-    "title": "NSI - Première",
-    "section": ":fontawesome-solid-computer: Exercice 3",
-    "text": ":fontawesome-solid-computer: Exercice 3\n\nCréer un tableau en compréhension contenant toutes les lettres majuscules de l’alphabet.\nCréer en compréhension le tableau suivant : [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]\nCréer en compréhension en utilisant le tableau précédent : [10.1, 10.2, 10.3, 10.4, 10.5, 10.6, 10.7, 10.8, 10.9, 2]\nCréer en compréhension le tableau donnant les 6 premiers multiples de 16.\nCréer en compréhension le tableau : [1, 0.5, 0.25, 0.125, …, \\(2^{-6}\\)]."
+    "objectID": "11_tableaux/exos_tabs.html#exercice-3",
+    "href": "11_tableaux/exos_tabs.html#exercice-3",
+    "title": "Exercices",
+    "section": " Exercice 3",
+    "text": "Exercice 3\n\nCréer un tableau en compréhension contenant toutes les lettres majuscules de l’alphabet.\nCréer en compréhension le tableau suivant : [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]\nCréer en compréhension en utilisant le tableau précédent : [10.1, 10.2, 10.3, 10.4, 10.5, 10.6, 10.7, 10.8, 10.9, 2]\nCréer en compréhension le tableau donnant les 6 premiers multiples de 16.\nCréer en compréhension le tableau : [1, 0.5, 0.25, 0.125, …, \\(2^{-6}\\)]."
   },
   {
-    "objectID": "11_tableaux/exos_tabs.html#octicons-pencil-16-exercice-4",
-    "href": "11_tableaux/exos_tabs.html#octicons-pencil-16-exercice-4",
-    "title": "NSI - Première",
-    "section": ":octicons-pencil-16: Exercice 4",
-    "text": ":octicons-pencil-16: Exercice 4\nLe tableau suivant est le relevé de notes d’un élève par matières :\n\n\n\nMathématiques\n16\n18\n14\n17\n20\n\n\n\n\nAlgorithmique\n11\n15\n13\n10\n14\n\n\nProgrammation\n12\n8\n13\n7\n16\n\n\n\nOn le représente par le tableau suivant :\nNotes = [[16, 18, 14, 17, 20],\n         [11, 15, 13, 10, 14],\n         [12, 8, 13, 7, 16]]\nQuelles valeurs vont être affichées en console ?\n&gt;&gt;&gt; Notes[2][2]\n&gt;&gt;&gt; Notes[0][2]\n&gt;&gt;&gt; Notes[0]"
+    "objectID": "11_tableaux/exos_tabs.html#exercice-4",
+    "href": "11_tableaux/exos_tabs.html#exercice-4",
+    "title": "Exercices",
+    "section": " Exercice 4",
+    "text": "Exercice 4\nLe tableau suivant est le relevé de notes d’un élève par matières :\n\n\n\nMathématiques\n16\n18\n14\n17\n20\n\n\n\n\nAlgorithmique\n11\n15\n13\n10\n14\n\n\nProgrammation\n12\n8\n13\n7\n16\n\n\n\nOn le représente par le tableau suivant :\nNotes = [[16, 18, 14, 17, 20],\n         [11, 15, 13, 10, 14],\n         [12, 8, 13, 7, 16]]\nQuelles valeurs vont être affichées en console ?\n&gt;&gt;&gt; Notes[2][2]\n&gt;&gt;&gt; Notes[0][2]\n&gt;&gt;&gt; Notes[0]"
   },
   {
-    "objectID": "11_tableaux/exos_tabs.html#octicons-pencil-16-exercice-5",
-    "href": "11_tableaux/exos_tabs.html#octicons-pencil-16-exercice-5",
-    "title": "NSI - Première",
-    "section": ":octicons-pencil-16: Exercice 5",
-    "text": ":octicons-pencil-16: Exercice 5\nQuelles sont les valeurs contenues dans le tableau T à la suite de cette série d’instructions ?\nT = [[9, 20, 13, 4],\n     [17, 15, 3, 7],\n     [8, 6, 10, 21]]\nT[2][1] = 22\nT[1][2] = 27\nT[0][3] = T[0][3] + 8\nT[1][3] = T[2][0] + 5"
+    "objectID": "11_tableaux/exos_tabs.html#exercice-5",
+    "href": "11_tableaux/exos_tabs.html#exercice-5",
+    "title": "Exercices",
+    "section": " Exercice 5",
+    "text": "Exercice 5\nQuelles sont les valeurs contenues dans le tableau T à la suite de cette série d’instructions ?\nT = [[9, 20, 13, 4],\n     [17, 15, 3, 7],\n     [8, 6, 10, 21]]\nT[2][1] = 22\nT[1][2] = 27\nT[0][3] = T[0][3] + 8\nT[1][3] = T[2][0] + 5"
   },
   {
-    "objectID": "11_tableaux/exos_tabs.html#fontawesome-solid-computer-exercice-6",
-    "href": "11_tableaux/exos_tabs.html#fontawesome-solid-computer-exercice-6",
-    "title": "NSI - Première",
-    "section": ":fontawesome-solid-computer: Exercice 6",
-    "text": ":fontawesome-solid-computer: Exercice 6\nLa matrice suivant donne les notes d’un élève dans différentes matières.\nNotesEleve = [[16, 7, 5, 8, 10],\n              [11, 3, 4, 12, 7],\n              [1, 9, 13, 2, 5]]\n\nÉcrire une fonction qui remplace chaque note de la matrice inférieure à 10 par un 10.\nÉcrire une fonction remplace(Tab) qui prend en paramètre une matrice (tableau de tableaux) contenant des nombres et qui renvoie une matrice dans laquelle les nombres inférieurs à 10 sont remplacés par 10 (il faudra créer dans la fonction une autre matrice qui sera renvoyée car il est bien utile de conserver la première en l’état !)."
+    "objectID": "11_tableaux/exos_tabs.html#exercice-6",
+    "href": "11_tableaux/exos_tabs.html#exercice-6",
+    "title": "Exercices",
+    "section": " Exercice 6",
+    "text": "Exercice 6\nLa matrice suivant donne les notes d’un élève dans différentes matières.\nNotesEleve = [[16, 7, 5, 8, 10],\n              [11, 3, 4, 12, 7],\n              [1, 9, 13, 2, 5]]\n\nÉcrire une fonction qui remplace chaque note de la matrice inférieure à 10 par un 10.\nÉcrire une fonction remplace(Tab) qui prend en paramètre une matrice (tableau de tableaux) contenant des nombres et qui renvoie une matrice dans laquelle les nombres inférieurs à 10 sont remplacés par 10 (il faudra créer dans la fonction une autre matrice qui sera renvoyée car il est bien utile de conserver la première en l’état !)."
   },
   {
-    "objectID": "11_tableaux/exos_tabs.html#octicons-pencil-16-qcm",
-    "href": "11_tableaux/exos_tabs.html#octicons-pencil-16-qcm",
-    "title": "NSI - Première",
-    "section": ":octicons-pencil-16: QCM",
-    "text": ":octicons-pencil-16: QCM\n\nOn définit : L = [1, 2, 3, 4, 5, 6]. Quelle est la valeur de L[3] ?\n\n[1, 2, 3]\n3\n4\n[4, 5, 6]\n\nOn définit : T = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nLaquelle des expressions suivantes a pour valeur 7 ?\n\nT[3, 1]\nT[3][1]\nT[2, 0]\nT[2][0]\n\nQuelle est l’expression qui a pour valeur le tableau [1, 4, 9, 16, 25, 36] ?\n\n[n*n  for n in range(0, 6)]\n[n*n  for n in range(6)]\n[n*n  for n in range(1, 7)]\n[n*n  for n in range(1, 6)]\n\nSi la variable note est définie par note = [\"do\", \"ré\", \"mi\", \"fa\", \"sol\", \"la\", \"si\"] alors :\n\nl’index de “sol” est 5\nl’index de note est 0\nl’index de “si” est 7\nl’index de “mi” est 2\n\nOn définit une grille G remplie de 0, sous la forme d’un tableau de tableaux, où tous les sous-tableaux ont le même nombre d’éléments.\nG = [[0, 0, 0, ..., 0],\n    [0, 0, 0, ..., 0],\n    [0, 0, 0, ..., 0],\n    ...\n    [0, 0, 0, ..., 0]]\nOn appelle hauteur de la grille le nombre de sous-tableaux contenus dans G et largeur de la grille le nombre d’éléments dans chacune de ces sous-tableaux. Comment peut-on les obtenir ?\n\nhauteur = len(G[0]) et largeur = len(G)\nhauteur = len(G) et largeur = len(G[0])\nhauteur = len(G[0]) et largeur = len(G[1])\nhauteur = len(G[1]) et largeur = len(G[0])\n\nQuelle est la valeur de l’expression [2 * k + 1 for k in range(4)] ?\n\n[1, 3, 5, 7]\n[0, 1, 2, 3]\n[3, 5, 7, 9]\n[1, 2, 3, 4]\n\nDe quelle expression le tableau suivante est-il la valeur : [[0, 0, 0, 0], [1, 1, 1, 1], [2, 2, 2, 2]] ?\n\n[[i] * 4 for i in range(4)]\n[[i] * 3 for i in range(4)]\n[[i] * 4 for i in range(3)]\n[[i] * 3 for i in range(3)]\n\nQuelle est la valeur de l’expression : [(a, b) for a in range(3) for b in range(3) if a &gt; b] ?\n\n[(a, b), (a, b), (a, b), (a, b), (a, b), (a, b), (a, b), (a, b), (a, b)]\n[(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]\n[(1, 0), (2, 0), (2, 1)]\n[(0 ,0), (0 ,1), (0, 2), (1, 0), (1, 1), (1, 2), (1, 0), (1, 1), (1, 2)]"
+    "objectID": "11_tableaux/exos_tabs.html#qcm",
+    "href": "11_tableaux/exos_tabs.html#qcm",
+    "title": "Exercices",
+    "section": " QCM",
+    "text": "QCM\n\nOn définit : L = [1, 2, 3, 4, 5, 6]. Quelle est la valeur de L[3] ?\n\n[1, 2, 3]\n3\n4\n[4, 5, 6]\n\nOn définit : T = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nLaquelle des expressions suivantes a pour valeur 7 ?\n\nT[3, 1]\nT[3][1]\nT[2, 0]\nT[2][0]\n\nQuelle est l’expression qui a pour valeur le tableau [1, 4, 9, 16, 25, 36] ?\n\n[n*n  for n in range(0, 6)]\n[n*n  for n in range(6)]\n[n*n  for n in range(1, 7)]\n[n*n  for n in range(1, 6)]\n\nSi la variable note est définie par note = [\"do\", \"ré\", \"mi\", \"fa\", \"sol\", \"la\", \"si\"] alors :\n\nl’index de “sol” est 5\nl’index de note est 0\nl’index de “si” est 7\nl’index de “mi” est 2\n\nOn définit une grille G remplie de 0, sous la forme d’un tableau de tableaux, où tous les sous-tableaux ont le même nombre d’éléments.\nG = [[0, 0, 0, ..., 0],\n    [0, 0, 0, ..., 0],\n    [0, 0, 0, ..., 0],\n    ...\n    [0, 0, 0, ..., 0]]\nOn appelle hauteur de la grille le nombre de sous-tableaux contenus dans G et largeur de la grille le nombre d’éléments dans chacune de ces sous-tableaux. Comment peut-on les obtenir ?\n\nhauteur = len(G[0]) et largeur = len(G)\nhauteur = len(G) et largeur = len(G[0])\nhauteur = len(G[0]) et largeur = len(G[1])\nhauteur = len(G[1]) et largeur = len(G[0])\n\nQuelle est la valeur de l’expression [2 * k + 1 for k in range(4)] ?\n\n[1, 3, 5, 7]\n[0, 1, 2, 3]\n[3, 5, 7, 9]\n[1, 2, 3, 4]\n\nDe quelle expression le tableau suivante est-il la valeur : [[0, 0, 0, 0], [1, 1, 1, 1], [2, 2, 2, 2]] ?\n\n[[i] * 4 for i in range(4)]\n[[i] * 3 for i in range(4)]\n[[i] * 4 for i in range(3)]\n[[i] * 3 for i in range(3)]\n\nQuelle est la valeur de l’expression : [(a, b) for a in range(3) for b in range(3) if a &gt; b] ?\n\n[(a, b), (a, b), (a, b), (a, b), (a, b), (a, b), (a, b), (a, b), (a, b)]\n[(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]\n[(1, 0), (2, 0), (2, 1)]\n[(0 ,0), (0 ,1), (0, 2), (1, 0), (1, 1), (1, 2), (1, 0), (1, 1), (1, 2)]"
   },
   {
     "objectID": "10_p-uplets/index.html",

@@ -1,15 +1,24 @@
-!!! danger "Tableaux et listes"
+---
+title: "Cours"
+---
 
-    Dans ce cours, conformément au programme, nous allons employer le terme "tableau". Ce termer désigne une structure de données abstraite en informatique. Dans le langage Python, on utilise des objets du type ``list`` pour cette structure. Cependant, les objets de type ``list`` en Python sont bien plus que des tableaux au sens du cours. Pour éviter toute confusion, notamment par rapport à d'autres structures de données qui seront abordées en terminale, nous nous efforcerons d'employer "tableau" à la place de "liste".
+:::{.callout-warning}
+## Tableaux et listes
 
-!!! info "Définition"
-    Un tableau est une suite ordonnée d'éléments qui sont **tous du même type**.
+Dans ce cours, conformément au programme, nous allons employer le terme "tableau". Ce terme désigne une structure de données abstraite en informatique. Dans le langage Python, on utilise des objets du type ``list`` pour cette structure. Cependant, les objets de type ``list`` en Python sont bien plus que des tableaux au sens du cours. Pour éviter toute confusion, notamment par rapport à d'autres structures de données qui seront abordées en terminale, nous nous efforcerons d'employer "tableau" à la place de "liste".
+:::
+
+:::{.callout-tip}
+## Définition
+
+Un tableau est une suite ordonnée d'éléments qui sont **tous du même type**.
+:::
 
 ## 1. Création d'un tableau
 
 Pour créer un tableau en Python, nous utilisons un objet de type ``list``. Un tel objet ressemble à un p-uplet : un ensemble ordonné d'éléments avec des indices pour les repérer. Les éléments d'un tableau sont séparés par des virgules et **entourés de crochets**.
 
-````pycon
+````python
 >>> tab1 = ["a", "b", "c"] # un tableau à 3 éléments
 >>> tab2 = [1] # un tableau contenant un seul élément
 >>> tab3 = [[1, 2], [3, 4]] # un tableau de tableaux
@@ -18,7 +27,7 @@ Pour créer un tableau en Python, nous utilisons un objet de type ``list``. Un t
 
 Pour créer rapidement un tableau d'entiers, nous pouvons utiliser les fonctions ``list`` et ``range``.
 
-````pycon
+````python
 >>> tab = list(range(2, 10, 3)) # [2, 5, 8]
 ````
 
@@ -31,7 +40,7 @@ multiples_de_3.append(6) # [0, 3, 6]
 
 ## 2. Construction par compréhension
 
-Il est aussi possible de créer un tableau **par compréhension**. Il s'agit de décrire les éléments du tableaux par une boucle, des conditions, ...
+Il est aussi possible de créer un tableau **par compréhension**. Il s'agit de décrire les éléments du tableau par une boucle, des conditions, ...
 
 L'instruction de base s'écrit sous la forme ``[expression(i) for i in objet]``. Ce type de construction est très spécifique au langage Python. En voici deux exemples :
 
@@ -58,7 +67,7 @@ La fonction ``len`` renvoie la longueur d'un tableau, le nombre d'éléments du 
 
 On accède aux différents éléments d'un tableau avec les indices comme pour les p-uplets. Dans le cas d'un tableau de tableaux, on utilise des doubles crochets : ``tab[1][0]``.
 
-````pycon
+````python
 >>> tab = ["a", "b", "c"]
 >>> tab[1]
 'b'
@@ -69,7 +78,7 @@ On accède aux différents éléments d'un tableau avec les indices comme pour l
 
 À la différence des tuples, un tableau est un objet **modifiable** (on dit **mutable** en anglais). On peut donc réaffecter un élément d'un tableau déjà créé.
 
-````pycon
+````python
 >>> tab = [1, 2, 3, 4]
 >>> tab[0] = 17
 >>> tab
@@ -82,9 +91,9 @@ Le type d'une variable définit les valeurs qui peuvent être affectées à cett
 
 **Attention à la syntaxe** : on écrit ``len(tab)``, mais ``tab.append(...)``. Le nom de la variable est suivi d'un point puis du nom de la méthode. Cette notation est issue de la **programmation orientée objets** qui sera abordée en terminale.
 
-Voici quelques méthodes pour le tableaux :
+Voici quelques méthodes pour le tableau :
 
-````pycon
+````python
 >>> tab = ["a", "b", "c"]
 >>> tab.insert(1, "d") # insertion à l'indice 1 de l'élément "d"
 >>> tab
@@ -109,7 +118,7 @@ Toutes ces méthodes modifient la liste initiale contrairement aux opérateurs d
 
 Notons qu'il est aussi possible de trier une liste sans la modifier avec la fonction sorted qui crée une nouvelle liste.
 
-````pycon
+````python
 >>> tab = [5, 2, 7, 4]
 >>> tri = sorted(tab)
 >>> tab
@@ -122,7 +131,7 @@ Notons qu'il est aussi possible de trier une liste sans la modifier avec la fonc
 
 Un tableau peut donc être modifié par une méthode. On peut aussi modifier l'un de ses éléments par affectation.
 
-````pycon
+````python
 >>> tab = ["a", "b", "c"]
 >>> tab[1] = "d"
 >>> tab
@@ -131,7 +140,7 @@ Un tableau peut donc être modifié par une méthode. On peut aussi modifier l'u
 
 Ceci oblige à une grande attention en particulier dans la création de copie de tableau. Observons le code suivant :
 
-````pycon
+````python
 >>> tab1 = ["a", "b", "c"]
 >>> tab2 = tab1
 >>> tab1[1] = "d"
@@ -147,7 +156,7 @@ Pour obtenir une vraie copie, il faut créer un nouveau tableau.
 
 Pour effectuer une vraie copie d'une liste simple, on peut entrer : 
 
-````pycon
+````python
 >>> tab2 = list(tab1)
 ````
 
@@ -155,7 +164,7 @@ Pour effectuer une vraie copie d'une liste simple, on peut entrer :
 
 Pour des tableaux de tableaux, cependant, cette copie simple ne suffira pas car les éléments du tableau, qui sont eux-mêmes des tableaux, ne seront pas vraiment copiés. Pour y parvenir, si nécessaire, on utilise la fonction ``deepcopy`` de la bibliothèque ``copy``.
 
-````pycon
+````python
 >>> from copy import deepcopy
 >>> tab1 = [["a", "b"], ["c", "d"]]
 >>> tab2 = deepcopy(liste1)
@@ -170,7 +179,7 @@ Pour des tableaux de tableaux, cependant, cette copie simple ne suffira pas car 
 
 Une boucle ``for`` permet de parcourir chacun des éléments d'un tableau. On peut soit boucler sur les indices des éléments du tableau, soit sur les éléments eux-mêmes.
 
-````pycon
+````python
 >>> t = [1,2,3,4]
 >>> for k in t:  # boucle sur les éléments
         print(k)
@@ -186,10 +195,12 @@ Une boucle ``for`` permet de parcourir chacun des éléments d'un tableau. On pe
 4
 ````
 
-!!! bug "À retenir"
-    * Un **tableau** une structure ordonnée qui permet de contenir plusieurs éléments qui sont tous accessibles.
-    * Tous les éléments d'un tableau sont du même type. Un tableau peut contenir d'autres tableaux.
-    * Un tableau est **modifiable** : on peut procéder à une affectation de la forme ``t[i]=valeur``
+:::{.callout-important}
+## À retenir
+* Un **tableau** une structure ordonnée qui permet de contenir plusieurs éléments qui sont tous accessibles.
+* Tous les éléments d'un tableau sont du même type. Un tableau peut contenir d'autres tableaux.
+* Un tableau est **modifiable** : on peut procéder à une affectation de la forme ``t[i]=valeur``
+:::
 
 ## 7. Remarques sur les tableaux de tableaux
 

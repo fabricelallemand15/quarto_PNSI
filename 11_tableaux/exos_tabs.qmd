@@ -1,8 +1,12 @@
-_Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+---
+title: "Exercices"
+---
 
-_Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit._
+_Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._
 
-## :octicons-pencil-16: Exercice 1
+_Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
+
+## {{< fa solid pencil-alt >}} Exercice 1
 
 Donner les valeurs des tableaux T1, T2, T3, T4, T5, T6 suivants écrits en compréhension :
 
@@ -18,7 +22,7 @@ T6 = [elt for elt in Liste if elt > 0]
 
 -----------------------------------------------------
 
-## :fontawesome-solid-computer: Exercice 2
+## {{< fa desktop >}} Exercice 2
 
 Chercher la différence entre les deux commandes python suivantes :
 
@@ -31,7 +35,7 @@ On pourra observer les résultats de l'affectation de ``tableau[0][1]=7`` pour l
 
 ----------------------------------------------------------------------------
 
-## :fontawesome-solid-computer: Exercice 3
+## {{< fa desktop >}} Exercice 3
 
 1.	Créer un tableau en compréhension contenant toutes les lettres majuscules de l'alphabet.
 2.	Créer en compréhension le tableau suivant : ``[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]``
@@ -41,7 +45,7 @@ On pourra observer les résultats de l'affectation de ``tableau[0][1]=7`` pour l
 
 -----------------------------------------------------------
 
-## :octicons-pencil-16: Exercice 4
+## {{< fa solid pencil-alt >}} Exercice 4
 
 Le tableau suivant est le relevé de notes d'un élève par matières :
 
@@ -60,7 +64,7 @@ Notes = [[16, 18, 14, 17, 20],
 
 Quelles valeurs vont être affichées en console ?
 
-````pycon
+````python
 >>> Notes[2][2]
 >>> Notes[0][2]
 >>> Notes[0]
@@ -68,7 +72,7 @@ Quelles valeurs vont être affichées en console ?
 
 --------------------------------------------------
 
-## :octicons-pencil-16: Exercice 5
+## {{< fa solid pencil-alt >}} Exercice 5
 
 Quelles sont les valeurs contenues dans le tableau T à la suite de cette série d'instructions ?
 
@@ -84,7 +88,7 @@ T[1][3] = T[2][0] + 5
 
 --------------------------------------
 
-## :fontawesome-solid-computer: Exercice 6
+## {{< fa desktop >}} Exercice 6
 
 La matrice suivant donne les notes d'un élève dans différentes matières. 
 
@@ -99,7 +103,7 @@ NotesEleve = [[16, 7, 5, 8, 10],
 
 -------------------------------------------
 
-## :octicons-pencil-16: QCM
+## {{< fa solid pencil-alt >}} QCM
 
 1. On définit : ``L = [1, 2, 3, 4, 5, 6]``. Quelle est la valeur de ``L[3]`` ?
 
