@@ -1,5 +1,6 @@
-Mini-projet : Stéganographie {#mini-projet--stéganographie}
-============================
+---
+title: "Mini-projet Stéganographie"
+---
 
 Cette activité est fortement inspirée du dossier paru sur le site
 [bibmath](http://www.bibmath.net/crypto/index.php?action=affiche&quoi=stegano/index).
@@ -35,13 +36,15 @@ versions de Python 3. On pourra consulter [le site de
 Pillow](https://python-pillow.org/). La bibliothèque Pillow est déjà
 installée dans la distribution EduPython.
 
-!!! danger "Attention"
+:::{.callout-warning}
+## Attention
 
-    **Toutes les images utilisées dans ce mini-projet sont téléchargeables en cliquant ici : [images.zip](./images.zip)**
+* Toutes les images utilisées dans ce mini-projet sont téléchargeables en cliquant ici : [images.zip](./images.zip).
 
-    **Pour faire ce travail, il est nécessaire d'avoir téléchargé les images et de les avoir placées dans le même dossier que votre programme.**
+* Pour faire ce travail, il est nécessaire d'avoir téléchargé les images et de les avoir placées dans le même dossier que votre programme.
 
-    **Le travail pourra être fait dans EduPython, ou dans la console Python accessible dans le menu ci-dessus. Dans ce cas, les images devront être chargées dans la console en utilisant le bouton représentant un dossier.**
+* Le travail pourra être fait dans EduPython, ou dans la console Python accessible dans le menu ci-dessus. Dans ce cas, les images devront être chargées dans la console en utilisant le bouton représentant un dossier.
+:::
 
 ![](./pillow.png)
 
@@ -52,7 +55,7 @@ suivante en début de programme :
 
 
  
-``` {.python}
+``` {python}
 from PIL import Image
 ```
 
@@ -62,7 +65,7 @@ from PIL import Image
 
 
  
-``` {.python}
+``` {python}
 # ouverture du fichier image
 img = Image.open("chat.png")
 # nom du fichier
@@ -75,7 +78,7 @@ print(img.height)
 
 
  
-``` {.python}
+``` {python}
 # Affichage de l'image
 img.show()
 ```
@@ -114,7 +117,7 @@ img.show()
 
 
  
-``` {.python}
+``` {python}
 print(img.mode)
 img.getpixel((48,75)) # attention aux parenthèses !
 ```
@@ -126,7 +129,7 @@ img.getpixel((48,75)) # attention aux parenthèses !
 
 
   
-``` {.python}
+``` {python}
 largeur = 200
 hauteur = 100
 # Création d'une nouvelle image en niveaux de gris en mémoire
@@ -270,7 +273,7 @@ print("Tests réussis !")
 
 
  
-Compléte ci-dessous la fonction `crypte` réalisant la première tâche
+Complète ci-dessous la fonction `crypte` réalisant la première tâche
 demandée :
 
 
@@ -305,7 +308,7 @@ image_cryptee
 
 
  
-Compléte ci-dessous la fonction `decrypte` réalisant la seconde tâche
+Complète ci-dessous la fonction `decrypte` réalisant la seconde tâche
 demandée :
 
 

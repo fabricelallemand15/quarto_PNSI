@@ -1,8 +1,6 @@
 ---
-title: S4-Représentation de données - types construits
+title: Programme
 ---
-
-## Programme
 
 À partir des types de base se constituent des types construits, qui sont introduits au fur et à mesure qu'ils sont nécessaires.
 
