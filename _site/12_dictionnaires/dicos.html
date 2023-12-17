@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.274">
+<meta name="generator" content="quarto-1.4.523">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – dicos</title>
+<title>NSI - Première - Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -54,12 +88,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Pas de résultats",
     "search-matching-documents-text": "documents trouvés",
@@ -68,6 +103,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "correspondance de plus dans ce document",
     "search-more-matches-text": "correspondances de plus dans ce document",
     "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Annuler",
     "search-submit-button-title": "Envoyer",
     "search-label": "Recherche"
@@ -102,7 +138,7 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
@@ -116,20 +152,20 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+    <a class="nav-link" href="https://python.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../ressources.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+    <a class="nav-link" href="../ressources.html"> 
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -145,11 +181,11 @@ cookieconsent.run({
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../12_dictionnaires/index.html">Ch. 12 - Dictionnaires</a></li><li class="breadcrumb-item"><a href="../12_dictionnaires/dicos.html">1. Définition et création d’un dictionnaire</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../12_dictionnaires/index.html">Ch. 12 - Dictionnaires</a></li><li class="breadcrumb-item"><a href="../12_dictionnaires/dicos.html">Cours</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -157,7 +193,7 @@ cookieconsent.run({
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -504,7 +540,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../11_tableaux/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4-Représentation de données - types construits</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -522,7 +558,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../11_tableaux/TP_Stegano.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mini-projet : Stéganographie {#mini-projet–stéganographie}</span></a>
+ <span class="menu-text">Mini-projet Stéganographie</span></a>
   </div>
 </li>
       </ul>
@@ -539,19 +575,25 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4-Représentation de données - types construits</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/dicos.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">1. Définition et création d’un dictionnaire</span></a>
+ <span class="menu-text">Cours</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/exos_dicos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">:octicons-pencil-16: Exercice 1</span></a>
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../12_dictionnaires/quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quiz</span></a>
   </div>
 </li>
       </ul>
@@ -889,7 +931,7 @@ cookieconsent.run({
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -909,116 +951,184 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../12_dictionnaires/index.html">Ch. 12 - Dictionnaires</a></li><li class="breadcrumb-item"><a href="../12_dictionnaires/dicos.html">Cours</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Cours</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <p>Tout comme les p-uplets et les tableaux, les dictionnaires sont un type construit de données pouvant contenir plusieurs éléments. Mais à la différence des deux autres structures étudiées, les éléments contenus dans un dictionnaire ne sont pas <strong>ordonnés</strong> et ils ne sont pas indexés par un entier, mais par une <strong>clé</strong> qui peut être de différents types.</p>
 <section id="définition-et-création-dun-dictionnaire" class="level2">
 <h2 class="anchored" data-anchor-id="définition-et-création-dun-dictionnaire">1. Définition et création d’un dictionnaire</h2>
-<p>!!! info “Définition” Un dictionnaire est une collection de paires de la forme <code>clé:valeur</code>.</p>
-<pre><code>En Python, ils sont implémentés par le type ``dict`` et sont délimités par des accolades.</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Définition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un dictionnaire est une collection de paires de la forme <code>clé:valeur</code>.</p>
+<p>En Python, ils sont implémentés par le type <code>dict</code> et sont délimités par des accolades.</p>
+</div>
+</div>
 <p>On peut définir un dictionnaire de différentes façons :</p>
 <ul>
-<li><p>en écrivant les couples les uns à la suite des autres, séparés par des virgules, le tout entre accolades.</p>
-<pre class="pycon"><code>&gt;&gt;&gt; capitales = {"France":"Paris", "Allemagne":"Berlin", "Italie":"Rome", "Espagne":"Madrid", "Suisse":"Berne",
-                 "Luxembourg":"Luxembourg", "Belgique":"Bruxelles", "Pays-Bas":"Amsterdam", "Royaume-Uni":"Londres"}
-&gt;&gt;&gt; type(capitales)
-&lt;class 'dict'&gt;  </code></pre></li>
-<li><p>en compréhension, comme avec les tableaux.</p>
-<pre class="pycon"><code>&gt;&gt;&gt; d = {chr(65+i): i for i in range(26)}
-&gt;&gt;&gt; d
-{'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7, 'I': 8, 'J': 9, 'K': 10, 'L': 11, 'M': 12, 'N': 13, 'O': 14, 'P': 15, 'Q': 16, 'R': 17, 'S': 18, 'T': 19, 'U': 20, 'V': 21, 'W': 22, 'X': 23, 'Y': 24, 'Z': 25}</code></pre></li>
-<li><p>élément par élément après avoir défini un dictionnaire vide.</p>
-<pre class="pycon"><code>&gt;&gt;&gt; superficie = {}
-&gt;&gt;&gt; superficie["France"] = 543940
-&gt;&gt;&gt; superficie["Allemagne"] = 357588
-&gt;&gt;&gt; superficie["Espagne"] = 505992
-&gt;&gt;&gt; superficie
-{'France': 543940, 'Allemagne': 357588, 'Espagne': 505992}</code></pre></li>
+<li>en écrivant les couples les uns à la suite des autres, séparés par des virgules, le tout entre accolades.</li>
 </ul>
-<p>!!! warning “Attention !” Les clés et les valeurs peuvent être de différents types, mais avec des restrictions concernant les clés. Celles-ci ne peuvent prendre que des types <strong>immuables</strong>, c’est-à-dire non modifiables. Un tableau ne pourra par exemple pas servir de clé. Par contre, un tuple le peut s’il ne contient que des éléments eux-mêmes immuables.</p>
-<pre><code>On utilisera comme clés des éléments du type : ``str``, ``int``, ``float``, ``tuple``.
-
-Un dictionnaire est un objet variable, il ne peut donc pas servir de clé.
-
-Les valeurs, par contre, peuvent être de n'importe quel type, y compris des dictionnaires. Dans un même dictionnaire, les différentes clés peuvent être de types différents et les différentes valeurs également.
-
-Une clé donnée ne peut apparaître qu'une fois dans un dictionnaire. Si une clé existante est à nouveau spécifiée, la nouvelle valeur écrase la précédente.
-
-Par contre, une même valeur peut apparaître plusieurs fois, associée à des clés différentes.</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> capitales <span class="op">=</span> {<span class="st">"France"</span>:<span class="st">"Paris"</span>, <span class="st">"Allemagne"</span>:<span class="st">"Berlin"</span>, <span class="st">"Italie"</span>:<span class="st">"Rome"</span>, <span class="st">"Espagne"</span>:<span class="st">"Madrid"</span>, <span class="st">"Suisse"</span>:<span class="st">"Berne"</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Luxembourg"</span>:<span class="st">"Luxembourg"</span>, <span class="st">"Belgique"</span>:<span class="st">"Bruxelles"</span>, <span class="st">"Pays-Bas"</span>:<span class="st">"Amsterdam"</span>, <span class="st">"Royaume-Uni"</span>:<span class="st">"Londres"</span>}</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(capitales)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'dict'</span><span class="op">&gt;</span>  </span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>en compréhension, comme avec les tableaux.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> d <span class="op">=</span> {<span class="bu">chr</span>(<span class="dv">65</span><span class="op">+</span>i): i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">26</span>)}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> d</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>{<span class="st">'A'</span>: <span class="dv">0</span>, <span class="st">'B'</span>: <span class="dv">1</span>, <span class="st">'C'</span>: <span class="dv">2</span>, <span class="st">'D'</span>: <span class="dv">3</span>, <span class="st">'E'</span>: <span class="dv">4</span>, <span class="st">'F'</span>: <span class="dv">5</span>, <span class="st">'G'</span>: <span class="dv">6</span>, <span class="st">'H'</span>: <span class="dv">7</span>, <span class="st">'I'</span>: <span class="dv">8</span>, <span class="st">'J'</span>: <span class="dv">9</span>, <span class="st">'K'</span>: <span class="dv">10</span>, <span class="st">'L'</span>: <span class="dv">11</span>, <span class="st">'M'</span>: <span class="dv">12</span>, <span class="st">'N'</span>: <span class="dv">13</span>, <span class="st">'O'</span>: <span class="dv">14</span>, <span class="st">'P'</span>: <span class="dv">15</span>, <span class="st">'Q'</span>: <span class="dv">16</span>, <span class="st">'R'</span>: <span class="dv">17</span>, <span class="st">'S'</span>: <span class="dv">18</span>, <span class="st">'T'</span>: <span class="dv">19</span>, <span class="st">'U'</span>: <span class="dv">20</span>, <span class="st">'V'</span>: <span class="dv">21</span>, <span class="st">'W'</span>: <span class="dv">22</span>, <span class="st">'X'</span>: <span class="dv">23</span>, <span class="st">'Y'</span>: <span class="dv">24</span>, <span class="st">'Z'</span>: <span class="dv">25</span>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>élément par élément après avoir défini un dictionnaire vide.</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie <span class="op">=</span> {}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie[<span class="st">"France"</span>] <span class="op">=</span> <span class="dv">543940</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie[<span class="st">"Allemagne"</span>] <span class="op">=</span> <span class="dv">357588</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie[<span class="st">"Espagne"</span>] <span class="op">=</span> <span class="dv">505992</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>{<span class="st">'France'</span>: <span class="dv">543940</span>, <span class="st">'Allemagne'</span>: <span class="dv">357588</span>, <span class="st">'Espagne'</span>: <span class="dv">505992</span>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Attention !
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Les clés et les valeurs peuvent être de différents types, mais avec des restrictions concernant les clés. Celles-ci ne peuvent prendre que des types <strong>immuables</strong>, c’est-à-dire non modifiables. Un tableau ne pourra par exemple pas servir de clé. Par contre, un tuple le peut s’il ne contient que des éléments eux-mêmes immuables.</p>
+<p>On utilisera comme clés des éléments du type : <code>str</code>, <code>int</code>, <code>float</code>, <code>tuple</code>.</p>
+<p>Un dictionnaire est un objet variable, il ne peut donc pas servir de clé.</p>
+<p>Les valeurs, par contre, peuvent être de n’importe quel type, y compris des dictionnaires. Dans un même dictionnaire, les différentes clés peuvent être de types différents et les différentes valeurs également.</p>
+<p>Une clé donnée ne peut apparaître qu’une fois dans un dictionnaire. Si une clé existante est à nouveau spécifiée, la nouvelle valeur écrase la précédente.</p>
+<p>Par contre, une même valeur peut apparaître plusieurs fois, associée à des clés différentes.</p>
+</div>
+</div>
 </section>
 <section id="manipulation-des-dictionnaires" class="level2">
 <h2 class="anchored" data-anchor-id="manipulation-des-dictionnaires">2. Manipulation des dictionnaires</h2>
 <section id="accès-aux-éléments" class="level3">
 <h3 class="anchored" data-anchor-id="accès-aux-éléments">Accès aux éléments</h3>
 <p>On accède à une <strong>valeur</strong> en utilisant sa <strong>clé</strong> comme indice :</p>
-<pre class="pycon"><code>&gt;&gt;&gt; capitales["Espagne"]
-'Madrid'</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> capitales[<span class="st">"Espagne"</span>]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">'Madrid'</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>L’utilisation d’une clé inexistante renvoie une erreur. Pour éviter cela, on peut aussi utiliser la méthode <code>get()</code> qui va renvoyer <code>None</code> si la clé n’existe pas.</p>
-<pre class="pycon"><code>&gt;&gt;&gt; capitales["Autriche"]
-Traceback (most recent call last):
-  File "C:\Users\fabri\AppData\Local\Programs\Python\Python310\lib\code.py", line 90, in runcode
-    exec(code, self.locals)
-  File "&lt;input&gt;", line 1, in &lt;module&gt;
-KeyError: 'Autriche'
-&gt;&gt;&gt; capitales.get("Autriche")
-&gt;&gt;&gt; print(capitales.get("Autriche"))
-None</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> capitales[<span class="st">"Autriche"</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"C:\Users</span><span class="ch">\f</span><span class="st">abri\AppData\Local\Programs\Python\Python310\lib\code.py"</span>, line <span class="dv">90</span>, <span class="kw">in</span> runcode</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">exec</span>(code, <span class="va">self</span>.<span class="bu">locals</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"&lt;input&gt;"</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="pp">KeyError</span>: <span class="st">'Autriche'</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> capitales.get(<span class="st">"Autriche"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(capitales.get(<span class="st">"Autriche"</span>))</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="va">None</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Les <strong>méthodes</strong> <code>keys()</code>, <code>values()</code> et <code>items()</code> permettent respectivement d’accéder à la liste des clés, à la liste des valeurs et à la liste des couples (clés, valeurs).</p>
-<pre class="pycon"><code>&gt;&gt;&gt; capitales.keys()
-dict_keys(['France', 'Allemagne', 'Italie', 'Espagne', 'Suisse', 'Luxembourg', 'Belgique', 'Pays-Bas', 'Royaume-Uni'])
-&gt;&gt;&gt; capitales.values()
-dict_values(['Paris', 'Berlin', 'Rome', 'Madrid', 'Berne', 'Luxembourg', 'Bruxelles', 'Amsterdam', 'Londres'])
-&gt;&gt;&gt; capitales.items()
-dict_items([('France', 'Paris'), ('Allemagne', 'Berlin'), ('Italie', 'Rome'), ('Espagne', 'Madrid'), ('Suisse', 'Berne'), ('Luxembourg', 'Luxembourg'), ('Belgique', 'Bruxelles'), ('Pays-Bas', 'Amsterdam'), ('Royaume-Uni', 'Londres')])</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> capitales.keys()</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>dict_keys([<span class="st">'France'</span>, <span class="st">'Allemagne'</span>, <span class="st">'Italie'</span>, <span class="st">'Espagne'</span>, <span class="st">'Suisse'</span>, <span class="st">'Luxembourg'</span>, <span class="st">'Belgique'</span>, <span class="st">'Pays-Bas'</span>, <span class="st">'Royaume-Uni'</span>])</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> capitales.values()</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>dict_values([<span class="st">'Paris'</span>, <span class="st">'Berlin'</span>, <span class="st">'Rome'</span>, <span class="st">'Madrid'</span>, <span class="st">'Berne'</span>, <span class="st">'Luxembourg'</span>, <span class="st">'Bruxelles'</span>, <span class="st">'Amsterdam'</span>, <span class="st">'Londres'</span>])</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> capitales.items()</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>dict_items([(<span class="st">'France'</span>, <span class="st">'Paris'</span>), (<span class="st">'Allemagne'</span>, <span class="st">'Berlin'</span>), (<span class="st">'Italie'</span>, <span class="st">'Rome'</span>), (<span class="st">'Espagne'</span>, <span class="st">'Madrid'</span>), (<span class="st">'Suisse'</span>, <span class="st">'Berne'</span>), (<span class="st">'Luxembourg'</span>, <span class="st">'Luxembourg'</span>), (<span class="st">'Belgique'</span>, <span class="st">'Bruxelles'</span>), (<span class="st">'Pays-Bas'</span>, <span class="st">'Amsterdam'</span>), (<span class="st">'Royaume-Uni'</span>, <span class="st">'Londres'</span>)])</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>On peut tester l’appartenance à un dictionnaire avec le mot clé <code>in</code> :</p>
-<pre class="pycon"><code>&gt;&gt;&gt; "Uruguay" in capitales.keys()
-False
-&gt;&gt;&gt; "Berlin" in capitales.values()
-True</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">"Uruguay"</span> <span class="kw">in</span> capitales.keys()</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="va">False</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">"Berlin"</span> <span class="kw">in</span> capitales.values()</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="va">True</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="autres-opérations" class="level3">
 <h3 class="anchored" data-anchor-id="autres-opérations">Autres opérations</h3>
-<p>!!! bug “Remarque” * Comme dit plus haut, les dictionnaires sont des structures <strong>modifiables</strong> : on peut changer la valeur associée à une clé donnée dans un programme. * Par contre, on ne peut pas modifier une clé.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remarque
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Comme dit plus haut, les dictionnaires sont des structures <strong>modifiables</strong> : on peut changer la valeur associée à une clé donnée dans un programme.</li>
+<li>Par contre, on ne peut pas modifier une clé.</li>
+</ul>
+</div>
+</div>
 <p>L’instruction <code>del</code> permet de supprimer une valeur désignée par sa clé.</p>
-<pre class="pycon"><code>&gt;&gt;&gt; superficie
-{'France': 543940, 'Allemagne': 357588, 'Espagne': 505992}
-&gt;&gt;&gt; del superficie["France"]
-&gt;&gt;&gt; superficie
-{'Allemagne': 357588, 'Espagne': 505992}</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>{<span class="st">'France'</span>: <span class="dv">543940</span>, <span class="st">'Allemagne'</span>: <span class="dv">357588</span>, <span class="st">'Espagne'</span>: <span class="dv">505992</span>}</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">del</span> superficie[<span class="st">"France"</span>]</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>{<span class="st">'Allemagne'</span>: <span class="dv">357588</span>, <span class="st">'Espagne'</span>: <span class="dv">505992</span>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>La fonction <code>len</code> renvoie le nombre de valeurs contenues dans le dictionnaire.</p>
-<pre class="pycon"><code>&gt;&gt;&gt; len(capitales)
-9</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(capitales)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Copie d’un dictionnaire : Les comportements sont similaires à ceux rencontrés avec les tableaux en particulier si les valeurs sont des tableaux. Il est donc conseillé d’utiliser la fonction <code>deepcopy</code> du module <code>copy</code> pour être certain d’obtenir une “vraie” copie.</p>
 </section>
 </section>
 <section id="itérer-sur-les-éléments-dun-dictionnaire" class="level2">
 <h2 class="anchored" data-anchor-id="itérer-sur-les-éléments-dun-dictionnaire">3. Itérer sur les éléments d’un dictionnaire</h2>
 <p>On peut parcourir un dictionnaire à partir de ses clés :</p>
-<pre class="pycon"><code>&gt;&gt;&gt; superficie = {}
-&gt;&gt;&gt; superficie["France"] = 543940
-&gt;&gt;&gt; superficie["Allemagne"] = 357588
-&gt;&gt;&gt; superficie["Espagne"] = 505992
-&gt;&gt;&gt; for pays in superficie.keys():
-        print(pays)
-    
-France
-Allemagne
-Espagne</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie <span class="op">=</span> {}</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie[<span class="st">"France"</span>] <span class="op">=</span> <span class="dv">543940</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie[<span class="st">"Allemagne"</span>] <span class="op">=</span> <span class="dv">357588</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie[<span class="st">"Espagne"</span>] <span class="op">=</span> <span class="dv">505992</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> pays <span class="kw">in</span> superficie.keys():</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(pays)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>France</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>Allemagne</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>Espagne</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>On peut parcourir un dictionnaire à partir de ses valeurs :</p>
-<pre class="pycon"><code>&gt;&gt;&gt; for valeur in superficie.values():
-        print(valeur)
-    
-543940
-357588
-505992</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> valeur <span class="kw">in</span> superficie.values():</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(valeur)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="dv">543940</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="dv">357588</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="dv">505992</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>On peut parcourir un dictionnaire à partir des couples (clé, valeur) :</p>
-<pre class="pycon"><code>&gt;&gt;&gt; for pays, valeur in superficie.items():
-        print(f"La superficie du pays {pays} est de {valeur} km²")
-    
-La superficie du pays France est de 543940 km²
-La superficie du pays Allemagne est de 357588 km²
-La superficie du pays Espagne est de 505992 km²</code></pre>
-<p>!!! bug “Remarque importante” Un gros avantage des dictionnaires est que leur implémentation optimise la recherche d’un élément. Il est beaucoup plus rapide de recherche une valeur dans un dictionnaire que dans un tableau, surtout si ceux-ci contiennent un grand nombre d’éléments. La raison de cette différence sera évoquée en terminale.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> pays, valeur <span class="kw">in</span> superficie.items():</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"La superficie du pays </span><span class="sc">{</span>pays<span class="sc">}</span><span class="ss"> est de </span><span class="sc">{</span>valeur<span class="sc">}</span><span class="ss"> km²"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>La superficie du pays France est de <span class="dv">543940</span> km²</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>La superficie du pays Allemagne est de <span class="dv">357588</span> km²</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>La superficie du pays Espagne est de <span class="dv">505992</span> km²</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remarque importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un gros avantage des dictionnaires est que leur implémentation optimise la recherche d’un élément. Il est beaucoup plus rapide de recherche une valeur dans un dictionnaire que dans un tableau, surtout si ceux-ci contiennent un grand nombre d’éléments. La raison de cette différence sera évoquée en terminale.</p>
+</div>
+</div>
 <p>Pour les curieux, <a href="http://www.lumni.fr/video/les-dictionnaires" target="_blank">la vidéo proposée par Lumni en lien ici</a> permet d’approfondir la notion de dictionnaire.</p>
 
 
@@ -1248,6 +1358,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1297,15 +1422,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
+        typesetMath(container);
         return container.innerHTML
       } else {
+        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -1314,6 +1469,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
+      typesetMath(note);
       return note.innerHTML;
     }
   }
@@ -1356,6 +1512,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -1427,6 +1606,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1484,31 +1689,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // default icon
-          link.classList.add("external");
-      }
-    }
 });
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../12_dictionnaires/index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">S4-Représentation de données - types construits</span>
+      <a href="../12_dictionnaires/index.html" class="pagination-link  aria-label=" programme"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../12_dictionnaires/exos_dicos.html" class="pagination-link">
-        <span class="nav-page-text">:octicons-pencil-16: Exercice 1</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../12_dictionnaires/exos_dicos.html" class="pagination-link" aria-label="Exercices">
+        <span class="nav-page-text">Exercices</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

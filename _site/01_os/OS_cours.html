@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.274">
+<meta name="generator" content="quarto-1.4.523">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -80,23 +80,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Pas de résultats",
     "search-matching-documents-text": "documents trouvés",
@@ -105,6 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "correspondance de plus dans ce document",
     "search-more-matches-text": "correspondances de plus dans ce document",
     "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Annuler",
     "search-submit-button-title": "Envoyer",
     "search-label": "Recherche"
@@ -139,7 +141,7 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
@@ -153,20 +155,20 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+    <a class="nav-link" href="https://python.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../ressources.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+    <a class="nav-link" href="../ressources.html"> 
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -182,11 +184,11 @@ cookieconsent.run({
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01_os/index.html">Ch. 1 - Systèmes d’exploitation</a></li><li class="breadcrumb-item"><a href="../01_os/OS_cours.html">Cours</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -194,7 +196,7 @@ cookieconsent.run({
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -541,7 +543,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../11_tableaux/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4-Représentation de données - types construits</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -559,7 +561,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../11_tableaux/TP_Stegano.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mini-projet : Stéganographie {#mini-projet–stéganographie}</span></a>
+ <span class="menu-text">Mini-projet Stéganographie</span></a>
   </div>
 </li>
       </ul>
@@ -576,19 +578,25 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4-Représentation de données - types construits</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/dicos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. Définition et création d’un dictionnaire</span></a>
+ <span class="menu-text">Cours</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/exos_dicos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">:octicons-pencil-16: Exercice 1</span></a>
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../12_dictionnaires/quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quiz</span></a>
   </div>
 </li>
       </ul>
@@ -926,7 +934,7 @@ cookieconsent.run({
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -978,6 +986,7 @@ cookieconsent.run({
 
 </header>
 
+
 <section id="à-quoi-sert-un-système-dexploitation" class="level2">
 <h2 class="anchored" data-anchor-id="à-quoi-sert-un-système-dexploitation">1. À quoi sert un système d’exploitation ?</h2>
 <p>Un système informatique a pour objectif d’automatiser le traitement de l’information. Il est constitué de deux entités : le matériel (hardware) et le logiciel (software).</p>
@@ -1017,18 +1026,10 @@ Objectifs d’un système d’exploitation
 </div>
 </div>
 <p>Le troisième point sera approfondi en terminale.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="schema_SE.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="schema_SE.png" class="img-fluid figure-img" style="width:30.0%"></a></p>
-</figure>
-</div>
+<p><a href="schema_SE.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="schema_SE.png" class="img-fluid" style="width:30.0%"></a></p>
 <p>On abrégera “Système d’exploitation” par SE (en français) ou pas OS (operating system en anglais).</p>
 <p>Le système d’exploitation est le premier logiciel qui démarre quand on allume un ordinateur. Aujourd’hui, il est installé sur le disque dur ou le disque SSD de l’ordinateur. Dans les années 80-90 du 20ᵉ siècle, les ordinateurs personnels n’avaient souvent pas de disque dur. Le SE était fourni sur une ou plusieurs disquettes de démarrage, support de mémoire amovible qui a disparu depuis, qui devait être insérée dans le lecteur de disquette à chaque démarrage.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="floppy-disk.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="floppy-disk.jpg" class="img-fluid figure-img" style="width:30.0%"></a></p>
-</figure>
-</div>
+<p><a href="floppy-disk.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="floppy-disk.jpg" class="img-fluid" style="width:30.0%"></a></p>
 </section>
 <section id="différents-systèmes-dexploitation" class="level2">
 <h2 class="anchored" data-anchor-id="différents-systèmes-dexploitation">2. Différents systèmes d’exploitation</h2>
@@ -1065,11 +1066,7 @@ Logiciel libre
 <li>macOS (OS X) (1998) : de l’entreprise Apple, OS propriétaire qui a connu différentes évolutions.</li>
 </ul>
 <p>Voici la répartition des parts de marché des principaux OS utilisés sur les ordinateurs de bureau en 2023 (source : <a href="https://www.leptidigital.fr/technologie/parts-marche-systemes-exploitation-26774/" target="_blank">LEPTIDIGITAL</a>) :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="systemes-exploitation-desktop-monde-2023.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="systemes-exploitation-desktop-monde-2023.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="systemes-exploitation-desktop-monde-2023.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="systemes-exploitation-desktop-monde-2023.jpg" class="img-fluid"></a></p>
 <p><strong>Compléments</strong> :</p>
 <ul>
 <li>voir sur le blog la vidéo “Un système d’exploitation, c’est quoi ?” dans cet <a href="https://www.flallemand.fr/wp/2022/07/02/la-chaine-youtube-codeur-pro/" target="_blank">article</a>.</li>
@@ -1079,11 +1076,7 @@ Logiciel libre
 <li>vidéo plus complète pour approfondir l’<a href="https://www.youtube.com/watch?v=KvGN1SrNwAo" target="_blank">histoire de GNU-Linux</a>.</li>
 </ul>
 <p>Le programme de NSI nous incite à utiliser un système d’exploitation libre. Nous allons donc dans le paragraphe suivant étudier de plus près le système Linux.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="linux-tux.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="linux-tux.png" class="img-fluid figure-img" style="width:10.0%"></a></p>
-</figure>
-</div>
+<p><a href="linux-tux.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="linux-tux.png" class="img-fluid" style="width:10.0%"></a></p>
 <p><strong>Linux</strong> est un système d’exploitation <em>libre et open source</em> créé en 1991 par l’étudiant finlandais <a href="https://fr.wikipedia.org/wiki/Linus_Torvalds" target="_blank">Linus Torvalds</a>, avec l’objectif de proposer une alternative fiable et ouverte à UNIX. Ce système est depuis en constante évolution. De nombreux systèmes utilisent le noyau Linux, comme Ubuntu, Debian, Fedora ou encore Android. Linux est disponible sous la forme de nombreuses <strong>distributions</strong>, ensemble cohérent de logiciels assemblés autour du noyau Linux pour former un OS pleinement opérationnel. Le site <a href="https://distrowatch.com/?language=FR" target="_blank">Distrowatch</a> répertorie de très nombreuses distributions. Les plus connues sont Ubuntu, Mint, Debian et Fedora. Dans un système Linux, le gestionnaire d’affichage graphique (gestionnaire de fenêtre) peut être choisi par l’utilisateur parmi de nombreuses possibilités : Gnome, Kde, Xfce, etc.</p>
 </section>
 <section id="la-ligne-de-commande" class="level2">
@@ -1092,17 +1085,9 @@ Logiciel libre
 <p>Les utilisateurs avancés, notamment ceux qui utilisent Linux, trouvent en effet un grand intérêt à la ligne de commande qui permet indubitablement, quand on en maîtrise la syntaxe, de réaliser certaines opérations plus rapidement qu’avec la souris, de manière plus contrôlée et sûre.</p>
 <p>Pour saisir des lignes de commandes, nous allons utiliser une <strong>console</strong>, ou <strong>terminal</strong>. Tous les OS en possèdent une. Derrière ce logiciel s’en cache un autre : le <strong>shell</strong> qui est en fait l’interpréteur des lignes de commandes. Il s’agit d’un langage de programmation. Sous Linux, <strong>bash</strong> est un <strong>shell</strong> très répandu.</p>
 <p>Sous Windows, nous avons par exemple le terminal PowerShell.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="powershell.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="powershell.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
-</figure>
-</div>
+<p><a href="powershell.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="powershell.png" class="img-fluid" style="width:50.0%"></a></p>
 <p>Sous Linux, suivant la distribution utilisée, le terminal peut posséder des noms différents (Terminal, Konsole, …). L’image ci-dessous montre le terminal de la distribution Ubuntu, appelé Gnome Terminal :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="terminal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="terminal.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
-</figure>
-</div>
+<p><a href="terminal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="terminal.png" class="img-fluid" style="width:50.0%"></a></p>
 <p><strong>Remarque</strong> : les commandes que nous allons étudier sont des commandes de base du shell pour Linux. Cependant, dans les versions récentes de Windows, PowerShell est capable d’interpréter ces commandes et elles fonctionneront donc parfaitement aussi.</p>
 <p>Sur l’image ci-dessus, nous voyons le terminal de l’utilisateur “fabrice” qui utilise un ordinateur qui se nomme “inspiron” (“fabrice@inspiron”).</p>
 </section>
@@ -1110,11 +1095,7 @@ Logiciel libre
 <h2 class="anchored" data-anchor-id="arborescence-du-système-de-fichier">4. Arborescence du système de fichier</h2>
 <p>On a l’habitude de dire que <strong>sous Linux, tout est fichier</strong>. Les différents fichiers, répertoires, périphériques, liens sont en effet tous représentés par des fichiers de différents types rangés dans une arborescence bien précise de répertoires. Cette organisation est héritée du système Unix et se retrouve dans tous les systèmes apparentés, comme macOs.</p>
 <p>Sur la figure ci-dessous, une partie de l’arborescence est présentée.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="arborescence.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="arborescence.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="arborescence.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="arborescence.png" class="img-fluid"></a></p>
 <p>Dans le schéma ci-dessus on trouve des répertoires (noms entourés d’un rectangle, exemple : “home”) et des fichiers (uniquement des noms “grub.cfg”).</p>
 <p>On parle d’arborescence, car ce système de fichier ressemble à un arbre à l’envers.</p>
 <p>Comme vous pouvez le constater, la base de l’arbre s’appelle la racine de l’arborescence et se représente par un “/”</p>
@@ -1176,11 +1157,7 @@ Touche Tab
 <section id="b.-la-commande-ls" class="level3">
 <h3 class="anchored" data-anchor-id="b.-la-commande-ls">b. La commande ls</h3>
 <p>La commande <code>ls</code> permet de lister le contenu du répertoire courant.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="ls.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="ls.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="ls.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="ls.jpg" class="img-fluid"></a></p>
 <p>Dans l’exemple ci-dessus, depuis le répertoire personnel de l’utilisateur “fabrice”, nous passons dans le répertoire “Documents” à l’aide d’un <code>cd Documents</code>, puis nous affichons le contenu de ce répertoire “Documents” à l’aide de la commande <code>ls</code>. Nous trouvons dans le répertoire “Documents” : 3 fichiers (<em>adresses.txt</em>, <em>Nouvelles.odt</em> et <em>screen.jpg</em>) et deux répertoires (<em>Travail</em> et <em>Loisirs</em>).</p>
 </section>
 <section id="c.-la-commande-pwd" class="level3">
@@ -1190,56 +1167,32 @@ Touche Tab
 <section id="d.-la-commande-mkdir" class="level3">
 <h3 class="anchored" data-anchor-id="d.-la-commande-mkdir">d.&nbsp;La commande mkdir</h3>
 <p>La commande <code>mkdir</code> permet de créer un répertoire dans le répertoire courant. La commande est de la forme <code>mkdir nom_du_répertoire</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="mkdir.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="mkdir.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="mkdir.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="mkdir.jpg" class="img-fluid"></a></p>
 <p>Remarque : il est préférable de ne pas utiliser de caractères accentués dans les noms de répertoire (ou de fichier). Il en est de même pour les espaces (à remplacer par des caractères tirets bas “_“).</p>
 </section>
 <section id="e.-la-commande-rm" class="level3">
 <h3 class="anchored" data-anchor-id="e.-la-commande-rm">e. La commande rm</h3>
 <p>La commande <code>rm</code> permet de supprimer un fichier ou un répertoire. La commande est de la forme <code>rm nom_du_répertoire_ou_nom_du_fichier</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="rm.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="rm.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="rm.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="rm.jpg" class="img-fluid"></a></p>
 <p>La plupart des commandes Linux peuvent être utilisées avec une ou des options. Par exemple, pour supprimer un répertoire non vide, il est nécessaire d’utiliser la commande <code>rm</code> avec l’option <code>-r</code> : <code>rm -r nom_du_répertoire</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="rm2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="rm2.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="rm2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="rm2.jpg" class="img-fluid"></a></p>
 <p>En fait l’option -r permet de supprimer un répertoire et ses sous répertoire.</p>
 <p><strong>ATTENTION</strong> : cette commande est relativement “dangereuse”, il faut donc la manipuler prudemment. Par exemple la commande <code>rm *</code> efface tous les fichiers du répertoire courant (le * signifie tous les fichiers et tous les répertoires). Pour effacer tous les fichiers et tous les répertoires présents dans le répertoire courant il faut donc utiliser <code>rm -r *</code>.</p>
 </section>
 <section id="f.-la-commande-touch" class="level3">
 <h3 class="anchored" data-anchor-id="f.-la-commande-touch">f.&nbsp;La commande touch</h3>
 <p>La commande <code>touch</code> permet de créer un fichier vide. La commande est de la forme <code>touch nom_du_fichier_à_créer</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="touch.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="touch.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="touch.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="touch.jpg" class="img-fluid"></a></p>
 </section>
 <section id="g.-la-commande-cat" class="level3">
 <h3 class="anchored" data-anchor-id="g.-la-commande-cat">g. La commande cat</h3>
 <p>La commande <code>cat</code> permet d’afficher dans la console le contenu d’un fichier.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="cat.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="cat.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="cat.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="cat.jpg" class="img-fluid"></a></p>
 </section>
 <section id="h.-la-commande-cp" class="level3">
 <h3 class="anchored" data-anchor-id="h.-la-commande-cp">h. La commande cp</h3>
 <p>La commande <code>cp</code> permet de copier un fichier. La commande est de la forme <code>cp /répertoire_source/nom_fichier_à_copier /répertoire_destination/nom_fichier</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="cp.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="cp.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="cp.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="cp.jpg" class="img-fluid"></a></p>
 </section>
 <section id="i.-la-commande-mv" class="level3">
 <h3 class="anchored" data-anchor-id="i.-la-commande-mv">i. La commande mv</h3>
@@ -1248,11 +1201,7 @@ Touche Tab
 <section id="j.-la-commande-man" class="level3">
 <h3 class="anchored" data-anchor-id="j.-la-commande-man">j. La commande man</h3>
 <p>La commande <code>man</code> permet d’obtenir la documentation d’une autre commande. Par exemple, <code>man ls</code> vous donnera la documentation de la commande <code>ls</code> dans laquelle vous apprendrez par exemple que l’option <code>-l</code> permet d’afficher les informations sur les fichiers et les répertoires sous forme de liste.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="ls_liste.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="ls_liste.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="ls_liste.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="ls_liste.png" class="img-fluid"></a></p>
 </section>
 </section>
 <section id="gestion-des-utilisateurs-et-des-groupes" class="level2">
@@ -1273,11 +1222,7 @@ Touche Tab
 <li>les autres utilisateurs (ceux qui ne sont pas le propriétaire du fichier et qui n’appartiennent pas au groupe associé au fichier). Ces utilisateurs sont symbolisés la lettre o (Other).</li>
 </ul>
 <p>Il est possible d’utiliser la commande <code>ls</code> avec l’option <code>-l</code> afin d’avoir des informations supplémentaires concernant les droits des fichiers.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="ls_l.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="ls_l.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="ls_l.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="ls_l.jpg" class="img-fluid"></a></p>
 <p>Prenons la première ligne :</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-rw-r--</span> 1 fabrice fabrice     0 sept.  4 06:57 exercice.txt</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Lisons cette ligne de gauche à droite :</p>
@@ -1552,6 +1497,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1601,15 +1561,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
+        typesetMath(container);
         return container.innerHTML
       } else {
+        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -1618,6 +1608,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
+      typesetMath(note);
       return note.innerHTML;
     }
   }
@@ -1660,6 +1651,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -1731,6 +1745,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1788,30 +1828,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // default icon
-          link.classList.add("external");
-      }
-    }
 });
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../01_os/index.html" class="pagination-link">
+      <a href="../01_os/index.html" class="pagination-link  aria-label=" programme"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../01_os/OS_exos.html" class="pagination-link">
+      <a href="../01_os/OS_exos.html" class="pagination-link" aria-label="Exercices">
         <span class="nav-page-text">Exercices</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1848,7 +1874,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom"});</script>
 
 
 

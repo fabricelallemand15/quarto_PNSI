@@ -1,8 +1,12 @@
-_Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+---
+title : Exercices
+---
 
-_Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit._
+_Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._
 
-## :octicons-pencil-16: Exercice 1
+_Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
+
+## {{< fa solid pencil-alt >}} Exercice 1
 
 1. Le dictionnaire suivant donne des informations sur l'adresse d'une personne.
 
@@ -16,9 +20,8 @@ _Les exercices précédés du symbole :octicons-pencil-16: doivent être résolu
 
     Expliquer ce qui n'est pas correct dans cette déclaration et corriger.
 
-----------------------------------------
 
-## :octicons-pencil-16: Exercice 2
+## {{< fa solid pencil-alt >}} Exercice 2
 
 Un film peut être défini par un certain nombre de caractéristiques : son titre, son réalisateur, sa durée, son année de sortie. On définit pour cela le dictionnaire suivant :
 
@@ -41,9 +44,8 @@ film = {"titre":"Star Wars", "auteur":"G.Lucas", "duree":121, "annee":1977}
     print(film["acteur"],"est trop beau dans de ce film !")
     ````
 
--------------------------------------------------------------------
 
-## :octicons-pencil-16: Exercice 3
+## {{< fa solid pencil-alt >}} Exercice 3
 
 Le dictionnaire suivant donne les articles choisis par un visiteur sur un site internet, et la quantité de chaque article.
 
@@ -57,9 +59,8 @@ panier["scoth"] = 1
 
 Quels sont les éléments du dictionnaire après l'exécution de ces instructions ?
 
----------------------------------------
 
-## :fontawesome-solid-computer: Exercice 4
+## {{< fa desktop >}} Exercice 4
 
 À l'issue d'une élection à scrutin uninominal, on récupère un tableau contenant tous les noms inscrits sur les bulletins trouvés dans l'urne :
 
@@ -83,9 +84,8 @@ Pour chaque élément du tableau :
 
 Écrire et tester un programme réalisant ces opérations.
 
----------------------------------------------------
 
-## :fontawesome-solid-computer: Exercice 5
+## {{< fa desktop >}} Exercice 5
 
 Le dictionnaire suivant donne les noms et les nationalités des visiteurs d'un site.
 
@@ -98,9 +98,8 @@ visiteurs = {"STARK": "usa", "TOR": "rus", "MACRON": "fr", "JOHNSON": "en",
 
 Écrire une fonction qui renvoie le nombre de clients français.
 
-----------------------------------------------------
 
-## :fontawesome-solid-computer: Exercice 6
+## {{< fa desktop >}} Exercice 6
 
 Le dictionnaire suivant donne la liste des couples identifiant/mots de passe des adhérents d'un site.
 
@@ -118,9 +117,8 @@ Par exemple, le premier adhérent a pour identifiant "joe.durand" et son mot de 
 
 Écrire un programme qui demande à l'utilisateur de saisir son identifiant et son mot de passe. On vérifie ensuite si ce couple identifiant/mot de passe est présent dans le dictionnaire. Si c'est le cas, on affiche le message "Identification réussie, bienvenue sur notre site", et sinon le message "Nous ne vous connaissons pas".
 
--------------------------------------------
 
-## :fontawesome-solid-computer: Exercice 7
+## {{< fa desktop >}} Exercice 7
 
 On donne ci-dessous un dictionnaire de conversion du binaire en hexadécimal, dont les couples sont composés d'un nombre binaire et de sa conversion en hexadécimal :
 
@@ -132,9 +130,8 @@ Convbinaire = {"0000": "0", "0001": "1", "0010": "2", "0011": "3", "0100": "4", 
 
 Écrire une fonction qui crée le dictionnaire inversé ``Convhexa`` dont les couples sont composés d'un nombre hexadécimal et de sa conversion en binaire.
 
------------------------------------------------------
 
-## :fontawesome-solid-computer: Exercice 8
+## {{< fa desktop >}} Exercice 8
 
 Voici un tableau qui répertorie des informations sur les adhérents d'un site internet, certaines informations n'étant pas complètes :
 
@@ -169,9 +166,8 @@ ListeAdherents = [
 
 2.	Écrire une fonction qui renvoie la liste des avatars de tous les adhérents **qui en ont un** (utiliser une boucle for).
 
----------------------------------------------
 
-## :octicons-pencil-16: Exercice 9 : QCM
+## {{< fa solid pencil-alt >}} Exercice 9 : QCM
 
 1. On définit :
 

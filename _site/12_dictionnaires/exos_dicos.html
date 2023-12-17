@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.274">
+<meta name="generator" content="quarto-1.4.523">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – exos_dicos</title>
+<title>NSI - Première - Exercices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../13_vonNeumann/index.html" rel="next">
+<link href="../12_dictionnaires/quiz.html" rel="next">
 <link href="../12_dictionnaires/dicos.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
@@ -88,12 +88,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Pas de résultats",
     "search-matching-documents-text": "documents trouvés",
@@ -102,6 +103,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "correspondance de plus dans ce document",
     "search-more-matches-text": "correspondances de plus dans ce document",
     "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Annuler",
     "search-submit-button-title": "Envoyer",
     "search-label": "Recherche"
@@ -136,7 +138,7 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
@@ -150,20 +152,20 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+    <a class="nav-link" href="https://python.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../ressources.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+    <a class="nav-link" href="../ressources.html"> 
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -179,11 +181,11 @@ cookieconsent.run({
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../12_dictionnaires/index.html">Ch. 12 - Dictionnaires</a></li><li class="breadcrumb-item"><a href="../12_dictionnaires/exos_dicos.html">:octicons-pencil-16: Exercice 1</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../12_dictionnaires/index.html">Ch. 12 - Dictionnaires</a></li><li class="breadcrumb-item"><a href="../12_dictionnaires/exos_dicos.html">Exercices</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -191,7 +193,7 @@ cookieconsent.run({
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -538,7 +540,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../11_tableaux/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4-Représentation de données - types construits</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -556,7 +558,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../11_tableaux/TP_Stegano.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mini-projet : Stéganographie {#mini-projet–stéganographie}</span></a>
+ <span class="menu-text">Mini-projet Stéganographie</span></a>
   </div>
 </li>
       </ul>
@@ -573,19 +575,25 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4-Représentation de données - types construits</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/dicos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. Définition et création d’un dictionnaire</span></a>
+ <span class="menu-text">Cours</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/exos_dicos.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">:octicons-pencil-16: Exercice 1</span></a>
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../12_dictionnaires/quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quiz</span></a>
   </div>
 </li>
       </ul>
@@ -923,34 +931,51 @@ cookieconsent.run({
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#octicons-pencil-16-exercice-1" id="toc-octicons-pencil-16-exercice-1" class="nav-link active" data-scroll-target="#octicons-pencil-16-exercice-1">:octicons-pencil-16: Exercice 1</a></li>
-  <li><a href="#octicons-pencil-16-exercice-2" id="toc-octicons-pencil-16-exercice-2" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-2">:octicons-pencil-16: Exercice 2</a></li>
-  <li><a href="#octicons-pencil-16-exercice-3" id="toc-octicons-pencil-16-exercice-3" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-3">:octicons-pencil-16: Exercice 3</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-4" id="toc-fontawesome-solid-computer-exercice-4" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-4">:fontawesome-solid-computer: Exercice 4</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-5" id="toc-fontawesome-solid-computer-exercice-5" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-5">:fontawesome-solid-computer: Exercice 5</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-6" id="toc-fontawesome-solid-computer-exercice-6" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-6">:fontawesome-solid-computer: Exercice 6</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-7" id="toc-fontawesome-solid-computer-exercice-7" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-7">:fontawesome-solid-computer: Exercice 7</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-8" id="toc-fontawesome-solid-computer-exercice-8" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-8">:fontawesome-solid-computer: Exercice 8</a></li>
-  <li><a href="#octicons-pencil-16-exercice-9-qcm" id="toc-octicons-pencil-16-exercice-9-qcm" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-9-qcm">:octicons-pencil-16: Exercice 9 : QCM</a></li>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link active" data-scroll-target="#exercice-1"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 1</a></li>
+  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</a></li>
+  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</a></li>
+  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</a></li>
+  <li><a href="#exercice-5" id="toc-exercice-5" class="nav-link" data-scroll-target="#exercice-5"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 5</a></li>
+  <li><a href="#exercice-6" id="toc-exercice-6" class="nav-link" data-scroll-target="#exercice-6"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 6</a></li>
+  <li><a href="#exercice-7" id="toc-exercice-7" class="nav-link" data-scroll-target="#exercice-7"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 7</a></li>
+  <li><a href="#exercice-8" id="toc-exercice-8" class="nav-link" data-scroll-target="#exercice-8"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 8</a></li>
+  <li><a href="#exercice-9-qcm" id="toc-exercice-9-qcm" class="nav-link" data-scroll-target="#exercice-9-qcm"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 9 : QCM</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../12_dictionnaires/index.html">Ch. 12 - Dictionnaires</a></li><li class="breadcrumb-item"><a href="../12_dictionnaires/exos_dicos.html">Exercices</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Exercices</h1>
+</div>
 
 
-<p><em>Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
-<p><em>Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit.</em></p>
-<section id="octicons-pencil-16-exercice-1" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-1">:octicons-pencil-16: Exercice 1</h2>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-desktop" aria-label="desktop"></i> sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> doivent être résolus par écrit.</em></p>
+<section id="exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 1</h2>
 <ol type="1">
 <li><p>Le dictionnaire suivant donne des informations sur l’adresse d’une personne.</p>
 <p><code>adresse = {("numero", 13), ("rue", "rue des Lilas"), ("codepostal", 78340), ("ville", "Pétaouchnoc"){</code></p>
@@ -959,10 +984,9 @@ cookieconsent.run({
 <p><code>identite = {"nom":"Durand", "prenom":"Christophe", "prenom":"Jean", 52:"age"}</code></p>
 <p>Expliquer ce qui n’est pas correct dans cette déclaration et corriger.</p></li>
 </ol>
-<hr>
 </section>
-<section id="octicons-pencil-16-exercice-2" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-2">:octicons-pencil-16: Exercice 2</h2>
+<section id="exercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</h2>
 <p>Un film peut être défini par un certain nombre de caractéristiques : son titre, son réalisateur, sa durée, son année de sortie. On définit pour cela le dictionnaire suivant :</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>film <span class="op">=</span> {<span class="st">"titre"</span>:<span class="st">"Star Wars"</span>, <span class="st">"auteur"</span>:<span class="st">"G.Lucas"</span>, <span class="st">"duree"</span>:<span class="dv">121</span>, <span class="st">"annee"</span>:<span class="dv">1977</span>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol type="1">
@@ -974,10 +998,9 @@ cookieconsent.run({
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Qui est l'"</span>,film[<span class="st">"G.Lucas"</span>],<span class="st">"de ce film ?"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(film[<span class="st">"acteur"</span>],<span class="st">"est trop beau dans de ce film !"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
-<hr>
 </section>
-<section id="octicons-pencil-16-exercice-3" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-3">:octicons-pencil-16: Exercice 3</h2>
+<section id="exercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</h2>
 <p>Le dictionnaire suivant donne les articles choisis par un visiteur sur un site internet, et la quantité de chaque article.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>panier <span class="op">=</span> {<span class="st">"stylo"</span>: <span class="dv">10</span>, <span class="st">"crayon"</span>: <span class="dv">15</span>, <span class="st">"gomme"</span>: <span class="dv">3</span>, <span class="st">"tube de colle"</span>: <span class="dv">2</span>, <span class="st">"cahier"</span>: <span class="dv">5</span>}</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>panier[<span class="st">"gomme"</span>] <span class="op">=</span> panier[<span class="st">"gomme"</span>] <span class="op">+</span> <span class="dv">2</span></span>
@@ -985,10 +1008,9 @@ cookieconsent.run({
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> panier[<span class="st">"tube de colle"</span>]</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>panier[<span class="st">"scoth"</span>] <span class="op">=</span> <span class="dv">1</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Quels sont les éléments du dictionnaire après l’exécution de ces instructions ?</p>
-<hr>
 </section>
-<section id="fontawesome-solid-computer-exercice-4" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-4">:fontawesome-solid-computer: Exercice 4</h2>
+<section id="exercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</h2>
 <p>À l’issue d’une élection à scrutin uninominal, on récupère un tableau contenant tous les noms inscrits sur les bulletins trouvés dans l’urne :</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>urne <span class="op">=</span> [<span class="st">"Maurice"</span>,<span class="st">"Roger"</span>,<span class="st">"Maurice"</span>,<span class="st">"Marie"</span>,<span class="st">"Marie"</span>,<span class="st">"Jeanne"</span>,<span class="st">"Roger"</span>,</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Roger"</span>,<span class="st">"Maurice"</span>,<span class="st">"Roger"</span>,<span class="st">"Maurice"</span>,<span class="st">"Marie"</span>,<span class="st">"Marie"</span>,<span class="st">"Roger"</span>,<span class="st">"Marie"</span>]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1002,20 +1024,18 @@ cookieconsent.run({
 <li>soit le nom est déjà dans le dictionnaire, et dans ce cas on augmente son nombre de voix de 1.</li>
 </ul>
 <p>Écrire et tester un programme réalisant ces opérations.</p>
-<hr>
 </section>
-<section id="fontawesome-solid-computer-exercice-5" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-5">:fontawesome-solid-computer: Exercice 5</h2>
+<section id="exercice-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-5"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 5</h2>
 <p>Le dictionnaire suivant donne les noms et les nationalités des visiteurs d’un site.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>visiteurs <span class="op">=</span> {<span class="st">"STARK"</span>: <span class="st">"usa"</span>, <span class="st">"TOR"</span>: <span class="st">"rus"</span>, <span class="st">"MACRON"</span>: <span class="st">"fr"</span>, <span class="st">"JOHNSON"</span>: <span class="st">"en"</span>,</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>             <span class="st">"DUBOIS"</span>: <span class="st">"fr"</span>, <span class="st">"MACARTHUR"</span>: <span class="st">"usa"</span>, <span class="st">"HOLMES"</span>: <span class="st">"en"</span>,</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>             <span class="st">"BERNARD"</span>: <span class="st">"fr"</span>, <span class="st">"DURAND"</span>: <span class="st">"fr"</span>, <span class="st">"HOLLANDE"</span>: <span class="st">"fr"</span>,</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>             <span class="st">"OBAMA"</span>: <span class="st">"usa"</span>, <span class="st">"POPOV"</span>: <span class="st">"rus"</span>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Écrire une fonction qui renvoie le nombre de clients français.</p>
-<hr>
 </section>
-<section id="fontawesome-solid-computer-exercice-6" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-6">:fontawesome-solid-computer: Exercice 6</h2>
+<section id="exercice-6" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-6"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 6</h2>
 <p>Le dictionnaire suivant donne la liste des couples identifiant/mots de passe des adhérents d’un site.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>identifiants <span class="op">=</span> {<span class="st">"joe.durand"</span>: <span class="st">"Joe-la-terreur"</span>,</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                <span class="st">"dupond15"</span>: <span class="st">"Dd152017"</span>,</span>
@@ -1026,19 +1046,17 @@ cookieconsent.run({
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Bernard.71"</span>: <span class="st">"bebertpower2001"</span>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Par exemple, le premier adhérent a pour identifiant “joe.durand” et son mot de passe est “Joe-la-terreur”.</p>
 <p>Écrire un programme qui demande à l’utilisateur de saisir son identifiant et son mot de passe. On vérifie ensuite si ce couple identifiant/mot de passe est présent dans le dictionnaire. Si c’est le cas, on affiche le message “Identification réussie, bienvenue sur notre site”, et sinon le message “Nous ne vous connaissons pas”.</p>
-<hr>
 </section>
-<section id="fontawesome-solid-computer-exercice-7" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-7">:fontawesome-solid-computer: Exercice 7</h2>
+<section id="exercice-7" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-7"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 7</h2>
 <p>On donne ci-dessous un dictionnaire de conversion du binaire en hexadécimal, dont les couples sont composés d’un nombre binaire et de sa conversion en hexadécimal :</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Convbinaire <span class="op">=</span> {<span class="st">"0000"</span>: <span class="st">"0"</span>, <span class="st">"0001"</span>: <span class="st">"1"</span>, <span class="st">"0010"</span>: <span class="st">"2"</span>, <span class="st">"0011"</span>: <span class="st">"3"</span>, <span class="st">"0100"</span>: <span class="st">"4"</span>, <span class="st">"0101"</span>: <span class="st">"5"</span>,</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>               <span class="st">"0110"</span>: <span class="st">"6"</span>, <span class="st">"0111"</span>: <span class="st">"7"</span>, <span class="st">"1000"</span>: <span class="st">"8"</span>, <span class="st">"1001"</span>: <span class="st">"9"</span>, <span class="st">"1010"</span>: <span class="st">"A"</span>, <span class="st">"1011"</span>: <span class="st">"B"</span>,</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>               <span class="st">"1100"</span>: <span class="st">"C"</span>, <span class="st">"1101"</span>: <span class="st">"D"</span>, <span class="st">"1110"</span>: <span class="st">"E"</span>, <span class="st">"1111"</span>: <span class="st">"F"</span>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Écrire une fonction qui crée le dictionnaire inversé <code>Convhexa</code> dont les couples sont composés d’un nombre hexadécimal et de sa conversion en binaire.</p>
-<hr>
 </section>
-<section id="fontawesome-solid-computer-exercice-8" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-8">:fontawesome-solid-computer: Exercice 8</h2>
+<section id="exercice-8" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-8"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 8</h2>
 <p>Voici un tableau qui répertorie des informations sur les adhérents d’un site internet, certaines informations n’étant pas complètes :</p>
 <table class="table">
 <thead>
@@ -1121,10 +1139,9 @@ cookieconsent.run({
 </ul></li>
 <li><p>Écrire une fonction qui renvoie la liste des avatars de tous les adhérents <strong>qui en ont un</strong> (utiliser une boucle for).</p></li>
 </ol>
-<hr>
 </section>
-<section id="octicons-pencil-16-exercice-9-qcm" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-9-qcm">:octicons-pencil-16: Exercice 9 : QCM</h2>
+<section id="exercice-9-qcm" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-9-qcm"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 9 : QCM</h2>
 <ol type="1">
 <li><p>On définit :</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> [{<span class="st">'fruit'</span>: <span class="st">'banane'</span>, <span class="st">'nombre'</span>: <span class="dv">25</span>}, {<span class="st">'fruit'</span>: <span class="st">'orange'</span>, <span class="st">'nombre'</span>: <span class="dv">124</span>},</span>
@@ -1411,6 +1428,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1460,15 +1492,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
+        typesetMath(container);
         return container.innerHTML
       } else {
+        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -1477,6 +1539,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
+      typesetMath(note);
       return note.innerHTML;
     }
   }
@@ -1519,6 +1582,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -1590,6 +1676,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1647,31 +1759,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // default icon
-          link.classList.add("external");
-      }
-    }
 });
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../12_dictionnaires/dicos.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1. Définition et création d’un dictionnaire</span>
+      <a href="../12_dictionnaires/dicos.html" class="pagination-link  aria-label=" cours"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cours</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../13_vonNeumann/index.html" class="pagination-link">
-        <span class="nav-page-text">03-Architectures matérielles et systèmes d’exploitation</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../12_dictionnaires/quiz.html" class="pagination-link" aria-label="Quiz">
+        <span class="nav-page-text">Quiz</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -94,6 +94,7 @@ website:
           - 12_dictionnaires/index.qmd
           - 12_dictionnaires/dicos.qmd
           - 12_dictionnaires/exos_dicos.qmd
+          - 12_dictionnaires/quiz.qmd
       - section: "Ch. 13 - Modèle d'architecture de von Neumann"
         contents: 
           - 13_vonNeumann/index.qmd

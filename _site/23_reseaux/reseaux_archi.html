@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.274">
+<meta name="generator" content="quarto-1.4.523">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -63,23 +64,24 @@ div.csl-indent {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Pas de résultats",
     "search-matching-documents-text": "documents trouvés",
@@ -88,6 +90,7 @@ div.csl-indent {
     "search-more-match-text": "correspondance de plus dans ce document",
     "search-more-matches-text": "correspondances de plus dans ce document",
     "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Annuler",
     "search-submit-button-title": "Envoyer",
     "search-label": "Recherche"
@@ -122,7 +125,7 @@ cookieconsent.run({
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
@@ -136,20 +139,20 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
+    <a class="nav-link" href="https://python.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
+    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
+<span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../ressources.html" rel="" target="">
- <span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+    <a class="nav-link" href="../ressources.html"> 
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -165,11 +168,11 @@ cookieconsent.run({
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Architecture d’un réseau</li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -177,7 +180,7 @@ cookieconsent.run({
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -524,7 +527,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../11_tableaux/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4-Représentation de données - types construits</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -542,7 +545,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../11_tableaux/TP_Stegano.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mini-projet : Stéganographie {#mini-projet–stéganographie}</span></a>
+ <span class="menu-text">Mini-projet Stéganographie</span></a>
   </div>
 </li>
       </ul>
@@ -559,19 +562,25 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S4-Représentation de données - types construits</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/dicos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. Définition et création d’un dictionnaire</span></a>
+ <span class="menu-text">Cours</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/exos_dicos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">:octicons-pencil-16: Exercice 1</span></a>
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../12_dictionnaires/quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quiz</span></a>
   </div>
 </li>
       </ul>
@@ -909,7 +918,7 @@ cookieconsent.run({
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -959,16 +968,13 @@ cookieconsent.run({
 
 </header>
 
+
 <p>Ce cours a pour but de présenter la constitution classique d’un réseau et les équipements associés. La partie relative aux protocoles utilisés lors des échanges entre deux machines est détaillée dans le cours suivant.</p>
 <p>Il est basé sur le cours de <span class="citation" data-cites="lassus_premiere">LASSUS (<a href="#ref-lassus_premiere" role="doc-biblioref">2021</a>)</span>.</p>
 <section id="premier-réseau-local" class="level2">
 <h2 class="anchored" data-anchor-id="premier-réseau-local">1. Premier réseau local</h2>
 <p>Au sein du logiciel <a href="https://www.lernsoftware-filius.de/Herunterladen">Filius</a>, créons le réseau local ci-dessous :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="f1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="f1.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="f1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="f1.png" class="img-fluid"></a></p>
 <p>Testons le <code>ping</code> de la machine <code>192.168.0.1</code> vers la machine <code>192.168.0.3</code>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -982,11 +988,7 @@ Résultat du ping
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="ft1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="ft1.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="ft1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="ft1.png" class="img-fluid"></a></p>
 </div>
 </div>
 </div>
@@ -1002,36 +1004,20 @@ Résultat du ping
 <ul>
 <li>Au sein d’un <strong>hub Ethernet</strong> (de moins en moins vendus), il n’y a <strong>aucune analyse</strong> des données qui transitent : il s’agit simplement d’un dédoublement des fils de cuivre (tout comme une multiprise électrique). L’intégralité des messages est donc envoyée à l’intégralité des ordinateurs du réseau, même s’ils ne sont pas concernés.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="hub.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="hub.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="hub.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="hub.png" class="img-fluid"></a></p>
 <ul>
 <li>Au sein d’un <strong>switch Ethernet</strong>, une analyse est effectuée sur la trame qui est à distribuer. Lors d’un branchement d’un nouvel ordinateur sur le switch, celui-ci récupère son adresse MAC, ce qui lui permet de <strong>trier</strong> les messages et de ne les distribuer qu’au bon destinataire.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="switch.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="switch.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="switch.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="switch.png" class="img-fluid"></a></p>
 </section>
 </section>
 <section id="un-deuxième-sous-réseau" class="level2">
 <h2 class="anchored" data-anchor-id="un-deuxième-sous-réseau">2. Un deuxième sous-réseau</h2>
 <p>Rajoutons un deuxième sous-réseau de la manière suivante (penser à bien renommer les switchs).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="f2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="f2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="f2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="f2.png" class="img-fluid"></a></p>
 <p><strong>Comment relier ces deux sous-réseaux ?</strong></p>
 <p>Une réponse pas si bête : avec un câble entre les deux switchs !</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="f3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="f3.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="f3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="f3.png" class="img-fluid"></a></p>
 <p>Testons cette hypothèse en essayant d’envoyer un ping à la machine <code>192.168.1.2</code> depuis la machine <code>192.168.0.1</code>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -1045,11 +1031,7 @@ Résultat du ping
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="ft2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="ft2.png" class="img-fluid"></a></p>
 <p>Cela ne marche pas. L’ordinateur <strong>refuse</strong> d’envoyer le ping vers la machine <code>192.168.1.2</code>.</p>
 <p><em>(nous le verrons plus loin : car elle n’est pas dans son sous-réseau)</em></p>
 </div>
@@ -1068,11 +1050,7 @@ Résultat du ping
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="ft3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="ft3.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="ft3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="ft3.png" class="img-fluid"></a></p>
 <p>Cela marche. Les paquets sont bien acheminés.</p>
 </div>
 </div>
@@ -1081,11 +1059,7 @@ Résultat du ping
 <section id="notion-de-masque-de-sous-réseau" class="level3">
 <h3 class="anchored" data-anchor-id="notion-de-masque-de-sous-réseau">2.1. Notion de masque de sous-réseau</h3>
 <p>Dans Filius, lors de l’attribution de l’adresse IP à une machine, une ligne nous permet de spécifier le <strong>masque de sous-réseau</strong> (appelé simplement « Masque » dans Filius). C’est ce masque qui va permettre de déterminer si une machine appartient à un sous-réseau ou non, en fonction de son adresse IP.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="f4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="f4.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="f4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="f4.png" class="img-fluid"></a></p>
 <section id="explication-basique" class="level4">
 <h4 class="anchored" data-anchor-id="explication-basique">2.1.1 Explication basique</h4>
 <ul>
@@ -1114,11 +1088,7 @@ Résultat du ping
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="ft4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="ft4.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="ft4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="ft4.png" class="img-fluid"></a></p>
 <p>Cela marche. Les deux machines appartiennent maintenant au même sous-réseau.</p>
 </div>
 </div>
@@ -1224,8 +1194,8 @@ Définition
 <p><strong>Exemple</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="ex_reseau.png" class="lightbox" title="image" data-gallery="quarto-lightbox-gallery-11"><img src="ex_reseau.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">image</figcaption>
+<p><a href="ex_reseau.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-description="" title="image"><img src="ex_reseau.png" class="img-fluid figure-img" alt="image"></a></p>
+<figcaption>image</figcaption>
 </figure>
 </div>
 </section>
@@ -1234,11 +1204,7 @@ Définition
 <h2 class="anchored" data-anchor-id="un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur">3. Un vrai réseau contenant deux sous-réseaux distincts : la nécessité d’un routeur</h2>
 <p>Notre solution initiale (relier les deux switchs par un câble pour unifier les deux sous-réseaux) n’est pas viable à l’échelle d’un réseau planétaire.</p>
 <p>Pour que les machines de deux réseaux différents puissent être connectées, on va utiliser un dispositif équipé de <strong>deux cartes réseaux</strong>, situé à cheval entre les deux sous-réseaux. Cet équipement de réseau est appelé <strong>routeur</strong> ou <strong>passerelle</strong>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="routeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="routeur.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="routeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="routeur.png" class="img-fluid"></a></p>
 <section id="principe-de-fonctionnement" class="level3">
 <h3 class="anchored" data-anchor-id="principe-de-fonctionnement">3.1 Principe de fonctionnement</h3>
 <p>Imaginons que la machine <code>192.168.0.1 / 24</code> veuille communiquer avec la machine <code>172.16.52.3 / 24</code>.</p>
@@ -1250,27 +1216,19 @@ Définition
 <li>De là, le routeur va regarder si la machine B appartient au deuxième sous-réseau auquel il est connecté. Si c’est le cas, le message est distribué, sinon, le routeur va donner le message à un autre routeur auquel il est connecté et va le charger de distribuer ce message : c’est le procédé (complexe) de routage qui sera abordé en classe de Terminale.</li>
 </ul>
 <p>Dans notre exemple, l’adresse <code>172.16.52.3</code> n’est pas dans le sous-réseau de <code>192.168.0.1</code>. Le message va donc transiter par le routeur.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="routeur2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="routeur2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="routeur2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="routeur2.png" class="img-fluid"></a></p>
 </section>
 <section id="illustration-avec-filius" class="level3">
 <h3 class="anchored" data-anchor-id="illustration-avec-filius">3.2 Illustration avec Filius</h3>
 <ul>
-<li><p>Rajoutons un routeur entre le SwitchA et le SwitchB. <a href="f5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="f5.png" class="img-fluid"></a></p></li>
+<li><p>Rajoutons un routeur entre le SwitchA et le SwitchB. <img src="f5.png" class="img-fluid"></p></li>
 <li><p>Configuration du routeur :</p>
 <ul>
 <li>L’interface reliée au Switch A doit avoir une adresse du sous-réseau A. On donne souvent une adresse finissant par <code>254</code>, qui est en quelque sorte la dernière adresse du réseau (en effet l’adresse en <code>255</code> est appelée adresse de <strong>broadcast</strong>, utilisée pour envoyer un ping en une seule fois à l’intégralité d’un sous-réseau).<br>
 </li>
 <li>On donne donc l’adresse <code>192.168.0.254</code> pour l’interface reliée au Switch A, et <code>192.168.1.254</code> pour l’interface reliée au Switch B.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="flsrouteur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="flsrouteur.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="flsrouteur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="flsrouteur.png" class="img-fluid"></a></p>
 <ul>
 <li><p>Dans l’onglet général, sélectionner « Routage automatique ».</p></li>
 <li><p>Ainsi configuré notre routeur peut jouer le rôle de <strong>passerelle</strong> entre les deux sous-réseaux.</p></li>
@@ -1288,29 +1246,17 @@ Résultat du ping
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="ft2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="ft2.png" class="img-fluid"></a></p>
 <p>Cela ne marche pas. La carte réseau refuse d’envoyer les paquets, car elle ne sait pas où les envoyer.</p>
 </div>
 </div>
 </div>
 <p>Pourquoi cet échec ? Parce que nous devons dire à chaque machine qu’une passerelle est maintenant disponible pour pouvoir sortir de son propre sous-réseau. Il faut donc aller sur la machine <code>192.168.0.1</code> et lui donner l’adresse de sa passerelle, qui est <code>192.168.0.254</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="passerelle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="passerelle.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="passerelle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="passerelle.png" class="img-fluid"></a></p>
 <p>Attention, il faut faire de même pour <code>192.168.1.2</code> (avec la bonne passerelle…)<br>
 Testons à nouveau le ping… Cette fois cela marche.</p>
 <p>Plus intéressant : effectuons un <code>traceroute</code> entre <code>192.168.0.1</code> et <code>192.168.1.2</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="traceroute.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="traceroute.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="traceroute.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="traceroute.png" class="img-fluid"></a></p>
 <p>On constate que la machine <code>192.168.1.2</code> est atteignable en deux sauts depuis <code>192.168.0.1</code>, en passant par la passerelle <code>192.168.0.254</code></p>
 <p><strong>Cas d’un réseau domestique</strong></p>
 <p>Chez vous, la box de votre opérateur joue simultanément le rôle de switch et de routeur :</p>
@@ -1318,22 +1264,18 @@ Testons à nouveau le ping… Cette fois cela marche.</p>
 <li>switch, car elle répartit la connexion entre les différents dispositifs (ordinateurs branchés en ethernet, smartphone en wifi, tv connectée…)</li>
 <li>routeur, car elle fait le lien entre ce sous-réseau domestique (les appareils de votre maison) et le réseau internet.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="boxmaison.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="boxmaison.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="boxmaison.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="boxmaison.png" class="img-fluid"></a></p>
 <p>L’image ci-dessous présente le résultat de la commande <code>ipconfig</code> sous Windows. On y retrouve l’adresse IP locale <code>192.168.9.103</code>, le masque de sous-réseau <code>255.255.255.0</code> et l’adresse de la passerelle <code>192.168.9.1</code>.<br>
-<a href="imgpasserelle.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="imgpasserelle.jpg" class="img-fluid"></a></p>
+<img src="imgpasserelle.jpg" class="img-fluid"></p>
 </section>
 <section id="annexe-rajout-dun-serveur-dns" class="level3">
 <h3 class="anchored" data-anchor-id="annexe-rajout-dun-serveur-dns">3.3 Annexe : rajout d’un serveur DNS</h3>
 <section id="ajout-dun-serveur-web" class="level4">
 <h4 class="anchored" data-anchor-id="ajout-dun-serveur-web">3.3.1 Ajout d’un serveur web</h4>
 <ul>
-<li><p>Connectons un ordinateur au SwitchB, sur l’adresse <code>192.168.1.30</code> et installons dessus un Serveur web et démarrons-le. <a href="serveurweb.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="serveurweb.png" class="img-fluid"></a></p></li>
+<li><p>Connectons un ordinateur au SwitchB, sur l’adresse <code>192.168.1.30</code> et installons dessus un Serveur web et démarrons-le. <img src="serveurweb.png" class="img-fluid"></p></li>
 <li><p>Sur la machine <code>192.168.0.1</code>, rajoutons un Navigateur Web. En tapant dans la barre d’adresse l’adresse IP du Serveur web, la page d’accueil de Filius s’affiche.<br>
-<a href="nav1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="nav1.png" class="img-fluid"></a></p></li>
+<img src="nav1.png" class="img-fluid"></p></li>
 </ul>
 <p>Lors d’une utilisation classique d’un navigateur web, c’est une url mémorisable qui s’affiche, et non une adresse IP : on retient en effet plus facilement <code>https://www.google.com/</code> que <code>http://216.58.213.131</code>, qui renvoient pourtant à la même adresse.</p>
 <p>La machine qui assure ce rôle d’annuaire entre les serveurs web et leur adresse IP s’appelle un <strong>serveur DNS</strong>. Pour pouvoir indexer la totalité des sites internet, son rôle est structuré de manière hiérarchique.</p>
@@ -1342,13 +1284,13 @@ Testons à nouveau le ping… Cette fois cela marche.</p>
 <h4 class="anchored" data-anchor-id="ajout-dun-serveur-dns">3.3.1 Ajout d’un serveur DNS</h4>
 <ul>
 <li><p>Rajoutons un serveur DNS minimal, qui n’aura dans son annuaire d’un seul site. Il faut pour cela raccorder une nouvelle machine (mais une machine déjà sur le réseau aurait très bien pu jouer ce rôle), et installer dessus un serveur DNS.<br>
-<a href="dns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="dns.png" class="img-fluid"></a></p></li>
+<img src="dns.png" class="img-fluid"></p></li>
 <li><p>Sur ce serveur DNS, associons l’adresse <code>http://www.vivelansi.fr</code> à l’adresse IP <code>192.168.1.30</code>.<br>
-<a href="vivelansi.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="vivelansi.png" class="img-fluid"></a></p></li>
+<img src="vivelansi.png" class="img-fluid"></p></li>
 <li><p>De retour sur notre machine <code>192.168.0.1</code>, spécifions maintenant l’adresse du serveur DNS :<br>
-<a href="specdns.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="specdns.png" class="img-fluid"></a></p></li>
+<img src="specdns.png" class="img-fluid"></p></li>
 <li><p>Depuis le navigateur web de la machine <code>192.168.0.1</code>, le site <code>http://www.vivelansi.fr</code> est maintenant accessible.<br>
-<a href="dnsex.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="dnsex.png" class="img-fluid"></a></p></li>
+<img src="dnsex.png" class="img-fluid"></p></li>
 </ul>
 </section>
 </section>
@@ -1360,7 +1302,7 @@ Testons à nouveau le ping… Cette fois cela marche.</p>
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Sources</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Sources</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-lassus_premiere" class="csl-entry" role="listitem">
 LASSUS, Gilles. 2021. <span>«&nbsp;Première NSI - Lycée François Mauriac - Bordeaux&nbsp;»</span>. <a href="https://glassus.github.io/premiere_nsi/">https://glassus.github.io/premiere_nsi/</a>.
 </div>
@@ -1588,6 +1530,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1637,15 +1594,45 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    if (id.startsWith('sec-')) {
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
+        typesetMath(container);
         return container.innerHTML
       } else {
+        typesetMath(note);
         return note.innerHTML;
       }
     } else {
@@ -1654,6 +1641,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
+      typesetMath(note);
       return note.innerHTML;
     }
   }
@@ -1696,6 +1684,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
       }
     }, function(instance) {
     });
@@ -1767,6 +1778,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1824,20 +1861,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // default icon
-          link.classList.add("external");
-      }
-    }
 });
 </script>
 </div> <!-- /content -->
@@ -1872,7 +1895,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 
