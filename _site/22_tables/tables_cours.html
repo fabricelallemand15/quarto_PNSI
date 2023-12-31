@@ -613,15 +613,51 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">03-Architectures matérielles et systèmes d’exploitation</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">13_vonNeumann/vonNeumann_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 1</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">13_vonNeumann/vonNeumann_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/exos_circuits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">T.P. : circuits logiques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_TP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">T.P. : Le simulateur AQA</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1018,7 +1054,7 @@ Définition
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="tableur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="tableur"><img src="tableur.png" class="img-fluid figure-img" alt="tableur"></a></p>
+<p><a href="tableur.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1" title="tableur"><img src="tableur.png" class="img-fluid figure-img" alt="tableur"></a></p>
 <figcaption>tableur</figcaption>
 </figure>
 </div>
@@ -1111,7 +1147,7 @@ Définition
 <li><strong>Lecture</strong></li>
 </ul>
 <p>On peut extraire les attributs et la table contenus dans le fichier <code>educ_cantal.csv</code> avec le code ci-dessous :</p>
-<div id="207d52c7" class="cell" data-execution_count="1">
+<div id="207d52c7" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ouverture du fichier en mode lecture</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>fichier <span class="op">=</span> <span class="bu">open</span>(<span class="st">'educ_cantal.csv'</span>, mode<span class="op">=</span><span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># extraction de la ligne des attributs</span></span>
@@ -1124,7 +1160,7 @@ Définition
 <p>La fonction <code>open</code> permet de créer un objet <code>fichier</code> qu’on peut parcourir ligne par ligne avec un curseur : d’abord la première ligne avec <code>fichier.readline()</code> puis les lignes suivantes en itérant sur <code>fichier</code>. Il est important de préciser <strong>l’encodage du fichier</strong>, par défaut c’est celui du système d’exploitation.</p>
 <p>Chaque ligne est une chaîne de caractères découpée en liste de champs selon le délimiteur passé en paramètre à la méthode <code>split</code>. Le caractère de saut de lignes a d’abord été supprimé avec la méthode <code>rstrip</code>.</p>
 <p>On récupère ainsi les attributs comme un tableau de type <code>list</code> et la table comme un tableau d’enregistrements qui sont eux-mêmes des tableaux. Notons que toutes les valeurs sont des chaînes de caractères et qu’il faudra convertir certaines pour les traiter !</p>
-<div id="b4629d0b" class="cell" data-execution_count="2">
+<div id="b4629d0b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(attributs)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(table[<span class="dv">18</span>])</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(table[:<span class="dv">2</span>])</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1138,7 +1174,7 @@ Définition
 <li><strong>Écriture</strong></li>
 </ul>
 <p>On peut ensuite recopier les attributs et la table dans un autre fichier <code>educ_cantal_copie.csv</code> avec le code ci-dessous :</p>
-<div id="362738af" class="cell" data-execution_count="3">
+<div id="362738af" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="bu">open</span>(<span class="st">'educ_cantal_copie.csv'</span>, mode<span class="op">=</span><span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf8'</span>, newline<span class="op">=</span><span class="st">''</span>) <span class="co"># ouverture du fichier en mode écriture</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>premiere_ligne <span class="op">=</span> <span class="st">','</span>.join(attributs) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>g.write(premiere_ligne)</span>
@@ -1159,7 +1195,7 @@ Définition
 </ul>
 <p>Le code ci-dessous permet d’extraire directement la table d’un fichier CSV dans une structure de données qui est un <strong>tableau de dictionnaires</strong> : chaque enregistrement est un dictionnaire dont les clefs sont les attributs listés sur la première ligne du fichier.</p>
 <p>Remarque : pour les versions de Python 3.6 et 3.7 uniquement, les dictionnaires renvoyés sont spécifiques, de type <code>OrderedDict</code>, et on prendra soin de les convertir en dictionnaires standard avec <code>dict</code> en entrant : <code>table = [dict(enregistrement) for ...]</code>.</p>
-<div id="844c21c5" class="cell" data-execution_count="4">
+<div id="844c21c5" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'educ_cantal.csv'</span>, mode<span class="op">=</span><span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
@@ -1168,7 +1204,7 @@ Définition
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>f.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>La structure de données représentant la table est un <strong>tableau de dictionnaires</strong> : l’accès aux enregistrements se fait par index et à leurs attributs par clef : très efficace (coût constant) et code lisible. Notons que toutes les valeurs restent des chaînes de caractères et qu’il faudra convertir certaines pour les traiter !</p>
-<div id="c59f0dba" class="cell" data-execution_count="5">
+<div id="c59f0dba" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># premier enregistrement de type dictionnaire</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(table[<span class="dv">18</span>])</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># tableu de dictionnaires : extrait</span></span>
@@ -1188,7 +1224,7 @@ Lycée polyvalent de Haute Auvergne</code></pre>
 <li><strong>Écriture</strong></li>
 </ul>
 <p>L’écriture d’un tableau de dictionnaires partageant les mêmes clefs sous forme de table dans un fichier CSV, s’effectue de façon symétrique à travers un objet <code>DictWriter</code>. À titre, d’exemple, on recopie la table extraite précédemment dans un autre fichier CSV. Depuis Python 3.7, le parcours des clefs d’un dictionnaire est garanti dans le même ordre que celui d’insertion donc on peut récupérer la liste des attributs avec <code>list(table[0].keys())</code></p>
-<div id="6fc41e0f" class="cell" data-execution_count="6">
+<div id="6fc41e0f" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="bu">open</span>(<span class="st">'educ_cantal_copie2.csv'</span>, mode<span class="op">=</span><span class="st">'w'</span>, encoding<span class="op">=</span><span class="st">'utf8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>attributs <span class="op">=</span> <span class="bu">list</span>(table[<span class="dv">0</span>].keys())</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>writer <span class="op">=</span> csv.DictWriter(g, delimiter<span class="op">=</span><span class="st">','</span>, fieldnames<span class="op">=</span>attributs)  <span class="co"># création de l'objet writer</span></span>
@@ -1201,7 +1237,7 @@ Lycée polyvalent de Haute Auvergne</code></pre>
 <li><strong>Remarque</strong></li>
 </ul>
 <p>Le module <code>csv</code> permet aussi d’extraire une table d’un fichier CSV sous forme de <strong>tableau de tableaux</strong> comme dans la méthode précédente. Le découpage des lignes/enregistrements selon le délimiteur est intégré ce qui simplifie le code.</p>
-<div id="cfb18e18" class="cell" data-execution_count="7">
+<div id="cfb18e18" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'educ_cantal.csv'</span>, mode<span class="op">=</span><span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'utf8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>reader <span class="op">=</span> csv.reader(f, delimiter<span class="op">=</span><span class="st">','</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> [ligne <span class="cf">for</span> ligne <span class="kw">in</span> reader]</span>
@@ -1231,7 +1267,7 @@ Définition
 <section id="exemple-de-sélection" class="level3">
 <h3 class="anchored" data-anchor-id="exemple-de-sélection">Exemple de sélection</h3>
 <p>Supposons qu’on dispose d’une table enregistrée dans une liste de dictionnaires :</p>
-<div id="b103c395" class="cell" data-execution_count="8">
+<div id="b103c395" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Table1 <span class="op">=</span> [</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'Nom'</span>: <span class="st">'Joe'</span>, <span class="st">'Anglais'</span>: <span class="st">'17'</span>, <span class="st">'Info'</span>: <span class="st">'18'</span>, <span class="st">'Maths'</span>: <span class="st">'16'</span>},</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'Nom'</span>: <span class="st">'Zoé'</span>, <span class="st">'Anglais'</span>: <span class="st">'15'</span>, <span class="st">'Info'</span>: <span class="st">'17'</span>, <span class="st">'Maths'</span>: <span class="st">'19'</span>},</span>
@@ -1241,14 +1277,14 @@ Définition
 </div>
 <p>On souhaite extraire la liste des enregistrements des élèves ayant eu au moins 16 en maths.</p>
 <p>On peut le faire “à la main” :</p>
-<div id="ad1ef5a6" class="cell" data-execution_count="9">
+<div id="ad1ef5a6" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>au_moins_16_en_maths <span class="op">=</span> []</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> enregistrement <span class="kw">in</span> Table1:</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">int</span>(enregistrement[<span class="st">'Maths'</span>]) <span class="op">&gt;=</span> <span class="dv">16</span>:</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        au_moins_16_en_maths.append(enregistrement)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Le résultat est encore une table :</p>
-<div id="7ba9e9fe" class="cell" data-execution_count="10">
+<div id="7ba9e9fe" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>au_moins_16_en_maths</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>[{'Nom': 'Joe', 'Anglais': '17', 'Info': '18', 'Maths': '16'},
@@ -1256,7 +1292,7 @@ Définition
 </div>
 </div>
 <p>On peut le faire avec une liste en compréhension :</p>
-<div id="5707f81e" class="cell" data-execution_count="11">
+<div id="5707f81e" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>au_moins_16_en_maths <span class="op">=</span> [enre <span class="cf">for</span> enre <span class="kw">in</span> Table1 <span class="cf">if</span> <span class="bu">int</span>(enre[<span class="st">'Maths'</span>]) <span class="op">&gt;=</span> <span class="dv">16</span>]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Le résultat est identique.</p>
@@ -1268,7 +1304,7 @@ Définition
 <ul>
 <li>à la main :</li>
 </ul>
-<div id="93d1cf37" class="cell" data-execution_count="12">
+<div id="93d1cf37" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>notes_maths <span class="op">=</span> []</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> enregistrement <span class="kw">in</span> Table1:</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    notes_maths.append(enregistrement[<span class="st">'Maths'</span>])</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1276,7 +1312,7 @@ Définition
 <ul>
 <li>par compréhension :</li>
 </ul>
-<div id="b6f65738" class="cell" data-execution_count="13">
+<div id="b6f65738" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>notes_maths <span class="op">=</span> [enre[<span class="st">'Maths'</span>] <span class="cf">for</span> enre <span class="kw">in</span> Table1]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Dans les deux cas le résultat est la liste [‘16’, ‘19’, ‘14’, ‘10’].</p>
@@ -1312,20 +1348,20 @@ Solution
 <ol type="1">
 <li>Avec une boucle :</li>
 </ol>
-<div id="f1656fb9" class="cell" data-execution_count="14">
+<div id="f1656fb9" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>nom_avec_o <span class="op">=</span> []</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> enregistrement <span class="kw">in</span> Table1:</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'o'</span> <span class="kw">in</span> enregistrement[<span class="st">'Nom'</span>]:</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>        nom_avec_o.append(enregistrement)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>En compréhension :</p>
-<div id="0ab658c9" class="cell" data-execution_count="15">
+<div id="0ab658c9" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>nom_avec_o <span class="op">=</span> [enre <span class="cf">for</span> enre <span class="kw">in</span> Table1 <span class="cf">if</span> <span class="st">'o'</span> <span class="kw">in</span> enre[<span class="st">'Nom'</span>]]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="1">
 <li>Liste des noms :</li>
 </ol>
-<div id="d8b84e27" class="cell" data-execution_count="16">
+<div id="d8b84e27" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># avec une boucle</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>liste_noms <span class="op">=</span> []</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> enregistrement <span class="kw">in</span> Table1:</span>
@@ -1335,7 +1371,7 @@ Solution
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>liste_noms <span class="op">=</span> [enre[<span class="st">'Nom'</span>] <span class="cf">for</span> enre <span class="kw">in</span> Table1]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>paires info/maths</p>
-<div id="793a71e7" class="cell" data-execution_count="17">
+<div id="793a71e7" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># avec une boucle</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>liste_paires <span class="op">=</span> []</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> enregistrement <span class="kw">in</span> Table1:</span>
@@ -1360,7 +1396,7 @@ Solution
 <li><code>key = ...</code> pour préciser selon quel critère une liste doit être triée.</li>
 </ul>
 <p>Quelques exemples :</p>
-<div id="dd0e583f" class="cell" data-execution_count="18">
+<div id="dd0e583f" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>ma_liste <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">3</span>, <span class="dv">71</span>, <span class="dv">96</span>]</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">sorted</span>(ma_liste))</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">sorted</span>(ma_liste, reverse<span class="op">=</span><span class="va">True</span>))</span>
@@ -1396,13 +1432,13 @@ Avertissement
 <section id="tri-suivant-plusieurs-colonnes" class="level3">
 <h3 class="anchored" data-anchor-id="tri-suivant-plusieurs-colonnes">3.2. Tri suivant plusieurs colonnes</h3>
 <p>Considérons la table suivante :</p>
-<div id="dfe35268" class="cell" data-execution_count="19">
+<div id="dfe35268" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>table <span class="op">=</span> [{<span class="st">'élève'</span> : <span class="st">'guido'</span>, <span class="st">'langage'</span> : <span class="st">'python'</span>, <span class="st">'note'</span> : <span class="dv">19</span>},</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>         {<span class="st">'élève'</span> : <span class="st">'monty'</span>, <span class="st">'langage'</span> : <span class="st">'python'</span>, <span class="st">'note'</span> : <span class="dv">20</span>},</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>         {<span class="st">'élève'</span> : <span class="st">'brian'</span>, <span class="st">'langage'</span> : <span class="st">'c'</span>, <span class="st">'note'</span> : <span class="dv">20</span>}]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>On souhaite trier en fonction du langage dans l’ordre alphabétique, puis de la note dans l’ordre croissant. La fonction donnée en argument <code>key</code> doit alors retourner la couple ordonné des deux attributs voulus :</p>
-<div id="427ed7f2" class="cell" data-execution_count="20">
+<div id="427ed7f2" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cle_langage_note(enre):</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (enre[<span class="st">'langage'</span>], enre[<span class="st">'note'</span>])</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1414,7 +1450,7 @@ Avertissement
 </div>
 </div>
 <p>Si l’on souhaite trier dans l’ordre croissant suivant l’attribut langage et décroissant suivant l’attribut note, on procède en deux étapes :</p>
-<div id="04da3748" class="cell" data-execution_count="21">
+<div id="04da3748" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cle_langage(enre):</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> enre[<span class="st">'langage'</span>]</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1443,7 +1479,7 @@ Avertissement
 <li>à éviter les doublons : cas d’un enregistrement qui se trouverait dans les deux tables initiales.</li>
 </ul>
 <p>Sous l’hypothèse qu’il n’y a pas de doublons, le code ci-dessous procède à cette fusion :</p>
-<div id="fc944b75" class="cell" data-execution_count="22">
+<div id="fc944b75" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fusion_tables(table1: <span class="bu">list</span>, table2: <span class="bu">list</span>) <span class="op">-&gt;</span> <span class="bu">list</span>:</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""table 1 et table 2 ont les mêmes descripteurs</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co">    il n'y a pas de doublons"""</span></span>
@@ -1555,7 +1591,7 @@ Définition
 </div>
 </div>
 <p>La <strong>jointure</strong> s’obtient avec deux boucles imbriquées : on parcourt tous les couples constitués d’enregistrements de la première puis de la seconde table et on filtre à l’aide d’une instruction conditionnelle.</p>
-<div id="a1879b7f" class="cell" data-execution_count="23">
+<div id="a1879b7f" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> copy <span class="im">import</span> deepcopy</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>Table1 <span class="op">=</span> [{<span class="st">'Nom'</span>: <span class="st">'Joe'</span>, <span class="st">'Anglais'</span>: <span class="st">'17'</span>, <span class="st">'Info'</span>: <span class="st">'18'</span>, <span class="st">'Maths'</span>: <span class="st">'16'</span>},</span>
@@ -2196,7 +2232,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 
