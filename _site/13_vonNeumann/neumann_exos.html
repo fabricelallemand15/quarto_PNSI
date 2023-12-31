@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première</title>
+<title>NSI - Première - Exercices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../13_vonNeumann/neumann_TP.html" rel="next">
+<link href="../13_vonNeumann/exos_circuits.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -182,7 +184,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../13_vonNeumann/index.html">Ch. 13 - Modèle d’architecture de von Neumann</a></li><li class="breadcrumb-item"><a href="../13_vonNeumann/neumann_exos.html">Exercices</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -598,25 +600,61 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="true">
  <span class="menu-text">Ch. 13 - Modèle d’architecture de von Neumann</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">03-Architectures matérielles et systèmes d’exploitation</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">13_vonNeumann/vonNeumann_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 1</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">13_vonNeumann/vonNeumann_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/exos_circuits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">T.P. : circuits logiques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_exos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_TP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">neumann_TP.html</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -937,27 +975,43 @@ cookieconsent.run({
    
   <ul>
   <li><a href="#architecture" id="toc-architecture" class="nav-link active" data-scroll-target="#architecture">Architecture</a></li>
-  <li><a href="#octicons-pencil-16-exercice-1-qcm" id="toc-octicons-pencil-16-exercice-1-qcm" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-1-qcm">:octicons-pencil-16: Exercice 1 (QCM)</a></li>
+  <li><a href="#exercice-1-qcm" id="toc-exercice-1-qcm" class="nav-link" data-scroll-target="#exercice-1-qcm"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 1 (QCM)</a></li>
   <li><a href="#assembleur" id="toc-assembleur" class="nav-link" data-scroll-target="#assembleur">Assembleur</a></li>
-  <li><a href="#octicons-pencil-16-exercice-2" id="toc-octicons-pencil-16-exercice-2" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-2">:octicons-pencil-16: Exercice 2</a></li>
-  <li><a href="#octicons-pencil-16-exercice-3" id="toc-octicons-pencil-16-exercice-3" class="nav-link" data-scroll-target="#octicons-pencil-16-exercice-3">:octicons-pencil-16: Exercice 3</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-4" id="toc-fontawesome-solid-computer-exercice-4" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-4">:fontawesome-solid-computer: Exercice 4</a></li>
+  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</a></li>
+  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</a></li>
+  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../13_vonNeumann/index.html">Ch. 13 - Modèle d’architecture de von Neumann</a></li><li class="breadcrumb-item"><a href="../13_vonNeumann/neumann_exos.html">Exercices</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Exercices</h1>
+</div>
 
 
 
-<p><em>Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
-<p><em>Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit.</em></p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-desktop" aria-label="desktop"></i> sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> doivent être résolus par écrit.</em></p>
 <section id="architecture" class="level2">
 <h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
 </section>
-<section id="octicons-pencil-16-exercice-1-qcm" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-1-qcm">:octicons-pencil-16: Exercice 1 (QCM)</h2>
+<section id="exercice-1-qcm" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1-qcm"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 1 (QCM)</h2>
 <iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&amp;id=22" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="von Neumann 1">
 </iframe>
 <script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
@@ -981,8 +1035,8 @@ cookieconsent.run({
 <section id="assembleur" class="level2">
 <h2 class="anchored" data-anchor-id="assembleur">Assembleur</h2>
 </section>
-<section id="octicons-pencil-16-exercice-2" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-2">:octicons-pencil-16: Exercice 2</h2>
+<section id="exercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</h2>
 <ol type="1">
 <li><p>Expliquez brièvement par une phrase, les instructions suivantes :</p>
 <ul>
@@ -1004,10 +1058,10 @@ cookieconsent.run({
 </ol>
 <hr>
 </section>
-<section id="octicons-pencil-16-exercice-3" class="level2">
-<h2 class="anchored" data-anchor-id="octicons-pencil-16-exercice-3">:octicons-pencil-16: Exercice 3</h2>
+<section id="exercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</h2>
 <p>On considère le programme Python donné à la fin du cours et sa traduction en Python.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">4</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">4</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">8</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">==</span> <span class="dv">10</span>:</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="dv">9</span></span>
@@ -1015,24 +1069,46 @@ cookieconsent.run({
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>x<span class="op">+</span><span class="dv">1</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>z<span class="op">=</span><span class="dv">6</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>et voici maintenant voici son équivalent en assembleur :</p>
-<p><code>DASM16 title="Assembleur" MOV R0, #4 STR R0,30 MOV R0, #8 STR R0,75 LDR R0,30 CMP R0, #10 BNE else MOV R0, #9 STR R0,75 B endif else: LDR R0,30 ADD R0, R0, #1 STR R0,30 endif: MOV R0, #6 STR R0,23 HALT</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>MOV R0<span class="op">,</span> <span class="co">#4</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>STR R0<span class="op">,</span><span class="dv">30</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>MOV R0<span class="op">,</span> <span class="co">#8</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>STR R0<span class="op">,</span><span class="dv">75</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>LDR R0<span class="op">,</span><span class="dv">30</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>CMP R0<span class="op">,</span> <span class="co">#10</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>BNE else</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>MOV R0<span class="op">,</span> <span class="co">#9</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>STR R0<span class="op">,</span><span class="dv">75</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>B endif</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">else:</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>LDR R0<span class="op">,</span><span class="dv">30</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>ADD R0<span class="op">,</span> R0<span class="op">,</span> <span class="co">#1</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>STR R0<span class="op">,</span><span class="dv">30</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">endif:</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>MOV R0<span class="op">,</span> <span class="co">#6</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>STR R0<span class="op">,</span><span class="dv">23</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>HALT</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ol type="1">
 <li>À quoi sert la ligne B endif ?</li>
 <li>À quoi correspondent les adresses mémoires 23, 75 et 30 ?</li>
 </ol>
 <hr>
 </section>
-<section id="fontawesome-solid-computer-exercice-4" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-4">:fontawesome-solid-computer: Exercice 4</h2>
+<section id="exercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</h2>
 <p>Le module <code>dis</code> de Python permet de “désassembler” du code Python, c’est-à-dire d’afficher les instructions machines correspondant à des instructions Python.</p>
 <ol type="1">
 <li><p>En console interactive, entrer les lignes suivantes et interpréter le résultat.</p>
-<pre class="pycon"><code>&gt;&gt;&gt; import dis
-&gt;&gt;&gt; code = """
-a = 5
-a = a + 3
-"""
-&gt;&gt;&gt; dis.dis(code)</code></pre></li>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> dis</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> code <span class="op">=</span> <span class="st">"""</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="st">a = 5</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="st">a = a + 3</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> dis.dis(code)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Recommencer en remplaçant le code analysé par le code de l’exercice précédent. Expliquer les différences entre l’assembleur Python et l’assembleur utilisé dans l’exercice précédent.</p></li>
 </ol>
 
@@ -1596,6 +1672,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../13_vonNeumann/exos_circuits.html" class="pagination-link  aria-label=" t.p.="" :="" circuits="" logiques"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">T.P. : circuits logiques</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../13_vonNeumann/neumann_TP.html" class="pagination-link" aria-label="neumann_TP.html">
+        <span class="nav-page-text">neumann_TP.html</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

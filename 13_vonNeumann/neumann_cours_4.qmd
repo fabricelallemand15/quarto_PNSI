@@ -1,3 +1,7 @@
+---
+title: "Cours : Partie 4"
+---
+
 Nous avons vu comment un assemblage de transistors pouvait permettre de faire des opérations logiques, de construire des mémoires, des microprocesseurs, ...
 
 Dans l'architecture de von Neumann, les instructions et les données sont stockées dans la même mémoire et toutes ces informations transitent sous la forme de signaux électriques entre la mémoire et les différents composants du CPU.
@@ -58,101 +62,101 @@ Il n'est pas question d'apprendre à programmer en assembleur, mais vous devez �
 
 ## 3. Exemples d'instructions
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 LDR R1,78
 ```
 
 Place la valeur stockée à l'adresse mémoire 78 dans le registre R1 (par souci de simplification, nous continuons à utiliser des adresses mémoire codées en base 10)
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 STR R3,125
 ```
 
 Place la valeur stockée dans le registre R3 en mémoire vive à l'adresse 125
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 ADD R1,R0,#128
 ```
 
 Additionne le nombre 128 (une valeur immédiate est identifiée grâce au symbole #) et la valeur stockée dans le registre R0, place le résultat dans le registre R1
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 ADD R0,R1,R2
 ```
 
 Additionne la valeur stockée dans le registre R1 et la valeur stockée dans le registre R2, place le résultat dans le registre R0
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 SUB R1,R0,#128
 ```
 
 Soustrait le nombre 128 de la valeur stockée dans le registre R0, place le résultat dans le registre R1
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 SUB R0,R1,R2
 ```
 
 Soustrait la valeur stockée dans le registre R2 de la valeur stockée dans le registre R1, place le résultat dans le registre R0
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 MOV R1, #23
 ```
 
 Place le nombre 23 dans le registre R1
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 MOV R0, R3
 ```
 
 Place la valeur stockée dans le registre R3 dans le registre R0
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 B 45
 ```
 
 Nous avons une structure de rupture de séquence, la prochaine instruction à exécuter se situe en mémoire vive à l'adresse 45
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 CMP R0, #23
 ```
 
 Compare la valeur stockée dans le registre R0 et le nombre 23. Cette instruction CMP doit précéder une instruction de branchement conditionnel BEQ, BNE, BGT, BLT (voir ci-dessous)
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 CMP R0, R1
 ```
 
 Compare la valeur stockée dans le registre R0 et la valeur stockée dans le registre R1.
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 CMP R0, #23
 BEQ 78
 ```
 
 La prochaine instruction à exécuter se situe à l'adresse mémoire 78 si la valeur stockée dans le registre R0 est égale à 23
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 CMP R0, #23
 BNE 78
 ```
 
 La prochaine instruction à exécuter se situe à l'adresse mémoire 78 si la valeur stockée dans le registre R0 n'est pas égale à 23
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 CMP R0, #23
 BGT 78
 ```
 
 La prochaine instruction à exécuter se situe à l'adresse mémoire 78 si la valeur stockée dans le registre R0 est plus grand que 23
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 CMP R0, #23
 BLT 78
 ```
 
 La prochaine instruction à exécuter se situe à l'adresse mémoire 78 si la valeur stockée dans le registre R0 est plus petit que 23
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 HALT
 ```
 
@@ -164,7 +168,7 @@ Encore une fois, il n'est pas question d'apprendre à programmer en assembleur, 
 
 En fait, les instructions assembleur B, BEQ, BNE, BGT et BLT n'utilisent pas directement l'adresse mémoire de la prochaine instruction à exécuter, mais des "labels". Un label correspond à une adresse en mémoire vive (c'est l'assembleur qui fera la traduction "label" $\longrightarrow$ "adresse mémoire"). L'utilisation d'un label évite donc d'avoir à manipuler des adresses mémoires en binaire ou en hexadécimal. Voici un exemple qui montre comment utiliser un label :
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 CMP R4, #18
 BGT monLabel
 MOV R0,#14
@@ -186,7 +190,7 @@ Voici ce que pourrait donner la "transformation" d'un programme Python tout simp
 
 Voici le programme Python :
 
-```py
+```python
 x = 4
 y = 8
 if x == 10:
@@ -198,7 +202,7 @@ z=6
 
 et voici maintenant voici son équivalent en assembleur :
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 MOV R0, #4
 STR R0,30
 MOV R0, #8

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première</title>
+<title>NSI - Première - Cours : Partie 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../13_vonNeumann/neumann_cours_2.html" rel="next">
+<link href="../13_vonNeumann/index.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -151,7 +153,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../13_vonNeumann/index.html">Ch. 13 - Modèle d’architecture de von Neumann</a></li><li class="breadcrumb-item"><a href="../13_vonNeumann/neumann_cours_1.html">Cours : Partie 1</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -567,25 +569,55 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="true">
  <span class="menu-text">Ch. 13 - Modèle d’architecture de von Neumann</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">03-Architectures matérielles et systèmes d’exploitation</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">13_vonNeumann/vonNeumann_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Cours : Partie 1</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">13_vonNeumann/vonNeumann_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Architecture</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_TP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">neumann_TP.html</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -913,13 +945,29 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../13_vonNeumann/index.html">Ch. 13 - Modèle d’architecture de von Neumann</a></li><li class="breadcrumb-item"><a href="../13_vonNeumann/neumann_cours_1.html">Cours : Partie 1</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Cours : Partie 1</h1>
+</div>
 
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <p>Ce panorama rapide est issu, à quelques modifications près, du cours de Anthony Juton, Professeur agrégé en Physique appliquée (MOOC NSI : les fondamentaux).</p>
 <section id="jusquà-1945" class="level2">
 <h2 class="anchored" data-anchor-id="jusquà-1945">1. Jusqu’à 1945</h2>
-<p><a href="../../../assets/images/archi_histoire_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../../../assets/images/archi_histoire_1.png" class="img-fluid"></a></p>
+<p><a href="archi_histoire_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="archi_histoire_1.png" class="img-fluid"></a></p>
 <p>Une première date est la publication par le mathématicien <a href="https://fr.wikipedia.org/wiki/Al-Khw%C3%A2rizm%C3%AE" target="_blank">Muhammad Al-Khwârizmî</a> d’une classification des algorithmes existants au 9ème siècle. Le mot algorithme est issu de son nom.</p>
 <p>Au 17ème siècle, le philosophe et scientifique <a href="https://fr.wikipedia.org/wiki/Blaise_Pascal" target="_blank">Blaise Pascal</a> développe une machine d’arithmétique capable de faire mécaniquement des additions et soustractions et, par répétition, des multiplications et divisions. On la nomme aujourd’hui pascaline.</p>
 <p>Au 18ème siècle, l’inventeur français <a href="https://fr.wikipedia.org/wiki/Joseph_Marie_Jacquard" target="_blank">Joseph Marie Jacquard</a> automatise les métiers à tisser mécanique. Le motif est codé sous la forme d’une séquence d’instructions décrite par une carte perforée.</p>
@@ -931,7 +979,7 @@ cookieconsent.run({
 </section>
 <section id="après-1945" class="level2">
 <h2 class="anchored" data-anchor-id="après-1945">2. Après 1945</h2>
-<p><a href="../../../assets/images/archi_histoire_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="../../../assets/images/archi_histoire_2.png" class="img-fluid"></a></p>
+<p><a href="archi_histoire_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="archi_histoire_2.png" class="img-fluid"></a></p>
 <p>En 1947 commence l’histoire moderne de l’informatique. 3 physiciens américains des laboratoires Bell, <a href="https://fr.wikipedia.org/wiki/William_Shockley" target="_blank">William Shockley</a>, <a href="https://fr.wikipedia.org/wiki/John_Bardeen" target="_blank">John Bardeen</a>, <a href="https://fr.wikipedia.org/wiki/Walter_Houser_Brattain" target="_blank">Walter Brattain</a> découvrent l’effet transistor. Dans un semi-conducteur au germanium, un courant électrique permet de contrôler l’ouverture d’un circuit électrique. Il devient alors possible de remplacer les coûteux et peu fiables tubes à vide. Le transistor permet rapidement un bond en avant pour l’informatique, l’électronique, les télécommunications et est à l’origine de la création de l’électronique de puissance. Cette découverte est saluée par l’attribution du prix Nobel de physique en 1956.</p>
 <p>Avec le transistor, complexe à fabriquer, apparaît la différenciation entre concepteur de processeur et développeur de programme.</p>
 <p>Dès 1958, la société Fairchild semi-conducteurs, fondée notamment par <a href="https://fr.wikipedia.org/wiki/Gordon_Earle_Moore" target="_blank">Gordon Moore</a> pour développer des semi-conducteurs à base de silicium, sort les premiers circuits intégrés regroupant de nombreux transistors gravés sur la même puce de silicium pour assurer des fonctions logiques.</p>
@@ -1503,6 +1551,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../13_vonNeumann/index.html" class="pagination-link  aria-label=" programme"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../13_vonNeumann/neumann_cours_2.html" class="pagination-link" aria-label="Cours : Partie 2">
+        <span class="nav-page-text">Cours : Partie 2</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1535,7 +1595,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 

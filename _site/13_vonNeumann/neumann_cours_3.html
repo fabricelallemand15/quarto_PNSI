@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première</title>
+<title>NSI - Première - Cours : Partie 3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../13_vonNeumann/neumann_cours_4.html" rel="next">
+<link href="../13_vonNeumann/neumann_cours_2.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -151,7 +153,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../13_vonNeumann/index.html">Ch. 13 - Modèle d’architecture de von Neumann</a></li><li class="breadcrumb-item"><a href="../13_vonNeumann/neumann_cours_3.html">Cours : Partie 3</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -567,25 +569,55 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="true">
  <span class="menu-text">Ch. 13 - Modèle d’architecture de von Neumann</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">03-Architectures matérielles et systèmes d’exploitation</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">13_vonNeumann/vonNeumann_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 1</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">13_vonNeumann/vonNeumann_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Cours : Partie 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Architecture</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_TP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">neumann_TP.html</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -914,11 +946,27 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../13_vonNeumann/index.html">Ch. 13 - Modèle d’architecture de von Neumann</a></li><li class="breadcrumb-item"><a href="../13_vonNeumann/neumann_cours_3.html">Cours : Partie 3</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Cours : Partie 3</h1>
+</div>
 
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <p><a href="https://fr.wikipedia.org/wiki/John_von_Neumann" target="_blank">John von Neumann</a> (mathématicien et physicien américano-hongrois 1903-1957) a eu l’idée en 1945 d’utiliser une structure de stockage (mémoire) unique pour les données et les instructions : on parle d’architecture de von Neumann</p>
-<p><a href="../../../assets/images/timbre_Neumann.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../../../assets/images/timbre_Neumann.jpg" class="img-fluid"></a></p>
+<p><a href="timbre_Neumann.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="timbre_Neumann.jpg" class="img-fluid"></a></p>
 <p>La première innovation est la séparation nette entre l’unité de commande, qui organise le flot de séquencement des instructions, et l’unité arithmétique, chargée de l’exécution proprement dite de ces instructions. La seconde innovation, la plus fondamentale, est l’idée du programme enregistré : les instructions, au lieu d’être codées sur un support externe (ruban, cartes, tableau de connexions), sont enregistrées dans la mémoire selon un codage conventionnel. Un compteur ordinal contient l’adresse de l’instruction en cours d’exécution ; il est automatiquement incrémenté après exécution de l’instruction, et explicitement modifié par les instructions de branchement.</p>
 <p>Un emplacement de mémoire peut contenir indifféremment des instructions et des données, et une conséquence majeure (dont toute la portée n’avait probablement pas été perçue à l’époque) est qu’un programme peut être traité comme une donnée par d’autres programmes. Cette idée, présente en germe dans la machine de Turing, trouvait ici sa concrétisation</p>
 <p>Pour en savoir plus sur l’aspect historique du modèle, voir <a href="https://interstices.info/le-modele-darchitecture-de-von-neumann/" target="_blank">cet article du site interstices</a>.</p>
@@ -932,9 +980,9 @@ cookieconsent.run({
 <li>La mémoire qui contient à la fois les données et le programme qui indiquera à l’unité de contrôle quels sont les calculs à faire sur ces données ;</li>
 <li>Les dispositifs d’entrée-sortie, qui permettent de communiquer avec le monde extérieur.</li>
 </ul>
-<p><a href="../../../assets/images/modele-originel2.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="../../../assets/images/modele-originel2.gif" class="img-fluid"></a></p>
+<p><a href="modele-originel2.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="modele-originel2.gif" class="img-fluid"></a></p>
 <p>De nos jours, le modèle a évolué :</p>
-<p><a href="../../../assets/images/modele-actuel.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="../../../assets/images/modele-actuel.gif" class="img-fluid"></a></p>
+<p><a href="modele-actuel.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="modele-actuel.gif" class="img-fluid"></a></p>
 <ul>
 <li>Les entrées-sorties, initialement commandées par l’unité centrale, sont depuis le début des années 1960 sous le contrôle de processeurs autonomes (canaux d’entrée-sortie et mécanismes assimilés). Associée à la multiprogrammation (partage de la mémoire entre plusieurs programmes), cette organisation a notamment permis le développement des systèmes en temps partagé.</li>
 <li>Les ordinateurs comportent maintenant des processeurs multiples, qu’il s’agisse d’unités séparées ou de « cœurs » multiples à l’intérieur d’une même puce. Cette organisation permet d’atteindre une puissance globale de calcul élevée sans augmenter la vitesse des processeurs individuels, limitée par les capacités d’évacuation de la chaleur dans des circuits de plus en plus denses.</li>
@@ -949,14 +997,9 @@ cookieconsent.run({
 <li>Les <strong>registres</strong> permettent de mémoriser de l’information (donnée ou instruction) au sein même du CPU, en très petite quantité ;</li>
 <li>L’<strong>unité de contrôle</strong> (ou de commande) . C’est le coordinateur général qui lit les instructions du programme en mémoire et commande l’UAL pour exécuter ces instructions.</li>
 </ul>
-<p><a href="../.././../assets/images/processeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="../.././../assets/images/processeur.png" class="img-fluid"></a></p>
+<p><a href="processeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="processeur.png" class="img-fluid"></a></p>
 <p>Les microprocesseurs sont cadencés par un signal d’horloge (signal oscillant régulier imposant un rythme au transfert entre circuit). Au milieu des années 1980, ce signal avait une fréquence de 4 à 8 MHz. Dans les années 2000, cette fréquence atteint 3 GHz. Plus cette fréquence est élevée, plus le microprocesseur peut exécuter à un rythme élevé les instructions de base des programmes.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../../assets/images/intel_i9.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-description="" title="image50"><img src="../../../assets/images/intel_i9.jpg" class="img-fluid figure-img" alt="image50"></a></p>
-<figcaption>image50</figcaption>
-</figure>
-</div>
+<p><a href="intel_i9.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="intel_i9.jpg" class="img-fluid" style="width:50.0%"></a></p>
 </section>
 <section id="la-mémoire" class="level3">
 <h3 class="anchored" data-anchor-id="la-mémoire">3. La mémoire</h3>
@@ -971,7 +1014,7 @@ cookieconsent.run({
 <li>Capacité : jusqu’à 10 To (HDD)</li>
 <li>Vitesse : jusqu’à 500 Mo/s (SSD)</li>
 </ul>
-<p><a href="../../../assets/images/HDD.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="../../../assets/images/HDD.png" class="img-fluid"></a></p></li>
+<p><a href="HDD.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="HDD.png" class="img-fluid"></a></p></li>
 <li><p><strong>La mémoire vive ou RAM : Random Access Memory (non permanente)</strong></p>
 <p>Espace principal de stockage du microprocesseur, mais dont le contenu disparaît lors de la mise hors tension de l’ordinateur.</p>
 <p><strong>Ordres de grandeur :</strong></p>
@@ -979,12 +1022,7 @@ cookieconsent.run({
 <li>Capacité : jusqu’à 32 Go</li>
 <li>Vitesse : jusqu’à 2 Go/s</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../../assets/images/RAM.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-description="" title="image40"><img src="../../../assets/images/RAM.webp" class="img-fluid figure-img" alt="image40"></a></p>
-<figcaption>image40</figcaption>
-</figure>
-</div></li>
+<p><a href="RAM.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="RAM.webp" class="img-fluid" style="width:40.0%"></a></p></li>
 <li><p><strong>La mémoire cache</strong></p>
 <p>Sert à conserver un court instant des informations fréquemment consultées. Les technologies des mémoires caches visent à accélérer la vitesse des opérations de consultation. Elles ont une très grande vitesse, et un coût élevé pour une faible capacité de stockage. Cette mémoire est intégrée au microprocesseur. Il existe des mémoires caches à différents niveaux (L1, L2, …), qui possèdent des caractéristiques différentes.</p>
 <p><strong>Ordres de grandeur :</strong></p>
@@ -992,7 +1030,7 @@ cookieconsent.run({
 <li>Capacité : quelques ko (L1) à quelques Mo (L2)</li>
 <li>Vitesse : jusqu’à 5 Go/s</li>
 </ul>
-<p><a href="../../../assets/images/memoire-cache2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="../../../assets/images/memoire-cache2.jpg" class="img-fluid"></a></p></li>
+<p><a href="memoire-cache2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="memoire-cache2.jpg" class="img-fluid"></a></p></li>
 <li><p><strong>Les registres du processeur</strong></p>
 <p>Intégrés au processeur. Ce type de mémoire est très rapide mais aussi très cher et est donc réservé à une très faible quantité de données.</p>
 <p><strong>Ordres de grandeur :</strong></p>
@@ -1000,7 +1038,7 @@ cookieconsent.run({
 <li>Capacité : quelques dizaines d’octets</li>
 <li>Vitesse : jusqu’à 30 Go/s</li>
 </ul>
-<p><a href="../../../assets/images/alu.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="../../../assets/images/alu.jpg" class="img-fluid"></a></p></li>
+<p><a href="alu.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="alu.jpg" class="img-fluid"></a></p></li>
 </ul>
 <section id="les-bus" class="level4">
 <h4 class="anchored" data-anchor-id="les-bus">4. Les bus</h4>
@@ -1010,12 +1048,7 @@ cookieconsent.run({
 <li>Le bus de données permet de faire circuler des données ;</li>
 <li>Le bus de contrôle permet de spécifier le type d’action. Par exemple : écriture d’une donnée en mémoire, lecture d’une donnée en mémoire.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../../assets/images/bus.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-description="" title="image50"><img src="../../../assets/images/bus.png" class="img-fluid figure-img" alt="image50"></a></p>
-<figcaption>image50</figcaption>
-</figure>
-</div>
+<p><a href="bus.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="bus.png" class="img-fluid" style="width:50.0%"></a></p>
 <p>Pour en savoir plus, voir la vidéo “Comment fonctionne un ordinateur ?” dans <a href="https://www.flallemand.fr/wp/2022/07/02/la-chaine-youtube-codeur-pro/">cet article</a>.</p>
 
 
@@ -1579,6 +1612,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../13_vonNeumann/neumann_cours_2.html" class="pagination-link  aria-label=" cours="" :="" partie="" 2"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cours : Partie 2</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../13_vonNeumann/neumann_cours_4.html" class="pagination-link" aria-label="Cours : Partie 4">
+        <span class="nav-page-text">Cours : Partie 4</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1611,7 +1656,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 

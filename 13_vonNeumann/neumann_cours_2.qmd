@@ -1,3 +1,7 @@
+---
+title: "Cours : Partie 2"
+---
+
 Dans cette partie, nous allons décrire comment on peut, à partir de transistors, réaliser des opérations logiques.
 
 ### 1. Du transistor au circuit logique
@@ -6,19 +10,19 @@ On entend souvent dire qu'"un ordinateur utilise uniquement des "1" et des "0"".
 
 À la base de la plupart des composants d'un ordinateur, on retrouve le transistor. Ce composant électronique a été inventé fin 1947 par les Américains John Bardeen, William Shockley et Walter Brattain. L'invention du transistor a été un immense progrès, mais les premiers ordinateurs sont antérieurs à cette invention. En effet, ces premiers ordinateurs, par exemple le Colossus qui date de 1943, étaient conçus à base de tubes électroniques (on parle aussi de tubes à vide) qui, bien que beaucoup plus gros et beaucoup moins fiable que les transistors fonctionnent sur le même principe que ce dernier.
 
-un transistor : ![image20](../../../assets/images/transistor_3.jpg)
+un transistor : ![](transistor_3.jpg){width=20%}
 
-un tube électronique : ![image20](../../../assets/images/tube_eniac.jpeg)
+un tube électronique : ![](tube_eniac.jpeg){width=20%}
 
-Autre aspect historique qu'il est important de préciser : on ne trouve plus, depuis quelque temps déjà, de transistors en tant que composant électronique discret (comme le transistor de la photo ci-dessus). Dans un ordinateur, les transistors sont regroupés au sein de ce que l'on appelle des circuits intégrés. Dans un circuit intégré, les transistors sont gravés sur des plaques de silicium, les connexions entre les millions de transistors qui composent un circuit intégré sont, elles aussi, gravées directement dans le silicium. Les processus mis en jeu lors de ces gravures dépassent largement le cadre de ce cours, si ce sujet vous intéresse, je vous invite à visionner cette vidéo : https://www.youtube.com/watch?v=NFr-WyytNfo
+Autre aspect historique qu'il est important de préciser : on ne trouve plus, depuis quelque temps déjà, de transistors en tant que composant électronique discret (comme le transistor de la photo ci-dessus). Dans un ordinateur, les transistors sont regroupés au sein de ce que l'on appelle des circuits intégrés. Dans un circuit intégré, les transistors sont gravés sur des plaques de silicium, les connexions entre les millions de transistors qui composent un circuit intégré sont, elles aussi, gravées directement dans le silicium. Les processus mis en jeu lors de ces gravures dépassent largement le cadre de ce cours, si ce sujet vous intéresse, je vous invite à visionner cette vidéo : [https://www.youtube.com/watch?v=NFr-WyytNfo](https://www.youtube.com/watch?v=NFr-WyytNfo)
 
-un circuit intégré : ![image20](../../../assets/images/circuit_integre.JPG)
+un circuit intégré : ![](circuit_integre.JPG){width=20%}
 
 Il n'est pas question de nous pencher en détail sur le fonctionnement d'un transistor, mais vous devez tout de même savoir que dans un ordinateur les transistors se comportent comme des interrupteurs : soit le transistor laisse passer le courant électrique (interrupteur fermé), soit il ne le laisse pas passer (interrupteur ouvert). Et c'est tout, il n'y a pas d'autre état possible pour un transistor dans un ordinateur : le courant passe ou le courant ne passe pas. Globalement l'ordinateur fonctionne uniquement avec deux états. On parle d'un état "haut" et d'un état "bas". On symbolise souvent l'état "haut" par le chiffre "1" et l'état "bas" par le chiffre "0", mais il faut bien avoir conscience qu'il n'y a pas dans un ordinateur des "petits 1" ou des "petits 0" qui se "baladent", c'est juste une histoire de "courant qui passe" ou de "courant qui ne passe pas". On travaille donc uniquement avec 2 chiffres, voilà pourquoi un ordinateur travaille en base 2 (en binaire) et non pas en base 10 comme dans la vie courante.
 
 Plus précisément, un transistor  se comporte comme un interrupteur commandé électriquement, sans partie mécanique. Il dispose de trois bornes : le drain, la grille et la source. Soumise à une tension suffisante (état 1), la grille permet le passage du courant entre le drain et la source (interrupteur fermé). Dans le cas contraire (état 0), le courant est bloqué (interrupteur ouvert).
 
-![image50](../../../assets/images/transistor_1.png)
+![](transistor_1.png){width=50%}
 
 Voyons maintenant comment un circuit composé de plusieurs transistors peut effectuer des opérations logiques.
 
@@ -26,7 +30,7 @@ On considère le circuit ci-dessous. Il comporte quatre transistors et les deux 
 
 En réfléchissant un peu, nous pouvons justifier la table de vérité de ce circuit, donnée à côté.
 
-![image70](../../../assets/images/circuit_NAND.png)
+![](circuit_NAND.png){width=70%}
 
 Il s'agit de l'opérateur logique NAND, NON ET.
 
@@ -55,13 +59,13 @@ Le plus simple des circuits combinatoires est la porte "NON" ("NOT" en anglais) 
 
 La porte "NON" est symbolisée par le schéma suivant (les schémas ci-dessous utilisent les symboles étasuniens, les plus utilisés) :
 
-![image20](../../../assets/images/porte_NON.png)
+![](porte_NON.png){width=20%}
 
 #### la porte OU (OR)
 
 La porte "OU" a deux entrées (E1 et E2) et une sortie S
 
-![image20](../../../assets/images/porte_OU.png)
+![](porte_OU.png){width=20%}
 
 Table de vérité porte "OU" :
 
@@ -76,7 +80,7 @@ Table de vérité porte "OU" :
 
 La porte "ET" ("AND") a deux entrées (E1 et E2) et une sortie S
 
-![image20](../../../assets/images/porte_ET.png)
+![](porte_ET.png){width=20%}
 
 Table de vérité porte "ET" :
 
@@ -91,7 +95,7 @@ Table de vérité porte "ET" :
 
 La porte "OU EXCLUSIF" ("XOR") a deux entrées (E1 et E2) et une sortie S
 
-![image20](../../../assets/images/porte_XOR.png)
+![](porte_XOR.png){width=20%}
 
 Table de vérité porte "XOR" :
 
@@ -106,7 +110,7 @@ Table de vérité porte "XOR" :
 
 En combinant les portes logiques, on obtient des circuits plus complexes. Par exemple en combinant 2 portes "OU EXCLUSIF", 2 portes "ET" et une porte "OU" on obtient un additionneur :
 
-![](../../../assets/images/circuit_addi.png)
+![](circuit_addi.png)
 
 Comme son nom l'indique, l'additionneur permet d'additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante ("Cin" "carry in" en anglais). En sortie on obtient le résultat de l'addition (S) et la retenue sortante ("Cout").
 

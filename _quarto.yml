@@ -98,8 +98,13 @@ website:
       - section: "Ch. 13 - Modèle d'architecture de von Neumann"
         contents: 
           - 13_vonNeumann/index.qmd
-          - 13_vonNeumann/vonNeumann_cours.qmd
-          - 13_vonNeumann/vonNeumann_exos.qmd
+          - 13_vonNeumann/neumann_cours_1.qmd
+          - 13_vonNeumann/neumann_cours_2.qmd
+          - 13_vonNeumann/neumann_cours_3.qmd
+          - 13_vonNeumann/neumann_cours_4.qmd
+          - 13_vonNeumann/exos_circuits.qmd
+          - 13_vonNeumann/neumann_exos.qmd
+          - 13_vonNeumann/neumann_TP.qmd
       - section: "Ch. 14 - Éléments généraux d'algorithmique"
         contents: 
           - 14_algo/index.qmd

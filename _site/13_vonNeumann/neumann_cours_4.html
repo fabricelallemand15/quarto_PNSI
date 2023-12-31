@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première</title>
+<title>NSI - Première - Cours : Partie 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../13_vonNeumann/neumann_exos.html" rel="next">
+<link href="../13_vonNeumann/neumann_cours_3.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -182,7 +184,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../13_vonNeumann/index.html">Ch. 13 - Modèle d’architecture de von Neumann</a></li><li class="breadcrumb-item"><a href="../13_vonNeumann/neumann_cours_4.html">Cours : Partie 4</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -598,25 +600,55 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="true">
  <span class="menu-text">Ch. 13 - Modèle d’architecture de von Neumann</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">03-Architectures matérielles et systèmes d’exploitation</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">13_vonNeumann/vonNeumann_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 1</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">13_vonNeumann/vonNeumann_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Cours : Partie 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Architecture</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_TP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">neumann_TP.html</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -947,7 +979,23 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../13_vonNeumann/index.html">Ch. 13 - Modèle d’architecture de von Neumann</a></li><li class="breadcrumb-item"><a href="../13_vonNeumann/neumann_cours_4.html">Cours : Partie 4</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Cours : Partie 4</h1>
+</div>
 
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <p>Nous avons vu comment un assemblage de transistors pouvait permettre de faire des opérations logiques, de construire des mémoires, des microprocesseurs, …</p>
@@ -996,43 +1044,138 @@ cookieconsent.run({
 </section>
 <section id="exemples-dinstructions" class="level2">
 <h2 class="anchored" data-anchor-id="exemples-dinstructions">3. Exemples d’instructions</h2>
-<p><code>DASM16 title="Assembleur" LDR R1,78</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>LDR R1<span class="op">,</span><span class="dv">78</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Place la valeur stockée à l’adresse mémoire 78 dans le registre R1 (par souci de simplification, nous continuons à utiliser des adresses mémoire codées en base 10)</p>
-<p><code>DASM16 title="Assembleur" STR R3,125</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>STR R3<span class="op">,</span><span class="dv">125</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Place la valeur stockée dans le registre R3 en mémoire vive à l’adresse 125</p>
-<p><code>DASM16 title="Assembleur" ADD R1,R0,#128</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb3" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ADD R1<span class="op">,</span>R0<span class="op">,</span><span class="co">#128</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Additionne le nombre 128 (une valeur immédiate est identifiée grâce au symbole #) et la valeur stockée dans le registre R0, place le résultat dans le registre R1</p>
-<p><code>DASM16 title="Assembleur" ADD R0,R1,R2</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ADD R0<span class="op">,</span>R1<span class="op">,</span>R2</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Additionne la valeur stockée dans le registre R1 et la valeur stockée dans le registre R2, place le résultat dans le registre R0</p>
-<p><code>DASM16 title="Assembleur" SUB R1,R0,#128</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>SUB R1<span class="op">,</span>R0<span class="op">,</span><span class="co">#128</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Soustrait le nombre 128 de la valeur stockée dans le registre R0, place le résultat dans le registre R1</p>
-<p><code>DASM16 title="Assembleur" SUB R0,R1,R2</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb6" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>SUB R0<span class="op">,</span>R1<span class="op">,</span>R2</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Soustrait la valeur stockée dans le registre R2 de la valeur stockée dans le registre R1, place le résultat dans le registre R0</p>
-<p><code>DASM16 title="Assembleur" MOV R1, #23</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb7" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>MOV R1<span class="op">,</span> <span class="co">#23</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Place le nombre 23 dans le registre R1</p>
-<p><code>DASM16 title="Assembleur" MOV R0, R3</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb8" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>MOV R0<span class="op">,</span> R3</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Place la valeur stockée dans le registre R3 dans le registre R0</p>
-<p><code>DASM16 title="Assembleur" B 45</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb9" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>B <span class="dv">45</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Nous avons une structure de rupture de séquence, la prochaine instruction à exécuter se situe en mémoire vive à l’adresse 45</p>
-<p><code>DASM16 title="Assembleur" CMP R0, #23</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb10" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>CMP R0<span class="op">,</span> <span class="co">#23</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Compare la valeur stockée dans le registre R0 et le nombre 23. Cette instruction CMP doit précéder une instruction de branchement conditionnel BEQ, BNE, BGT, BLT (voir ci-dessous)</p>
-<p><code>DASM16 title="Assembleur" CMP R0, R1</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb11" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>CMP R0<span class="op">,</span> R1</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Compare la valeur stockée dans le registre R0 et la valeur stockée dans le registre R1.</p>
-<p><code>DASM16 title="Assembleur" CMP R0, #23 BEQ 78</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb12" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>CMP R0<span class="op">,</span> <span class="co">#23</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>BEQ <span class="dv">78</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>La prochaine instruction à exécuter se situe à l’adresse mémoire 78 si la valeur stockée dans le registre R0 est égale à 23</p>
-<p><code>DASM16 title="Assembleur" CMP R0, #23 BNE 78</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb13" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>CMP R0<span class="op">,</span> <span class="co">#23</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>BNE <span class="dv">78</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>La prochaine instruction à exécuter se situe à l’adresse mémoire 78 si la valeur stockée dans le registre R0 n’est pas égale à 23</p>
-<p><code>DASM16 title="Assembleur" CMP R0, #23 BGT 78</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb14" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>CMP R0<span class="op">,</span> <span class="co">#23</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>BGT <span class="dv">78</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>La prochaine instruction à exécuter se situe à l’adresse mémoire 78 si la valeur stockée dans le registre R0 est plus grand que 23</p>
-<p><code>DASM16 title="Assembleur" CMP R0, #23 BLT 78</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb15" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>CMP R0<span class="op">,</span> <span class="co">#23</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>BLT <span class="dv">78</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>La prochaine instruction à exécuter se situe à l’adresse mémoire 78 si la valeur stockée dans le registre R0 est plus petit que 23</p>
-<p><code>DASM16 title="Assembleur" HALT</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb16" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>HALT</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Arrête l’exécution du programme</p>
 <p>Encore une fois, il n’est pas question d’apprendre à programmer en assembleur, les instructions ci-dessus sont uniquement des exemples.</p>
 <section id="utilisation-des-labels" class="level4">
 <h4 class="anchored" data-anchor-id="utilisation-des-labels">Utilisation des labels</h4>
 <p>En fait, les instructions assembleur B, BEQ, BNE, BGT et BLT n’utilisent pas directement l’adresse mémoire de la prochaine instruction à exécuter, mais des “labels”. Un label correspond à une adresse en mémoire vive (c’est l’assembleur qui fera la traduction “label” <span class="math inline">\(\longrightarrow\)</span> “adresse mémoire”). L’utilisation d’un label évite donc d’avoir à manipuler des adresses mémoires en binaire ou en hexadécimal. Voici un exemple qui montre comment utiliser un label :</p>
-<p><code>DASM16 title="Assembleur" CMP R4, #18 BGT monLabel MOV R0,#14 HALT monLabel: MOV R0,#18 HALT</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb17" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>CMP R4<span class="op">,</span> <span class="co">#18</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>BGT monLabel</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>MOV R0<span class="op">,</span><span class="co">#14</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>HALT</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">monLabel:</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>MOV R0<span class="op">,</span><span class="co">#18</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>HALT</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Dans l’exemple ci-dessus, nous avons choisi “monLabel” comme nom de label. La ligne “MOV R0,#18” a pour label “monLabel” car elle est située juste après la ligne “monLabel:”. Concrètement, voici ce qui se passe avec ce programme : si la valeur stockée dans le registre R4 est supérieure à 18 on place le nombre 18 dans le registre R0 sinon on place le nombre 14 dans le registre R0. ATTENTION : la présence du “HALT” juste après la ligne “MOV R0,#14” est indispensable, car sinon, la ligne “MOV R0,#18” sera aussi exécutée (même si la valeur stockée dans le registre R4 est inférieure à 18 )</p>
 </section>
 </section>
@@ -1042,15 +1185,37 @@ cookieconsent.run({
 <p>Python, par exemple, est un langage interprété : un programme, l’interpréteur Python, se charge de traduire les instructions du langage en code assembleur au fur et à mesure de son exécution.</p>
 <p>Voici ce que pourrait donner la “transformation” d’un programme Python tout simple en langage machine (plus précisément ici en assembleur).</p>
 <p>Voici le programme Python :</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">8</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">==</span> <span class="dv">10</span>:</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="dv">9</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> :</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>x<span class="op">+</span><span class="dv">1</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>z<span class="op">=</span><span class="dv">6</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">==</span> <span class="dv">10</span>:</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> :</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>x<span class="op">+</span><span class="dv">1</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>z<span class="op">=</span><span class="dv">6</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>et voici maintenant voici son équivalent en assembleur :</p>
-<p><code>DASM16 title="Assembleur" MOV R0, #4 STR R0,30 MOV R0, #8 STR R0,75 LDR R0,30 CMP R0, #10 BNE else MOV R0, #9 STR R0,75 B endif else: LDR R0,30 ADD R0, R0, #1 STR R0,30 endif: MOV R0, #6 STR R0,23 HALT</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Assembleur</strong></pre>
+</div>
+<div class="sourceCode" id="cb19" data-filename="Assembleur"><pre class="sourceCode gnuassembler code-with-copy"><code class="sourceCode gnuassembler"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>MOV R0<span class="op">,</span> <span class="co">#4</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>STR R0<span class="op">,</span><span class="dv">30</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>MOV R0<span class="op">,</span> <span class="co">#8</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>STR R0<span class="op">,</span><span class="dv">75</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>LDR R0<span class="op">,</span><span class="dv">30</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>CMP R0<span class="op">,</span> <span class="co">#10</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>BNE else</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>MOV R0<span class="op">,</span> <span class="co">#9</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>STR R0<span class="op">,</span><span class="dv">75</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>B endif</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="fu">else:</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>LDR R0<span class="op">,</span><span class="dv">30</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>ADD R0<span class="op">,</span> R0<span class="op">,</span> <span class="co">#1</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>STR R0<span class="op">,</span><span class="dv">30</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="fu">endif:</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>MOV R0<span class="op">,</span> <span class="co">#6</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>STR R0<span class="op">,</span><span class="dv">23</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>HALT</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Comme vous pouvez le constater le moindre programme Python donne un programme assembleur relativement complexe.</p>
 </section>
 <section id="compléments-dinformations" class="level2">
@@ -1621,6 +1786,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../13_vonNeumann/neumann_cours_3.html" class="pagination-link  aria-label=" cours="" :="" partie="" 3"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cours : Partie 3</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../13_vonNeumann/neumann_exos.html" class="pagination-link" aria-label="Architecture">
+        <span class="nav-page-text">Architecture</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

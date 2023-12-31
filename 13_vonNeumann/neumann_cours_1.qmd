@@ -1,8 +1,12 @@
+---
+title: "Cours : Partie 1"
+---
+
 Ce panorama rapide est issu, à quelques modifications près, du cours de Anthony Juton, Professeur agrégé en Physique appliquée (MOOC NSI : les fondamentaux).
 
 ## 1. Jusqu'à 1945
 
-![](../../../assets/images/archi_histoire_1.png)
+![](archi_histoire_1.png)
 
 Une première date est la publication par le mathématicien [Muhammad Al-Khwârizmî](https://fr.wikipedia.org/wiki/Al-Khw%C3%A2rizm%C3%AE){ target=_blank } d'une classification des algorithmes existants au 9ème siècle. Le mot algorithme est issu de son nom.
 
@@ -23,7 +27,7 @@ L'ENIAC dispose de 17 000 tubes à vides, consomme 150 kW et est capable de 5000
 
 ## 2. Après 1945
 
-![](../../../assets/images/archi_histoire_2.png)
+![](archi_histoire_2.png)
 
  En 1947 commence l'histoire moderne de l'informatique. 3 physiciens américains des laboratoires Bell, [William Shockley](https://fr.wikipedia.org/wiki/William_Shockley){ target=_blank }, [John Bardeen](https://fr.wikipedia.org/wiki/John_Bardeen){ target=_blank }, [Walter Brattain](https://fr.wikipedia.org/wiki/Walter_Houser_Brattain){ target=_blank } découvrent l'effet transistor. Dans un semi-conducteur au germanium, un courant électrique permet de contrôler l'ouverture d'un circuit électrique. Il devient alors possible de remplacer les coûteux et peu fiables tubes à vide. Le transistor permet rapidement un bond en avant pour l'informatique, l'électronique, les télécommunications et est à l'origine de la création de l'électronique de puissance. Cette découverte est saluée par l'attribution du prix Nobel de physique en 1956.
 

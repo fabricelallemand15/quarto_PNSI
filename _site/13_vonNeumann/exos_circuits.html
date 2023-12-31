@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première</title>
+<title>NSI - Première - T.P. : circuits logiques</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../13_vonNeumann/neumann_exos.html" rel="next">
+<link href="../13_vonNeumann/neumann_cours_4.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -151,7 +153,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../13_vonNeumann/index.html">Ch. 13 - Modèle d’architecture de von Neumann</a></li><li class="breadcrumb-item"><a href="../13_vonNeumann/exos_circuits.html">T.P. : circuits logiques</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -567,25 +569,61 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="true">
  <span class="menu-text">Ch. 13 - Modèle d’architecture de von Neumann</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">03-Architectures matérielles et systèmes d’exploitation</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">13_vonNeumann/vonNeumann_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 1</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">13_vonNeumann/vonNeumann_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_cours_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : Partie 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/exos_circuits.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">T.P. : circuits logiques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Architecture</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../13_vonNeumann/neumann_TP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">neumann_TP.html</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -905,31 +943,42 @@ cookieconsent.run({
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#t.p.-circuits-logiques" id="toc-t.p.-circuits-logiques" class="nav-link active" data-scroll-target="#t.p.-circuits-logiques">T.P. : circuits logiques</a>
-  <ul class="collapse">
-  <li><a href="#fontawesome-solid-computer-exercice-1" id="toc-fontawesome-solid-computer-exercice-1" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-1">:fontawesome-solid-computer: Exercice 1</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-2" id="toc-fontawesome-solid-computer-exercice-2" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-2">:fontawesome-solid-computer: Exercice 2</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-3" id="toc-fontawesome-solid-computer-exercice-3" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-3">:fontawesome-solid-computer: Exercice 3</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-4" id="toc-fontawesome-solid-computer-exercice-4" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-4">:fontawesome-solid-computer: Exercice 4</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-5" id="toc-fontawesome-solid-computer-exercice-5" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-5">:fontawesome-solid-computer: Exercice 5</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-6" id="toc-fontawesome-solid-computer-exercice-6" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-6">:fontawesome-solid-computer: Exercice 6</a></li>
-  <li><a href="#fontawesome-solid-computer-exercice-7" id="toc-fontawesome-solid-computer-exercice-7" class="nav-link" data-scroll-target="#fontawesome-solid-computer-exercice-7">:fontawesome-solid-computer: Exercice 7</a></li>
-  </ul></li>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link active" data-scroll-target="#exercice-1"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 1</a></li>
+  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 2</a></li>
+  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 3</a></li>
+  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</a></li>
+  <li><a href="#exercice-5" id="toc-exercice-5" class="nav-link" data-scroll-target="#exercice-5"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 5</a></li>
+  <li><a href="#exercice-6" id="toc-exercice-6" class="nav-link" data-scroll-target="#exercice-6"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 6</a></li>
+  <li><a href="#exercice-7" id="toc-exercice-7" class="nav-link" data-scroll-target="#exercice-7"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 7</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../13_vonNeumann/index.html">Ch. 13 - Modèle d’architecture de von Neumann</a></li><li class="breadcrumb-item"><a href="../13_vonNeumann/exos_circuits.html">T.P. : circuits logiques</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">T.P. : circuits logiques</h1>
+</div>
 
 
 
-<section id="t.p.-circuits-logiques" class="level1">
-<h1>T.P. : circuits logiques</h1>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <p>Les exercices de cette page sont à réaliser à l’aide du simulateur inclus dans la page.</p>
 <p><strong>Une fois les exercices terminés, imprimer la page dans un fichier PDF et la déposer dans le dossier réseau prévu à cet effet.</strong></p>
-<section id="fontawesome-solid-computer-exercice-1" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-1">:fontawesome-solid-computer: Exercice 1</h2>
+<section id="exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 1</h2>
 <p>Réaliser un circuit logique à 4 entrées, à l’aide des portes disponibles à gauche, telle que Sortie vaut 1 si, et seulement si, au moins une des entrées est non nulle.</p>
 <div style="width: 100%; height: 430px">
 <logic-editor mode="design" showonly="not or and">
@@ -948,8 +997,8 @@ cookieconsent.run({
 <p></p>
 </logic-editor></div>
 </section>
-<section id="fontawesome-solid-computer-exercice-2" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-2">:fontawesome-solid-computer: Exercice 2</h2>
+<section id="exercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 2</h2>
 <p>Dessiner un circuit logique qui a 4 entrées A, B, C et D et dont la sortie O vaut 1 si, et seulement si, toutes les entrées sont nulles.</p>
 <div style="width: 100%; height: 430px">
 <logic-editor mode="design" showonly="not and or">
@@ -968,8 +1017,8 @@ cookieconsent.run({
 <p></p>
 </logic-editor></div>
 </section>
-<section id="fontawesome-solid-computer-exercice-3" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-3">:fontawesome-solid-computer: Exercice 3</h2>
+<section id="exercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 3</h2>
 <p>Dessiner un circuit logique correspondant à la table ci-dessous.</p>
 <table class="table">
 <thead>
@@ -1018,10 +1067,10 @@ cookieconsent.run({
 <p></p>
 </logic-editor></div>
 </section>
-<section id="fontawesome-solid-computer-exercice-4" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-4">:fontawesome-solid-computer: Exercice 4</h2>
+<section id="exercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</h2>
 <p>On considère le circuit suivant :</p>
-<p><a href="../../../assets/images/exos_circuitsFig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../../../assets/images/exos_circuitsFig1.png" class="img-fluid"></a></p>
+<p><a href="exos_circuitsFig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="exos_circuitsFig1.png" class="img-fluid"></a></p>
 <ol type="1">
 <li>Reproduire ce circuit dans le simulateur ci-dessous.</li>
 <li>En vous aidant du simulateur, établir la table de vérité de ce circuit.</li>
@@ -1039,8 +1088,8 @@ cookieconsent.run({
 <p></p>
 </logic-editor></div>
 </section>
-<section id="fontawesome-solid-computer-exercice-5" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-5">:fontawesome-solid-computer: Exercice 5</h2>
+<section id="exercice-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-5"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 5</h2>
 <p>On peut faire une porte NON avec une porte NAND.</p>
 <p>En rajoutant les fils manquants, utilisez la porte NAND (non-et) pour que la valeur de Sortie soit la même que celle de Témoin, quelle que soit la valeur de Entrée.</p>
 <ul>
@@ -1061,8 +1110,8 @@ cookieconsent.run({
 <p></p>
 </logic-editor></div>
 </section>
-<section id="fontawesome-solid-computer-exercice-6" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-6">:fontawesome-solid-computer: Exercice 6</h2>
+<section id="exercice-6" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-6"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 6</h2>
 <p>En rajoutant des portes NAND, disponibles à gauche, faites des circuits équivalents aux portes ET et OU déjà installées.</p>
 <ul>
 <li>En cas d’erreur de manipulation, vous pouvez réinitialiser en utilisant le bouton à droite.</li>
@@ -1091,8 +1140,8 @@ cookieconsent.run({
 <p></p>
 </logic-editor></div>
 </section>
-<section id="fontawesome-solid-computer-exercice-7" class="level2">
-<h2 class="anchored" data-anchor-id="fontawesome-solid-computer-exercice-7">:fontawesome-solid-computer: Exercice 7</h2>
+<section id="exercice-7" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-7"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 7</h2>
 <p>Faire un circuit équivalent à une porte XOR à l’aide de portes ET, OU et NON.</p>
 <ul>
 <li>Vous pouvez rajouter une porte XOR et une nouvelle sortie pour tester votre circuit.</li>
@@ -1115,9 +1164,10 @@ cookieconsent.run({
     </script>
 <p></p>
 </logic-editor></div>
+<script src="https://logic.modulo-info.ch/simulator/lib/bundle.js" "="">
+</script>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1677,6 +1727,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../13_vonNeumann/neumann_cours_4.html" class="pagination-link  aria-label=" cours="" :="" partie="" 4"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cours : Partie 4</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../13_vonNeumann/neumann_exos.html" class="pagination-link" aria-label="Architecture">
+        <span class="nav-page-text">Architecture</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1709,7 +1771,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 

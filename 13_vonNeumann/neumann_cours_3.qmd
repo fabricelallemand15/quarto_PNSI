@@ -1,7 +1,10 @@
+---
+title: "Cours : Partie 3"
+---
 
 [John von Neumann](https://fr.wikipedia.org/wiki/John_von_Neumann){ target=_blank } (mathématicien et physicien américano-hongrois 1903-1957) a eu l'idée en 1945 d'utiliser une structure de stockage (mémoire) unique pour les données et les instructions : on parle d'architecture de von Neumann
 
-![](../../../assets/images/timbre_Neumann.jpg)
+![](timbre_Neumann.jpg)
 
 La première innovation est la séparation nette entre l'unité de commande, qui organise le flot de séquencement des instructions, et l'unité arithmétique, chargée de l'exécution proprement dite de ces instructions. La seconde innovation, la plus fondamentale, est l'idée du programme enregistré : les instructions, au lieu d'être codées sur un support externe (ruban, cartes, tableau de connexions), sont enregistrées dans la mémoire selon un codage conventionnel. Un compteur ordinal contient l'adresse de l'instruction en cours d'exécution ; il est automatiquement incrémenté après exécution de l'instruction, et explicitement modifié par les instructions de branchement.
 
@@ -20,11 +23,11 @@ L'architecture de Von Neumann décompose l'ordinateur en 4 parties distinctes :
 * La mémoire qui contient à la fois les données et le programme qui indiquera à l'unité de contrôle quels sont les calculs à faire sur ces données ; 
 * Les dispositifs d'entrée-sortie, qui permettent de communiquer avec le monde extérieur.
 
-![](../../../assets/images/modele-originel2.gif)
+![](modele-originel2.gif)
 
 De nos jours, le modèle a évolué : 
 
-![](../../../assets/images/modele-actuel.gif)
+![](modele-actuel.gif)
 
 * Les entrées-sorties, initialement commandées par l'unité centrale, sont depuis le début des années 1960 sous le contrôle de processeurs autonomes (canaux d'entrée-sortie et mécanismes assimilés). Associée à la multiprogrammation (partage de la mémoire entre plusieurs programmes), cette organisation a notamment permis le développement des systèmes en temps partagé.
 * Les ordinateurs comportent maintenant des processeurs multiples, qu'il s'agisse d'unités séparées ou de « cœurs » multiples à l'intérieur d'une même puce. Cette organisation permet d'atteindre une puissance globale de calcul élevée sans augmenter la vitesse des processeurs individuels, limitée par les capacités d'évacuation de la chaleur dans des circuits de plus en plus denses.
@@ -39,11 +42,11 @@ Le processeur comporte en réalité schématiquement trois parties :
 * Les **registres** permettent de mémoriser de l'information (donnée ou instruction) au sein même du CPU, en très petite quantité ;
 * L'**unité de contrôle** (ou de commande) . C'est le coordinateur général qui lit les instructions du programme en mémoire et commande l'UAL pour exécuter ces instructions.
 
-![](../.././../assets/images/processeur.png)
+![](processeur.png)
 
 Les microprocesseurs sont cadencés par un signal d'horloge (signal oscillant régulier imposant un rythme au transfert entre circuit). Au milieu des années 1980, ce signal avait une fréquence de 4 à 8 MHz. Dans les années 2000, cette fréquence atteint 3 GHz. Plus cette fréquence est élevée, plus le microprocesseur peut exécuter à un rythme élevé les instructions de base des programmes.
 
-![image50](../../../assets/images/intel_i9.jpg)
+![](intel_i9.jpg){ width="50%" }
 
 ### 3. La mémoire
 
@@ -62,7 +65,7 @@ Pour des raisons économiques, les mémoires sont en général divisées en plus
     * Capacité : jusqu'à 10 To (HDD)
     * Vitesse : jusqu'à 500 Mo/s (SSD)
 
-    ![](../../../assets/images/HDD.png)
+    ![](HDD.png)
 
 * **La mémoire vive ou RAM : Random Access Memory (non permanente)**
 
@@ -73,7 +76,7 @@ Pour des raisons économiques, les mémoires sont en général divisées en plus
     * Capacité : jusqu'à 32 Go
     * Vitesse : jusqu'à 2 Go/s
 
-    ![image40](../../../assets/images/RAM.webp)
+    ![](RAM.webp){ width="40%" }
  
 * **La mémoire cache**
 
@@ -84,7 +87,7 @@ Pour des raisons économiques, les mémoires sont en général divisées en plus
     * Capacité : quelques ko (L1) à quelques Mo (L2)
     * Vitesse : jusqu'à 5 Go/s
 
-    ![](../../../assets/images/memoire-cache2.jpg)
+    ![](memoire-cache2.jpg)
 
 * **Les registres du processeur**
 
@@ -95,7 +98,7 @@ Pour des raisons économiques, les mémoires sont en général divisées en plus
     * Capacité : quelques dizaines d'octets
     * Vitesse : jusqu'à 30 Go/s
 
-    ![](../../../assets/images/alu.jpg)
+    ![](alu.jpg)
 
 #### 4. Les bus
 
@@ -105,6 +108,6 @@ Pour que les données circulent entre les différentes parties d'un ordinateur (
 * Le bus de données permet de faire circuler des données ;
 * Le bus de contrôle permet de spécifier le type d'action. Par exemple : écriture d'une donnée en mémoire, lecture d'une donnée en mémoire.
 
-![image50](../../../assets/images/bus.png)
+![](bus.png){ width="50%" }
 
 Pour en savoir plus, voir la vidéo "Comment fonctionne un ordinateur ?" dans [cet article](https://www.flallemand.fr/wp/2022/07/02/la-chaine-youtube-codeur-pro/).

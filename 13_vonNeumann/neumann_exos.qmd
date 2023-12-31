@@ -1,10 +1,14 @@
-_Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+---
+title : Exercices
+---
 
-_Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit._
+_Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+
+_Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
 
 ## Architecture
 
-## :octicons-pencil-16: Exercice 1 (QCM)
+## {{< fa solid pencil-alt >}} Exercice 1 (QCM)
 
 <iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=22" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="von Neumann 1"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
@@ -22,7 +26,7 @@ _Les exercices précédés du symbole :octicons-pencil-16: doivent être résolu
 
 ## Assembleur
 
-## :octicons-pencil-16: Exercice 2
+## {{< fa solid pencil-alt >}} Exercice 2
 
 1. Expliquez brièvement par une phrase, les instructions suivantes :
 
@@ -43,12 +47,12 @@ _Les exercices précédés du symbole :octicons-pencil-16: doivent être résolu
 
 -----------------------------
 
-## :octicons-pencil-16: Exercice 3
+## {{< fa solid pencil-alt >}} Exercice 3
 
 On considère le programme Python donné à la fin du cours et sa traduction en Python.
 
 
-```py
+```python
 x = 4
 y = 8
 if x == 10:
@@ -60,7 +64,7 @@ z=6
 
 et voici maintenant voici son équivalent en assembleur :
 
-```DASM16 title="Assembleur"
+```{.gnuassembler filename="Assembleur"}
 MOV R0, #4
 STR R0,30
 MOV R0, #8
@@ -86,13 +90,13 @@ HALT
 
 -----------------------------------------------------
 
-## :fontawesome-solid-computer: Exercice 4
+## {{< fa desktop >}} Exercice 4
 
 Le module `dis` de Python permet de "désassembler" du code Python, c'est-à-dire d'afficher les instructions machines correspondant à des instructions Python.
 
 1. En console interactive, entrer les lignes suivantes et interpréter le résultat.
 
-    ````pycon
+    ````python
     >>> import dis
     >>> code = """
     a = 5
