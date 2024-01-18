@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première - Programme</title>
+<title>NSI - Première - Exercices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../14_algo/algo_cours.html" rel="next">
-<link href="../13_vonNeumann/neumann_TP.html" rel="prev">
+<link href="../15_parcours/index.html" rel="next">
+<link href="../14_algo/algo_cours.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -177,7 +211,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../14_algo/index.html">Ch. 14 - Éléments généraux d’algorithmique</a></li><li class="breadcrumb-item"><a href="../14_algo/index.html">Programme</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../14_algo/index.html">Ch. 14 - Éléments généraux d’algorithmique</a></li><li class="breadcrumb-item"><a href="../14_algo/algo_exos.html">Exercices</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -661,7 +695,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../14_algo/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../14_algo/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programme</span></a>
   </div>
 </li>
@@ -672,8 +706,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">14_algo/algo_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../14_algo/algo_exos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -970,16 +1007,21 @@ window.Quarto = {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#points-traités-dans-cette-séquence" id="toc-points-traités-dans-cette-séquence" class="nav-link active" data-scroll-target="#points-traités-dans-cette-séquence">Points traités dans cette séquence</a></li>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link active" data-scroll-target="#exercice-1"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 1</a></li>
+  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</a></li>
+  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</a></li>
+  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 4</a></li>
+  <li><a href="#exercice-5" id="toc-exercice-5" class="nav-link" data-scroll-target="#exercice-5"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 5</a></li>
+  <li><a href="#exercice-6" id="toc-exercice-6" class="nav-link" data-scroll-target="#exercice-6"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 6</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../14_algo/index.html">Ch. 14 - Éléments généraux d’algorithmique</a></li><li class="breadcrumb-item"><a href="../14_algo/index.html">Programme</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../14_algo/index.html">Ch. 14 - Éléments généraux d’algorithmique</a></li><li class="breadcrumb-item"><a href="../14_algo/algo_exos.html">Exercices</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Programme</h1>
+<h1 class="title">Exercices</h1>
 </div>
 
 
@@ -996,41 +1038,77 @@ window.Quarto = {
 </header>
 
 
-<section id="points-traités-dans-cette-séquence" class="level2">
-<h2 class="anchored" data-anchor-id="points-traités-dans-cette-séquence">Points traités dans cette séquence</h2>
-<p>Le concept de méthode algorithmique est introduit ; de nouveaux exemples seront vus en terminale. Quelques algorithmes classiques sont étudiés. L’étude de leurs coûts respectifs prend tout son sens dans le cas de données nombreuses, qui peuvent être préférentiellement des données ouvertes.</p>
-<p>Il est nécessaire de montrer l’intérêt de prouver la correction d’un algorithme pour lequel on dispose d’une spécification précise, notamment en mobilisant la notion d’invariant sur des exemples simples. La nécessité de prouver la terminaison d’un programme est mise en évidence dès qu’on utilise une boucle non bornée (ou, en terminale, des fonctions récursives) grâce à la mobilisation de la notion de variant sur des exemples simples.</p>
-<table class="table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Contenus</th>
-<th style="text-align: left;">Capacités attendues</th>
-<th style="text-align: left;">Commentaires</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Parcours séquentiel d’un tableau</td>
-<td style="text-align: left;">Écrire un algorithme de recherche d’une occurrence sur des valeurs de type quelconque. Écrire un algorithme de recherche d’un extremum, de calcul d’une moyenne.</td>
-<td style="text-align: left;">On montre que le coût est linéaire.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Tris par insertion, par sélection</td>
-<td style="text-align: left;">Écrire un algorithme de tri. Décrire un invariant de boucle qui prouve la correction des tris par insertion, par sélection.</td>
-<td style="text-align: left;">La terminaison de ces algorithmes est à justifier. On montre que leur coût est quadratique dans le pire cas.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Recherche dichotomique dans un tableau trié</td>
-<td style="text-align: left;">Montrer la terminaison de la recherche dichotomique à l’aide d’un variant de boucle.</td>
-<td style="text-align: left;">Des assertions peuvent être utilisées. La preuve de la correction peut être présentée par le professeur</td>
-</tr>
-</tbody>
-</table>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-desktop" aria-label="desktop"></i> sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> doivent être résolus par écrit.</em></p>
+<section id="exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 1</h2>
+<ol type="1">
+<li><p>Écrire un algorithme, en langage naturel (puis en Python si vous le souhaitez), qui compte le nombre d’apparitions d’un élément c dans une liste L de longueur n.&nbsp;Écrivez aussi 3 tests.</p></li>
+<li><p>Déterminer sa complexité dans le pire des cas.</p></li>
+<li><p>Justifier que cet algorithme se termine</p></li>
+</ol>
+</section>
+<section id="exercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</h2>
+<ol type="1">
+<li>Écrire un algorithme, en Python, qui vérifie qu’une liste L est triée dans l’ordre croissant. L’algorithme doit renvoyer <code>True</code> si la liste est triée et <code>False</code> sinon. Écrivez aussi 3 tests.</li>
+<li>Déterminer sa complexité dans le pire des cas.</li>
+<li>Justifier que cet algorithme se termine</li>
+</ol>
+</section>
+<section id="exercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</h2>
+<ol type="1">
+<li>Écrire un algorithme, en Python, qui compte le nombre de voyelles dans une chaîne de caractères <code>Phrase</code> de longueur n.&nbsp;Écrivez aussi 3 tests.</li>
+<li>Déterminer sa complexité dans le pire des cas.</li>
+<li>Justifier que cet algorithme se termine</li>
+</ol>
+</section>
+<section id="exercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 4</h2>
+<p>On considère l’algorithme suivant :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Algorithme mystere(mot)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Entrée : mot est une chaîne de caractères de longueur n</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Sortie : Un booléen</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>i ← 0</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>j ← n-1</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>p ← Vrai</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>tant que i &lt;= j faire</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    si mot[i] != mot[j] alors</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        p ← Faux</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    i ← i+1</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    j ← j-1</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>retourner p</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="1">
+<li>Exécuter cet algorithme pour <code>mot = radar</code>. Quelle est la fonction de cet algorithme ?</li>
+<li>Montrer que <code>d = j − i</code> est un variant de boucle. En déduire que cet algorithme se termine.</li>
+<li>Quel est la complexité dans le pire des cas de cet algorithme ?</li>
+</ol>
+</section>
+<section id="exercice-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-5"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 5</h2>
+<ol type="1">
+<li>Écrire un algorithme utilisant une boucle « Tant que » permettant de déterminer si un entier n strictement positif est une puissance de 2.</li>
+<li>Montrer que la boucle se termine.</li>
+<li>Montrer que l’algorithme est correct (c’est-à-dire qu’il résout le problème initial).</li>
+<li>Quelle est la complexité dans le pire des cas de cet algorithme ?</li>
+</ol>
+</section>
+<section id="exercice-6" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-6"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 6</h2>
+<ol type="1">
+<li>Trouver un invariant de boucle dans l’algorithme suivant, puis en déduire la valeur retournée à la fin de l’exécution.</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Algorithme mystere(n)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Entrée : n est un entier strictement positif</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Sortie : p est un entier</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>p ← 1</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>pour i allant de 1 à n faire</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    p ← 2×p</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>retourner p</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>Quelle est la complexité dans le pire des cas de cet algorithme ?</li>
+</ol>
 
 
 </section>
@@ -1584,13 +1662,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../13_vonNeumann/neumann_TP.html" class="pagination-link  aria-label=" t.p.="" :="" le="" simulateur="" aqa"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">T.P. : Le simulateur AQA</span>
+      <a href="../14_algo/algo_cours.html" class="pagination-link  aria-label=" cours"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cours</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../14_algo/algo_cours.html" class="pagination-link" aria-label="Cours">
-        <span class="nav-page-text">Cours</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../15_parcours/index.html" class="pagination-link" aria-label="Programme">
+        <span class="nav-page-text">Programme</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,42 +1,6 @@
 ---
-title: Notions de base (Cours)
-subtitle: S6 - Algorithmique (1)
+title: Cours
 lang: fr
-tbl-cap-location: bottom
-crossref: 
-    eq-prefix: Éq.
-    tbl-prefix: Tableau
-    tbl-title: Tableau
-format:
-    html: default
-#     pdf: 
-#         geometry:
-#             - top=20mm
-#             - bottom=20mm
-#             - left=20mm
-#             - right=20mm
-#             - heightrounded
-#         include-in-header:
-#             - text:
-#                 \usepackage{fancyhdr}
-#                 \pagestyle{fancy}
-#                 \usepackage{lastpage}
-#         include-before-body:
-#             - text:
-#                 \lhead{Spécialité NSI} 
-#                 \rhead{Première}
-#                 \chead{} 
-#                 \cfoot{}
-#                 \lfoot{Lycée \'Emile Duclaux}
-#                 \rfoot{Page \thepage/\pageref{LastPage}}
-#                 \renewcommand{\headrulewidth}{0pt}
-#                 \renewcommand{\footrulewidth}{0pt}
-#                 \thispagestyle{fancy}
-#                 \vspace{-2cm}
-#         biblio-title: Sources utilisées
-#         reference-location: document
-#         keep-tex: true
-# format-links: [pdf, tex]
 ---
 
 ## 1. Introduction
@@ -189,4 +153,4 @@ plt.plot(abscisses, ordonnees, 'r')
 plt.show()
 ```
 
-La courbe obtenue est proche d'une droite, ce qui est cohérent avec la complexité linéaire de l'algorithme..
+La courbe obtenue est proche d'une droite, ce qui est cohérent avec la complexité linéaire de l'algorithme.

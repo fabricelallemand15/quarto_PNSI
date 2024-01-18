@@ -1,0 +1,79 @@
+---
+title: Exercices
+lang: fr
+---
+
+_Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+
+_Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
+
+
+## {{< fa solid pencil-alt >}} Exercice 1
+
+1. Écrire un algorithme, en langage naturel (puis en Python si vous le souhaitez), qui compte le nombre d’apparitions
+d’un élément c dans une liste L de longueur n. Écrivez aussi 3 tests.
+
+2. Déterminer sa complexité dans le pire des cas.
+
+3. Justifier que cet algorithme se termine
+
+## {{< fa solid pencil-alt >}} Exercice 2
+
+1. Écrire un algorithme, en Python, qui vérifie qu’une liste L est triée dans l’ordre croissant. L’algorithme doit renvoyer
+`True` si la liste est triée et `False` sinon. Écrivez aussi 3 tests.
+2. Déterminer sa complexité dans le pire des cas.
+3. Justifier que cet algorithme se termine
+
+## {{< fa solid pencil-alt >}} Exercice 3
+
+1. Écrire un algorithme, en Python, qui compte le nombre de voyelles dans une chaîne de caractères `Phrase` de
+longueur n. Écrivez aussi 3 tests.
+2. Déterminer sa complexité dans le pire des cas.
+3. Justifier que cet algorithme se termine
+
+## {{< fa solid pencil-alt >}} Exercice 4
+
+On considère l'algorithme suivant :
+
+```txt
+Algorithme mystere(mot)
+Entrée : mot est une chaîne de caractères de longueur n
+Sortie : Un booléen
+i ← 0
+j ← n-1
+p ← Vrai
+tant que i <= j faire
+    si mot[i] != mot[j] alors
+        p ← Faux
+    i ← i+1
+    j ← j-1
+retourner p
+```
+
+1. Exécuter cet algorithme pour `mot = radar`. Quelle est la fonction de cet algorithme ?
+2. Montrer que `d = j − i` est un variant de boucle. En déduire que cet algorithme se termine.
+3. Quel est la complexité dans le pire des cas de cet algorithme ?
+
+## {{< fa solid pencil-alt >}} Exercice 5
+
+1. Écrire un algorithme utilisant une boucle « Tant que » permettant de déterminer si un entier n strictement
+positif est une puissance de 2.
+2. Montrer que la boucle se termine.
+3. Montrer que l’algorithme est correct (c'est-à-dire qu’il résout le problème initial).
+4. Quelle est la complexité dans le  pire des cas de cet algorithme ?
+
+## {{< fa solid pencil-alt >}} Exercice 6
+
+1. Trouver un invariant de boucle dans l’algorithme suivant, puis en déduire la valeur retournée à la fin de l’exécution.
+
+```txt
+Algorithme mystere(n)
+Entrée : n est un entier strictement positif
+Sortie : p est un entier
+p ← 1
+pour i allant de 1 à n faire
+    p ← 2×p
+retourner p
+```
+
+2. Quelle est la complexité dans le pire des cas de cet algorithme ?

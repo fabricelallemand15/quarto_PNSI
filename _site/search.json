@@ -3712,5 +3712,149 @@
     "title": "Spécialité NSI - Première",
     "section": "",
     "text": "Bienvenue !\nCe site est destiné à regrouper les cours et les exercices concernant l’enseignement de spécialité NSI de première du lycée Émile Duclaux d’Aurillac.\nLien vers l’ENT du lycée : https://cas.ent.auvergnerhonealpes.fr/login\nLien vers Capytale : https://capytale2.ac-paris.fr/web/c-auth/list\nLien vers Replit : https://replit.com/team/premiere-nsi\nLien vers le programme officiel : Programme officiel première NSI"
+  },
+  {
+    "objectID": "14_algo/algo_cours.html",
+    "href": "14_algo/algo_cours.html",
+    "title": "Cours",
+    "section": "",
+    "text": "L’algorithmique est la science qui étudie les algorithmes. Un algorithme est une suite d’instructions permettant de résoudre un problème.\nPour résoudre un problème, il existe souvent plusieurs algorithmes possibles.\nLes objectifs de cette partie du cours sont d’apprendre à :\n\nprouver qu’un algorithme donné se termine en un temps fini ;\nprouver qu’un algorithme donné réalise bien ce pour quoi il a été écrit ;\ncomparer deux algorithmes différents répondant au même problème.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 14 - Éléments généraux d'algorithmique",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "14_algo/algo_cours.html#introduction",
+    "href": "14_algo/algo_cours.html#introduction",
+    "title": "Cours",
+    "section": "",
+    "text": "L’algorithmique est la science qui étudie les algorithmes. Un algorithme est une suite d’instructions permettant de résoudre un problème.\nPour résoudre un problème, il existe souvent plusieurs algorithmes possibles.\nLes objectifs de cette partie du cours sont d’apprendre à :\n\nprouver qu’un algorithme donné se termine en un temps fini ;\nprouver qu’un algorithme donné réalise bien ce pour quoi il a été écrit ;\ncomparer deux algorithmes différents répondant au même problème.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 14 - Éléments généraux d'algorithmique",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "14_algo/algo_cours.html#terminaison-dun-algorithme",
+    "href": "14_algo/algo_cours.html#terminaison-dun-algorithme",
+    "title": "Cours",
+    "section": "2. Terminaison d’un algorithme",
+    "text": "2. Terminaison d’un algorithme\n\n\n\n\n\n\nDéfinition\n\n\n\nProuver la terminaison d’un algorithme, c’est prouver que l’algorithme se termine dans tous les cas. C’est notamment très important lorsque l’algorithme comporte des boucles conditionnelles.\n\n\nPrenons comme exemple l’algorithme suivant qui calcule la puissance entière d’un nombre :\ndef puissance(x: float, n: int) -&gt; float:\n    \"\"\"retourne x^n\"\"\"\n    p = 1\n    compteur = 0\n    while compteur &lt; n:\n        compteur = compteur + 1\n        p = p * x\n    return p\nComment justifier que cet algorithme se termine dans tous les cas ? Cela revient à montrer que la boucle conditionnelle while compteur &lt; n se termine après un nombre fini d’itérations. Pour cela, on utilise un variant de boucle : c’est une valeur qui évolue à chaque itération de la boucle et qui permet de prouver que celle-ci se termine.\nDans notre exemple, on peut choisir comme variant de boucle la valeur de la variable \\(compteur\\). En effet, cette variable est initialisée à 0 et est incrémentée de 1 à chaque itération. Après \\(n\\) itérations, la condition de sortie de boucle sera donc vraie et la boucle se terminera.\nLa terminaison de l’algorithme est donc démontrée.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 14 - Éléments généraux d'algorithmique",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "14_algo/algo_cours.html#correction-dun-algorithme",
+    "href": "14_algo/algo_cours.html#correction-dun-algorithme",
+    "title": "Cours",
+    "section": "3. Correction d’un algorithme",
+    "text": "3. Correction d’un algorithme\n\n\n\n\n\n\nDéfinition\n\n\n\nProuver la correction d’un algorithme, c’est prouver que l’algorithme réalise bien ce pour quoi il a été écrit.\n\n\nConsidérons à nouveau l’algorithme de calcul de puissance entière. Comment prouver que cet algorithme calcule bien la puissance entière d’un nombre ?\nOn utilise pour cela un invariant de boucle : c’est une propriété qui est vraie avant et après chaque itération de la boucle, et qui doit permettre de prouver que l’algorithme réalise bien ce pour quoi il a été écrit.\nDans notre exemple de calcul de puissance entière, on peut choisir comme invariant de boucle la propriété suivante : \\[p=x^{compteur}\\]\n\n\n\n\n\n\nPour prouver q’une propriété est un invariant de boucle…\n\n\n\nIl faut démontrer :\n\nInitialisation : la propriété est vraie avant le premier passage dans la boucle\nConservation : si la propriété est vraie avant une itération, alors elle sera aussi vraie après cette itération.\nConclusion : une fois la boucle terminée, la propriété est vraie.\n\n\n\nCette méthode de raisonnement est appelée raisonnement par récurrence et est très utilisée en mathématiques (au programme en spécialité mathématiques de terminale).\nDans notre exemple, on a :\n\nInitialisation : La propriété est vraie avec les valeurs initiales des variables car \\(x^0=1\\) et \\(p=1\\).\nConservation : Si nous avons \\(p=x^{compteur}\\) avant une itération, alors nous avons \\(x^{compteur+1}=x^{compteur}\\times x = p\\times x\\). le passage dans la boucle augmente \\(compteur\\) de 1 et remplace \\(p\\) par \\(p\\times x\\). Après l’itération, la propriété \\(p=x^{compteur}\\) est donc encore vraie.\nConclusion : En sortie de boucle, on a donc \\(p=x^{compteur}\\). Or on a aussi l’égalité \\(compteur = n\\) qui a provoqué la sortie de boucle. Finalement, nous avons donc \\(p=x^n\\), ce qui prouve que l’algorithme effectue bien l’opération attendue.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 14 - Éléments généraux d'algorithmique",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "14_algo/algo_cours.html#complexité",
+    "href": "14_algo/algo_cours.html#complexité",
+    "title": "Cours",
+    "section": "4. Complexité",
+    "text": "4. Complexité\nLa durée d’exécution d’un programme traduisant un algorithme donné va dépendre des performances de la machine sur laquelle le programme est exécuté, mais aussi du nombre d’instructions élémentaires mobilisées lors de son exécution. Une partie de ce temps d’exécution provient donc de la façon dont l’algorithme est écrit et non de la façon dont il est programmé.\nOn parle de complexité temporelle d’un algorithme (et non d’un programme) pour mesurer l’efficacité intrinsèque de l’algorithme. Dans la pratique, il s’agit de compter le nombre d’opérations élémentaires (affectations, comparaisons, calculs arithmétiques, …) effectuées par l’algorithme.\nLa complexité en temps d’un algorithme dépend :\n\nde la taille des données passées en paramètres : plus ces données seront volumineuses, plus il faudra d’opérations élémentaires pour les traiter. On notera \\(n\\) le nombre de données à traiter.\nde la donnée en elle-même, de la façon dont sont réparties les différentes valeurs qui la constituent. Par exemple, si on effectue une recherche séquentielle d’un élément dans une liste non triée, on parcourt un par un les éléments jusqu’à trouver, ou pas, celui recherché. Ce parcours peut s’arrêter dès le début si le premier élément est “le bon”. Mais on peut également être amené à parcourir la liste en entier si l’élément cherché est en dernière position, ou même n’y figure pas.\n\nCette remarque conduit à préciser la définition de la complexité en temps. On peut en effet distinguer deux formes de complexité en temps :\n\nla complexité dans le meilleur des cas : c’est la situation la plus favorable, par exemple : recherche d’un élément situé à la première position d’une liste ;\nla complexité dans le pire des cas : c’est la situation la plus défavorable, par exemple : recherche d’un élément dans une liste alors qu’il n’y figure pas.\n\nOn calculera le plus souvent la complexité dans le pire des cas, car elle est la plus pertinente. Il vaut mieux en effet toujours envisager le pire.\n\nOrdres de grandeurs\nPour comparer des algorithmes, il n’est pas nécessaire de calculer la valeur exacte de la complexité, mais seulement un ordre de grandeur asymptotique, noté en mathématiques \\(\\mathcal{O}\\) (notation “grand O”). La définition rigoureuse de cette notation n’est pas au programme de NSI. Il faut cependant en avoir une idée intuitive : dire que la complexité d’un algorithme est en \\(\\mathcal{O}(n^2)\\), par exemple, signifie que cette complexité croît, lorsque \\(n\\) devient grand, de la même façon que la fonction carré. Plus précisément, elle est majorée par une fonction du type \\(c\\times n^2\\), où \\(c\\) est un réel positif.\nLes classes de complexité à connaître en première, de la meilleure à la pire :\n\n\n\n\n\n\n\n\n\\(\\mathcal{O}\\)\nType de complexité\nExemple\n\n\n\n\n\\(\\mathcal{O}(1)\\)\nconstante\nAccès à une cellule de tableau\n\n\n\\(\\mathcal{O}(n)\\)\nlinéaire\nRecherche du maximum dans un tableau non trié\n\n\n\\(\\mathcal{O}(n^2)\\)\nquadratique\nParcours d’un tableau à deux dimensions\n\n\n\\(\\mathcal{O}(n^3)\\)\ncubique\nParcours d’un tableau à trois dimensions\n\n\n\n\n\n\n\n\n\nExemple\n\n\n\nReprenons l’algorithme du calcul de la puissance d’un nombre.\ndef puissance(x: float, n: int) -&gt; float:\n    \"\"\"retourne x^n\"\"\"\n    p = 1\n    compteur = 0\n    while compteur &lt; n:\n        compteur = compteur + 1\n        p = p * x\n    return p\nNous comptons la complexité en termes d’opérations arithmétiques : additions et multiplications. À chaque passage dans la boucle, nous avons deux opérations et la boucle est parcourue \\(n\\) fois . Nous avons donc au total une complexité de \\(2n\\) opérations arithmétiques, donc une complexité en \\(\\mathcal{O}(n)\\), linéaire.\n\n\n\nVisualisation graphique du temps d’exécution\nEn utilisant le module timeit comme expliqué dans cet article, on peut visualiser graphiquement le temps d’exécution de l’algorithme en fonction de la taille des données.\n\nimport matplotlib.pyplot as plt\nimport timeit\n\ndef puissance(x: float, n: int) -&gt; float:\n    \"\"\"retourne x^n\"\"\"\n    p = 1\n    compteur = 0\n    while compteur &lt; n:\n        compteur = compteur + 1\n        p = p * x\n    return p\n\nabscisses = [k for k in range(0, 20, 1)]\nordonnees = []\nfor n in abscisses:\n    ordonnees.append(timeit.timeit('puissance(2, n)', number=100, globals=globals()))\n\nfig, ax = plt.subplots()\nax.set_xlabel('n')\nax.set_ylabel('temps (s)')\nplt.plot(abscisses, ordonnees, 'r')\nplt.show()\n\n\n\n\n\n\n\n\nLa courbe obtenue est proche d’une droite, ce qui est cohérent avec la complexité linéaire de l’algorithme.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 14 - Éléments généraux d'algorithmique",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "14_algo/algo_exos.html",
+    "href": "14_algo/algo_exos.html",
+    "title": "Exercices",
+    "section": "",
+    "text": "Les exercices précédés du symbole  sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole  doivent être résolus par écrit.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 14 - Éléments généraux d'algorithmique",
+      "Exercices"
+    ]
+  },
+  {
+    "objectID": "14_algo/algo_exos.html#exercice-1",
+    "href": "14_algo/algo_exos.html#exercice-1",
+    "title": "Exercices",
+    "section": " Exercice 1",
+    "text": "Exercice 1\n\nÉcrire un algorithme, en langage naturel (puis en Python si vous le souhaitez), qui compte le nombre d’apparitions d’un élément c dans une liste L de longueur n. Écrivez aussi 3 tests.\nDéterminer sa complexité dans le pire des cas.\nJustifier que cet algorithme se termine",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 14 - Éléments généraux d'algorithmique",
+      "Exercices"
+    ]
+  },
+  {
+    "objectID": "14_algo/algo_exos.html#exercice-2",
+    "href": "14_algo/algo_exos.html#exercice-2",
+    "title": "Exercices",
+    "section": " Exercice 2",
+    "text": "Exercice 2\n\nÉcrire un algorithme, en Python, qui vérifie qu’une liste L est triée dans l’ordre croissant. L’algorithme doit renvoyer True si la liste est triée et False sinon. Écrivez aussi 3 tests.\nDéterminer sa complexité dans le pire des cas.\nJustifier que cet algorithme se termine",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 14 - Éléments généraux d'algorithmique",
+      "Exercices"
+    ]
+  },
+  {
+    "objectID": "14_algo/algo_exos.html#exercice-3",
+    "href": "14_algo/algo_exos.html#exercice-3",
+    "title": "Exercices",
+    "section": " Exercice 3",
+    "text": "Exercice 3\n\nÉcrire un algorithme, en Python, qui compte le nombre de voyelles dans une chaîne de caractères Phrase de longueur n. Écrivez aussi 3 tests.\nDéterminer sa complexité dans le pire des cas.\nJustifier que cet algorithme se termine",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 14 - Éléments généraux d'algorithmique",
+      "Exercices"
+    ]
+  },
+  {
+    "objectID": "14_algo/algo_exos.html#exercice-4",
+    "href": "14_algo/algo_exos.html#exercice-4",
+    "title": "Exercices",
+    "section": " Exercice 4",
+    "text": "Exercice 4\nOn considère l’algorithme suivant :\nAlgorithme mystere(mot)\nEntrée : mot est une chaîne de caractères de longueur n\nSortie : Un booléen\ni ← 0\nj ← n-1\np ← Vrai\ntant que i &lt;= j faire\n    si mot[i] != mot[j] alors\n        p ← Faux\n    i ← i+1\n    j ← j-1\nretourner p\n\nExécuter cet algorithme pour mot = radar. Quelle est la fonction de cet algorithme ?\nMontrer que d = j − i est un variant de boucle. En déduire que cet algorithme se termine.\nQuel est la complexité dans le pire des cas de cet algorithme ?",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 14 - Éléments généraux d'algorithmique",
+      "Exercices"
+    ]
+  },
+  {
+    "objectID": "14_algo/algo_exos.html#exercice-5",
+    "href": "14_algo/algo_exos.html#exercice-5",
+    "title": "Exercices",
+    "section": " Exercice 5",
+    "text": "Exercice 5\n\nÉcrire un algorithme utilisant une boucle « Tant que » permettant de déterminer si un entier n strictement positif est une puissance de 2.\nMontrer que la boucle se termine.\nMontrer que l’algorithme est correct (c’est-à-dire qu’il résout le problème initial).\nQuelle est la complexité dans le pire des cas de cet algorithme ?",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 14 - Éléments généraux d'algorithmique",
+      "Exercices"
+    ]
+  },
+  {
+    "objectID": "14_algo/algo_exos.html#exercice-6",
+    "href": "14_algo/algo_exos.html#exercice-6",
+    "title": "Exercices",
+    "section": " Exercice 6",
+    "text": "Exercice 6\n\nTrouver un invariant de boucle dans l’algorithme suivant, puis en déduire la valeur retournée à la fin de l’exécution.\n\nAlgorithme mystere(n)\nEntrée : n est un entier strictement positif\nSortie : p est un entier\np ← 1\npour i allant de 1 à n faire\n    p ← 2×p\nretourner p\n\nQuelle est la complexité dans le pire des cas de cet algorithme ?",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 14 - Éléments généraux d'algorithmique",
+      "Exercices"
+    ]
   }
 ]
