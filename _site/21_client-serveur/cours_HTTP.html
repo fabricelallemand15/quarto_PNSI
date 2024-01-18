@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.523">
+<meta name="generator" content="quarto-1.4.544">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -131,6 +131,33 @@ cookieconsent.run({
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -674,11 +701,17 @@ cookieconsent.run({
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">14_algo/algo_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../14_algo/algo_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">14_algo/algo_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../14_algo/algo_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1009,7 +1042,7 @@ cookieconsent.run({
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_logo.svg/640px-HTTP_logo.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="logo CSS"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_logo.svg/640px-HTTP_logo.svg.png" class="img-fluid figure-img" style="float: right;width:15.0%" alt="logo CSS"></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_logo.svg/640px-HTTP_logo.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="logo CSS"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_logo.svg/640px-HTTP_logo.svg.png" class="img-fluid figure-img" style="float: right;width:15.0%" alt="logo CSS"></a></p>
 <figcaption>logo CSS</figcaption>
 </figure>
 </div>
@@ -1026,7 +1059,7 @@ cookieconsent.run({
 <p>Remarquons que le serveur reçoit simultanément des requêtes de plusieurs clients.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="image client serveur"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png" class="img-fluid figure-img" style="width:50.0%" alt="image client serveur"></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="image client serveur"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png" class="img-fluid figure-img" style="width:50.0%" alt="image client serveur"></a></p>
 <figcaption>image client serveur</figcaption>
 </figure>
 </div>
@@ -1054,7 +1087,7 @@ Autre simplification effectuée dans ce cours : en réalité, plusieurs machines
 <p>Voici un exemple de requête :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_request.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="" title="image requête"><img src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_request.png" class="img-fluid figure-img" style="width:50.0%" alt="image requête"></a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_request.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="image requête"><img src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_request.png" class="img-fluid figure-img" style="width:50.0%" alt="image requête"></a></p>
 <figcaption>image requête</figcaption>
 </figure>
 </div>
@@ -1079,13 +1112,13 @@ Autre simplification effectuée dans ce cours : en réalité, plusieurs machines
 <p>Lorsque cette page est chargée dans le navigateur, les outils de développement (F12, puis onglet Réseau) permettent de visualiser les requêtes envoyées :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../assets/images/requete_HTTP_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-description="" title="image requête HTTP"><img src="../../assets/images/requete_HTTP_2.png" class="img-fluid figure-img" alt="image requête HTTP"></a></p>
+<p><a href="../../assets/images/requete_HTTP_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="image requête HTTP"><img src="../../assets/images/requete_HTTP_2.png" class="img-fluid figure-img" alt="image requête HTTP"></a></p>
 <figcaption>image requête HTTP</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../assets/images/requete_HTTP_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-description="" title="image requête HTTP"><img src="../../assets/images/requete_HTTP_1.png" class="img-fluid figure-img" alt="image requête HTTP"></a></p>
+<p><a href="../../assets/images/requete_HTTP_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="image requête HTTP"><img src="../../assets/images/requete_HTTP_1.png" class="img-fluid figure-img" alt="image requête HTTP"></a></p>
 <figcaption>image requête HTTP</figcaption>
 </figure>
 </div>
@@ -1096,7 +1129,7 @@ Autre simplification effectuée dans ce cours : en réalité, plusieurs machines
 <p>Voici un exemple de réponse :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_response.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-description="" title="réponse HTTP"><img src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_response.png" class="img-fluid figure-img" style="width:50.0%" alt="réponse HTTP"></a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_response.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="réponse HTTP"><img src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_response.png" class="img-fluid figure-img" style="width:50.0%" alt="réponse HTTP"></a></p>
 <figcaption>réponse HTTP</figcaption>
 </figure>
 </div>
@@ -1138,6 +1171,14 @@ Server: o2switch-PowerBoost-v3
 </ul>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">logo CSS</span>
+<span class="glightbox-desc lightbox-desc-2">image client serveur</span>
+<span class="glightbox-desc lightbox-desc-3">image requête</span>
+<span class="glightbox-desc lightbox-desc-4">image requête HTTP</span>
+<span class="glightbox-desc lightbox-desc-5">image requête HTTP</span>
+<span class="glightbox-desc lightbox-desc-6">réponse HTTP</span>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1428,27 +1469,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -1463,10 +1483,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1475,8 +1499,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1711,7 +1742,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1729,7 +1760,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

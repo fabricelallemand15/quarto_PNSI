@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.523">
+<meta name="generator" content="quarto-1.4.544">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -131,6 +131,33 @@ cookieconsent.run({
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -674,11 +701,17 @@ cookieconsent.run({
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">14_algo/algo_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../14_algo/algo_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">14_algo/algo_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../14_algo/algo_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1016,7 +1049,7 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="approche-naïve">1. Approche naïve</h2>
 <p>La première idée qui peut venir à l’esprit est de considérer les éléments du tableau les uns après les autres et de les comparer avec l’élément recherché.</p>
 <p>On peut ainsi écrire une fonction <code>recherche_naive</code> qui prend en paramètre un tableau <code>tàbleau</code> et une valeur <code>valeur</code> et qui renvoie l’indice de la première occurrence de <code>valeur</code> dans <code>tableau</code> ou <code>-1</code> si <code>valeur</code> n’est pas dans <code>tableau</code>.</p>
-<div id="0272decc" class="cell" data-execution_count="2">
+<div id="bcfb8b6c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recherche_naive(tableau, valeur):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(tableau)):</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> tableau[i] <span class="op">==</span> valeur:</span>
@@ -1024,13 +1057,13 @@ cookieconsent.run({
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Test de cette fonction :</p>
-<div id="43449a69" class="cell" data-execution_count="3">
+<div id="92a2c568" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>recherche_naive([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">3</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>2</code></pre>
 </div>
 </div>
-<div id="60cfcd83" class="cell" data-execution_count="4">
+<div id="69eb7c4d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>recherche_naive([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">6</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>-1</code></pre>
@@ -1076,7 +1109,7 @@ Principe de l’algorithme
 <p>On répète donc l’opération sur la partie du tableau située à droite (<code>gauche=7</code> et <code>droite=8</code>). On obtient le tableau <code>[22,25]</code> et on cherche la valeur <code>22</code>. L’élément du milieu de ce tableau vaut 22 (<code>milieu=7</code>), qui est égal à 22. On a donc trouvé la valeur recherchée et l’algorithme est terminé en trois étapes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./recherche_dicho.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="Recherche dichotomique"><img src="./recherche_dicho.png" class="img-fluid figure-img" alt="Recherche dichotomique"></a></p>
+<p><a href="./recherche_dicho.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Recherche dichotomique"><img src="./recherche_dicho.png" class="img-fluid figure-img" alt="Recherche dichotomique"></a></p>
 <figcaption>Recherche dichotomique</figcaption>
 </figure>
 </div>
@@ -1084,7 +1117,7 @@ Principe de l’algorithme
 <section id="programmation" class="level3">
 <h3 class="anchored" data-anchor-id="programmation">Programmation</h3>
 <p>Écrivons une fonction <code>recherche_dichotomique</code> qui prend en paramètre un tableau <code>tableau</code> et une valeur <code>valeur</code> et qui renvoie l’indice d’une occurrence de <code>valeur</code> dans <code>tableau</code> ou <code>-1</code> si <code>valeur</code> n’est pas dans <code>tableau</code>.</p>
-<div id="9832d56f" class="cell" data-execution_count="5">
+<div id="30981d1b" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recherche_dichotomique(tableau, valeur):</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    gauche <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    droite <span class="op">=</span> <span class="bu">len</span>(tableau) <span class="op">-</span> <span class="dv">1</span></span>
@@ -1099,13 +1132,13 @@ Principe de l’algorithme
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Test de cette fonction :</p>
-<div id="61f55a7c" class="cell" data-execution_count="6">
+<div id="fc1bff25" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>recherche_dichotomique([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">2</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>1</code></pre>
 </div>
 </div>
-<div id="d67449c8" class="cell" data-execution_count="7">
+<div id="d13255c7" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>recherche_dichotomique([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">6</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>-1</code></pre>
@@ -1162,7 +1195,7 @@ Notion de logarithme de base 2
 </section>
 <section id="comparaison-expérimentale-des-deux-algorithmes" class="level3">
 <h3 class="anchored" data-anchor-id="comparaison-expérimentale-des-deux-algorithmes">Comparaison expérimentale des deux algorithmes</h3>
-<div id="15db8bee" class="cell" data-execution_count="8">
+<div id="fc07dcca" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> timeit</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1191,13 +1224,16 @@ Notion de logarithme de base 2
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="recherche_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="recherche_files/figure-html/cell-8-output-1.png" width="615" height="429" class="figure-img"></a></p>
+<p><a href="recherche_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="recherche_files/figure-html/cell-8-output-1.png" width="624" height="429" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
 </div>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Recherche dichotomique</span>
+</div>
 </section>
 </section>
 
@@ -1489,27 +1525,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -1524,10 +1539,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1536,8 +1555,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1772,7 +1798,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1790,7 +1816,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":false});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom","openEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
