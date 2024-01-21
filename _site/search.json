@@ -3353,28 +3353,28 @@
   {
     "objectID": "15_parcours/parcoursTableau.html",
     "href": "15_parcours/parcoursTableau.html",
-    "title": "Parcours séquentiel d’un tableau",
+    "title": "Cours",
     "section": "",
     "text": "Considérons un tableau. On souhaite disposer d’un algorithme permettant de rechercher une occurrence d’une valeur donnée dans ce tableau. Plus précisément, nous allons définir une fonction qui recherche une valeur donnée dans un tableau et qui retourne le tableau des indices des occurrences de cette valeur dans le tableau. Dans le cas où la valeur n’est pas présente dans le tableau, la fonction retournera un tableau vide.\nLa méthode est très simple. On parcourt le tableau en testant à chaque fois si la valeur courante est égale à la valeur recherchée. Si c’est le cas, on ajoute l’indice de la valeur courante dans le tableau des indices des occurrences.\n\ndef occurrences(tab, val):\n    \"\"\"Retourne un tableau contenant les indices des occurrences de val dans tab\"\"\"\n    indices = []\n    for i in range(len(tab)):\n        if tab[i] == val:\n            indices.append(i)\n    return indices\n\nExemple d’utilisation :\n\ntab = [\"DO\", \"RE\", \"MI\", \"FA\", \"SOL\", \"LA\", \"SI\", \"DO\"]\nprint(occurrences(tab, \"DO\"))\nprint(occurrences(tab, \"MI\"))\nprint(occurrences(tab, \"UT\"))\n\n[0, 7]\n[2]\n[]\n\n\nComplexité de l’algorithme : Comptons le nombre d’itérations et de tests. Notons \\(n\\) la taille du tableau, l’algorithme parcourt toutes les valeurs du tableau. Il y a donc au total \\(n\\) itérations. De plus, nous avons \\(n\\) tests. Il y a donc \\(2n\\) opérations au total. On peut donc dire que l’algorithme est de complexité \\(\\mathcal{O}(n)\\)."
   },
   {
     "objectID": "15_parcours/parcoursTableau.html#recherche-dune-occurrence",
     "href": "15_parcours/parcoursTableau.html#recherche-dune-occurrence",
-    "title": "Parcours séquentiel d’un tableau",
+    "title": "Cours",
     "section": "",
     "text": "Considérons un tableau. On souhaite disposer d’un algorithme permettant de rechercher une occurrence d’une valeur donnée dans ce tableau. Plus précisément, nous allons définir une fonction qui recherche une valeur donnée dans un tableau et qui retourne le tableau des indices des occurrences de cette valeur dans le tableau. Dans le cas où la valeur n’est pas présente dans le tableau, la fonction retournera un tableau vide.\nLa méthode est très simple. On parcourt le tableau en testant à chaque fois si la valeur courante est égale à la valeur recherchée. Si c’est le cas, on ajoute l’indice de la valeur courante dans le tableau des indices des occurrences.\n\ndef occurrences(tab, val):\n    \"\"\"Retourne un tableau contenant les indices des occurrences de val dans tab\"\"\"\n    indices = []\n    for i in range(len(tab)):\n        if tab[i] == val:\n            indices.append(i)\n    return indices\n\nExemple d’utilisation :\n\ntab = [\"DO\", \"RE\", \"MI\", \"FA\", \"SOL\", \"LA\", \"SI\", \"DO\"]\nprint(occurrences(tab, \"DO\"))\nprint(occurrences(tab, \"MI\"))\nprint(occurrences(tab, \"UT\"))\n\n[0, 7]\n[2]\n[]\n\n\nComplexité de l’algorithme : Comptons le nombre d’itérations et de tests. Notons \\(n\\) la taille du tableau, l’algorithme parcourt toutes les valeurs du tableau. Il y a donc au total \\(n\\) itérations. De plus, nous avons \\(n\\) tests. Il y a donc \\(2n\\) opérations au total. On peut donc dire que l’algorithme est de complexité \\(\\mathcal{O}(n)\\)."
   },
   {
     "objectID": "15_parcours/parcoursTableau.html#recherche-dun-extremum",
     "href": "15_parcours/parcoursTableau.html#recherche-dun-extremum",
-    "title": "Parcours séquentiel d’un tableau",
+    "title": "Cours",
     "section": "2. Recherche d’un extremum",
     "text": "2. Recherche d’un extremum\nDans cette partie, nous considérons un tableau dont les éléments sont des nombres. Nous allons définir une fonction qui recherche le plus grand élément du tableau. Pour cela, on commence par choisir comme maximum temporaire le premier élément du tableau. On parcourt ensuite le tableau en testant à chaque fois si la valeur courante est plus grande que le maximum temporaire. Si c’est le cas, on met à jour le maximum temporaire avec la valeur courante.\n\ndef max(tab):\n    \"\"\"Retourne le plus grand élément du tableau\"\"\"\n    m = tab[0]\n    for i in range(1, len(tab)):\n        if tab[i] &gt; m:\n            m = tab[i]\n    return m\n\nExemple d’utilisation :\n\ntab = [201, 203, 35, 448, 55, 16, 2023, 14, 999, 100]\nprint(max(tab))\n\n2023\n\n\nComplexité de l’algorithme : La boucle for parcourt toutes les valeurs du tableau, sauf la première. Il y a donc au total \\(n-1\\) itérations. Nous avons aussi \\(n-1\\) comparaisons. Au total, le nombre d’opérations est donc de \\(2n-2\\). On peut donc dire que l’algorithme est de complexité \\(\\mathcal{O}(n)\\)."
   },
   {
     "objectID": "15_parcours/parcoursTableau.html#calcul-dune-moyenne",
     "href": "15_parcours/parcoursTableau.html#calcul-dune-moyenne",
-    "title": "Parcours séquentiel d’un tableau",
+    "title": "Cours",
     "section": "3. Calcul d’une moyenne",
     "text": "3. Calcul d’une moyenne\nDans cette partie, nous considérons un tableau dont les éléments sont des nombres. Nous allons définir une fonction qui calcule la moyenne des éléments du tableau.\n\ndef moyenne(tab):\n    \"\"\"Retourne la moyenne des éléments du tableau\"\"\"\n    s = 0\n    for i in range(len(tab)):\n        s += tab[i]\n    return s / len(tab)\n\nExemple d’utilisation :\n\ntab = [201, 203, 35, 448, 55, 16, 2023, 14, 999, 100]\nprint(moyenne(tab))\n\n409.4\n\n\nComplexité de l’algorithme : La boucle for parcourt toutes les valeurs du tableau. Il y a donc au total \\(n\\) itérations. Nous avons aussi \\(n\\) additions et une division. Au total, le nombre d’opérations est donc de \\(2n+1\\). On peut donc dire que l’algorithme est encore de complexité \\(\\mathcal{O}(n)\\)."
   },
@@ -3828,5 +3828,53 @@
     "title": "Mentions légales",
     "section": "",
     "text": "Mentions légales\n\nSite personnel de Fabrice LALLEMAND, Lycée Emile DUCLAUX, 16 avenue Henri MONDOR, 15000 AURILLAC, téléphone 04 71 48 22 22.\nCe site est hébergé en Auvergne par o2switch."
+  },
+  {
+    "objectID": "15_parcours/parcours_cours.html",
+    "href": "15_parcours/parcours_cours.html",
+    "title": "Cours",
+    "section": "",
+    "text": "Considérons un tableau. On souhaite disposer d’un algorithme permettant de rechercher une occurrence d’une valeur donnée dans ce tableau. Plus précisément, nous allons définir une fonction qui recherche une valeur donnée dans un tableau et qui retourne le tableau des indices des occurrences de cette valeur dans le tableau. Dans le cas où la valeur n’est pas présente dans le tableau, la fonction retournera un tableau vide.\nLa méthode est très simple. On parcourt le tableau en testant à chaque fois si la valeur courante est égale à la valeur recherchée. Si c’est le cas, on ajoute l’indice de la valeur courante dans le tableau des indices des occurrences.\n\ndef occurrences(tab, val):\n    \"\"\"Retourne un tableau contenant les indices des occurrences de val dans tab\"\"\"\n    indices = []\n    for i in range(len(tab)):\n        if tab[i] == val:\n            indices.append(i)\n    return indices\n\nExemple d’utilisation :\n\ntab = [\"DO\", \"RE\", \"MI\", \"FA\", \"SOL\", \"LA\", \"SI\", \"DO\"]\nprint(occurrences(tab, \"DO\"))\nprint(occurrences(tab, \"MI\"))\nprint(occurrences(tab, \"UT\"))\n\n[0, 7]\n[2]\n[]\n\n\nComplexité de l’algorithme : Comptons le nombre d’itérations et de tests. Notons \\(n\\) la taille du tableau, l’algorithme parcourt toutes les valeurs du tableau. Il y a donc au total \\(n\\) itérations. De plus, nous avons \\(n\\) tests. Il y a donc \\(2n\\) opérations au total. On peut donc dire que l’algorithme est de complexité \\(\\mathcal{O}(n)\\).",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 15 - Parcours séquentiel d'un tableau",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "15_parcours/parcours_cours.html#recherche-dune-occurrence",
+    "href": "15_parcours/parcours_cours.html#recherche-dune-occurrence",
+    "title": "Cours",
+    "section": "",
+    "text": "Considérons un tableau. On souhaite disposer d’un algorithme permettant de rechercher une occurrence d’une valeur donnée dans ce tableau. Plus précisément, nous allons définir une fonction qui recherche une valeur donnée dans un tableau et qui retourne le tableau des indices des occurrences de cette valeur dans le tableau. Dans le cas où la valeur n’est pas présente dans le tableau, la fonction retournera un tableau vide.\nLa méthode est très simple. On parcourt le tableau en testant à chaque fois si la valeur courante est égale à la valeur recherchée. Si c’est le cas, on ajoute l’indice de la valeur courante dans le tableau des indices des occurrences.\n\ndef occurrences(tab, val):\n    \"\"\"Retourne un tableau contenant les indices des occurrences de val dans tab\"\"\"\n    indices = []\n    for i in range(len(tab)):\n        if tab[i] == val:\n            indices.append(i)\n    return indices\n\nExemple d’utilisation :\n\ntab = [\"DO\", \"RE\", \"MI\", \"FA\", \"SOL\", \"LA\", \"SI\", \"DO\"]\nprint(occurrences(tab, \"DO\"))\nprint(occurrences(tab, \"MI\"))\nprint(occurrences(tab, \"UT\"))\n\n[0, 7]\n[2]\n[]\n\n\nComplexité de l’algorithme : Comptons le nombre d’itérations et de tests. Notons \\(n\\) la taille du tableau, l’algorithme parcourt toutes les valeurs du tableau. Il y a donc au total \\(n\\) itérations. De plus, nous avons \\(n\\) tests. Il y a donc \\(2n\\) opérations au total. On peut donc dire que l’algorithme est de complexité \\(\\mathcal{O}(n)\\).",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 15 - Parcours séquentiel d'un tableau",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "15_parcours/parcours_cours.html#recherche-dun-extremum",
+    "href": "15_parcours/parcours_cours.html#recherche-dun-extremum",
+    "title": "Cours",
+    "section": "2. Recherche d’un extremum",
+    "text": "2. Recherche d’un extremum\nDans cette partie, nous considérons un tableau dont les éléments sont des nombres. Nous allons définir une fonction qui recherche le plus grand élément du tableau. Pour cela, on commence par choisir comme maximum temporaire le premier élément du tableau. On parcourt ensuite le tableau en testant à chaque fois si la valeur courante est plus grande que le maximum temporaire. Si c’est le cas, on met à jour le maximum temporaire avec la valeur courante.\n\ndef max(tab):\n    \"\"\"Retourne le plus grand élément du tableau\"\"\"\n    m = tab[0]\n    for i in range(1, len(tab)):\n        if tab[i] &gt; m:\n            m = tab[i]\n    return m\n\nExemple d’utilisation :\n\ntab = [201, 203, 35, 448, 55, 16, 2023, 14, 999, 100]\nprint(max(tab))\n\n2023\n\n\nComplexité de l’algorithme : La boucle for parcourt toutes les valeurs du tableau, sauf la première. Il y a donc au total \\(n-1\\) itérations. Nous avons aussi \\(n-1\\) comparaisons. Au total, le nombre d’opérations est donc de \\(2n-2\\). On peut donc dire que l’algorithme est de complexité \\(\\mathcal{O}(n)\\).",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 15 - Parcours séquentiel d'un tableau",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "15_parcours/parcours_cours.html#calcul-dune-moyenne",
+    "href": "15_parcours/parcours_cours.html#calcul-dune-moyenne",
+    "title": "Cours",
+    "section": "3. Calcul d’une moyenne",
+    "text": "3. Calcul d’une moyenne\nDans cette partie, nous considérons un tableau dont les éléments sont des nombres. Nous allons définir une fonction qui calcule la moyenne des éléments du tableau.\n\ndef moyenne(tab):\n    \"\"\"Retourne la moyenne des éléments du tableau\"\"\"\n    s = 0\n    for i in range(len(tab)):\n        s += tab[i]\n    return s / len(tab)\n\nExemple d’utilisation :\n\ntab = [201, 203, 35, 448, 55, 16, 2023, 14, 999, 100]\nprint(moyenne(tab))\n\n409.4\n\n\nComplexité de l’algorithme : La boucle for parcourt toutes les valeurs du tableau. Il y a donc au total \\(n\\) itérations. Nous avons aussi \\(n\\) additions et une division. Au total, le nombre d’opérations est donc de \\(2n+1\\). On peut donc dire que l’algorithme est encore de complexité \\(\\mathcal{O}(n)\\).",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 15 - Parcours séquentiel d'un tableau",
+      "Cours"
+    ]
   }
 ]

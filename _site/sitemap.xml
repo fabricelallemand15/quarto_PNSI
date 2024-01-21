@@ -318,7 +318,7 @@
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/15_parcours/parcoursTableau.html</loc>
-    <lastmod>2023-05-02T05:57:54.650Z</lastmod>
+    <lastmod>2024-01-21T21:20:59.273Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/PNSI/16_tris/index.html</loc>
@@ -387,5 +387,13 @@
   <url>
     <loc>https://flallemand.fr/PNSI/about.html</loc>
     <lastmod>2023-08-14T18:34:23.043Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/15_parcours/parcours_cours.html</loc>
+    <lastmod>2024-01-21T21:22:34.195Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/PNSI/15_parcours/parcours_exos.html</loc>
+    <lastmod>2024-01-21T21:27:38.112Z</lastmod>
   </url>
 </urlset>
