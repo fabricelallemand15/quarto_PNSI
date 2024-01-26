@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.544">
+<meta name="generator" content="quarto-1.4.537">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -693,11 +693,17 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">15_parcours/parcours_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./15_parcours/parcours_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">15_parcours/parcours_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./15_parcours/parcours_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1013,6 +1019,7 @@ window.Quarto = {
 <li>Cours de <a href="https://glassus.github.io/terminale_nsi/" target="_blank">Gilles Lassus</a></li>
 <li>Le site <a href="https://developer.mozilla.org/fr/" target="_blank">MDN Web Docs</a> : excellentissime ressource pour tout apprendre sur les langages HTML, CSS, Javascript et le protocole HTTP.</li>
 <li>Le site de <a href="https://nsi.janviercommelemois.fr/" target="_blank">M. JANVIER</a>.</li>
+<li>Le site de <a href="https://nsimeyroneinc.github.io/siteNSI1ere/">M. Meyroneinc</a>.</li>
 </ul>
 
 
@@ -1338,12 +1345,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
+      return note.innerHTML;
     }
   }
   for (var i=0; i<xrefs.length; i++) {

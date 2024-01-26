@@ -3,3 +3,194 @@ title: Exercices
 lang: fr
 ---
 
+*Dans un premier temps, tous ces exercices doivent être recherchés en mode papier/crayon. Ensuite, vous pourrez les tester en Python dans Capytale en suivant le lien fourni.*
+
+## Exercice 1 : Recherche de doublons
+
+On souhaite savoir si un tableau ``T`` d'éléments quelconques contient des *doublons*. Autrement dit, on souhaite savoir s'il existe deux indices ``i`` et ``j`` *distincts* tels que ``T[i]`` et ``T[j]`` sont égaux.
+
+Écrire une fonction ``doublon`` qui prend comme argument un tableau `T` et qui renvoie ``True`` s'il existe (au moins) un doublon dans ``T`` et ``False`` dans le cas contraire.
+
+Exemples :
+
+```python
+>>> doublon([1, 2, 3, 4, 5])
+False
+>>> doublon([1, 2, 3, 4, 5, 1])
+True
+```	
+
+## Exercice 2
+
+On a relevé les valeurs moyennes annuelles des températures à Paris pour la période allant de 2013 à 2019. Les résultats ont été récupérés sous la forme de deux listes :
+
+* l’une pour les températures, ``t_moy = [14.9, 13.3, 13.1, 12.5, 13.0, 13.6, 13.7]``
+* l’autre pour les années : ``annees = [2013, 2014, 2015, 2016, 2017, 2018, 2019]``
+
+Écrire la fonction ``mini`` qui prend en paramètres un tableau ``releve`` des relevés et un tableau ``date`` des dates et qui renvoie un **couple** formé de la plus petite valeur relevée au cours de la période et de l’année correspondante.
+
+Exemple :
+
+```python
+>>> mini(t_moy, annees)
+(12.5, 2016)
+```
+
+## Exercice 3
+
+Écrire une fonction ``maxi`` qui prend en paramètre un tableau ``tab`` de nombres entiers et renvoie un **couple** donnant le plus grand élément de ce tableau, ainsi que l’indice de la première apparition de ce maximum dans le tableau. 
+
+Exemple :
+
+```python
+>>> maxi([1,5,6,9,1,2,3,7,9,8])
+(9,3)
+```
+
+## Exercice 4
+
+Écrire une fonction ``RechercheMinMax`` qui prend en paramètre un tableau de nombres non triés ``tab``, et qui renvoie la plus petite et la plus grande valeur du tableau sous la forme d’un **dictionnaire** à deux clés ``‘min’`` et ``‘max’``.
+
+Exemples :
+
+```python
+>>> RechercheMinMax([1,5,6,9,1,2,3,7,9,8])
+{'min': 1, 'max': 9}
+>>> RechercheMinMax([2,2,2])
+{'min': 2, 'max': 2}
+>>> RechercheMinMax([])
+{'min': None, 'max': None}
+```
+
+## Exercice 5
+
+On dit que dans un tableau de nombres, il y a un «saut en hauteur» lorsqu'une valeur est supérieure à la valeur précédente. Par exemple dans le tableau ``[7, 4, 3, 6, 7, 4, 3, 1, 8, 8]``, il y a trois sauts en hauteur :
+
+* entre les indices 2 et 3 (pour passer de la valeur 3 à la valeur 6),
+* entre les indices 3 et 4 (pour passer de la valeur 6 à la valeur 7),
+* et entre les indices 7 et 8 (pour passer de la valeur 1 à la valeur 8).
+
+Plus formellement, dans un tableau ``tab`` de taille ``n`` on dit qu'il y a un saut en hauteur à l'indice ``i`` lorsque ``tab[i] < tab[i+1]``.
+
+1. Quel est le plus grand indice possible dans un tableau de taille ``n`` ?
+2. Pour avoir le droit d'écrire ``tab[i] < tab[i+1]`` avec un tableau ``tab`` de taille ``n``, quelle est alors la plus grande valeur de ``i`` possible : ``n-2``, ``n-1``, ``n`` ou ``n+1`` ?
+3. Compléter la fonction ``compter_sauts_en_hauteur`` ci-dessous qui prend en paramètre un tableau ``tab`` de nombres et renvoie le nombre de sauts en hauteur présents dans le tableau ``tab``.
+
+Le parcours de ``tab`` sera fait par indices.
+
+```python
+def compter_sauts_en_hauteur(tab):
+    compteur = 0
+
+    for i in range(...):
+        if ... :
+            ... = ... + ...
+    return ...
+```
+
+Exemples : 
+    
+```python
+>>> tab = [7, 4, 3, 6, 7, 4, 3, 1, 8]
+>>> compter_sauts_en_hauteur(tab)
+3
+>>> tab = [7, 4, 3, 6, 7, 4, 3, 1, 8, 2, 5, 6, 5, 8, 1, 9, 0, 1, 5, 6, 3, 7, 8, 3, 3, 4, 5, 5, 2 ]
+>>> compter_sauts_en_hauteur(tab)
+14
+>>> tab = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> compter_sauts_en_hauteur(tab)
+8
+>>> tab = []
+>>> compter_sauts_en_hauteur(tab)
+0
+>>> tab = [1]
+>>> compter_sauts_en_hauteur(tab)
+0
+>>> tab = [7, 7, 7, 7]
+>>> compter_sauts_en_hauteur(tab)
+0
+```
+
+## Exercice 6
+
+On dispose ici de deux tableaux de même longueur. Il s'agit de calculer le nombre de différences entre les deux tableaux. Par exemple avec les deux tableaux suivants :
+
+```python
+tab_1  = ['a', 'g', 'u', 'u', 'c', 'o', 'p', 'l', 'm', 'v', 'p']
+tab_2  = ['a', 'g', 's', 'u', 'c', 'k', 'p', 'l', 't', 'v', 'p']
+```
+
+il y a trois différences entre les deux tableaux : aux indices 2, 5 et 8.
+
+Compléter la fonction ``compter_differences`` ci-dessous qui prend en paramètre deux tableaux ``tab_1`` et ``tab_2`` de même longueur et qui renvoie le nombre de différences entre les deux tableaux.
+
+```python
+def compter_differences(tab_1, tab_2):
+    compteur = ...
+
+    for ... in range(...) :
+        if ... != ...:
+            compteur = ... + ...
+    return ...
+
+```
+
+Exemples :
+
+```python
+>>> tab_1  = ['a', 'g', 'u', 'u', 'c', 'o', 'p', 'l', 'm', 'v', 'p']
+>>> tab_2  = ['a', 'g', 's', 'u', 'c', 'k', 'p', 'l', 't', 'v', 'p']
+>>> compter_differences(tab_1, tab_2)
+3
+>>> tab_1  = ['a', 'g', 'u', 'u', 'c', 'o', 'p', 'l', 'm', 'v', 'p']
+>>> tab_2  = ['a', 'g', 'u', 'u', 'c', 'o', 'p', 'l', 'm', 'v', 'p']
+>>> compter_differences(tab_1, tab_2)
+0
+>>> tab_1  = ['a', 'g', 'u', 'u', 'c', 'o', 'p', 'l', 'm', 'v', 'p']
+>>> tab_2  = ['g', 'u', 'u', 'c', 'o', 'p', 'l', 'm', 'v', 'p', 'a']
+>>> compter_differences(tab_1, tab_2)
+10
+>>> tab_1  = ['a']
+>>> tab_2  = ['b']
+>>> compter_differences(tab_1, tab_2)
+1
+>>> tab_1  = []
+>>> tab_2  = []
+>>> compter_differences(tab_1, tab_2)
+0
+```
+
+## Exercice 7
+
+On dit qu'on **écrête** un signal lorsqu'on limite l'amplitude du signal entre deux valeurs $a$ et $b$. On peut également appliquer cela à des tableaux de valeurs. Voici par exemple un tableau ``tab`` que l'on a écrêté entre $- 150$ et $150$ pour donner le tableau ``tab_ec`` :
+
+```python
+tab =    [34, 56, 89, 134, 152, 250, 87, -34, -187, -310]
+tab_ec = [34, 56, 89, 134, 150, 150, 87, -34, -150, -150]
+```
+
+Étant donné un nombre $x$ et deux entiers $a$ et $b$ tels que $a\leqslant b$, l'écrêtage consiste à :
+
+* conserver $x$ inchangé si $x$ est compris entre $a$ et $b$,
+* remplacer $x$ par $a$ si $x$ est plus petit que $a$,
+* remplacer $x$ par $b$ si $x$ est plus grand que $b$.
+
+Écrire une fonction ``ecrete`` qui prend en paramètres un tableau d'entiers ``tab`` de longueur quelconque ainsi que deux entiers ``a`` et ``b`` avec ``a <= b`` et qui renvoie un **nouveau tableau** ``nv_tab`` correspondant à ``tab`` avec toutes ses valeurs écrêtées entre ``a`` et ``b``.
+
+```python
+def ecrete(tab):
+    pass
+```
+
+Exemples :
+
+```python
+>>> ecrete([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 5, 10)
+[5, 5, 5, 5, 5, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+>>> ecrete([-13, -4, 6, 5, 8, -3, -12, -3, 0, 6, 7], -10, -5)
+[-10, -5, -5, -5, -5, -5, -10, -5, -5, -5, -5]
+>>> ecrete([7, 8, 3, 9, 8, 7, 2, 4, 8, 9, 0, 1, 5, 8, 8, 8, 4, 5, 4, 5], 0, 10)
+[7, 8, 3, 9, 8, 7, 2, 4, 8, 9, 0, 1, 5, 8, 8, 8, 4, 5, 4, 5]
+>>> ecrete([], 0, 10)
+[]
+```

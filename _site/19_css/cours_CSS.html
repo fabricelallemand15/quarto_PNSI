@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.544">
+<meta name="generator" content="quarto-1.4.537">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -730,11 +730,17 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">15_parcours/parcours_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../15_parcours/parcours_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">15_parcours/parcours_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../15_parcours/parcours_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1041,7 +1047,7 @@ window.Quarto = {
 <!-- Introduction avec historique -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/langfr-800px-CSS3_logo_and_wordmark.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="logo CSS"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/langfr-800px-CSS3_logo_and_wordmark.svg.png" class="img-fluid figure-img" style="float: right;width:15.0%" alt="logo CSS"></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/langfr-800px-CSS3_logo_and_wordmark.svg.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="logo CSS"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/langfr-800px-CSS3_logo_and_wordmark.svg.png" class="img-fluid figure-img" style="float: right;width:15.0%" alt="logo CSS"></a></p>
 <figcaption>logo CSS</figcaption>
 </figure>
 </div>
@@ -1066,7 +1072,7 @@ window.Quarto = {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../assets/images/regleCSS.drawio.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="image50"><img src="../../assets/images/regleCSS.drawio.svg" class="img-fluid figure-img" alt="image50"></a></p>
+<p><a href="../../assets/images/regleCSS.drawio.svg" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="image50"><img src="../../assets/images/regleCSS.drawio.svg" class="img-fluid figure-img" alt="image50"></a></p>
 <figcaption>image50</figcaption>
 </figure>
 </div>
@@ -1126,7 +1132,7 @@ window.Quarto = {
 <p>La figure ci-dessous illustre la différence entre les propriétés <code>margin</code> et <code>padding</code>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../assets/images/box-model-devtools.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="modèle de boîtes"><img src="../../assets/images/box-model-devtools.png" class="img-fluid figure-img" alt="modèle de boîtes"></a></p>
+<p><a href="../../assets/images/box-model-devtools.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="modèle de boîtes"><img src="../../assets/images/box-model-devtools.png" class="img-fluid figure-img" alt="modèle de boîtes"></a></p>
 <figcaption>modèle de boîtes</figcaption>
 </figure>
 </div>
@@ -1136,7 +1142,7 @@ window.Quarto = {
 <p>Les navigateurs modernes possèdent une fonctionnalité bien utile : les outils de développement, usuellement activés en appuyant sur la touche F12.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../assets/images/devtools.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="outils de développement"><img src="../../assets/images/devtools.png" class="img-fluid figure-img" style="width:70.0%" alt="outils de développement"></a></p>
+<p><a href="../../assets/images/devtools.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="outils de développement"><img src="../../assets/images/devtools.png" class="img-fluid figure-img" style="width:70.0%" alt="outils de développement"></a></p>
 <figcaption>outils de développement</figcaption>
 </figure>
 </div>
@@ -1481,12 +1487,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
+      return note.innerHTML;
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1739,7 +1740,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
