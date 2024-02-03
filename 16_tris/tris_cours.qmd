@@ -1,42 +1,9 @@
 ---
-title: Algorithmes de tris
-subtitle: S6 - Algorithmique (1)
+title: Cours
 lang: fr
 tbl-cap-location: bottom
-crossref: 
-    eq-prefix: Éq.
-    tbl-prefix: Tableau
-    tbl-title: Tableau
 format:
     html: default
-#     pdf: 
-#         geometry:
-#             - top=20mm
-#             - bottom=20mm
-#             - left=20mm
-#             - right=20mm
-#             - heightrounded
-#         include-in-header:
-#             - text:
-#                 \usepackage{fancyhdr}
-#                 \pagestyle{fancy}
-#                 \usepackage{lastpage}
-#         include-before-body:
-#             - text:
-#                 \lhead{Spécialité NSI} 
-#                 \rhead{Première}
-#                 \chead{} 
-#                 \cfoot{}
-#                 \lfoot{Lycée \'Emile Duclaux}
-#                 \rfoot{Page \thepage/\pageref{LastPage}}
-#                 \renewcommand{\headrulewidth}{0pt}
-#                 \renewcommand{\footrulewidth}{0pt}
-#                 \thispagestyle{fancy}
-#                 \vspace{-2cm}
-#         biblio-title: Sources utilisées
-#         reference-location: document
-#         keep-tex: true
-# format-links: [pdf, tex]
 execute: 
   cache: true
 ---
@@ -80,7 +47,7 @@ Animation du tri par insertion :
 
 ```{python}
 def tri_insertion(tableau: list) -> list:
-    """Tri en place par insertion le tableau passé en paramètre."""
+    """Trie en place par insertion le tableau passé en paramètre."""
     for i in range(1, len(tableau)): # <1>
         j = i # <2>
         while j > 0 and tableau[j] < tableau[j-1]: # <3>

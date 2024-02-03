@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.537">
+<meta name="generator" content="quarto-1.5.4">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première - Recherche dichotomique dans un tableau trié</title>
+<title>NSI - Première – Exercices - Algorithmes de tris</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,6 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../17_recherche/index.html" rel="next">
+<link href="../16_tris/tris_cours.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -80,9 +48,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -212,7 +177,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Recherche dichotomique dans un tableau trié</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../16_tris/index.html">Ch. 16 - Algorithmes de tris</a></li><li class="breadcrumb-item"><a href="../16_tris/tris_exos.html">Exercices - Algorithmes de tris</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -745,13 +710,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="true">
  <span class="menu-text">Ch. 16 - Algorithmes de tris</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../16_tris/index.html" class="sidebar-item-text sidebar-link">
@@ -759,11 +724,17 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">16_tris/tris_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../16_tris/tris_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">16_tris/tris_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../16_tris/tris_exos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Exercices - Algorithmes de tris</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -782,11 +753,17 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">17_recherche/recherche_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../17_recherche/recherche_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">17_recherche/recherche_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../17_recherche/recherche_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - Recherche dichotomique</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1014,25 +991,18 @@ window.Quarto = {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#approche-naïve" id="toc-approche-naïve" class="nav-link active" data-scroll-target="#approche-naïve">1. Approche naïve</a></li>
-  <li><a href="#recherche-dichotomique" id="toc-recherche-dichotomique" class="nav-link" data-scroll-target="#recherche-dichotomique">2. Recherche dichotomique</a>
-  <ul class="collapse">
-  <li><a href="#le-principe" id="toc-le-principe" class="nav-link" data-scroll-target="#le-principe">Le principe</a></li>
-  <li><a href="#programmation" id="toc-programmation" class="nav-link" data-scroll-target="#programmation">Programmation</a></li>
-  <li><a href="#preuve-de-terminaison" id="toc-preuve-de-terminaison" class="nav-link" data-scroll-target="#preuve-de-terminaison">Preuve de terminaison</a></li>
-  <li><a href="#preuve-de-correction" id="toc-preuve-de-correction" class="nav-link" data-scroll-target="#preuve-de-correction">Preuve de correction</a></li>
-  <li><a href="#complexité" id="toc-complexité" class="nav-link" data-scroll-target="#complexité">Complexité</a></li>
-  <li><a href="#comparaison-expérimentale-des-deux-algorithmes" id="toc-comparaison-expérimentale-des-deux-algorithmes" class="nav-link" data-scroll-target="#comparaison-expérimentale-des-deux-algorithmes">Comparaison expérimentale des deux algorithmes</a></li>
-  </ul></li>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link active" data-scroll-target="#exercice-1"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 1</a></li>
+  <li><a href="#exercice-2-le-tri-à-bulles" id="toc-exercice-2-le-tri-à-bulles" class="nav-link" data-scroll-target="#exercice-2-le-tri-à-bulles"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 2 : le tri à bulles</a></li>
+  <li><a href="#t.p.-bilan-et-compléments" id="toc-t.p.-bilan-et-compléments" class="nav-link" data-scroll-target="#t.p.-bilan-et-compléments"><i class="fa-solid fa-desktop" aria-label="desktop"></i> T.P. : Bilan et compléments</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../16_tris/index.html">Ch. 16 - Algorithmes de tris</a></li><li class="breadcrumb-item"><a href="../16_tris/tris_exos.html">Exercices - Algorithmes de tris</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Recherche dichotomique dans un tableau trié</h1>
+<h1 class="title">Exercices - Algorithmes de tris</h1>
 <p class="subtitle lead">S6 - Algorithmique (1)</p>
 </div>
 
@@ -1050,197 +1020,62 @@ window.Quarto = {
 </header>
 
 
-<p>On s’intéresse ici au problème de la recherche d’une valeur dans un tableau que l’on supposera <strong>triée</strong> dans l’ordre croissant.</p>
-<section id="approche-naïve" class="level2">
-<h2 class="anchored" data-anchor-id="approche-naïve">1. Approche naïve</h2>
-<p>La première idée qui peut venir à l’esprit est de considérer les éléments du tableau les uns après les autres et de les comparer avec l’élément recherché.</p>
-<p>On peut ainsi écrire une fonction <code>recherche_naive</code> qui prend en paramètre un tableau <code>tàbleau</code> et une valeur <code>valeur</code> et qui renvoie l’indice de la première occurrence de <code>valeur</code> dans <code>tableau</code> ou <code>-1</code> si <code>valeur</code> n’est pas dans <code>tableau</code>.</p>
-<div id="0272decc" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recherche_naive(tableau, valeur):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(tableau)):</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> tableau[i] <span class="op">==</span> valeur:</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> i</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Test de cette fonction :</p>
-<div id="43449a69" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>recherche_naive([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">3</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>2</code></pre>
-</div>
-</div>
-<div id="60cfcd83" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>recherche_naive([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">6</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>-1</code></pre>
-</div>
-</div>
-<p>La complexité dans le pire des cas correspond ici au cas où la valeur recherchée n’est pas dans la liste. Il faut alors parcourir toutes les valeurs du tableau et faire <span class="math inline">\(n\)</span> comparaisons, où <span class="math inline">\(n\)</span> est la taille du tableau. L’algorithme naïf a donc une <strong>complexité linéaire</strong> en <span class="math inline">\(\mathcal{O}(n)\)</span>.</p>
-<p>Il est possible d’être plus efficace en exploitant le fait que la liste est triée.</p>
-</section>
-<section id="recherche-dichotomique" class="level2">
-<h2 class="anchored" data-anchor-id="recherche-dichotomique">2. Recherche dichotomique</h2>
-<section id="le-principe" class="level3">
-<h3 class="anchored" data-anchor-id="le-principe">Le principe</h3>
-<p>De façon intuitive, la recherche dichotomique consiste à <strong>diviser par deux</strong> la zone de recherche à chaque étape.</p>
-<p>On commence par considérer l’ensemble des éléments du tableau. On regarde ensuite la valeur de l’élément du <strong>milieu</strong> du tableau. Si cette valeur est inférieure à la valeur recherchée, alors on poursuit la recherche sur la moitié supérieure du tableau. Si la valeur est supérieure à la valeur recherchée, alors on poursuit la recherche sur la moitié inférieure. Si la valeur est égale à la valeur recherchée, on a trouvé l’élément recherché.</p>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-desktop" aria-label="desktop"></i> sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> doivent être résolus par écrit.</em></p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Principe de l’algorithme
+Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>Notebook Capytale pour les exercices 1 et 2 : <button type="button" class="btn btn-light"><a href="https://capytale2.ac-paris.fr/web/c/136d-1599664" target="_blank">Capytale</a> </button></p>
+</div>
+</div>
+<section id="exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 1</h2>
+<p><strong>Cet exercice est à faire dans Capytale.</strong></p>
+<p>Écrire une fonction <code>trie_chaine</code> qui prend en argument une <strong>liste</strong> de chaînes de caractères et qui <strong>modifie</strong> cette liste en la triant en fonction du nombre de lettres. Cette fonction ne renvoie rien.</p>
+<p>Tester la fonction avec la liste <code>["un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix"]</code>.</p>
+</section>
+<section id="exercice-2-le-tri-à-bulles" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2-le-tri-à-bulles"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 2 : le tri à bulles</h2>
+<p><strong>Cet exercice est à faire dans Capytale.</strong></p>
+<p>L’algorithme de tri à bulles est le suivant :</p>
 <ul>
-<li>On considère le tableau <code>tableau</code> trié dans l’ordre croissant dans lequel on recherche la valeur <code>valeur</code>.</li>
-<li>On définit les bornes <code>gauche</code> et <code>droite</code> du tableau : indices du premier et du dernier élément de la partie du tableau dans laquelle on recherche.</li>
-<li>Tant que <code>gauche</code> est inférieur ou égal à <code>droite</code> :
-<ul>
-<li>On calcule l’indice <code>milieu</code> du milieu du tableau.</li>
-<li>Si <code>tableau[milieu]</code> est égal à <code>valeur</code>, on renvoie <code>milieu</code>.</li>
-<li>Si <code>tableau[milieu]</code> est inférieur à <code>valeur</code>, on met à jour <code>gauche</code> à <code>milieu + 1</code>. Lors de l’itération suivante, on ne considèrera donc que la partie du tableau située à droite de <code>milieu</code>.</li>
-<li>Si <code>tableau[milieu]</code> est supérieur à <code>valeur</code>, on met à jour <code>droite</code> à <code>milieu - 1</code>. Lors de l’itération suivante, on ne considèrera donc que la partie du tableau située à gauche de <code>milieu</code>.</li>
-</ul></li>
-<li>On renvoie <code>-1</code> si <code>valeur</code> n’est pas dans <code>tableau</code>.</li>
+<li>On parcourt la liste de gauche à droite.</li>
+<li>Si deux éléments consécutifs sont dans le mauvais ordre, on les échange.</li>
+<li>Si, à l’étape précédente, au moins un échange a eu lieu, on recommence à l’étape 1.</li>
+<li>Sinon, la liste est triée et on arrête.</li>
 </ul>
-</div>
-</div>
-<p><strong>Exemple</strong></p>
-<p>On considère le tableau <code>[1,4,7,10,13,16,19,22,25]</code> et on cherche la valeur <code>22</code>.</p>
-<p>On commence par considérer l’ensemble des éléments du tableau (<code>gauche=0</code> et <code>droite=8</code>). On regarde ensuite la valeur de l’élément du <strong>milieu</strong> du tableau. Ici, il s’agit de l’élément d’indice 4 (<code>milieu=4</code>), qui vaut 13. La valeur recherchée est supérieure à 13, donc on ne considère que la partie du tableau située à droite de l’élément du milieu.</p>
-<p>On répète alors l’opération sur la partie du tableau située à droite de l’élément du milieu (<code>gauche=5</code> et <code>droite=8</code>). On obtient le tableau <code>[16,19,22,25]</code> et on cherche la valeur <code>22</code>. L’élément du milieu de ce tableau vaut 19 (<code>milieu=6</code>), qui est inférieur à 22. On ne considère donc que la partie du tableau située à droite de l’élément du milieu.</p>
-<p>On répète donc l’opération sur la partie du tableau située à droite (<code>gauche=7</code> et <code>droite=8</code>). On obtient le tableau <code>[22,25]</code> et on cherche la valeur <code>22</code>. L’élément du milieu de ce tableau vaut 22 (<code>milieu=7</code>), qui est égal à 22. On a donc trouvé la valeur recherchée et l’algorithme est terminé en trois étapes.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./recherche_dicho.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Recherche dichotomique"><img src="./recherche_dicho.png" class="img-fluid figure-img" alt="Recherche dichotomique"></a></p>
-<figcaption>Recherche dichotomique</figcaption>
-</figure>
-</div>
+<ol type="1">
+<li>Écrire toutes les étapes du tri à bulles pour la liste <code>[5, 3, 2, 4, 1]</code>.</li>
+<li>Soit <span class="math inline">\(n\)</span> un entier naturel non nul et <span class="math inline">\(L\)</span> une liste de <span class="math inline">\(n\)</span> entiers rangés dans l’ordre décroissant (pire des cas). Combien d’échanges sont nécessaires pour trier <span class="math inline">\(L\)</span> dans l’ordre croissant ? En déduire une évaluation de la complexité de cet algorithme.</li>
+<li>Écrire une fonction <code>tri_bulles</code> qui prend en argument une <strong>liste</strong> de nombres et qui <strong>modifie</strong> cette liste en la triant par ordre croissant en utilisant l’algorithme du tri à bulles. Cette fonction ne renvoie rien.</li>
+<li>Ajouter une variable <code>compteur</code> dans la fonction <code>tri_bulles</code> qui compte le nombre d’échanges effectués. Ce nombre doit être renvoyé par la fonction. Tester la fonction avec la liste <code>[5, 3, 2, 4, 1]</code> et vérifier que le compteur vaut bien 6.</li>
+</ol>
 </section>
-<section id="programmation" class="level3">
-<h3 class="anchored" data-anchor-id="programmation">Programmation</h3>
-<p>Écrivons une fonction <code>recherche_dichotomique</code> qui prend en paramètre un tableau <code>tableau</code> et une valeur <code>valeur</code> et qui renvoie l’indice d’une occurrence de <code>valeur</code> dans <code>tableau</code> ou <code>-1</code> si <code>valeur</code> n’est pas dans <code>tableau</code>.</p>
-<div id="9832d56f" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recherche_dichotomique(tableau, valeur):</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    gauche <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    droite <span class="op">=</span> <span class="bu">len</span>(tableau) <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> gauche <span class="op">&lt;=</span> droite:</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        milieu <span class="op">=</span> (gauche <span class="op">+</span> droite) <span class="op">//</span> <span class="dv">2</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> tableau[milieu] <span class="op">==</span> valeur:</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> milieu</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> tableau[milieu] <span class="op">&lt;</span> valeur:</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            gauche <span class="op">=</span> milieu <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>            droite <span class="op">=</span> milieu <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Test de cette fonction :</p>
-<div id="61f55a7c" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>recherche_dichotomique([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">2</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>1</code></pre>
-</div>
-</div>
-<div id="d67449c8" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>recherche_dichotomique([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">6</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>-1</code></pre>
-</div>
-</div>
-</section>
-<section id="preuve-de-terminaison" class="level3">
-<h3 class="anchored" data-anchor-id="preuve-de-terminaison">Preuve de terminaison</h3>
-<p>Pour prouver que l’algorithme se termine, il faut prouver que la boucle <code>while</code> se termine, et donc que la condition d’arrêt <code>gauche &gt; droite</code> finit par être vérifiée <strong>ou bien</strong> que la condition <code>tableau[milieu] == valeur</code> est vérifiée.</p>
-<p>Choisissons comme <strong>variant de boucle</strong> la différence <code>droite - gauche</code> et plaçons-nous dans le cas le plus défavorable où la condition <code>tableau[milieu] == valeur</code> n’est jamais vérifiée. À chaque passage dans la boucle, soit <code>gauche</code> est incrémenté de 1, soit <code>droite</code> est décrémenté de 1. La différence <code>droite - gauche</code> est donc toujours diminuée de 1. Au bout d’un nombre fini d’itérations (au maximum égal à la taille du tableau moins un), la condition notre variant de boucle devient donc égal à zéro et la boucle se termine.</p>
-<p>La terminaison de l’algorithme est donc prouvée.</p>
-</section>
-<section id="preuve-de-correction" class="level3">
-<h3 class="anchored" data-anchor-id="preuve-de-correction">Preuve de correction</h3>
-<p>Considérons la propriété suivante : à chaque étape de l’algorithme, la valeur recherchée est située dans la partie du tableau située entre les indices <code>gauche</code> et <code>droite</code> inclus, ou bien elle n’est pas dans le tableau.</p>
-<p>Montrons que cette propriété est un <strong>invariant de boucle</strong>. C’est-à-dire que cette propriété est vraie avant l’exécution de la première itération de la boucle et qu’elle est vraie après l’exécution de chaque itération de la boucle.</p>
-<p><strong>Initialisation</strong> : avant l’exécution de la première itération de la boucle, si la valeur est dans le tableau, alors elle est située dans la partie du tableau située entre les indices <code>gauche</code> et <code>droite</code> inclus. En effet, <code>gauche</code> vaut 0 et <code>droite</code> vaut la taille du tableau moins un, donc la valeur recherchée est située dans la partie du tableau située entre les indices 0 et la taille du tableau moins un inclus (c’est le tableau entier !).</p>
-<p><strong>Conservation</strong> : supposons que la propriété est vraie à l’entrée dans une itération de la boucle <code>while</code>. Il y a trois possibilités :</p>
-<ul>
-<li><code>tableau[milieu] == valeur</code> est vérifiée. Dans ce cas, la propriété est vraie à la sortie de l’itération de la boucle et l’algorithme retourne l’indice attendu.</li>
-<li><code>tableau[milieu] &lt; valeur</code> est vérifiée. Dans ce cas, <code>gauche</code> est incrémenté de 1. La valeur recherchée est donc située dans la partie du tableau située entre les indices <code>gauche</code> et <code>droite</code> inclus, ou bien elle est absente du tableau.</li>
-<li><code>tableau[milieu] &gt; valeur</code> est vérifiée. Dans ce cas, <code>droite</code> est décrémenté de 1. La valeur recherchée est donc située dans la partie du tableau située entre les indices <code>gauche</code> et <code>droite</code> inclus, ou bien elle est absente du tableau.</li>
-</ul>
-<p><strong>Conclusion</strong> : la propriété est donc un invariant de boucle.</p>
-<p>Deux cas sont à considérer pour conclure. Si le test <code>tableau[milieu] == valeur</code> est vérifié au cours des itérations, alors la valeur est trouvée dans le tableau et on retourne son indice <code>milieu</code> : c’est bien le comportement attendu. Si le test <code>tableau[milieu] == valeur</code> n’est jamais vérifié, alors l’algorithme se termine lorsque <code>gauche &gt; droite</code>. D’après notre invariant de boucle, soit la valeur est alors absente du tableau, soit elle est située dans la partie du tableau située entre les indices <code>gauche</code> et <code>droite</code> inclus. Mais cette partie du tableau est un tableau vide <code>[]</code>. La valeur est donc absente du tableau et on retourne l’indice <code>-1</code> : c’est bien le comportement attendu.</p>
-<p>L’algorithme est donc correct.</p>
-</section>
-<section id="complexité" class="level3">
-<h3 class="anchored" data-anchor-id="complexité">Complexité</h3>
-<p>Pour évaluer la complexité de cet algorithme, nous allons évaluer le nombre d’itérations nécessaires en fonction de la taille <span class="math inline">\(n\)</span> du tableau, dans le pire des cas, c’est-à-dire lorsque la valeur recherchée n’est pas dans le tableau.</p>
-<p>À chaque étape, la taille du sous-tableau contenant potentiellement la valeur recherchée est divisée par deux. Au bout de <span class="math inline">\(k\)</span> étapes, la taille du sous-tableau est donc de <span class="math inline">\(\frac{n}{2^k}\)</span> environ. Si la valeur recherchée n’est pas dans le tableau, alors on finit par arriver à un tableau de taille 1 et la boucle se termine au tour suivant. Soit <span class="math inline">\(k\)</span> le nombre d’itérations nécessaires pour que la taille du sous-tableau soit de 1. On a donc <span class="math inline">\(\frac{n}{2^k}\approx 1\)</span>, et par conséquent <span class="math inline">\(n=2^k\)</span>. On en déduit que <span class="math inline">\(k=\log_2 n\)</span>.</p>
-<p>L’algorithme de recherche dichotomique est donc en <span class="math inline">\(\mathcal{O}(\log n)\)</span>. On parle de <strong>complexité logarithmique</strong>. Cette complexité est meilleure que la complexité linéaire.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="t.p.-bilan-et-compléments" class="level2">
+<h2 class="anchored" data-anchor-id="t.p.-bilan-et-compléments"><i class="fa-solid fa-desktop" aria-label="desktop"></i> T.P. : Bilan et compléments</h2>
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Notion de logarithme de base 2
+Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Si <span class="math inline">\(x\)</span> est une puissance de 2, alors <span class="math inline">\(\log_2 x\)</span> est égal à l’<strong>exposant</strong> de cette puissance. Par exemple, <span class="math inline">\(\log_2 8 = 3\)</span> car <span class="math inline">\(8 = 2^3\)</span>.</p>
-</div>
-</div>
-<p>Pour un tableau de départ de taille <span class="math inline">\(16=2^4\)</span> dans lequel on cherche une valeur qui n’y est pas, on effectue 4 itérations :</p>
-<ul>
-<li>au premier tour, on divise le tableau en deux parties de taille <span class="math inline">\(8=2^3\)</span> et on cherche dans la partie de gauche (par exemple) ;</li>
-<li>au deuxième tour, on divise la partie de gauche en deux parties de taille <span class="math inline">\(4=2^2\)</span> et on cherche dans la partie de gauche (par exemple) ;</li>
-<li>au troisième tour, on divise la partie de gauche en deux parties de taille <span class="math inline">\(2=2^1\)</span> et on cherche dans la partie de gauche (par exemple) ;</li>
-<li>au quatrième tour, on divise la partie de gauche en deux parties de taille <span class="math inline">\(1=2^0\)</span> et on cherche dans la partie de gauche (par exemple).</li>
-</ul>
-<p>On retrouve bien un nombre d’itérations de l’ordre de <span class="math inline">\(\log_2 n\)</span>.</p>
-</section>
-<section id="comparaison-expérimentale-des-deux-algorithmes" class="level3">
-<h3 class="anchored" data-anchor-id="comparaison-expérimentale-des-deux-algorithmes">Comparaison expérimentale des deux algorithmes</h3>
-<div id="15db8bee" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> timeit</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>tailles <span class="op">=</span> [i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">500</span>)]</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>temps_naive <span class="op">=</span> []</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>temps_dicho <span class="op">=</span> []</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># on applique la recherche dans le pire des cas : valeur absente su tableau</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>valeur <span class="op">=</span> <span class="dv">1000</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> tailles:</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    temps_naive.append(timeit.timeit(</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"recherche_naive([k for k in range(n)], valeur)"</span>,</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">globals</span><span class="op">=</span><span class="bu">globals</span>(),</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>        number<span class="op">=</span><span class="dv">100</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    ))</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    temps_dicho.append(timeit.timeit(</span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"recherche_dichotomique([k for k in range(n)], valeur)"</span>,</span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>        <span class="bu">globals</span><span class="op">=</span><span class="bu">globals</span>(),</span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>        number<span class="op">=</span><span class="dv">100</span></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    ))</span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>plt.plot(tailles,temps_naive, <span class="st">'b'</span>, label<span class="op">=</span><span class="st">"Recherche naïve"</span>)</span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>plt.plot(tailles,temps_dicho, <span class="st">'r'</span>, label<span class="op">=</span><span class="st">"Recherche dichotomique"</span>)</span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Taille du tableau"</span>)</span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Temps d'exécution (en secondes)"</span>)</span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="recherche_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="recherche_files/figure-html/cell-8-output-1.png" width="615" height="429" class="figure-img"></a></p>
-</figure>
-</div>
+<p>Notebook Capytale pour ce T.P. : <button type="button" class="btn btn-light"><a href="https://capytale2.ac-paris.fr/web/c/a99d-1599680" target="_blank">Capytale</a> </button></p>
+<p>Ce T.P. est à faire dans Capytale en suivant le lien ci-dessus.</p>
 </div>
 </div>
 
 
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Recherche dichotomique</span>
-</div>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1564,7 +1399,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1785,6 +1625,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../16_tris/tris_cours.html" class="pagination-link  aria-label=" cours"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cours</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../17_recherche/index.html" class="pagination-link" aria-label="Programme">
+        <span class="nav-page-text">Programme</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1817,31 +1669,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 

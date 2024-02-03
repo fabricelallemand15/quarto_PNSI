@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.537">
+<meta name="generator" content="quarto-1.5.4">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première - Formulaires : Explications et compléments</title>
+<title>NSI - Première – Formulaires : Explications et compléments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -725,11 +725,17 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">16_tris/tris_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../16_tris/tris_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">16_tris/tris_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../16_tris/tris_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - Algorithmes de tris</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -748,11 +754,17 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">17_recherche/recherche_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../17_recherche/recherche_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">17_recherche/recherche_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../17_recherche/recherche_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices - Recherche dichotomique</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1024,7 +1036,7 @@ window.Quarto = {
 <p>Pour comprendre le fonctionnement d’un formulaire, il faut se souvenir de l’architecture client/serveur déjà évoquée.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="image client serveur"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png" class="img-fluid figure-img" style="width:50.0%" alt="image client serveur"></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="image client serveur"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png" class="img-fluid figure-img" style="width:50.0%" alt="image client serveur"></a></p>
 <figcaption>image client serveur</figcaption>
 </figure>
 </div>
@@ -1040,7 +1052,7 @@ window.Quarto = {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../assets/images/fonctionnement-php-client-serveur.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="image PHP"><img src="../../assets/images/fonctionnement-php-client-serveur.png" class="img-fluid figure-img" alt="image PHP"></a></p>
+<p><a href="../../assets/images/fonctionnement-php-client-serveur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="image PHP"><img src="../../assets/images/fonctionnement-php-client-serveur.png" class="img-fluid figure-img" alt="image PHP"></a></p>
 <figcaption>image PHP</figcaption>
 </figure>
 </div>
@@ -1392,7 +1404,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1645,7 +1662,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
