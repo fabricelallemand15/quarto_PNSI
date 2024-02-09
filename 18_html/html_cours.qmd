@@ -1,7 +1,5 @@
 ---
-title: "HTML : Explications et compléments"
-niveau: Première NSI
-année: 2022-2023
+title: "Cours"
 ---
 
 <!-- Introduction avec historique -->
@@ -28,7 +26,7 @@ Une balise HTML possède la structure suivante :
 <p>Mon chat est très grincheux</p>
 ```
 
-![image50](../../assets/images/cours_html_fig1.png)
+![](cours_html_fig1.png)
 
 Les composants principaux de notre élément sont :
 
@@ -43,7 +41,7 @@ Les éléments peuvent être imbriqués les uns dans les autres :
 <p>Mon chat est <strong>très</strong> grincheux.</p>
 ```
 
-Toutefois, il faut faire attention à ce que les éléments soient bien imbriqués les uns dans les autres. Dans l'exemple précédent, on ouvre l'élément `<p>`, puis l'élément `<strong>`. Nous devrons donc fermer l'élément `<strong>` d'abord, puis l'élement `<p>`. Le code suivant est incorrect :
+Toutefois, il faut faire attention à ce que les éléments soient bien imbriqués les uns dans les autres. Dans l'exemple précédent, on ouvre l'élément `<p>`, puis l'élément `<strong>`. Nous devrons donc fermer l'élément `<strong>` d'abord, puis l'élément `<p>`. Le code suivant est incorrect :
 
 ```html
 <p>Mon chat est <strong>très grincheux.</p></strong>
@@ -51,26 +49,27 @@ Toutefois, il faut faire attention à ce que les éléments soient bien imbriqu�
 
 Les éléments doivent être ouverts et fermés correctement de façon à ce qu'ils soient clairement à l'intérieur ou à l'extérieur les uns des autres. S'ils se chevauchent, le navigateur essaiera de choisir la meilleure option, qui ne sera peut-être pas ce que vous vouliez dire et pourrait conduire à des résultats inattendus. Donc ne le faites pas !
 
-!!! info "Remarque"
-    Certains éléments sont vides : ils ne nécessitent pas de balise fermante.
+:::{.callout-tip}
+## Remarque
+Certains éléments sont vides : ils ne nécessitent pas de balise fermante.
 
-    Les plus fréquents sont : 
+Les plus fréquents sont : 
 
-    * L'élément `<img />` :
+* L'élément `<img />` :
 
-        ```html
-        <img src="chat.png" alt="Image de chat" />
-        ```
+    ```html
+    <img src="chat.png" alt="Image de chat" />
+    ```
 
-        Cet élément contient deux **attributs** mais les balises ouvrante `<img>` et fermante `</img>` sont remplacées par une balise auto-fermante `<img />` et il n'y a aucun contenu interne. En effet, l'élément image n'embarque pas de contenu, son but est d'intégrer une image dans la page HTML, à l'endroit où l'élément est placé.
+    Cet élément contient deux **attributs** mais les balises ouvrantes `<img>` et fermante `</img>` sont remplacées par une balise auto-fermante `<img />` et il n'y a aucun contenu interne. En effet, l'élément image n'embarque pas de contenu, son but est d'intégrer une image dans la page HTML, à l'endroit où l'élément est placé.
 
-        L'attribut `src` indique le chemin vers le fichier de l'image et l'attribut `alt` contient un texte *alternatif*, texte descriptif de l'image à l'intention des utilisateurs qui ne peuvent pas voir l'image.
+    L'attribut `src` indique le chemin vers le fichier de l'image et l'attribut `alt` contient un texte *alternatif*, texte descriptif de l'image à l'intention des utilisateurs qui ne peuvent pas voir l'image.
 
-    * L'élément '<br /> : pour créer un saut de ligne dans le texte.
-    * Les éléments `<link>` et `<meta>` présents dans l'élément `<head>` en début de fichier.
+* L'élément '<br /> : pour créer un saut de ligne dans le texte.
+* Les éléments `<link>` et `<meta>` présents dans l'élément `<head>` en début de fichier.
 
-    Pour toutes ces balises auto-fermantes, la barre oblique avant la dernier chevron `>`est optionnelle.
-<!--  -->
+Pour toutes ces balises auto-fermantes, la barre oblique avant le dernier chevron `>`est optionnelle.
+:::
 
 ## 2. Attributs d'une balise
 
@@ -83,9 +82,11 @@ Certains attributs sont spécifiques à des balises particulières, d'autres son
 * `class=...` : une ou plusieurs **classes**, séparées par des espaces, qui permettent de catégoriser l'élément pour pouvoir le manipuler dans une feuille de style CSS ou un script JavaScript.
 * `id=...` : un **identifiant**, **unique au sein de tout le document**, pour un élément. Il doit permettre d'identifier cet élément lorsqu'on crée un lien vers lui et/ou lorsqu'on le manipule avec des scripts ou avec CSS.
 
-!!! warning "Attention !"
-    * Plusieurs éléments HTML peuvent appartenir à une même classe : cela permet par exemple de leur appliquer le même style CSS.
-    * Un identifiant, par contre, est unique : deux éléments HTML ne doivent pas avoir le même identifiant.
+:::{.callout-warning}
+## Attention !
+* Plusieurs éléments HTML peuvent appartenir à une même classe : cela permet par exemple de leur appliquer le même style CSS.
+* Un identifiant, par contre, est unique : deux éléments HTML ne doivent pas avoir le même identifiant.
+:::
 
 ## 3. Structure générale du fichier HTML
 
@@ -116,7 +117,7 @@ Cette structure peut être représentée sous forme d'arbre. Chaque élément $B
 
 Voici l'arbre représentant le fichier HTML ci-dessus :
 
-```mermaid
+```{mermaid}
 graph TB
     A[html] --> B[head]
     A --> C[body]

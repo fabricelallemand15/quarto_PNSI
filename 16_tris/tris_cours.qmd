@@ -26,12 +26,6 @@ En commençant par le deuxième élément du tableau :
   * On continue à comparer et échanger l'élément courant avec les éléments précédents jusqu'à ce que l'élément courant soit plus grand que l'élément précédent.
 :::
 
-::: {.content-hidden when-format="html"}
-
-Animation du tri par insertion :
-
-:::
-
 <script type="module" crossorigin src="assets_insertion/index.a606aa25.js"></script>
 <link rel="stylesheet" href="assets_insertion/index.df145779.css">
 

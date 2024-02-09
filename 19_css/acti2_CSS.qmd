@@ -1,21 +1,22 @@
 ---
-title: "Activité 2 : Le couple HTML/CSS"
-niveau: Première NSI
-année: 2022-2023
+title: "Activité : Le couple HTML/CSS"
 ---
 
-!!! danger "Objectifs de cette activité"
-    À l'issue de cette activité, vous saurez :
+:::{.callout-important}
+## Objectifs de cette activité
+À l'issue de cette activité, vous saurez :
 
-    * comment est codée la mise en page et le style d'une page Web ;
-    * reconnaître quelques exemples d'instructions CSS ;
-    * créer une feuille de style et l'appliquer à une page HTML.
-[//]: ()
+* comment est codée la mise en page et le style d'une page Web ;
+* reconnaître quelques exemples d'instructions CSS ;
+* créer une feuille de style et l'appliquer à une page HTML.
+:::
 
 Pour cette activité, on utilisera de préférence le navigateur Firefox.
 
-!!! info
-    CSS signifie **Cascading Style Sheet** (feuilles de style en cascade). CSS est le langage utilisé pour coder le style des pages Web (couleurs, taille des caractères, alignements, etc.). CSS, tout comme HTML, n'est pas un langage de programmation.
+::: {.callout-tip}
+## Info
+CSS signifie **Cascading Style Sheet** (feuilles de style en cascade). CSS est le langage utilisé pour coder le style des pages Web (couleurs, taille des caractères, alignements, etc.). CSS, tout comme HTML, n'est pas un langage de programmation.
+:::
 
 ## Partie 1. Observation d'une page Web stylée
 
@@ -27,7 +28,7 @@ Pour cette activité, on utilisera de préférence le navigateur Firefox.
 
 ## Partie 2. Modification du fichier CSS
 
-1. Ouvrir l'activité [Replit correspondant à cette partie](https://replit.com/team/premiere-nsi/TP-2-Partie-2-Modifier-le-CSS).
+1. Ouvrir l'activité [Capytale correspondant à cette partie](https://capytale2.ac-paris.fr/web/c/5db1-2973229).
 2. Vous trouverez la page Web et sa feuille de style. Modifier la feuille de style (et si nécessaire la page Web) :
 
     * Changer les couleurs d'arrière-plan ;
@@ -37,8 +38,8 @@ Pour cette activité, on utilisera de préférence le navigateur Firefox.
     * Changer les puces de la liste : vous utiliserez pour cela l'attribut `list-style-type: square;` ;
     * Dans la liste numérotée, changer les numéros en chiffres romains majuscules : vous utiliserez pour cela l'attribut `list-style-type: upper-roman;`.
 
-    Une fois toutes ces modifications faites, soumettre votre travail.
+    Une fois toutes ces modifications faites, enregistrer votre travail.
 
 ## Partie 3. Création d'un fichier CSS
 
-Dans cette partie, vous allez reprendre la page Web créée lors de l'activité sur le langage HTML et créer une feuille de style afin de la mettre en forme. Quand vous serez satisfait du résultat, soumettre votre travail dans le [Replit prévu à cet effet](https://replit.com/team/premiere-nsi/TP-2-Partie-3-Creer-un-fichier-CSS).
+Dans cette partie, vous allez reprendre la page Web créée lors de l'activité sur le langage HTML et créer une feuille de style afin de la mettre en forme. Quand vous serez satisfait du résultat, enregistrer votre travail dans l'activité [Capytale prévue à cet effet](https://capytale2.ac-paris.fr/web/c/ac8e-2973231).

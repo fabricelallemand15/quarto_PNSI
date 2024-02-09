@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Programme</title>
+<title>NSI - Première – Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../19_css/acti2_CSS.html" rel="next">
-<link href="../18_html/ref_HTML.html" rel="prev">
+<link href="../22_tables/index.html" rel="next">
+<link href="../19_css/acti2_CSS.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -48,6 +82,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -177,7 +214,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../19_css/index.html">Ch. 19 - Le couple HTML / CSS</a></li><li class="breadcrumb-item"><a href="../19_css/index.html">Programme</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../19_css/index.html">Ch. 19 - Le couple HTML / CSS</a></li><li class="breadcrumb-item"><a href="../19_css/css_cours.html">Cours</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -812,19 +849,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../19_css/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../19_css/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../19_css/acti2_CSS.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Activité 2 : Le couple HTML/CSS</span></a>
+ <span class="menu-text">Activité : Le couple HTML/CSS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../19_css/css_cours.html" class="sidebar-item-text sidebar-link">
+  <a href="../19_css/css_cours.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Cours</span></a>
   </div>
 </li>
@@ -1010,15 +1047,25 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#structure-dune-règle-css" id="toc-structure-dune-règle-css" class="nav-link active" data-scroll-target="#structure-dune-règle-css">1. Structure d’une règle CSS</a></li>
+  <li><a href="#différents-types-de-sélecteurs" id="toc-différents-types-de-sélecteurs" class="nav-link" data-scroll-target="#différents-types-de-sélecteurs">2. Différents types de sélecteurs</a></li>
+  <li><a href="#les-grands-types-de-mise-en-forme" id="toc-les-grands-types-de-mise-en-forme" class="nav-link" data-scroll-target="#les-grands-types-de-mise-en-forme">3. Les grands types de mise en forme</a></li>
+  <li><a href="#utilisation-des-outils-de-développement-du-navigateur" id="toc-utilisation-des-outils-de-développement-du-navigateur" class="nav-link" data-scroll-target="#utilisation-des-outils-de-développement-du-navigateur">4. Utilisation des outils de développement du navigateur</a></li>
+  <li><a href="#ressources-pour-approfondir" id="toc-ressources-pour-approfondir" class="nav-link" data-scroll-target="#ressources-pour-approfondir">5. Ressources pour approfondir</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../19_css/index.html">Ch. 19 - Le couple HTML / CSS</a></li><li class="breadcrumb-item"><a href="../19_css/index.html">Programme</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../19_css/index.html">Ch. 19 - Le couple HTML / CSS</a></li><li class="breadcrumb-item"><a href="../19_css/css_cours.html">Cours</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Programme</h1>
+<h1 class="title">Cours</h1>
 </div>
 
 
@@ -1035,48 +1082,121 @@ window.Quarto = {
 </header>
 
 
-<p>Lors de la navigation sur le Web, les internautes interagissent avec leur machine par le biais des pages Web.</p>
-<p>L’Interface Homme-Machine (IHM) repose sur la gestion d’événements associés à des éléments graphiques munis de méthodes algorithmiques.</p>
-<p>La compréhension du dialogue client-serveur déjà abordé en classe de seconde est consolidée, sur des exemples simples, en identifiant les requêtes du client, les calculs puis les réponses du serveur traitées par le client.</p>
-<p>Il ne s’agit pas de décrire exhaustivement les différents éléments disponibles, ni de développer une expertise dans les langages qui permettent de mettre en œuvre le dialogue tels que PHP ou JavaScript.</p>
-<table class="table">
-<colgroup>
-<col style="width: 27%">
-<col style="width: 33%">
-<col style="width: 38%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Contenus</th>
-<th>Capacités attendues</th>
-<th>Commentaires</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Modalités de l’interaction entre l’homme et la machine Événements</td>
-<td>Identifier les différents composants graphiques permettant d’interagir avec une application Web. Identifier les événements que les fonctions associées aux différents composants graphiques sont capables de traiter.</td>
-<td>Il s’agit d’examiner le code HTML d’une page comprenant des composants graphiques et de distinguer ce qui relève de la description des composants graphiques en HTML de leur comportement (réaction aux événements) programmé par exemple en JavaScript.</td>
-</tr>
-<tr class="even">
-<td>Interaction avec l’utilisateur dans une page Web</td>
-<td>Analyser et modifier les méthodes exécutées lors d’un clic sur un bouton d’une page Web.</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Interaction client-serveur. Requêtes HTTP, réponses du serveur</td>
-<td>Distinguer ce qui est exécuté sur le client ou sur le serveur et dans quel ordre. Distinguer ce qui est mémorisé dans le client et retransmis au serveur. Reconnaître quand et pourquoi la transmission est chiffrée.</td>
-<td>Il s’agit de faire le lien avec ce qui a été vu en classe de seconde et d’expliquer comment on peut passer des paramètres à un site grâce au protocole HTTP.</td>
-</tr>
-<tr class="even">
-<td>Formulaire d’une page Web</td>
-<td>Analyser le fonctionnement d’un formulaire simple. Distinguer les transmissions de paramètres par les requêtes POST ou GET.</td>
-<td>Discuter les deux types de requêtes selon le type des valeurs à transmettre et/ou leur confidentialité.</td>
-</tr>
-</tbody>
-</table>
+<!-- Introduction avec historique -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/langfr-800px-CSS3_logo_and_wordmark.svg.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="logo CSS"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/langfr-800px-CSS3_logo_and_wordmark.svg.png" class="img-fluid figure-img" style="width:15.0%" alt="logo CSS"></a></p>
+<figcaption>logo CSS</figcaption>
+</figure>
+</div>
+<p>Le principe du couple HTML/CSS est de bien séparer la définition du <strong>contenu</strong> d’une page Web de la définition de son <strong>apparence</strong>.</p>
+<p>Ce langage est apparu au milieu des années 1990 et les règles CSS sont couramment utilisées et reconnues par les navigateurs depuis le début des années 2000.</p>
+<p>L’un des objectifs majeurs des CSS est de permettre la mise en forme en dehors du code HTML. Il est par exemple possible de ne décrire que la structure d’un document en HTML, et de décrire toute la présentation dans une feuille de style CSS séparée. Les styles sont appliqués au dernier moment, dans le navigateur web des visiteurs qui consultent le document. Cette séparation fournit un certain nombre de bénéfices, permettant d’améliorer l’accessibilité, de changer plus facilement de présentation, et de réduire la complexité de l’architecture d’un document.</p>
+<p>Ainsi, les avantages des feuilles de style sont multiples :</p>
+<ul>
+<li>La structure du document et la présentation peuvent être gérées dans des fichiers séparés ;</li>
+<li>La conception d’un document se fait dans un premier temps sans se soucier de la présentation, ce qui permet d’être plus efficace ;</li>
+<li>Dans le cas d’un site web, la présentation est uniformisée : les documents (pages HTML) font référence aux mêmes feuilles de styles. Cette caractéristique permet de plus une remise en forme rapide de l’aspect visuel ;</li>
+<li>Un même document peut donner le choix entre plusieurs feuilles de style, par exemple une pour l’impression et une pour la lecture à l’écran. Certains navigateurs web permettent au visiteur de choisir un style parmi plusieurs ;</li>
+<li>Le code HTML est considérablement réduit en taille et en complexité, puisqu’il ne contient plus de balises ni d’attributs de présentation.</li>
+</ul>
+<section id="structure-dune-règle-css" class="level2">
+<h2 class="anchored" data-anchor-id="structure-dune-règle-css">1. Structure d’une règle CSS</h2>
+<p>CSS est un langage basé sur des règles — on définit des règles de styles destinées à des éléments ou des groupes d’éléments particuliers dans la page. Par exemple, « Je veux que le titre principal de ma page s’affiche en rouge en gros caractères. »</p>
+<p>Dans le code suivant, une règle CSS élémentaire réalise cette mise en forme :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>h1 {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="regleCSS.drawio.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="regleCSS.drawio.svg" class="img-fluid"></a></p>
+<p>La règle commence par un <strong>sélecteur</strong>, l’élément HTML mis en forme. Ici, le style s’applique aux titres de niveau 1 (<code>&lt;h1&gt;</code>).</p>
+<p>Suivent <strong>une paire d’accolades</strong> { } à l’intérieur desquelles on trouve une ou plusieurs déclarations, sous la forme d’une paire <code>propriété: valeur</code>. Chaque paire précise une propriété de l’élément sélectionné, suivie de la valeur choisie pour cette propriété ; la propriété et la valeur sont <strong>séparées par deux points</strong>. Chaque déclaration <strong>se termine par un point-virgule</strong>. À chaque propriété définie par CSS correspondent différentes valeurs possibles. Dans l’exemple, la propriété <code>color</code> peut prendre différentes valeurs. La propriété <code>font-size</code> accepte différentes tailles comme valeurs.</p>
+<p>Une feuille de style CSS est constituée d’une succession de telles règles :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>h1 {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>p {</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Le lien entre le fichier HTML et la feuille de style CSS est fait dans le fichier HTML en insérant un élément <code>&lt;link&gt;</code> dans la section <code>&lt;head&gt;</code> de la page :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"styles.css"</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Une même feuille de style peut ainsi servir à plusieurs fichiers HTML.</p>
+</section>
+<section id="différents-types-de-sélecteurs" class="level2">
+<h2 class="anchored" data-anchor-id="différents-types-de-sélecteurs">2. Différents types de sélecteurs</h2>
+<p>Le sélecteur peut être :</p>
+<ul>
+<li><p>le nom d’une balise : toutes les balises de ce type sont alors affectées par la règle CSS ;</p></li>
+<li><p>plusieurs noms de balise séparés par une virgule pour sélectionner toutes les balises de tous ces types ;</p></li>
+<li><p>un identifiant précédé du symbole <code>#</code> pour sélectionner <strong>l’unique</strong> élément HTML possédant cet identifiant ;</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#mon-id</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">background-color</span><span class="ch">:</span> <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>une classe précédée d’un point <code>.</code>pour sélectionner <strong>tous</strong> les éléments HTML possédant cette classe ;</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.ma_classe</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">background-color</span><span class="ch">:</span> <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+<p>Beaucoup d’autres possibilités existent, se reporter aux ressources indiquées en bas de page pour approfondir.</p>
+<p>Citons juste un exemple de <strong>pseudo-classe</strong> : la règle ci-dessous ne s’appliquera par exemple aux liens (balise <code>&lt;a&gt;</code>) que lorsque la souris les survolera :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a<span class="in">:hover</span> {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="les-grands-types-de-mise-en-forme" class="level2">
+<h2 class="anchored" data-anchor-id="les-grands-types-de-mise-en-forme">3. Les grands types de mise en forme</h2>
+<p>Les règles CSS permettent en particulier :</p>
+<ul>
+<li>La mise en forme basique du texte : couleur, taille, alignement, police de caractères, …</li>
+<li>La mise en forme globale des paragraphes et des différents blocs de contenu à travers le modèle de boîte.</li>
+<li>L’alignement des images, des divers éléments.</li>
+</ul>
+<p>Plus précisément, la notion de modèle de boîte est importante à comprendre.</p>
+<p>En CSS, tout élément est contenu dans une boîte.</p>
+<p>Pour une boîte de type bloc, toute la largeur disponible est utilisée et il est possible de définir des marges :</p>
+<ul>
+<li>extérieures avec les propriétés <code>margin</code>, <code>margin-left</code>, <code>margin-top</code>, etc.</li>
+<li>intérieures avec les propriétés <code>padding</code>, <code>padding-left</code>, <code>padding-top</code>, etc.</li>
+</ul>
+<p>Les boîtes peuvent aussi recevoir une bordure grâce à la propriété <code>border</code>.</p>
+<p>Les éléments HTML <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;em&gt;</code> et <code>&lt;strong&gt;</code> sont des éléments qui s’affichent “en ligne” par défaut. Pour leur attribuer des propriétés d’éléments de type bloc, on peut utiliser la propriété <code>display: block;</code>.</p>
+<p>La figure ci-dessous illustre la différence entre les propriétés <code>margin</code> et <code>padding</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="box-model-devtools.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="modèle de boîtes"><img src="box-model-devtools.png" class="img-fluid figure-img" alt="modèle de boîtes"></a></p>
+<figcaption>modèle de boîtes</figcaption>
+</figure>
+</div>
+</section>
+<section id="utilisation-des-outils-de-développement-du-navigateur" class="level2">
+<h2 class="anchored" data-anchor-id="utilisation-des-outils-de-développement-du-navigateur">4. Utilisation des outils de développement du navigateur</h2>
+<p>Les navigateurs modernes possèdent une fonctionnalité bien utile : les outils de développement, usuellement activés en appuyant sur la touche F12.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="devtools.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="outils de développement"><img src="devtools.png" class="img-fluid figure-img" style="width:70.0%" alt="outils de développement"></a></p>
+<figcaption>outils de développement</figcaption>
+</figure>
+</div>
+<p>On peut, à partir de cet outil, modifier les règles CSS du document afficher et voir de manière interactive les effets produits. Cet outil sera également utile pour l’utilisation de scripts Javascript dans la page Web.</p>
+</section>
+<section id="ressources-pour-approfondir" class="level2">
+<h2 class="anchored" data-anchor-id="ressources-pour-approfondir">5. Ressources pour approfondir</h2>
+<p>Pour aller plus loin avec le langage CSS :</p>
+<ul>
+<li>Excellente ressource pour apprendre le HTML, le CSS et JavaScript : <a href="https://developer.mozilla.org/fr/" target="_blank">MDN Web Docs de Mozilla</a>. Cerise sur le gâteau : le site est disponible en français.</li>
+<li>Incontournable, mais en anglais, les tutoriels de <a href="https://www.w3schools.com/" target="_blank">w3Schools</a>.</li>
+<li>Le cours classique, gratuit et en français du site <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3" target="_blank">OpenClassroom</a>.</li>
+</ul>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">logo CSS</span>
+<span class="glightbox-desc lightbox-desc-3">modèle de boîtes</span>
+<span class="glightbox-desc lightbox-desc-4">outils de développement</span>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1627,13 +1747,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../18_html/ref_HTML.html" class="pagination-link  aria-label=" référence="" des="" principales="" balises="" html"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Référence des principales balises HTML</span>
+      <a href="../19_css/acti2_CSS.html" class="pagination-link  aria-label=" activité="" :="" le="" couple="" html="" css"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Activité : Le couple HTML/CSS</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../19_css/acti2_CSS.html" class="pagination-link" aria-label="Activité 2 : Le couple HTML/CSS">
-        <span class="nav-page-text">Activité 2 : Le couple HTML/CSS</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../22_tables/index.html" class="pagination-link" aria-label="S7-Traitement de données en tables">
+        <span class="nav-page-text">S7-Traitement de données en tables</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1651,7 +1771,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1669,6 +1789,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

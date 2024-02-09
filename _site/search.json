@@ -254,9 +254,14 @@
   {
     "objectID": "19_css/index.html",
     "href": "19_css/index.html",
-    "title": "06-Interactions Homme-Machine sur le web",
+    "title": "Programme",
     "section": "",
-    "text": "Lors de la navigation sur le Web, les internautes interagissent avec leur machine par le biais des pages Web.\nL’Interface Homme-Machine (IHM) repose sur la gestion d’événements associés à des éléments graphiques munis de méthodes algorithmiques.\nLa compréhension du dialogue client-serveur déjà abordé en classe de seconde est consolidée, sur des exemples simples, en identifiant les requêtes du client, les calculs puis les réponses du serveur traitées par le client.\nIl ne s’agit pas de décrire exhaustivement les différents éléments disponibles, ni de développer une expertise dans les langages qui permettent de mettre en œuvre le dialogue tels que PHP ou JavaScript.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nModalités de l’interaction entre l’homme et la machine Événements\nIdentifier les différents composants graphiques permettant d’interagir avec une application Web. Identifier les événements que les fonctions associées aux différents composants graphiques sont capables de traiter.\nIl s’agit d’examiner le code HTML d’une page comprenant des composants graphiques et de distinguer ce qui relève de la description des composants graphiques en HTML de leur comportement (réaction aux événements) programmé par exemple en JavaScript.\n\n\nInteraction avec l’utilisateur dans une page Web\nAnalyser et modifier les méthodes exécutées lors d’un clic sur un bouton d’une page Web.\n\n\n\nInteraction client-serveur. Requêtes HTTP, réponses du serveur\nDistinguer ce qui est exécuté sur le client ou sur le serveur et dans quel ordre. Distinguer ce qui est mémorisé dans le client et retransmis au serveur. Reconnaître quand et pourquoi la transmission est chiffrée.\nIl s’agit de faire le lien avec ce qui a été vu en classe de seconde et d’expliquer comment on peut passer des paramètres à un site grâce au protocole HTTP.\n\n\nFormulaire d’une page Web\nAnalyser le fonctionnement d’un formulaire simple. Distinguer les transmissions de paramètres par les requêtes POST ou GET.\nDiscuter les deux types de requêtes selon le type des valeurs à transmettre et/ou leur confidentialité."
+    "text": "Lors de la navigation sur le Web, les internautes interagissent avec leur machine par le biais des pages Web.\nL’Interface Homme-Machine (IHM) repose sur la gestion d’événements associés à des éléments graphiques munis de méthodes algorithmiques.\nLa compréhension du dialogue client-serveur déjà abordé en classe de seconde est consolidée, sur des exemples simples, en identifiant les requêtes du client, les calculs puis les réponses du serveur traitées par le client.\nIl ne s’agit pas de décrire exhaustivement les différents éléments disponibles, ni de développer une expertise dans les langages qui permettent de mettre en œuvre le dialogue tels que PHP ou JavaScript.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nModalités de l’interaction entre l’homme et la machine Événements\nIdentifier les différents composants graphiques permettant d’interagir avec une application Web. Identifier les événements que les fonctions associées aux différents composants graphiques sont capables de traiter.\nIl s’agit d’examiner le code HTML d’une page comprenant des composants graphiques et de distinguer ce qui relève de la description des composants graphiques en HTML de leur comportement (réaction aux événements) programmé par exemple en JavaScript.\n\n\nInteraction avec l’utilisateur dans une page Web\nAnalyser et modifier les méthodes exécutées lors d’un clic sur un bouton d’une page Web.\n\n\n\nInteraction client-serveur. Requêtes HTTP, réponses du serveur\nDistinguer ce qui est exécuté sur le client ou sur le serveur et dans quel ordre. Distinguer ce qui est mémorisé dans le client et retransmis au serveur. Reconnaître quand et pourquoi la transmission est chiffrée.\nIl s’agit de faire le lien avec ce qui a été vu en classe de seconde et d’expliquer comment on peut passer des paramètres à un site grâce au protocole HTTP.\n\n\nFormulaire d’une page Web\nAnalyser le fonctionnement d’un formulaire simple. Distinguer les transmissions de paramètres par les requêtes POST ou GET.\nDiscuter les deux types de requêtes selon le type des valeurs à transmettre et/ou leur confidentialité.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 19 - Le couple HTML / CSS",
+      "Programme"
+    ]
   },
   {
     "objectID": "19_css/index.html#le-programme",
@@ -275,37 +280,62 @@
   {
     "objectID": "19_css/acti2_CSS.html",
     "href": "19_css/acti2_CSS.html",
-    "title": "Activité 2 : Le couple HTML/CSS",
+    "title": "Activité : Le couple HTML/CSS",
     "section": "",
-    "text": "!!! danger “Objectifs de cette activité” À l’issue de cette activité, vous saurez :\nPour cette activité, on utilisera de préférence le navigateur Firefox.\n!!! info CSS signifie Cascading Style Sheet (feuilles de style en cascade). CSS est le langage utilisé pour coder le style des pages Web (couleurs, taille des caractères, alignements, etc.). CSS, tout comme HTML, n’est pas un langage de programmation."
+    "text": "Objectifs de cette activité\n\n\n\nÀ l’issue de cette activité, vous saurez :\n\ncomment est codée la mise en page et le style d’une page Web ;\nreconnaître quelques exemples d’instructions CSS ;\ncréer une feuille de style et l’appliquer à une page HTML.\nPour cette activité, on utilisera de préférence le navigateur Firefox.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 19 - Le couple HTML / CSS",
+      "Activité : Le couple HTML/CSS"
+    ]
   },
   {
     "objectID": "19_css/acti2_CSS.html#partie-1.-observation-dune-page-web-stylée",
     "href": "19_css/acti2_CSS.html#partie-1.-observation-dune-page-web-stylée",
-    "title": "Activité 2 : Le couple HTML/CSS",
+    "title": "Activité : Le couple HTML/CSS",
     "section": "Partie 1. Observation d’une page Web stylée",
-    "text": "Partie 1. Observation d’une page Web stylée\n\nOuvrir dans un nouvel onglet la page suivante : Tim_Berners_css.html. La page qui s’affiche est à peu près la même que celle que vous avez analysée dans l’activité 1, mais avec une application de différents styles.\nFaire un clic droit dans la page et cliquer sur “Code source de la page” pour faire apparaître la page HTML source. Quels sont les principaux changements ?\nDans la balise &lt;head&gt; de la page se trouve un lien vers la feuille de style CSS de la page. Ouvrir cette feuille dans un nouvel onglet et observer le code CSS définissant le style de la page Web.\nDécrire en quelques mots la syntaxe CSS et en relever les règles de base.\nRechercher, en comparant les fichiers CSS et HTML, le rôle des instructions .en_couleur et #titres et où elles s’appliquent."
+    "text": "Partie 1. Observation d’une page Web stylée\n\nOuvrir dans un nouvel onglet la page suivante : Tim_Berners_css.html. La page qui s’affiche est à peu près la même que celle que vous avez analysée dans l’activité 1, mais avec une application de différents styles.\nFaire un clic droit dans la page et cliquer sur “Code source de la page” pour faire apparaître la page HTML source. Quels sont les principaux changements ?\nDans la balise &lt;head&gt; de la page se trouve un lien vers la feuille de style CSS de la page. Ouvrir cette feuille dans un nouvel onglet et observer le code CSS définissant le style de la page Web.\nDécrire en quelques mots la syntaxe CSS et en relever les règles de base.\nRechercher, en comparant les fichiers CSS et HTML, le rôle des instructions .en_couleur et #titres et où elles s’appliquent.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 19 - Le couple HTML / CSS",
+      "Activité : Le couple HTML/CSS"
+    ]
   },
   {
     "objectID": "19_css/acti2_CSS.html#partie-2.-modification-du-fichier-css",
     "href": "19_css/acti2_CSS.html#partie-2.-modification-du-fichier-css",
-    "title": "Activité 2 : Le couple HTML/CSS",
+    "title": "Activité : Le couple HTML/CSS",
     "section": "Partie 2. Modification du fichier CSS",
-    "text": "Partie 2. Modification du fichier CSS\n\nOuvrir l’activité Replit correspondant à cette partie.\nVous trouverez la page Web et sa feuille de style. Modifier la feuille de style (et si nécessaire la page Web) :\n\nChanger les couleurs d’arrière-plan ;\nChanger la couleur du texte de tout le contenu de la section qui a pour identifiant “introduction” ;\nChanger la taille du texte de tous les éléments qui possèdent la classe “en_couleur” ;\nSupprimer l’indentation des paragraphes ;\nChanger les puces de la liste : vous utiliserez pour cela l’attribut list-style-type: square; ;\nDans la liste numérotée, changer les numéros en chiffres romains majuscules : vous utiliserez pour cela l’attribut list-style-type: upper-roman;.\n\nUne fois toutes ces modifications faites, soumettre votre travail."
+    "text": "Partie 2. Modification du fichier CSS\n\nOuvrir l’activité Capytale correspondant à cette partie.\nVous trouverez la page Web et sa feuille de style. Modifier la feuille de style (et si nécessaire la page Web) :\n\nChanger les couleurs d’arrière-plan ;\nChanger la couleur du texte de tout le contenu de la section qui a pour identifiant “introduction” ;\nChanger la taille du texte de tous les éléments qui possèdent la classe “en_couleur” ;\nSupprimer l’indentation des paragraphes ;\nChanger les puces de la liste : vous utiliserez pour cela l’attribut list-style-type: square; ;\nDans la liste numérotée, changer les numéros en chiffres romains majuscules : vous utiliserez pour cela l’attribut list-style-type: upper-roman;.\n\nUne fois toutes ces modifications faites, enregistrer votre travail.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 19 - Le couple HTML / CSS",
+      "Activité : Le couple HTML/CSS"
+    ]
   },
   {
     "objectID": "19_css/acti2_CSS.html#partie-3.-création-dun-fichier-css",
     "href": "19_css/acti2_CSS.html#partie-3.-création-dun-fichier-css",
-    "title": "Activité 2 : Le couple HTML/CSS",
+    "title": "Activité : Le couple HTML/CSS",
     "section": "Partie 3. Création d’un fichier CSS",
-    "text": "Partie 3. Création d’un fichier CSS\nDans cette partie, vous allez reprendre la page Web créée lors de l’activité sur le langage HTML et créer une feuille de style afin de la mettre en forme. Quand vous serez satisfait du résultat, soumettre votre travail dans le Replit prévu à cet effet."
+    "text": "Partie 3. Création d’un fichier CSS\nDans cette partie, vous allez reprendre la page Web créée lors de l’activité sur le langage HTML et créer une feuille de style afin de la mettre en forme. Quand vous serez satisfait du résultat, enregistrer votre travail dans l’activité Capytale prévue à cet effet.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 19 - Le couple HTML / CSS",
+      "Activité : Le couple HTML/CSS"
+    ]
   },
   {
     "objectID": "18_html/index.html",
     "href": "18_html/index.html",
-    "title": "06-Interactions Homme-Machine sur le web",
+    "title": "Programme",
     "section": "",
-    "text": "Lors de la navigation sur le Web, les internautes interagissent avec leur machine par le biais des pages Web.\nL’Interface Homme-Machine (IHM) repose sur la gestion d’événements associés à des éléments graphiques munis de méthodes algorithmiques.\nLa compréhension du dialogue client-serveur déjà abordé en classe de seconde est consolidée, sur des exemples simples, en identifiant les requêtes du client, les calculs puis les réponses du serveur traitées par le client.\nIl ne s’agit pas de décrire exhaustivement les différents éléments disponibles, ni de développer une expertise dans les langages qui permettent de mettre en œuvre le dialogue tels que PHP ou JavaScript.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nModalités de l’interaction entre l’homme et la machine Événements\nIdentifier les différents composants graphiques permettant d’interagir avec une application Web. Identifier les événements que les fonctions associées aux différents composants graphiques sont capables de traiter.\nIl s’agit d’examiner le code HTML d’une page comprenant des composants graphiques et de distinguer ce qui relève de la description des composants graphiques en HTML de leur comportement (réaction aux événements) programmé par exemple en JavaScript.\n\n\nInteraction avec l’utilisateur dans une page Web\nAnalyser et modifier les méthodes exécutées lors d’un clic sur un bouton d’une page Web.\n\n\n\nInteraction client-serveur. Requêtes HTTP, réponses du serveur\nDistinguer ce qui est exécuté sur le client ou sur le serveur et dans quel ordre. Distinguer ce qui est mémorisé dans le client et retransmis au serveur. Reconnaître quand et pourquoi la transmission est chiffrée.\nIl s’agit de faire le lien avec ce qui a été vu en classe de seconde et d’expliquer comment on peut passer des paramètres à un site grâce au protocole HTTP.\n\n\nFormulaire d’une page Web\nAnalyser le fonctionnement d’un formulaire simple. Distinguer les transmissions de paramètres par les requêtes POST ou GET.\nDiscuter les deux types de requêtes selon le type des valeurs à transmettre et/ou leur confidentialité."
+    "text": "Lors de la navigation sur le Web, les internautes interagissent avec leur machine par le biais des pages Web.\nL’Interface Homme-Machine (IHM) repose sur la gestion d’événements associés à des éléments graphiques munis de méthodes algorithmiques.\nLa compréhension du dialogue client-serveur déjà abordé en classe de seconde est consolidée, sur des exemples simples, en identifiant les requêtes du client, les calculs puis les réponses du serveur traitées par le client.\nIl ne s’agit pas de décrire exhaustivement les différents éléments disponibles, ni de développer une expertise dans les langages qui permettent de mettre en œuvre le dialogue tels que PHP ou JavaScript.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nModalités de l’interaction entre l’homme et la machine Événements\nIdentifier les différents composants graphiques permettant d’interagir avec une application Web. Identifier les événements que les fonctions associées aux différents composants graphiques sont capables de traiter.\nIl s’agit d’examiner le code HTML d’une page comprenant des composants graphiques et de distinguer ce qui relève de la description des composants graphiques en HTML de leur comportement (réaction aux événements) programmé par exemple en JavaScript.\n\n\nInteraction avec l’utilisateur dans une page Web\nAnalyser et modifier les méthodes exécutées lors d’un clic sur un bouton d’une page Web.\n\n\n\nInteraction client-serveur. Requêtes HTTP, réponses du serveur\nDistinguer ce qui est exécuté sur le client ou sur le serveur et dans quel ordre. Distinguer ce qui est mémorisé dans le client et retransmis au serveur. Reconnaître quand et pourquoi la transmission est chiffrée.\nIl s’agit de faire le lien avec ce qui a été vu en classe de seconde et d’expliquer comment on peut passer des paramètres à un site grâce au protocole HTTP.\n\n\nFormulaire d’une page Web\nAnalyser le fonctionnement d’un formulaire simple. Distinguer les transmissions de paramètres par les requêtes POST ou GET.\nDiscuter les deux types de requêtes selon le type des valeurs à transmettre et/ou leur confidentialité.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Programme"
+    ]
   },
   {
     "objectID": "18_html/index.html#le-programme",
@@ -324,30 +354,50 @@
   {
     "objectID": "18_html/acti1_HTML.html",
     "href": "18_html/acti1_HTML.html",
-    "title": "Activité 1 : Page web et langage HTML",
+    "title": "Activité : Page web et langage HTML",
     "section": "",
-    "text": "!!! danger “Objectifs de cette activité” À l’issue de cette activité, vous saurez :\nPour cette activité, on utilisera de préférence le navigateur Firefox.\n!!! info HTML signifie Hypertext Markup Language. Il s’agit du langage informatique utilisé pour coder les pages Web. Ce n’est pas un langage de programmation, mais un langage de description."
+    "text": "Objectifs de cette activité\n\n\n\nÀ l’issue de cette activité, vous saurez :\n\ncomment est codée une page web simple ;\nreconnaître les principales balises HTML ;\ncréer une page HTML simple.\nPour cette activité, on utilisera de préférence le navigateur Firefox.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Activité : Page web et langage HTML"
+    ]
   },
   {
     "objectID": "18_html/acti1_HTML.html#partie-1.-observation-dune-page-html-simple",
     "href": "18_html/acti1_HTML.html#partie-1.-observation-dune-page-html-simple",
-    "title": "Activité 1 : Page web et langage HTML",
+    "title": "Activité : Page web et langage HTML",
     "section": "Partie 1. Observation d’une page HTML simple",
-    "text": "Partie 1. Observation d’une page HTML simple\n\nOuvrir dans un nouvel onglet la page suivante : Tim_Berners.html. La page qui s’affiche est une page HTML contenant des informations textuelles avec une mise en forme (titres, paragraphes, liste à puce, liste numérotée, caractères gras, italiques, …), une image et un extrait de vidéo.\nFaire un clic droit dans la page et cliquer sur “Code source de la page” pour faire apparaître la page HTML source. Le fichier qui s’ouvre est un fichier texte. Il contient le descriptif de la page Web en langage HTML : c’est sous cette forme que le navigateur reçoit la page Web. Il interprète ensuite le langage HTML pour produire l’affichage obtenu à la question précédente.\n!!! abstract “À savoir” Lorsque vous chargez la page web, celle-ci se trouve physiquement enregistrée sous forme de fichier HTML sur un serveur distant (un serveur est un ordinateur destiné à interagir avec d’autres ordinateurs, le plus souvent dans le contexte d’un réseau).\n Cette page, une fois reçue par votre navigateur dans l'ordinateur local, appelé **client**, est lue par le navigateur qui interprète le langage HTML et produit l'affichage correspondant.\n\n ![image40](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png)\n\n Il s'agit d'un premier exemple de dialogue **client-serveur**, cette notion sera approfondie dans la suite.\nObserver le code HTML. Il est composé de balises, la plupart de la forme &lt;balise&gt;...&lt;/balise&gt;. Identifier les balises qui définissent :\n\nun titre ;\nun paragraphe ;\ndu texte en gras (pour montrer l’importance d’un mot ou d’un groupe de mots) ;\ndu texte en italique (pour insister sur un mot ou un groupe de mots) ;\nune liste à puces ;\nune liste numérotée.\n\nQuelles balises permettent :\n\nd’insérer une image ;\nd’insérer une vidéo.\n\nQuel semble être le rôle des balises &lt;html&gt;, &lt;head&gt; et &lt;body&gt; ?\nCertaines balises ne semblent servir à rien ! Lesquelles ? Nous verrons plus tard leur utilité éventuelle."
+    "text": "Partie 1. Observation d’une page HTML simple\n\nOuvrir dans un nouvel onglet la page suivante : Tim_Berners.html. La page qui s’affiche est une page HTML contenant des informations textuelles avec une mise en forme (titres, paragraphes, liste à puce, liste numérotée, caractères gras, italiques, …), une image et un extrait de vidéo.\nFaire un clic droit dans la page et cliquer sur “Code source de la page” pour faire apparaître la page HTML source. Le fichier qui s’ouvre est un fichier texte. Il contient le descriptif de la page Web en langage HTML : c’est sous cette forme que le navigateur reçoit la page Web. Il interprète ensuite le langage HTML pour produire l’affichage obtenu à la question précédente.\n\n\n\n\n\n\n\nÀ savoir\n\n\n\nLorsque vous chargez la page web, celle-ci se trouve physiquement enregistrée sous forme de fichier HTML sur un serveur distant (un serveur est un ordinateur destiné à interagir avec d’autres ordinateurs, le plus souvent dans le contexte d’un réseau).\nCette page, une fois reçue par votre navigateur dans l’ordinateur local, appelé client, est lue par le navigateur qui interprète le langage HTML et produit l’affichage correspondant.\n\nIl s’agit d’un premier exemple de dialogue client-serveur, cette notion sera approfondie dans la suite.\n\n\n\nObserver le code HTML. Il est composé de balises, la plupart de la forme &lt;balise&gt;...&lt;/balise&gt;. Identifier les balises qui définissent :\n\nun titre ;\nun paragraphe ;\ndu texte en gras (pour montrer l’importance d’un mot ou d’un groupe de mots) ;\ndu texte en italique (pour insister sur un mot ou un groupe de mots) ;\nune liste à puces ;\nune liste numérotée.\n\nQuelles balises permettent :\n\nd’insérer une image ;\nd’insérer une vidéo.\n\nQuel semble être le rôle des balises &lt;html&gt;, &lt;head&gt; et &lt;body&gt; ?\nCertaines balises ne semblent servir à rien ! Lesquelles ? Nous verrons plus tard leur utilité éventuelle.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Activité : Page web et langage HTML"
+    ]
   },
   {
     "objectID": "18_html/acti1_HTML.html#partie-2.-modification-dune-page-html-simple",
     "href": "18_html/acti1_HTML.html#partie-2.-modification-dune-page-html-simple",
-    "title": "Activité 1 : Page web et langage HTML",
+    "title": "Activité : Page web et langage HTML",
     "section": "Partie 2. Modification d’une page HTML simple",
-    "text": "Partie 2. Modification d’une page HTML simple\n\nOuvrir l’activité Replit correspondant à cette partie : cliquez ici !.\nVous retrouvez le code HTML de la page Web précédente ainsi que son rendu dans le navigateur intégré à Replit. Modifier la page Web afin qu’elle remplisse les spécifications suivantes :\n\nAjouter une deuxième photo différente de Timothy John Berners-Lee.\nAjouter un court paragraphe qui résume la biographie de Timothy John Berners-Lee. Ce paragraphe sera précédé d’un titre de niveau 2. Il contiendra certains mots sur lesquels vous voulez insister et d’autres dont vous montrerez l’importance.\nTransformer la liste à puce en liste numérotée et vice-versa.\nSupprimer la vidéo.\n\nUne fois toutes ces modifications effectuées, soumettre votre travail dans Replit."
+    "text": "Partie 2. Modification d’une page HTML simple\n\nOuvrir l’activité Capytale correspondant à cette partie : cliquez ici !.\nVous retrouvez le code HTML de la page Web précédente ainsi que son rendu dans le navigateur intégré à Capytale. Modifier la page Web afin qu’elle remplisse les spécifications suivantes :\n\nAjouter une deuxième photo différente de Timothy John Berners-Lee.\nAjouter un court paragraphe qui résume la biographie de Timothy John Berners-Lee. Ce paragraphe sera précédé d’un titre de niveau 2. Il contiendra certains mots sur lesquels vous voulez insister et d’autres dont vous montrerez l’importance.\nTransformer la liste à puce en liste numérotée et vice-versa.\nSupprimer la vidéo.\n\nUne fois toutes ces modifications effectuées, enregistrer votre travail dans Capytale.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Activité : Page web et langage HTML"
+    ]
   },
   {
     "objectID": "18_html/acti1_HTML.html#partie-3.-création-dune-page-web",
     "href": "18_html/acti1_HTML.html#partie-3.-création-dune-page-web",
-    "title": "Activité 1 : Page web et langage HTML",
+    "title": "Activité : Page web et langage HTML",
     "section": "Partie 3. Création d’une page Web",
-    "text": "Partie 3. Création d’une page Web\nUtiliser les observations faites au cours de cette activité pour créer une page Web sur le sujet de votre choix.\nCette page devra comporter différentes balises, des images, des listes, etc.\nEnregistrer votre travail dans Replit en suivant ce lien et le soumettre."
+    "text": "Partie 3. Création d’une page Web\nUtiliser les observations faites au cours de cette activité pour créer une page Web sur le sujet de votre choix.\nCette page devra comporter différentes balises, des images, des listes, etc.\nEnregistrer votre travail dans Capytale en suivant ce lien et le soumettre.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Activité : Page web et langage HTML"
+    ]
   },
   {
     "objectID": "17_recherche/recherche_cours.html",
@@ -3663,63 +3713,108 @@
     "href": "18_html/ref_HTML.html",
     "title": "Référence des principales balises HTML",
     "section": "",
-    "text": "Cette page répertorie les éléments HTML principaux, qui sont créés à l’aide de balises. Ils sont regroupés par fonction pour vous aider à trouver facilement ce que vous avez en tête.\nPour une liste complète, reportez-vous au site de Mozilla (excellente ressource en français). Les informations de cette page sont extraites de ce site."
+    "text": "Cette page répertorie les éléments HTML principaux, qui sont créés à l’aide de balises. Ils sont regroupés par fonction pour vous aider à trouver facilement ce que vous avez en tête.\nPour une liste complète, reportez-vous au site de Mozilla (excellente ressource en français). Les informations de cette page sont extraites de ce site.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Référence des principales balises HTML"
+    ]
   },
   {
     "objectID": "18_html/ref_HTML.html#racine-principale",
     "href": "18_html/ref_HTML.html#racine-principale",
     "title": "Référence des principales balises HTML",
     "section": "Racine principale",
-    "text": "Racine principale\n!!! danger “Principales balises HTML”\n| **Balise** | **Description** |\n|--------|--------|\n|`&lt;html&gt;`|   L'élément HTML **`&lt;html&gt;`** représente la racine d'un document HTML. Tout autre élément du document doit être un descendant de cet élément.|"
+    "text": "Racine principale\n\n\n\n\n\n\nPrincipales balises HTML\n\n\n\n\n\n\n\n\n\n\nBalise\nDescription\n\n\n\n\n&lt;html&gt;\nL’élément HTML &lt;html&gt; représente la racine d’un document HTML. Tout autre élément du document doit être un descendant de cet élément.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Référence des principales balises HTML"
+    ]
   },
   {
     "objectID": "18_html/ref_HTML.html#métadonnées",
     "href": "18_html/ref_HTML.html#métadonnées",
     "title": "Référence des principales balises HTML",
     "section": "Métadonnées",
-    "text": "Métadonnées\nLes métadonnées contiennent des informations à propos de la page. Elles comprennent des informations sur les styles, les scripts et les données qui aident les programmes (moteur de recherche, navigateurs, etc.) à utiliser et à rendre la page. Les métadonnées relatives aux styles et aux scripts peuvent être définies dans la page ou renvoyer à un autre fichier contenant ces informations.\n!!! danger “Principales balises HTML”\n| **Balise** | **Description** |\n|--------|--------|\n|`&lt;head&gt;`|     L'élément HTML **`&lt;head&gt;`** fournit des informations générales (métadonnées) sur le document, incluant son titre et des liens ou des définitions vers des scripts et feuilles de style.\n|`&lt;link&gt;`|     L'élément HTML **`&lt;link&gt;`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers une feuille de style, vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.\n|`&lt;style&gt;`|   L'élément HTML **`&lt;style&gt;`** contient des informations de mise en forme pour un document ou une partie d'un document. Par défaut, les instructions de mise en forme écrites dans cet élément sont écrites en CSS.\n|`&lt;title&gt;`|   L'élément **`&lt;title&gt;`** définit le titre du document (qui est affiché dans la barre de titre du navigateur ou dans l'onglet de la page). Cet élément ne peut contenir que du texte, les balises qu'il contiendrait seraient ignorées."
+    "text": "Métadonnées\nLes métadonnées contiennent des informations à propos de la page. Elles comprennent des informations sur les styles, les scripts et les données qui aident les programmes (moteur de recherche, navigateurs, etc.) à utiliser et à rendre la page. Les métadonnées relatives aux styles et aux scripts peuvent être définies dans la page ou renvoyer à un autre fichier contenant ces informations.\n\n\n\n\n\n\nPrincipales balises HTML\n\n\n\n\n\n\n\n\n\n\nBalise\nDescription\n\n\n\n\n&lt;head&gt;\nL’élément HTML &lt;head&gt; fournit des informations générales (métadonnées) sur le document, incluant son titre et des liens ou des définitions vers des scripts et feuilles de style.\n\n\n&lt;link&gt;\nL’élément HTML &lt;link&gt; définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers une feuille de style, vers les icônes utilisées en barre de titre ou comme icône d’application sur les appareils mobiles.\n\n\n&lt;style&gt;\nL’élément HTML &lt;style&gt; contient des informations de mise en forme pour un document ou une partie d’un document. Par défaut, les instructions de mise en forme écrites dans cet élément sont écrites en CSS.\n\n\n&lt;title&gt;\nL’élément &lt;title&gt; définit le titre du document (qui est affiché dans la barre de titre du navigateur ou dans l’onglet de la page). Cet élément ne peut contenir que du texte, les balises qu’il contiendrait seraient ignorées.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Référence des principales balises HTML"
+    ]
   },
   {
     "objectID": "18_html/ref_HTML.html#structure-du-document",
     "href": "18_html/ref_HTML.html#structure-du-document",
     "title": "Référence des principales balises HTML",
     "section": "Structure du document",
-    "text": "Structure du document\nOrganiser le contenu d’une page en différentes sections permet d’avoir une structure logique au sein d’un document. Grâce à ces éléments, on peut créer un plan pour la page, ajouter des titres pour identifier les sections et également gérer un en-tête et un bas de page.\nOn remarquera que, en dehors des balises de titres, ces éléments HTML ne modifient pas du tout la mise en forme du texte qu’elles contiennent. Ce sont des balises sémantiques : elles servent à donner du sens au contenu, pour le rédacteur de la page. Elles guident aussi l’indexation de la page par les moteurs de recherche.\n!!! danger “Principales balises HTML”\n| **Balise** | **Description** |\n|--------|--------|\n|`&lt;body&gt;`|   L'élément HTML **`&lt;body&gt;`** représente le contenu principal du document HTML. Il ne peut y avoir qu'un élément `&lt;body&gt;` par document.\n|`&lt;header&gt;`|L'élément HTML **`&lt;header&gt;`** représente du contenu introductif, généralement un groupe de contenu introductif ou de contenu aidant à la navigation. Il peut contenir des éléments de titre, mais aussi d'autres éléments tels qu'un logo, un formulaire de recherche, le nom d'auteur, etc.\n|`&lt;footer&gt;`| L'élément HTML **`&lt;footer&gt;`** représente le pied de page de la section ou de la racine de sectionnement la plus proche. Un élément `&lt;footer&gt;` contient habituellement des informations sur l'autrice ou l'auteur de la section, les données relatives au droit d'auteur  ou les liens vers d'autres documents en relation. \n|`&lt;h1&gt;`, `&lt;h2&gt;`, `&lt;h3&gt;`, `&lt;h4&gt;`, `&lt;h5&gt;`, `&lt;h6&gt;`|   Les éléments **`&lt;h1&gt;`** à **`&lt;h6&gt;`** représentent six niveaux de titres dans un document, `&lt;h1&gt;` est le plus important et `&lt;h6&gt;` est le moins important. Un élément de titre décrit brièvement le sujet de la section qu'il introduit.\n`&lt;main&gt;`|L'élément HTML **`&lt;main&gt;`** représente le contenu majoritaire du `body` du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document.\n|`&lt;nav&gt;`|L'élément HTML **`&lt;nav&gt;`** représente une section d'une page ayant des liens vers d'autres pages ou des fragments de cette page. Autrement dit, c'est une section destinée à la navigation dans un document .\n|`&lt;section&gt;`|L'élément HTML **`&lt;section&gt;`** représente une section générique d'un document, par exemple un groupe de contenu thématique. Une section commence généralement avec un titre."
+    "text": "Structure du document\nOrganiser le contenu d’une page en différentes sections permet d’avoir une structure logique au sein d’un document. Grâce à ces éléments, on peut créer un plan pour la page, ajouter des titres pour identifier les sections et également gérer un en-tête et un bas de page.\nOn remarquera que, en dehors des balises de titres, ces éléments HTML ne modifient pas du tout la mise en forme du texte qu’elles contiennent. Ce sont des balises sémantiques : elles servent à donner du sens au contenu, pour le rédacteur de la page. Elles guident aussi l’indexation de la page par les moteurs de recherche.\n\n\n\n\n\n\nPrincipales balises HTML\n\n\n\n\n\n\n\n\n\n\nBalise\nDescription\n\n\n\n\n&lt;body&gt;\nL’élément HTML &lt;body&gt; représente le contenu principal du document HTML. Il ne peut y avoir qu’un élément &lt;body&gt; par document.\n\n\n&lt;header&gt;\nL’élément HTML &lt;header&gt; représente du contenu introductif, généralement un groupe de contenu introductif ou de contenu aidant à la navigation. Il peut contenir des éléments de titre, mais aussi d’autres éléments tels qu’un logo, un formulaire de recherche, le nom d’auteur, etc.\n\n\n&lt;footer&gt;\nL’élément HTML &lt;footer&gt; représente le pied de page de la section ou de la racine de sectionnement la plus proche. Un élément &lt;footer&gt; contient habituellement des informations sur l’autrice ou l’auteur de la section, les données relatives au droit d’auteur ou les liens vers d’autres documents en relation.\n\n\n&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;\nLes éléments &lt;h1&gt; à &lt;h6&gt; représentent six niveaux de titres dans un document, &lt;h1&gt; est le plus important et &lt;h6&gt; est le moins important. Un élément de titre décrit brièvement le sujet de la section qu’il introduit.\n\n\n&lt;main&gt;\nL’élément HTML &lt;main&gt; représente le contenu majoritaire du body du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document.\n\n\n&lt;nav&gt;\nL’élément HTML &lt;nav&gt; représente une section d’une page ayant des liens vers d’autres pages ou des fragments de cette page. Autrement dit, c’est une section destinée à la navigation dans un document.\n\n\n&lt;section&gt;\nL’élément HTML &lt;section&gt; représente une section générique d’un document, par exemple un groupe de contenu thématique. Une section commence généralement avec un titre.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Référence des principales balises HTML"
+    ]
   },
   {
     "objectID": "18_html/ref_HTML.html#contenu-textuel",
     "href": "18_html/ref_HTML.html#contenu-textuel",
     "title": "Référence des principales balises HTML",
     "section": "Contenu textuel",
-    "text": "Contenu textuel\nLe contenu HTML textuel permet d’organiser des blocs ou des sections de contenu entre la balise ouvrante &lt;body&gt; et la balise fermante &lt;/body&gt;. Ces éléments sont cruciaux pour l’accessibilité et le référencement car ils permettent d’identifier le sens du contenu.\n!!! danger “Principales balises HTML”\n| **Balise** | **Description** |\n|-------------|-------------|\n|`&lt;blockquote&gt;`|L'élément HTML **`&lt;blockquote&gt;`**  indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation. Une URL indiquant la source de la citation peut être donnée grâce à l'attribut **`cite`** tandis qu'un texte représentant la source peut être donné via l'élément **`&lt;cite&gt;`**.\n|`&lt;dd&gt;`| L'élément HTML **`&lt;dd&gt;`** fournit la description, la définition ou la valeur du terme précédent **`&lt;dt&gt;`** dans une liste de description **`&lt;dl&gt;`**.\n|`&lt;div&gt;`| L'élément HTML **`&lt;div&gt;`**  est le conteneur générique de contenu. Il n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de CSS.\n|`&lt;dl&gt;`|L'élément HTML **`&lt;dl&gt;`** représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments **`&lt;dt&gt;`**) et leurs descriptions ou définitions (fournies par des éléments **`&lt;dd&gt;`**). On utilisera par exemple cet élément pour implémenter un glossaire.\n|`&lt;dt&gt;`| L'élément HTML **`&lt;dt&gt;`** identifie un terme dans une liste de définitions ou de descriptions. Cet élément n'apparaît qu'en tant qu'élément enfant d'un élément **`&lt;dl&gt;`** et est généralement suivi d'un élément **`&lt;dd&gt;`**. Plusieurs éléments **`&lt;dt&gt;`** qui se suivent indiqueront qu'ils partagent la définition/description fournie par le prochain élément **`&lt;dd&gt;`**.\n|`&lt;li&gt;`| L'élément HTML **`&lt;li&gt;`** est utilisé pour représenter un élément dans une liste. Il doit être contenu dans un élément parent : une liste ordonnée **`&lt;ol&gt;`**, une liste non ordonnée **`&lt;ul&gt;`** ou un menu **`&lt;menu&gt;`**. Dans les menus et les listes non ordonnées, les éléments de liste sont habituellement affichés en utilisant des puces. Dans les listes ordonnées, ils sont habituellement affichés avec compteur croissant à gauche, tel qu'un nombre ou une lettre.\n|`&lt;menu&gt;`| L'élément HTML **`&lt;menu&gt;`** est une alternative sémantique à **`&lt;ul&gt;`**, mais est traité par les navigateurs, et en termes d'accessibilité comme un élément **`&lt;ul&gt;`**. Il représente une liste d'éléments non-ordonnée (chaque élément de la liste étant représenté par un élément **`&lt;li&gt;`**).\n|`&lt;ol&gt;`|L'élément HTML **`&lt;ol&gt;`** représente une liste ordonnée. Les éléments d'une telle liste sont généralement affichés avec un indicateur ordinal pouvant prendre la forme de nombres, de lettres, de chiffres romains ou de points. La mise en forme de la numérotation n'est pas utilisée dans la description HTML mais dans la feuille de style CSS associée grâce à la propriété `list-style-type`.\n|`&lt;p&gt;`| L'élément HTML **`&lt;p&gt;`** représente un paragraphe de texte. Les paragraphes sont généralement représentés comme des blocs et séparés par un espace vertical, leur première ligne est également parfois indentée. Les paragraphes sont des éléments blocs.\n|`&lt;pre&gt;`|L'élément HTML **`&lt;pre&gt;`** représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.\n|`&lt;ul&gt;`| L'élément HTML **`&lt;ul&gt;`** représente une liste d'éléments sans ordre particulier. Il est souvent représenté par une liste à puces."
+    "text": "Contenu textuel\nLe contenu HTML textuel permet d’organiser des blocs ou des sections de contenu entre la balise ouvrante &lt;body&gt; et la balise fermante &lt;/body&gt;. Ces éléments sont cruciaux pour l’accessibilité et le référencement, car ils permettent d’identifier le sens du contenu.\n\n\n\n\n\n\nPrincipales balises HTML\n\n\n\n\n\n\n\n\n\n\nBalise\nDescription\n\n\n\n\n&lt;blockquote&gt;\nL’élément HTML &lt;blockquote&gt; indique que le texte contenu dans l’élément est une citation longue. Le texte est généralement affiché avec une indentation. Une URL indiquant la source de la citation peut être donnée grâce à l’attribut cite tandis qu’un texte représentant la source peut être donné via l’élément &lt;cite&gt;.\n\n\n&lt;dd&gt;\nL’élément HTML &lt;dd&gt; fournit la description, la définition ou la valeur du terme précédent &lt;dt&gt; dans une liste de description &lt;dl&gt;.\n\n\n&lt;div&gt;\nL’élément HTML &lt;div&gt; est le conteneur générique de contenu. Il n’a aucun effet sur le contenu ou la mise en page tant qu’il n’est pas mis en forme d’une manière quelconque à l’aide de CSS.\n\n\n&lt;dl&gt;\nL’élément HTML &lt;dl&gt; représente une liste de descriptions sous la forme d’une liste de paires associant des termes (fournis par des éléments &lt;dt&gt;) et leurs descriptions ou définitions (fournies par des éléments &lt;dd&gt;). On utilisera par exemple cet élément pour implémenter un glossaire.\n\n\n&lt;dt&gt;\nL’élément HTML &lt;dt&gt; identifie un terme dans une liste de définitions ou de descriptions. Cet élément n’apparaît qu’en tant qu’élément enfant d’un élément &lt;dl&gt; et est généralement suivi d’un élément &lt;dd&gt;. Plusieurs éléments &lt;dt&gt; qui se suivent indiqueront qu’ils partagent la définition/description fournie par le prochain élément &lt;dd&gt;.\n\n\n&lt;li&gt;\nL’élément HTML &lt;li&gt; est utilisé pour représenter un élément dans une liste. Il doit être contenu dans un élément parent : une liste ordonnée &lt;ol&gt;, une liste non ordonnée &lt;ul&gt; ou un menu &lt;menu&gt;. Dans les menus et les listes non ordonnées, les éléments de liste sont habituellement affichés en utilisant des puces. Dans les listes ordonnées, ils sont habituellement affichés avec compteur croissant à gauche, tel qu’un nombre ou une lettre.\n\n\n&lt;menu&gt;\nL’élément HTML &lt;menu&gt; est une alternative sémantique à &lt;ul&gt;, mais est traité par les navigateurs, et en termes d’accessibilité comme un élément &lt;ul&gt;. Il représente une liste d’éléments non-ordonnée (chaque élément de la liste étant représenté par un élément &lt;li&gt;).\n\n\n&lt;ol&gt;\nL’élément HTML &lt;ol&gt; représente une liste ordonnée. Les éléments d’une telle liste sont généralement affichés avec un indicateur ordinal pouvant prendre la forme de nombres, de lettres, de chiffres romains ou de points. La mise en forme de la numérotation n’est pas utilisée dans la description HTML mais dans la feuille de style CSS associée grâce à la propriété list-style-type.\n\n\n&lt;p&gt;\nL’élément HTML &lt;p&gt; représente un paragraphe de texte. Les paragraphes sont généralement représentés comme des blocs et séparés par un espace vertical, leur première ligne est également parfois indentée. Les paragraphes sont des éléments blocs.\n\n\n&lt;pre&gt;\nL’élément HTML &lt;pre&gt; représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.\n\n\n&lt;ul&gt;\nL’élément HTML &lt;ul&gt; représente une liste d’éléments sans ordre particulier. Il est souvent représenté par une liste à puces.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Référence des principales balises HTML"
+    ]
   },
   {
     "objectID": "18_html/ref_HTML.html#sémantique-du-texte-en-ligne",
     "href": "18_html/ref_HTML.html#sémantique-du-texte-en-ligne",
     "title": "Référence des principales balises HTML",
     "section": "Sémantique du texte en ligne",
-    "text": "Sémantique du texte en ligne\nLes éléments pour le texte en ligne peuvent être utilisés pour définir la signification, la structure ou la mise en forme d’un terme, d’une ligne ou d’un fragment de texte.\n!!! danger “Principales balises HTML” | Balise | Description | |——–|——–| |&lt;a&gt;| L’élément HTML &lt;a&gt; (pour ancre ou anchor en anglais), avec son attribut href, crée un lien hypertexte vers des pages web, des fichiers, des adresses e-mail, des emplacements se trouvant dans la même page, ou tout ce qu’une URL peut adresser. Le contenu de chaque élément &lt;a&gt; doit indiquer la destination du lien. Si l’attribut href est présent, appuyer sur la touche entrée en se concentrant sur l’élément &lt;a&gt; l’activera. |&lt;abbr&gt;| L’élément HTML &lt;abbr&gt; (abréviation en français) représente une abréviation ou un acronyme ; l’attribut facultatif title peut fournir une explication ou une description de l’abréviation. S’il est présent, title doit contenir cette description complète et rien d’autre. |&lt;br&gt;| L’élément HTML &lt;br&gt; crée un saut de ligne (un retour chariot) dans le texte. Il s’avère utile lorsque les sauts de ligne ont une importance (par exemple lorsqu’on écrit une adresse ou un poème). |&lt;cite&gt;| L’élément &lt;cite&gt; contient le titre d’une œuvre telle qu’un livre, une chanson, un film, une sculpture… Cet élément doit inclure le titre de l’œuvre. |&lt;code&gt;| L’élément HTML &lt;code&gt; représente un court fragment de code machine. Par défaut, l’agent utilisateur utilise une police à chasse fixe (monospace) afin d’afficher le texte contenu dans cet élément. |&lt;em&gt;| L’élément HTML &lt;em&gt; (pour emphase) est utilisé afin de marquer un texte sur lequel on veut insister. Les éléments &lt;em&gt; peuvent être imbriqués, chaque degré d’imbrication indiquant un degré d’insistance plus élevé. |&lt;i&gt;| L’élément HTML &lt;i&gt; représente un morceau de texte qui se différencie du texte principal. Cela peut par exemple être le cas pour des termes techniques, des phrases dans une langue étrangère ou encore l’expression des pensées d’un personnage. Le contenu de cet élément est généralement affiché en italique. |&lt;kbd&gt;| L’élément HTML &lt;kbd&gt; représente une plage de texte en ligne indiquant la saisie de texte par l’utilisateur à partir d’un clavier, d’une saisie vocale ou de tout autre dispositif de saisie de texte. Par convention, le user agent rend par défaut le contenu d’un élément &lt;kbd&gt; en utilisant sa police monospace, bien que cela ne soit pas requis par le standard HTML. |&lt;mark&gt;| L’élément HTML &lt;mark&gt; représente un texte marqué ou surligné à cause de sa pertinence dans le contexte. Il peut par exemple être utilisé afin d’indiquer les correspondances d’un mot-clé recherché au sein d’un document. |&lt;s&gt;| L’élément HTML &lt;s&gt; permet d’afficher du texte qui est barré car il n’est plus pertinent ou car il est obsolète. &lt;s&gt; ne doit pas être employé pour indiquer des éditions dans un document . |&lt;small&gt;| L’élément HTML &lt;small&gt; permet de représenter des commentaires ou des textes à écrire en petits caractères (des termes d’un contrat, des mentions relatives au droit d’auteur, etc.) quelle que soit la présentation. |&lt;span&gt;| L’élément HTML &lt;span&gt; est un conteneur générique en ligne (inline) pour les contenus phrasés. Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs class ou id et aux règles CSS) ou parce qu’ils partagent certaines valeurs d’attribut comme lang. Il doit uniquement être utilisé lorsqu’aucun autre élément sémantique n’est approprié. &lt;span&gt; est très proche de l’élément &lt;div&gt;, mais l’élément &lt;div&gt; est un élément de bloc, alors que &lt;span&gt; est un élément en ligne. |&lt;strong&gt;| L’élément HTML &lt;strong&gt; indique que le texte a une importance particulière ou un certain sérieux voire un caractère urgent. Cela se traduit généralement par un affichage en gras. |&lt;sub&gt;| L’élément HTML &lt;sub&gt; est utilisé, pour des raisons typographiques, afin d’afficher du texte en indice (sous la ligne de base et généralement plus petit) par rapport au bloc de texte environnant. |&lt;sup&gt;| L’élément HTML &lt;sup&gt; est utilisé, pour des raisons typographiques, afin d’afficher du texte en exposant (plus haut et généralement plus petit) par rapport au bloc de texte environnant."
+    "text": "Sémantique du texte en ligne\nLes éléments pour le texte en ligne peuvent être utilisés pour définir la signification, la structure ou la mise en forme d’un terme, d’une ligne ou d’un fragment de texte.\n\n\n\n\n\n\nPrincipales balises HTML\n\n\n\n\n\n\n\n\n\n\nBalise\nDescription\n\n\n\n\n&lt;a&gt;\nL’élément HTML &lt;a&gt; (pour ancre ou anchor en anglais), avec son attribut href, crée un lien hypertexte vers des pages web, des fichiers, des adresses e-mail, des emplacements se trouvant dans la même page, ou tout ce qu’une URL peut adresser. Le contenu de chaque élément &lt;a&gt; doit indiquer la destination du lien. Si l’attribut href est présent, appuyer sur la touche entrée en se concentrant sur l’élément &lt;a&gt; l’activera.\n\n\n&lt;abbr&gt;\nL’élément HTML &lt;abbr&gt; (abréviation en français) représente une abréviation ou un acronyme ; l’attribut facultatif title peut fournir une explication ou une description de l’abréviation. S’il est présent, title doit contenir cette description complète et rien d’autre.\n\n\n&lt;br&gt;\nL’élément HTML &lt;br&gt; crée un saut de ligne (un retour chariot) dans le texte. Il s’avère utile lorsque les sauts de ligne ont une importance (par exemple lorsqu’on écrit une adresse ou un poème).\n\n\n&lt;cite&gt;\nL’élément &lt;cite&gt; contient le titre d’une œuvre telle qu’un livre, une chanson, un film, une sculpture… Cet élément doit inclure le titre de l’œuvre.\n\n\n&lt;code&gt;\nL’élément HTML &lt;code&gt; représente un court fragment de code machine. Par défaut, l’agent utilisateur utilise une police à chasse fixe (monospace) afin d’afficher le texte contenu dans cet élément.\n\n\n&lt;em&gt;\nL’élément HTML &lt;em&gt; (pour emphase) est utilisé afin de marquer un texte sur lequel on veut insister. Les éléments &lt;em&gt; peuvent être imbriqués, chaque degré d’imbrication indiquant un degré d’insistance plus élevé.\n\n\n&lt;i&gt;\nL’élément HTML &lt;i&gt; représente un morceau de texte qui se différencie du texte principal. Cela peut par exemple être le cas pour des termes techniques, des phrases dans une langue étrangère ou encore l’expression des pensées d’un personnage. Le contenu de cet élément est généralement affiché en italique.\n\n\n&lt;kbd&gt;\nL’élément HTML &lt;kbd&gt; représente une plage de texte en ligne indiquant la saisie de texte par l’utilisateur à partir d’un clavier, d’une saisie vocale ou de tout autre dispositif de saisie de texte. Par convention, le user agent rend par défaut le contenu d’un élément &lt;kbd&gt; en utilisant sa police monospace, bien que cela ne soit pas requis par le standard HTML.\n\n\n&lt;mark&gt;\nL’élément HTML &lt;mark&gt; représente un texte marqué ou surligné à cause de sa pertinence dans le contexte. Il peut par exemple être utilisé afin d’indiquer les correspondances d’un mot-clé recherché au sein d’un document.\n\n\n&lt;s&gt;\nL’élément HTML &lt;s&gt; permet d’afficher du texte qui est barré, car il n’est plus pertinent ou, car il est obsolète. &lt;s&gt; ne doit pas être employé pour indiquer des éditions dans un document .\n\n\n&lt;small&gt;\nL’élément HTML &lt;small&gt; permet de représenter des commentaires ou des textes à écrire en petits caractères (des clause d’un contrat, des mentions relatives au droit d’auteur, etc.) quelle que soit la présentation.\n\n\n&lt;span&gt;\nL’élément HTML &lt;span&gt; est un conteneur générique en ligne (inline) pour les contenus phrasés. Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs class ou id et aux règles CSS) ou parce qu’ils partagent certaines valeurs d’attribut comme lang. Il doit uniquement être utilisé lorsque aucun autre élément sémantique n’est approprié. &lt;span&gt; est très proche de l’élément &lt;div&gt;, mais l’élément &lt;div&gt; est un élément de bloc, alors que &lt;span&gt; est un élément en ligne.\n\n\n&lt;strong&gt;\nL’élément HTML &lt;strong&gt; indique que le texte a une importance particulière ou un certain sérieux, voire un caractère urgent. Cela se traduit généralement par un affichage en gras.\n\n\n&lt;sub&gt;\nL’élément HTML &lt;sub&gt; est utilisé, pour des raisons typographiques, afin d’afficher du texte en indice (sous la ligne de base et généralement plus petit) par rapport au bloc de texte environnant.\n\n\n&lt;sup&gt;\nL’élément HTML &lt;sup&gt; est utilisé, pour des raisons typographiques, afin d’afficher du texte en exposant (plus haut et généralement plus petit) par rapport au bloc de texte environnant.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Référence des principales balises HTML"
+    ]
   },
   {
     "objectID": "18_html/ref_HTML.html#images-et-médias",
     "href": "18_html/ref_HTML.html#images-et-médias",
     "title": "Référence des principales balises HTML",
     "section": "Images et médias",
-    "text": "Images et médias\nHTML prend en charge différents fichiers multimédias pour les images, les fichiers audio et vidéo.\n!!! danger “Principales balises HTML” | Balise | Description | |——–|——–| |&lt;area&gt;| L’élément HTML &lt;area&gt; définit une zone particulière d’une image et peut lui associer un [lien hypertexte]. Cet élément n’est utilisé qu’au sein d’un élément &lt;map&gt;. |&lt;audio&gt;| L’élément HTML &lt;audio&gt; est utilisé afin d’intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l’attribut src ou l’élément &lt;source&gt; : le navigateur choisira celle qui convient le mieux. |&lt;img&gt;| L’élément HTML &lt;img&gt; permet d’intégrer une image dans un document. |&lt;map&gt;| L’élément HTML &lt;map&gt; est utilisé avec des éléments &lt;area&gt; afin de définir une image cliquable divisée en régions. |&lt;video&gt;| L’élément HTML &lt;video&gt; intègre un contenu vidéo dans un document."
+    "text": "Images et médias\nHTML prend en charge différents fichiers multimédias pour les images, les fichiers audio et vidéo.\n\n\n\n\n\n\nPrincipales balises HTML\n\n\n\n\n\n\n\n\n\n\nBalise\nDescription\n\n\n\n\n&lt;area&gt;\nL’élément HTML &lt;area&gt; définit une zone particulière d’une image et peut lui associer un [lien hypertexte]. Cet élément n’est utilisé qu’au sein d’un élément &lt;map&gt;.\n\n\n&lt;audio&gt;\nL’élément HTML &lt;audio&gt; est utilisé afin d’intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l’attribut src ou l’élément &lt;source&gt; : le navigateur choisira celle qui convient le mieux.\n\n\n&lt;img&gt;\nL’élément HTML &lt;img&gt; permet d’intégrer une image dans un document.\n\n\n&lt;map&gt;\nL’élément HTML &lt;map&gt; est utilisé avec des éléments &lt;area&gt; afin de définir une image cliquable divisée en régions.\n\n\n&lt;video&gt;\nL’élément HTML &lt;video&gt; intègre un contenu vidéo dans un document.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Référence des principales balises HTML"
+    ]
   },
   {
     "objectID": "18_html/ref_HTML.html#contenu-embarqué",
     "href": "18_html/ref_HTML.html#contenu-embarqué",
     "title": "Référence des principales balises HTML",
     "section": "Contenu embarqué",
-    "text": "Contenu embarqué\nEn plus du contenu multimédia, un document HTML peut embarquer d’autres contenus (bien que les interactions soient plutôt limitées).\n!!! danger “Principales balises HTML” | Balise | Description | |——–|——–| | &lt;embed&gt;| L’élément HTML &lt;embed&gt; permet d’intégrer du contenu externe à cet endroit dans le document (par exemple un fichier PDF). | &lt;iframe&gt;| L’élément HTML &lt;iframe&gt; représente un contexte de navigation imbriqué qui permet en fait d’obtenir une page HTML intégrée dans la page courante. Souvent utilisé pour intégrer une vidéo provenant d’une plateforme de streaming."
+    "text": "Contenu embarqué\nEn plus du contenu multimédia, un document HTML peut embarquer d’autres contenus (bien que les interactions soient plutôt limitées).\n\n\n\n\n\n\nPrincipales balises HTML\n\n\n\n\n\n\n\n\n\n\nBalise\nDescription\n\n\n\n\n&lt;embed&gt;\nL’élément HTML &lt;embed&gt; permet d’intégrer du contenu externe à cet endroit dans le document (par exemple un fichier PDF).\n\n\n&lt;iframe&gt;\nL’élément HTML &lt;iframe&gt; représente un contexte de navigation imbriqué qui permet en fait d’obtenir une page HTML intégrée dans la page courante. Souvent utilisé pour intégrer une vidéo provenant d’une plateforme de streaming.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Référence des principales balises HTML"
+    ]
   },
   {
     "objectID": "18_html/ref_HTML.html#élément-interactif",
     "href": "18_html/ref_HTML.html#élément-interactif",
     "title": "Référence des principales balises HTML",
     "section": "Élément interactif",
-    "text": "Élément interactif\nPour finir voici une dernière balise utile :\n!!! danger “Principales balises HTML” | Balise | Description | |——–|——–| |&lt;details&gt;| L ’élément HTML &lt;details&gt; est utilisé comme un outil permettant de révéler une information. Un résumé ou un intitulé peuvent être fournis grâce à un élément &lt;summary&gt;. |&lt;summary&gt;| L ’élément HTML &lt;summary&gt; représente une boîte permettant de révéler le contenu d ’un résumé ou d ’une légende pour le contenu d ’un élément details. En cliquant sur l ’élément &lt;summary&gt;, on passe de l ’état affiché à l ’état masqué (et vice versa) de l ’élément &lt;details&gt; parent. \n!!! info “Remarque” * Les balises concernant les tableaux ne sont pas répertoriées ici. Voir le site de Mozilla en cas de besoin. * Les balises concernant les formulaires et les scripts seront étudiées plus tard au cours de la séquence."
+    "text": "Élément interactif\nPour finir voici une dernière balise utile :\n\n\n\n\n\n\nPrincipales balises HTML\n\n\n\n\n\n\n\n\n\n\nBalise\nDescription\n\n\n\n\n&lt;details&gt;\nL ’élément HTML &lt;details&gt; est utilisé comme un outil permettant de révéler une information. Un résumé ou un intitulé peuvent être fournis grâce à un élément &lt;summary&gt;.\n\n\n&lt;summary&gt;\nL ’élément HTML &lt;summary&gt; représente une boîte permettant de révéler le contenu d ’un résumé ou d ’une légende pour le contenu d ’un élément details. En cliquant sur l ’élément &lt;summary&gt;, on passe de l ’état affiché à l ’état masqué (et vice versa) de l ’élément &lt;details&gt; parent.\n\n\n\n\n\n\n\n\n\n\n\n\nRemarque\n\n\n\n\nLes balises concernant les tableaux ne sont pas répertoriées ici. Voir le site de Mozilla en cas de besoin.\nLes balises concernant les formulaires et les scripts seront étudiées plus tard au cours de la séquence.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Référence des principales balises HTML"
+    ]
   },
   {
     "objectID": "19_css/cours_CSS.html",
@@ -4014,5 +4109,137 @@
     "title": "Mentions légales",
     "section": "",
     "text": "Mentions légales\n\nSite personnel de Fabrice LALLEMAND, Lycée Emile DUCLAUX, 16 avenue Henri MONDOR, 15000 AURILLAC, téléphone 04 71 48 22 22.\nCe site est hébergé en Auvergne par o2switch."
+  },
+  {
+    "objectID": "18_html/html_cours.html",
+    "href": "18_html/html_cours.html",
+    "title": "Cours",
+    "section": "",
+    "text": "HTML signifie « HyperText Markup Language » que l’on peut traduire par « langage de balises pour l’hypertexte ». Il est utilisé afin de créer et de représenter le contenu d’une page web et sa structure. D’autres technologies sont utilisées avec HTML pour décrire la présentation d’une page (CSS) et/ou ses fonctionnalités interactives (JavaScript).\nL’« hypertexte » désigne les liens qui relient les pages web entre elles, que ce soit au sein d’un même site web ou entre différents sites web. Les liens sont un aspect fondamental du Web. Ce sont eux qui forment cette « toile » (ce mot est traduit par web en anglais).\nLe langage HTML utilise des « balises » pour annoter du texte, des images et d’autres contenus afin de les afficher dans un navigateur web. Les balises possèdent des noms réservés tels que &lt;head&gt;, &lt;title&gt;, &lt;body&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;section&gt;, &lt;p&gt;, &lt;div&gt;, &lt;span&gt;, &lt;img&gt;, &lt;audio&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; et bien d’autres.\nEn HTML, les balises sont insensibles à la casse et peuvent aussi bien être écrites en minuscules, en majuscules, voire avec un mélange des deux. Autrement dit, la balise &lt;title&gt; pourrait très bien être écrite comme &lt;Title&gt;, &lt;TiTle&gt; ou d’une autre façon.\nLe langage HTML a vu le jour en 1991 et fut créé à partir d’un autre langage de description appelé SGML par l’informaticien Tim Berners-Lee et ses équipes.\nPlusieurs évolutions du langage ont ensuite été développées. Depuis 2014, la version HTML5 est la version officiellement recommandée pour la rédaction de pages Web.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "18_html/html_cours.html#notion-de-balise",
+    "href": "18_html/html_cours.html#notion-de-balise",
+    "title": "Cours",
+    "section": "1. Notion de balise",
+    "text": "1. Notion de balise\nUne balise HTML possède la structure suivante :\n&lt;p&gt;Mon chat est très grincheux&lt;/p&gt;\n\nLes composants principaux de notre élément sont :\n\nLa balise ouvrante : celle-ci se compose du nom de l’élément (ici « p »), entre deux chevrons. Cela indique le début de l’élément, soit l’endroit à partir duquel celui-ci prend effet. Pour notre exemple, cela indique le début du paragraphe.\nLa balise fermante : ici on a également des chevrons et le nom de l’élément, auxquels on ajoute une barre oblique avant le nom de l’élément. Cela indique la fin de l’élément. Pour notre exemple, cela indique la fin du paragraphe. Oublier la balise fermante est une erreur courante de débutant et peut conduire à de curieux résultats.\nLe contenu : C’est le contenu de l’élément. Ici, c’est simplement du texte.\nL’élément : Il est composé de la balise ouvrante, de la balise fermante et du contenu.\n\nLes éléments peuvent être imbriqués les uns dans les autres :\n&lt;p&gt;Mon chat est &lt;strong&gt;très&lt;/strong&gt; grincheux.&lt;/p&gt;\nToutefois, il faut faire attention à ce que les éléments soient bien imbriqués les uns dans les autres. Dans l’exemple précédent, on ouvre l’élément &lt;p&gt;, puis l’élément &lt;strong&gt;. Nous devrons donc fermer l’élément &lt;strong&gt; d’abord, puis l’élément &lt;p&gt;. Le code suivant est incorrect :\n&lt;p&gt;Mon chat est &lt;strong&gt;très grincheux.&lt;/p&gt;&lt;/strong&gt;\nLes éléments doivent être ouverts et fermés correctement de façon à ce qu’ils soient clairement à l’intérieur ou à l’extérieur les uns des autres. S’ils se chevauchent, le navigateur essaiera de choisir la meilleure option, qui ne sera peut-être pas ce que vous vouliez dire et pourrait conduire à des résultats inattendus. Donc ne le faites pas !\n\n\n\n\n\n\nRemarque\n\n\n\nCertains éléments sont vides : ils ne nécessitent pas de balise fermante.\nLes plus fréquents sont :\n\nL’élément &lt;img /&gt; :\n&lt;img src=\"chat.png\" alt=\"Image de chat\" /&gt;\nCet élément contient deux attributs mais les balises ouvrantes &lt;img&gt; et fermante &lt;/img&gt; sont remplacées par une balise auto-fermante &lt;img /&gt; et il n’y a aucun contenu interne. En effet, l’élément image n’embarque pas de contenu, son but est d’intégrer une image dans la page HTML, à l’endroit où l’élément est placé.\nL’attribut src indique le chemin vers le fichier de l’image et l’attribut alt contient un texte alternatif, texte descriptif de l’image à l’intention des utilisateurs qui ne peuvent pas voir l’image.\nL’élément ’ : pour créer un saut de ligne dans le texte.\nLes éléments &lt;link&gt; et &lt;meta&gt; présents dans l’élément &lt;head&gt; en début de fichier.\n\nPour toutes ces balises auto-fermantes, la barre oblique avant le dernier chevron &gt;est optionnelle.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "18_html/html_cours.html#attributs-dune-balise",
+    "href": "18_html/html_cours.html#attributs-dune-balise",
+    "title": "Cours",
+    "section": "2. Attributs d’une balise",
+    "text": "2. Attributs d’une balise\nLes balises HTML peuvent être dotées d’attributs définis à l’intérieur de la balise ouvrante.\nNous avons déjà vu que la balise &lt;img&gt;, par exemple, possédait un attribut src=... désignant le chemin ou l’adresse de l’image à afficher.\nCertains attributs sont spécifiques à des balises particulières, d’autres sont des attributs universels : ils peuvent s’appliquer à toute balise. En particulier, les attributs suivants seront souvent utilisés :\n\nclass=... : une ou plusieurs classes, séparées par des espaces, qui permettent de catégoriser l’élément pour pouvoir le manipuler dans une feuille de style CSS ou un script JavaScript.\nid=... : un identifiant, unique au sein de tout le document, pour un élément. Il doit permettre d’identifier cet élément lorsqu’on crée un lien vers lui et/ou lorsqu’on le manipule avec des scripts ou avec CSS.\n\n\n\n\n\n\n\nAttention !\n\n\n\n\nPlusieurs éléments HTML peuvent appartenir à une même classe : cela permet par exemple de leur appliquer le même style CSS.\nUn identifiant, par contre, est unique : deux éléments HTML ne doivent pas avoir le même identifiant.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "18_html/html_cours.html#structure-générale-du-fichier-html",
+    "href": "18_html/html_cours.html#structure-générale-du-fichier-html",
+    "title": "Cours",
+    "section": "3. Structure générale du fichier HTML",
+    "text": "3. Structure générale du fichier HTML\nLa structure globale d’une page HTML est toujours la même (l’indentation est utilisée pour la lisibilité du code, mais elle n’est pas nécessaire):\n&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;meta charset=\"utf-8\"&gt;\n    &lt;title&gt;Ma page de test&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;img src=\"chat.png\" alt=\"Mon chat\"&gt;\n    &lt;p&gt;Voici la photo de mon chat &lt;strong&gt;Félix&lt;/strong&gt;.&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;\nNous y trouvons :\n\n&lt;!DOCTYPE html&gt; — le doctype. Au début de HTML, dans les années 1991-1992, les doctypes étaient utilisés pour faire référence à des ensembles de règles qu’on pouvait utiliser pour dire qu’un document était du HTML « valide » et détecter les erreurs de balisage. Cependant, ceux-ci ne sont plus utilisés aujourd’hui et sont juste présents pour s’assurer que la page puisse fonctionner y compris sur les anciens navigateurs. C’est tout ce qu’il y a à savoir à propos des doctypes.\n&lt;html&gt;&lt;/html&gt; — l’élément &lt;html&gt;. Cet élément encadre tout le contenu de la page. Cet élément est parfois appelé l’élément racine.\n&lt;head&gt;&lt;/head&gt; — l’élément &lt;head&gt;. Cet élément est utilisé comme un conteneur pour toutes les choses qui font partie de la page HTML, mais qui ne sont pas du contenu affiché. C’est dans cet élément qu’on mettra des mots-clés, une description de la page qui apparaîtra sur les moteurs de recherche, les liens vers les fichiers CSS à utiliser pour la mise en forme, les déclarations des jeux de caractères à utiliser et ainsi de suite.\n&lt;body&gt;&lt;/body&gt; — l’élément &lt;body&gt;. Cet élément est celui qui contient tout le contenu que vous souhaitez afficher pour qu’il soit vu par les visiteurs : cela peut être du texte, des images, des vidéos, des jeux, des pistes audio jouables, et ainsi de suite.\n\nCette structure peut être représentée sous forme d’arbre. Chaque élément \\(B\\) situé dans un élément \\(A\\) est considéré comme le fils de cet élément \\(A\\).\nVoici l’arbre représentant le fichier HTML ci-dessus :\n\n\n\n\n\ngraph TB\n    A[html] --&gt; B[head]\n    A --&gt; C[body]\n    B --&gt; D[meta]\n    B --&gt; E[title]\n    C --&gt; F[img]\n    C --&gt; G[p]\n    G --&gt; H[strong]",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "18_html/html_cours.html#ressources-pour-approfondir",
+    "href": "18_html/html_cours.html#ressources-pour-approfondir",
+    "title": "Cours",
+    "section": "3. Ressources pour approfondir",
+    "text": "3. Ressources pour approfondir\n\nExcellente ressource pour apprendre le HTML, le CSS et JavaScript : MDN Web Docs de Mozilla. Cerise sur le gâteau : le site est disponible en français.\nIncontournable, mais en anglais, les tutoriels de w3Schools.\nLe cours classique, gratuit et en français du site OpenClassroom.\n\n\n\n\nlogo HTML 5",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 18 - Le langage HTML",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "19_css/css_cours.html",
+    "href": "19_css/css_cours.html",
+    "title": "Cours",
+    "section": "",
+    "text": "logo CSS\nLe principe du couple HTML/CSS est de bien séparer la définition du contenu d’une page Web de la définition de son apparence.\nCe langage est apparu au milieu des années 1990 et les règles CSS sont couramment utilisées et reconnues par les navigateurs depuis le début des années 2000.\nL’un des objectifs majeurs des CSS est de permettre la mise en forme en dehors du code HTML. Il est par exemple possible de ne décrire que la structure d’un document en HTML, et de décrire toute la présentation dans une feuille de style CSS séparée. Les styles sont appliqués au dernier moment, dans le navigateur web des visiteurs qui consultent le document. Cette séparation fournit un certain nombre de bénéfices, permettant d’améliorer l’accessibilité, de changer plus facilement de présentation, et de réduire la complexité de l’architecture d’un document.\nAinsi, les avantages des feuilles de style sont multiples :",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 19 - Le couple HTML / CSS",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "19_css/css_cours.html#structure-dune-règle-css",
+    "href": "19_css/css_cours.html#structure-dune-règle-css",
+    "title": "Cours",
+    "section": "1. Structure d’une règle CSS",
+    "text": "1. Structure d’une règle CSS\nCSS est un langage basé sur des règles — on définit des règles de styles destinées à des éléments ou des groupes d’éléments particuliers dans la page. Par exemple, « Je veux que le titre principal de ma page s’affiche en rouge en gros caractères. »\nDans le code suivant, une règle CSS élémentaire réalise cette mise en forme :\nh1 {\n  color: red;\n  font-size: 5em;\n}\n\nLa règle commence par un sélecteur, l’élément HTML mis en forme. Ici, le style s’applique aux titres de niveau 1 (&lt;h1&gt;).\nSuivent une paire d’accolades { } à l’intérieur desquelles on trouve une ou plusieurs déclarations, sous la forme d’une paire propriété: valeur. Chaque paire précise une propriété de l’élément sélectionné, suivie de la valeur choisie pour cette propriété ; la propriété et la valeur sont séparées par deux points. Chaque déclaration se termine par un point-virgule. À chaque propriété définie par CSS correspondent différentes valeurs possibles. Dans l’exemple, la propriété color peut prendre différentes valeurs. La propriété font-size accepte différentes tailles comme valeurs.\nUne feuille de style CSS est constituée d’une succession de telles règles :\nh1 {\n  color: red;\n  font-size: 5em;\n}\n\np {\n  color: black;\n}\nLe lien entre le fichier HTML et la feuille de style CSS est fait dans le fichier HTML en insérant un élément &lt;link&gt; dans la section &lt;head&gt; de la page :\n&lt;link rel=\"stylesheet\" href=\"styles.css\"&gt;\nUne même feuille de style peut ainsi servir à plusieurs fichiers HTML.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 19 - Le couple HTML / CSS",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "19_css/css_cours.html#différents-types-de-sélecteurs",
+    "href": "19_css/css_cours.html#différents-types-de-sélecteurs",
+    "title": "Cours",
+    "section": "2. Différents types de sélecteurs",
+    "text": "2. Différents types de sélecteurs\nLe sélecteur peut être :\n\nle nom d’une balise : toutes les balises de ce type sont alors affectées par la règle CSS ;\nplusieurs noms de balise séparés par une virgule pour sélectionner toutes les balises de tous ces types ;\nun identifiant précédé du symbole # pour sélectionner l’unique élément HTML possédant cet identifiant ;\n#mon-id {\nbackground-color: black;\n}\nune classe précédée d’un point .pour sélectionner tous les éléments HTML possédant cette classe ;\n.ma_classe {\nbackground-color: black;\n}\n\nBeaucoup d’autres possibilités existent, se reporter aux ressources indiquées en bas de page pour approfondir.\nCitons juste un exemple de pseudo-classe : la règle ci-dessous ne s’appliquera par exemple aux liens (balise &lt;a&gt;) que lorsque la souris les survolera :\na:hover {\n    color: blue;\n}",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 19 - Le couple HTML / CSS",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "19_css/css_cours.html#les-grands-types-de-mise-en-forme",
+    "href": "19_css/css_cours.html#les-grands-types-de-mise-en-forme",
+    "title": "Cours",
+    "section": "3. Les grands types de mise en forme",
+    "text": "3. Les grands types de mise en forme\nLes règles CSS permettent en particulier :\n\nLa mise en forme basique du texte : couleur, taille, alignement, police de caractères, …\nLa mise en forme globale des paragraphes et des différents blocs de contenu à travers le modèle de boîte.\nL’alignement des images, des divers éléments.\n\nPlus précisément, la notion de modèle de boîte est importante à comprendre.\nEn CSS, tout élément est contenu dans une boîte.\nPour une boîte de type bloc, toute la largeur disponible est utilisée et il est possible de définir des marges :\n\nextérieures avec les propriétés margin, margin-left, margin-top, etc.\nintérieures avec les propriétés padding, padding-left, padding-top, etc.\n\nLes boîtes peuvent aussi recevoir une bordure grâce à la propriété border.\nLes éléments HTML &lt;a&gt;, &lt;span&gt;, &lt;em&gt; et &lt;strong&gt; sont des éléments qui s’affichent “en ligne” par défaut. Pour leur attribuer des propriétés d’éléments de type bloc, on peut utiliser la propriété display: block;.\nLa figure ci-dessous illustre la différence entre les propriétés margin et padding.\n\n\n\nmodèle de boîtes",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 19 - Le couple HTML / CSS",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "19_css/css_cours.html#utilisation-des-outils-de-développement-du-navigateur",
+    "href": "19_css/css_cours.html#utilisation-des-outils-de-développement-du-navigateur",
+    "title": "Cours",
+    "section": "4. Utilisation des outils de développement du navigateur",
+    "text": "4. Utilisation des outils de développement du navigateur\nLes navigateurs modernes possèdent une fonctionnalité bien utile : les outils de développement, usuellement activés en appuyant sur la touche F12.\n\n\n\noutils de développement\n\n\nOn peut, à partir de cet outil, modifier les règles CSS du document afficher et voir de manière interactive les effets produits. Cet outil sera également utile pour l’utilisation de scripts Javascript dans la page Web.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 19 - Le couple HTML / CSS",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "19_css/css_cours.html#ressources-pour-approfondir",
+    "href": "19_css/css_cours.html#ressources-pour-approfondir",
+    "title": "Cours",
+    "section": "5. Ressources pour approfondir",
+    "text": "5. Ressources pour approfondir\nPour aller plus loin avec le langage CSS :\n\nExcellente ressource pour apprendre le HTML, le CSS et JavaScript : MDN Web Docs de Mozilla. Cerise sur le gâteau : le site est disponible en français.\nIncontournable, mais en anglais, les tutoriels de w3Schools.\nLe cours classique, gratuit et en français du site OpenClassroom.\n\n\n\n\nlogo CSS\nmodèle de boîtes\noutils de développement",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 19 - Le couple HTML / CSS",
+      "Cours"
+    ]
   }
 ]

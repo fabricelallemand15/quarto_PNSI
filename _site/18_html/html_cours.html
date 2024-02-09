@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Programme</title>
+<title>NSI - Première – Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../19_css/acti2_CSS.html" rel="next">
-<link href="../18_html/ref_HTML.html" rel="prev">
+<link href="../18_html/ref_HTML.html" rel="next">
+<link href="../18_html/acti1_HTML.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -48,6 +82,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -93,6 +130,9 @@ cookieconsent.run({
 });
 </script> 
   
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -177,7 +217,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../19_css/index.html">Ch. 19 - Le couple HTML / CSS</a></li><li class="breadcrumb-item"><a href="../19_css/index.html">Programme</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../18_html/index.html">Ch. 18 - Le langage HTML</a></li><li class="breadcrumb-item"><a href="../18_html/html_cours.html">Cours</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -768,13 +808,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="true">
  <span class="menu-text">Ch. 18 - Le langage HTML</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../18_html/index.html" class="sidebar-item-text sidebar-link">
@@ -784,12 +824,12 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../18_html/acti1_HTML.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Activité : Page web et langage HTML</span></a>
+ <span class="menu-text">Activité 1 : Page web et langage HTML</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../18_html/html_cours.html" class="sidebar-item-text sidebar-link">
+  <a href="../18_html/html_cours.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Cours</span></a>
   </div>
 </li>
@@ -803,31 +843,25 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false">
  <span class="menu-text">Ch. 19 - Le couple HTML / CSS</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../19_css/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Programme</span></a>
+  <a href="../19_css/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">06-Interactions Homme-Machine sur le web</span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../19_css/acti2_CSS.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Activité 2 : Le couple HTML/CSS</span></a>
-  </div>
-</li>
+ <span class="menu-text">19_css/css_cours.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../19_css/css_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
-  </div>
-</li>
+ <span class="menu-text">19_css/css_exos.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1010,15 +1044,24 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#notion-de-balise" id="toc-notion-de-balise" class="nav-link active" data-scroll-target="#notion-de-balise">1. Notion de balise</a></li>
+  <li><a href="#attributs-dune-balise" id="toc-attributs-dune-balise" class="nav-link" data-scroll-target="#attributs-dune-balise">2. Attributs d’une balise</a></li>
+  <li><a href="#structure-générale-du-fichier-html" id="toc-structure-générale-du-fichier-html" class="nav-link" data-scroll-target="#structure-générale-du-fichier-html">3. Structure générale du fichier HTML</a></li>
+  <li><a href="#ressources-pour-approfondir" id="toc-ressources-pour-approfondir" class="nav-link" data-scroll-target="#ressources-pour-approfondir">3. Ressources pour approfondir</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../19_css/index.html">Ch. 19 - Le couple HTML / CSS</a></li><li class="breadcrumb-item"><a href="../19_css/index.html">Programme</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../18_html/index.html">Ch. 18 - Le langage HTML</a></li><li class="breadcrumb-item"><a href="../18_html/html_cours.html">Cours</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Programme</h1>
+<h1 class="title">Cours</h1>
 </div>
 
 
@@ -1035,48 +1078,142 @@ window.Quarto = {
 </header>
 
 
-<p>Lors de la navigation sur le Web, les internautes interagissent avec leur machine par le biais des pages Web.</p>
-<p>L’Interface Homme-Machine (IHM) repose sur la gestion d’événements associés à des éléments graphiques munis de méthodes algorithmiques.</p>
-<p>La compréhension du dialogue client-serveur déjà abordé en classe de seconde est consolidée, sur des exemples simples, en identifiant les requêtes du client, les calculs puis les réponses du serveur traitées par le client.</p>
-<p>Il ne s’agit pas de décrire exhaustivement les différents éléments disponibles, ni de développer une expertise dans les langages qui permettent de mettre en œuvre le dialogue tels que PHP ou JavaScript.</p>
-<table class="table">
-<colgroup>
-<col style="width: 27%">
-<col style="width: 33%">
-<col style="width: 38%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Contenus</th>
-<th>Capacités attendues</th>
-<th>Commentaires</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Modalités de l’interaction entre l’homme et la machine Événements</td>
-<td>Identifier les différents composants graphiques permettant d’interagir avec une application Web. Identifier les événements que les fonctions associées aux différents composants graphiques sont capables de traiter.</td>
-<td>Il s’agit d’examiner le code HTML d’une page comprenant des composants graphiques et de distinguer ce qui relève de la description des composants graphiques en HTML de leur comportement (réaction aux événements) programmé par exemple en JavaScript.</td>
-</tr>
-<tr class="even">
-<td>Interaction avec l’utilisateur dans une page Web</td>
-<td>Analyser et modifier les méthodes exécutées lors d’un clic sur un bouton d’une page Web.</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Interaction client-serveur. Requêtes HTTP, réponses du serveur</td>
-<td>Distinguer ce qui est exécuté sur le client ou sur le serveur et dans quel ordre. Distinguer ce qui est mémorisé dans le client et retransmis au serveur. Reconnaître quand et pourquoi la transmission est chiffrée.</td>
-<td>Il s’agit de faire le lien avec ce qui a été vu en classe de seconde et d’expliquer comment on peut passer des paramètres à un site grâce au protocole HTTP.</td>
-</tr>
-<tr class="even">
-<td>Formulaire d’une page Web</td>
-<td>Analyser le fonctionnement d’un formulaire simple. Distinguer les transmissions de paramètres par les requêtes POST ou GET.</td>
-<td>Discuter les deux types de requêtes selon le type des valeurs à transmettre et/ou leur confidentialité.</td>
-</tr>
-</tbody>
-</table>
+<!-- Introduction avec historique -->
+<p>HTML signifie « HyperText Markup Language » que l’on peut traduire par « langage de balises pour l’hypertexte ». Il est utilisé afin de créer et de représenter le contenu d’une page web et sa structure. D’autres technologies sont utilisées avec HTML pour décrire la présentation d’une page (CSS) et/ou ses fonctionnalités interactives (JavaScript).</p>
+<p>L’« hypertexte » désigne les liens qui relient les pages web entre elles, que ce soit au sein d’un même site web ou entre différents sites web. Les liens sont un aspect fondamental du Web. Ce sont eux qui forment cette « toile » (ce mot est traduit par web en anglais).</p>
+<p>Le langage HTML utilise des « balises » pour annoter du texte, des images et d’autres contenus afin de les afficher dans un navigateur web. Les balises possèdent des noms réservés tels que <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> et bien d’autres.</p>
+<p>En HTML, les balises sont insensibles à la casse et peuvent aussi bien être écrites en minuscules, en majuscules, voire avec un mélange des deux. Autrement dit, la balise <code>&lt;title&gt;</code> pourrait très bien être écrite comme <code>&lt;Title&gt;</code>, <code>&lt;TiTle&gt;</code> ou d’une autre façon.</p>
+<p>Le langage HTML a vu le jour en 1991 et fut créé à partir d’un autre langage de description appelé SGML par l’informaticien Tim Berners-Lee et ses équipes.</p>
+<p>Plusieurs évolutions du langage ont ensuite été développées. Depuis 2014, la version HTML5 est la version officiellement recommandée pour la rédaction de pages Web.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/langfr-1024px-HTML5_logo_and_wordmark.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="logo HTML 5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/langfr-1024px-HTML5_logo_and_wordmark.svg.png" class="img-fluid figure-img" style="width:20.0%" alt="logo HTML 5"></a></p>
+<figcaption>logo HTML 5</figcaption>
+</figure>
+</div>
+<section id="notion-de-balise" class="level2">
+<h2 class="anchored" data-anchor-id="notion-de-balise">1. Notion de balise</h2>
+<p>Une balise HTML possède la structure suivante :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Mon chat est très grincheux<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="cours_html_fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="cours_html_fig1.png" class="img-fluid"></a></p>
+<p>Les composants principaux de notre élément sont :</p>
+<ul>
+<li><strong>La balise ouvrante</strong> : celle-ci se compose du nom de l’élément (ici « p »), entre deux chevrons. Cela indique le début de l’élément, soit l’endroit à partir duquel celui-ci prend effet. Pour notre exemple, cela indique le début du paragraphe.</li>
+<li><strong>La balise fermante</strong> : ici on a également des chevrons et le nom de l’élément, auxquels on ajoute une barre oblique avant le nom de l’élément. Cela indique la fin de l’élément. Pour notre exemple, cela indique la fin du paragraphe. Oublier la balise fermante est une erreur courante de débutant et peut conduire à de curieux résultats.</li>
+<li><strong>Le contenu</strong> : C’est le contenu de l’élément. Ici, c’est simplement du texte.</li>
+<li><strong>L’élément</strong> : Il est composé de la balise ouvrante, de la balise fermante et du contenu.</li>
+</ul>
+<p>Les éléments peuvent être imbriqués les uns dans les autres :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Mon chat est <span class="dt">&lt;</span><span class="kw">strong</span><span class="dt">&gt;</span>très<span class="dt">&lt;/</span><span class="kw">strong</span><span class="dt">&gt;</span> grincheux.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Toutefois, il faut faire attention à ce que les éléments soient bien imbriqués les uns dans les autres. Dans l’exemple précédent, on ouvre l’élément <code>&lt;p&gt;</code>, puis l’élément <code>&lt;strong&gt;</code>. Nous devrons donc fermer l’élément <code>&lt;strong&gt;</code> d’abord, puis l’élément <code>&lt;p&gt;</code>. Le code suivant est incorrect :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Mon chat est <span class="dt">&lt;</span><span class="kw">strong</span><span class="dt">&gt;</span>très grincheux.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;&lt;/</span><span class="kw">strong</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Les éléments doivent être ouverts et fermés correctement de façon à ce qu’ils soient clairement à l’intérieur ou à l’extérieur les uns des autres. S’ils se chevauchent, le navigateur essaiera de choisir la meilleure option, qui ne sera peut-être pas ce que vous vouliez dire et pourrait conduire à des résultats inattendus. Donc ne le faites pas !</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remarque
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Certains éléments sont vides : ils ne nécessitent pas de balise fermante.</p>
+<p>Les plus fréquents sont :</p>
+<ul>
+<li><p>L’élément <code>&lt;img /&gt;</code> :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"chat.png"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"Image de chat"</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cet élément contient deux <strong>attributs</strong> mais les balises ouvrantes <code>&lt;img&gt;</code> et fermante <code>&lt;/img&gt;</code> sont remplacées par une balise auto-fermante <code>&lt;img /&gt;</code> et il n’y a aucun contenu interne. En effet, l’élément image n’embarque pas de contenu, son but est d’intégrer une image dans la page HTML, à l’endroit où l’élément est placé.</p>
+<p>L’attribut <code>src</code> indique le chemin vers le fichier de l’image et l’attribut <code>alt</code> contient un texte <em>alternatif</em>, texte descriptif de l’image à l’intention des utilisateurs qui ne peuvent pas voir l’image.</p></li>
+<li><p>L’élément ’<br> : pour créer un saut de ligne dans le texte.</p></li>
+<li><p>Les éléments <code>&lt;link&gt;</code> et <code>&lt;meta&gt;</code> présents dans l’élément <code>&lt;head&gt;</code> en début de fichier.</p></li>
+</ul>
+<p>Pour toutes ces balises auto-fermantes, la barre oblique avant le dernier chevron <code>&gt;</code>est optionnelle.</p>
+</div>
+</div>
+</section>
+<section id="attributs-dune-balise" class="level2">
+<h2 class="anchored" data-anchor-id="attributs-dune-balise">2. Attributs d’une balise</h2>
+<p>Les balises HTML peuvent être dotées d’<strong>attributs</strong> définis à l’intérieur de la balise ouvrante.</p>
+<p>Nous avons déjà vu que la balise <code>&lt;img&gt;</code>, par exemple, possédait un attribut <code>src=...</code> désignant le chemin ou l’adresse de l’image à afficher.</p>
+<p>Certains attributs sont spécifiques à des balises particulières, d’autres sont des <strong>attributs universels</strong> : ils peuvent s’appliquer à toute balise. En particulier, les attributs suivants seront souvent utilisés :</p>
+<ul>
+<li><code>class=...</code> : une ou plusieurs <strong>classes</strong>, séparées par des espaces, qui permettent de catégoriser l’élément pour pouvoir le manipuler dans une feuille de style CSS ou un script JavaScript.</li>
+<li><code>id=...</code> : un <strong>identifiant</strong>, <strong>unique au sein de tout le document</strong>, pour un élément. Il doit permettre d’identifier cet élément lorsqu’on crée un lien vers lui et/ou lorsqu’on le manipule avec des scripts ou avec CSS.</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Attention !
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Plusieurs éléments HTML peuvent appartenir à une même classe : cela permet par exemple de leur appliquer le même style CSS.</li>
+<li>Un identifiant, par contre, est unique : deux éléments HTML ne doivent pas avoir le même identifiant.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="structure-générale-du-fichier-html" class="level2">
+<h2 class="anchored" data-anchor-id="structure-générale-du-fichier-html">3. Structure générale du fichier HTML</h2>
+<p>La structure globale d’une page HTML est toujours la même (l’indentation est utilisée pour la lisibilité du code, mais elle n’est pas nécessaire):</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"utf-8"</span><span class="dt">&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Ma page de test<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"chat.png"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"Mon chat"</span><span class="dt">&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Voici la photo de mon chat <span class="dt">&lt;</span><span class="kw">strong</span><span class="dt">&gt;</span>Félix<span class="dt">&lt;/</span><span class="kw">strong</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Nous y trouvons :</p>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code> — le doctype. Au début de HTML, dans les années 1991-1992, les doctypes étaient utilisés pour faire référence à des ensembles de règles qu’on pouvait utiliser pour dire qu’un document était du HTML « valide » et détecter les erreurs de balisage. Cependant, ceux-ci ne sont plus utilisés aujourd’hui et sont juste présents pour s’assurer que la page puisse fonctionner y compris sur les anciens navigateurs. C’est tout ce qu’il y a à savoir à propos des doctypes.</li>
+<li><code>&lt;html&gt;&lt;/html&gt;</code> — l’élément <code>&lt;html&gt;</code>. Cet élément <strong>encadre tout le contenu</strong> de la page. Cet élément est parfois appelé l’<strong>élément racine</strong>.</li>
+<li><code>&lt;head&gt;&lt;/head&gt;</code> — l’élément <code>&lt;head&gt;</code>. Cet élément est utilisé comme un conteneur pour toutes les choses qui font partie de la page HTML, mais <strong>qui ne sont pas du contenu affiché</strong>. C’est dans cet élément qu’on mettra des mots-clés, une description de la page qui apparaîtra sur les moteurs de recherche, les liens vers les fichiers CSS à utiliser pour la mise en forme, les déclarations des jeux de caractères à utiliser et ainsi de suite.</li>
+<li><code>&lt;body&gt;&lt;/body&gt;</code> — l’élément <code>&lt;body&gt;</code>. Cet élément est celui qui contient <strong>tout le contenu que vous souhaitez afficher</strong> pour qu’il soit vu par les visiteurs : cela peut être du texte, des images, des vidéos, des jeux, des pistes audio jouables, et ainsi de suite.</li>
+</ul>
+<p>Cette structure peut être représentée sous forme d’arbre. Chaque élément <span class="math inline">\(B\)</span> situé dans un élément <span class="math inline">\(A\)</span> est considéré comme le <strong>fils</strong> de cet élément <span class="math inline">\(A\)</span>.</p>
+<p>Voici l’arbre représentant le fichier HTML ci-dessus :</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB
+    A[html] --&gt; B[head]
+    A --&gt; C[body]
+    B --&gt; D[meta]
+    B --&gt; E[title]
+    C --&gt; F[img]
+    C --&gt; G[p]
+    G --&gt; H[strong]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="ressources-pour-approfondir" class="level2">
+<h2 class="anchored" data-anchor-id="ressources-pour-approfondir">3. Ressources pour approfondir</h2>
+<ul>
+<li>Excellente ressource pour apprendre le HTML, le CSS et JavaScript : <a href="https://developer.mozilla.org/fr/" target="_blank">MDN Web Docs de Mozilla</a>. Cerise sur le gâteau : le site est disponible en français.</li>
+<li>Incontournable, mais en anglais, les tutoriels de <a href="https://www.w3schools.com/" target="_blank">w3Schools</a>.</li>
+<li>Le cours classique, gratuit et en français du site <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3" target="_blank">OpenClassroom</a>.</li>
+</ul>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">logo HTML 5</span>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1627,13 +1764,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../18_html/ref_HTML.html" class="pagination-link  aria-label=" référence="" des="" principales="" balises="" html"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Référence des principales balises HTML</span>
+      <a 1="" href="../18_html/acti1_HTML.html" class="pagination-link  aria-label=" activité="" :="" page="" web="" et="" langage="" html"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Activité 1 : Page web et langage HTML</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../19_css/acti2_CSS.html" class="pagination-link" aria-label="Activité 2 : Le couple HTML/CSS">
-        <span class="nav-page-text">Activité 2 : Le couple HTML/CSS</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../18_html/ref_HTML.html" class="pagination-link" aria-label="Référence des principales balises HTML">
+        <span class="nav-page-text">Référence des principales balises HTML</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1651,7 +1788,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1669,6 +1806,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

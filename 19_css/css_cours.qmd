@@ -1,12 +1,10 @@
 ---
-title: "CSS : Explications et compléments"
-niveau: Première NSI
-année: 2022-2023
+title: Cours
 ---
 
 <!-- Introduction avec historique -->
 
-![logo CSS](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/langfr-800px-CSS3_logo_and_wordmark.svg.png){width="15%" style="float: right"}
+![logo CSS](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/langfr-800px-CSS3_logo_and_wordmark.svg.png){width="15%"}
 
 Le principe du couple HTML/CSS est de bien séparer la définition du **contenu** d'une page Web de la définition de son **apparence**.
 
@@ -35,7 +33,7 @@ h1 {
 }
 ```
 
-![image50](../../assets/images/regleCSS.drawio.svg)
+![](regleCSS.drawio.svg)
 
 La règle commence par un **sélecteur**, l'élément HTML mis en forme. Ici, le style s'applique aux titres de niveau 1 (`<h1>`).
 
@@ -117,14 +115,14 @@ Les éléments HTML `<a>`, `<span>`, `<em>` et `<strong>` sont des éléments qu
 
 La figure ci-dessous illustre la différence entre les propriétés `margin` et `padding`.
 
-![modèle de boîtes](../../assets/images/box-model-devtools.png)
+![modèle de boîtes](box-model-devtools.png)
 
 
 ## 4. Utilisation des outils de développement du navigateur
 
 Les navigateurs modernes possèdent une fonctionnalité bien utile : les outils de développement, usuellement activés en appuyant sur la touche F12.
 
-![outils de développement](../../assets/images/devtools.png){width="70%"}
+![outils de développement](devtools.png){width="70%"}
 
 On peut, à partir de cet outil, modifier les règles CSS du document afficher et voir de manière interactive les effets produits. Cet outil sera également utile pour l'utilisation de scripts Javascript dans la page Web.
 

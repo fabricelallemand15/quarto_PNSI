@@ -128,13 +128,14 @@ website:
       - section: "Ch. 18 - Le langage HTML"
         contents: 
           - 18_html/index.qmd
+          - 18_html/acti1_HTML.qmd
           - 18_html/html_cours.qmd
-          - 18_html/html_exos.qmd
+          - 18_html/ref_HTML.qmd
       - section: "Ch. 19 - Le couple HTML / CSS"
         contents: 
           - 19_css/index.qmd
+          - 19_css/acti2_CSS.qmd
           - 19_css/css_cours.qmd
-          - 19_css/css_exos.qmd
       - section: "Ch. 20 - Interactions dans une page Web - Javascript"
         contents: 
           - 20_js/index.qmd
@@ -201,8 +202,6 @@ format:
       sidebar-width: 250px
       body-width: 1000px
       margin-width: 300px
-    filters: 
-      - lightbox
     lightbox: auto
     code-block-border-left: "#31BAE9"
     code-block-bg: true
