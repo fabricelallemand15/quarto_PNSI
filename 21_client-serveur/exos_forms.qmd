@@ -1,19 +1,17 @@
 ---
 title: "Exercice : Formulaires"
-niveau: Première NSI
-année: 2022-2023
 ---
 
-_Les exercices précédés du symbole :fontawesome-solid-computer: sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+_Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._
 
-_Les exercices précédés du symbole :octicons-pencil-16: doivent être résolus par écrit._
+_Les exercices précédés du symbole {{< fa solid pencil-alt >}}doivent être résolus par écrit._
 
-## :octicons-pencil-16: Exercice (QCM)
+## {{< fa solid pencil-alt >}}Exercice (QCM)
 
 1. Parmi les réponses suivantes, que permet d'effectuer la méthode POST du protocole HTTP ?
 
     - [ ] Réponse A : Définir le style d'une page web
-    - [ ] Réponse B : Pirater des données bancaire
+    - [ ] Réponse B : Pirater des données bancaires
     - [ ] Réponse C : Envoyer une page web vers le client
     - [ ] Réponse D : Envoyer les données saisies dans un formulaire HTML vers un serveur
 

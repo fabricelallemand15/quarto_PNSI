@@ -139,13 +139,16 @@ website:
       - section: "Ch. 20 - Interactions dans une page Web - Javascript"
         contents: 
           - 20_js/index.qmd
+          - 20_js/acti3_Javascript.qmd
           - 20_js/js_cours.qmd
-          - 20_js/js_exos.qmd
       - section: "Ch. 21 - Interaction client-serveur et formulaires d'une page Web"
         contents: 
           - 21_client-serveur/index.qmd
           - 21_client-serveur/client-serveur_cours.qmd
           - 21_client-serveur/client-serveur_exos.qmd
+          - 21_client-serveur/acti4_forms.qmd
+          - 21_client-serveur/cours_forms.qmd
+          - 21_client-serveur/exos_forms.qmd
       - section: "Ch. 22 - Traitement de données en tables"
         contents: 
           - 22_tables/index.qmd

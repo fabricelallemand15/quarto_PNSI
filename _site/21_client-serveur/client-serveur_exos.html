@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Javascript : Explications et compléments</title>
+<title>NSI - Première – Exercices : le protocole HTTP</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../21_client-serveur/acti4_forms.html" rel="next">
+<link href="../21_client-serveur/client-serveur_cours.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -80,9 +82,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -212,7 +211,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Javascript : Explications et compléments</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../21_client-serveur/index.html">Ch. 21 - Interaction client-serveur et formulaires d’une page Web</a></li><li class="breadcrumb-item"><a href="../21_client-serveur/client-serveur_exos.html">Exercices : le protocole HTTP</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -811,14 +810,29 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">18_html/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../18_html/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">18_html/html_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../18_html/acti1_HTML.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Activité : Page web et langage HTML</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">18_html/html_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../18_html/html_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../18_html/ref_HTML.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Référence des principales balises HTML</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -831,14 +845,23 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">19_css/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../19_css/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">19_css/css_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../19_css/acti2_CSS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Activité : Le couple HTML/CSS</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">19_css/css_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../19_css/css_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -851,34 +874,70 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">20_js/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../20_js/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">20_js/js_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../20_js/acti3_Javascript.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Activité : Page Web interactive avec Javascript</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">20_js/js_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../20_js/js_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="true">
  <span class="menu-text">Ch. 21 - Interaction client-serveur et formulaires d’une page Web</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">21_client-serveur/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../21_client-serveur/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">21_client-serveur/client-serveur_cours.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../21_client-serveur/client-serveur_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">21_client-serveur/client-serveur_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../21_client-serveur/client-serveur_exos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Exercices : le protocole HTTP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../21_client-serveur/acti4_forms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Activité : Formulaires Web</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../21_client-serveur/cours_forms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours : formulaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../21_client-serveur/exos_forms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercice : Formulaires</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1026,19 +1085,17 @@ window.Quarto = {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#éléments-de-base-du-langage" id="toc-éléments-de-base-du-langage" class="nav-link active" data-scroll-target="#éléments-de-base-du-langage">1. Éléments de base du langage</a></li>
-  <li><a href="#interaction-avec-la-page-web" id="toc-interaction-avec-la-page-web" class="nav-link" data-scroll-target="#interaction-avec-la-page-web">2. Interaction avec la page web</a></li>
-  <li><a href="#programmation-événementielle" id="toc-programmation-événementielle" class="nav-link" data-scroll-target="#programmation-événementielle">3. Programmation événementielle</a></li>
-  <li><a href="#ressources-pour-aller-plus-loin" id="toc-ressources-pour-aller-plus-loin" class="nav-link" data-scroll-target="#ressources-pour-aller-plus-loin">4. Ressources pour aller plus loin</a></li>
+  <li><a href="#exercice-1-utilisation-des-outils-de-développement-du-navigateur" id="toc-exercice-1-utilisation-des-outils-de-développement-du-navigateur" class="nav-link active" data-scroll-target="#exercice-1-utilisation-des-outils-de-développement-du-navigateur"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 1 : Utilisation des outils de développement du navigateur</a></li>
+  <li><a href="#exercice-2-http-et-python" id="toc-exercice-2-http-et-python" class="nav-link" data-scroll-target="#exercice-2-http-et-python"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 2 : HTTP et python</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../21_client-serveur/index.html">Ch. 21 - Interaction client-serveur et formulaires d’une page Web</a></li><li class="breadcrumb-item"><a href="../21_client-serveur/client-serveur_exos.html">Exercices : le protocole HTTP</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Javascript : Explications et compléments</h1>
+<h1 class="title">Exercices : le protocole HTTP</h1>
 </div>
 
 
@@ -1055,164 +1112,64 @@ window.Quarto = {
 </header>
 
 
-<!-- Introduction avec historique -->
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png" class="img-fluid" style="float: right; margin-left: 20px;width:15.0%"></a></p>
-<p>Les scripts Javascript permettent des interactions entre l’utilisateur et une page web à partir d’éléments graphiques inclus dans la page et de l’interception d’événements auxquels sont associés des fonctions.</p>
-<p>JavaScript (souvent abrégé en « JS ») est un langage de script léger principalement connu comme le langage de script des pages web. Mais il est aussi utilisé dans de nombreux environnements extérieurs aux navigateurs web. Le code JavaScript est interprété à la volée par le navigateur internet.</p>
-<p>JavaScript a été créé en 1995 par <a href="https://fr.wikipedia.org/wiki/Brendan_Eich" target="_blank">Brendan Eich</a> et intégré au navigateur web <a href="https://fr.wikipedia.org/wiki/Netscape_Navigator" target="_blank">Netscape Navigator 2.0</a>. L’implémentation concurrente de JavaScript par Microsoft dans Internet Explorer jusqu’à sa version 9 se nommait JScript, tandis que celle d’Adobe Systems se nommait ActionScript. JavaScript a été standardisé sous le nom d’ECMAScript en juin 1997 par Ecma International dans le standard ECMA-262. La version en vigueur de ce standard depuis juin 2022 est la 13e édition.</p>
-<p>JavaScript ne doit pas être confondu avec le langage de programmation Java. Java et JavaScript sont deux marques déposées par Oracle dans de nombreux pays, mais ces deux langages de programmation ont chacun une syntaxe, une sémantique et des usages différents.</p>
-<p>!!! abstract “À savoir” Une page Web moderne, reçue par un client, comporte au moins trois composants logiciels :</p>
-<pre><code>* HTML pour la structure du document.
-* CSS pour le paramétrage de l'apparence des éléments et leur positionnement.
-* Javascript pour la définition de programmes qui vont réagir à des événements déclenchés par l'utilisateur de la page et modifier la structure de données de la page (éléments HTML et styles CSS).
-
-L'environnement d'exécution d'un code Javascript est confiné à l'onglet de la page Web où il est chargé. Pour des raisons de sécurité il ne doit pas interagir avec d'autres pages ou des ressources du poste client. Par ailleurs, si on recharge la page auprès du serveur, l'environnement Javascript est réinitialisé et les modifications de la page effectuées par un code Javascript ne sont pas répercutées sur la page source disponible sur le serveur.</code></pre>
-<!--  -->
-<p>Nous reparlerons plus en détail dans une autre partie du cours des notions de <strong>client</strong>, <strong>serveur</strong> et de la façon dont ils communiquent entre eux.</p>
-<section id="éléments-de-base-du-langage" class="level2">
-<h2 class="anchored" data-anchor-id="éléments-de-base-du-langage">1. Éléments de base du langage</h2>
-<p>Il ne s’agit pas ici de donner une description complète du langage Javascript, mais de fournir quelques repères qui pourront être complétés en consultant les ressources données en bas de cette page.</p>
-<p>Javascript est, comme Python, un langage à typage dynamique : il n’est pas nécessaire de déclarer le type des variables à leur création.</p>
-<p>La création d’une variable doit cependant être <strong>déclarée</strong> à l’aide de l’instruction <code>let</code> ou de l’instruction <code>var</code>. La différence entre ces deux instructions est leur <strong>portée</strong> : <code>let</code> définit une variable locale, limitée à un bloc ; <code>var</code> définit une variable globale.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> ma_variable <span class="op">=</span> <span class="st">"toto"</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Les blocs d’instruction sont délimités par des <strong>accolades</strong> alors qu’en Python ils le sont par l’<strong>indentation</strong>. Cette dernière n’a donc pas de sens en Javascript, mais elle peut être quand même utilisée pour rendre le texte plus lisible. La fin d’une ligne d’instructions est matérialisée par un point virgule <code>;</code>.</p>
-<p>Les commentaires sont précédés de <code>//</code>.</p>
-<p><strong>Opérateurs de base</strong></p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Opérateurs</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>=</code></td>
-<td>affectation</td>
-</tr>
-<tr class="even">
-<td><code>*</code></td>
-<td>multiplication</td>
-</tr>
-<tr class="odd">
-<td><code>/</code></td>
-<td>division</td>
-</tr>
-<tr class="even">
-<td><code>**</code></td>
-<td>puissance</td>
-</tr>
-<tr class="odd">
-<td><code>== ou ===</code></td>
-<td>égalité</td>
-</tr>
-<tr class="even">
-<td><code>!= ou !===</code></td>
-<td>différence</td>
-</tr>
-<tr class="odd">
-<td><code>&amp;&amp;</code></td>
-<td>et logique</td>
-</tr>
-<tr class="even">
-<td><code>||</code></td>
-<td>ou logique</td>
-</tr>
-<tr class="odd">
-<td><code>!</code></td>
-<td>négation logique</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Fonctions</strong></p>
-<p>Les fonctions sont définies par l’instruction <code>function</code>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">f</span>(x) {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">2</span> <span class="op">*</span> x <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">5</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Structures conditionnelles</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">juge</span>(x) {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (x <span class="op">&gt;</span> <span class="dv">10</span>){</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"Tu as la moyenne."</span>)<span class="op">;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> {</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"Tu n'as pas la moyenne."</span>)<span class="op">;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>!!! info “Remarque” La fonction <code>console.log()</code> permet d’afficher des éléments dans la console Javascript visible dans les outils de développement du navigateur.</p>
-<p><strong>Boucles</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> str <span class="op">=</span> <span class="st">''</span><span class="op">;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">9</span><span class="op">;</span> i<span class="op">++</span>) {</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  str <span class="op">=</span> str <span class="op">+</span> i<span class="op">;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(str)<span class="op">;</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">// sortie attendue : "012345678"</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> n <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (n <span class="op">&lt;</span> <span class="dv">3</span>) {</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  n<span class="op">++;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(n)<span class="op">;</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">// sortie attendue : 3</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-desktop" aria-label="desktop"></i> sont à faire sur machine, en sauvegardant le fichier si nécessaire.</em></p>
+<p><em>Les exercices précédés du symbole <i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> doivent être résolus par écrit.</em></p>
+<section id="exercice-1-utilisation-des-outils-de-développement-du-navigateur" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1-utilisation-des-outils-de-développement-du-navigateur"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 1 : Utilisation des outils de développement du navigateur</h2>
+<p>Avec un navigateur Web, demander la page d’adresse <a href="https://nsi.flallemand.fr/divers/mapageweb.html">https://nsi.flallemand.fr/divers/mapageweb.html</a>. Ouvrir la fenêtre d’outils de développement en appuyant sur la touche de fonction <code>F12</code> et sélectionner l’onglet Réseau. On peut voir les entêtes de la requête et de la réponse HTTP. On s’intéresse ici à la requête concernant la page HTML elle-même.</p>
+<ol type="1">
+<li>La requête a-t-elle abouti ? Justifier.</li>
+<li>La communication est-elle sécurisée ?</li>
+<li>Quelles informations <strong>sur le client</strong> sont transmises au serveur dans l’entête de la requête ?</li>
+<li>Quelles informations <strong>sur le serveur</strong> sont transmises au client dans l’entête de la réponse ?</li>
+<li>Effectuer une nouvelle requête avec l’URL <a href="https://nsi.flallemand.fr/Divers/mapageweb.html">https://nsi.flallemand.fr/Divers/mapageweb.html</a>. Quel est le code d’état de la réponse ? Explication ?</li>
+<li>Effectuer une nouvelle requête avec l’URL <a href="https://nsi.flallemand.fr/divers/interdit/">https://nsi.flallemand.fr/divers/interdit/</a>. Quel est le code d’état de la réponse ? Explication ?</li>
+</ol>
 </section>
-<section id="interaction-avec-la-page-web" class="level2">
-<h2 class="anchored" data-anchor-id="interaction-avec-la-page-web">2. Interaction avec la page web</h2>
-<p>Du point de vue de Javascript, la page web est un arbre HTML (voir <a href="cours_HTML.md">le cours précédent</a>).</p>
-<p>La page web dans son ensemble est représentée par l’objet <code>document</code>.</p>
-<p>Pour accéder aux éléments HTML, il existe plusieurs solutions : par leur classe CSS, par leur nom, mais le plus simple est l’accès par leur identifiant, en utilisant <code>getElementById</code>.</p>
-<p>Une fois un élément HTML sélectionné, son contenu est représenté par <code>innerHTML</code>et il peut être modifié.</p>
-<p>On peut aussi accéder aux et modifier les différentes règles CSS en utilisant une syntaxe du type `element.style.regle = …’.</p>
-<p>Toutes ces instructions sont illustrées par l’exemple ci-dessous. La <a href="mapageweb.html" target="_blank">page web étant chargée dans le navigateur</a>, on peut entrer les instructions Javascript ligne par ligne dans la console.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span> Ma page web <span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"p1"</span><span class="dt">&gt;</span>Bonjour<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"p2"</span><span class="dt">&gt;</span>Bonsoir<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"p3"</span><span class="dt">&gt;</span>Au revoir !<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">// sélection de premier paragraphe et remplacement de son contenu</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> para <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"p1"</span>)<span class="op">;</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>para<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">"Hello !"</span><span class="op">;</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">// sélection du second paragraphe et application de style</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> paragra <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"p3"</span>)<span class="op">;</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>paragra<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"red"</span><span class="op">;</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>paragra<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">textAlign</span> <span class="op">=</span> <span class="st">"center"</span><span class="op">;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="programmation-événementielle" class="level2">
-<h2 class="anchored" data-anchor-id="programmation-événementielle">3. Programmation événementielle</h2>
-<p>!!! danger “Programmation événementielle” JavaScript utilise la programmation événementielle dans laquelle l’exécution d’actions est déclenchée automatiquement lorsqu’un événement survient. Un événement correspond en général à un changement d’état dans le contexte du programme, ou bien à une intervention explicite de l’utilisateur (ou d’un système externe). La programmation événementielle est souvent utilisée dans les cas suivants :</p>
-<pre><code>* La programmation d'automates (systèmes de régulation par exemple). Par exemple : `température &lt; 20 → déclencher chauffage ;`
-
-* La programmation d'interface graphique. En effet, chaque action de l'utilisateur (clic souris, etc.) peut être vue comme un événement.
-
-Le programme sera principalement défini par ses réactions aux différents événements qui peuvent se produire, c'est-à-dire des changements d'état de variable (par exemple l'incrémentation d'une liste),, un déplacement ou un click de souris, une saisie au clavier…</code></pre>
-<p>De nombreux types d’événements peuvent être détectés, par exemple :</p>
-<ul>
-<li><code>onload</code> : la page web est chargée ;</li>
-<li><code>onkeypress</code> : une touche est pressée ;</li>
-<li><code>onclick</code> : clic gauche sur un élément ;</li>
-<li><code>onmouseover</code> : le pointeur de la souris passe sur un élément.</li>
-</ul>
-<p>Une liste complète est disponible sur <a href="https://www.w3schools.com/tags/ref_eventattributes.asp" target="_blank">le site W3Schools</a>.</p>
-<p>Pour associer une fonction à un événement, on ajoute un attribut portant le nom de cet événement à l’élément HTML considéré.</p>
-<p>Par exemple, dans le code ci-dessous, la fonction <code>maFonction()</code> sera exécutée dès que la page aura été chargée dans le navigateur.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a> <span class="dt">&lt;</span><span class="kw">body</span><span class="ot"> onload</span><span class="op">=</span><span class="st">"maFonction()"</span><span class="dt">&gt;</span> </span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Le code Javascript de <code>maFonction</code> étant quant à lui situé dans un fichier de script séparé déclaré dans la section <code>&lt;head&gt;</code>de la page HTML.</p>
-</section>
-<section id="ressources-pour-aller-plus-loin" class="level2">
-<h2 class="anchored" data-anchor-id="ressources-pour-aller-plus-loin">4. Ressources pour aller plus loin</h2>
-<p>De très nombreuses ressources existent pour apprendre Javascript.</p>
-<ul>
-<li>Excellente ressource pour apprendre le HTML, le CSS et JavaScript : <a href="https://developer.mozilla.org/fr/" target="_blank">MDN Web Docs de Mozilla</a>. Cerise sur le gâteau : le site est disponible en français.</li>
-<li>Incontournable, mais en anglais, les tutoriels de <a href="https://www.w3schools.com/" target="_blank">w3Schools</a>.</li>
-<li>Plus difficile, mais très complet : <a href="https://www.pierre-giraud.com/javascript-apprendre-coder-cours/" target="_blank">le cours de Pierre Giraud</a>. Attention, seule la version en ligne est gratuite !</li>
-</ul>
+<section id="exercice-2-http-et-python" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2-http-et-python"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 2 : HTTP et python</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Le module python <code>requests</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Il est possible d’utiliser Python pour établir une connexion avec un serveur web. On peut pour cela utiliser le module <code>requests</code> (requêtes en anglais). On travaille ci-dessous dans la console Python.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> requests</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> reponse <span class="op">=</span> requests.get(<span class="st">"http://www.delafond.org/survielinux/"</span>) <span class="co"># envoi d'un requête GET</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> reponse  <span class="co"># la connexion est établie correctement (200 signifie OK)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Response [<span class="dv">200</span>]<span class="op">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> reponse.request.headers <span class="co"># entête de la requête</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>{<span class="st">'User-Agent'</span>: <span class="st">'python-requests/2.28.1'</span>, <span class="st">'Accept-Encoding'</span>: <span class="st">'gzip, deflate, br'</span>, <span class="st">'Accept'</span>: <span class="st">'*/*'</span>, <span class="st">'Connection'</span>: <span class="st">'keep-alive'</span>}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> reponse.headers <span class="co"># l'entête de la réponse du serveur</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>{<span class="st">'Date'</span>: <span class="st">'Thu, 03 Nov 2022 21:31:47 GMT'</span>, <span class="st">'Content-Type'</span>: <span class="st">'text/html'</span>, <span class="st">'Transfer-Encoding'</span>: <span class="st">'chunked'</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="st">'Connection'</span>: <span class="st">'keep-alive'</span>, <span class="st">'Last-Modified'</span>: <span class="st">'Sun, 28 Mar 2010 21:22:16 GMT'</span>, <span class="st">'ETag'</span>: <span class="st">'"681c5-482e2fd9d3200-gzip"'</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">'Accept-Ranges'</span>: <span class="st">'bytes'</span>, <span class="st">'Vary'</span>: <span class="st">'Accept-Encoding'</span>, <span class="st">'Content-Encoding'</span>: <span class="st">'gzip'</span>, <span class="st">'server'</span>: <span class="st">'nginx'</span>}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> reponse.content</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="st">b'&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;</span><span class="ch">\n</span><span class="st">&lt;html&gt;</span><span class="ch">\n</span><span class="st">&lt;head&gt;</span><span class="ch">\n</span><span class="st">  </span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="er">&lt;meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8"&gt;\n  </span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>title<span class="op">&gt;</span>Guide de Survie du D\xc3\xa9butant sous Linux<span class="op">&lt;/</span>title<span class="op">&gt;</span>\n  <span class="op">&lt;</span>meta name<span class="op">=</span><span class="st">"CREATED"</span> content<span class="op">=</span><span class="st">"19981217;15162800"</span><span class="op">&gt;</span>\n  </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>meta name<span class="op">=</span><span class="st">"CHANGEDBY"</span> content<span class="op">=</span><span class="st">"G</span><span class="ch">\xc3\xa9</span><span class="st">rard Delafond"</span><span class="op">&gt;</span>\n  <span class="op">&lt;</span>meta name<span class="op">=</span><span class="st">"CHANGED"</span> content<span class="op">=</span><span class="st">"20050528;7341900"</span><span class="op">&gt;</span>\n  </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>style<span class="op">&gt;</span>\n  <span class="op">&lt;!--</span>\n<span class="op">@</span>page { size: <span class="dv">21</span><span class="er">cm</span> <span class="fl">29.7</span><span class="er">cm</span> }\n<span class="op">--&gt;</span>\n\n  <span class="op">&lt;/</span>style<span class="op">&gt;</span>\n<span class="op">&lt;/</span>head<span class="op">&gt;</span>\n\n<span class="op">&lt;</span>body lang<span class="op">=</span><span class="st">"fr-FR"</span> </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>background<span class="op">=</span><span class="st">"pics/backdrop.png"</span> <span class="bu">dir</span><span class="op">=</span><span class="st">"ltr"</span><span class="op">&gt;</span>\n<span class="op">&lt;</span>p<span class="op">&gt;&lt;</span>br<span class="op">&gt;</span>\n<span class="op">&lt;</span>br<span class="op">&gt;</span>\n<span class="op">&lt;/</span>p<span class="op">&gt;</span>\n\n<span class="op">&lt;</span>h1<span class="op">&gt;&lt;</span>img src<span class="op">=</span><span class="st">"pics/Survie330.jpg"</span> name<span class="op">=</span><span class="st">"Image1"</span> </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>alt<span class="op">=</span><span class="st">"Logo_survie"</span>\nalign<span class="op">=</span><span class="st">"left"</span> width<span class="op">=</span><span class="st">"799"</span> height<span class="op">=</span><span class="st">"280"</span> border<span class="op">=</span><span class="st">"0"</span><span class="op">&gt;&lt;</span>br clear<span class="op">=</span><span class="st">"left"</span><span class="op">&gt;</span>\nGuide de survie sous Linux:<span class="op">&lt;/</span>h1<span class="op">&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>... <span class="co"># réponse tronquée ...</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>On peut voir que la connexion est bien établie (code 200) entre le client (Python lui-même : User-Agent python) et le serveur (nommé ici nginx) qui héberge le site.</p>
+<p>Le contenu est en HTML, comme on s’y attend</p>
+<p>La page a été modifiée pour la dernière fois en mars 2010.</p>
+<p>Et tout un tas d’informations moins pertinentes.</p>
+<p>Le contenu de la réponse est le code HTML lui-même. <!--  --></p>
+</div>
+</div>
+<ol type="1">
+<li>Reproduire les commandes présentées ci-dessus pour joindre successivement : https://google.com et https://google.com/azeaze.</li>
+<li>Comparer les codes réponses obtenus dans les deux cas. Que signifient-ils ? Que peut-on en déduire concernant la page https://google.com/azeaze ?</li>
+<li>Mesurez la longueur du contenu de la réponse dans les deux cas. Comment expliquer cette différence ?</li>
+</ol>
 
 
 </section>
@@ -1764,6 +1721,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../21_client-serveur/client-serveur_cours.html" class="pagination-link  aria-label=" cours"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cours</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../21_client-serveur/acti4_forms.html" class="pagination-link" aria-label="Activité : Formulaires Web">
+        <span class="nav-page-text">Activité : Formulaires Web</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1796,31 +1765,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":false});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 

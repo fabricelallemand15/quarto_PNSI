@@ -1,16 +1,16 @@
 ---
-title: "Activité 4 : Formulaires Web"
-niveau: Première NSI
-année: 2022-2023
+title: "Activité : Formulaires Web"
 ---
 
-!!! danger "Objectifs de cette activité"
-    À l'issue de cette activité, vous saurez :
+::: {.callout-important}
+## Objectifs de cette activité
+À l'issue de cette activité, vous saurez :
 
-    * créer un formulaire simple ;
-    * comprendre son fonctionnement ;
-    * distinguer les transmissions de paramètres par les méthodes GET et POST.    
+* créer un formulaire simple ;
+* comprendre son fonctionnement ;
+* distinguer les transmissions de paramètres par les méthodes GET et POST. 
 <!--  -->
+:::
 
 ## Que sont les formulaires Web ?
 
@@ -24,7 +24,7 @@ Avant de commencer à coder, il est toujours préférable de prendre du recul et
 
 Dans cette activité, nous allons créer un formulaire de récupération de mot de passe oublié. Faisons un croquis :
 
-![Croquis du formulaire](../../assets/images/formulaire.drawio.svg)
+![Croquis du formulaire](formulaire.drawio.svg)
 
 Notre formulaire contiendra deux champs de texte et un bouton. Nous demandons à l'utilisateur son identifiant et son e-mail. Appuyer sur le bouton enverra les données à un serveur Web.
 
@@ -32,7 +32,7 @@ Notre formulaire contiendra deux champs de texte et un bouton. Nous demandons à
 
 Tout d'abord, créons le HTML pour notre formulaire. Nous utiliserons les éléments HTML suivants : `<form>`, `<label>`, `<input>`, et `<button>`.
 
-Cliquer sur [ce lien pour accéder au Replit dans lequel cette activité sera réalisée](https://replit.com/team/premiere-nsi/Formulaire-web).
+Cliquer sur [ce lien pour accéder à Capytale où cette activité sera réalisée](https://capytale2.ac-paris.fr/web/c/c5ff-2974240).
 
 Tous les formulaires commencent par un élément **`<form>`** de la forme :
 
@@ -93,7 +93,7 @@ Pour le moment, le formulaire a l'air plutôt moche.
 
 Nous allons utiliser un fichier de style au format CSS pour le rendre plus agréable.
 
-Tout d'abord, créer dans le Replit un fichier nommé `style.css` et lier ce fichier au fichier HTML en ajoutant la ligne suivante dans l'entête de celui-ci :
+Tout d'abord, créer dans Capytale un fichier nommé `style.css` (si ce n'est pas déjà fait) et lier ce fichier au fichier HTML en ajoutant la ligne suivante dans l'entête de celui-ci :
 
 ```HTML
 <link rel="stylesheet" href="style.css">
@@ -203,7 +203,7 @@ Voici, pour information, le contenu du fichier `acti4_forms.php` (remarque : les
 </html>
 ```
 
-Tester le formulaire, à partir du Replit : entrer un nom et une adresse e-mail, puis cliquer sur le bouton. Observer ce qu'il se passe.
+Tester le formulaire, à partir de Capytale : entrer un nom et une adresse e-mail, puis cliquer sur le bouton. Observer ce qu'il se passe.
 
 Observer l'URL affichée dans la barre d'adresse du navigateur. Que constatez-vous ?
 
@@ -219,8 +219,10 @@ On modifie aussi l'attribut **action** car le code PHP pour extraire les donnée
 
 Tester à nouveau cette nouvelle version du formulaire et observer l'URL affiché dans la barre d'adresse.
 
-!!! danger "Remarque"
-    En réalité, la méthode POST n'est pas plus sécurisée que la méthode GET. Certes, les entrées du formulaire ne sont plus affichées dans l'URL, mais elles sont transmises dans le corps de la requête en clair : l'utilisation des outils de développement du navigateur vous le montrera.
+:::{.callout-note}
+## Remarque
+En réalité, la méthode POST n'est pas plus sécurisée que la méthode GET. Certes, les entrées du formulaire ne sont plus affichées dans l'URL, mais elles sont transmises dans le corps de la requête en clair : l'utilisation des outils de développement du navigateur vous le montrera.
 
-    Pour une vraie sécurité et empêcher que ces données puissent être interceptées, il faut les crypter et utiliser le protocole sécurisé HTTPS (programme de terminale).
+Pour une vraie sécurité et empêcher que ces données puissent être interceptées, il faut les crypter et utiliser le protocole sécurisé HTTPS (programme de terminale).
 <!--  -->
+:::

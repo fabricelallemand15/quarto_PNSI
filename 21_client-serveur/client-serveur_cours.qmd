@@ -1,10 +1,8 @@
 ---
-title: "HTTP : Explications et compléments"
-niveau: Première NSI
-année: 2022-2023
+title: "Cours"
 ---
 
-![logo CSS](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_logo.svg/640px-HTTP_logo.svg.png){width="15%" style="float: right"}
+![logo HTTP](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_logo.svg/640px-HTTP_logo.svg.png){width="15%"}
 
 **HTTP** signifie *HyperText Transfer Protocol* : avec le langage HTML et les adresses web (URL), ce protocole est l'une des trois fondations du World Wide Web.
 
@@ -21,27 +19,31 @@ De façon schématique, Internet fonctionne selon le modèle d'architecture clie
 
 Remarquons que le serveur reçoit simultanément des requêtes de plusieurs clients.
 
-![image client serveur](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png){width="50%"}
+![Architecture client - serveur](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png){width="50%"}
 
-**Le protocole HTTP est donc l'ensemble des règles qui permettent le dialogue entre le serveur et les cliens.**
+**Le protocole HTTP est donc l'ensemble des règles qui permettent le dialogue entre le serveur et les clients.**
 
-!!! info "Remarque"
-    En réalité le client et le serveur sont des *logiciels* et non des *ordinateurs*. On appelle cependant couramment serveur la machine sur laquelle tourne le programme serveur et client la machine sur laquelle tourne le programme client.
+:::{.callout-note}
+## Remarque
+En réalité le client et le serveur sont des *logiciels* et non des *ordinateurs*. On appelle cependant couramment serveur la machine sur laquelle tourne le programme serveur et client la machine sur laquelle tourne le programme client.
 
-    Dans le cadre de ce cours le client est le navigateur internet.
+Dans le cadre de ce cours le client est le navigateur internet.
 <!--  -->
+:::
 
 Par défaut, le protocole HTTP n'est pas sécurisé, les données (texte de la requête et réponse) circulent donc de façon ouverte dans le réseau. Il peut cependant être sécurisé en utilisant un protocole de cryptage SSL ou TLS et il s'appelle dans ce cas **HTTPS**. 
 
-!!! info "Remarque"
-    En réalité, le client est également connecté à plusieurs serveurs. Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus. Ces différents éléments proviennent souvent de différents serveurs.
+:::{.callout-note}
+## Remarque
+En réalité, le client est également connecté à plusieurs serveurs. Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus. Ces différents éléments proviennent souvent de différents serveurs.
 
-    ![image différents serveurs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/fetching_a_page.png)
+![](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/fetching_a_page.png)
 
-    Autre simplification effectuée dans ce cours : en réalité, plusieurs machines se trouvent sur le chemin de l'information entre le client et le serveur. Ces machines sont désignées de façon générique sous le terme **proxies**. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme caches par exemple.
+Autre simplification effectuée dans ce cours : en réalité, plusieurs machines se trouvent sur le chemin de l'information entre le client et le serveur. Ces machines sont désignées de façon générique sous le terme **proxies**. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme caches.
 
-    ![image proxy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/client-server-chain.png)
+![](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/client-server-chain.png)
 <!--  -->
+:::
 
 ## 2. Requêtes et réponses
 
@@ -57,7 +59,7 @@ D'une part, un serveur n'est pas nécessairement une machine unique et d'autre p
 
 Voici un exemple de requête : 
 
-![image requête](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_request.png){width="50%"}
+![Requête HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_request.png){width="50%"}
 
 On trouve les éléments suivants : 
 
@@ -66,7 +68,7 @@ On trouve les éléments suivants :
 * la version du protocole `HTTP/1.1` ou `HTTP/2`.
 * les en-têtes optionnels qui transmettent des informations supplémentaires pour les serveurs ;
 
-Considérons la page web `mapageweb.html` suivante, hébergée en ligne [à cette adresse](https://flallemand.fr/nsi/premiere/06_web/mapageweb.html){target="_blank"}. : 
+Considérons la page web `mapageweb.html` suivante, hébergée en ligne [à cette adresse](https://flallemand.fr/divers/mapageweb.html){target="_blank"}. : 
 
 ```html
 <html>
@@ -83,9 +85,7 @@ Considérons la page web `mapageweb.html` suivante, hébergée en ligne [à cett
 
 Lorsque cette page est chargée dans le navigateur, les outils de développement (F12, puis onglet Réseau) permettent de visualiser les requêtes envoyées :
 
-![image requête HTTP](../../assets/images/requete_HTTP_2.png)
-
-![image requête HTTP](../../assets/images/requete_HTTP_1.png)
+![](requete_HTTP_1.png)
 
 Nous voyons qu'en fait deux requêtes ont été envoyées, car le navigateur charge automatiquement l'icône du site.
 
@@ -103,7 +103,7 @@ On trouve les éléments suivants :
 * les en-têtes HTTP, comme pour les requêtes ;
 * éventuellement un corps contenant la ressource récupérée.
 
-Dans l'exemple du chargement de la page `mapageweb.html` suivante, hébergée en ligne [à cette adresse](https://flallemand.fr/nsi/premiere/06_web/mapageweb.html){target="_blank"}, voici la réponse du serveur :
+Dans l'exemple du chargement de la page `mapageweb.html` suivante, hébergée en ligne [à cette adresse](https://flallemand.fr/divers/mapageweb.html){target="_blank"}, voici la réponse du serveur :
 
 ```http
 HTTP/1.1 200 OK
