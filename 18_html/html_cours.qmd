@@ -65,7 +65,7 @@ Les plus fréquents sont :
 
     L'attribut `src` indique le chemin vers le fichier de l'image et l'attribut `alt` contient un texte *alternatif*, texte descriptif de l'image à l'intention des utilisateurs qui ne peuvent pas voir l'image.
 
-* L'élément '<br /> : pour créer un saut de ligne dans le texte.
+* L'élément `<br />` : pour créer un saut de ligne dans le texte.
 * Les éléments `<link>` et `<meta>` présents dans l'élément `<head>` en début de fichier.
 
 Pour toutes ces balises auto-fermantes, la barre oblique avant le dernier chevron `>`est optionnelle.
