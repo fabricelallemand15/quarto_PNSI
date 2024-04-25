@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Quiz : Données en tables</title>
+<title>NSI - Première – S7-Traitement de données en tables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../23_reseaux/index.html" rel="next">
-<link href="../22_tables/tables_exos.html" rel="prev">
+<link href="../22_tables/tables_cours.html" rel="next">
+<link href="../21_client-serveur/exos_forms.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -211,7 +177,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/tables_quiz.html">Quiz : Données en tables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/index.html">S7-Traitement de données en tables</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -951,8 +917,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ch. 22 -Traitement de données en tables</span></a>
+  <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">S7-Traitement de données en tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -965,12 +931,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../22_tables/tables_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices - Traitements de données en tables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../22_tables/tables_quiz.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Quiz : Données en tables</span></a>
   </div>
 </li>
       </ul>
@@ -991,11 +951,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../23_reseaux/reseaux_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
-  </div>
-</li>
+ <span class="menu-text">23_reseaux/reseaux_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">23_reseaux/reseaux_exos.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1014,17 +974,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../24_protocoles/protocoles_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
-  </div>
-</li>
+ <span class="menu-text">24_protocoles/protocoles_cours.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../24_protocoles/reseaux_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">reseaux_exos.html</span></a>
-  </div>
-</li>
+ <span class="menu-text">24_protocoles/protocoles_exos.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1092,15 +1046,21 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#programme" id="toc-programme" class="nav-link active" data-scroll-target="#programme">Programme</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/tables_quiz.html">Quiz : Données en tables</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/index.html">S7-Traitement de données en tables</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Quiz : Données en tables</h1>
+<h1 class="title">S7-Traitement de données en tables</h1>
 </div>
 
 
@@ -1117,80 +1077,48 @@ window.Quarto = {
 </header>
 
 
-<ol type="1">
-<li><p>Dans la plupart des fichiers CSV, que contient la première ligne ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> des notes concernant la table de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> les sources des données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> les descripteurs des champs de la table de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> l’auteur de la table de données</label></li>
-</ul></li>
-<li><p>Laquelle de ces affirmations est vraie ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> on ne peut accéder au contenu d’un fichier CSV que par l’intermédiaire d’un programme Python</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> CSV est un format de chiffrement des données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> le format CSV a été conçu pour assurer la confidentialité d’une partie du code d’un programme</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> les fichiers CSV sont composés de données séparées par des caractères comme des virgules</label></li>
-</ul></li>
-<li><p>Qu’est-ce que le format de fichier CSV ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> un format de fichier mis au point par Microsoft pour Excel</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> un format de fichier pour décrire une base de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> un format de fichier où les données sont séparées par un caractère tel qu’une virgule</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> un format de fichier décrivant une page Web</label></li>
-</ul></li>
-<li><p>On considère l’extraction suivante d’une base de données des départements français. Cette extraction a ensuite été sauvegardée dans un fichier texte.</p>
-<pre class="title=&quot;csv&quot;"><code>"1","01","Ain","AIN","ain","A500"
-"2","02","Aisne","AISNE","aisne","A250"
-"3","03","Allier","ALLIER","allier","A460"
-"4","04","Alpes-de-Haute-Provence","ALPES-DE-HAUTE-PROVENCE","alpes-de-haute-provence","A412316152"
-"5","05","Hautes-Alpes","HAUTES-ALPES","hautes-alpes","H32412"</code></pre>
-<p>On considère le code suivant :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'departements.csv'</span>, mode<span class="op">=</span><span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'UTF-8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>lesLignes <span class="op">=</span> csv.reader(f)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> uneLigne <span class="kw">in</span> lesLignes:</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(uneLigne[<span class="dv">3</span>])</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>f.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Que va produire l’exécution de ce code ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> L’affichage de la troisième colonne à savoir le nom du département avec une majuscule initiale</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> L’affichage de tout le contenu du fichier</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> L’affichage du nombre total de départements figurant dans le fichier</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> L’affichage de la quatrième colonne, à savoir le nom du département tout en majuscules</label></li>
-</ul></li>
-<li><p>On dispose du fichier <code>'info.csv'</code> donné ci-dessous :</p>
-<pre class="title=&quot;csv&quot;"><code>nom, prenom, naissance, deces
-lovelace, ada, 1815, 1852
-von neumann, john, 1903, 1957
-turing, alan, 1912, 1954
-mccarthy, john, 1927, 2011
-floyd, robert, 1936, 2001</code></pre>
-<p>Le programme ci-dessous nous permet de créer un tableau à partir de ce fichier.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(<span class="st">"info.csv"</span>, <span class="st">"r"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>firstLine <span class="op">=</span> <span class="bu">file</span>.readline()  <span class="co"># chargement de la ligne d'entête</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>tableau <span class="op">=</span> [line.split(<span class="st">','</span>) <span class="cf">for</span> line <span class="kw">in</span> <span class="bu">file</span>]  <span class="co"># chargement des données</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Les index des lignes de ce tableau vont :</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> de 0 à 3</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> de 1 à 4</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> de 0 à 4</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> de 0 à 5</label></li>
-</ul></li>
-<li><p>Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a été défini par l’affectation suivante :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>repertoire <span class="op">=</span> [{<span class="st">'nom'</span>: <span class="st">'Dupont'</span>, <span class="st">'tel'</span>: <span class="st">'5234'</span>},</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>          {<span class="st">'nom'</span>: <span class="st">'Tournesol'</span>, <span class="st">'tel'</span>: <span class="st">'5248'</span>},</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>          {<span class="st">'nom'</span>: <span class="st">'Dupond'</span>, <span class="st">'tel'</span>: <span class="st">'3452'</span>}]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> <code>repertoire['Tournesol']</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> <code>repertoire['tel'][1]</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> <code>repertoire[1]['tel']</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> <code>repertoire['Tournesol'][tel]</code></label></li>
-</ul></li>
-</ol>
+<section id="programme" class="level2">
+<h2 class="anchored" data-anchor-id="programme">Programme</h2>
+<p>Les données organisées en table correspondent à une liste de p-uplets nommés qui partagent les mêmes descripteurs. La mobilisation de ce type de structure de données permet de préparer les élèves à aborder la notion de base de données qui ne sera présentée qu’en classe terminale. Il s’agit d’utiliser un tableau doublement indexé ou un tableau de p-uplets, dans un langage de programmation ordinaire et non dans un système de gestion de bases de données.</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Contenus</strong></th>
+<th><strong>Capacités attendues</strong></th>
+<th><strong>Commentaires</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Indexation de tables</td>
+<td>Importer une table depuis un fichier texte tabulé ou un fichier CSV.</td>
+<td>Est utilisé un tableau doublement indexé ou un tableau de p-uplets qui partagent les mêmes descripteurs.</td>
+</tr>
+<tr class="even">
+<td>Recherche dans une table</td>
+<td>Rechercher les lignes d’une table vérifiant des critères exprimés en logique propositionnelle.</td>
+<td>La recherche de doublons, les tests de cohérence d’une table sont présentés.</td>
+</tr>
+<tr class="odd">
+<td>Tri d’une table</td>
+<td>Trier une table suivant une colonne.</td>
+<td>Une fonction de tri intégrée au système ou à une bibliothèque peut être utilisée.</td>
+</tr>
+<tr class="even">
+<td>Fusion de tables</td>
+<td>Construire une nouvelle table en combinant les données de deux tables.</td>
+<td>La notion de domaine de valeurs est mise en évidence.</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1741,13 +1669,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../22_tables/tables_exos.html" class="pagination-link  aria-label=" exercices="" -="" traitements="" de="" données="" en="" tables"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercices - Traitements de données en tables</span>
+      <a href="../21_client-serveur/exos_forms.html" class="pagination-link  aria-label=" exercice="" :="" formulaires"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercice : Formulaires</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../23_reseaux/index.html" class="pagination-link" aria-label="Programme">
-        <span class="nav-page-text">Programme</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../22_tables/tables_cours.html" class="pagination-link" aria-label="Traitements de données en tables (cours)">
+        <span class="nav-page-text">Traitements de données en tables (cours)</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1765,7 +1693,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

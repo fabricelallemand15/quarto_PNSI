@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Quiz : Données en tables</title>
+<title>NSI - Première – Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../23_reseaux/index.html" rel="next">
-<link href="../22_tables/tables_exos.html" rel="prev">
+<link href="../06_relatif/relatifs_exos.html" rel="next">
+<link href="../06_relatif/index.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -82,6 +48,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -211,7 +180,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/tables_quiz.html">Quiz : Données en tables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../06_relatif/index.html">Ch. 6 - Représentation binaire d’un entier relatif</a></li><li class="breadcrumb-item"><a href="../06_relatif/relatifs_cours.html">Cours</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -406,13 +375,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
  <span class="menu-text">Ch. 6 - Représentation binaire d’un entier relatif</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../06_relatif/index.html" class="sidebar-item-text sidebar-link">
@@ -421,7 +390,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../06_relatif/relatifs_cours.html" class="sidebar-item-text sidebar-link">
+  <a href="../06_relatif/relatifs_cours.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Cours</span></a>
   </div>
 </li>
@@ -942,17 +911,17 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">
  <span class="menu-text">Ch. 22 - Traitement de données en tables</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ch. 22 -Traitement de données en tables</span></a>
+ <span class="menu-text">S7-Traitement de données en tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -965,12 +934,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../22_tables/tables_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices - Traitements de données en tables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../22_tables/tables_quiz.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Quiz : Données en tables</span></a>
   </div>
 </li>
       </ul>
@@ -991,11 +954,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../23_reseaux/reseaux_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
-  </div>
-</li>
+ <span class="menu-text">23_reseaux/reseaux_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">23_reseaux/reseaux_exos.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1014,17 +977,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../24_protocoles/protocoles_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
-  </div>
-</li>
+ <span class="menu-text">24_protocoles/protocoles_cours.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../24_protocoles/reseaux_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">reseaux_exos.html</span></a>
-  </div>
-</li>
+ <span class="menu-text">24_protocoles/protocoles_exos.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1092,15 +1049,27 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#première-idée-le-bit-de-signe" id="toc-première-idée-le-bit-de-signe" class="nav-link active" data-scroll-target="#première-idée-le-bit-de-signe">1. Première idée : le bit de signe</a></li>
+  <li><a href="#le-complément-à-2" id="toc-le-complément-à-2" class="nav-link" data-scroll-target="#le-complément-à-2">2. Le complément à 2</a>
+  <ul class="collapse">
+  <li><a href="#le-principe" id="toc-le-principe" class="nav-link" data-scroll-target="#le-principe">Le principe</a></li>
+  <li><a href="#combien-de-nombres" id="toc-combien-de-nombres" class="nav-link" data-scroll-target="#combien-de-nombres">Combien de nombres ?</a></li>
+  </ul></li>
+  <li><a href="#cas-concrets" id="toc-cas-concrets" class="nav-link" data-scroll-target="#cas-concrets">3. Cas concrets</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/tables_quiz.html">Quiz : Données en tables</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../06_relatif/index.html">Ch. 6 - Représentation binaire d’un entier relatif</a></li><li class="breadcrumb-item"><a href="../06_relatif/relatifs_cours.html">Cours</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Quiz : Données en tables</h1>
+<h1 class="title">Cours</h1>
 </div>
 
 
@@ -1117,80 +1086,137 @@ window.Quarto = {
 </header>
 
 
-<ol type="1">
-<li><p>Dans la plupart des fichiers CSV, que contient la première ligne ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> des notes concernant la table de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> les sources des données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> les descripteurs des champs de la table de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> l’auteur de la table de données</label></li>
-</ul></li>
-<li><p>Laquelle de ces affirmations est vraie ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> on ne peut accéder au contenu d’un fichier CSV que par l’intermédiaire d’un programme Python</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> CSV est un format de chiffrement des données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> le format CSV a été conçu pour assurer la confidentialité d’une partie du code d’un programme</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> les fichiers CSV sont composés de données séparées par des caractères comme des virgules</label></li>
-</ul></li>
-<li><p>Qu’est-ce que le format de fichier CSV ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> un format de fichier mis au point par Microsoft pour Excel</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> un format de fichier pour décrire une base de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> un format de fichier où les données sont séparées par un caractère tel qu’une virgule</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> un format de fichier décrivant une page Web</label></li>
-</ul></li>
-<li><p>On considère l’extraction suivante d’une base de données des départements français. Cette extraction a ensuite été sauvegardée dans un fichier texte.</p>
-<pre class="title=&quot;csv&quot;"><code>"1","01","Ain","AIN","ain","A500"
-"2","02","Aisne","AISNE","aisne","A250"
-"3","03","Allier","ALLIER","allier","A460"
-"4","04","Alpes-de-Haute-Provence","ALPES-DE-HAUTE-PROVENCE","alpes-de-haute-provence","A412316152"
-"5","05","Hautes-Alpes","HAUTES-ALPES","hautes-alpes","H32412"</code></pre>
-<p>On considère le code suivant :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'departements.csv'</span>, mode<span class="op">=</span><span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'UTF-8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>lesLignes <span class="op">=</span> csv.reader(f)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> uneLigne <span class="kw">in</span> lesLignes:</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(uneLigne[<span class="dv">3</span>])</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>f.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Que va produire l’exécution de ce code ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> L’affichage de la troisième colonne à savoir le nom du département avec une majuscule initiale</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> L’affichage de tout le contenu du fichier</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> L’affichage du nombre total de départements figurant dans le fichier</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> L’affichage de la quatrième colonne, à savoir le nom du département tout en majuscules</label></li>
-</ul></li>
-<li><p>On dispose du fichier <code>'info.csv'</code> donné ci-dessous :</p>
-<pre class="title=&quot;csv&quot;"><code>nom, prenom, naissance, deces
-lovelace, ada, 1815, 1852
-von neumann, john, 1903, 1957
-turing, alan, 1912, 1954
-mccarthy, john, 1927, 2011
-floyd, robert, 1936, 2001</code></pre>
-<p>Le programme ci-dessous nous permet de créer un tableau à partir de ce fichier.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(<span class="st">"info.csv"</span>, <span class="st">"r"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>firstLine <span class="op">=</span> <span class="bu">file</span>.readline()  <span class="co"># chargement de la ligne d'entête</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>tableau <span class="op">=</span> [line.split(<span class="st">','</span>) <span class="cf">for</span> line <span class="kw">in</span> <span class="bu">file</span>]  <span class="co"># chargement des données</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Les index des lignes de ce tableau vont :</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> de 0 à 3</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> de 1 à 4</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> de 0 à 4</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> de 0 à 5</label></li>
-</ul></li>
-<li><p>Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a été défini par l’affectation suivante :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>repertoire <span class="op">=</span> [{<span class="st">'nom'</span>: <span class="st">'Dupont'</span>, <span class="st">'tel'</span>: <span class="st">'5234'</span>},</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>          {<span class="st">'nom'</span>: <span class="st">'Tournesol'</span>, <span class="st">'tel'</span>: <span class="st">'5248'</span>},</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>          {<span class="st">'nom'</span>: <span class="st">'Dupond'</span>, <span class="st">'tel'</span>: <span class="st">'3452'</span>}]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> <code>repertoire['Tournesol']</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> <code>repertoire['tel'][1]</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> <code>repertoire[1]['tel']</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> <code>repertoire['Tournesol'][tel]</code></label></li>
-</ul></li>
-</ol>
+<p>Nous allons maintenant étudier la représentation des entiers relatifs en base 2.</p>
+<p>Tout le problème est de coder le <strong>signe</strong> du nombre, et plus seulement sa valeur.</p>
+<section id="première-idée-le-bit-de-signe" class="level2">
+<h2 class="anchored" data-anchor-id="première-idée-le-bit-de-signe">1. Première idée : le bit de signe</h2>
+<p>Une première idée consiste à décider que : lorsqu’on travaille avec une représentation binaire sur <span class="math inline">\(n\)</span> bits, on réserve le bit de poids fort pour coder le signe. 1 va coder le signe <span class="math inline">\(-\)</span> et 0 le signe <span class="math inline">\(+\)</span>. Les <span class="math inline">\(n-1\)</span> bits restants codent la valeur absolue du nombre.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exemple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En travaillant sur 8 bits (soit 1 octet), l’entier positif <span class="math inline">\(5_{10}\)</span> sera codé par <span class="math inline">\(0000\;0101_2\)</span> et l’entier négatif <span class="math inline">\(-5_{10}\)</span> sera codé par <span class="math inline">\(1000\;0101_2\)</span>.</p>
+</div>
+</div>
+<p>Cette première idée est une mauvaise idée ! En effet, que dire des deux entiers <span class="math inline">\(0000\;0000_2\)</span> et <span class="math inline">\(1000\;0000_2\)</span> ? Ils sont égaux, respectivement à <span class="math inline">\(+0\)</span> et à <span class="math inline">\(-0\)</span>, donc ils sont égaux. Il n’est pas souhaitable qu’un même nombre possède deux représentations différentes.</p>
+<p>De plus, cette représentation pose un autre problème plus grave ! Considérons par exemple le codage de <span class="math inline">\(3_{10}\)</span> sur 4 bits. On a <span class="math inline">\(3_{10} = 0011_2\)</span> et donc <span class="math inline">\(-3_{10} = 1011_2\)</span>. Calculons maintenant leur somme : on s’attend à trouver zéro :</p>
+<p><a href="add_bin.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="add_bin.png" class="img-fluid"></a></p>
+<p>mais le résultat correspond à la représentation de <span class="math inline">\(-4\)</span> !</p>
+</section>
+<section id="le-complément-à-2" class="level2">
+<h2 class="anchored" data-anchor-id="le-complément-à-2">2. Le complément à 2</h2>
+<section id="le-principe" class="level3">
+<h3 class="anchored" data-anchor-id="le-principe">Le principe</h3>
+<p>Pour représenter un entier relatif <span class="math inline">\(R\)</span> en base 2, on commence par choisir le nombre de bits <span class="math inline">\(n\)</span> de la représentation.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Définition et règles de représentation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Le complément à <span class="math inline">\(2\)</span> d’un nombre <span class="math inline">\(R\)</span> est le nombre <span class="math inline">\(2^n-R\)</span>.</li>
+<li>Les nombres positifs sont représentés par leur codage binaire usuel.</li>
+<li>Les nombres négatifs sont représentés par le complément à <span class="math inline">\(2\)</span> de leur valeur absolue.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exemple
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Considérons le codage de l’entier <span class="math inline">\(+12\)</span> sur 8 bits. Il s’agit d’un entier positif, on le code donc comme vu précédemment et on obtient : <span class="math inline">\(+12_{10} = 0000\;1100_2\)</span>.</p>
+<p>Considérons <span class="math inline">\(-12\)</span> maintenant. Son complément à 2 vaut <span class="math inline">\(2^8-12=244\)</span> dont la représentation binaire est <span class="math inline">\(1111\;0100_2\)</span>. <span class="math inline">\(-12\)</span> est donc représenté par le nombre <span class="math inline">\(1111\;0100_2\)</span> en binaire sur 8 bits.</p>
+</div>
+</div>
+<p><strong>“Truc” pratique</strong> : pour obtenir la représentation d’un nombre négatif, par exemple de <span class="math inline">\(-12\)</span> :</p>
+<ul>
+<li>on commence par coder sa valeur absolue 12 : <span class="math inline">\(0000\;1100\)</span> ;</li>
+<li>on inverse tous les bits : <span class="math inline">\(1111\;0011\)</span> ;</li>
+<li>on ajoute 1 (attention aux retenues !) : <span class="math inline">\(1111\;0100\)</span>.</li>
+</ul>
+<p>De plus, ce truc fonctionne dans les deux sens : en partant d’un nombre négatif, on retrouve aussi son opposé :</p>
+<ul>
+<li>on considère <span class="math inline">\(-12\)</span> : <span class="math inline">\(1111\;0100\)</span> ;</li>
+<li>on inverse tous les bits : <span class="math inline">\(0000\;1011\)</span> ;</li>
+<li>on ajoute 1 : <span class="math inline">\(1111\;1100\)</span>. On retrouve bien 12.</li>
+</ul>
+<p>Avec cette convention, zéro n’a plus qu’une seule représentation. De plus, on peut poser des additions de façon habituelle.</p>
+<p>Reprenons l’exemple de l’entier <span class="math inline">\(3_{10} = 0011_2\)</span> codé sur 4 bits. <span class="math inline">\(-3_{10}\)</span> sera codé par <span class="math inline">\(2^4-3=13\)</span>, donc par <span class="math inline">\(1101_2\)</span>. On obtient bien zéro en les additionnant (on oublie la dernière retenue car on reste sur 4 bits) :</p>
+<p><a href="add_bin2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="add_bin2.png" class="img-fluid"></a></p>
+</section>
+<section id="combien-de-nombres" class="level3">
+<h3 class="anchored" data-anchor-id="combien-de-nombres">Combien de nombres ?</h3>
+<p>Nous savons que, sur <span class="math inline">\(n\)</span> bits, nous pouvons représenter <span class="math inline">\(2^n\)</span> entiers naturels : tous les entiers de <span class="math inline">\(0\)</span> à <span class="math inline">\(2^n-1\)</span>.</p>
+<p>Avec le complément à 2 :</p>
+<ul>
+<li>la première moitié de ces entiers va représenter les <span class="math inline">\(2^{n-1}\)</span> premiers entiers positifs : de <span class="math inline">\(0\)</span> à <span class="math inline">\(2^{n-1}-1\)</span>,</li>
+<li>la seconde moitié va représenter les <span class="math inline">\(2^{n-1}\)</span> premiers entiers négatifs : de <span class="math inline">\(-1\)</span> à <span class="math inline">\(-2^{n-1}\)</span>.</li>
+</ul>
+<p>Avec le complément à deux, <span class="math inline">\(-1\)</span> sera représenté par <span class="math inline">\(2^n-1\)</span>, soit <span class="math inline">\(11111\ldots 1111\)</span>.</p>
+<p>Sur un axe gradué, voici comment les nombres relatifs s’organisent :</p>
+<p><a href="cplt_deux.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="cplt_deux.png" class="img-fluid"></a></p>
+<p>On remarque que :</p>
+<ul>
+<li>la représentation d’un nombre positif commence par un bit de poids fort égal à 0.</li>
+<li>la représentation d’un nombre négatif commence par un bit de poids fort égal à 1.</li>
+</ul>
+</section>
+</section>
+<section id="cas-concrets" class="level2">
+<h2 class="anchored" data-anchor-id="cas-concrets">3. Cas concrets</h2>
+<p>Couramment, les entiers sont codés sur 8, 16, 32 ou 64 bits dans les langages de programmation usuels.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">En codant sur …</th>
+<th style="text-align: center;">On peut aller de …</th>
+<th style="text-align: center;">jusqu’à …</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">8 bits</td>
+<td style="text-align: center;">-128</td>
+<td style="text-align: center;">127</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16 bits</td>
+<td style="text-align: center;">-32 768</td>
+<td style="text-align: center;">32 767</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">32 bits</td>
+<td style="text-align: center;">-2 147 483 648</td>
+<td style="text-align: center;">2 147 483 647</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">64 bits</td>
+<td style="text-align: center;">-9 223 372 036 854 775 808</td>
+<td style="text-align: center;">9 223 372 036 854 775 807</td>
+</tr>
+</tbody>
+</table>
+<p>En Python, la taille des entiers avec lesquels on peut travailler n’est limitée que par la mémoire disponible. Dans d’autres langages, il faut déclarer des variables de types différents en fonction des limites de valeurs envisagées. Par exemple en C, un <code>char</code> codera sur un octet un entier compris entre <span class="math inline">\(-128\)</span> et <span class="math inline">\(127\)</span>, et un <code>short int</code> codera sur 2 octets un entier compris entre <span class="math inline">\(-32\; 768\)</span> et <span class="math inline">\(32\;767\)</span>. <code>long int</code> utilisera 4 octets.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1741,13 +1767,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../22_tables/tables_exos.html" class="pagination-link  aria-label=" exercices="" -="" traitements="" de="" données="" en="" tables"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercices - Traitements de données en tables</span>
+      <a href="../06_relatif/index.html" class="pagination-link  aria-label=" programme"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../23_reseaux/index.html" class="pagination-link" aria-label="Programme">
-        <span class="nav-page-text">Programme</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../06_relatif/relatifs_exos.html" class="pagination-link" aria-label="Exercices">
+        <span class="nav-page-text">Exercices</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1765,7 +1791,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1783,6 +1809,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

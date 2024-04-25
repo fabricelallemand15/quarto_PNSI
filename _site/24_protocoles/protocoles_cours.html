@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Quiz : Données en tables</title>
+<title>NSI - Première – Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../23_reseaux/index.html" rel="next">
-<link href="../22_tables/tables_exos.html" rel="prev">
+<link href="../24_protocoles/reseaux_exos.html" rel="next">
+<link href="../24_protocoles/index.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -82,6 +48,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -211,7 +180,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/tables_quiz.html">Quiz : Données en tables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../24_protocoles/index.html">Ch. 24 - Protocoles de communication</a></li><li class="breadcrumb-item"><a href="../24_protocoles/protocoles_cours.html">Cours</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -942,17 +911,17 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">
  <span class="menu-text">Ch. 22 - Traitement de données en tables</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ch. 22 -Traitement de données en tables</span></a>
+ <span class="menu-text">S7-Traitement de données en tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -965,12 +934,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../22_tables/tables_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices - Traitements de données en tables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../22_tables/tables_quiz.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Quiz : Données en tables</span></a>
   </div>
 </li>
       </ul>
@@ -1000,13 +963,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="true">
  <span class="menu-text">Ch. 24 - Protocoles de communication</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../24_protocoles/index.html" class="sidebar-item-text sidebar-link">
@@ -1015,7 +978,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../24_protocoles/protocoles_cours.html" class="sidebar-item-text sidebar-link">
+  <a href="../24_protocoles/protocoles_cours.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Cours</span></a>
   </div>
 </li>
@@ -1092,15 +1055,37 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#modèle-osi-modèle-internet" id="toc-modèle-osi-modèle-internet" class="nav-link active" data-scroll-target="#modèle-osi-modèle-internet">1. Modèle OSI, modèle Internet</a></li>
+  <li><a href="#observation-des-trames-avec-filius" id="toc-observation-des-trames-avec-filius" class="nav-link" data-scroll-target="#observation-des-trames-avec-filius">2. Observation des trames avec Filius</a>
+  <ul class="collapse">
+  <li><a href="#ping-à-travers-un-switch" id="toc-ping-à-travers-un-switch" class="nav-link" data-scroll-target="#ping-à-travers-un-switch">2.1. Ping à travers un switch</a></li>
+  <li><a href="#ping-à-travers-un-routeur" id="toc-ping-à-travers-un-routeur" class="nav-link" data-scroll-target="#ping-à-travers-un-routeur">2.2. Ping à travers un routeur</a></li>
+  </ul></li>
+  <li><a href="#protocole-du-bit-alterné" id="toc-protocole-du-bit-alterné" class="nav-link" data-scroll-target="#protocole-du-bit-alterné">3. Protocole du bit alterné</a>
+  <ul class="collapse">
+  <li><a href="#contexte" id="toc-contexte" class="nav-link" data-scroll-target="#contexte">1. Contexte</a></li>
+  <li><a href="#situation-idéale" id="toc-situation-idéale" class="nav-link" data-scroll-target="#situation-idéale">2. Situation idéale</a></li>
+  <li><a href="#situation-réelle" id="toc-situation-réelle" class="nav-link" data-scroll-target="#situation-réelle">3. Situation réelle</a></li>
+  <li><a href="#solution-naïve" id="toc-solution-naïve" class="nav-link" data-scroll-target="#solution-naïve">3. Solution naïve…</a></li>
+  <li><a href="#mais-peu-efficace" id="toc-mais-peu-efficace" class="nav-link" data-scroll-target="#mais-peu-efficace">4. Mais peu efficace…</a></li>
+  <li><a href="#bob-prend-le-contrôle" id="toc-bob-prend-le-contrôle" class="nav-link" data-scroll-target="#bob-prend-le-contrôle">5. Bob prend le contrôle</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">6. Conclusion</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/tables_quiz.html">Quiz : Données en tables</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../24_protocoles/index.html">Ch. 24 - Protocoles de communication</a></li><li class="breadcrumb-item"><a href="../24_protocoles/protocoles_cours.html">Cours</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Quiz : Données en tables</h1>
+<h1 class="title">Cours</h1>
+<p class="subtitle lead">Protocoles de communication</p>
 </div>
 
 
@@ -1117,80 +1102,210 @@ window.Quarto = {
 </header>
 
 
-<ol type="1">
-<li><p>Dans la plupart des fichiers CSV, que contient la première ligne ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> des notes concernant la table de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> les sources des données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> les descripteurs des champs de la table de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> l’auteur de la table de données</label></li>
+<section id="modèle-osi-modèle-internet" class="level2">
+<h2 class="anchored" data-anchor-id="modèle-osi-modèle-internet">1. Modèle OSI, modèle Internet</h2>
+<p>Les bits transmis d’un ordinateur à un autre contiennent, en plus des données <em>utiles</em> (le mot «bonjour» dans un email), une multitude de données (tout aussi utiles) qui vont aider à l’acheminement de ces bits au bon endroit, puis au bon ordinateur, puis au bon logiciel. Les différents protocoles qui régissent cette transmission sont regroupés dans ce qui est appelé un <strong>modèle</strong>. Deux modèles synthétisent ces protocoles :</p>
+<ul>
+<li>le <strong>modèle Internet</strong> (ou modèle <strong>TCP/IP</strong>, 1974), organisé en <strong>4</strong> couches : liaison, réseau, transport, application.</li>
+<li>le <strong>modèle OSI</strong> (Open Systems Interconnection, 1984), organisé en <strong>7</strong> couches : physique, liaison, réseau, transport, session, présentation,application.</li>
+</ul>
+<p>Ces deux modèles coïncident suivant le schéma ci-dessus. Ce sont des modèles théoriques. Leur utilisation dans la pratique est parfois plus floue, avec des protocoles à cheval sur plusieurs couches.</p>
+<p>Dans la suite de ce cours, nous évoquerons les couches par leur numéro dans le modèle OSI.</p>
+<p><a href="OSI.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="OSI.png" class="img-fluid"></a></p>
+<p>Lors de son émission, un message va subir successivement toutes les transformations effectuées par chaque couche, depuis sa création (couche 7) jusqu’à sa transmission physique (couche 1).</p>
+<p>Lorsque ce même message sera réceptionné, les transformations seront effectuées dans l’ordre inverse, jusqu’à la présentation du message au destinataire.</p>
+<p><a href="memeOSI.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="memeOSI.jpeg" class="img-fluid"></a></p>
+<ul>
+<li><p><strong>couches 7-6-5 — couches application-présentation-session :</strong> Ces couches (réunies dans le modèle Internet en une couche unique «application» ) regroupent les protocoles nécessaires à la bonne mise en forme d’un message (au sens large) avant sa transmission. Ces protocoles peuvent être de nature très différente : protocole HTTP pour la transmisson de pages web, protocole FTP pour le transfert de fichiers, protocoles POP ou IMAP pour le courrier électronique… <br></p></li>
+<li><p><strong>couche 4 — couche transport :</strong><br>
+Le protocole majeur de cette couche est le protocole TCP :</p>
+<ul>
+<li>il s’assure par SYN-ACK que l’émetteur et le récepteur sont prêts à échanger des messages.</li>
+<li>il découpe en segments numérotés le message à transmettre (côté émetteur) ou bien recompose le message total en remettant les segments dans l’ordre (côté récepteur).<br>
+Les éléments échangés avec la couche inférieure sont des <strong>segments</strong>. <br></li>
 </ul></li>
-<li><p>Laquelle de ces affirmations est vraie ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> on ne peut accéder au contenu d’un fichier CSV que par l’intermédiaire d’un programme Python</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> CSV est un format de chiffrement des données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> le format CSV a été conçu pour assurer la confidentialité d’une partie du code d’un programme</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> les fichiers CSV sont composés de données séparées par des caractères comme des virgules</label></li>
+<li><p><strong>couche 3 — couche réseau :</strong><br>
+C’est la couche où chaque segment numéroté est encapsulé dans un paquet qui, suivant le protocole IP, va contenir son adresse source et son adresse de destination. C’est à ce niveau que se décide si le message doit rester dans le réseau local ou être envoyé sur un autre réseau via la passerelle du routeur.<br>
+Les éléments échangés avec la couche inférieure sont des <strong>paquets</strong>. <br></p></li>
+<li><p><strong>couche 2 — couche liaison :</strong><br>
+C’est l’encapsulation finale du message. Suivant le protocole Ethernet, les informations sont transmises d’une carte réseau à une autre, grâce à leur adresse MAC (Media Access Controler).<br>
+Les éléments échangés avec la couche inférieure sont des <strong>trames</strong>. <br></p></li>
+<li><p><strong>couche 1 — couche physique :</strong><br>
+C’est la couche où le message est transmis physiquement d’un point à un autre. Par signal lumineux (fibre optique), par ondes (wifi), par courant électrique (Ethernet)… Les éléments transmis sont les <strong>bits</strong>.</p></li>
+</ul>
+<p>Lors de son parcours, une trame peut être partiellement décapsulée et remonter à la couche 3, avant de redescendre et de continuer son chemin. C’est le cas notamment lors du passage dans un routeur. Mais jamais, lors de son acheminement, le contenu réel du message n’est ouvert : les paquets transmis sont acheminés de manière identique, qu’ils contiennent les éléments constitutifs d’une vidéo YouTube ou d’un email à votre cousin.</p>
+</section>
+<section id="observation-des-trames-avec-filius" class="level2">
+<h2 class="anchored" data-anchor-id="observation-des-trames-avec-filius">2. Observation des trames avec Filius</h2>
+<section id="ping-à-travers-un-switch" class="level3">
+<h3 class="anchored" data-anchor-id="ping-à-travers-un-switch">2.1. Ping à travers un switch</h3>
+<p>Vous pouvez télécharger le fichier <a href="ping_switch.fls">ping_switch.fls</a>.</p>
+<ul>
+<li>Relions une machine <code>192.168.0.10</code> d’adresse MAC <code>BC:81:81:42:9C:31</code> à une machine <code>192.168.0.11</code> d’adresse MAC <code>2A:AB:AC:27:D6:A7</code> à travers un switch.</li>
+</ul>
+<p><a href="K1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="K1.png" class="img-fluid"></a></p>
+<ul>
+<li>Observons la table SAT de notre switch : elle est vide, car aucune machine n’a encore cherché à communiquer.</li>
+</ul>
+<p><a href="K2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="K2.png" class="img-fluid"></a></p>
+<ul>
+<li>Lançons un ping depuis <code>192.168.0.10</code> vers <code>192.168.0.11</code> et observons les données échangées :</li>
+</ul>
+<p><a href="K3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="K3.png" class="img-fluid"></a></p>
+<ul>
+<li>Observons de plus près la première ligne de données échangées.</li>
+</ul>
+<p><a href="K4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="K4.png" class="img-fluid"></a></p>
+<p>Cette première ligne est une requête <strong>ARP</strong>. ARP est un protocole qui s’interface entre la couche 3 / réseau (appelée dans la capture d’écran <em>Internet</em>) et la couche 2 / liaison (appelée dans la capture d’écran <em>Réseau</em>). Comme indiqué dans le commentaire, elle consiste à un appel à tout le réseau : “Est-ce que quelqu’un ici possède l’IP <code>192.168.0.11</code> ?</p>
+<p><strong>Message 1 : « Qui possède l’IP <code>192.168.0.11</code> ? »</strong></p>
+<p>Il faut comprendre à cette étape que l’adresse IP est totalement inutile pour répérer un ordinateur dans un sous-réseau. Ce sont les adresses MAC qui permettent de se repérer dans un sous-réseau. Les adresses IP, elles, permettront éventuellement d’acheminer le message jusqu’au bon sous-réseau (elles n’intéressent donc que les routeurs).</p>
+<p>Revenons à notre ping vers <code>192.168.0.11</code>.</p>
+<p>La commande <code>arp -a</code> effectuée dans un terminal de la machine <code>192.168.0.10</code> nous permet de voir qu’elle ne connaît encore personne dans son sous-réseau. La table de correspondance IP ⮀ MAC ne contient que l’adresse de broadcast <code>255.255.255.255</code>, qui permet d’envoyer un message à tout le réseau.<br>
+<img src="K5.png" class="img-fluid"></p>
+<p>Constatant qu’elle ne sait pas quelle est l’adresse MAC de <code>192.168.0.11</code>, la machine <code>192.168.0.10</code> commence donc par envoyer un message à <strong>tout</strong> le sous-réseau, par l’adresse MAC de broadcast <code>FF:FF:FF:FF:FF:FF</code>. Le switch va lui aussi relayer ce message à tous les équipements qui lui sont connectés (dans notre cas, un seul ordinateur).</p>
+<p><strong>Message 2 : « Moi ! »</strong></p>
+<p>La machine <code>192.168.0.11</code> s’est reconnue dans le message de broadcast de la machine <code>192.168.0.10</code>. Elle lui répond pour lui donner son adresse MAC.</p>
+<p><a href="K6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="K6.png" class="img-fluid"></a></p>
+<p>À partir de ce moment, la machine <code>192.168.0.10</code> sait comment communiquer avec <code>192.168.0.11</code>. Elle l’écrit dans sa table <code>arp</code>, afin de ne plus avoir à émettre le message n°1 :</p>
+<p><a href="K7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="K7.png" class="img-fluid"></a></p>
+<p>Le switch, qui a vu passer sur ses ports 0 et 1 des messages venant des cartes MAC <code>BC:81:81:42:9C:31</code> et <code>2A:AB:AC:27:D6:A7</code>, peut mettre à jour sa table SAT :</p>
+<p><a href="K9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="K9.png" class="img-fluid"></a></p>
+<p>Par la suite, il saura sur quel port rediriger les messages destinés à ces deux adresses MAC. Un switch est un équipement de réseau de la couche 2 du modèle OSI, il ne sait pas lire les adresses IP : il ne travaille qu’avec les adresses MAC.</p>
+<p><strong>Message 3 : le ping est envoyé</strong></p>
+<p><a href="K8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="K8.png" class="img-fluid"></a></p>
+<p>Schématisons cette trame Ethernet (couche 2 du modèle OSI) :</p>
+<p><a href="trame1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="trame1.png" class="img-fluid"></a></p>
+<p><strong>Message 4 : le pong est retourné</strong></p>
+<p><a href="K10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="K10.png" class="img-fluid"></a></p>
+<p><a href="trame2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="trame2.png" class="img-fluid"></a></p>
+</section>
+<section id="ping-à-travers-un-routeur" class="level3">
+<h3 class="anchored" data-anchor-id="ping-à-travers-un-routeur">2.2. Ping à travers un routeur</h3>
+<p>Vous pouvez télécharger le fichier <a href="ping_routeur.fls">ping_routeur.fls</a>.</p>
+<p><a href="schema_routeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="schema_routeur.png" class="img-fluid"></a></p>
+<p>L’objectif est d’observer les différentes trames lors d’un ping entre :</p>
+<ul>
+<li>la machine <code>192.168.0.1 / 24</code> (adresse MAC <code>F9:E1:D6:0B:29:03</code> ) et</li>
+<li>la machine <code>192.168.1.1 / 24</code> (adresse MAC <code>D3:79:96:B8:5C:A4</code> )</li>
+</ul>
+<p>Le routeur est configuré ainsi :</p>
+<ul>
+<li>interface sur le réseau A :
+<ul>
+<li>IP : <code>192.168.0.254</code></li>
+<li>MAC : <code>77:C2:22:C9:5C:E7</code></li>
 </ul></li>
-<li><p>Qu’est-ce que le format de fichier CSV ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> un format de fichier mis au point par Microsoft pour Excel</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> un format de fichier pour décrire une base de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> un format de fichier où les données sont séparées par un caractère tel qu’une virgule</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> un format de fichier décrivant une page Web</label></li>
+<li>interface sur le réseau B :
+<ul>
+<li>IP : <code>192.168.1.254</code></li>
+<li>MAC : <code>66:E5:4E:7D:0B:B0</code></li>
 </ul></li>
-<li><p>On considère l’extraction suivante d’une base de données des départements français. Cette extraction a ensuite été sauvegardée dans un fichier texte.</p>
-<pre class="title=&quot;csv&quot;"><code>"1","01","Ain","AIN","ain","A500"
-"2","02","Aisne","AISNE","aisne","A250"
-"3","03","Allier","ALLIER","allier","A460"
-"4","04","Alpes-de-Haute-Provence","ALPES-DE-HAUTE-PROVENCE","alpes-de-haute-provence","A412316152"
-"5","05","Hautes-Alpes","HAUTES-ALPES","hautes-alpes","H32412"</code></pre>
-<p>On considère le code suivant :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'departements.csv'</span>, mode<span class="op">=</span><span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'UTF-8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>lesLignes <span class="op">=</span> csv.reader(f)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> uneLigne <span class="kw">in</span> lesLignes:</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(uneLigne[<span class="dv">3</span>])</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>f.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Que va produire l’exécution de ce code ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> L’affichage de la troisième colonne à savoir le nom du département avec une majuscule initiale</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> L’affichage de tout le contenu du fichier</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> L’affichage du nombre total de départements figurant dans le fichier</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> L’affichage de la quatrième colonne, à savoir le nom du département tout en majuscules</label></li>
-</ul></li>
-<li><p>On dispose du fichier <code>'info.csv'</code> donné ci-dessous :</p>
-<pre class="title=&quot;csv&quot;"><code>nom, prenom, naissance, deces
-lovelace, ada, 1815, 1852
-von neumann, john, 1903, 1957
-turing, alan, 1912, 1954
-mccarthy, john, 1927, 2011
-floyd, robert, 1936, 2001</code></pre>
-<p>Le programme ci-dessous nous permet de créer un tableau à partir de ce fichier.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(<span class="st">"info.csv"</span>, <span class="st">"r"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>firstLine <span class="op">=</span> <span class="bu">file</span>.readline()  <span class="co"># chargement de la ligne d'entête</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>tableau <span class="op">=</span> [line.split(<span class="st">','</span>) <span class="cf">for</span> line <span class="kw">in</span> <span class="bu">file</span>]  <span class="co"># chargement des données</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Les index des lignes de ce tableau vont :</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> de 0 à 3</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> de 1 à 4</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> de 0 à 4</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> de 0 à 5</label></li>
-</ul></li>
-<li><p>Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a été défini par l’affectation suivante :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>repertoire <span class="op">=</span> [{<span class="st">'nom'</span>: <span class="st">'Dupont'</span>, <span class="st">'tel'</span>: <span class="st">'5234'</span>},</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>          {<span class="st">'nom'</span>: <span class="st">'Tournesol'</span>, <span class="st">'tel'</span>: <span class="st">'5248'</span>},</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>          {<span class="st">'nom'</span>: <span class="st">'Dupond'</span>, <span class="st">'tel'</span>: <span class="st">'3452'</span>}]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> <code>repertoire['Tournesol']</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> <code>repertoire['tel'][1]</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> <code>repertoire[1]['tel']</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> <code>repertoire['Tournesol'][tel]</code></label></li>
-</ul></li>
-</ol>
+</ul>
+<p><strong>Étape 0 : le routeur signale sa présence</strong></p>
+<p>Lors de l’observation des messages reçus ou émis par la machine <code>192.168.0.1</code>, on peut être intrigué par ce tout premier message reçu, émis par le routeur :</p>
+<p><a href="K11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="K11.png" class="img-fluid"></a></p>
+<p>On peut y distinguer les 4 couches du modèle Internet. Le routeur, par ce message distribué à tous les éléments du sous-réseau A (il envoie un message équivalent sur son sous-réseau B), déclare sa présence, et le fait qu’il possède deux interfaces, une pour chaque réseau. Il se positionne ainsi comme une passerelle : «c’est par moi qu’il faudra passer si vous voulez sortir de votre sous-réseau». Dans cette trame envoyée figure son adresse MAC, de sorte que tous les membres de son sous-réseau pourront donc communiquer avec lui.</p>
+<p><strong>Étape 1 : de <code>192.168.0.1</code> vers le routeur</strong></p>
+<p>La machine <code>192.168.0.1 / 24</code> calcule que la machine <code>192.168.1.1 / 24</code> avec laquelle elle veut communiquer n’est <strong>pas</strong> dans son sous-réseau. Elle va donc envoyer son message à sa passerelle, qui est l’adresse du routeur dans son sous-réseau.</p>
+<p>Cette première trame est :</p>
+<p><a href="trame3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="trame3.png" class="img-fluid"></a></p>
+<p><strong>Étape 2 : le routeur décapsule la trame</strong></p>
+<p>Le routeur est un équipement de réseau de couche 3 (couche réseau). Il doit observer le contenu du paquet IP (sans remonter jusqu’au contenu du message) pour savoir, suivant le procédé de <strong>routage</strong> (voir cours de Terminale), où acheminer ce paquet.</p>
+<p>Dans notre cas, l’adresse IP <code>192.168.1.1</code>de destination lui est accessible : elle fait partie de son sous-réseau B.</p>
+<p>Le routeur va modifier la valeur du TTL (Time To Live), en la décrémentant de 1. Si, après de multiples routages, cette valeur devenait égale à 0, ce paquet serait détruit. Ceci a pour but d’éviter l’encombrement des réseaux avec des paquets ne trouvant pas leur destination.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+NAT : translation d’adresse
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans notre cas, le routeur va laisser intacte l’adresse IP Source. Ce n’est pas toujours le cas. Dans le cas classique de la box qui relie votre domicile à internet, le routeur contenu dans celle-ci va remplacer l’adresse locale de votre ordinateur ou smartphone (ex <code>192.168.0.26</code>) par son IP publique (celle apparaissant sur <a href="http://whatsmyip.com">whatsmyip.com</a>, par exemple). Elle effectue ce qu’on appelle une translation d’adresse (NAT).</p>
+<p>Pourquoi ? Parce que sinon la réponse du serveur distant que vous interrogez serait envoyée sur une adresse locale (votre adresse <code>192.168.0.26</code>), qui est introuvable depuis un réseau extérieur. Il faut donc remplacer toutes les adresses locales par l’IP publique de votre box. Pour éviter que la réponse du serveur web que vous avez interrogé ne soit affichée sur l’ordinateur de vos parents, le routeur affecte des ports différents à chaque machine de son sous-réseau. Ce port est inclus dans le message transmis au serveur, et il l’est aussi dans sa réponse : le routeur peut donc rediriger le trafic vers la bonne machine du sous-réseau.</p>
+</div>
+</div>
+<p>Le routeur va ré-encapsuler le paquet IP modifié, et créer une nouvelle trame Ethernet en modifiant :</p>
+<ul>
+<li>l’adresse MAC source : il va mettre l’adresse MAC de son interface dans le sous-réseau B.</li>
+<li>l’adresse MAC de destination : il va mettre l’adresse MAC de <code>192.168.1.1</code> (qu’il aura peut-être récupérée au préalable par le protocole ARP)</li>
+</ul>
+<p>Cette deuxième trame est donc :</p>
+<p><a href="trame4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="trame4.png" class="img-fluid"></a></p>
+<p>On peut observer dans Filius cette trame, en se positionnant sur l’interface <code>192.168.1.254</code> du routeur, ou sur <code>192.168.1.1</code> :</p>
+<p><a href="K12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="K12.png" class="img-fluid"></a></p>
+<p>En suivant le même principe, la machine <code>192.168.1.1</code> pourra envoyer son <em>pong</em>.</p>
+</section>
+</section>
+<section id="protocole-du-bit-alterné" class="level2">
+<h2 class="anchored" data-anchor-id="protocole-du-bit-alterné">3. Protocole du bit alterné</h2>
+<p>Ce protocole est un exemple simple de fiabilisation du transfert de données.</p>
+<section id="contexte" class="level3">
+<h3 class="anchored" data-anchor-id="contexte">1. Contexte</h3>
+<ul>
+<li>Alice veut envoyer à Bob un message M, qu’elle a prédécoupé en sous-messages M0, M1, M2,…</li>
+<li>Alice envoie ses sous-messages à une cadence Δt fixée.</li>
+</ul>
+</section>
+<section id="situation-idéale" class="level3">
+<h3 class="anchored" data-anchor-id="situation-idéale">2. Situation idéale</h3>
+<p><a href="ideale.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="ideale.png" class="img-fluid"></a></p>
+<p>Dans cette situation, les sous-messages arrivent tous à destination dans le bon ordre. La transmission est correcte.</p>
+</section>
+<section id="situation-réelle" class="level3">
+<h3 class="anchored" data-anchor-id="situation-réelle">3. Situation réelle</h3>
+<p>Mais parfois, les choses ne se passent pas toujours aussi bien. Car si on maîtrise parfaitement le timing de l’envoi des sous-messages d’Alice, on ne sait pas combien de temps vont mettre ces sous-messages pour arriver, ni même (attention je vais passer dans un tunnel) s’ils ne vont pas être détruits en route.</p>
+<p><a href="realite.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="realite.png" class="img-fluid"></a></p>
+<p>Le sous-message M0 est arrivé après le M1, le message M2 n’est jamais arrivé…</p>
+<p>Que faire ?</p>
+<p>Écartons l’idée de numéroter les sous-messages, afin que Bob puisse remettre dans l’ordre les messages arrivés, ou même redemander spécifiquement des sous-messages perdus. C’est ce que réalise le protocole TCP (couche 4 — transport), c’est très efficace, mais cher en ressources. Essayons de trouver une solution plus basique.</p>
+</section>
+<section id="solution-naïve" class="level3">
+<h3 class="anchored" data-anchor-id="solution-naïve">3. Solution naïve…</h3>
+<p>Pourquoi ne pas demander à Bob d’envoyer un signal pour dire à Alice qu’il vient bien de recevoir son sous-message ? Nous appelerons ce signal ACK (comme <em>acknowledgement</em>, traduisible par «accusé de réception»). Ce signal ACK permettra à Alice de renvoyer un message qu’elle considérera comme perdu :</p>
+<p><a href="naive.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="naive.png" class="img-fluid"></a></p>
+<p>N’ayant pas reçu le ACK consécutif à son message M1, Alice suppose (avec raison) que ce message n’est pas parvenu jusqu’à Bob, et donc renvoie le message M1.</p>
+</section>
+<section id="mais-peu-efficace" class="level3">
+<h3 class="anchored" data-anchor-id="mais-peu-efficace">4. Mais peu efficace…</h3>
+<p><a href="naivebad.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="naivebad.png" class="img-fluid"></a></p>
+<p>Le deuxième ACK de Bob a mis trop de temps pour arriver (ou s’est perdu en route) et donc Alice a supposé que son sous-message M1 n’était pas arrivé. Elle l’a donc renvoyé, et Bob se retrouve avec deux fois le sous-message M1. La transmission est incorrecte. En faisant transiter un message entre Bob et Alice, nous multiplions par 2 la probabilité que des problèmes techniques de transmission interviennent. Et pour l’instant rien ne nous permet de les détecter.</p>
+</section>
+<section id="bob-prend-le-contrôle" class="level3">
+<h3 class="anchored" data-anchor-id="bob-prend-le-contrôle">5. Bob prend le contrôle</h3>
+<p>Bob va maintenant intégrer une méthode de validation du sous-message reçu. Il pourra décider de le garder ou de l’écarter. Le but est d’éviter les doublons.</p>
+<p>Pour réaliser ceci, Alice va rajouter à chacun de ses sous-messages un bit de contrôle, que nous appelerons FLAG (drapeau). Au départ, ce FLAG vaut 0. Quand Bob reçoit un FLAG, il renvoie un ACK <strong>égal au FLAG reçu</strong>.</p>
+<p>Alice va attendre ce ACK contenant le même bit que son dernier FLAG envoyé :</p>
+<ul>
+<li>tant qu’elle ne l’aura pas reçu, elle continuera à envoyer <strong>le même sous-message, avec le même FLAG</strong>.</li>
+<li>dès qu’elle l’a reçu, elle peut envoyer un nouveau sous-message en <strong>inversant</strong> («alternant») <strong>le bit de son dernier FLAG</strong> (d’où le nom de ce protocole).</li>
+</ul>
+<p>Bob, de son côté, va contrôler la validité de ce qu’il reçoit : il ne gardera que <strong>les sous-messages dont le FLAG est égal à l’inverse de son dernier ACK</strong>. C’est cette méthode qui lui permettra d’écarter les doublons.</p>
+<p>Observons ce protocole dans plusieurs cas :</p>
+<section id="cas-où-le-sous-message-est-perdu" class="level5">
+<h5 class="anchored" data-anchor-id="cas-où-le-sous-message-est-perdu">5.1 Cas où le sous-message est perdu</h5>
+<p><a href="alt2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="alt2.png" class="img-fluid"></a></p>
+</section>
+<section id="cas-où-le-ack-est-perdu" class="level5">
+<h5 class="anchored" data-anchor-id="cas-où-le-ack-est-perdu">5.2 Cas où le ACK est perdu</h5>
+<p><a href="alt1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="alt1.png" class="img-fluid"></a></p>
+<p>Le protocole a bien détecté le doublon du sous-message M1.</p>
+</section>
+<section id="cas-où-un-sous-message-est-en-retard" class="level5">
+<h5 class="anchored" data-anchor-id="cas-où-un-sous-message-est-en-retard">5.3 Cas où un sous-message est en retard</h5>
+<p><a href="alt3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="alt3.png" class="img-fluid"></a></p>
+<p>Le protocole a bien détecté le doublon du sous-message M1… mais que se passerait-il si notre premier sous-message M1 était <em>encore plus</em> en retard ?</p>
+</section>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">6. Conclusion</h3>
+<p>Le protocole du bit alterné a longtemps été utilisé au sein de la couche 2 du modèle OSI (distribution des trames Ethernet). Simple et léger, il peut toutefois être facilement mis en défaut, ce qui explique qu’il ait été remplacé par des protocoles plus performants.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1741,13 +1856,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../22_tables/tables_exos.html" class="pagination-link  aria-label=" exercices="" -="" traitements="" de="" données="" en="" tables"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercices - Traitements de données en tables</span>
+      <a href="../24_protocoles/index.html" class="pagination-link  aria-label=" programme"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../23_reseaux/index.html" class="pagination-link" aria-label="Programme">
-        <span class="nav-page-text">Programme</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../24_protocoles/reseaux_exos.html" class="pagination-link" aria-label="reseaux_exos.html">
+        <span class="nav-page-text">reseaux_exos.html</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1765,7 +1880,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1783,6 +1898,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: S7-Traitement de données en tables
+title: Ch. 22 -Traitement de données en tables
 ---
 
 ## Programme

@@ -1,5 +1,6 @@
-# Quiz : Données en tables
-
+---
+title: "Quiz : Données en tables"
+---
 
 1. Dans la plupart des fichiers CSV, que contient la première ligne ?
 

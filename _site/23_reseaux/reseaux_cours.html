@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Quiz : Données en tables</title>
+<title>NSI - Première – Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../23_reseaux/index.html" rel="next">
-<link href="../22_tables/tables_exos.html" rel="prev">
+<link href="../24_protocoles/index.html" rel="next">
+<link href="../23_reseaux/index.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -82,6 +48,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -211,7 +180,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/tables_quiz.html">Quiz : Données en tables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/index.html">Ch. 23 - Architecture d’un réseau</a></li><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Cours</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -942,17 +911,17 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">
  <span class="menu-text">Ch. 22 - Traitement de données en tables</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ch. 22 -Traitement de données en tables</span></a>
+ <span class="menu-text">S7-Traitement de données en tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -967,23 +936,17 @@ window.Quarto = {
  <span class="menu-text">Exercices - Traitements de données en tables</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../22_tables/tables_quiz.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Quiz : Données en tables</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="true">
  <span class="menu-text">Ch. 23 - Architecture d’un réseau</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../23_reseaux/index.html" class="sidebar-item-text sidebar-link">
@@ -992,7 +955,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../23_reseaux/reseaux_cours.html" class="sidebar-item-text sidebar-link">
+  <a href="../23_reseaux/reseaux_cours.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Cours</span></a>
   </div>
 </li>
@@ -1092,15 +1055,37 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#premier-réseau-local" id="toc-premier-réseau-local" class="nav-link active" data-scroll-target="#premier-réseau-local">1. Premier réseau local</a>
+  <ul class="collapse">
+  <li><a href="#la-carte-réseau-et-son-adresse-mac" id="toc-la-carte-réseau-et-son-adresse-mac" class="nav-link" data-scroll-target="#la-carte-réseau-et-son-adresse-mac">1.1. La carte réseau et son adresse MAC</a></li>
+  <li><a href="#switch-hub-quelle-différence" id="toc-switch-hub-quelle-différence" class="nav-link" data-scroll-target="#switch-hub-quelle-différence">1.2. Switch, hub, quelle différence ?</a></li>
+  </ul></li>
+  <li><a href="#un-deuxième-sous-réseau" id="toc-un-deuxième-sous-réseau" class="nav-link" data-scroll-target="#un-deuxième-sous-réseau">2. Un deuxième sous-réseau</a>
+  <ul class="collapse">
+  <li><a href="#notion-de-masque-de-sous-réseau" id="toc-notion-de-masque-de-sous-réseau" class="nav-link" data-scroll-target="#notion-de-masque-de-sous-réseau">2.1. Notion de masque de sous-réseau</a></li>
+  <li><a href="#écriture-des-masques-de-sous-réseau-notation-cidr" id="toc-écriture-des-masques-de-sous-réseau-notation-cidr" class="nav-link" data-scroll-target="#écriture-des-masques-de-sous-réseau-notation-cidr">2.2 Écriture des masques de sous-réseau : notation CIDR</a></li>
+  <li><a href="#adresses-ip-et-masques-ce-quil-faut-retenir" id="toc-adresses-ip-et-masques-ce-quil-faut-retenir" class="nav-link" data-scroll-target="#adresses-ip-et-masques-ce-quil-faut-retenir">2.3 Adresses IP et masques : ce qu’il faut retenir</a></li>
+  </ul></li>
+  <li><a href="#un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur" id="toc-un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur" class="nav-link" data-scroll-target="#un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur">3. Un vrai réseau contenant deux sous-réseaux distincts : la nécessité d’un routeur</a>
+  <ul class="collapse">
+  <li><a href="#principe-de-fonctionnement" id="toc-principe-de-fonctionnement" class="nav-link" data-scroll-target="#principe-de-fonctionnement">3.1 Principe de fonctionnement</a></li>
+  <li><a href="#illustration-avec-filius" id="toc-illustration-avec-filius" class="nav-link" data-scroll-target="#illustration-avec-filius">3.2 Illustration avec Filius</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/tables_quiz.html">Quiz : Données en tables</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/index.html">Ch. 23 - Architecture d’un réseau</a></li><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Cours</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Quiz : Données en tables</h1>
+<h1 class="title">Cours</h1>
+<p class="subtitle lead">Architecture d’un réseau</p>
 </div>
 
 
@@ -1117,80 +1102,310 @@ window.Quarto = {
 </header>
 
 
-<ol type="1">
-<li><p>Dans la plupart des fichiers CSV, que contient la première ligne ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> des notes concernant la table de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> les sources des données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> les descripteurs des champs de la table de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> l’auteur de la table de données</label></li>
+<p>Ce cours a pour but de présenter la constitution classique d’un réseau et les équipements associés. La partie relative aux protocoles utilisés lors des échanges entre deux machines est détaillée dans le cours suivant.</p>
+<section id="premier-réseau-local" class="level2">
+<h2 class="anchored" data-anchor-id="premier-réseau-local">1. Premier réseau local</h2>
+<p>Au sein du logiciel <a href="https://www.lernsoftware-filius.de/Herunterladen">Filius</a>, créons le réseau local ci-dessous :</p>
+<p><a href="f1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="f1.png" class="img-fluid"></a></p>
+<p>Testons le <code>ping</code> de la machine <code>192.168.0.1</code> vers la machine <code>192.168.0.3</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Résultat du ping
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="ft1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="ft1.png" class="img-fluid"></a></p>
+</div>
+</div>
+</div>
+<section id="la-carte-réseau-et-son-adresse-mac" class="level3">
+<h3 class="anchored" data-anchor-id="la-carte-réseau-et-son-adresse-mac">1.1. La carte réseau et son adresse MAC</h3>
+<p>Chaque ordinateur sur le réseau dispose d’une adresse MAC (Media Access Control), qui est une valeur <strong>unique</strong> attribuée à sa carte réseau (Ethernet, Wifi, 4G, 5G, …) <strong>lors de sa fabrication en usine</strong>.</p>
+<p>Cette adresse est codée sur 48 bits, présentés sous la forme de 6 octets en hexadécimal. Exemple : <code>fc:aa:14:75:45:a5</code></p>
+<p>Les trois premiers octets correspondent au code du fabricant.</p>
+<p>Un site comme <a href="https://www.macvendorlookup.com/" target="_blank">https://www.macvendorlookup.com/</a> vous permet de retrouver le fabricant d’une adresse MAC quelconque.</p>
+</section>
+<section id="switch-hub-quelle-différence" class="level3">
+<h3 class="anchored" data-anchor-id="switch-hub-quelle-différence">1.2. Switch, hub, quelle différence ?</h3>
+<ul>
+<li>Au sein d’un <strong>hub Ethernet</strong> (de moins en moins vendus), il n’y a <strong>aucune analyse</strong> des données qui transitent : il s’agit simplement d’un dédoublement des fils de cuivre (tout comme une multiprise électrique). L’intégralité des messages est donc envoyée à l’intégralité des ordinateurs du réseau, même s’ils ne sont pas concernés.</li>
+</ul>
+<p><a href="hub.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="hub.png" class="img-fluid"></a></p>
+<ul>
+<li>Au sein d’un <strong>switch Ethernet</strong>, une analyse est effectuée sur la trame qui est à distribuer. Lors d’un branchement d’un nouvel ordinateur sur le switch, celui-ci récupère son adresse MAC, ce qui lui permet de <strong>trier</strong> les messages et de ne les distribuer qu’au bon destinataire.</li>
+</ul>
+<p><a href="switch.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="switch.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="un-deuxième-sous-réseau" class="level2">
+<h2 class="anchored" data-anchor-id="un-deuxième-sous-réseau">2. Un deuxième sous-réseau</h2>
+<p>Rajoutons un deuxième sous-réseau de la manière suivante (penser à bien renommer les switchs).</p>
+<p><a href="f2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="f2.png" class="img-fluid"></a></p>
+<p><strong>Comment relier ces deux sous-réseaux ?</strong></p>
+<p>Une réponse pas si bête : avec un câble entre les deux switchs !</p>
+<p><a href="f3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="f3.png" class="img-fluid"></a></p>
+<p>Testons cette hypothèse en essayant d’envoyer un ping à la machine <code>192.168.1.2</code> depuis la machine <code>192.168.0.1</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Résultat du ping
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="ft2.png" class="img-fluid"></a></p>
+<p>Cela ne marche pas. L’ordinateur <strong>refuse</strong> d’envoyer le ping vers la machine <code>192.168.1.2</code>.</p>
+<p><em>(nous le verrons plus loin : car elle n’est pas dans son sous-réseau)</em></p>
+</div>
+</div>
+</div>
+<p>Temporairement, renommons la machine <code>192.168.1.2</code> en <code>192.168.0.33</code>. Testons à nouveau le ping depuis la machine <code>192.168.0.1</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Résultat du ping
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="ft3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="ft3.png" class="img-fluid"></a></p>
+<p>Cela marche. Les paquets sont bien acheminés.</p>
+</div>
+</div>
+</div>
+<p>Dans la deuxième situation, les machines sont considérées comme faisant partie du même sous-réseau. Dans la première situation, elles sont considérées comme faisant partie de deux sous-réseaux différents. Mais comment est-ce déterminé ? C’est ce que nous allons voir dans la suite.</p>
+<section id="notion-de-masque-de-sous-réseau" class="level3">
+<h3 class="anchored" data-anchor-id="notion-de-masque-de-sous-réseau">2.1. Notion de masque de sous-réseau</h3>
+<p>Dans Filius, lors de l’attribution de l’adresse IP à une machine, une ligne nous permet de spécifier le <strong>masque de sous-réseau</strong> (appelé simplement « Masque » dans Filius). C’est ce masque qui va permettre de déterminer si une machine appartient à un sous-réseau ou non, en fonction de son adresse IP.</p>
+<p><a href="f4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="f4.png" class="img-fluid"></a></p>
+<section id="explication-basique" class="level4">
+<h4 class="anchored" data-anchor-id="explication-basique">2.1.1 Explication basique</h4>
+<ul>
+<li>Si le masque est <code>255.255.255.0</code>, toutes les machines partageant les mêmes <strong>trois</strong> premiers nombres de leur adresse IP appartiendront au même sous-réseau. Comme ceci est le réglage par défaut de Filius, cela explique pourquoi <code>192.168.0.33</code> et <code>192.168.0.1</code> sont sur le même sous-réseau, et pourquoi <code>192.168.1.2</code> et <code>192.168.0.1</code> ne sont pas sur le même sous-réseau.</li>
+</ul>
+<p>Dans cette configuration, 256 machines peuvent donc appartenir au même sous-réseau (ce n’est pas tout à fait le cas, car les adresses finissant par 0 ou par 255 sont réservées).</p>
+<ul>
+<li>Si le masque est <code>255.255.0.0</code>, toutes les machines partageant les mêmes <strong>deux</strong> premiers nombres de leur adresse IP appartiendront au même sous-réseau.</li>
+</ul>
+<p>Dans cette configuration, 65 536 machines peuvent être dans le même sous-réseau. (car 256^2=65536)</p>
+<p><strong>Exercice</strong></p>
+<ul>
+<li>Renommons <code>192.168.0.33</code> en <code>192.168.1.2</code> et modifions son masque en <code>255.255.0.0</code>.</li>
+<li>Modifions aussi le masque de <code>192.168.0.1</code> en <code>255.255.0.0</code>.</li>
+<li>Testons le ping de <code>192.168.0.1</code> vers <code>192.168.1.2</code>.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Résultat du ping
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="ft4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="ft4.png" class="img-fluid"></a></p>
+<p>Cela marche. Les deux machines appartiennent maintenant au même sous-réseau.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="explication-avancée" class="level4">
+<h4 class="anchored" data-anchor-id="explication-avancée">2.1.2 Explication avancée</h4>
+<p>Lorsqu’une machine A veut envoyer un message à une machine B, elle doit déterminer si cette machine :</p>
+<ul>
+<li>appartient au même sous-réseau : auquel cas le message est envoyé directement via un ou plusieurs switchs.</li>
+<li>n’appartient pas au même sous-réseau : auquel cas le message doit d’abord transiter par un routeur (voir 3.)</li>
+</ul>
+<p>Quelle opération permet de distinguer cette appartenance à un même sous-réseau ?</p>
+<p>Appelons <code>IP_A</code> et <code>IP_B</code> les adresses IP respectives des machines A et B.</p>
+<p>Appelons <code>M</code> le masque de sous-réseau.</p>
+<p>Nommons <code>&amp;</code> l’opérateur de conjonction entre nombres binaires : il s’agit d’un <code>ET</code> bit à bit.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Propriété
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A et B appartiennent au même sous-réseau ⇔ <code>IP_A &amp; M = IP_B &amp; M</code></p>
+</div>
+</div>
+<p><strong>Exemple</strong> : considérons trois machines A, B, C d’IP respectives <code>192.168.129.10</code>, <code>192.168.135.200</code> et <code>192.168.145.1</code>, configurées avec un masque de sous-réseau égal à <code>255.255.248.0</code>.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>machine A</th>
+<th>machine B</th>
+<th>machine C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IP</td>
+<td>192.168.129.10</td>
+<td>192.168.135.200</td>
+<td>192.168.145.1</td>
+</tr>
+<tr class="even">
+<td>M</td>
+<td>255.255.248.0</td>
+<td>255.255.248.0</td>
+<td>255.255.248.0</td>
+</tr>
+<tr class="odd">
+<td>IP &amp; M</td>
+<td>192.168.128.0</td>
+<td>192.168.128.0</td>
+<td>192.168.144.0</td>
+</tr>
+</tbody>
+</table>
+<p>Règles de calcul pour le <code>ET</code> bit à bit :</p>
+<ul>
+<li>pour tout octet <code>x</code>, <code>x &amp; 255 = x</code> et <code>x &amp; 0 = 0</code>.</li>
+<li><code>129 &amp; 248</code> s’écrit en binaire <code>10000001 &amp; 11111000</code> qui vaut <code>10000000</code>, soit <code>128</code> en décimal.</li>
+</ul>
+<p><strong>Conclusion</strong> : les machines A et B sont sous le même sous-réseau, mais pas la machine C.</p>
+</section>
+<section id="cohérence-entre-les-deux-explications" class="level4">
+<h4 class="anchored" data-anchor-id="cohérence-entre-les-deux-explications">2.1.3 Cohérence entre les deux explications</h4>
+<p>Lorsqu’un masque de sous-réseau est égal à <code>255.255.255.0</code>, l’opération de conjonction <code>&amp;</code> avec chaque IP ne laissera intacts que les 3 premiers octets, le dernier sera égal à 0. Donc si deux adresses s’écrivent <code>A.B.C.X</code> et <code>A.B.C.Y</code>, elles appartiendront au même sous-réseau (c’est le cas de <code>192.168.0.33</code> et <code>192.168.0.1</code>).</p>
+</section>
+</section>
+<section id="écriture-des-masques-de-sous-réseau-notation-cidr" class="level3">
+<h3 class="anchored" data-anchor-id="écriture-des-masques-de-sous-réseau-notation-cidr">2.2 Écriture des masques de sous-réseau : notation CIDR</h3>
+<p>D’après ce qui précède, 2 informations sont nécessaires pour déterminer le sous-réseau auquel appartient une machine : son IP et le masque de sous-réseau.</p>
+<p>Une convention de notation permet d’écrire simplement ces deux renseignements : <strong>la notation CIDR</strong>.</p>
+<p><strong>Exemple</strong> : Une machine d’IP <code>192.168.0.33</code> avec un masque de sous-réseau <code>255.255.255.0</code> sera désignée par <code>192.168.0.33 / 24</code> en notation CIDR.</p>
+<p>Le suffixe <code>/ 24</code> signifie que le masque de sous-réseau commence par 24 bits consécutifs de valeur 1 : le reste des bits (donc 8 bits) est mis à 0.</p>
+<p>Autrement dit, ce masque vaut <code>11111111.11111111.11111111.00000000</code> , soit <code>255.255.255.0</code>.</p>
+<p>De la même manière, le suffixe <code>/ 16</code> donnera un masque de <code>11111111.11111111.00000000.00000000</code> , soit <code>255.255.0.0</code>.</p>
+<p>Ou encore, un suffixe <code>/ 21</code> donnera un masque de <code>11111111.11111111.11111000.00000000</code> , soit <code>255.255.248.0</code>.</p>
+</section>
+<section id="adresses-ip-et-masques-ce-quil-faut-retenir" class="level3">
+<h3 class="anchored" data-anchor-id="adresses-ip-et-masques-ce-quil-faut-retenir">2.3 Adresses IP et masques : ce qu’il faut retenir</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Définition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Les ordinateurs s’identifient sur les réseaux à l’aide d’une adresse IP (Internet Protocol).</li>
+<li>Suivant la norme <strong>IPv4</strong>, les adresses IP sont encodées sur 4 octets : on parle d’<strong>IPv4</strong>.</li>
+<li>Chaque octet pouvant varier de la valeur (décimale) 0 à 255, cela signifie que les adresses IP théoriquement possibles vont de <code>0.0.0.0</code> à <code>255.255.255.255</code>.</li>
+<li>Il y a donc <span class="math inline">\(256^4=4 294 967 296\)</span> adresses possibles. On a longtemps cru que ce nombre serait suffisant. Ce n’est plus le cas, on est donc en train de passer sur des adresses à 6 octets (en hexadécimal) : voir la <a href="https://fr.wikipedia.org/wiki/Adresse_IPv6">norme IPv6</a>.</li>
+</ul>
+</div>
+</div>
+<p><strong>Exemple</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="ex_reseau.png" class="lightbox" data-glightbox="description: .lightbox-desc-11" data-gallery="quarto-lightbox-gallery-11" title="image"><img src="ex_reseau.png" class="img-fluid figure-img" alt="image"></a></p>
+<figcaption>image</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur" class="level2">
+<h2 class="anchored" data-anchor-id="un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur">3. Un vrai réseau contenant deux sous-réseaux distincts : la nécessité d’un routeur</h2>
+<p>Notre solution initiale (relier les deux switchs par un câble pour unifier les deux sous-réseaux) n’est pas viable à l’échelle d’un réseau planétaire.</p>
+<p>Pour que les machines de deux réseaux différents puissent être connectées, on va utiliser un dispositif équipé de <strong>deux cartes réseaux</strong>, situé à cheval entre les deux sous-réseaux. Cet équipement de réseau est appelé <strong>routeur</strong> ou <strong>passerelle</strong>.</p>
+<p><a href="routeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="routeur.png" class="img-fluid"></a></p>
+<section id="principe-de-fonctionnement" class="level3">
+<h3 class="anchored" data-anchor-id="principe-de-fonctionnement">3.1 Principe de fonctionnement</h3>
+<p>Imaginons que la machine <code>192.168.0.1 / 24</code> veuille communiquer avec la machine <code>172.16.52.3 / 24</code>.</p>
+<p>L’observation du masque de sous-réseau de la machine <code>192.168.0.1 / 24</code> nous apprend qu’elle ne peut communiquer qu’avec les adresses de la forme <code>192.168.0.X / 24</code>, où <code>X</code> est un nombre entre 0 et 255.</p>
+<p>Les 3 étapes du <strong>routage</strong> :</p>
+<ul>
+<li>Lorsque qu’une machine A veut envoyer un message à une machine B, elle va tout d’abord vérifier si cette machine appartient à son réseau local. Si c’est le cas, le message est envoyé par l’intermédiaire du switch qui relie les deux machines.</li>
+<li>Si la machine B n’est pas trouvée sur le réseau local de la machine A, le message va être acheminé vers le routeur, par l’intermédiaire de son adresse de passerelle (qui est bien une adresse appartenant au sous-réseau de A).</li>
+<li>De là, le routeur va regarder si la machine B appartient au deuxième sous-réseau auquel il est connecté. Si c’est le cas, le message est distribué, sinon, le routeur va donner le message à un autre routeur auquel il est connecté et va le charger de distribuer ce message : c’est le procédé (complexe) de routage qui sera abordé en classe de Terminale.</li>
+</ul>
+<p>Dans notre exemple, l’adresse <code>172.16.52.3</code> n’est pas dans le sous-réseau de <code>192.168.0.1</code>. Le message va donc transiter par le routeur.</p>
+<p><a href="routeur2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="routeur2.png" class="img-fluid"></a></p>
+</section>
+<section id="illustration-avec-filius" class="level3">
+<h3 class="anchored" data-anchor-id="illustration-avec-filius">3.2 Illustration avec Filius</h3>
+<ul>
+<li><p>Rajoutons un routeur entre le SwitchA et le SwitchB. <img src="f5.png" class="img-fluid"></p></li>
+<li><p>Configuration du routeur :</p>
+<ul>
+<li>L’interface reliée au Switch A doit avoir une adresse du sous-réseau A. On donne souvent une adresse finissant par <code>254</code>, qui est en quelque sorte la dernière adresse du réseau (en effet l’adresse en <code>255</code> est appelée adresse de <strong>broadcast</strong>, utilisée pour envoyer un ping en une seule fois à l’intégralité d’un sous-réseau).<br>
+</li>
+<li>On donne donc l’adresse <code>192.168.0.254</code> pour l’interface reliée au Switch A, et <code>192.168.1.254</code> pour l’interface reliée au Switch B.</li>
+</ul>
+<p><a href="flsrouteur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="flsrouteur.png" class="img-fluid"></a></p>
+<ul>
+<li><p>Dans l’onglet général, sélectionner « Routage automatique ».</p></li>
+<li><p>Ainsi configuré notre routeur peut jouer le rôle de <strong>passerelle</strong> entre les deux sous-réseaux.</p></li>
 </ul></li>
-<li><p>Laquelle de ces affirmations est vraie ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> on ne peut accéder au contenu d’un fichier CSV que par l’intermédiaire d’un programme Python</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> CSV est un format de chiffrement des données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> le format CSV a été conçu pour assurer la confidentialité d’une partie du code d’un programme</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> les fichiers CSV sont composés de données séparées par des caractères comme des virgules</label></li>
-</ul></li>
-<li><p>Qu’est-ce que le format de fichier CSV ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> un format de fichier mis au point par Microsoft pour Excel</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> un format de fichier pour décrire une base de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> un format de fichier où les données sont séparées par un caractère tel qu’une virgule</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> un format de fichier décrivant une page Web</label></li>
-</ul></li>
-<li><p>On considère l’extraction suivante d’une base de données des départements français. Cette extraction a ensuite été sauvegardée dans un fichier texte.</p>
-<pre class="title=&quot;csv&quot;"><code>"1","01","Ain","AIN","ain","A500"
-"2","02","Aisne","AISNE","aisne","A250"
-"3","03","Allier","ALLIER","allier","A460"
-"4","04","Alpes-de-Haute-Provence","ALPES-DE-HAUTE-PROVENCE","alpes-de-haute-provence","A412316152"
-"5","05","Hautes-Alpes","HAUTES-ALPES","hautes-alpes","H32412"</code></pre>
-<p>On considère le code suivant :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'departements.csv'</span>, mode<span class="op">=</span><span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'UTF-8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>lesLignes <span class="op">=</span> csv.reader(f)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> uneLigne <span class="kw">in</span> lesLignes:</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(uneLigne[<span class="dv">3</span>])</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>f.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Que va produire l’exécution de ce code ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> L’affichage de la troisième colonne à savoir le nom du département avec une majuscule initiale</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> L’affichage de tout le contenu du fichier</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> L’affichage du nombre total de départements figurant dans le fichier</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> L’affichage de la quatrième colonne, à savoir le nom du département tout en majuscules</label></li>
-</ul></li>
-<li><p>On dispose du fichier <code>'info.csv'</code> donné ci-dessous :</p>
-<pre class="title=&quot;csv&quot;"><code>nom, prenom, naissance, deces
-lovelace, ada, 1815, 1852
-von neumann, john, 1903, 1957
-turing, alan, 1912, 1954
-mccarthy, john, 1927, 2011
-floyd, robert, 1936, 2001</code></pre>
-<p>Le programme ci-dessous nous permet de créer un tableau à partir de ce fichier.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(<span class="st">"info.csv"</span>, <span class="st">"r"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>firstLine <span class="op">=</span> <span class="bu">file</span>.readline()  <span class="co"># chargement de la ligne d'entête</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>tableau <span class="op">=</span> [line.split(<span class="st">','</span>) <span class="cf">for</span> line <span class="kw">in</span> <span class="bu">file</span>]  <span class="co"># chargement des données</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Les index des lignes de ce tableau vont :</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> de 0 à 3</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> de 1 à 4</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> de 0 à 4</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> de 0 à 5</label></li>
-</ul></li>
-<li><p>Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a été défini par l’affectation suivante :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>repertoire <span class="op">=</span> [{<span class="st">'nom'</span>: <span class="st">'Dupont'</span>, <span class="st">'tel'</span>: <span class="st">'5234'</span>},</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>          {<span class="st">'nom'</span>: <span class="st">'Tournesol'</span>, <span class="st">'tel'</span>: <span class="st">'5248'</span>},</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>          {<span class="st">'nom'</span>: <span class="st">'Dupond'</span>, <span class="st">'tel'</span>: <span class="st">'3452'</span>}]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> <code>repertoire['Tournesol']</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> <code>repertoire['tel'][1]</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> <code>repertoire[1]['tel']</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> <code>repertoire['Tournesol'][tel]</code></label></li>
-</ul></li>
-</ol>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Résultat du ping
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="ft2.png" class="img-fluid"></a></p>
+<p>Cela ne marche pas. La carte réseau refuse d’envoyer les paquets, car elle ne sait pas où les envoyer.</p>
+</div>
+</div>
+</div>
+<p>Pourquoi cet échec ? Parce que nous devons dire à chaque machine qu’une passerelle est maintenant disponible pour pouvoir sortir de son propre sous-réseau. Il faut donc aller sur la machine <code>192.168.0.1</code> et lui donner l’adresse de sa passerelle, qui est <code>192.168.0.254</code>.</p>
+<p><a href="passerelle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="passerelle.png" class="img-fluid"></a></p>
+<p>Attention, il faut faire de même pour <code>192.168.1.2</code> (avec la bonne passerelle…)<br>
+Testons à nouveau le ping… Cette fois cela marche.</p>
+<p>Plus intéressant : effectuons un <code>traceroute</code> entre <code>192.168.0.1</code> et <code>192.168.1.2</code>.</p>
+<p><a href="traceroute.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="traceroute.png" class="img-fluid"></a></p>
+<p>On constate que la machine <code>192.168.1.2</code> est atteignable en deux sauts depuis <code>192.168.0.1</code>, en passant par la passerelle <code>192.168.0.254</code></p>
+<p><strong>Cas d’un réseau domestique</strong></p>
+<p>Chez vous, la box de votre opérateur joue simultanément le rôle de switch et de routeur :</p>
+<ul>
+<li>switch, car elle répartit la connexion entre les différents dispositifs (ordinateurs branchés en ethernet, smartphone en wifi, tv connectée…)</li>
+<li>routeur, car elle fait le lien entre ce sous-réseau domestique (les appareils de votre maison) et le réseau internet.</li>
+</ul>
+<p><a href="boxmaison.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="boxmaison.png" class="img-fluid"></a></p>
+<p>L’image ci-dessous présente le résultat de la commande <code>ipconfig</code> sous Windows. On y retrouve l’adresse IP locale <code>192.168.9.103</code>, le masque de sous-réseau <code>255.255.255.0</code> et l’adresse de la passerelle <code>192.168.9.1</code>.<br>
+<img src="imgpasserelle.jpg" class="img-fluid"></p>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-11">image</span>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1741,12 +1956,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../22_tables/tables_exos.html" class="pagination-link  aria-label=" exercices="" -="" traitements="" de="" données="" en="" tables"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercices - Traitements de données en tables</span>
+      <a href="../23_reseaux/index.html" class="pagination-link  aria-label=" programme"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../23_reseaux/index.html" class="pagination-link" aria-label="Programme">
+      <a href="../24_protocoles/index.html" class="pagination-link" aria-label="Programme">
         <span class="nav-page-text">Programme</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1765,7 +1980,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1783,6 +1998,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

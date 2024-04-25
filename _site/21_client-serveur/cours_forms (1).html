@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Quiz : Données en tables</title>
+<title>NSI - Première – Cours : formulaires</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../23_reseaux/index.html" rel="next">
-<link href="../22_tables/tables_exos.html" rel="prev">
+<link href="../21_client-serveur/exos_forms.html" rel="next">
+<link href="../21_client-serveur/acti4_forms.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -82,6 +48,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -211,7 +180,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/tables_quiz.html">Quiz : Données en tables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../21_client-serveur/index.html">Ch. 21 - Interaction client-serveur et formulaires d’une page Web</a></li><li class="breadcrumb-item"><a href="../21_client-serveur/cours_forms.html">Cours : formulaires</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -895,13 +864,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="true">
  <span class="menu-text">Ch. 21 - Interaction client-serveur et formulaires d’une page Web</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../21_client-serveur/index.html" class="sidebar-item-text sidebar-link">
@@ -928,7 +897,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../21_client-serveur/cours_forms.html" class="sidebar-item-text sidebar-link">
+  <a href="../21_client-serveur/cours_forms.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Cours : formulaires</span></a>
   </div>
 </li>
@@ -942,17 +911,17 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">
  <span class="menu-text">Ch. 22 - Traitement de données en tables</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ch. 22 -Traitement de données en tables</span></a>
+ <span class="menu-text">S7-Traitement de données en tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -965,12 +934,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../22_tables/tables_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices - Traitements de données en tables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../22_tables/tables_quiz.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Quiz : Données en tables</span></a>
   </div>
 </li>
       </ul>
@@ -991,11 +954,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../23_reseaux/reseaux_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
-  </div>
-</li>
+ <span class="menu-text">23_reseaux/reseaux_cours.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">23_reseaux/reseaux_exos.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1014,17 +977,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../24_protocoles/protocoles_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
-  </div>
-</li>
+ <span class="menu-text">24_protocoles/protocoles_cours.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../24_protocoles/reseaux_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">reseaux_exos.html</span></a>
-  </div>
-</li>
+ <span class="menu-text">24_protocoles/protocoles_exos.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1092,15 +1049,23 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#de-nouveaux-éléments-html" id="toc-de-nouveaux-éléments-html" class="nav-link active" data-scroll-target="#de-nouveaux-éléments-html">1. De nouveaux éléments HTML</a></li>
+  <li><a href="#fonctionnement-dun-formulaire" id="toc-fonctionnement-dun-formulaire" class="nav-link" data-scroll-target="#fonctionnement-dun-formulaire">2. Fonctionnement d’un formulaire</a></li>
+  <li><a href="#pour-aller-plus-loin" id="toc-pour-aller-plus-loin" class="nav-link" data-scroll-target="#pour-aller-plus-loin">3. Pour aller plus loin</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/tables_quiz.html">Quiz : Données en tables</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../21_client-serveur/index.html">Ch. 21 - Interaction client-serveur et formulaires d’une page Web</a></li><li class="breadcrumb-item"><a href="../21_client-serveur/cours_forms.html">Cours : formulaires</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Quiz : Données en tables</h1>
+<h1 class="title">Cours : formulaires</h1>
 </div>
 
 
@@ -1117,80 +1082,74 @@ window.Quarto = {
 </header>
 
 
-<ol type="1">
-<li><p>Dans la plupart des fichiers CSV, que contient la première ligne ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> des notes concernant la table de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> les sources des données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> les descripteurs des champs de la table de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> l’auteur de la table de données</label></li>
+<p>Les formulaires Web sont l’un des principaux points d’interaction entre un utilisateur et un site Web. Les formulaires permettent aux utilisateurs de saisir des données, qui sont généralement envoyées à un serveur Web pour traitement et stockage, ou utilisées côté client pour mettre à jour immédiatement l’interface d’une manière ou d’une autre (par exemple, ajouter un autre élément à une liste, ou afficher ou masquer une fonctionnalité de l’interface utilisateur).</p>
+<section id="de-nouveaux-éléments-html" class="level2">
+<h2 class="anchored" data-anchor-id="de-nouveaux-éléments-html">1. De nouveaux éléments HTML</h2>
+<p>La création de formulaire repose sur l’utilisation de nouveaux éléments HTML, parmi lesquels :</p>
+<ul>
+<li><strong><code>&lt;form&gt;</code></strong> : élément qui contient tous les autres éléments de formulaire.</li>
+<li><strong><code>&lt;input&gt;</code></strong> : zone de texte où l’utilisateur peut écrire un texte court. Cet élément possède un attribut particulier nommé <strong>type</strong> qui modifie beaucoup son comportement. Par exemple, <code>type = "email"</code> obligera l’utilisateur à entrer une adresse mail bien formatée. Voir <a href="https://developer.mozilla.org/fr/docs/Learn/Forms/HTML5_input_types" target="_blank">cette page</a> pour découvrir d’autres valeurs possibles de l’attribut <strong>type</strong>.</li>
+<li><strong><code>&lt;button&gt;</code></strong> : bouton cliquable qui, dans le cadre des formulaires, peuvent avoir l’attribut <code>type="submit"</code> pour servir à envoyer les données du formulaire, ou <code>type="reset"</code> pour servir à vider tous les champs du formulaire.</li>
+</ul>
+<p>Il existe bien d’autres éléments de formulaire, il n’est pas question d’en faire une liste complète ici. Voir les ressources supplémentaires en bas de page pour en savoir plus.</p>
+</section>
+<section id="fonctionnement-dun-formulaire" class="level2">
+<h2 class="anchored" data-anchor-id="fonctionnement-dun-formulaire">2. Fonctionnement d’un formulaire</h2>
+<p>Pour comprendre le fonctionnement d’un formulaire, il faut se souvenir de l’architecture client/serveur déjà évoquée.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Architecture client - serveur"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png" class="img-fluid figure-img" style="width:50.0%" alt="Architecture client - serveur"></a></p>
+<figcaption>Architecture client - serveur</figcaption>
+</figure>
+</div>
+<p>Le formulaire, permet de transmettre des informations à un <strong>serveur</strong>. Ces informations sont envoyées par le <strong>client</strong> (le navigateur) lorsque le bouton de type <code>submit</code> est cliqué.</p>
+<p>Comme nous l’avons vu dans <a href="../21_client-serveur/acti4_forms.html" target="_blank">l’activité</a>, les attributs <strong>action</strong> et <strong>method</strong> de l’élément <strong><code>&lt;form&gt;</code></strong> définissent le fonctionnement du formulaire :</p>
+<ul>
+<li><p><strong>action</strong> a pour valeur l’URL du fichier auquel sera envoyé le formulaire. Ce fichier est un programme écrit dans un langage de script comme PHP ou Python, qui va prendre en entrée les paramètres du formulaire transmis par le client, les traiter et générer la page Web en HTML qui lui sera renvoyée.</p></li>
+<li><p><strong>method</strong> peut prendre deux valeurs GET ou POST (en minuscule ou majuscule), ce sont les deux modes de transmission des paramètres du formulaire qui sont deux méthodes distinctes du protocole HTTP :</p>
+<ul>
+<li>avec la méthode GET , les données du formulaire sont assemblées dans une chaîne de paires nom/valeur séparées par le symbole <code>&amp;</code> qui est ajoutée à la fin de l’URL après le délimiteur <code>?</code>.</li>
+<li>avec la méthode POST les données du formulaire sont toujours transmises dans le corps de la requête. Les données n’apparaissent donc pas dans l’URL.</li>
 </ul></li>
-<li><p>Laquelle de ces affirmations est vraie ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> on ne peut accéder au contenu d’un fichier CSV que par l’intermédiaire d’un programme Python</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> CSV est un format de chiffrement des données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> le format CSV a été conçu pour assurer la confidentialité d’une partie du code d’un programme</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> les fichiers CSV sont composés de données séparées par des caractères comme des virgules</label></li>
-</ul></li>
-<li><p>Qu’est-ce que le format de fichier CSV ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> un format de fichier mis au point par Microsoft pour Excel</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> un format de fichier pour décrire une base de données</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> un format de fichier où les données sont séparées par un caractère tel qu’une virgule</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> un format de fichier décrivant une page Web</label></li>
-</ul></li>
-<li><p>On considère l’extraction suivante d’une base de données des départements français. Cette extraction a ensuite été sauvegardée dans un fichier texte.</p>
-<pre class="title=&quot;csv&quot;"><code>"1","01","Ain","AIN","ain","A500"
-"2","02","Aisne","AISNE","aisne","A250"
-"3","03","Allier","ALLIER","allier","A460"
-"4","04","Alpes-de-Haute-Provence","ALPES-DE-HAUTE-PROVENCE","alpes-de-haute-provence","A412316152"
-"5","05","Hautes-Alpes","HAUTES-ALPES","hautes-alpes","H32412"</code></pre>
-<p>On considère le code suivant :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> csv</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">'departements.csv'</span>, mode<span class="op">=</span><span class="st">'r'</span>, encoding<span class="op">=</span><span class="st">'UTF-8'</span>, newline<span class="op">=</span><span class="st">''</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>lesLignes <span class="op">=</span> csv.reader(f)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> uneLigne <span class="kw">in</span> lesLignes:</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(uneLigne[<span class="dv">3</span>])</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>f.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Que va produire l’exécution de ce code ?</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> L’affichage de la troisième colonne à savoir le nom du département avec une majuscule initiale</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> L’affichage de tout le contenu du fichier</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> L’affichage du nombre total de départements figurant dans le fichier</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> L’affichage de la quatrième colonne, à savoir le nom du département tout en majuscules</label></li>
-</ul></li>
-<li><p>On dispose du fichier <code>'info.csv'</code> donné ci-dessous :</p>
-<pre class="title=&quot;csv&quot;"><code>nom, prenom, naissance, deces
-lovelace, ada, 1815, 1852
-von neumann, john, 1903, 1957
-turing, alan, 1912, 1954
-mccarthy, john, 1927, 2011
-floyd, robert, 1936, 2001</code></pre>
-<p>Le programme ci-dessous nous permet de créer un tableau à partir de ce fichier.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(<span class="st">"info.csv"</span>, <span class="st">"r"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>firstLine <span class="op">=</span> <span class="bu">file</span>.readline()  <span class="co"># chargement de la ligne d'entête</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>tableau <span class="op">=</span> [line.split(<span class="st">','</span>) <span class="cf">for</span> line <span class="kw">in</span> <span class="bu">file</span>]  <span class="co"># chargement des données</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Les index des lignes de ce tableau vont :</p>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> de 0 à 3</label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> de 1 à 4</label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> de 0 à 4</label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> de 0 à 5</label></li>
-</ul></li>
-<li><p>Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a été défini par l’affectation suivante :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>repertoire <span class="op">=</span> [{<span class="st">'nom'</span>: <span class="st">'Dupont'</span>, <span class="st">'tel'</span>: <span class="st">'5234'</span>},</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>          {<span class="st">'nom'</span>: <span class="st">'Tournesol'</span>, <span class="st">'tel'</span>: <span class="st">'5248'</span>},</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>          {<span class="st">'nom'</span>: <span class="st">'Dupond'</span>, <span class="st">'tel'</span>: <span class="st">'3452'</span>}]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul class="task-list">
-<li><label><input type="checkbox"><strong>Réponse A :</strong> <code>repertoire['Tournesol']</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse B :</strong> <code>repertoire['tel'][1]</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse C :</strong> <code>repertoire[1]['tel']</code></label></li>
-<li><label><input type="checkbox"><strong>Réponse D :</strong> <code>repertoire['Tournesol'][tel]</code></label></li>
-</ul></li>
-</ol>
+</ul>
+<p><a href="fonctionnement-php-client-serveur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="fonctionnement-php-client-serveur.png" class="img-fluid"></a></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Différences entre les méthodes GET et POST
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Caractéristiques de la méthode GET :</strong></p>
+<ul>
+<li>Toutes les informations transmises, le sont en clair dans l’URL. Celle-ci est limitée en taille donc la méthode GET ne peut pas être utilisée pour transmettre des informations <strong>trop longues</strong>.</li>
+<li>Une requête GET est constituée uniquement d’un entête, elle n’a pas de corps.</li>
+<li>Elle ne modifie pas l’état du serveur, elle est utilisée uniquement pour demander une ressource. Un exemple classique d’utilisation est la formulation d’une requête à l’aide du formulaire d’un moteur de recherche. L’URL générée peut être utilisée plusieurs fois et conservée comme marque-page.</li>
+</ul>
+<p><strong>Caractéristiques de la méthode POST :</strong></p>
+<ul>
+<li>Les données sont transmises dans le corps de la requête, il n’y a pas de restriction de taille. Elles peuvent être de tout type : textes, binaires…</li>
+<li>Les données n’apparaissent pas dans l’URL, néanmoins, si le protocole HTTP est employé sans chiffrement, il suffit d’intercepter la requête pour accéder aux données en clair.</li>
+<li>Les données envoyées peuvent modifier l’état du serveur. Par exemple, les requêtes POST sont utilisées pour les modifications de bases de données sur le serveur (achats, réservation, transfert de fichiers …). Par conséquent, si on veut renvoyer les données d’un formulaire, un message en popup avertit que ce nouvel envoi peut modifier l’état du serveur.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="pour-aller-plus-loin">3. Pour aller plus loin</h2>
+<ul>
+<li><a href="https://www.w3schools.com/html/html_form_elements.asp" target="_blank">W3Schools</a> : référence de tous les éléments HTML de formulaire avec des exemples interactifs.</li>
+<li>Le site <a href="https://developer.mozilla.org/fr/docs/Learn/Forms" target="_blank">MDN web docs</a> de Mozilla est une fois de plus une très bonne référence.</li>
+</ul>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Architecture client - serveur</span>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1741,13 +1700,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../22_tables/tables_exos.html" class="pagination-link  aria-label=" exercices="" -="" traitements="" de="" données="" en="" tables"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercices - Traitements de données en tables</span>
+      <a href="../21_client-serveur/acti4_forms.html" class="pagination-link  aria-label=" activité="" :="" formulaires="" web"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Activité : Formulaires Web</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../23_reseaux/index.html" class="pagination-link" aria-label="Programme">
-        <span class="nav-page-text">Programme</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../21_client-serveur/exos_forms.html" class="pagination-link" aria-label="Exercice : Formulaires">
+        <span class="nav-page-text">Exercice : Formulaires</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1765,7 +1724,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1783,6 +1742,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
