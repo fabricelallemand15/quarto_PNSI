@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – S7-Traitement de données en tables</title>
+<title>NSI - Première – Cours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../22_tables/tables_cours.html" rel="next">
-<link href="../21_client-serveur/exos_forms.html" rel="prev">
+<link href="../26_gloutons/gloutons_exos.html" rel="next">
+<link href="../26_gloutons/index.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -48,6 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -177,7 +180,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/index.html">S7-Traitement de données en tables</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../26_gloutons/index.html">Ch. 22 - Algorithmes gloutons</a></li><li class="breadcrumb-item"><a href="../26_gloutons/gloutons_cours.html">Cours</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -909,7 +912,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="true">
- <span class="menu-text">Ch. 22 - Traitement de données en tables</span></a>
+ <span class="menu-text">Ch. 22 - Algorithmes gloutons</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -917,8 +920,37 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">S7-Traitement de données en tables</span></a>
+  <a href="../26_gloutons/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../26_gloutons/gloutons_cours.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../26_gloutons/gloutons_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false">
+ <span class="menu-text">Ch. 23 - Traitement de données en tables</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -933,35 +965,18 @@ window.Quarto = {
  <span class="menu-text">Exercices - Traitements de données en tables</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false">
- <span class="menu-text">Ch. 23 - Architecture d’un réseau</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false" aria-label="Basculer la section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../23_reseaux/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
+  <a href="../22_tables/tables_quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quiz : Données en tables</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
- <span class="menu-text">23_reseaux/reseaux_cours.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">23_reseaux/reseaux_exos.qmd</span>
-  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false">
- <span class="menu-text">Ch. 24 - Protocoles de communication</span></a>
+ <span class="menu-text">Ch. 24 - Architecture d’un réseau</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -969,27 +984,56 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../24_protocoles/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../23_reseaux/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">24_protocoles/protocoles_cours.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">24_protocoles/protocoles_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../23_reseaux/reseaux_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false">
- <span class="menu-text">Ch. 25 - Algorithme des <span class="math inline">\(k\)</span> plus proches voisins</span></a>
+ <span class="menu-text">Ch. 25 - Protocoles de communication</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../24_protocoles/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../24_protocoles/protocoles_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../24_protocoles/reseaux_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">reseaux_exos.html</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false">
+ <span class="menu-text">Ch. 26 - Algorithme des <span class="math inline">\(k\)</span> plus proches voisins</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
  <span class="menu-text">25_kppv/index.qmd</span>
   </li>
@@ -998,26 +1042,6 @@ window.Quarto = {
   </li>
           <li class="sidebar-item">
  <span class="menu-text">25_kppv/kppv_exos.qmd</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false">
- <span class="menu-text">Ch. 26 - Algorithmes gloutons</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false" aria-label="Basculer la section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
- <span class="menu-text">26_gloutons/index.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">26_gloutons/gloutons_cours.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">26_gloutons/gloutons_exos.qmd</span>
   </li>
       </ul>
   </li>
@@ -1051,16 +1075,34 @@ window.Quarto = {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#programme" id="toc-programme" class="nav-link active" data-scroll-target="#programme">Programme</a></li>
+  <li><a href="#exemple-introductif" id="toc-exemple-introductif" class="nav-link active" data-scroll-target="#exemple-introductif">1. Exemple introductif</a></li>
+  <li><a href="#algorithmes-gloutons" id="toc-algorithmes-gloutons" class="nav-link" data-scroll-target="#algorithmes-gloutons">2. Algorithmes gloutons</a></li>
+  <li><a href="#exemples-dalgorithmes-gloutons" id="toc-exemples-dalgorithmes-gloutons" class="nav-link" data-scroll-target="#exemples-dalgorithmes-gloutons">3. Exemples d’algorithmes gloutons</a>
+  <ul class="collapse">
+  <li><a href="#problème-du-rendu-de-monnaie" id="toc-problème-du-rendu-de-monnaie" class="nav-link" data-scroll-target="#problème-du-rendu-de-monnaie">3.1. Problème du rendu de monnaie</a>
+  <ul class="collapse">
+  <li><a href="#énoncé" id="toc-énoncé" class="nav-link" data-scroll-target="#énoncé">Énoncé</a></li>
+  <li><a href="#algorithme-glouton" id="toc-algorithme-glouton" class="nav-link" data-scroll-target="#algorithme-glouton">Algorithme glouton</a></li>
+  <li><a href="#exemple" id="toc-exemple" class="nav-link" data-scroll-target="#exemple">Exemple</a></li>
+  </ul></li>
+  <li><a href="#problème-du-sac-à-dos" id="toc-problème-du-sac-à-dos" class="nav-link" data-scroll-target="#problème-du-sac-à-dos">3.2. Problème du sac à dos</a>
+  <ul class="collapse">
+  <li><a href="#énoncé-1" id="toc-énoncé-1" class="nav-link" data-scroll-target="#énoncé-1">Énoncé</a></li>
+  <li><a href="#algorithme-glouton-1" id="toc-algorithme-glouton-1" class="nav-link" data-scroll-target="#algorithme-glouton-1">Algorithme glouton</a></li>
+  <li><a href="#exemple-1" id="toc-exemple-1" class="nav-link" data-scroll-target="#exemple-1">Exemple</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">4. Conclusion</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../22_tables/index.html">Ch. 22 - Traitement de données en tables</a></li><li class="breadcrumb-item"><a href="../22_tables/index.html">S7-Traitement de données en tables</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../26_gloutons/index.html">Ch. 22 - Algorithmes gloutons</a></li><li class="breadcrumb-item"><a href="../26_gloutons/gloutons_cours.html">Cours</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">S7-Traitement de données en tables</h1>
+<h1 class="title">Cours</h1>
+<p class="subtitle lead">Ch. 22 - Algorithmes gloutons</p>
 </div>
 
 
@@ -1077,45 +1119,122 @@ window.Quarto = {
 </header>
 
 
-<section id="programme" class="level2">
-<h2 class="anchored" data-anchor-id="programme">Programme</h2>
-<p>Les données organisées en table correspondent à une liste de p-uplets nommés qui partagent les mêmes descripteurs. La mobilisation de ce type de structure de données permet de préparer les élèves à aborder la notion de base de données qui ne sera présentée qu’en classe terminale. Il s’agit d’utiliser un tableau doublement indexé ou un tableau de p-uplets, dans un langage de programmation ordinaire et non dans un système de gestion de bases de données.</p>
-<table class="table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Contenus</strong></th>
-<th><strong>Capacités attendues</strong></th>
-<th><strong>Commentaires</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Indexation de tables</td>
-<td>Importer une table depuis un fichier texte tabulé ou un fichier CSV.</td>
-<td>Est utilisé un tableau doublement indexé ou un tableau de p-uplets qui partagent les mêmes descripteurs.</td>
-</tr>
-<tr class="even">
-<td>Recherche dans une table</td>
-<td>Rechercher les lignes d’une table vérifiant des critères exprimés en logique propositionnelle.</td>
-<td>La recherche de doublons, les tests de cohérence d’une table sont présentés.</td>
-</tr>
-<tr class="odd">
-<td>Tri d’une table</td>
-<td>Trier une table suivant une colonne.</td>
-<td>Une fonction de tri intégrée au système ou à une bibliothèque peut être utilisée.</td>
-</tr>
-<tr class="even">
-<td>Fusion de tables</td>
-<td>Construire une nouvelle table en combinant les données de deux tables.</td>
-<td>La notion de domaine de valeurs est mise en évidence.</td>
-</tr>
-</tbody>
-</table>
+<section id="exemple-introductif" class="level1">
+<h1>1. Exemple introductif</h1>
+<p>Une chenille mangeuse de pucerons se déplace sur l’arbre ci-dessous, du haut vers le bas uniquement. Les nombres sur l’arbre indiquent le nombre de pucerons présents à chaque nœud. La chenille mange tous les pucerons qu’elle rencontre le long de son chemin. Le but de la chenille est évidemment de manger un maximum de pucerons.</p>
+<p><a href="arbre_chenille.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="arbre_chenille.png" class="img-fluid" style="width:25.0%"></a></p>
+<p>On voit facilement que pour manger la maximum de pucerons, la chenille doit suivre le chemin <span class="math inline">\(3 \rightarrow 4 \rightarrow 20\)</span> qui lui permet de manger 27 pucerons. Ce résultat est l’<strong>optimum global du problème</strong>.</p>
+<p>Cependant, la chenille est trop <strong>gloutonne</strong>, et elle n’a pas une vision globale de l’arbre. Elle choisit donc à chaque étape le nœud présentant le plus grand nombre de pucerons. Ce nombre est ce que l’on appelle l’<strong>optimum local pour cette étape</strong>. Avec cette méthode, la chenille va suivre le chemin : <span class="math inline">\(3 \rightarrow 7 \rightarrow 11\)</span> qui lui permet de manger 21 pucerons. Cela ne correspond pas à l’optimum global du problème.</p>
+</section>
+<section id="algorithmes-gloutons" class="level1">
+<h1>2. Algorithmes gloutons</h1>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Définition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Soit un problème à optimiser. Un <strong>algorithme glouton</strong> détermine une solution de ce problème en effectuant une série de choix optimaux <strong>locaux</strong>. Au cours de la construction de cette solution, l’algorithme résout une partie du problème, puis se focalise sur le sous-problème restant à résoudre. Les choix ne sont <strong>jamais remis en cause</strong> au cours de cette construction.</p>
+</div>
+</div>
+</section>
+<section id="exemples-dalgorithmes-gloutons" class="level1">
+<h1>3. Exemples d’algorithmes gloutons</h1>
+<section id="problème-du-rendu-de-monnaie" class="level2">
+<h2 class="anchored" data-anchor-id="problème-du-rendu-de-monnaie">3.1. Problème du rendu de monnaie</h2>
+<section id="énoncé" class="level3">
+<h3 class="anchored" data-anchor-id="énoncé">Énoncé</h3>
+<p>On dispose de pièces de monnaie de valeurs 1, 2, 5, 10, 20, 50, 100, 200 et 500. On souhaite rendre une somme <span class="math inline">\(S\)</span> en utilisant le moins de pièces possible.</p>
+</section>
+<section id="algorithme-glouton" class="level3">
+<h3 class="anchored" data-anchor-id="algorithme-glouton">Algorithme glouton</h3>
+<p>Pour rendre la somme <span class="math inline">\(S\)</span>, on commence par rendre la plus grande pièce possible, puis on continue avec la pièce de valeur la plus grande possible, et ainsi de suite.</p>
+</section>
+<section id="exemple" class="level3">
+<h3 class="anchored" data-anchor-id="exemple">Exemple</h3>
+<p>Rendre la somme <span class="math inline">\(S = 93\)</span>.</p>
+<ul>
+<li>On rend la pièce de 50.</li>
+<li>Il reste à rendre <span class="math inline">\(93 - 50 = 43\)</span>.</li>
+<li>On rend la pièce de 20.</li>
+<li>Il reste à rendre <span class="math inline">\(43 - 20 = 23\)</span>.</li>
+<li>On rend la pièce de 20.</li>
+<li>Il reste à rendre <span class="math inline">\(23 - 20 = 3\)</span>.</li>
+<li>On rend la pièce de 2.</li>
+<li>Il reste à rendre <span class="math inline">\(3 - 2 = 1\)</span>.</li>
+<li>On rend la pièce de 1.</li>
+</ul>
+<p>On a donc rendu 5 pièces. On peut vérifier que cette solution est optimale.</p>
+</section>
+</section>
+<section id="problème-du-sac-à-dos" class="level2">
+<h2 class="anchored" data-anchor-id="problème-du-sac-à-dos">3.2. Problème du sac à dos</h2>
+<section id="énoncé-1" class="level3">
+<h3 class="anchored" data-anchor-id="énoncé-1">Énoncé</h3>
+<p>On dispose d’un sac à dos pouvant contenir une masse maximale <span class="math inline">\(M\)</span>. On dispose de <span class="math inline">\(n\)</span> objets, chacun ayant un poids <span class="math inline">\(p_i\)</span> et une valeur <span class="math inline">\(v_i\)</span>. On souhaite remplir le sac à dos de manière à maximiser la valeur totale des objets contenus, sans dépasser la masse maximale <span class="math inline">\(M\)</span>.</p>
+</section>
+<section id="algorithme-glouton-1" class="level3">
+<h3 class="anchored" data-anchor-id="algorithme-glouton-1">Algorithme glouton</h3>
+<p>On commence par trier les objets par ordre décroissant de leur rapport <span class="math inline">\(\frac{v_i}{p_i}\)</span>. On remplit ensuite le sac à dos avec les objets dans cet ordre, en prenant le maximum possible de chaque objet.</p>
+</section>
+<section id="exemple-1" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-1">Exemple</h3>
+<p>On dispose de 4 objets :</p>
+<ul>
+<li>Objet 1 : <span class="math inline">\(p_1 = 2\)</span>, <span class="math inline">\(v_1 = 10\)</span></li>
+<li>Objet 2 : <span class="math inline">\(p_2 = 3\)</span>, <span class="math inline">\(v_2 = 5\)</span></li>
+<li>Objet 3 : <span class="math inline">\(p_3 = 4\)</span>, <span class="math inline">\(v_3 = 1\)</span></li>
+<li>Objet 4 : <span class="math inline">\(p_4 = 1\)</span>, <span class="math inline">\(v_4 = 2\)</span></li>
+</ul>
+<p>On dispose d’un sac à dos pouvant contenir une masse maximale de 5.</p>
+<ol type="1">
+<li>On calcule les rapports <span class="math inline">\(\frac{v_i}{p_i}\)</span> :
+<ul>
+<li>Objet 1 : <span class="math inline">\(\frac{10}{2} = 5\)</span></li>
+<li>Objet 2 : <span class="math inline">\(\frac{5}{3} \approx 1.67\)</span></li>
+<li>Objet 3 : <span class="math inline">\(\frac{1}{4} = 0.25\)</span></li>
+<li>Objet 4 : <span class="math inline">\(\frac{2}{1} = 2\)</span></li>
+</ul></li>
+<li>On trie les objets par ordre décroissant de leur rapport :
+<ul>
+<li>Objet 1 : <span class="math inline">\(\frac{10}{2} = 5\)</span></li>
+<li>Objet 4 : <span class="math inline">\(\frac{2}{1} = 2\)</span></li>
+<li>Objet 2 : <span class="math inline">\(\frac{5}{3} \approx 1.67\)</span></li>
+<li>Objet 3 : <span class="math inline">\(\frac{1}{4} = 0.25\)</span></li>
+</ul></li>
+<li>On remplit le sac à dos :
+<ul>
+<li>On prend l’objet 1.</li>
+<li>Il reste à remplir <span class="math inline">\(5 - 2 = 3\)</span>.</li>
+<li>On prend l’objet 4.</li>
+<li>Il reste à remplir <span class="math inline">\(3 - 1 = 2\)</span>.</li>
+<li>On ne peut pas prendre l’objet 2 car son poids est trop grand.</li>
+<li>On ne peut pas prendre l’objet 3 car son poids est trop grand.</li>
+</ul></li>
+</ol>
+<p>On a donc rempli le sac à dos avec les objets 1 et 4, pour une valeur totale de 12. Cette solution n’est pas optimale.</p>
+</section>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>4. Conclusion</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Les algorithmes gloutons sont souvent utilisés pour résoudre des problèmes d’optimisation. Ils sont simples à mettre en œuvre et souvent très efficaces. Cependant, ils ne garantissent pas toujours de trouver la solution optimale.</p>
+</div>
+</div>
 
 
 </section>
@@ -1669,13 +1788,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../21_client-serveur/exos_forms.html" class="pagination-link  aria-label=" exercice="" :="" formulaires"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercice : Formulaires</span>
+      <a href="../26_gloutons/index.html" class="pagination-link  aria-label=" programme"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../22_tables/tables_cours.html" class="pagination-link" aria-label="Traitements de données en tables (cours)">
-        <span class="nav-page-text">Traitements de données en tables (cours)</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../26_gloutons/gloutons_exos.html" class="pagination-link" aria-label="Exercices">
+        <span class="nav-page-text">Exercices</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1711,6 +1830,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

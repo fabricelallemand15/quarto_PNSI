@@ -1,0 +1,5 @@
+---
+title: Exercices
+subtitle: Algorithmes gloutons
+---
+Fiche d'exercices sur Capytale : [Cliquer ici !]()

@@ -1,0 +1,96 @@
+---
+title: "Cours"
+subtitle: "Ch. 22 - Algorithmes gloutons"
+---
+
+# 1. Exemple introductif
+
+Une chenille mangeuse de pucerons se déplace sur l'arbre ci-dessous, du haut vers le bas uniquement. Les nombres sur l'arbre indiquent le nombre de pucerons présents à chaque nœud. La chenille mange tous les pucerons qu'elle rencontre le long de son chemin. Le but de la chenille est évidemment de manger un maximum de pucerons.
+
+![](arbre_chenille.png){width="25%"}
+
+On voit facilement que pour manger la maximum de pucerons, la chenille doit suivre le chemin $3 \rightarrow 4 \rightarrow 20$ qui lui permet de manger 27 pucerons. Ce résultat est l'**optimum global du problème**.
+
+Cependant, la chenille est trop **gloutonne**, et elle n'a pas une vision globale de l'arbre. Elle choisit donc à chaque étape le nœud présentant le plus grand nombre de pucerons. Ce nombre est ce que l'on appelle l'**optimum local pour cette étape**. Avec cette méthode, la chenille va suivre le chemin : $3 \rightarrow 7 \rightarrow 11$ qui lui permet de manger 21 pucerons. Cela ne correspond pas à l'optimum global du problème.
+
+# 2. Algorithmes gloutons
+
+:::{.callout-tip}
+## Définition
+Soit un problème à optimiser. Un **algorithme glouton** détermine une solution de ce problème en effectuant une série de choix optimaux **locaux**. Au cours de la construction de cette solution, l'algorithme résout une partie du problème, puis se focalise sur le sous-problème restant à résoudre. Les choix ne sont **jamais remis en cause** au cours de cette construction.
+:::
+
+# 3. Exemples d'algorithmes gloutons
+
+## 3.1. Problème du rendu de monnaie
+
+### Énoncé
+
+On dispose de pièces de monnaie de valeurs 1, 2, 5, 10, 20, 50, 100, 200 et 500. On souhaite rendre une somme $S$ en utilisant le moins de pièces possible.
+
+### Algorithme glouton
+
+Pour rendre la somme $S$, on commence par rendre la plus grande pièce possible, puis on continue avec la pièce de valeur la plus grande possible, et ainsi de suite.
+
+### Exemple
+
+Rendre la somme $S = 93$.
+
+- On rend la pièce de 50.
+- Il reste à rendre $93 - 50 = 43$.
+- On rend la pièce de 20.
+- Il reste à rendre $43 - 20 = 23$.
+- On rend la pièce de 20.
+- Il reste à rendre $23 - 20 = 3$.
+- On rend la pièce de 2.
+- Il reste à rendre $3 - 2 = 1$.
+- On rend la pièce de 1.
+
+On a donc rendu 5 pièces. On peut vérifier que cette solution est optimale.
+
+## 3.2. Problème du sac à dos
+
+### Énoncé
+
+On dispose d'un sac à dos pouvant contenir une masse maximale $M$. On dispose de $n$ objets, chacun ayant un poids $p_i$ et une valeur $v_i$. On souhaite remplir le sac à dos de manière à maximiser la valeur totale des objets contenus, sans dépasser la masse maximale $M$.
+
+### Algorithme glouton
+
+On commence par trier les objets par ordre décroissant de leur rapport $\frac{v_i}{p_i}$. On remplit ensuite le sac à dos avec les objets dans cet ordre, en prenant le maximum possible de chaque objet.
+
+### Exemple
+
+On dispose de 4 objets :
+
+- Objet 1 : $p_1 = 2$, $v_1 = 10$
+- Objet 2 : $p_2 = 3$, $v_2 = 5$
+- Objet 3 : $p_3 = 4$, $v_3 = 1$
+- Objet 4 : $p_4 = 1$, $v_4 = 2$
+
+On dispose d'un sac à dos pouvant contenir une masse maximale de 5.
+
+1. On calcule les rapports $\frac{v_i}{p_i}$ :
+    - Objet 1 : $\frac{10}{2} = 5$
+    - Objet 2 : $\frac{5}{3} \approx 1.67$
+    - Objet 3 : $\frac{1}{4} = 0.25$
+    - Objet 4 : $\frac{2}{1} = 2$
+2. On trie les objets par ordre décroissant de leur rapport :
+    - Objet 1 : $\frac{10}{2} = 5$
+    - Objet 4 : $\frac{2}{1} = 2$
+    - Objet 2 : $\frac{5}{3} \approx 1.67$
+    - Objet 3 : $\frac{1}{4} = 0.25$
+3. On remplit le sac à dos :
+    - On prend l'objet 1.
+    - Il reste à remplir $5 - 2 = 3$.
+    - On prend l'objet 4.
+    - Il reste à remplir $3 - 1 = 2$.
+    - On ne peut pas prendre l'objet 2 car son poids est trop grand.
+    - On ne peut pas prendre l'objet 3 car son poids est trop grand.
+
+On a donc rempli le sac à dos avec les objets 1 et 4, pour une valeur totale de 12. Cette solution n'est pas optimale.
+
+# 4. Conclusion
+
+:::{.callout-important}
+Les algorithmes gloutons sont souvent utilisés pour résoudre des problèmes d'optimisation. Ils sont simples à mettre en œuvre et souvent très efficaces. Cependant, ils ne garantissent pas toujours de trouver la solution optimale.
+:::

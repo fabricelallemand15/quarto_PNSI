@@ -149,31 +149,31 @@ website:
           - 21_client-serveur/acti4_forms.qmd
           - 21_client-serveur/cours_forms.qmd
           - 21_client-serveur/exos_forms.qmd
-      - section: "Ch. 22 - Traitement de données en tables"
+      - section: "Ch. 22 - Algorithmes gloutons"
+        contents: 
+          - 26_gloutons/index.qmd
+          - 26_gloutons/gloutons_cours.qmd
+          - 26_gloutons/gloutons_exos.qmd
+      - section: "Ch. 23 - Traitement de données en tables"
         contents: 
           - 22_tables/index.qmd
           - 22_tables/tables_cours.qmd
           - 22_tables/tables_exos.qmd
           - 22_tables/tables_quiz.qmd
-      - section: "Ch. 23 - Architecture d'un réseau"
+      - section: "Ch. 24 - Architecture d'un réseau"
         contents: 
           - 23_reseaux/index.qmd
           - 23_reseaux/reseaux_cours.qmd
-      - section: "Ch. 24 - Protocoles de communication"
+      - section: "Ch. 25 - Protocoles de communication"
         contents: 
           - 24_protocoles/index.qmd
           - 24_protocoles/protocoles_cours.qmd
           - 24_protocoles/reseaux_exos.qmd
-      - section: "Ch. 25 - Algorithme des $k$ plus proches voisins"
+      - section: "Ch. 26 - Algorithme des $k$ plus proches voisins"
         contents: 
           - 25_kppv/index.qmd
           - 25_kppv/kppv_cours.qmd
           - 25_kppv/kppv_exos.qmd
-      - section: "Ch. 26 - Algorithmes gloutons"
-        contents: 
-          - 26_gloutons/index.qmd
-          - 26_gloutons/gloutons_cours.qmd
-          - 26_gloutons/gloutons_exos.qmd
       - section: "Ch. 27 - Interfaces homme-machine"
         contents: 
           - 27_ihm/index.qmd

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Cours : formulaires</title>
+<title>NSI - Première – Exercice 1 : problème du rendu de monnaie</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../21_client-serveur/exos_forms.html" rel="next">
-<link href="../21_client-serveur/acti4_forms.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -48,9 +80,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -180,7 +209,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../21_client-serveur/index.html">Ch. 21 - Interaction client-serveur et formulaires d’une page Web</a></li><li class="breadcrumb-item"><a href="../21_client-serveur/cours_forms.html">Cours : formulaires</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Exercice 1 : problème du rendu de monnaie</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -864,13 +893,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false">
  <span class="menu-text">Ch. 21 - Interaction client-serveur et formulaires d’une page Web</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../21_client-serveur/index.html" class="sidebar-item-text sidebar-link">
@@ -897,7 +926,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../21_client-serveur/cours_forms.html" class="sidebar-item-text sidebar-link active">
+  <a href="../21_client-serveur/cours_forms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cours : formulaires</span></a>
   </div>
 </li>
@@ -912,7 +941,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">
- <span class="menu-text">Ch. 22 - Traitement de données en tables</span></a>
+ <span class="menu-text">Ch. 22 - Algorithmes gloutons</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -920,8 +949,37 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../26_gloutons/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../26_gloutons/gloutons_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../26_gloutons/gloutons_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercices</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false">
+ <span class="menu-text">Ch. 23 - Traitement de données en tables</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">S7-Traitement de données en tables</span></a>
+ <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -936,35 +994,18 @@ window.Quarto = {
  <span class="menu-text">Exercices - Traitements de données en tables</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false">
- <span class="menu-text">Ch. 23 - Architecture d’un réseau</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false" aria-label="Basculer la section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../23_reseaux/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
+  <a href="../22_tables/tables_quiz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quiz : Données en tables</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
- <span class="menu-text">23_reseaux/reseaux_cours.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">23_reseaux/reseaux_exos.qmd</span>
-  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false">
- <span class="menu-text">Ch. 24 - Protocoles de communication</span></a>
+ <span class="menu-text">Ch. 24 - Architecture d’un réseau</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -972,27 +1013,56 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../24_protocoles/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../23_reseaux/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">24_protocoles/protocoles_cours.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">24_protocoles/protocoles_exos.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../23_reseaux/reseaux_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false">
- <span class="menu-text">Ch. 25 - Algorithme des <span class="math inline">\(k\)</span> plus proches voisins</span></a>
+ <span class="menu-text">Ch. 25 - Protocoles de communication</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../24_protocoles/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../24_protocoles/protocoles_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../24_protocoles/reseaux_exos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">reseaux_exos.html</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false">
+ <span class="menu-text">Ch. 26 - Algorithme des <span class="math inline">\(k\)</span> plus proches voisins</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false" aria-label="Basculer la section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
  <span class="menu-text">25_kppv/index.qmd</span>
   </li>
@@ -1001,26 +1071,6 @@ window.Quarto = {
   </li>
           <li class="sidebar-item">
  <span class="menu-text">25_kppv/kppv_exos.qmd</span>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false">
- <span class="menu-text">Ch. 26 - Algorithmes gloutons</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false" aria-label="Basculer la section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
- <span class="menu-text">26_gloutons/index.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">26_gloutons/gloutons_cours.qmd</span>
-  </li>
-          <li class="sidebar-item">
- <span class="menu-text">26_gloutons/gloutons_exos.qmd</span>
   </li>
       </ul>
   </li>
@@ -1054,18 +1104,17 @@ window.Quarto = {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#de-nouveaux-éléments-html" id="toc-de-nouveaux-éléments-html" class="nav-link active" data-scroll-target="#de-nouveaux-éléments-html">1. De nouveaux éléments HTML</a></li>
-  <li><a href="#fonctionnement-dun-formulaire" id="toc-fonctionnement-dun-formulaire" class="nav-link" data-scroll-target="#fonctionnement-dun-formulaire">2. Fonctionnement d’un formulaire</a></li>
-  <li><a href="#pour-aller-plus-loin" id="toc-pour-aller-plus-loin" class="nav-link" data-scroll-target="#pour-aller-plus-loin">3. Pour aller plus loin</a></li>
+  <li><a href="#exercice-1-problème-du-rendu-de-monnaie" id="toc-exercice-1-problème-du-rendu-de-monnaie" class="nav-link active" data-scroll-target="#exercice-1-problème-du-rendu-de-monnaie">Exercice 1 : problème du rendu de monnaie</a></li>
+  <li><a href="#exercice-2-problème-du-sac-à-dos" id="toc-exercice-2-problème-du-sac-à-dos" class="nav-link" data-scroll-target="#exercice-2-problème-du-sac-à-dos">Exercice 2 : Problème du sac à dos</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../21_client-serveur/index.html">Ch. 21 - Interaction client-serveur et formulaires d’une page Web</a></li><li class="breadcrumb-item"><a href="../21_client-serveur/cours_forms.html">Cours : formulaires</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Cours : formulaires</h1>
+<h1 class="title">Exercice 1 : problème du rendu de monnaie</h1>
 </div>
 
 
@@ -1082,73 +1131,132 @@ window.Quarto = {
 </header>
 
 
-<p>Les formulaires Web sont l’un des principaux points d’interaction entre un utilisateur et un site Web. Les formulaires permettent aux utilisateurs de saisir des données, qui sont généralement envoyées à un serveur Web pour traitement et stockage, ou utilisées côté client pour mettre à jour immédiatement l’interface d’une manière ou d’une autre (par exemple, ajouter un autre élément à une liste, ou afficher ou masquer une fonctionnalité de l’interface utilisateur).</p>
-<section id="de-nouveaux-éléments-html" class="level2">
-<h2 class="anchored" data-anchor-id="de-nouveaux-éléments-html">1. De nouveaux éléments HTML</h2>
-<p>La création de formulaire repose sur l’utilisation de nouveaux éléments HTML, parmi lesquels :</p>
-<ul>
-<li><strong><code>&lt;form&gt;</code></strong> : élément qui contient tous les autres éléments de formulaire.</li>
-<li><strong><code>&lt;input&gt;</code></strong> : zone de texte où l’utilisateur peut écrire un texte court. Cet élément possède un attribut particulier nommé <strong>type</strong> qui modifie beaucoup son comportement. Par exemple, <code>type = "email"</code> obligera l’utilisateur à entrer une adresse mail bien formatée. Voir <a href="https://developer.mozilla.org/fr/docs/Learn/Forms/HTML5_input_types" target="_blank">cette page</a> pour découvrir d’autres valeurs possibles de l’attribut <strong>type</strong>.</li>
-<li><strong><code>&lt;button&gt;</code></strong> : bouton cliquable qui, dans le cadre des formulaires, peuvent avoir l’attribut <code>type="submit"</code> pour servir à envoyer les données du formulaire, ou <code>type="reset"</code> pour servir à vider tous les champs du formulaire.</li>
-</ul>
-<p>Il existe bien d’autres éléments de formulaire, il n’est pas question d’en faire une liste complète ici. Voir les ressources supplémentaires en bas de page pour en savoir plus.</p>
-</section>
-<section id="fonctionnement-dun-formulaire" class="level2">
-<h2 class="anchored" data-anchor-id="fonctionnement-dun-formulaire">2. Fonctionnement d’un formulaire</h2>
-<p>Pour comprendre le fonctionnement d’un formulaire, il faut se souvenir de l’architecture client/serveur déjà évoquée.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Architecture client - serveur"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png" class="img-fluid figure-img" style="width:50.0%" alt="Architecture client - serveur"></a></p>
-<figcaption>Architecture client - serveur</figcaption>
-</figure>
+<section id="exercice-1-problème-du-rendu-de-monnaie" class="level1">
+<h1>Exercice 1 : problème du rendu de monnaie</h1>
+<p>!!! info le problème Un achat en espèces se traduit par un échange de pièces et de billets. Dans la zone euro, le système en vigueur, en mettant de côté les centimes d’euros, met à disposition des pièces ou billets de 1 €, 2 €, 5 €, 10 €, 20 €, 50 €, 100 €, 200 €, 500 €. Le problème du rendu de monnaie s’énonce alors de la façon suivante : en supposant que nous avons à notre disposition un nombre illimité de ces pièces ou billets, comment rendre une somme donnée de façon optimale, c’est-à-dire avec le nombre minimal de pièces ou billets ? !!!</p>
+<p><strong>Question 1</strong> : Supposons que la somme à rendre est de 7 €. Faire la liste de toutes les façons de rendre une telle somme. Quelle est la façon optimale ?</p>
+<p>Sans s’en rendre compte, tout individu met généralement en œuvre un algorithme glouton. Il choisit d’abord la pièce ou le billet de valeur maximale qu’il peut rendre, sans rendre trop évidemment ! Puis il réitère cela tant qu’il reste quelque chose à rendre.</p>
+<p><strong>Question 2</strong> : Appliquer cette méthode pour déterminer la façon optimale de rendre 463 €.</p>
+<p>Pour mettre en œuvre cet algorithme glouton en Python, on définit tout d’abord le système de monnaie via une liste contenant les valeurs des pièces et billets du système par valeurs décroissantes. Pour le système européen, on écrit par exemple l’instruction suivante.</p>
+<div id="cell-5" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>systeme_monnaie_europeen <span class="op">=</span> [<span class="dv">500</span>,<span class="dv">200</span>,<span class="dv">100</span>,<span class="dv">50</span>,<span class="dv">20</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">1</span>]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Le formulaire, permet de transmettre des informations à un <strong>serveur</strong>. Ces informations sont envoyées par le <strong>client</strong> (le navigateur) lorsque le bouton de type <code>submit</code> est cliqué.</p>
-<p>Comme nous l’avons vu dans <a href="../21_client-serveur/acti4_forms.html" target="_blank">l’activité</a>, les attributs <strong>action</strong> et <strong>method</strong> de l’élément <strong><code>&lt;form&gt;</code></strong> définissent le fonctionnement du formulaire :</p>
-<ul>
-<li><p><strong>action</strong> a pour valeur l’URL du fichier auquel sera envoyé le formulaire. Ce fichier est un programme écrit dans un langage de script comme PHP ou Python, qui va prendre en entrée les paramètres du formulaire transmis par le client, les traiter et générer la page Web en HTML qui lui sera renvoyée.</p></li>
-<li><p><strong>method</strong> peut prendre deux valeurs GET ou POST (en minuscule ou majuscule), ce sont les deux modes de transmission des paramètres du formulaire qui sont deux méthodes distinctes du protocole HTTP :</p>
-<ul>
-<li>avec la méthode GET , les données du formulaire sont assemblées dans une chaîne de paires nom/valeur séparées par le symbole <code>&amp;</code> qui est ajoutée à la fin de l’URL après le délimiteur <code>?</code>.</li>
-<li>avec la méthode POST les données du formulaire sont toujours transmises dans le corps de la requête. Les données n’apparaissent donc pas dans l’URL.</li>
-</ul></li>
-</ul>
-<p><a href="fonctionnement-php-client-serveur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="fonctionnement-php-client-serveur.png" class="img-fluid"></a></p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>On utilise également une variable de type entier <code>somme_a_rendre</code> initialement égale à la somme à rendre.</p>
+<p>L’algorithme consiste alors à parcourir la liste précédente de gauche à droite. Pour chaque élément de cette liste, on vérifie qu’il est bien plus petit que la somme à rendre, auquel cas on le soustrait de la somme à rendre et on le stocke dans la liste des pièces et billets à rendre, sinon on passe à l’élément suivant. On s’arrête enfin lorsque la somme à rendre est égale à zéro.</p>
+<p>Nous mettons l’ensemble du code dans une fonction qui prend pour arguments la somme à rendre et le système de monnaie, puis renvoie la liste des pièces ou billets à rendre.</p>
+<div id="cell-7" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rendu(somme_a_rendre, systeme_monnaie):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    liste_pieces <span class="op">=</span> [] <span class="co"># liste des pièces à rendre</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">0</span> <span class="co"># indice de la pièce à rendre dans la liste systeme_monnaie</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> somme_a_rendre <span class="op">&gt;</span> <span class="dv">0</span>: <span class="co"># tant qu'il reste quelque chose à rendre</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        valeur <span class="op">=</span> systeme_monnaie[i] <span class="co"># valeur de la pièce à rendre</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> valeur <span class="op">&gt;</span> somme_a_rendre: <span class="co"># la pièce a une valeur trop élevée</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>            i <span class="op">+=</span> <span class="dv">1</span> <span class="co"># on avance alors dans la liste</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>: <span class="co"># la pièce peut être rendue</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>            ... <span class="co"># on ajoute la pièce dans la liste des pièces à rendre</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            ... <span class="co"># on met à jour la somme à rendre</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> liste_pieces</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-title-container flex-fill">
-Différences entre les méthodes GET et POST
+<p><strong>Question 3</strong> : Compléter les deux lignes en pointillés du code précédent, puis exécuter les cellules ci-dessous pour tester le code.</p>
+<div id="cell-9" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>rendu(<span class="dv">7</span>,systeme_monnaie_europeen)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Caractéristiques de la méthode GET :</strong></p>
-<ul>
-<li>Toutes les informations transmises, le sont en clair dans l’URL. Celle-ci est limitée en taille donc la méthode GET ne peut pas être utilisée pour transmettre des informations <strong>trop longues</strong>.</li>
-<li>Une requête GET est constituée uniquement d’un entête, elle n’a pas de corps.</li>
-<li>Elle ne modifie pas l’état du serveur, elle est utilisée uniquement pour demander une ressource. Un exemple classique d’utilisation est la formulation d’une requête à l’aide du formulaire d’un moteur de recherche. L’URL générée peut être utilisée plusieurs fois et conservée comme marque-page.</li>
-</ul>
-<p><strong>Caractéristiques de la méthode POST :</strong></p>
-<ul>
-<li>Les données sont transmises dans le corps de la requête, il n’y a pas de restriction de taille. Elles peuvent être de tout type : textes, binaires…</li>
-<li>Les données n’apparaissent pas dans l’URL, néanmoins, si le protocole HTTP est employé sans chiffrement, il suffit d’intercepter la requête pour accéder aux données en clair.</li>
-<li>Les données envoyées peuvent modifier l’état du serveur. Par exemple, les requêtes POST sont utilisées pour les modifications de bases de données sur le serveur (achats, réservation, transfert de fichiers …). Par conséquent, si on veut renvoyer les données d’un formulaire, un message en popup avertit que ce nouvel envoi peut modifier l’état du serveur.</li>
-</ul>
-</div>
+<div id="cell-10" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>rendu(<span class="dv">463</span>,systeme_monnaie_europeen)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="pour-aller-plus-loin" class="level2">
-<h2 class="anchored" data-anchor-id="pour-aller-plus-loin">3. Pour aller plus loin</h2>
-<ul>
-<li><a href="https://www.w3schools.com/html/html_form_elements.asp" target="_blank">W3Schools</a> : référence de tous les éléments HTML de formulaire avec des exemples interactifs.</li>
-<li>Le site <a href="https://developer.mozilla.org/fr/docs/Learn/Forms" target="_blank">MDN web docs</a> de Mozilla est une fois de plus une très bonne référence.</li>
-</ul>
-
-
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Architecture client - serveur</span>
+<section id="exercice-2-problème-du-sac-à-dos" class="level1">
+<h1>Exercice 2 : Problème du sac à dos</h1>
+<p>On dispose d’objets ayant chacun une masse et une valeur en euros, et d’un sac ne pouvant supporter plus d’une certaine masse. Il s’agit alors de remplir le sac en maximisant la valeur totale des objets et sans dépasser la masse maximale. Ce problème, malgré sa simplicité, est un problème majeur d’optimisation.</p>
+<p>Supposons que l’on dispose d’un sac de contenance maximale 30 kg et quatre objets A, B, C et D dont les caractéristiques sont les suivantes :</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Objet</th>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">C</th>
+<th style="text-align: center;">D</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Masse</td>
+<td style="text-align: center;">13 kg</td>
+<td style="text-align: center;">12 kg</td>
+<td style="text-align: center;">8 kg</td>
+<td style="text-align: center;">10 kg</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Valeur</td>
+<td style="text-align: center;">70 €</td>
+<td style="text-align: center;">40 €</td>
+<td style="text-align: center;">30 €</td>
+<td style="text-align: center;">30 €</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Question 4</strong> : Calculer ci-dessous la liste des rapports Valeurs/Masse <span class="math inline">\(\frac{v_i}{m_i}\)</span>, appelés efficacité de chaque objet. L’algorithme glouton que nous proposons consiste alors à classer les objets dans l’ordre décroissant de leur efficacité. On remplit ensuite le sac en prenant les objets un à un dans cet ordre, tant que le sac peut encore les contenir. Déterminer la combinaison d’objets fournie par cet algorithme. Quel est la valeur totale de cette combinaison ?</p>
+<p>Pour mettre en œuvre l’algorithme glouton que nous venons d’étudier pour le problème du sac à dos, nous créons tout d’abord une variable <code>Max</code> contenant la capacité maximale (en kilogrammes) du sac. Nous créons ensuite trois listes <code>liste_noms</code>, <code>liste_masses</code> et <code>liste_valeurs</code> qui contiennent respectivement les noms, masses et valeurs de chacun des objets.</p>
+<p>Considérons un sac de contenance maximale 10 kg et des objets dont les caractéristiques sont les suivantes :</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Objet</th>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">C</th>
+<th style="text-align: center;">D</th>
+<th style="text-align: center;">E</th>
+<th style="text-align: center;">F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Masse</td>
+<td style="text-align: center;">7 kg</td>
+<td style="text-align: center;">6 kg</td>
+<td style="text-align: center;">4 kg</td>
+<td style="text-align: center;">3 kg</td>
+<td style="text-align: center;">2 kg</td>
+<td style="text-align: center;">1 kg</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Valeur</td>
+<td style="text-align: center;">9100 €</td>
+<td style="text-align: center;">6000 €</td>
+<td style="text-align: center;">4800 €</td>
+<td style="text-align: center;">2700 €</td>
+<td style="text-align: center;">2800 €</td>
+<td style="text-align: center;">200 e</td>
+</tr>
+</tbody>
+</table>
+<p>Nous écrivons alors les instructions suivantes :</p>
+<div id="cell-14" class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Max <span class="op">=</span> <span class="dv">10</span> <span class="co"># contenance maximale du sac</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>liste_noms <span class="op">=</span> [<span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span>,<span class="st">"D"</span>,<span class="st">"E"</span>,<span class="st">"F"</span>] <span class="co"># liste des noms des objets</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>liste_masses <span class="op">=</span> [<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>] <span class="co"># liste des masses des objets</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>liste_valeurs <span class="op">=</span> [<span class="dv">9100</span>,<span class="dv">6000</span>,<span class="dv">4800</span>,<span class="dv">2700</span>,<span class="dv">2800</span>,<span class="dv">200</span>] <span class="co"># liste des valeurs des objets</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><strong>Question 5</strong> : Créer une liste <code>L</code> dont le i-ème élément est une liste contenant l’efficacité du i-ème élément, son nom, sa masse et sa valeur. Vérifier que L contient bien ce que l’on veut.</p>
+<p><strong>Question 6</strong> : Exécuter la cellule ci-dessous pour trier la liste de l’objet le plus “efficace” à l’objet le moins “efficace”.</p>
+<div id="cell-18" class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>L_triee<span class="op">=</span><span class="bu">sorted</span>(L,reverse<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Question 7</strong> : Le code ci-dessous met en œuvre l’algorithme glouton. Compléter les lignes en pointillés.</p>
+<div id="cell-20" class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>liste_objets <span class="op">=</span> [] <span class="co"># liste des noms des objets rangés dans le sac</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>Somme_masses <span class="op">=</span> <span class="dv">0</span> <span class="co"># somme des masses des objets déjà rangés</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(L_triee)):</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> Max <span class="op">&gt;=</span> ... : <span class="co"># l'objet d'indice i peut être rangé</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        liste_objets.append(...) <span class="co"># on range l'objet d'indice i</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        Somme_masses <span class="op">+=</span> ... <span class="co"># on met à jour la somme des masses</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Question 8:</strong> : En déduire la combinaison fournie par l’algorithme glouton et la masse totale de cette combinaison.</p>
+<p><strong>Question 9</strong> : Modifier le code précédent afin de déterminer également la valeur totale de la combinaison trouvée.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -1698,18 +1806,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../21_client-serveur/acti4_forms.html" class="pagination-link  aria-label=" activité="" :="" formulaires="" web"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Activité : Formulaires Web</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../21_client-serveur/exos_forms.html" class="pagination-link" aria-label="Exercice : Formulaires">
-        <span class="nav-page-text">Exercice : Formulaires</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1742,31 +1838,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 

@@ -13,6 +13,12 @@ execute:
   cache: true
 ---
 
+:::{.callout-important}
+## Ce cours dans Capytale
+
+[Cliquer ici](https://capytale2.ac-paris.fr/web/c/eb73-3484435)
+:::
+
 ## 1. Table de données et indexation
 
 ### 1.1. Vocabulaire
