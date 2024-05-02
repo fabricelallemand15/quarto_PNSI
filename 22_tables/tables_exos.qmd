@@ -1,6 +1,6 @@
 ---
 title: "Exercices - Traitements de données en tables"
-subtitle: "Ch. 22 - Traitement de données en tables"
+subtitle: "Ch. 23 - Traitement de données en tables"
 lang: fr
 tbl-cap-location: bottom
 crossref: 
