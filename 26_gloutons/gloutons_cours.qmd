@@ -9,7 +9,7 @@ Une chenille mangeuse de pucerons se déplace sur l'arbre ci-dessous, du haut ve
 
 ![](arbre_chenille.png){width="25%"}
 
-On voit facilement que pour manger la maximum de pucerons, la chenille doit suivre le chemin $3 \rightarrow 4 \rightarrow 20$ qui lui permet de manger 27 pucerons. Ce résultat est l'**optimum global du problème**.
+On voit facilement que pour manger le maximum de pucerons, la chenille doit suivre le chemin $3 \rightarrow 4 \rightarrow 20$ qui lui permet de manger 27 pucerons. Ce résultat est l'**optimum global du problème**.
 
 Cependant, la chenille est trop **gloutonne**, et elle n'a pas une vision globale de l'arbre. Elle choisit donc à chaque étape le nœud présentant le plus grand nombre de pucerons. Ce nombre est ce que l'on appelle l'**optimum local pour cette étape**. Avec cette méthode, la chenille va suivre le chemin : $3 \rightarrow 7 \rightarrow 11$ qui lui permet de manger 21 pucerons. Cela ne correspond pas à l'optimum global du problème.
 
