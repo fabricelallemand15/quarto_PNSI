@@ -1,0 +1,800 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Traitements de données en tables (cours)\"\n",
+        "subtitle: \"Ch. 23 - Traitement de données en tables\"\n",
+        "lang: fr\n",
+        "tbl-cap-location: bottom\n",
+        "crossref: \n",
+        "    eq-prefix: Éq.\n",
+        "    tbl-prefix: Tableau\n",
+        "    tbl-title: Tableau\n",
+        "format:\n",
+        "    html: default\n",
+        "execute: \n",
+        "  cache: true\n",
+        "---\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        ":::{.callout-important}\n",
+        "## Ce cours dans Capytale\n",
+        "\n",
+        "[Cliquer ici](https://capytale2.ac-paris.fr/web/c/eb73-3484435)\n",
+        ":::\n",
+        "\n",
+        "## 1. Table de données et indexation\n",
+        "\n",
+        "### 1.1. Vocabulaire\n",
+        "\n",
+        "::: {.callout-tip}\n",
+        "## Définition\n",
+        "\n",
+        "Des données, numériques ou non, sont souvent représentées sous forme de tableaux, ou **tables**.\n",
+        "\n",
+        "**Vocabulaire :**\n",
+        "\n",
+        "* Une __table__, représentée sous forme de tableau, est une collection d'éléments qui sont les lignes du tableau.\n",
+        "* Chaque élément de la __table__, ou ligne de sa représentation sous forme de tableau, s'appelle un __enregistrement__.    \n",
+        "* Tous les  __enregistrements__ d'une même __table__ sont des  __p-uplets nommés__ qui partagent les mêmes __descripteurs__, appelés aussi __attributs__. Dans une représentation de la __table__ sous forme de tableau, chaque __attribut__ correspond à une colonne. Chaque __attribut__ est caractérisé par son __type__ et son  __domaine de valeurs__ (les valeurs que peut prendre cet attribut).    \n",
+        "* Dans une représentation sous forme de tableau, les __descripteurs__ ou __attributs__ sont en général placés comme en-tête de colonnes sur la première ligne.\n",
+        ":::\n",
+        "\n",
+        "\n",
+        "![tableur](tableur.png)\n",
+        "\n",
+        "::: {.callout-caution}\n",
+        "## Exemple\n",
+        "\n",
+        "La table représentée ci-dessus est affichée dans un tableur. Nous voyons les 20 premiers enregistrements de cette table qui rassemble des données sur tous les établissements scolaires primaires et secondaires dans le Cantal (source : https://www.data.gouv.fr/fr/). \n",
+        "\n",
+        "Les attributs de cette table sont :\n",
+        "\n",
+        "* le _code_ UAI (Unité Administrative Immatriculée) avec un domaine de valeurs particulier ;\n",
+        "* le _nom_ avec pour domaine de valeur les chaînes de caractères ;\n",
+        "* le _statut_ avec pour domaine de valeur les deux chaînes {\"Public\", \"Privé\"} ;\n",
+        "* le _codepostal_ avec un domaine de valeurs particulier ;\n",
+        "* la _commune_ avec pour domaine de valeur les chaînes de caractères ;\n",
+        "* la _latitude_ et la _longitude_ avec pour domaine de valeur les flottants.\n",
+        ":::\n",
+        "\n",
+        "### 1.2. Échange de table de données avec un fichier CSV\n",
+        "\n",
+        "Pour échanger des __données tabulaires__  entre les programmes qui doivent les manipuler, on les exporte puis les importe sous la forme de fichiers textes, c'est-à-dire lisibles par l'être humain.  \n",
+        "\n",
+        "Afin d'assurer l'interopérabilité entre différents programmes, un fichier doit respecter un __format__ normalisé.\n",
+        "\n",
+        "L'un des formats les plus répandus pour l'échange de __données tabulaires__ est le format [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) pour _Comma Separated Values_ :\n",
+        "\n",
+        "* un fichier [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) est un fichier texte donc éditable avec un éditeur de textes comme [Notepad++](https://notepad-plus-plus.org/downloads/). On peut aussi l'éditer dans un tableur ;\n",
+        "* chaque ligne du fichier correspond à un __enregistrement__ de la table ;\n",
+        "* pour un  __enregistrement__ donné, les valeurs des différents __attributs__ sont séparées en __champs__ par un __délimiteur__ qui est en général l'un des symboles `,` ou `;` ou `:` ;\n",
+        "* la première ligne contient en général les noms des __attributs__.\n",
+        "\n",
+        "Voici la même table que celle qui est affichée dans un tableur ci-dessus, au format CSV :\n",
+        "\n",
+        "```{.csv filename=\"etablissements.csv\"}\n",
+        "code,nom,statut,codepostal,commune,latitude,longitude\n",
+        "0150424E,Ecole maternelle de La Fontaine,Public,15000,AURILLAC,44.93215113696133,2.4472797795526975\n",
+        "0150426G,Ecole élémentaire La Jordanne,Public,15000,AURILLAC,44.91746484780829,2.4412899019318455\n",
+        "0150713U,Ecole élémentaire Belbex,Public,15000,AURILLAC,44.91692385174704,2.420740047835959\n",
+        "0150669W,Ecole élémentaire de Canteloube,Public,15000,AURILLAC,44.90604342702414,2.4320205660195438\n",
+        "0150695Z,Ecole élémentaire Paul Doumer,Public,15000,AURILLAC,44.92315413405051,2.4369699098202613\n",
+        "0150708N,Collège privé Gerbert,Privé,15000,AURILLAC,44.915101259869516,2.4353907452880663\n",
+        "0150082H,Ecole élémentaire privée Externat de L'Enfant-Jésus,Privé,15000,AURILLAC,44.925334485056936,2.4395702526084304\n",
+        "0150430L,Ecole élémentaire Le Palais,Public,15000,AURILLAC,44.92790494767797,2.44295019912506\n",
+        "0150431M,Ecole élémentaire Jean-Baptiste Rames,Public,15000,AURILLAC,44.92587579761087,2.443909493077494\n",
+        "0150639N,Collège Jeanne de La Treilhe,Public,15000,AURILLAC,44.931332705102776,2.446920262863509\n",
+        "0150340N,Ecole élémentaire Tivoli,Public,15000,AURILLAC,44.91458511629758,2.437120525044205\n",
+        "0150420A,Ecole élémentaire des Frères Delmas,Public,15000,AURILLAC,44.93257502395094,2.448510197138493\n",
+        "0150427H,Ecole élémentaire Les Alouettes,Public,15000,AURILLAC,44.931185754042616,2.4377296545614717\n",
+        "0150760V,Lycée Polyvalent privé Gerbert,Privé,15000,AURILLAC,44.91492261677949,2.435849985504045\n",
+        "0150761W,Section d'enseignement professionnel du Lycée privé Gerbert,Privé,15000,AURILLAC,44.91510125343173,2.435389478195114\n",
+        "0150773J,Ecole élementaire privée La Calandreta del Vernhat,Privé,15000,AURILLAC,44.90477730883497,2.434630577068397\n",
+        "0150006A,Lycée polyvalent Monnet-Mermoz - Lycée des métiers des sciences et techniques appliquées à l'industrie et aux services,Public,15005,AURILLAC CEDEX,44.93647192501501,2.4525295902159927\n",
+        "0150036H,Section d'enseignement professionnel du Lycée Monnet-Mermoz,Public,15005,AURILLAC CEDEX,44.93588796606886,2.451329778620416\n",
+        "0150646W,Lycée général Emile Duclaux,Public,15005,AURILLAC CEDEX,44.927782859640786,2.439440592922277\n",
+        "```\n",
+        "\n",
+        "On observe que le délimiteur de champ est le symbole `,` et que les champs peuvent contenir des espaces.\n",
+        "\n",
+        "Dans un tel jeu de données, il peut y avoir des champs vides dans certains enregistrements et il se peut aussi que le nombre de champs pour un ne corresponde pas au nombre d'attributs ! Pour traiter un tel fichier avec un programme, il faut d'abord analyser sa structure, ses particularités et prévoir d'éventuelles irrégularités dans les données (absence, erreurs de type, de saisie, corruption du fichier ...). Le __contrôle de la  validité__ des données doit donc être une composante du programme de traitement : recherche de doublons, tests de cohérence.\n",
+        "\n",
+        "### 1.3. Manipulation de fichiers CSV en Python\n",
+        "\n",
+        "::: {.callout-tip}\n",
+        "## Définition\n",
+        "\n",
+        "__L'indexation de table__ est la création d'une structure de données à partir d'une table de données.\n",
+        "\n",
+        "L'indexation d'une table extraite d'un fichier CSV peut se faire vers une structure de données du langage Python : **tableau de tableaux** ou (mieux) **tableau de dictionnaires**.\n",
+        ":::\n",
+        "\n",
+        "Dans cette section, on considère le fichier [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values),  [`educ_cantal.csv`](educ_cantal.csv),  contenant les enregistrements des établissements scolaires primaires et secondaires dans le Cantal.\n",
+        "\n",
+        "Présentons deux méthodes de lecture de fichiers [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) qui utilisent les outils standards de Python. \n",
+        "\n",
+        "On fait les hypothèses suivantes :  la première ligne du fichier contient les attributs\n",
+        "et on connaît  le délimiteur, ici le symbole `,`.\n",
+        "\n",
+        "### Avec un tableau de tableaux\n",
+        "\n",
+        "*  **Lecture**\n",
+        "\n",
+        "On peut extraire les attributs et la table contenus dans le fichier `educ_cantal.csv` avec le code ci-dessous :\n"
+      ],
+      "id": "92cb545f"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# ouverture du fichier en mode lecture\n",
+        "fichier = open('educ_cantal.csv', mode='r', encoding='utf8', newline='')\n",
+        "# extraction de la ligne des attributs\n",
+        "attributs = fichier.readline().rstrip().split(',')\n",
+        "# extraction des autres lignes\n",
+        "table = [ligne.rstrip().split(',') for ligne in fichier]\n",
+        "# fermeture du fichier\n",
+        "fichier.close()"
+      ],
+      "id": "78100614",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "La fonction `open` permet de créer un objet `fichier` qu'on peut parcourir ligne par ligne avec un curseur : d'abord la première ligne avec `fichier.readline()` puis les lignes suivantes en itérant sur `fichier`. Il est important de préciser __l'encodage du fichier__, par défaut c'est celui du système d'exploitation.\n",
+        "\n",
+        "Chaque ligne est une chaîne de caractères découpée en liste de champs selon le délimiteur passé en paramètre à la méthode `split`. Le caractère de saut de lignes a d'abord été supprimé avec la méthode `rstrip`.\n",
+        "\n",
+        "On récupère ainsi les attributs comme un tableau de type `list` et la table comme un tableau d'enregistrements qui sont eux-mêmes des tableaux. Notons que toutes les valeurs sont des chaînes de caractères et qu'il faudra convertir certaines pour les traiter !\n"
+      ],
+      "id": "c7a7b784"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "print(attributs)\n",
+        "print(table[18])\n",
+        "print(table[:2])"
+      ],
+      "id": "0134b9bd",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "* **Écriture**\n",
+        "\n",
+        "On peut ensuite recopier les attributs et la table dans un autre fichier `educ_cantal_copie.csv` avec le code ci-dessous :\n"
+      ],
+      "id": "ebc33746"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "g = open('educ_cantal_copie.csv', mode='w', encoding='utf8', newline='') # ouverture du fichier en mode écriture\n",
+        "premiere_ligne = ','.join(attributs) + '\\n'\n",
+        "g.write(premiere_ligne)\n",
+        "for enregistrement in table:\n",
+        "    g.write(','.join(enregistrement) + '\\n')\n",
+        "g.close()"
+      ],
+      "id": "3ab7e596",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "La méthode `join` permet de concaténer les éléments d'un tableau de chaînes de caractères avec un délimiteur.\n",
+        "\n",
+        "* Avec ces méthodes, une table est donc représentée par **un tableau de tableaux**. On accède à un enregistrement par son index dans la table et à la valeur d'un attribut par son index dans le tableau des attributs (séparé de la table). C'est incommode et  le code produit est peu lisible. Ainsi, pour accéder à l'adresse mail du premier enregistrement il faut saisir `table[0][2]`. On aimerait écrire `table[0]['email']`. Pour cela, chaque enregistrement devrait être un p-uplet nommé que nous représenterons par dictionnaire avec pour clefs les attributs de la table. C'est possible en utilisant le [module `csv`](https://docs.python.org/fr/3/library/csv.html).\n",
+        "\n",
+        "### Avec un tableau de dictionnaires\n",
+        "\n",
+        "Le [module `csv`](https://docs.python.org/fr/3/library/csv.html)  est disponible dans la bibliothèque standard et peut donc être  utilisé sans installation spécifique. À partir de la table contenue dans le même fichier CSV `'educ_cantal.csv'`, ce module permet de créer une structure de données d'un accès plus facile.\n",
+        "\n",
+        "* **Lecture**\n",
+        "\n",
+        "Le code ci-dessous permet d'extraire directement la table d'un fichier CSV dans une structure de données qui est un __tableau de dictionnaires__ : chaque enregistrement est un dictionnaire dont les clefs sont les attributs listés sur la première ligne du fichier.\n",
+        "\n",
+        "Remarque : pour les versions de Python 3.6 et 3.7 uniquement, les dictionnaires renvoyés sont spécifiques, de type `OrderedDict`, et on prendra soin de les convertir en dictionnaires standard avec `dict` en entrant : ``table = [dict(enregistrement) for ...]``.\n"
+      ],
+      "id": "fd22eeb2"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import csv\n",
+        "\n",
+        "f = open('educ_cantal.csv', mode='r', encoding='utf8', newline='')\n",
+        "reader = csv.DictReader(f, delimiter=',')  # création d'un objet reader\n",
+        "table = [enregistrement for enregistrement in reader]\n",
+        "f.close()"
+      ],
+      "id": "d253f519",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "La structure de données représentant la table est un __tableau de dictionnaires__ : l'accès aux enregistrements se fait par index et à leurs attributs par clef : très efficace (coût constant) et code lisible. Notons que toutes les valeurs restent des chaînes de caractères et qu'il faudra convertir certaines pour les traiter !\n"
+      ],
+      "id": "3a7e0b50"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# premier enregistrement de type dictionnaire\n",
+        "print(table[18])\n",
+        "# tableu de dictionnaires : extrait\n",
+        "print(table[:2])\n",
+        "# nombre d'enregistrements\n",
+        "print(len(table))\n",
+        "# accès facile aux valeurs des attributs par clefs\n",
+        "print(table[18][\"nom\"])"
+      ],
+      "id": "eba58087",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "* **Écriture**\n",
+        "\n",
+        "L'écriture d'un tableau de dictionnaires partageant les mêmes clefs sous forme de table dans un fichier CSV, s'effectue de façon symétrique à travers un objet `DictWriter`. À titre, d'exemple, on recopie la table extraite précédemment dans un autre fichier CSV. Depuis Python 3.7, le parcours des clefs d'un dictionnaire est garanti dans le même ordre que celui d'insertion donc on peut récupérer la liste des attributs avec `list(table[0].keys())`\n"
+      ],
+      "id": "d27b4ca7"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "g = open('educ_cantal_copie2.csv', mode='w', encoding='utf8', newline='')\n",
+        "attributs = list(table[0].keys())\n",
+        "writer = csv.DictWriter(g, delimiter=',', fieldnames=attributs)  # création de l'objet writer\n",
+        "writer.writeheader()  # écriture des attributs\n",
+        "for enregistrement in table:\n",
+        "    writer.writerow(enregistrement)  # écriture des enregistrements\n",
+        "g.close()"
+      ],
+      "id": "4e2e7fb7",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "* **Remarque** \n",
+        "\n",
+        "Le module `csv` permet aussi d'extraire une table d'un fichier CSV sous forme de **tableau de tableaux** comme dans la méthode précédente. Le découpage des lignes/enregistrements selon le délimiteur est intégré ce qui simplifie le code.\n"
+      ],
+      "id": "ec44c1df"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "f = open('educ_cantal.csv', mode='r', encoding='utf8', newline='')\n",
+        "reader = csv.reader(f, delimiter=',')\n",
+        "table = [ligne for ligne in reader]\n",
+        "f.close()"
+      ],
+      "id": "71236390",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## 2. Recherche dans une table\n",
+        "\n",
+        "Pour accéder aux données, il faut les rechercher et les regrouper suivant différents critères.\n",
+        "\n",
+        "::: {.callout-tip}\n",
+        "## Définition\n",
+        "\n",
+        "* Lorsqu'on souhaite accéder à un ou plusieurs enregistrements vérifiant un critère, on réalise une **sélection**.\n",
+        "* Lorsqu'on souhaite accéder à toutes les données d'une colonne on réalise une **projection**.\n",
+        ":::\n",
+        "\n",
+        "### Exemple de sélection\n",
+        "\n",
+        "Supposons qu'on dispose d'une table enregistrée dans une liste de dictionnaires :\n"
+      ],
+      "id": "9f82a681"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "Table1 = [\n",
+        "    {'Nom': 'Joe', 'Anglais': '17', 'Info': '18', 'Maths': '16'},\n",
+        "    {'Nom': 'Zoé', 'Anglais': '15', 'Info': '17', 'Maths': '19'},\n",
+        "    {'Nom': 'Max', 'Anglais': '19', 'Info': '13', 'Maths': '14'},\n",
+        "    {'Nom': 'Bob', 'Anglais': '12', 'Info': '16', 'Maths': '10'}\n",
+        "]"
+      ],
+      "id": "a556fd88",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "On souhaite extraire la liste des enregistrements des élèves ayant eu au moins 16 en maths.\n",
+        "\n",
+        "On peut le faire \"à la main\" :\n"
+      ],
+      "id": "8b95f4f1"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "au_moins_16_en_maths = []\n",
+        "for enregistrement in Table1:\n",
+        "    if int(enregistrement['Maths']) >= 16:\n",
+        "        au_moins_16_en_maths.append(enregistrement)"
+      ],
+      "id": "c78ed267",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Le résultat est encore une table :\n"
+      ],
+      "id": "514d0683"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "au_moins_16_en_maths"
+      ],
+      "id": "0a9c9d75",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "On peut le faire avec une liste en compréhension :\n"
+      ],
+      "id": "a0032402"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "au_moins_16_en_maths = [enre for enre in Table1 if int(enre['Maths']) >= 16]"
+      ],
+      "id": "1ae956a5",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Le résultat est identique.\n",
+        "\n",
+        "### Exemple de projection\n",
+        "\n",
+        "Cette fois, on souhaite récupérer toutes les valeurs pour un champ donné, par exemple toutes les notes de mathématiques.\n",
+        "\n",
+        "L'approche est similaire, on crée une liste, on parcourt la table et on ajoute à la liste tous les éléments qui nous intéressent.\n",
+        "\n",
+        "* à la main :\n"
+      ],
+      "id": "aecca25b"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "notes_maths = []\n",
+        "for enregistrement in Table1:\n",
+        "    notes_maths.append(enregistrement['Maths'])"
+      ],
+      "id": "260eb6ca",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "* par compréhension :\n"
+      ],
+      "id": "144dc055"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "notes_maths = [enre['Maths'] for enre in Table1]"
+      ],
+      "id": "f5a36b54",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Dans les deux cas le résultat est la liste ['16', '19', '14', '10'].\n",
+        "\n",
+        "::: {.callout-caution}\n",
+        "## Exercices\n",
+        "\n",
+        "1. Adapter la sélection afin de récupérer tous les enregistrements des élèves dont le nom comporte un \"o\".\n",
+        "2. Projeter afin de construire la liste des noms puis celle des paires de notes d'info et de maths :\n",
+        "\n",
+        "    [(18, 16), (17, 19), (13, 14), (16, 10)]\n",
+        ":::\n",
+        "\n",
+        "::: {.callout-tip collapse=\"true\"}\n",
+        "## Solution\n",
+        "\n",
+        "1. Avec une boucle :\n"
+      ],
+      "id": "287d8f9c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "nom_avec_o = []\n",
+        "for enregistrement in Table1:\n",
+        "    if 'o' in enregistrement['Nom']:\n",
+        "        nom_avec_o.append(enregistrement)"
+      ],
+      "id": "0f705902",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "En compréhension :\n"
+      ],
+      "id": "f7cf7170"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "nom_avec_o = [enre for enre in Table1 if 'o' in enre['Nom']]"
+      ],
+      "id": "c4fa6f70",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "2. Liste des noms :\n"
+      ],
+      "id": "2e1bba79"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# avec une boucle\n",
+        "liste_noms = []\n",
+        "for enregistrement in Table1:\n",
+        "    liste_noms.append(enregistrement['Nom'])\n",
+        "\n",
+        "# avec une liste en compréhension\n",
+        "liste_noms = [enre['Nom'] for enre in Table1]"
+      ],
+      "id": "0cbdf5c5",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "paires info/maths\n"
+      ],
+      "id": "2409ffeb"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# avec une boucle\n",
+        "liste_paires = []\n",
+        "for enregistrement in Table1:\n",
+        "    liste_paires.append((enregistrement['Info'], enregistrement['Maths']))\n",
+        "\n",
+        "# avec une liste en compréhension\n",
+        "liste_paires = [(enre['Info'], enre['Maths']) for enre in Table1]"
+      ],
+      "id": "d95916f0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ":::\n",
+        "\n",
+        "## 3. Tri d'une table\n",
+        "\n",
+        "### 3.1. Tri d'une table selon une colonne\n",
+        "\n",
+        "Il s'agit ici de trier les données d'une table selon un des attributs de la table, c'est-à-dire selon une colonne. Il faut bien sûr pour cela que les données de cet attribut soient \"triables\", c'est-à-dire qu'un ordre puisse être défini sur ces données. Pour des données numériques, on peut penser à l'ordre croissant ou à l'ordre décroissant. Pour des données textuelles, à l'ordre alphabétique. On peut aussi vouloir trier les données selon plusieurs champs.\n",
+        "\n",
+        "Nous allons pour cela utiliser la fonction Python ``sorted`` qui s'applique à un objet de type ``list`` et qui renvoie une nouvelle ``list`` triée. Outre la table à trier, cette fonction peut prendre deux arguments nommés facultatifs :\n",
+        "\n",
+        "* ``reverse = True`` pour un tri dans l'ordre inverse ;\n",
+        "* ``key = ...`` pour préciser selon quel critère une liste doit être triée.\n",
+        "\n",
+        "Quelques exemples :\n"
+      ],
+      "id": "406918ab"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "ma_liste = [10, 3, 71, 96]\n",
+        "print(sorted(ma_liste))\n",
+        "print(sorted(ma_liste, reverse=True))\n",
+        "\n",
+        "mes_couples = [('a', 3), ('d', 2), ('c', 5), ('b', 1)]\n",
+        "print(sorted(mes_couples))     # tuples triés selon leur premier élément (par défaut)\n",
+        "\n",
+        "def y(couple):    # on définit une fonction qui retourne le second élément d'un tuple\n",
+        "    return couple[1]\n",
+        "\n",
+        "print(sorted(mes_couples, key=y)) # tuples triés selon leur second élément"
+      ],
+      "id": "d0ea39ea",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "::: {.callout-warning}\n",
+        "\n",
+        "Attention, ``sorted`` ne renvoie qu'une copie superficielle du tableau ! Si ses éléments sont des références et c'est le cas de l'implémentation des tables de données sous forme de tableaux de dictionnaires, il faut effectuer une copie profonde du tableau avec la fonction ``deepcopy`` du module ``copy`` pour obtenir une vraie copie triée du tableau initial : ``sorted(deepcopy(tab), key = clef_tri)``.\n",
+        ":::\n",
+        "\n",
+        "### 3.2. Tri suivant plusieurs colonnes\n",
+        "\n",
+        "Considérons la table suivante : \n"
+      ],
+      "id": "03d77383"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "table = [{'élève' : 'guido', 'langage' : 'python', 'note' : 19},\n",
+        "         {'élève' : 'monty', 'langage' : 'python', 'note' : 20},\n",
+        "         {'élève' : 'brian', 'langage' : 'c', 'note' : 20}]"
+      ],
+      "id": "49bf75f5",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "On souhaite trier en fonction du langage dans l'ordre alphabétique, puis de la note dans l'ordre croissant. La fonction donnée en argument ``key`` doit alors retourner la couple ordonné des deux attributs voulus :\n"
+      ],
+      "id": "838c7329"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "def cle_langage_note(enre):\n",
+        "    return (enre['langage'], enre['note'])\n",
+        "\n",
+        "sorted(table, key = cle_langage_note)"
+      ],
+      "id": "e9843ead",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Si l'on souhaite trier dans l'ordre croissant suivant l'attribut langage et décroissant suivant l'attribut note, on procède en deux étapes :\n"
+      ],
+      "id": "faf7b310"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "def cle_langage(enre):\n",
+        "    return enre['langage']\n",
+        "\n",
+        "def cle_note(enre):\n",
+        "    return enre['note']\n",
+        "\n",
+        "table_temp = sorted(table, key = cle_langage)\n",
+        "sorted(table_temp, key = cle_note, reverse = True)"
+      ],
+      "id": "7a6e6910",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## 4. Fusion de deux tables\n",
+        "\n",
+        "Il est courant de travailler avec plusieurs tables de données. Nous avons alors parfois besoin de rassembler deux tables en une seule ou encore de construire une nouvelle table à partir de certains attributs de tables existantes.\n",
+        "\n",
+        "### 4.1. Fusion de deux tables de même structure\n",
+        "\n",
+        "Le cas le plus simple est lorsque nous disposons de deux tables, par exemple sous la forme de tableaux de dictionnaires, qui possèdent exactement les mêmes attributs.\n",
+        "\n",
+        "Une simple **concaténation** des tableaux permet cette fusion, en prenant garde néanmoins :\n",
+        "\n",
+        "* à ne pas conserver deux fois la définition des descripteurs ;\n",
+        "* à éviter les doublons : cas d'un enregistrement qui se trouverait dans les deux tables initiales.\n",
+        "\n",
+        "Sous l'hypothèse qu'il n'y a pas de doublons, le code ci-dessous procède à cette fusion :\n"
+      ],
+      "id": "7bd05dc4"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "def fusion_tables(table1: list, table2: list) -> list:\n",
+        "    \"\"\"table 1 et table 2 ont les mêmes descripteurs\n",
+        "    il n'y a pas de doublons\"\"\"\n",
+        "    fusion = deepcopy(table1)\n",
+        "    for enreg in table2[1:]:    # on élimine la première ligne (descripteurs)\n",
+        "        fusion.append(deepcopy(enreg))\n",
+        "    return fusion"
+      ],
+      "id": "98cb3f09",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### 4.2. Fusion de deux tables pour un même attribut\n",
+        "\n",
+        "On veut fusionner deux tables selon un attribut commun. On va sélectionner dans chaque table la ligne ayant la même valeur pour l'attribut choisi.\n",
+        "\n",
+        "Reprenons le tableau ``Table1`` des exemples précédents :\n",
+        "\n",
+        "|  Nom |\tAnglais \t|Info|\tMaths|\n",
+        "|:---:|:---:|:---:|:---:|\n",
+        "| \tJoe |\t17| \t18| \t16|\n",
+        "|\tZoé |\t15 |\t17 |\t19|\n",
+        "|Max |\t19 |\t13 \t|14|\n",
+        "\n",
+        "Définissons une seconde table, ``Table2`` donnant l'âge et le courriel de certains élèves :\n",
+        "\n",
+        "|   Nom |\tAge |\tCourriel|\n",
+        "|:---:|:---:|:---:|\n",
+        "|Joe |\t16 |\tjoe@info.fr|\n",
+        "|Zoé |\t15 |\tzoe@info.fr|\n",
+        "\n",
+        "On voudrait regrouper les données des deux tables. Elles ont l'attribut ``Nom`` en commun. On veut obtenir la table suivante :\n",
+        "\n",
+        "|    Nom |\tAge| \tCourriel |\tAnglais \t|Info |\tMaths|\n",
+        "|:---:|:---:|:---:|:---:|:---:|:---:|\n",
+        "| \tJoe |\t16 \t|joe@info.fr |\t17 |\t18 |\t16|\n",
+        "| \tZoé |\t15 \t|zoe@info.fr |\t15 |\t17 \t|19|\n",
+        "\n",
+        "On choisit d'exclure la ligne concernant Max car il n'est pas présent dans la seconde table.\n",
+        "\n",
+        "::: {.callout-tip}\n",
+        "## Définition\n",
+        "\n",
+        "En informatique, la **jointure** est l'opération permettant d'associer plusieurs tables par le biais d'un lien logique de données entre les différentes tables, le lien étant défini par une condition. Le résultat de l'opération est une nouvelle table.\n",
+        ":::\n",
+        "\n",
+        "La **jointure** s'obtient avec deux boucles imbriquées : on parcourt tous les couples constitués d'enregistrements de la première puis de la seconde table et on filtre à l'aide d'une instruction conditionnelle.\n"
+      ],
+      "id": "761f467c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from copy import deepcopy\n",
+        "\n",
+        "Table1 = [{'Nom': 'Joe', 'Anglais': '17', 'Info': '18', 'Maths': '16'},\n",
+        "          {'Nom': 'Zoé', 'Anglais': '15', 'Info': '17', 'Maths': '19'},\n",
+        "          {'Nom': 'Max', 'Anglais': '19', 'Info': '13', 'Maths': '14'},\n",
+        "          {'Nom': 'Bob', 'Anglais': '12', 'Info': '16', 'Maths': '10'}]\n",
+        "\n",
+        "Table2 = [{'Nom': 'Joe', 'Age': 16, 'Couriel': 'joe@info.fr'},\n",
+        "          {'Nom': 'Zoé', 'Age': 15, 'Couriel': 'zoe@info.fr'}]\n",
+        "\n",
+        "\n",
+        "def jointure_selon_attribut_commun(t1: list, t2: list, attr: str) -> list:\n",
+        "    \"\"\"Effectue la jointure entre les tables t1 et t2 selon l'attribut commun attr\"\"\"\n",
+        "    jointure = []\n",
+        "    for item1 in t1:\n",
+        "        for item2 in t2:\n",
+        "            if item1[attr] == item2[attr]:\n",
+        "                # définition d'une ligne de la nouvelle table reprenant le contenu de la ligne en cours de t1\n",
+        "                new_line = deepcopy(item1)\n",
+        "                # boucle pour ajouter les champs de la ligne de t2 autres que attr\n",
+        "                for cle in item2:\n",
+        "                    if cle != attr:\n",
+        "                        new_line[cle] = item2[cle]\n",
+        "                # ajout de la nouvelle ligne à la nouvelle table\n",
+        "                jointure.append(new_line)\n",
+        "    return jointure\n",
+        "\n",
+        "\n",
+        "print(jointure_selon_attribut_commun(Table2, Table1, 'Nom'))"
+      ],
+      "id": "7f8080f2",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "**Remarque** : dans la fonction ci-dessus, on suppose que le nom des attributs est toujours une chaîne de caractères."
+      ],
+      "id": "c616b8b1"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\Fabrice\\AppData\\Local\\Programs\\Python\\Python311\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
