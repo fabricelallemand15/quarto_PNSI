@@ -1,0 +1,7 @@
+---
+title : Programme
+---
+
+|Contenus |Capacités attendues| Commentaires|
+| :---| :---| :---|
+|Algorithme des k plus proches voisins|Écrire un algorithme qui prédit la classe d’un élément en fonction de la classe majoritaire de ses k plus proches voisins | Il s’agit d’un exemple d’algorithme d’apprentissage.|

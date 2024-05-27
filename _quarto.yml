@@ -173,7 +173,7 @@ website:
         contents: 
           - 25_kppv/index.qmd
           - 25_kppv/kppv_cours.qmd
-          - 25_kppv/kppv_exos.qmd
+          - 25_kppv/KNN-TP.ipynb
       - section: "Ch. 27 - Interfaces homme-machine"
         contents: 
           - 27_ihm/index.qmd
@@ -200,7 +200,7 @@ format:
       light: [flatly, theme_light.scss]
       dark: [darkly, theme_dark.scss]
     css: styles.css
-    toc: true
+    toc: false
     grid:
       sidebar-width: 250px
       body-width: 1000px
