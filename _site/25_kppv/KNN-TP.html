@@ -1136,11 +1136,8 @@ window.Quarto = {
 
 
 <p>Ce TP sur Capytale : <a href="https://capytale2.ac-paris.fr/web/c/946e-3650247">https://capytale2.ac-paris.fr/web/c/946e-3650247</a></p>
-<h2 style="color: orangered; font-style: 16px italic verdana;" class="anchored">
-<ol type="1">
-<li>Chargement et visualisation des jeux de données
-</li></ol></h2>
-
+<section id="chargement-et-visualisation-des-jeux-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="chargement-et-visualisation-des-jeux-de-données"><span style="color: orangered;">1. Chargement et visualisation des jeux de données</span></h2>
 <p>La <strong>librairie python scikit-learn</strong> contient de nombreux algorithmes d’intelligence artificielle, ainsi que des bases de données d’exemples classiques.</p>
 <p>En particulier, le jeu de données <strong>digits</strong> contient un ensemble de 1797 chiffres de 0 à 9 manuscrits, sous la forme d’images de 8 X 8 pixels</p>
 <div id="cell-3" class="cell" data-trusted="true" data-execution_count="2">
@@ -1196,7 +1193,7 @@ window.Quarto = {
 </div>
 </section>
 <section id="découpons-le-jeu-de-données-digits-en-deux-partie" class="level3">
-<h3 class="anchored">Découpons le jeu de données ‘digits’ en deux partie :</h3>
+<h3 class="anchored" data-anchor-id="découpons-le-jeu-de-données-digits-en-deux-partie">Découpons le jeu de données ‘digits’ en deux partie :</h3>
 <ul>
 <li><p>[0-1700] pour les valeurs dont la classe est connue (données d’entraînement).</p></li>
 <li><p>[1701-1797] pour les valeurs à tester (dont on veut prédire la classe).</p></li>
@@ -1206,12 +1203,10 @@ window.Quarto = {
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>images_connues <span class="op">=</span> [i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1700</span>)]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>images_inconnues <span class="op">=</span> [i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1700</span>, <span class="dv">1798</span>)]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<h2 style="color: orangered; font-style: 16px italic verdana;" class="anchored" data-anchor-id="découpons-le-jeu-de-données-digits-en-deux-partie">
-<ol start="2" type="1">
-<li>Mise en oeuvre de l’algorithme des KNN
-</li></ol></h2>
-
 </section>
+</section>
+<section id="mise-en-oeuvre-de-lalgorithme-des-knn" class="level2">
+<h2 class="anchored" data-anchor-id="mise-en-oeuvre-de-lalgorithme-des-knn"><span style="color: orangered;">2. Mise en oeuvre de l’algorithme des KNN</span></h2>
 <section id="la-distance-entre-deux-images" class="level3">
 <h3 class="anchored" data-anchor-id="la-distance-entre-deux-images">2.1 La distance entre deux images</h3>
 <p>Pour calculer la distance entre deux images, nous allons utiliser la distance euclidienne. Compléter la fonction distEuclide ci-dessous :</p>
@@ -1278,7 +1273,7 @@ window.Quarto = {
 </div>
 </section>
 <section id="prédiction-de-la-classe-de-limage-inconnue" class="level3">
-<h3 class="anchored">2.4 Prédiction de la classe de l’image inconnue</h3>
+<h3 class="anchored" data-anchor-id="prédiction-de-la-classe-de-limage-inconnue">2.4 Prédiction de la classe de l’image inconnue</h3>
 <p>Compléter la fonction ci-dessous qui retourne la classe la plus fréquente parmi les <span class="math inline">\(k\)</span> plus proches voisins.</p>
 <div id="cell-21" class="cell" data-trusted="true">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prediction(image_inconnue:<span class="bu">list</span>, k:<span class="bu">int</span>) <span class="op">-&gt;</span><span class="bu">int</span>:</span>
@@ -1312,12 +1307,10 @@ window.Quarto = {
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Vous pouvez modifier le code précédent pour tester d’autres images en remplaçant l’indice <code>0</code> par un autre indice inférieur à 97. Vous pouvez aussi tester l’algorithme avec d’autres valeurs de k.</p>
-<h2 style="color: orangered; font-style: 16px italic verdana;" class="anchored" data-anchor-id="prédiction-de-la-classe-de-limage-inconnue">
-<ol start="3" type="1">
-<li>Testez maintenant votre écriture
-</li></ol></h2>
-
 </section>
+</section>
+<section id="testez-maintenant-votre-écriture" class="level2">
+<h2 class="anchored" data-anchor-id="testez-maintenant-votre-écriture"><span style="color: orangered;">3. Testez maintenant votre écriture</span></h2>
 <section id="une-feuille-à-carreaux-et-un-crayon" class="level3">
 <h3 class="anchored" data-anchor-id="une-feuille-à-carreaux-et-un-crayon">3.1 Une feuille à carreaux et un crayon !</h3>
 <ol type="1">
@@ -1372,6 +1365,7 @@ window.Quarto = {
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1982,7 +1976,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
