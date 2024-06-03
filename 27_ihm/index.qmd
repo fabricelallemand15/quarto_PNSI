@@ -1,0 +1,7 @@
+---
+title: Programme
+---
+
+| **Contenus** | **Capacités attendues** | **Commentaires** |
+| --- | --- | --- |
+Périphériques d’entrée et de sortie. Interface HommeMachine (IHM)| Identifier le rôle des capteurs et actionneurs. Réaliser par programmation une IHM répondant à un cahier des charges donné.| Les activités peuvent être développées sur des objets connectés, des systèmes embarqués ou robots.|

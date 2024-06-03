@@ -20,7 +20,7 @@ website:
       - href: https://notebook.flallemand.fr/
         text: "{{< fa pen-to-square >}} Notebook Python"
       - href: ressources.qmd
-        text: "{{< fa info >}} Ressources"
+        text: "{{< fa info >}} Sources utilisées"
   sidebar: 
     style: floating
     collapse-level: 1
@@ -201,10 +201,11 @@ format:
       dark: [darkly, theme_dark.scss]
     css: styles.css
     toc: false
+    page-layout: full
     grid:
-      sidebar-width: 250px
-      body-width: 1000px
-      margin-width: 300px
+      sidebar-width: 300px
+      body-width: 1500px
+      margin-width: 0px
     lightbox: auto
     code-block-border-left: "#31BAE9"
     code-block-bg: true

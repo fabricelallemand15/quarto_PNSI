@@ -14,6 +14,66 @@
     "text": "Mentions légales\n\nSite personnel de Fabrice LALLEMAND, Lycée Emile DUCLAUX, 16 avenue Henri MONDOR, 15000 AURILLAC, téléphone 04 71 48 22 22.\nCe site est hébergé en Auvergne par o2switch."
   },
   {
+    "objectID": "27_ihm/index.html",
+    "href": "27_ihm/index.html",
+    "title": "Programme",
+    "section": "",
+    "text": "Contenus\nCapacités attendues\nCommentaires\n\n\n\n\nPériphériques d’entrée et de sortie. Interface HommeMachine (IHM)\nIdentifier le rôle des capteurs et actionneurs. Réaliser par programmation une IHM répondant à un cahier des charges donné.\nLes activités peuvent être développées sur des objets connectés, des systèmes embarqués ou robots.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 27 - Interfaces homme-machine",
+      "Programme"
+    ]
+  },
+  {
+    "objectID": "27_ihm/ihm_cours.html",
+    "href": "27_ihm/ihm_cours.html",
+    "title": "Cours",
+    "section": "",
+    "text": "Définition\n\n\n\nUn système informatique embarqué est un système de traitement de l’information autonome ne possédant pas d’entrée et sortie standard comme le clavier et l’écran. Les informations sont reçues de l’extérieur par le biais de capteurs, elles sont traitées par un processeur et selon le programme du système des actions physiques peuvent être déclenchées avec des actionneurs. Les capteurs sont des périphériques d’entrée et les actionneurs des périphériques de sortie.\n\n\nLes signaux capturés sont analogiques, analogues au phénomène : par exemple la rotation de l’axe d’un anémomètre qui mesure la vitesse du vent sur une station météo. Pour être traités par le processeur, ils sont numérisés transformés en un nombre fini d’informations codées par des 0 et des 1 par échantillonnage (nombre fini de relevés) et quantification (nombre fini de valeurs possibles).\nLes microcontrôleurs sont des circuits intégrés qui concentrent une mémoire, un processeur, des entrées-sorties comme un ordinateur, mais se caractérisent par une miniaturisation accrue, une plus faible consommation électrique et des performances moindres, mais suffisantes pour des applications toujours plus nombreuses avec les progrès techniques.\nLes systèmes informatiques embarqués sont utilisés dans tous les domaines : l’industrie (robots), le transport (avionique, automobile, métro …), la médecine (stimulateurs cardiaques, imagerie …), la maison (domotique, appareils ménagers …), les télécommunications (téléphonie …), le monde du travail (contrôle d’accès …), les loisirs (vélo électrique …).\nOn parle d’informatique ubiquitaire pour désigner cette omniprésence de l’informatique dans notre environnement.\nLes smartphones modernes ne sont pas des microcontrôleurs, mais des ordinateurs miniatures bien plus puissants que les systèmes de guidage des premières missions Apollo qui ont amené l’homme sur la lune ! Ils sont dotés de nombreux capteurs.\n\n\n\nSource : flickr / Intel Free Press\n\n\n\n\n\n\n\nSource : Yassine Haddab Université de Montpellier\n\n\n\n\n\n\n\n\nMéthode\n\n\n\nUn algorithme de contrôle fréquent sur un système informatique embarqué consiste en une boucle infinie où s’enchaînent capture d’événements par les émetteurs, traitement puis action par les actionneurs.\nInitialiser les actionneurs à leur position de départ\nTant que Vrai \n    Lire les informations des capteurs\n    Traiter ces informations\n    Calculer des informations sur les actionneurs\n    Transmettre ces informations aux actionneurs",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 27 - Interfaces homme-machine",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "27_ihm/ihm_cours.html#architecture-dun-système-embarqué",
+    "href": "27_ihm/ihm_cours.html#architecture-dun-système-embarqué",
+    "title": "Cours",
+    "section": "",
+    "text": "Définition\n\n\n\nUn système informatique embarqué est un système de traitement de l’information autonome ne possédant pas d’entrée et sortie standard comme le clavier et l’écran. Les informations sont reçues de l’extérieur par le biais de capteurs, elles sont traitées par un processeur et selon le programme du système des actions physiques peuvent être déclenchées avec des actionneurs. Les capteurs sont des périphériques d’entrée et les actionneurs des périphériques de sortie.\n\n\nLes signaux capturés sont analogiques, analogues au phénomène : par exemple la rotation de l’axe d’un anémomètre qui mesure la vitesse du vent sur une station météo. Pour être traités par le processeur, ils sont numérisés transformés en un nombre fini d’informations codées par des 0 et des 1 par échantillonnage (nombre fini de relevés) et quantification (nombre fini de valeurs possibles).\nLes microcontrôleurs sont des circuits intégrés qui concentrent une mémoire, un processeur, des entrées-sorties comme un ordinateur, mais se caractérisent par une miniaturisation accrue, une plus faible consommation électrique et des performances moindres, mais suffisantes pour des applications toujours plus nombreuses avec les progrès techniques.\nLes systèmes informatiques embarqués sont utilisés dans tous les domaines : l’industrie (robots), le transport (avionique, automobile, métro …), la médecine (stimulateurs cardiaques, imagerie …), la maison (domotique, appareils ménagers …), les télécommunications (téléphonie …), le monde du travail (contrôle d’accès …), les loisirs (vélo électrique …).\nOn parle d’informatique ubiquitaire pour désigner cette omniprésence de l’informatique dans notre environnement.\nLes smartphones modernes ne sont pas des microcontrôleurs, mais des ordinateurs miniatures bien plus puissants que les systèmes de guidage des premières missions Apollo qui ont amené l’homme sur la lune ! Ils sont dotés de nombreux capteurs.\n\n\n\nSource : flickr / Intel Free Press\n\n\n\n\n\n\n\nSource : Yassine Haddab Université de Montpellier\n\n\n\n\n\n\n\n\nMéthode\n\n\n\nUn algorithme de contrôle fréquent sur un système informatique embarqué consiste en une boucle infinie où s’enchaînent capture d’événements par les émetteurs, traitement puis action par les actionneurs.\nInitialiser les actionneurs à leur position de départ\nTant que Vrai \n    Lire les informations des capteurs\n    Traiter ces informations\n    Calculer des informations sur les actionneurs\n    Transmettre ces informations aux actionneurs",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 27 - Interfaces homme-machine",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "27_ihm/ihm_cours.html#interface-homme-machine",
+    "href": "27_ihm/ihm_cours.html#interface-homme-machine",
+    "title": "Cours",
+    "section": "Interface Homme Machine",
+    "text": "Interface Homme Machine\n\n\n\n\n\n\nDéfinition\n\n\n\nUne Interface Homme Machine est un ensemble de moyens physiques (boutons, manettes) ou logiciels (interface graphique) qui permettent à un humain d’échanger des informations avec une machine.\nLes moyens matériels permettant l’interaction sont appelés périphériques : on distingue les périphériques d’entrée ou de sortie.\nDouglas Engelbart est un des pionniers des IHM en informatique avec son système NLS qui introduit la première souris.\n\n\n\n\n\n\n\n\nExercice\n\n\n\nCompléter la légende de la figure ci-dessous représentant différents composants et périphériques d’un ordinateur :\n\n\n\nSource : Gustavb / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)\n\n\n\n\n\nFiabilité et sécurité\n\nLa sûreté est la garantie qu’un système fait ce qu’il doit faire et ne fait pas ce qu’il ne doit pas faire. Les programmes des systèmes embarqués doivent parfois s’exécuter avec des contraintes fortes (manque de ressource, temps de réaction très rapide) et ils ne sont pas toujours développés avec la rigueur nécessaire. Les bugs sont donc fréquents. Parfois bénins (une mauvaise gestion des années bissextiles a provoqué l’arrêt du lecteur MP3 Zune de Microsoft le 31/12/2008), ils peuvent aussi avoir a des conséquences dramatiques : les bugs du Therac 25 (appareil de radiographie) ou du contrôle moteur sur les Toyota Camry ont provoqué plusieurs morts.\nLa confidentialité est une problématique majeure des systèmes embarqués qui collectent des données personnelles sur leurs utilisateurs, comme les cartes électroniques de transport en commun.\nLa sécurité est souvent un point faible des systèmes embarqués, qui manquent de ressources matérielles, ont des cycles de vie longs sans mise à jour et mettent en jeu des modes de communication sans contact particulièrement vulnérables.\n\nPar exemple, une voiture ne peut démarrer que si la carte de démarrage se trouve à proximité, car la carte et la voiture partagent un secret commun permettant de déverrouiller le système antidémarrage. L’attaque par relais permet de déjouer ce protocole en relayant la communication : un pirate se trouve près de la voiture et l’autre près de la carte et par un leurre technologique ils font croire aux deux parties qu’elles sont à proximité. Tous les systèmes embarqués qui communiquent sans contact (carte bancaire, carte d’accès …) sont vulnérables à cette attaque.\n\n\n\nSource : Image : Martial Régereau [CC BY-SA 3.0], via Wikimedia Commons\n\n\n\n\nQCM",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 27 - Interfaces homme-machine",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "27_ihm/ihm_cours.html#objets-connectés",
+    "href": "27_ihm/ihm_cours.html#objets-connectés",
+    "title": "Cours",
+    "section": "Objets connectés",
+    "text": "Objets connectés\n\nInternet des objets\n\n\n\n\n\n\nDéfinition\n\n\n\nUn objet connecté est un système informatique embarqué disposant d’une connexion à un réseau local ou à L’Internet.\nLes Interfaces Homme Machine des objets connectés sont souvent des applications Web disponibles sur Smartphone.\n\n\n\n\n\nSource : Yassine Haddab Université de Montpellier\n\n\nAvec la baisse des coûts des microcontrôleurs et des puces Wifi, les objets connectés se multiplient. Actuellement, il existe plus d’objets que d’humains connectés à Internet et leur nombre va augmenter fortement dans les prochaines années avec la baisse de coût des puces. On parle d’IOT pour Internet Of Things pour désigner l’ensemble des objets connectés à l’Internet.\nOn estime à 50 milliards le nombre d’objets connectés en 2020.\n\n\nFiabilité et sécurité\nLes objets connectés permettent d’ajouter de l’intelligence dans notre environnement à tous les niveaux : le corps (mes indicateurs de santé, ma nourriture), la maison(appareils, système de chauffage), les réseaux (électrique, de circulation), les transports (véhicules autonomes), la prévention des risques (incendies) … De plus la collaboration entre objets connectés, leur connexion à des bases de données en ligne, augmente considérablement leur puissance même si chaque objet a des ressources matérielles limitées.\nNéanmoins, les vulnérabilités des systèmes embarqués sont amplifiées s’ils sont connectés.\nLa cyberattaque d’un serveur DNS majeur par des milliers de caméras de surveillance transformées en bots, a gravement perturbé Internet en octobre 2016. La prise de contrôle à distance par des hackers de la Jeep Cherokee en 2015 ou des failles détectées dans des stimulateurs cardiaques sont des exemples parmi bien d’autres illustrant le fait que la révolution de l’internet des objets ne pourra se faire sans des progrès sur le plan de leur sécurité.\nEnfin la moisson de données personnelles que peuvent collecter des objets connectés comme les assistants personnels proposés par les GAFAM doit absolument être contrôlée.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 27 - Interfaces homme-machine",
+      "Cours"
+    ]
+  },
+  {
     "objectID": "26_gloutons/gloutons_exos.html",
     "href": "26_gloutons/gloutons_exos.html",
     "title": "Exercices",
@@ -38,6 +98,42 @@
     "title": "TP : Reconnaissance optique de chiffres",
     "section": "",
     "text": "Ce TP sur Capytale : https://capytale2.ac-paris.fr/web/c/946e-3650247",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 26 - Algorithme des $k$ plus proches voisins",
+      "TP : Reconnaissance optique de chiffres"
+    ]
+  },
+  {
+    "objectID": "25_kppv/KNN-TP.html#chargement-et-visualisation-des-jeux-de-données",
+    "href": "25_kppv/KNN-TP.html#chargement-et-visualisation-des-jeux-de-données",
+    "title": "TP : Reconnaissance optique de chiffres",
+    "section": "1. Chargement et visualisation des jeux de données",
+    "text": "1. Chargement et visualisation des jeux de données\nLa librairie python scikit-learn contient de nombreux algorithmes d’intelligence artificielle, ainsi que des bases de données d’exemples classiques.\nEn particulier, le jeu de données digits contient un ensemble de 1797 chiffres de 0 à 9 manuscrits, sous la forme d’images de 8 X 8 pixels\n\nfrom sklearn.datasets import load_digits\n\nEnregistrons le dataset dans une variable digits.\nNous avons bien 1797 éléments\n\ndigits = load_digits()\nprint(digits.keys()) # affichage des clés du dataset\nprint(len(digits.data)) # affichage du nombre d'images\n\ndict_keys(['data', 'target', 'frame', 'feature_names', 'target_names', 'images', 'DESCR'])\n1797\n\n\nChaque images est une liste de 8 X 8 pixels soit 64 valeurs comprises entre 0 et 16 (niveaux de gris).\n\n# Une liste de liste servant à l'affichage d'une image\nprint(digits.images[1])\n\n[[ 0.  0.  0. 12. 13.  5.  0.  0.]\n [ 0.  0.  0. 11. 16.  9.  0.  0.]\n [ 0.  0.  3. 15. 16.  6.  0.  0.]\n [ 0.  7. 15. 16. 16.  2.  0.  0.]\n [ 0.  0.  1. 16. 16.  3.  0.  0.]\n [ 0.  0.  1. 16. 16.  6.  0.  0.]\n [ 0.  0.  1. 16. 16.  6.  0.  0.]\n [ 0.  0.  0. 11. 16. 10.  0.  0.]]\n\n\n\nVisualisons une image\nLe code ci-dessous permet de visualiser quatre images associées dans la base au chiffre 3.\n\nimport matplotlib.pyplot as plt\n\nfig, axs = plt.subplots(nrows=2, ncols=2, figsize=(8, 6))\n\naxs[0, 0].imshow(digits.images[3], cmap='gray')\naxs[0, 1].imshow(digits.images[13], cmap='gray')\naxs[1, 0].imshow(digits.images[23], cmap='gray')\naxs[1, 1].imshow(digits.images[45], cmap='gray')\n\nplt.show()\n\n\n\n\n\n\n\n\n\n\nDécoupons le jeu de données ‘digits’ en deux partie :\n\n[0-1700] pour les valeurs dont la classe est connue (données d’entraînement).\n[1701-1797] pour les valeurs à tester (dont on veut prédire la classe).\n\nChaque ensemble de données est représentée sous la forme d’un tableau d’entiers correspondants aux indices des images dans la base digits.\n\nimages_connues = [i for i in range(1700)]\nimages_inconnues = [i for i in range(1700, 1798)]",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 26 - Algorithme des $k$ plus proches voisins",
+      "TP : Reconnaissance optique de chiffres"
+    ]
+  },
+  {
+    "objectID": "25_kppv/KNN-TP.html#mise-en-oeuvre-de-lalgorithme-des-knn",
+    "href": "25_kppv/KNN-TP.html#mise-en-oeuvre-de-lalgorithme-des-knn",
+    "title": "TP : Reconnaissance optique de chiffres",
+    "section": "2. Mise en oeuvre de l’algorithme des KNN",
+    "text": "2. Mise en oeuvre de l’algorithme des KNN\n\n2.1 La distance entre deux images\nPour calculer la distance entre deux images, nous allons utiliser la distance euclidienne. Compléter la fonction distEuclide ci-dessous :\n\nles paramètres de la fonction seront deux listes de même taille\n\nRappel : distance euclidienne\n\\[d(x,y) = \\sqrt{\\sum_{i=0}^{n} (yi - xi)^2}\\]\n\nfrom math import sqrt\n\ndef distEuclide(elt1:list, elt2:list)-&gt;float:\n    \"\"\"\n    Renvoie la distance entre deux listes\n    \"\"\"\n    distance = 0\n    for i in range(...):\n        distance += ...\n    distance = ...\n    return distance\n\n\n\n2.2 Liste des distances\nCompléter ci-dessous la fonction calculeDistances prend en argument une liste image_inconnue, de taille 8x8, et qui retourne la liste des distances euclidiennes entre l’image inconnue et toutes les autres connues (on utilisera la variable globale images_connues définie plus haut). distances est une liste de dictionnaires de la forme :\n[{'image_connue': 1, 'distance': 12.0}, {'image_connue': 2, 'distance': 15.0}, ...]\n\ndef calculeDistances(image_inconnue:list) -&gt;list:\n    \"\"\"\n    Calcule les distances entre l'image inconnue et toutes les autres connues\n    \"\"\"\n    distances = []\n    for i in range(len(images_connues)):\n        distance = distEuclide(..., digits.data[images_connues[i]])\n        distances.append({\"image\": ..., \"distance\": ...})\n    return distances\n\n\n\n2.3 Liste des \\(k\\) plus proches voisins.\nConsidérons un entier \\(k&gt;3\\). Compléter la fonction ci-dessous qui retourne la liste de \\(k\\) plus proches voisins de l’image représentée par image_inconnue.\n\ndef cleDeTri(dico:dict)-&gt;float:\n    \"\"\"\n    Retourne la distance de l'élément du dictionnaire\n    \"\"\"\n    return dico[\"distance\"]\n\ndef plusProchesVoisins(image_inconnue:list, k: int) -&gt;list:\n    \"\"\"\n    Retourne le tableau des k plus proches voisins\n\n    image_inconnue : liste de 8x8 pixels de l'image inconnue\n\n    retourne : liste de dictionnaires des k plus proches voisins \n    \"\"\"\n    # on calcule les distances entre l'image inconnue et les images connues\n    distances = ...\n    # on trie les distances par ordre croissant\n    distances_triees = ...\n    # on retourne la liste des k plus proches voisins\n    voisins = ...\n    return voisins\n\n\n\n2.4 Prédiction de la classe de l’image inconnue\nCompléter la fonction ci-dessous qui retourne la classe la plus fréquente parmi les \\(k\\) plus proches voisins.\n\ndef prediction(image_inconnue:list, k:int) -&gt;int:\n    \"\"\"\n    Prédit le chiffre associé à l'image inconnue\n    \"\"\"\n    # On récupère les k plus proches voisins\n    voisins = ...\n    # On récupère les chiffres des voisins\n    chiffres_voisins = []\n    for voisin in voisins:\n        chiffres_voisins.append(digits.target[voisin[\"image\"]])\n    # On détermine le chiffre le plus fréquent parmi les chiffres des voisins\n    prediction = max(set(chiffres_voisins), key=chiffres_voisins.count)\n    return ...\n\nTestons cette fonction avec la première image inconnue qui a pour indice images_inconnues[0] dans la base digits (soit 1700).\n\n# image inconnue d'indice 1700 dans la base\nprint(\"Tableau de l'image inconnue : \", digits.images[images_inconnues[0]])\n# on applique l'algorithme KNN avec 7 voisins\nchiffrePredit = prediction(digits.data[images_inconnues[0]], 7)\nprint(\"Je prédis que l'image est un : \", chiffrePredit)\nprint(\"L'image est en réalité un : \", digits.target[images_inconnues[0]])\nif chiffrePredit == digits.target[images_inconnues[0]]:\n    print(\"La prédiction est correcte : je suis un très bon algorithme !\")\n\n# représentation graphique de l'image testée\nplt.gray()\nplt.matshow(digits.images[images_inconnues[0]])\nplt.show()\n\nVous pouvez modifier le code précédent pour tester d’autres images en remplaçant l’indice 0 par un autre indice inférieur à 97. Vous pouvez aussi tester l’algorithme avec d’autres valeurs de k.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 26 - Algorithme des $k$ plus proches voisins",
+      "TP : Reconnaissance optique de chiffres"
+    ]
+  },
+  {
+    "objectID": "25_kppv/KNN-TP.html#testez-maintenant-votre-écriture",
+    "href": "25_kppv/KNN-TP.html#testez-maintenant-votre-écriture",
+    "title": "TP : Reconnaissance optique de chiffres",
+    "section": "3. Testez maintenant votre écriture",
+    "text": "3. Testez maintenant votre écriture\n\n3.1 Une feuille à carreaux et un crayon !\n\nSur une feuille à carreaux, dessinez un cadre de 8 X 8\nEcrivez le chiffre de votre choix\nManuellement, indiquez les niveaux de couleurs pour chaques cases\n\nComment indiquer un niveau ?\n\nSi votre trait de stylo ne se trouve pas dans une case -&gt; valeur = 0\nSi votre trait se trouve entièrement (au centre de) dans la case -&gt; valeur = 16\nSi votre trait se trouve un peu (+/-) dans la case -&gt; 0 &lt; valeur &lt; 16\n\nUn exemple :\n\n\nk = 7\n\n# Remplacez cette liste par la votre !\ninconnue = [0., 0., 0., 0., 3., 3., 0., 0., \\\n            0., 0.,16.,15.,14.,11., 0., 0., \\\n            0., 0., 0., 0.,16., 7., 0., 0., \\\n            0., 0., 5.,16.,16., 8., 0., 0., \\\n            0., 0., 0., 0.,16., 5., 0., 0., \\\n            0., 0., 0., 0., 0.,16., 0., 0., \\\n            0., 0.,16.,16.,16.,16., 8., 0., \\\n            0., 0., 0., 0., 0., 0., 0., 0.]\n\n\n\n3.2 comparez votre chiffre manuscrit à l’image créee.\nEst ce que cela ressemble ?\n\n# Tracé de l'image manuscrite numérisée\nmonChiffre = [inconnue[i:i + 8] for i in range(0, len(inconnue), 8)]\nprint(inconnue)\nplt.gray()\nplt.matshow(monChiffre)\nplt.show()\n\nVous pouvez maintenant faire reconnaître votre chiffre par l’algorithme KNN :\n\n#Exécutez ce programme pour lancer la reconnaissance\n\nif len(inconnue) != 8*8 :\n    print(f\"Dimensions incorrectes de l'image ! votre image doit faire 8x8 et elle fait {len(inconnue)} pixels !\")\n\nelse:\n    # on applique l'algorithme KNN avec 7 voisins\n        chiffrePredit = prediction(inconnue, 7)\nprint(\"Je prédis que l'image est un : \", chiffrePredit)",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 26 - Algorithme des $k$ plus proches voisins",
@@ -4413,46 +4509,90 @@
     ]
   },
   {
+    "objectID": "27_ihm/ihm_exos.html",
+    "href": "27_ihm/ihm_exos.html",
+    "title": "Activités",
+    "section": "",
+    "text": "Pour s’initier à la programmation d’interfaces homme-machine et des objets connectés, nous allons utiliser les parcours Quick-pi mis en place par l’association France-IOI. Cliquer sur l’image ci-dessous pour y accéder.\n\n\n\nQuick-pi",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 27 - Interfaces homme-machine",
+      "Activités"
+    ]
+  },
+  {
+    "objectID": "27_ihm/ihm_exos.html#parcours-quick-pi",
+    "href": "27_ihm/ihm_exos.html#parcours-quick-pi",
+    "title": "Activités",
+    "section": "",
+    "text": "Pour s’initier à la programmation d’interfaces homme-machine et des objets connectés, nous allons utiliser les parcours Quick-pi mis en place par l’association France-IOI. Cliquer sur l’image ci-dessous pour y accéder.\n\n\n\nQuick-pi",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 27 - Interfaces homme-machine",
+      "Activités"
+    ]
+  },
+  {
+    "objectID": "27_ihm/out.html",
+    "href": "27_ihm/out.html",
+    "title": "Systèmes embarqués",
+    "section": "",
+    "text": "Un système informatique embarqué est un système de traitement de l’information autonome ne possédant pas d’entrée et sortie standard comme le clavier et l’écran. Les informations sont reçues de l’extérieur par le biais de capteurs, elles sont traités par un processeur et selon le programme du système des actions physiques peuvent être déclenchées avec des actionneurs. Les capteurs sont des périphériques d’entrée et les actionneurs des périphériques de sortie.\n\nLes signaux capturés sont analogiques, analogues au phénomène : par exemple la rotation de l’axe d’un anémomètre qui mesure la vitesse du vent sur une station météo. Pour être traités par le processeur, ils sont numérisés transformés en un nombre fini d’informations codées par des 0 et des 1 par échantillonnage (nombre fini de relevés) et quantification (nombre fini de valeurs possibles).\nLes microcontrôleurs sont des circuits intégrés qui concentrent une mémoire, un processeur, des entrées-sorties comme un ordinateur mais se caractérisent par une miniaturisation accrue, une plus faible consommation électrique et des performances moindres, mais suffisantes pour des applications toujours plus nombreuses avec les progrès techniques.\nLes systèmes informatiques embarqués sont utilisés dans tous les domaines : l’industrie (robots), le transport (avionique, automobile, métro …), la médecine (pacemakers, imagerie …), la maison (domotique, appareils ménagers …), les télécommunications (téléphonie …), le monde du travail (contrôle d’accès …), les loisirs (vélo électrique …).\nOn parle d’informatique ubiquitaire pour désigner cette omniprésence de l’informatique dans notre environnement.\nLes ordiphones modernes ne sont pas des microcontrôleurs mais des ordinateurs miniatures bien plus puissants que les systèmes de guidage des premières missions Apollo qui ont amené l’homme sur la lune ! Ils sont dotés de nombreux capteurs.\n\n\n\n\nimage\n\n\nSource : flickr / Intel Free Press\n\n\n\n\n\n\n\n\nimage\n\n\nSource : Yassine Haddab Université de Montpellier\n\n\nUn algorithme de contrôle fréquent sur un système informatique embarqué consiste en une boucle infinie où s’enchaînent capture d’événements par les émetteurs, traitement puis action par les actionneurs.\nInitialiser les actionneurs à leur position de départ\nTant que Vrai \n    Lire les informations des capteurs\n    Traiter ces informations\n    Calculer des informations sur les actionneurs\n    Transmettre ces informations aux actionneurs\n\n\n\n\n\nPour chaque question, sélectionner l’unique réponse correcte.\n\nIdentifier parmi les éléments suivants celui qui n’est pas un capteur.\n\n2\n\nhaut-parleur\ncaméra\naccéléromètre\nmicrophone\n\n\nParmi les éléments suivants, lequel est un capteur ?\n\n2\n\nun bouton poussoir\nun moteur\nune diode électroluminescente\nun afficheur à cristaux liquides\n\n\nOn réalise une petite station météo.\nQuel composant est un capteur ?\n\n2\n\nl’afficheur LCD\nl’écran de l’ordinateur\nla LED\nle thermomètre\n\n\nParmi les dispositifs d’entrée et de sortie suivants, lequel est uniquement un capteur ?\n\n2\n\nla diode\nl’écran tactile\nle thermomètre\nle moteur pas à pas"
+  },
+  {
+    "objectID": "27_ihm/out.html#architecture",
+    "href": "27_ihm/out.html#architecture",
+    "title": "Systèmes embarqués",
+    "section": "",
+    "text": "Un système informatique embarqué est un système de traitement de l’information autonome ne possédant pas d’entrée et sortie standard comme le clavier et l’écran. Les informations sont reçues de l’extérieur par le biais de capteurs, elles sont traités par un processeur et selon le programme du système des actions physiques peuvent être déclenchées avec des actionneurs. Les capteurs sont des périphériques d’entrée et les actionneurs des périphériques de sortie.\n\nLes signaux capturés sont analogiques, analogues au phénomène : par exemple la rotation de l’axe d’un anémomètre qui mesure la vitesse du vent sur une station météo. Pour être traités par le processeur, ils sont numérisés transformés en un nombre fini d’informations codées par des 0 et des 1 par échantillonnage (nombre fini de relevés) et quantification (nombre fini de valeurs possibles).\nLes microcontrôleurs sont des circuits intégrés qui concentrent une mémoire, un processeur, des entrées-sorties comme un ordinateur mais se caractérisent par une miniaturisation accrue, une plus faible consommation électrique et des performances moindres, mais suffisantes pour des applications toujours plus nombreuses avec les progrès techniques.\nLes systèmes informatiques embarqués sont utilisés dans tous les domaines : l’industrie (robots), le transport (avionique, automobile, métro …), la médecine (pacemakers, imagerie …), la maison (domotique, appareils ménagers …), les télécommunications (téléphonie …), le monde du travail (contrôle d’accès …), les loisirs (vélo électrique …).\nOn parle d’informatique ubiquitaire pour désigner cette omniprésence de l’informatique dans notre environnement.\nLes ordiphones modernes ne sont pas des microcontrôleurs mais des ordinateurs miniatures bien plus puissants que les systèmes de guidage des premières missions Apollo qui ont amené l’homme sur la lune ! Ils sont dotés de nombreux capteurs.\n\n\n\n\nimage\n\n\nSource : flickr / Intel Free Press"
+  },
+  {
+    "objectID": "27_ihm/out.html#programmation",
+    "href": "27_ihm/out.html#programmation",
+    "title": "Systèmes embarqués",
+    "section": "",
+    "text": "image\n\n\nSource : Yassine Haddab Université de Montpellier\n\n\nUn algorithme de contrôle fréquent sur un système informatique embarqué consiste en une boucle infinie où s’enchaînent capture d’événements par les émetteurs, traitement puis action par les actionneurs.\nInitialiser les actionneurs à leur position de départ\nTant que Vrai \n    Lire les informations des capteurs\n    Traiter ces informations\n    Calculer des informations sur les actionneurs\n    Transmettre ces informations aux actionneurs"
+  },
+  {
+    "objectID": "27_ihm/out.html#qcm-type-e3c2",
+    "href": "27_ihm/out.html#qcm-type-e3c2",
+    "title": "Systèmes embarqués",
+    "section": "",
+    "text": "Pour chaque question, sélectionner l’unique réponse correcte.\n\nIdentifier parmi les éléments suivants celui qui n’est pas un capteur.\n\n2\n\nhaut-parleur\ncaméra\naccéléromètre\nmicrophone\n\n\nParmi les éléments suivants, lequel est un capteur ?\n\n2\n\nun bouton poussoir\nun moteur\nune diode électroluminescente\nun afficheur à cristaux liquides\n\n\nOn réalise une petite station météo.\nQuel composant est un capteur ?\n\n2\n\nl’afficheur LCD\nl’écran de l’ordinateur\nla LED\nle thermomètre\n\n\nParmi les dispositifs d’entrée et de sortie suivants, lequel est uniquement un capteur ?\n\n2\n\nla diode\nl’écran tactile\nle thermomètre\nle moteur pas à pas"
+  },
+  {
+    "objectID": "27_ihm/out.html#fiabilité-et-sécurité",
+    "href": "27_ihm/out.html#fiabilité-et-sécurité",
+    "title": "Systèmes embarqués",
+    "section": "Fiabilité et sécurité",
+    "text": "Fiabilité et sécurité\n\nLa sûreté est la garantie qu’un système fait ce qu’il doit faire et ne fait pas ce qu’il ne doit pas faire. Les programmes des systèmes embarqués doivent parfois s’exécuter avec des contraintes fortes (manque de ressource, temps de réaction très rapide) et ils ne sont pas toujours développés avec la rigueur nécessaire. Les bugs sont donc fréquents. Parfois bénins (une mauvaise gestion des années bissextiles a provoqué l’arrêt du lecteur MP3 Zune de Microsoft le 31/12/2008, ils peuvent avoir a des conséquences dramatiques : les bugs du Therac 25 (appareil de radiographie) ou du contrôle moteur sur les Toyota Camry ont provoqué plusieurs morts.\nLa confidentialité est une problématique majeure des systèmes embarqués qui collectent des données personnelles sur leurs utilisateurs, comme par exemple les cartes électroniques de transport comme le pass Navigoo ou la carte Técély.\nLa sécurité est souvent un point faible des systèmes embarqués, qui manquent de ressources matérielles, ont des cycles de vie long sans mise à jour et mettent en jeu des modes de communication sans contact particulièrement vulnérables.\nPar exemple, une voiture ne peut démarrer que si la carte de démarrage se trouve à proximité car la carte et la voiture partagent un secret commun permettant de déverrouiller le système antidémarrage. L’attaque par relais permet de déjouer ce protocole en relayant la communication : un pirate se trouve près de la voiture et l’autre près de la carte et par un leurre technologique ils font croire aux deux parties qu’elles sont à proximité. Tous les systèmes embarqués qui communiquent sans contact (carte bancaire, carte d’accès …) sont vulnérables à cette attaque.\n\n\n\n\nimage\n\n\nSource : Image : Martial Régereau [CC BY-SA 3.0], via Wikimedia Commons"
+  },
+  {
+    "objectID": "27_ihm/out.html#qcm-type-e3c2-1",
+    "href": "27_ihm/out.html#qcm-type-e3c2-1",
+    "title": "Systèmes embarqués",
+    "section": "QCM type E3C2",
+    "text": "QCM type E3C2\n\nPour chaque question, sélectionner l’unique réponse correcte.\n\nLequel de ces objets n’est pas un périphérique ?\n\n2\n\nle clavier\nune clé USB\nla carte graphique\nla carte mère\n\n\nLequel de ces périphériques n’est pas un périphérique d’entrée ?\n\n2\n\nle moniteur\nle clavier\nla souris\nle scanner"
+  },
+  {
+    "objectID": "27_ihm/out.html#internet-des-objets",
+    "href": "27_ihm/out.html#internet-des-objets",
+    "title": "Systèmes embarqués",
+    "section": "Internet des objets",
+    "text": "Internet des objets\n\nUn objet connecté est un système informatique embarqué disposant d’une connexion à un réseau local ou à L’Internet.\nLes Interfaces Homme Machine des objets connectés sont souvent des applications Web disponibles sur Smartphone.\n\n\n\n\n\nimage\n\n\nSource : Yassine Haddab Université de Montpellier\n\nAvec la baisse des coûts des microcontrôleurs et des puces Wifi, les objets connectés se multiplient. On peut en fabriquer facilement à partir de cartes Arduino, de Raspberry Pi ou de cartes Wifi ESP8266. Actuellement, il existe plus d’objets que d’humains connectés à Internet et leur nombre va augmenter fortement dans les prochaines années avec la baisse de coût des . On parle d’IOT pour Internet Of Things pour désigner l’ensemble des objets connectés à l’Internet.\nOn estime à 50 milliards le nombre d’objets connectés en 2020."
+  },
+  {
+    "objectID": "27_ihm/out.html#fiabilité-et-sécurité-1",
+    "href": "27_ihm/out.html#fiabilité-et-sécurité-1",
+    "title": "Systèmes embarqués",
+    "section": "Fiabilité et sécurité",
+    "text": "Fiabilité et sécurité\nLes objets connectés permettent d’ajouter de l’intelligence dans notre environnement à tous les niveaux : le corps (mes indicateurs de santé, ma nourriture), la maison(appareils, système de chauffage), les réseaux (électrique, de circulation), les transports (véhicules autonomes), la prévention des risques (incendies) …De plus la collaboration entre objets connectés, leur connexion à des bases de données en ligne, augmente considérablement leur puissance même si chaque objet a des ressources matérielles limitées.\nNéanmoins les vulnérabilités des systèmes embarqués sont amplifiées s’ils sont connectés.\nLa cyberattaque d’un serveur DNS majeur par des milliers de caméras de surveillance transformées en bots, a gravement perturbé Internet en Octobre 2016. La prise de contrôle à distance par des hackers de la Jeep Cherokee en 2015 ou des failles détectées dans des pacemakers sont des exemples parmi bien d’autres illustrant le fait que la révolution de l’internet des objets ne pourra se faire sans des progrès sur le plan de leur sécurité.\nEnfin la moisson de données personnelles que peuvent collecter des objets connectés comme les assistants personnels proposés par les GAFAM doit absolument être contrôlée."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Spécialité NSI - Première",
     "section": "",
     "text": "Bienvenue !\nCe site est destiné à regrouper les cours et les exercices concernant l’enseignement de spécialité NSI de première du lycée Émile Duclaux d’Aurillac.\nLien vers l’ENT du lycée : https://cas.ent.auvergnerhonealpes.fr/login\nLien vers Capytale : https://capytale2.ac-paris.fr/web/c-auth/list\nLien vers Replit : https://replit.com/team/premiere-nsi\nLien vers le programme officiel : Programme officiel première NSI"
-  },
-  {
-    "objectID": "25_kppv/KNN-TP.html#chargement-et-visualisation-des-jeux-de-données",
-    "href": "25_kppv/KNN-TP.html#chargement-et-visualisation-des-jeux-de-données",
-    "title": "TP : Reconnaissance optique de chiffres",
-    "section": "1. Chargement et visualisation des jeux de données",
-    "text": "1. Chargement et visualisation des jeux de données\nLa librairie python scikit-learn contient de nombreux algorithmes d’intelligence artificielle, ainsi que des bases de données d’exemples classiques.\nEn particulier, le jeu de données digits contient un ensemble de 1797 chiffres de 0 à 9 manuscrits, sous la forme d’images de 8 X 8 pixels\n\nfrom sklearn.datasets import load_digits\n\nEnregistrons le dataset dans une variable digits.\nNous avons bien 1797 éléments\n\ndigits = load_digits()\nprint(digits.keys()) # affichage des clés du dataset\nprint(len(digits.data)) # affichage du nombre d'images\n\ndict_keys(['data', 'target', 'frame', 'feature_names', 'target_names', 'images', 'DESCR'])\n1797\n\n\nChaque images est une liste de 8 X 8 pixels soit 64 valeurs comprises entre 0 et 16 (niveaux de gris).\n\n# Une liste de liste servant à l'affichage d'une image\nprint(digits.images[1])\n\n[[ 0.  0.  0. 12. 13.  5.  0.  0.]\n [ 0.  0.  0. 11. 16.  9.  0.  0.]\n [ 0.  0.  3. 15. 16.  6.  0.  0.]\n [ 0.  7. 15. 16. 16.  2.  0.  0.]\n [ 0.  0.  1. 16. 16.  3.  0.  0.]\n [ 0.  0.  1. 16. 16.  6.  0.  0.]\n [ 0.  0.  1. 16. 16.  6.  0.  0.]\n [ 0.  0.  0. 11. 16. 10.  0.  0.]]\n\n\n\nVisualisons une image\nLe code ci-dessous permet de visualiser quatre images associées dans la base au chiffre 3.\n\nimport matplotlib.pyplot as plt\n\nfig, axs = plt.subplots(nrows=2, ncols=2, figsize=(8, 6))\n\naxs[0, 0].imshow(digits.images[3], cmap='gray')\naxs[0, 1].imshow(digits.images[13], cmap='gray')\naxs[1, 0].imshow(digits.images[23], cmap='gray')\naxs[1, 1].imshow(digits.images[45], cmap='gray')\n\nplt.show()\n\n\n\n\n\n\n\n\n\n\nDécoupons le jeu de données ‘digits’ en deux partie :\n\n[0-1700] pour les valeurs dont la classe est connue (données d’entraînement).\n[1701-1797] pour les valeurs à tester (dont on veut prédire la classe).\n\nChaque ensemble de données est représentée sous la forme d’un tableau d’entiers correspondants aux indices des images dans la base digits.\n\nimages_connues = [i for i in range(1700)]\nimages_inconnues = [i for i in range(1700, 1798)]",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 26 - Algorithme des $k$ plus proches voisins",
-      "TP : Reconnaissance optique de chiffres"
-    ]
-  },
-  {
-    "objectID": "25_kppv/KNN-TP.html#mise-en-oeuvre-de-lalgorithme-des-knn",
-    "href": "25_kppv/KNN-TP.html#mise-en-oeuvre-de-lalgorithme-des-knn",
-    "title": "TP : Reconnaissance optique de chiffres",
-    "section": "2. Mise en oeuvre de l’algorithme des KNN",
-    "text": "2. Mise en oeuvre de l’algorithme des KNN\n\n2.1 La distance entre deux images\nPour calculer la distance entre deux images, nous allons utiliser la distance euclidienne. Compléter la fonction distEuclide ci-dessous :\n\nles paramètres de la fonction seront deux listes de même taille\n\nRappel : distance euclidienne\n\\[d(x,y) = \\sqrt{\\sum_{i=0}^{n} (yi - xi)^2}\\]\n\nfrom math import sqrt\n\ndef distEuclide(elt1:list, elt2:list)-&gt;float:\n    \"\"\"\n    Renvoie la distance entre deux listes\n    \"\"\"\n    distance = 0\n    for i in range(...):\n        distance += ...\n    distance = ...\n    return distance\n\n\n\n2.2 Liste des distances\nCompléter ci-dessous la fonction calculeDistances prend en argument une liste image_inconnue, de taille 8x8, et qui retourne la liste des distances euclidiennes entre l’image inconnue et toutes les autres connues (on utilisera la variable globale images_connues définie plus haut). distances est une liste de dictionnaires de la forme :\n[{'image_connue': 1, 'distance': 12.0}, {'image_connue': 2, 'distance': 15.0}, ...]\n\ndef calculeDistances(image_inconnue:list) -&gt;list:\n    \"\"\"\n    Calcule les distances entre l'image inconnue et toutes les autres connues\n    \"\"\"\n    distances = []\n    for i in range(len(images_connues)):\n        distance = distEuclide(..., digits.data[images_connues[i]])\n        distances.append({\"image\": ..., \"distance\": ...})\n    return distances\n\n\n\n2.3 Liste des \\(k\\) plus proches voisins.\nConsidérons un entier \\(k&gt;3\\). Compléter la fonction ci-dessous qui retourne la liste de \\(k\\) plus proches voisins de l’image représentée par image_inconnue.\n\ndef cleDeTri(dico:dict)-&gt;float:\n    \"\"\"\n    Retourne la distance de l'élément du dictionnaire\n    \"\"\"\n    return dico[\"distance\"]\n\ndef plusProchesVoisins(image_inconnue:list, k: int) -&gt;list:\n    \"\"\"\n    Retourne le tableau des k plus proches voisins\n\n    image_inconnue : liste de 8x8 pixels de l'image inconnue\n\n    retourne : liste de dictionnaires des k plus proches voisins \n    \"\"\"\n    # on calcule les distances entre l'image inconnue et les images connues\n    distances = ...\n    # on trie les distances par ordre croissant\n    distances_triees = ...\n    # on retourne la liste des k plus proches voisins\n    voisins = ...\n    return voisins\n\n\n\n2.4 Prédiction de la classe de l’image inconnue\nCompléter la fonction ci-dessous qui retourne la classe la plus fréquente parmi les \\(k\\) plus proches voisins.\n\ndef prediction(image_inconnue:list, k:int) -&gt;int:\n    \"\"\"\n    Prédit le chiffre associé à l'image inconnue\n    \"\"\"\n    # On récupère les k plus proches voisins\n    voisins = ...\n    # On récupère les chiffres des voisins\n    chiffres_voisins = []\n    for voisin in voisins:\n        chiffres_voisins.append(digits.target[voisin[\"image\"]])\n    # On détermine le chiffre le plus fréquent parmi les chiffres des voisins\n    prediction = max(set(chiffres_voisins), key=chiffres_voisins.count)\n    return ...\n\nTestons cette fonction avec la première image inconnue qui a pour indice images_inconnues[0] dans la base digits (soit 1700).\n\n# image inconnue d'indice 1700 dans la base\nprint(\"Tableau de l'image inconnue : \", digits.images[images_inconnues[0]])\n# on applique l'algorithme KNN avec 7 voisins\nchiffrePredit = prediction(digits.data[images_inconnues[0]], 7)\nprint(\"Je prédis que l'image est un : \", chiffrePredit)\nprint(\"L'image est en réalité un : \", digits.target[images_inconnues[0]])\nif chiffrePredit == digits.target[images_inconnues[0]]:\n    print(\"La prédiction est correcte : je suis un très bon algorithme !\")\n\n# représentation graphique de l'image testée\nplt.gray()\nplt.matshow(digits.images[images_inconnues[0]])\nplt.show()\n\nVous pouvez modifier le code précédent pour tester d’autres images en remplaçant l’indice 0 par un autre indice inférieur à 97. Vous pouvez aussi tester l’algorithme avec d’autres valeurs de k.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 26 - Algorithme des $k$ plus proches voisins",
-      "TP : Reconnaissance optique de chiffres"
-    ]
-  },
-  {
-    "objectID": "25_kppv/KNN-TP.html#testez-maintenant-votre-écriture",
-    "href": "25_kppv/KNN-TP.html#testez-maintenant-votre-écriture",
-    "title": "TP : Reconnaissance optique de chiffres",
-    "section": "3. Testez maintenant votre écriture",
-    "text": "3. Testez maintenant votre écriture\n\n3.1 Une feuille à carreaux et un crayon !\n\nSur une feuille à carreaux, dessinez un cadre de 8 X 8\nEcrivez le chiffre de votre choix\nManuellement, indiquez les niveaux de couleurs pour chaques cases\n\nComment indiquer un niveau ?\n\nSi votre trait de stylo ne se trouve pas dans une case -&gt; valeur = 0\nSi votre trait se trouve entièrement (au centre de) dans la case -&gt; valeur = 16\nSi votre trait se trouve un peu (+/-) dans la case -&gt; 0 &lt; valeur &lt; 16\n\nUn exemple :\n\n\nk = 7\n\n# Remplacez cette liste par la votre !\ninconnue = [0., 0., 0., 0., 3., 3., 0., 0., \\\n            0., 0.,16.,15.,14.,11., 0., 0., \\\n            0., 0., 0., 0.,16., 7., 0., 0., \\\n            0., 0., 5.,16.,16., 8., 0., 0., \\\n            0., 0., 0., 0.,16., 5., 0., 0., \\\n            0., 0., 0., 0., 0.,16., 0., 0., \\\n            0., 0.,16.,16.,16.,16., 8., 0., \\\n            0., 0., 0., 0., 0., 0., 0., 0.]\n\n\n\n3.2 comparez votre chiffre manuscrit à l’image créee.\nEst ce que cela ressemble ?\n\n# Tracé de l'image manuscrite numérisée\nmonChiffre = [inconnue[i:i + 8] for i in range(0, len(inconnue), 8)]\nprint(inconnue)\nplt.gray()\nplt.matshow(monChiffre)\nplt.show()\n\nVous pouvez maintenant faire reconnaître votre chiffre par l’algorithme KNN :\n\n#Exécutez ce programme pour lancer la reconnaissance\n\nif len(inconnue) != 8*8 :\n    print(f\"Dimensions incorrectes de l'image ! votre image doit faire 8x8 et elle fait {len(inconnue)} pixels !\")\n\nelse:\n    # on applique l'algorithme KNN avec 7 voisins\n        chiffrePredit = prediction(inconnue, 7)\nprint(\"Je prédis que l'image est un : \", chiffrePredit)",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 26 - Algorithme des $k$ plus proches voisins",
-      "TP : Reconnaissance optique de chiffres"
-    ]
   }
 ]
