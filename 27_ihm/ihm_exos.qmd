@@ -6,4 +6,4 @@ title: Activités
 
 Pour s'initier à la programmation d'interfaces homme-machine et des objets connectés, nous allons utiliser les parcours Quick-pi mis en place par l'association France-IOI. Cliquer sur l'image ci-dessous pour y accéder.
 
-[![Quick-pi](quick-pi.png){width=50%}](https://amazon.quick-pi.org/){target=_blank}
+<a href = "https://amazon.quick-pi.org/" target="_blank"> ![Quick-pi](quick-pi.png){width=50%} </a>
