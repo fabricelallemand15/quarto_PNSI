@@ -84,3 +84,11 @@ On donne les éléments ci-dessous, obtenus en utilisant la commande `ls -l` :
 ```
 
 Pour chacun des fichiers, donner le nom de l'utilisateur auquel il appartient, les droits qu'il a sur le fichier, ceux du groupe et des autres.
+
+-------------------------------------
+
+## {{< fa desktop >}} Exercice 5
+
+Cet exercice a pour objectif d'utiliser et de découvrir un certain nombre de commandes Linux en résolvant un escape game en ligne. Pour cela, rendez-vous sur le site [https://luffah.xyz/bidules/Terminus/](https://luffah.xyz/bidules/Terminus/) et suivez les instructions.
+
+Au fur et à mesure du déroulement du jeu, notez les commandes que vous avez utilisées pour résoudre les énigmes et leur rôle. Réaliser également un plan du monde de Terminus sous la forme d'une arborescence de dossiers et de fichiers.

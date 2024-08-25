@@ -4594,5 +4594,17 @@
     "title": "Spécialité NSI - Première",
     "section": "",
     "text": "Bienvenue !\nCe site est destiné à regrouper les cours et les exercices concernant l’enseignement de spécialité NSI de première du lycée Émile Duclaux d’Aurillac.\nLien vers l’ENT du lycée : https://cas.ent.auvergnerhonealpes.fr/login\nLien vers Capytale : https://capytale2.ac-paris.fr/web/c-auth/list\nLien vers Replit : https://replit.com/team/premiere-nsi\nLien vers le programme officiel : Programme officiel première NSI"
+  },
+  {
+    "objectID": "01_os/OS_exos.html#exercice-5",
+    "href": "01_os/OS_exos.html#exercice-5",
+    "title": "Exercices",
+    "section": " Exercice 5",
+    "text": "Exercice 5\nCet exercice a pour objectif d’utiliser et de découvrir un certain nombre de commandes Linux en résolvant un escape game en ligne. Pour cela, rendez-vous sur le site https://luffah.xyz/bidules/Terminus/ et suivez les instructions.\nAu fur et à mesure du déroulement du jeu, notez les commandes que vous avez utilisées pour résoudre les énigmes et leur rôle. Réaliser également un plan du monde de Terminus sous la forme d’une arborescence de dossiers et de fichiers.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 1 - Systèmes d'exploitation",
+      "Exercices"
+    ]
   }
 ]
