@@ -1991,7 +1991,7 @@
     "href": "02_python/supplements.html",
     "title": "Exercices supplémentaires",
     "section": "",
-    "text": "Pour vous entraîner ou pour vérifier que vous maîtrisez les bases, voici des notebooks Jupyter (dans Capytale) réalisés par un collègue, légèrement modifiés ici.\n\nPartie 1 : variables et affectations\nPartie 2 : instructions conditionnelles\nPartie 3 : boucles\nPartie 4 : les fonctions\nPartie 5 : les chaînes de caractères",
+    "text": "Pour vous entraîner ou pour vérifier que vous maîtrisez les bases, voici des notebooks Jupyter réalisés par un collègue, légèrement modifiés ici.\n\nPartie 1 : variables et affectations\nPartie 2 : instructions conditionnelles\nPartie 3 : boucles\nPartie 4 : les fonctions\nPartie 5 : les chaînes de caractères",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 2 - Python, constructions élémentaires",
@@ -2668,13 +2668,13 @@
   {
     "objectID": "03_spec/TP_dessine_ta_rue.html",
     "href": "03_spec/TP_dessine_ta_rue.html",
-    "title": "T.P. Dessine ta rue !",
+    "title": "Projet - Dessine ta rue !",
     "section": "",
-    "text": "Objectifs\n\n\n\n\nExplorer l’utilisation d’une bibliothèque (exemple de la bibliothèque turtle).\nUtiliser la documentation d’une bibliothèque.\nAppliquer les connaissances du cours : création de fonctions, spécifications, …\nTravailler en autonomie, travailler en groupe.\n\n\n\nL’objectif de ce T.P. est de construire un programme qui génère une illustration du type ci-dessous.\n\nLe travail doit se faire en groupes. Il y a beaucoup de fonctions à coder, il faut donc se partager le travail ! À vous de vous organiser sachant que :\n\nle diagramme présent dans l’énoncé vous permet de comprendre quelles fonctions dépendent les unes des autres ;\nil faut prendre garde à ne pas programmer deux fois la même chose : bien comprendre ce qui est déjà fait quand on appelle une fonction et ce qu’il reste à faire ;\nvous devrez vous documenter sur la librairie turtle : cela fait partie de l’exercice ! Rien ne vaut la documentation officielle !\nle dossier joint au TP contient :\n\nl’énonce en PDF ;\nune fiche de synthèse sur le module turtle ;\ndes fichiers Python à compléter : les entêtes et les spécifications des fonctions sont déjà préparées ;\ndes images représentant le rendu attendu pour chaque fonction.\n\n\n\n\n\n\n\n\nCritères d’évaluation\n\n\n\n\nCapacité à s’organiser et à travailler en groupe.\nRespect des contraintes du sujet.\nConcision du code : plus c’est long, moins c’est bon.\n\n\n\n Dossier zip à télécharger \n \nSource : MathémaTICE n°80, mai 2022, d’après une idée d’Adrien Willm, avec quelques modifications effectuées par l’équipe d’Aurillac.",
+    "text": "Objectifs\n\n\n\n\nExplorer l’utilisation d’une bibliothèque (exemple de la bibliothèque turtle).\nUtiliser la documentation d’une bibliothèque.\nAppliquer les connaissances du cours : création de fonctions, spécifications, …\nTravailler en autonomie, travailler en groupe.\n\n\n\nL’objectif de ce projet est de construire un programme qui génère une illustration du type ci-dessous.\n\nLe travail doit se faire en groupes. Il y a beaucoup de fonctions à coder, il faut donc se partager le travail ! À vous de vous organiser sachant que :\n\nle diagramme présent dans l’énoncé vous permet de comprendre quelles fonctions dépendent les unes des autres ;\nil faut prendre garde à ne pas programmer deux fois la même chose : bien comprendre ce qui est déjà fait quand on appelle une fonction et ce qu’il reste à faire ;\nvous devrez vous documenter sur la librairie turtle : cela fait partie de l’exercice ! Rien ne vaut la documentation officielle !\nle dossier joint au TP contient :\n\nl’énonce en PDF ;\nune fiche de synthèse sur le module turtle ;\ndes fichiers Python à compléter : les entêtes et les spécifications des fonctions sont déjà préparées ;\ndes images représentant le rendu attendu pour chaque fonction.\n\n\n\n\n\n\n\n\nCritères d’évaluation\n\n\n\n\nCapacité à s’organiser et à travailler en groupe.\nRespect des contraintes du sujet.\nConcision du code : plus c’est long, moins c’est bon.\n\n\n\n Dossier zip à télécharger \n \nSource : MathémaTICE n°80, mai 2022, d’après une idée d’Adrien Willm, avec quelques modifications effectuées par l’équipe d’Aurillac.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 3 - Spécification et mise au point de programmes",
-      "T.P. Dessine ta rue !"
+      "Projet - Dessine ta rue !"
     ]
   },
   {

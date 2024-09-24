@@ -1,5 +1,5 @@
 ---
-title: T.P. Dessine ta rue !
+title: Projet - Dessine ta rue !
 ---
 
 :::{.callout-tip}
@@ -10,7 +10,7 @@ title: T.P. Dessine ta rue !
 * Travailler en autonomie, travailler en groupe.
 :::
 
-L'objectif de ce T.P. est de construire un programme qui génère une illustration du type ci-dessous.
+L'objectif de ce projet est de construire un programme qui génère une illustration du type ci-dessous.
 
 ![](ma_rue.png)
 
