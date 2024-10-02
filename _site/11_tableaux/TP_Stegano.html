@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.40">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Mini-projet Stéganographie</title>
+<title>Mini-projet Stéganographie – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -195,7 +195,7 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../ressources.html"> 
-<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Sources utilisées</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -221,7 +221,7 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
@@ -350,7 +350,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../03_spec/TP_dessine_ta_rue.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">T.P. Dessine ta rue !</span></a>
+ <span class="menu-text">Projet - Dessine ta rue !</span></a>
   </div>
 </li>
       </ul>
@@ -1122,9 +1122,25 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#1-le-module-pil" id="toc-1-le-module-pil" class="nav-link active" data-scroll-target="#1-le-module-pil">1. Le module PIL</a>
+  <ul class="collapse">
+  <li><a href="#quest-ce-que-la-librairie-pil-" id="toc-quest-ce-que-la-librairie-pil-" class="nav-link" data-scroll-target="#quest-ce-que-la-librairie-pil-">Qu’est-ce que la librairie PIL ?</a></li>
+  <li><a href="#commandes-utiles-pour-une-utilisation-de-base" id="toc-commandes-utiles-pour-une-utilisation-de-base" class="nav-link" data-scroll-target="#commandes-utiles-pour-une-utilisation-de-base">Commandes utiles pour une utilisation de base</a></li>
+  </ul></li>
+  <li><a href="#2-stéganographie-dans-une-image-en-niveaux-de-gris" id="toc-2-stéganographie-dans-une-image-en-niveaux-de-gris" class="nav-link" data-scroll-target="#2-stéganographie-dans-une-image-en-niveaux-de-gris">2. Stéganographie dans une image en niveaux de gris</a></li>
+  <li><a href="#le-principe" id="toc-le-principe" class="nav-link" data-scroll-target="#le-principe">Le principe</a></li>
+  <li><a href="#mini-projet" id="toc-mini-projet" class="nav-link" data-scroll-target="#mini-projet">Mini-projet</a></li>
+  <li><a href="#défi-" id="toc-défi-" class="nav-link" data-scroll-target="#défi-">Défi !!!</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../11_tableaux/index.html">Ch. 11 - Tableaux</a></li><li class="breadcrumb-item"><a href="../11_tableaux/TP_Stegano.html">Mini-projet Stéganographie</a></li></ol></nav>
 <div class="quarto-title">
@@ -1133,7 +1149,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta">
 
     
   
@@ -1178,13 +1194,13 @@ Attention
 <section id="commandes-utiles-pour-une-utilisation-de-base" class="level3">
 <h3 class="anchored" data-anchor-id="commandes-utiles-pour-une-utilisation-de-base">Commandes utiles pour une utilisation de base</h3>
 <p>Avant toute chose, on importera la bibliothèque en ajoutant la ligne suivante en début de programme :</p>
-<div id="36dc6e5b" class="cell" data-execution_count="1">
+<div id="3905b916" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Exemple d’ouverture d’un fichier et accès à ses informations</li>
 </ul>
-<div id="b7c8514e" class="cell" data-execution_count="2">
+<div id="8b666b3b" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ouverture du fichier image</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">"chat.png"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># nom du fichier</span></span>
@@ -1200,7 +1216,7 @@ Attention
 427</code></pre>
 </div>
 </div>
-<div id="85a01d80" class="cell" data-execution_count="3">
+<div id="5b877a10" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage de l'image</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>img.show()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1218,7 +1234,7 @@ Attention
 <p>Dans le cas d’une image en couleurs RGB, la valeur d’un pixel est un <strong>3-uplet</strong> <span class="math inline">\((R, G, B)\)</span> dans lequel chaque élément est un entier compris entre 0 et 255 qui représente respectivement la prorportion de rouge, de vert et de bleu dans la couleur du pixel en question.</p></li>
 <li><p>Accéder à la valeur d’un pixel : <code>img.getpixel((x, y))</code>. Cette fonction retourne un entier (dans le cas d’une image noir et blanc ou en niveaux de gris) ou un triplet (dans le cas d’une image en couleurs). Attention à la syntaxe : il n’y a qu’un seul argument, qui est un couple de coordonnées (donc doubles parenthèses).</p></li>
 </ul>
-<div id="4177b409" class="cell" data-execution_count="4">
+<div id="43edc8f3" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(img.mode)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>img.getpixel((<span class="dv">48</span>,<span class="dv">75</span>)) <span class="co"># attention aux parenthèses !</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1231,7 +1247,7 @@ Attention
 <ul>
 <li>Commandes pour créer un fichier image et définir la valeur de ses pixels :</li>
 </ul>
-<div id="d40c7165" class="cell" data-execution_count="5">
+<div id="ea3a2d9c" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>largeur <span class="op">=</span> <span class="dv">200</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>hauteur <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Création d'une nouvelle image en niveaux de gris en mémoire</span></span>
@@ -1950,7 +1966,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../11_tableaux/exos_tabs.html" class="pagination-link" aria-label="Exercices">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercices</span>
@@ -1976,7 +1992,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1994,7 +2010,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

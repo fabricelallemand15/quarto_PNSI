@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.40">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Cours</title>
+<title>Cours – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -161,7 +161,7 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../ressources.html"> 
-<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Sources utilisées</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -187,7 +187,7 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
@@ -316,7 +316,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../03_spec/TP_dessine_ta_rue.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">T.P. Dessine ta rue !</span></a>
+ <span class="menu-text">Projet - Dessine ta rue !</span></a>
   </div>
 </li>
       </ul>
@@ -1088,9 +1088,32 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#premier-réseau-local" id="toc-premier-réseau-local" class="nav-link active" data-scroll-target="#premier-réseau-local">1. Premier réseau local</a>
+  <ul class="collapse">
+  <li><a href="#la-carte-réseau-et-son-adresse-mac" id="toc-la-carte-réseau-et-son-adresse-mac" class="nav-link" data-scroll-target="#la-carte-réseau-et-son-adresse-mac">1.1. La carte réseau et son adresse MAC</a></li>
+  <li><a href="#switch-hub-quelle-différence" id="toc-switch-hub-quelle-différence" class="nav-link" data-scroll-target="#switch-hub-quelle-différence">1.2. Switch, hub, quelle différence ?</a></li>
+  </ul></li>
+  <li><a href="#un-deuxième-sous-réseau" id="toc-un-deuxième-sous-réseau" class="nav-link" data-scroll-target="#un-deuxième-sous-réseau">2. Un deuxième sous-réseau</a>
+  <ul class="collapse">
+  <li><a href="#notion-de-masque-de-sous-réseau" id="toc-notion-de-masque-de-sous-réseau" class="nav-link" data-scroll-target="#notion-de-masque-de-sous-réseau">2.1. Notion de masque de sous-réseau</a></li>
+  <li><a href="#écriture-des-masques-de-sous-réseau-notation-cidr" id="toc-écriture-des-masques-de-sous-réseau-notation-cidr" class="nav-link" data-scroll-target="#écriture-des-masques-de-sous-réseau-notation-cidr">2.2 Écriture des masques de sous-réseau : notation CIDR</a></li>
+  <li><a href="#adresses-ip-et-masques-ce-quil-faut-retenir" id="toc-adresses-ip-et-masques-ce-quil-faut-retenir" class="nav-link" data-scroll-target="#adresses-ip-et-masques-ce-quil-faut-retenir">2.3 Adresses IP et masques : ce qu’il faut retenir</a></li>
+  </ul></li>
+  <li><a href="#un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur" id="toc-un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur" class="nav-link" data-scroll-target="#un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur">3. Un vrai réseau contenant deux sous-réseaux distincts : la nécessité d’un routeur</a>
+  <ul class="collapse">
+  <li><a href="#principe-de-fonctionnement" id="toc-principe-de-fonctionnement" class="nav-link" data-scroll-target="#principe-de-fonctionnement">3.1 Principe de fonctionnement</a></li>
+  <li><a href="#illustration-avec-filius" id="toc-illustration-avec-filius" class="nav-link" data-scroll-target="#illustration-avec-filius">3.2 Illustration avec Filius</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/index.html">Ch. 24 - Architecture d’un réseau</a></li><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Cours</a></li></ol></nav>
 <div class="quarto-title">
@@ -1100,7 +1123,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta">
 
     
   
@@ -1981,7 +2004,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../23_reseaux/index.html" class="pagination-link" aria-label="Programme">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
@@ -2007,7 +2030,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -2025,7 +2048,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.40">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Cours</title>
+<title>Cours – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -161,7 +161,7 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../ressources.html"> 
-<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Sources utilisées</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -187,7 +187,7 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
@@ -316,7 +316,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../03_spec/TP_dessine_ta_rue.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">T.P. Dessine ta rue !</span></a>
+ <span class="menu-text">Projet - Dessine ta rue !</span></a>
   </div>
 </li>
       </ul>
@@ -1088,9 +1088,32 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#modèle-osi-modèle-internet" id="toc-modèle-osi-modèle-internet" class="nav-link active" data-scroll-target="#modèle-osi-modèle-internet">1. Modèle OSI, modèle Internet</a></li>
+  <li><a href="#observation-des-trames-avec-filius" id="toc-observation-des-trames-avec-filius" class="nav-link" data-scroll-target="#observation-des-trames-avec-filius">2. Observation des trames avec Filius</a>
+  <ul class="collapse">
+  <li><a href="#ping-à-travers-un-switch" id="toc-ping-à-travers-un-switch" class="nav-link" data-scroll-target="#ping-à-travers-un-switch">2.1. Ping à travers un switch</a></li>
+  <li><a href="#ping-à-travers-un-routeur" id="toc-ping-à-travers-un-routeur" class="nav-link" data-scroll-target="#ping-à-travers-un-routeur">2.2. Ping à travers un routeur</a></li>
+  </ul></li>
+  <li><a href="#protocole-du-bit-alterné" id="toc-protocole-du-bit-alterné" class="nav-link" data-scroll-target="#protocole-du-bit-alterné">3. Protocole du bit alterné</a>
+  <ul class="collapse">
+  <li><a href="#contexte" id="toc-contexte" class="nav-link" data-scroll-target="#contexte">1. Contexte</a></li>
+  <li><a href="#situation-idéale" id="toc-situation-idéale" class="nav-link" data-scroll-target="#situation-idéale">2. Situation idéale</a></li>
+  <li><a href="#situation-réelle" id="toc-situation-réelle" class="nav-link" data-scroll-target="#situation-réelle">3. Situation réelle</a></li>
+  <li><a href="#solution-naïve" id="toc-solution-naïve" class="nav-link" data-scroll-target="#solution-naïve">3. Solution naïve…</a></li>
+  <li><a href="#mais-peu-efficace" id="toc-mais-peu-efficace" class="nav-link" data-scroll-target="#mais-peu-efficace">4. Mais peu efficace…</a></li>
+  <li><a href="#bob-prend-le-contrôle" id="toc-bob-prend-le-contrôle" class="nav-link" data-scroll-target="#bob-prend-le-contrôle">5. Bob prend le contrôle</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">6. Conclusion</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../24_protocoles/index.html">Ch. 25 - Protocoles de communication</a></li><li class="breadcrumb-item"><a href="../24_protocoles/protocoles_cours.html">Cours</a></li></ol></nav>
 <div class="quarto-title">
@@ -1100,7 +1123,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta">
 
     
   
@@ -1884,7 +1907,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../24_protocoles/index.html" class="pagination-link" aria-label="Programme">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
@@ -1910,7 +1933,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1928,7 +1951,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

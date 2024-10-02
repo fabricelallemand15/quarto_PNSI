@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.40">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Cours</title>
+<title>Cours – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -161,7 +161,7 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../ressources.html"> 
-<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Sources utilisées</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -187,7 +187,7 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
@@ -316,7 +316,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../03_spec/TP_dessine_ta_rue.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">T.P. Dessine ta rue !</span></a>
+ <span class="menu-text">Projet - Dessine ta rue !</span></a>
   </div>
 </li>
       </ul>
@@ -1088,9 +1088,34 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#exemple-introductif" id="toc-exemple-introductif" class="nav-link active" data-scroll-target="#exemple-introductif">1. Exemple introductif</a></li>
+  <li><a href="#algorithmes-gloutons" id="toc-algorithmes-gloutons" class="nav-link" data-scroll-target="#algorithmes-gloutons">2. Algorithmes gloutons</a></li>
+  <li><a href="#exemples-dalgorithmes-gloutons" id="toc-exemples-dalgorithmes-gloutons" class="nav-link" data-scroll-target="#exemples-dalgorithmes-gloutons">3. Exemples d’algorithmes gloutons</a>
+  <ul class="collapse">
+  <li><a href="#problème-du-rendu-de-monnaie" id="toc-problème-du-rendu-de-monnaie" class="nav-link" data-scroll-target="#problème-du-rendu-de-monnaie">3.1. Problème du rendu de monnaie</a>
+  <ul class="collapse">
+  <li><a href="#énoncé" id="toc-énoncé" class="nav-link" data-scroll-target="#énoncé">Énoncé</a></li>
+  <li><a href="#algorithme-glouton" id="toc-algorithme-glouton" class="nav-link" data-scroll-target="#algorithme-glouton">Algorithme glouton</a></li>
+  <li><a href="#exemple" id="toc-exemple" class="nav-link" data-scroll-target="#exemple">Exemple</a></li>
+  </ul></li>
+  <li><a href="#problème-du-sac-à-dos" id="toc-problème-du-sac-à-dos" class="nav-link" data-scroll-target="#problème-du-sac-à-dos">3.2. Problème du sac à dos</a>
+  <ul class="collapse">
+  <li><a href="#énoncé-1" id="toc-énoncé-1" class="nav-link" data-scroll-target="#énoncé-1">Énoncé</a></li>
+  <li><a href="#algorithme-glouton-1" id="toc-algorithme-glouton-1" class="nav-link" data-scroll-target="#algorithme-glouton-1">Algorithme glouton</a></li>
+  <li><a href="#exemple-1" id="toc-exemple-1" class="nav-link" data-scroll-target="#exemple-1">Exemple</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">4. Conclusion</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../26_gloutons/index.html">Ch. 22 - Algorithmes gloutons</a></li><li class="breadcrumb-item"><a href="../26_gloutons/gloutons_cours.html">Cours</a></li></ol></nav>
 <div class="quarto-title">
@@ -1100,7 +1125,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta">
 
     
   
@@ -1799,7 +1824,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../26_gloutons/index.html" class="pagination-link" aria-label="Programme">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
@@ -1825,7 +1850,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1843,7 +1868,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

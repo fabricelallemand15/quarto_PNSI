@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.40">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NSI - Première – Cours</title>
+<title>Cours – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -195,7 +195,7 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../ressources.html"> 
-<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Ressources</span></a>
+<span class="menu-text"><i class="fa-solid fa-info" aria-label="info"></i> Sources utilisées</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -221,7 +221,7 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
@@ -350,7 +350,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../03_spec/TP_dessine_ta_rue.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">T.P. Dessine ta rue !</span></a>
+ <span class="menu-text">Projet - Dessine ta rue !</span></a>
   </div>
 </li>
       </ul>
@@ -1122,9 +1122,37 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#à-quoi-sert-un-système-dexploitation" id="toc-à-quoi-sert-un-système-dexploitation" class="nav-link active" data-scroll-target="#à-quoi-sert-un-système-dexploitation">1. À quoi sert un système d’exploitation ?</a></li>
+  <li><a href="#différents-systèmes-dexploitation" id="toc-différents-systèmes-dexploitation" class="nav-link" data-scroll-target="#différents-systèmes-dexploitation">2. Différents systèmes d’exploitation</a></li>
+  <li><a href="#la-ligne-de-commande" id="toc-la-ligne-de-commande" class="nav-link" data-scroll-target="#la-ligne-de-commande">3. La ligne de commande</a></li>
+  <li><a href="#arborescence-du-système-de-fichier" id="toc-arborescence-du-système-de-fichier" class="nav-link" data-scroll-target="#arborescence-du-système-de-fichier">4. Arborescence du système de fichier</a>
+  <ul class="collapse">
+  <li><a href="#chemin-absolu-et-chemin-relatif" id="toc-chemin-absolu-et-chemin-relatif" class="nav-link" data-scroll-target="#chemin-absolu-et-chemin-relatif">Chemin absolu et chemin relatif</a></li>
+  </ul></li>
+  <li><a href="#les-commandes-pour-manipuler-les-fichiers-et-les-répertoires" id="toc-les-commandes-pour-manipuler-les-fichiers-et-les-répertoires" class="nav-link" data-scroll-target="#les-commandes-pour-manipuler-les-fichiers-et-les-répertoires">5. Les commandes pour manipuler les fichiers et les répertoires</a>
+  <ul class="collapse">
+  <li><a href="#a.-la-commande-cd" id="toc-a.-la-commande-cd" class="nav-link" data-scroll-target="#a.-la-commande-cd">a. La commande cd</a></li>
+  <li><a href="#b.-la-commande-ls" id="toc-b.-la-commande-ls" class="nav-link" data-scroll-target="#b.-la-commande-ls">b. La commande ls</a></li>
+  <li><a href="#c.-la-commande-pwd" id="toc-c.-la-commande-pwd" class="nav-link" data-scroll-target="#c.-la-commande-pwd">c.&nbsp;La commande pwd</a></li>
+  <li><a href="#d.-la-commande-mkdir" id="toc-d.-la-commande-mkdir" class="nav-link" data-scroll-target="#d.-la-commande-mkdir">d.&nbsp;La commande mkdir</a></li>
+  <li><a href="#e.-la-commande-rm" id="toc-e.-la-commande-rm" class="nav-link" data-scroll-target="#e.-la-commande-rm">e. La commande rm</a></li>
+  <li><a href="#f.-la-commande-touch" id="toc-f.-la-commande-touch" class="nav-link" data-scroll-target="#f.-la-commande-touch">f.&nbsp;La commande touch</a></li>
+  <li><a href="#g.-la-commande-cat" id="toc-g.-la-commande-cat" class="nav-link" data-scroll-target="#g.-la-commande-cat">g. La commande cat</a></li>
+  <li><a href="#h.-la-commande-cp" id="toc-h.-la-commande-cp" class="nav-link" data-scroll-target="#h.-la-commande-cp">h. La commande cp</a></li>
+  <li><a href="#i.-la-commande-mv" id="toc-i.-la-commande-mv" class="nav-link" data-scroll-target="#i.-la-commande-mv">i. La commande mv</a></li>
+  <li><a href="#j.-la-commande-man" id="toc-j.-la-commande-man" class="nav-link" data-scroll-target="#j.-la-commande-man">j. La commande man</a></li>
+  </ul></li>
+  <li><a href="#gestion-des-utilisateurs-et-des-groupes" id="toc-gestion-des-utilisateurs-et-des-groupes" class="nav-link" data-scroll-target="#gestion-des-utilisateurs-et-des-groupes">6. Gestion des utilisateurs et des groupes</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01_os/index.html">Ch. 1 - Systèmes d’exploitation</a></li><li class="breadcrumb-item"><a href="../01_os/OS_cours.html">Cours</a></li></ol></nav>
 <div class="quarto-title">
@@ -1133,7 +1161,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta">
 
     
   
@@ -1998,7 +2026,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../01_os/index.html" class="pagination-link" aria-label="Programme">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
@@ -2024,7 +2052,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -2042,7 +2070,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

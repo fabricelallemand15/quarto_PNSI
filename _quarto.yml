@@ -200,12 +200,13 @@ format:
       light: [flatly, theme_light.scss]
       dark: [darkly, theme_dark.scss]
     css: styles.css
-    toc: false
-    page-layout: full
+    toc: true
+    toc-location: right
+    page-layout: article
     grid:
       sidebar-width: 300px
-      body-width: 1500px
-      margin-width: 0px
+      body-width: 1200px
+      margin-width: 300px
     lightbox: auto
     code-block-border-left: "#31BAE9"
     code-block-bg: true
