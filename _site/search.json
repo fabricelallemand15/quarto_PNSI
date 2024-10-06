@@ -1983,7 +1983,7 @@
     "href": "04_langages/langages.html#compléments",
     "title": "Cours",
     "section": "Compléments",
-    "text": "Compléments\n\nLe site RosettaCode.org propose un très grand nombre d’algorithmes traduits dans un très grand nombre de langages. Les programmes présentés ici en sont inspirés, avec quelques modifications.\nLa page Wikipedia “Hello, World!” program présente le fameux programme affichant la phrase “Hello, World!” à l’écran dans de très nombreux langages de programmation.",
+    "text": "Compléments\n\nLe site RosettaCode.org propose un très grand nombre d’algorithmes traduits dans un très grand nombre de langages. Les programmes présentés ici en sont inspirés, avec quelques modifications.\nOn y trouve notamment le fameux programme “Hello, World!” dans de très nombreux langages : Hello, World!.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 4 - Diversité et unité des langages de programmation",

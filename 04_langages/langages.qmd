@@ -372,4 +372,4 @@ Notre langage d'étude est Python. Repérer, dans les dix programmes ci-dessous 
 ## Compléments
 
 * Le site [RosettaCode.org](http://rosettacode.org/wiki/Rosetta_Code){target="_blank"} propose un très grand nombre d'algorithmes traduits dans un très grand nombre de langages. Les programmes présentés ici en sont inspirés, avec quelques modifications.
-* La page Wikipedia ["Hello, World!" program](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program){target="_blank"} présente le fameux programme affichant la phrase "Hello, World!" à l'écran dans de très nombreux langages de programmation.
+* On y trouve notamment le fameux programme "Hello, World!" dans de très nombreux langages : [Hello, World!](https://rosettacode.org/wiki/Hello_world/Text){target="_blank"}.
