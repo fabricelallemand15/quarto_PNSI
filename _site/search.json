@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "ressources.html",
+    "href": "ressources.html",
+    "title": "Sources utilisées",
+    "section": "",
+    "text": "Pour rédiger ce cours et préparer les exercices, TP, projets présentés ici, j’ai utilisé de nombreuses sources que je vais essayer de citer ici, sans prétendre être exhaustif.\n\nDocuments d’accompagnement Eduscol.\nContenus du MOOC “Numérique et Sciences Informatiques : les fondamentaux” de l’INRIA, disponible sur la plateforme fun-mooc.\nApprendre à programmer avec Python 3, Gérard Swinnen, éditions Eyrolles, 2012. Disponible en ligne\nLe site interstices : https://interstices.info/.\nLes images et illustrations sont soit produites par mes soins, soit issues de Pixabay ou de Wikimedia commons ou encore de Pexels et, dans tous les cas, libres de droits.\nCours de David Roche.\nCours de Frédéric Junier.\nCours de Van Zuijlen Stéphan.\nCours de Konieczko Quentin\nCours de Olivier Lécluse\nCours du Lycée Blaise Pascal de Clermont-Ferrand\nCours du lycée Champollion de Grenoble\nCours du site Lyceum\nCours du site Mon Lycée Numérique\nCours du Lycée Stanislas de Wissembourg\nCours d’informatique de François Brucker (école Centrale de Marseille)\nCours de Philippe Rigaux sur les bases de données.\nCours de Gilles Lassus\nLe site MDN Web Docs : excellentissime ressource pour tout apprendre sur les langages HTML, CSS, Javascript et le protocole HTTP.\nLe site de M. JANVIER.\nLe site de M. Meyroneinc."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Mentions légales",
@@ -712,81 +719,50 @@
     ]
   },
   {
-    "objectID": "ressources.html",
-    "href": "ressources.html",
-    "title": "Sources utilisées",
-    "section": "",
-    "text": "Pour rédiger ce cours et préparer les exercices, TP, projets présentés ici, j’ai utilisé de nombreuses sources que je vais essayer de citer ici, sans prétendre être exhaustif.\n\nDocuments d’accompagnement Eduscol.\nContenus du MOOC “Numérique et Sciences Informatiques : les fondamentaux” de l’INRIA, disponible sur la plateforme fun-mooc.\nApprendre à programmer avec Python 3, Gérard Swinnen, éditions Eyrolles, 2012. Disponible en ligne\nLe site interstices : https://interstices.info/.\nLes images et illustrations sont soit produites par mes soins, soit issues de Pixabay ou de Wikimedia commons ou encore de Pexels et, dans tous les cas, libres de droits.\nCours de David Roche.\nCours de Frédéric Junier.\nCours de Van Zuijlen Stéphan.\nCours de Konieczko Quentin\nCours de Olivier Lécluse\nCours du Lycée Blaise Pascal de Clermont-Ferrand\nCours du lycée Champollion de Grenoble\nCours du site Lyceum\nCours du site Mon Lycée Numérique\nCours du Lycée Stanislas de Wissembourg\nCours d’informatique de François Brucker (école Centrale de Marseille)\nCours de Philippe Rigaux sur les bases de données.\nCours de Gilles Lassus\nLe site MDN Web Docs : excellentissime ressource pour tout apprendre sur les langages HTML, CSS, Javascript et le protocole HTTP.\nLe site de M. JANVIER.\nLe site de M. Meyroneinc."
-  },
-  {
-    "objectID": "16_tris/tris_exos.html",
-    "href": "16_tris/tris_exos.html",
-    "title": "Exercices - Algorithmes de tris",
+    "objectID": "17_recherche/recherche_exos.html",
+    "href": "17_recherche/recherche_exos.html",
+    "title": "Exercices - Recherche dichotomique",
     "section": "",
     "text": "Les exercices précédés du symbole  sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole  doivent être résolus par écrit.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 16 - Algorithmes de tris",
-      "Exercices - Algorithmes de tris"
+      "Ch. 17 - Recherche dichotomique",
+      "Exercices - Recherche dichotomique"
     ]
   },
   {
-    "objectID": "16_tris/tris_exos.html#exercice-1",
-    "href": "16_tris/tris_exos.html#exercice-1",
-    "title": "Exercices - Algorithmes de tris",
-    "section": " Exercice 1",
-    "text": "Exercice 1\nCet exercice est à faire dans Capytale.\nÉcrire une fonction trie_chaine qui prend en argument une liste de chaînes de caractères et qui modifie cette liste en la triant en fonction du nombre de lettres. Cette fonction ne renvoie rien.\nTester la fonction avec la liste [\"un\", \"deux\", \"trois\", \"quatre\", \"cinq\", \"six\", \"sept\", \"huit\", \"neuf\", \"dix\"].",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 16 - Algorithmes de tris",
-      "Exercices - Algorithmes de tris"
-    ]
-  },
-  {
-    "objectID": "16_tris/tris_exos.html#exercice-2-le-tri-à-bulles",
-    "href": "16_tris/tris_exos.html#exercice-2-le-tri-à-bulles",
-    "title": "Exercices - Algorithmes de tris",
-    "section": " Exercice 2 : le tri à bulles",
-    "text": "Exercice 2 : le tri à bulles\nCet exercice est à faire dans Capytale.\nL’algorithme de tri à bulles est le suivant :\n\nOn parcourt la liste de gauche à droite.\nSi deux éléments consécutifs sont dans le mauvais ordre, on les échange.\nSi, à l’étape précédente, au moins un échange a eu lieu, on recommence à l’étape 1.\nSinon, la liste est triée et on arrête.\n\n\nÉcrire toutes les étapes du tri à bulles pour la liste [5, 3, 2, 4, 1].\nSoit \\(n\\) un entier naturel non nul et \\(L\\) une liste de \\(n\\) entiers rangés dans l’ordre décroissant (pire des cas). Combien d’échanges sont nécessaires pour trier \\(L\\) dans l’ordre croissant ? En déduire une évaluation de la complexité de cet algorithme.\nÉcrire une fonction tri_bulles qui prend en argument une liste de nombres et qui modifie cette liste en la triant par ordre croissant en utilisant l’algorithme du tri à bulles. Cette fonction ne renvoie rien.\nAjouter une variable compteur dans la fonction tri_bulles qui compte le nombre d’échanges effectués. Ce nombre doit être renvoyé par la fonction. Tester la fonction avec la liste [5, 3, 2, 4, 1] et vérifier que le compteur vaut bien 6.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 16 - Algorithmes de tris",
-      "Exercices - Algorithmes de tris"
-    ]
-  },
-  {
-    "objectID": "16_tris/tris_exos.html#t.p.-bilan-et-compléments",
-    "href": "16_tris/tris_exos.html#t.p.-bilan-et-compléments",
-    "title": "Exercices - Algorithmes de tris",
+    "objectID": "17_recherche/recherche_exos.html#t.p.-bilan-et-compléments",
+    "href": "17_recherche/recherche_exos.html#t.p.-bilan-et-compléments",
+    "title": "Exercices - Recherche dichotomique",
     "section": " T.P. : Bilan et compléments",
     "text": "T.P. : Bilan et compléments\n\n\n\n\n\n\nImportant\n\n\n\nNotebook Capytale pour ce T.P. : Capytale \nCe T.P. est à faire dans Capytale en suivant le lien ci-dessus.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 16 - Algorithmes de tris",
-      "Exercices - Algorithmes de tris"
+      "Ch. 17 - Recherche dichotomique",
+      "Exercices - Recherche dichotomique"
     ]
   },
   {
-    "objectID": "16_tris/index.html",
-    "href": "16_tris/index.html",
+    "objectID": "17_recherche/index.html",
+    "href": "17_recherche/index.html",
     "title": "Programme",
     "section": "",
     "text": "Le concept de méthode algorithmique est introduit ; de nouveaux exemples seront vus en terminale. Quelques algorithmes classiques sont étudiés. L’étude de leurs coûts respectifs prend tout son sens dans le cas de données nombreuses, qui peuvent être préférentiellement des données ouvertes.\nIl est nécessaire de montrer l’intérêt de prouver la correction d’un algorithme pour lequel on dispose d’une spécification précise, notamment en mobilisant la notion d’invariant sur des exemples simples. La nécessité de prouver la terminaison d’un programme est mise en évidence dès qu’on utilise une boucle non bornée (ou, en terminale, des fonctions récursives) grâce à la mobilisation de la notion de variant sur des exemples simples.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nParcours séquentiel d’un tableau\nÉcrire un algorithme de recherche d’une occurrence sur des valeurs de type quelconque. Écrire un algorithme de recherche d’un extremum, de calcul d’une moyenne.\nOn montre que le coût est linéaire.\n\n\nTris par insertion, par sélection\nÉcrire un algorithme de tri. Décrire un invariant de boucle qui prouve la correction des tris par insertion, par sélection.\nLa terminaison de ces algorithmes est à justifier. On montre que leur coût est quadratique dans le pire cas.\n\n\nRecherche dichotomique dans un tableau trié\nMontrer la terminaison de la recherche dichotomique à l’aide d’un variant de boucle.\nDes assertions peuvent être utilisées. La preuve de la correction peut être présentée par le professeur",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 16 - Algorithmes de tris",
+      "Ch. 17 - Recherche dichotomique",
       "Programme"
     ]
   },
   {
-    "objectID": "16_tris/index.html#points-traités-dans-cette-séquence",
-    "href": "16_tris/index.html#points-traités-dans-cette-séquence",
+    "objectID": "17_recherche/index.html#points-traités-dans-cette-séquence",
+    "href": "17_recherche/index.html#points-traités-dans-cette-séquence",
     "title": "Programme",
     "section": "",
     "text": "Le concept de méthode algorithmique est introduit ; de nouveaux exemples seront vus en terminale. Quelques algorithmes classiques sont étudiés. L’étude de leurs coûts respectifs prend tout son sens dans le cas de données nombreuses, qui peuvent être préférentiellement des données ouvertes.\nIl est nécessaire de montrer l’intérêt de prouver la correction d’un algorithme pour lequel on dispose d’une spécification précise, notamment en mobilisant la notion d’invariant sur des exemples simples. La nécessité de prouver la terminaison d’un programme est mise en évidence dès qu’on utilise une boucle non bornée (ou, en terminale, des fonctions récursives) grâce à la mobilisation de la notion de variant sur des exemples simples.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nParcours séquentiel d’un tableau\nÉcrire un algorithme de recherche d’une occurrence sur des valeurs de type quelconque. Écrire un algorithme de recherche d’un extremum, de calcul d’une moyenne.\nOn montre que le coût est linéaire.\n\n\nTris par insertion, par sélection\nÉcrire un algorithme de tri. Décrire un invariant de boucle qui prouve la correction des tris par insertion, par sélection.\nLa terminaison de ces algorithmes est à justifier. On montre que leur coût est quadratique dans le pire cas.\n\n\nRecherche dichotomique dans un tableau trié\nMontrer la terminaison de la recherche dichotomique à l’aide d’un variant de boucle.\nDes assertions peuvent être utilisées. La preuve de la correction peut être présentée par le professeur",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 16 - Algorithmes de tris",
+      "Ch. 17 - Recherche dichotomique",
       "Programme"
     ]
   },
@@ -1019,6 +995,30 @@
     ]
   },
   {
+    "objectID": "13_vonNeumann/index.html",
+    "href": "13_vonNeumann/index.html",
+    "title": "Programme",
+    "section": "",
+    "text": "Exprimer un algorithme dans un langage de programmation a pour but de le rendre exécutable par une machine dans un contexte donné. La découverte de l’architecture des machines et de leur système d’exploitation constitue une étape importante.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nModèle d’architecture séquentielle (von Neumann)\nDistinguer les rôles et les caractéristiques des différents constituants d’une machine. Dérouler l’exécution d’une séquence d’instructions simples du type langage machine.\nLa présentation se limite aux concepts généraux. On distingue les architectures monoprocesseur et les architectures multiprocesseur. Des activités débranchées sont proposées. Les circuits combinatoires réalisent des fonctions booléennes.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 13 - Modèle d'architecture de von Neumann",
+      "Programme"
+    ]
+  },
+  {
+    "objectID": "13_vonNeumann/index.html#programme",
+    "href": "13_vonNeumann/index.html#programme",
+    "title": "Programme",
+    "section": "",
+    "text": "Exprimer un algorithme dans un langage de programmation a pour but de le rendre exécutable par une machine dans un contexte donné. La découverte de l’architecture des machines et de leur système d’exploitation constitue une étape importante.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nModèle d’architecture séquentielle (von Neumann)\nDistinguer les rôles et les caractéristiques des différents constituants d’une machine. Dérouler l’exécution d’une séquence d’instructions simples du type langage machine.\nLa présentation se limite aux concepts généraux. On distingue les architectures monoprocesseur et les architectures multiprocesseur. Des activités débranchées sont proposées. Les circuits combinatoires réalisent des fonctions booléennes.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 13 - Modèle d'architecture de von Neumann",
+      "Programme"
+    ]
+  },
+  {
     "objectID": "13_vonNeumann/neumann_cours_1.html",
     "href": "13_vonNeumann/neumann_cours_1.html",
     "title": "Cours : Partie 1",
@@ -1052,102 +1052,6 @@
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 13 - Modèle d'architecture de von Neumann",
       "Cours : Partie 1"
-    ]
-  },
-  {
-    "objectID": "13_vonNeumann/exos_circuits.html",
-    "href": "13_vonNeumann/exos_circuits.html",
-    "title": "T.P. : circuits logiques",
-    "section": "",
-    "text": "Les exercices de cette page sont à réaliser dans Capytale : un lien par exercice vous permettra de les ouvrir directement dans le simulateur. Les fenêtres interactives présentes dans cette page permettent de s’entraîner ou de revenir faire les exercices plus tard, mais les montages ne sont pas sauvegardés.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 13 - Modèle d'architecture de von Neumann",
-      "T.P. : circuits logiques"
-    ]
-  },
-  {
-    "objectID": "13_vonNeumann/exos_circuits.html#exercice-1",
-    "href": "13_vonNeumann/exos_circuits.html#exercice-1",
-    "title": "T.P. : circuits logiques",
-    "section": " Exercice 1",
-    "text": "Exercice 1\nhttps://capytale2.ac-paris.fr/web/c/f050-5535104\nRéaliser un circuit logique à 4 entrées, à l’aide des portes disponibles à gauche, telle que Sortie vaut 1 si, et seulement si, au moins une des entrées est non nulle.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 13 - Modèle d'architecture de von Neumann",
-      "T.P. : circuits logiques"
-    ]
-  },
-  {
-    "objectID": "13_vonNeumann/exos_circuits.html#exercice-2",
-    "href": "13_vonNeumann/exos_circuits.html#exercice-2",
-    "title": "T.P. : circuits logiques",
-    "section": " Exercice 2",
-    "text": "Exercice 2\nhttps://capytale2.ac-paris.fr/web/c/16dc-5535233\nDessiner un circuit logique qui a 4 entrées A, B, C et D et dont la sortie O vaut 1 si, et seulement si, toutes les entrées sont nulles.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 13 - Modèle d'architecture de von Neumann",
-      "T.P. : circuits logiques"
-    ]
-  },
-  {
-    "objectID": "13_vonNeumann/exos_circuits.html#exercice-3",
-    "href": "13_vonNeumann/exos_circuits.html#exercice-3",
-    "title": "T.P. : circuits logiques",
-    "section": " Exercice 3",
-    "text": "Exercice 3\nhttps://capytale2.ac-paris.fr/web/c/2608-5535244\nDessiner un circuit logique correspondant à la table ci-dessous.\n\n\n\nA\nS\nO\n\n\n\n\n0\n0\n0\n\n\n1\n0\n1\n\n\n0\n1\n1\n\n\n1\n1\n0\n\n\n\nL’objectif est de renvoyer la valeur de A si S = 0 et de renvoyer (non A) sinon.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 13 - Modèle d'architecture de von Neumann",
-      "T.P. : circuits logiques"
-    ]
-  },
-  {
-    "objectID": "13_vonNeumann/exos_circuits.html#exercice-4",
-    "href": "13_vonNeumann/exos_circuits.html#exercice-4",
-    "title": "T.P. : circuits logiques",
-    "section": " Exercice 4",
-    "text": "Exercice 4\nhttps://capytale2.ac-paris.fr/web/c/27b6-5535245\nOn considère le circuit suivant :\n\n\nReproduire ce circuit dans le simulateur ci-dessous.\nEn vous aidant du simulateur, établir la table de vérité de ce circuit.\nQue fait ce circuit ?\n\nVotre réponse ci-dessous :\nVotre réponse ici ...",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 13 - Modèle d'architecture de von Neumann",
-      "T.P. : circuits logiques"
-    ]
-  },
-  {
-    "objectID": "13_vonNeumann/exos_circuits.html#exercice-5",
-    "href": "13_vonNeumann/exos_circuits.html#exercice-5",
-    "title": "T.P. : circuits logiques",
-    "section": " Exercice 5",
-    "text": "Exercice 5\nhttps://capytale2.ac-paris.fr/web/c/cbdf-5535252\nOn peut faire une porte NON avec une porte NAND.\nEn rajoutant les fils manquants, utilisez la porte NAND (non-et) pour que la valeur de Sortie soit la même que celle de Témoin, quelle que soit la valeur de Entrée.\n\nPour rajouter un fil, il suffit de cliquer sur la sortie d’une porte et de faire glisser le fil jusqu’à l’entrée d’une autre porte.\nPour changer la valeur de Entrée, il suffit de cliquer dessus.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 13 - Modèle d'architecture de von Neumann",
-      "T.P. : circuits logiques"
-    ]
-  },
-  {
-    "objectID": "13_vonNeumann/exos_circuits.html#exercice-6",
-    "href": "13_vonNeumann/exos_circuits.html#exercice-6",
-    "title": "T.P. : circuits logiques",
-    "section": " Exercice 6",
-    "text": "Exercice 6\nhttps://capytale2.ac-paris.fr/web/c/80e5-5535268\nEn rajoutant des portes NAND, disponibles à gauche, faites des circuits équivalents aux portes ET et OU déjà installées.\n\nEn cas d’erreur de manipulation, vous pouvez réinitialiser en utilisant le bouton à droite.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 13 - Modèle d'architecture de von Neumann",
-      "T.P. : circuits logiques"
-    ]
-  },
-  {
-    "objectID": "13_vonNeumann/exos_circuits.html#exercice-7",
-    "href": "13_vonNeumann/exos_circuits.html#exercice-7",
-    "title": "T.P. : circuits logiques",
-    "section": " Exercice 7",
-    "text": "Exercice 7\nhttps://capytale2.ac-paris.fr/web/c/d34d-5535004\nFaire un circuit équivalent à une porte XOR à l’aide de portes ET, OU et NON.\n\nVous pouvez rajouter une porte XOR et une nouvelle sortie pour tester votre circuit.\noptionnel Il y a 2 façons de faire une porte XOR, donc vous pouvez chercher la deuxième construction.\noptionnel Pour les plus courageux, vous pouvez essayer de faire le même circuit avec uniquement des portes NAND.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 13 - Modèle d'architecture de von Neumann",
-      "T.P. : circuits logiques"
     ]
   },
   {
@@ -2459,87 +2363,135 @@
     ]
   },
   {
-    "objectID": "17_recherche/recherche_cours.html",
-    "href": "17_recherche/recherche_cours.html",
+    "objectID": "16_tris/tris_cours.html",
+    "href": "16_tris/tris_cours.html",
     "title": "Cours",
     "section": "",
-    "text": "On s’intéresse ici au problème de la recherche d’une valeur dans un tableau que l’on supposera triée dans l’ordre croissant.",
+    "text": "Dans cette partie du cours, nous allons étudier deux algorithmes de tris : le tri par insertion et le tri par sélection.\nÉtant donné un tableau de nombres, l’objectif est d’écrire une fonction qui renvoie un tableau contenant les mêmes nombres mais dans l’ordre croissant.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 17 - Recherche dichotomique",
+      "Ch. 16 - Algorithmes de tris",
       "Cours"
     ]
   },
   {
-    "objectID": "17_recherche/recherche_cours.html#approche-naïve",
-    "href": "17_recherche/recherche_cours.html#approche-naïve",
+    "objectID": "16_tris/tris_cours.html#tri-par-insertion",
+    "href": "16_tris/tris_cours.html#tri-par-insertion",
     "title": "Cours",
-    "section": "1. Approche naïve",
-    "text": "1. Approche naïve\nLa première idée qui peut venir à l’esprit est de considérer les éléments du tableau les uns après les autres et de les comparer avec l’élément recherché.\nOn peut ainsi écrire une fonction recherche_naive qui prend en paramètre un tableau tàbleau et une valeur valeur et qui renvoie l’indice de la première occurrence de valeur dans tableau ou -1 si valeur n’est pas dans tableau.\n\ndef recherche_naive(tableau, valeur):\n    for i in range(len(tableau)):\n        if tableau[i] == valeur:\n            return i\n    return -1\n\nTest de cette fonction :\n\nrecherche_naive([1, 2, 3, 4, 5], 3)\n\n2\n\n\n\nrecherche_naive([1, 2, 3, 4, 5], 6)\n\n-1\n\n\nLa complexité dans le pire des cas correspond ici au cas où la valeur recherchée n’est pas dans la liste. Il faut alors parcourir toutes les valeurs du tableau et faire \\(n\\) comparaisons, où \\(n\\) est la taille du tableau. L’algorithme naïf a donc une complexité linéaire en \\(\\mathcal{O}(n)\\).\nIl est possible d’être plus efficace en exploitant le fait que la liste est triée.",
+    "section": "1. Tri par insertion",
+    "text": "1. Tri par insertion\n\nLe principe\n\n\n\n\n\n\nPrincipe de l’algorithme\n\n\n\nEn commençant par le deuxième élément du tableau :\n\nOn compare l’élément courant avec l’élément précédent.\nSi l’élément courant est plus petit, on échange les deux éléments.\nOn continue à comparer et échanger l’élément courant avec les éléments précédents jusqu’à ce que l’élément courant soit plus grand que l’élément précédent.\n\n\n\n\n\n\n\n\nExemple : Soit à trier le tableau \\([5,2,7,3]\\).\n\nOn commence par le deuxième élément du tableau, c’est-à-dire l’élément 2. On compare l’élément 2 avec l’élément 5. L’élément 2 est plus petit que l’élément 5, on échange les deux éléments. Le tableau est donc \\([2,5,7,3]\\).\nOn continue avec l’élément 7. L’élément 7 est plus grand que l’élément 5, on ne fait rien.\nOn continue avec l’élément 3. L’élément 3 est plus petit que l’élément 7, on échange les deux éléments. Le tableau est donc \\([2,5,3,7]\\). On continue à comparer et échanger l’élément 3 avec les éléments précédents jusqu’à ce que l’élément 3 soit plus grand que l’élément 5. Le tableau est donc \\([2,3,5,7]\\). L’algorithme est terminé. Le tableau est trié.\n\n\n\nProgrammation\n\ndef tri_insertion(tableau: list) -&gt; list:\n    \"\"\"Trie en place par insertion le tableau passé en paramètre.\"\"\"\n1    for i in range(1, len(tableau)):\n2        j = i\n3        while j &gt; 0 and tableau[j] &lt; tableau[j-1]:\n4            tableau[j], tableau[j-1] = tableau[j-1], tableau[j]\n5            j -= 1\n    return tableau\n\n\n1\n\nOn commence à l’indice 1 qui correspond au deuxième élément du tableau.\n\n2\n\nOn stocke l’indice courant dans une variable j pour pouvoir le modifier.\n\n3\n\nTant que l’indice courant est supérieur à 0 et que l’élément courant est plus petit que l’élément précédent, on échange les deux éléments.\n\n4\n\nOn échange les deux éléments.\n\n5\n\nL’élément courant est maintenant l’élément précédent, on décrémente donc l’indice courant.\n\n\n\n\nTest de l’algorithme :\n\ntri_insertion([5, 2, 4, 6, 1, 3])\n\n[1, 2, 3, 4, 5, 6]\n\n\n\n\nPreuve de terminaison\nMontrons que l’algorithme se termine.\nD’une part, il est certain que la boucle for, boucle bornée par nature, se termine. D’autre part, la boucle while se termine aussi. La variable j est un variant de boucle. À chaque itération, sa valeur diminue de 1 : elle finit donc toujours par atteindre 0.\nLa terminaison de l’algorithme est donc prouvée.\n\n\nPreuve de correction\nMontrons que l’algorithme trie bien le tableau.\nPour cela, considérons la propriété suivante : à chaque itération, le sous-tableau composé des i premiers éléments est trié. Montrons que cette propriété est un invariant de boucle.\n\nInitialisation : au début de l’algorithme, le sous-tableau composé uniquement du premier élément est trié.\nConservation : supposons que le le sous-tableau composé des i premiers éléments est trié : \\([e_0, e_1, \\ldots, e_{i-1}]\\) avec \\(e_0\\leqslant e_1\\leqslant \\ldots \\leqslant e_{i-1}\\). L’algorithme considère alors l’élément \\(e_i\\) et le compare avec les éléments précédents. Si \\(e_i\\) est plus petit que \\(e_{i-1}\\), on échange les deux éléments. On continue alors à comparer \\(e_i\\) avec les éléments précédents jusqu’à ce que \\(e_i\\) soit plus grand que l’élément précédent. Le sous-tableau composé des i+1 premiers éléments est alors trié.\nConclusion : à la fin de l’algorithme i a la valeur n-1 ce qui correspond à l’indice du dernier élément du tableau. Le sous-tableau composé des n premiers éléments est donc trié. Or, n est le nombre d’éléments du tableau, donc le tableau entier est trié.\n\nLa correction de l’algorithme est donc prouvée.\n\n\nComplexité\nOn recherche la complexité dans le pire des cas. Le pire des cas est le cas où le tableau de départ est rangé dans l’ordre décroissant.\nNotons \\(n\\) la taille du tableau de départ.\nLa boucle for comporte \\(n-1\\) itérations.\nDans le cas où le tableau de départ est rangé dans l’ordre décroissant, la boucle while comporte 1 opération, puis 2, puis 3, etc. jusqu’à \\(n-1\\) opérations pour la dernière itération. On obtient donc la somme suivante pour le nombre total d’opérations :\n\\[1+2+3+\\ldots+(n-1)=\\frac{n(n-1)}{2}\\]\nSachant que \\(\\frac{n(n-1)}{2} = \\frac{n^2-n}{2}\\), il s’agit donc d’une complexité quadratique, en \\(\\mathcal{O}(n^2)\\).",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 17 - Recherche dichotomique",
+      "Ch. 16 - Algorithmes de tris",
       "Cours"
     ]
   },
   {
-    "objectID": "17_recherche/recherche_cours.html#recherche-dichotomique",
-    "href": "17_recherche/recherche_cours.html#recherche-dichotomique",
+    "objectID": "16_tris/tris_cours.html#tri-par-sélection",
+    "href": "16_tris/tris_cours.html#tri-par-sélection",
     "title": "Cours",
-    "section": "2. Recherche dichotomique",
-    "text": "2. Recherche dichotomique\n\nLe principe\nDe façon intuitive, la recherche dichotomique consiste à diviser par deux la zone de recherche à chaque étape.\nOn commence par considérer l’ensemble des éléments du tableau. On regarde ensuite la valeur de l’élément du milieu du tableau. Si cette valeur est inférieure à la valeur recherchée, alors on poursuit la recherche sur la moitié supérieure du tableau. Si la valeur est supérieure à la valeur recherchée, alors on poursuit la recherche sur la moitié inférieure. Si la valeur est égale à la valeur recherchée, on a trouvé l’élément recherché.\n\n\n\n\n\n\nPrincipe de l’algorithme\n\n\n\n\nOn considère le tableau tableau trié dans l’ordre croissant dans lequel on recherche la valeur valeur.\nOn définit les bornes gauche et droite du tableau : indices du premier et du dernier élément de la partie du tableau dans laquelle on recherche.\nTant que gauche est inférieur ou égal à droite :\n\nOn calcule l’indice milieu du milieu du tableau.\nSi tableau[milieu] est égal à valeur, on renvoie milieu.\nSi tableau[milieu] est inférieur à valeur, on met à jour gauche à milieu + 1. Lors de l’itération suivante, on ne considèrera donc que la partie du tableau située à droite de milieu.\nSi tableau[milieu] est supérieur à valeur, on met à jour droite à milieu - 1. Lors de l’itération suivante, on ne considèrera donc que la partie du tableau située à gauche de milieu.\n\nOn renvoie -1 si valeur n’est pas dans tableau.\n\n\n\nExemple\nOn considère le tableau [1,4,7,10,13,16,19,22,25] et on cherche la valeur 22.\nOn commence par considérer l’ensemble des éléments du tableau (gauche=0 et droite=8). On regarde ensuite la valeur de l’élément du milieu du tableau. Ici, il s’agit de l’élément d’indice 4 (milieu=4), qui vaut 13. La valeur recherchée est supérieure à 13, donc on ne considère que la partie du tableau située à droite de l’élément du milieu.\nOn répète alors l’opération sur la partie du tableau située à droite de l’élément du milieu (gauche=5 et droite=8). On obtient le tableau [16,19,22,25] et on cherche la valeur 22. L’élément du milieu de ce tableau vaut 19 (milieu=6), qui est inférieur à 22. On ne considère donc que la partie du tableau située à droite de l’élément du milieu.\nOn répète donc l’opération sur la partie du tableau située à droite (gauche=7 et droite=8). On obtient le tableau [22,25] et on cherche la valeur 22. L’élément du milieu de ce tableau vaut 22 (milieu=7), qui est égal à 22. On a donc trouvé la valeur recherchée et l’algorithme est terminé en trois étapes.\n\n\n\nRecherche dichotomique\n\n\n\n\nProgrammation\nÉcrivons une fonction recherche_dichotomique qui prend en paramètre un tableau tableau et une valeur valeur et qui renvoie l’indice d’une occurrence de valeur dans tableau ou -1 si valeur n’est pas dans tableau.\n\ndef recherche_dichotomique(tableau, valeur):\n    gauche = 0\n    droite = len(tableau) - 1\n    while gauche &lt;= droite:\n        milieu = (gauche + droite) // 2\n        if tableau[milieu] == valeur:\n            return milieu\n        elif tableau[milieu] &lt; valeur:\n            gauche = milieu + 1\n        else:\n            droite = milieu - 1\n    return -1\n\nTest de cette fonction :\n\nrecherche_dichotomique([1, 2, 3, 4, 5], 2)\n\n1\n\n\n\nrecherche_dichotomique([1, 2, 3, 4, 5], 6)\n\n-1\n\n\n\n\nPreuve de terminaison\nPour prouver que l’algorithme se termine, il faut prouver que la boucle while se termine, et donc que la condition d’arrêt gauche &gt; droite finit par être vérifiée ou bien que la condition tableau[milieu] == valeur est vérifiée.\nChoisissons comme variant de boucle la différence droite - gauche et plaçons-nous dans le cas le plus défavorable où la condition tableau[milieu] == valeur n’est jamais vérifiée. À chaque passage dans la boucle, soit gauche est incrémenté de 1, soit droite est décrémenté de 1. La différence droite - gauche est donc toujours diminuée de 1. Au bout d’un nombre fini d’itérations (au maximum égal à la taille du tableau moins un), la condition notre variant de boucle devient donc égal à zéro et la boucle se termine.\nLa terminaison de l’algorithme est donc prouvée.\n\n\nPreuve de correction\nConsidérons la propriété suivante : à chaque étape de l’algorithme, la valeur recherchée est située dans la partie du tableau située entre les indices gauche et droite inclus, ou bien elle n’est pas dans le tableau.\nMontrons que cette propriété est un invariant de boucle. C’est-à-dire que cette propriété est vraie avant l’exécution de la première itération de la boucle et qu’elle est vraie après l’exécution de chaque itération de la boucle.\nInitialisation : avant l’exécution de la première itération de la boucle, si la valeur est dans le tableau, alors elle est située dans la partie du tableau située entre les indices gauche et droite inclus. En effet, gauche vaut 0 et droite vaut la taille du tableau moins un, donc la valeur recherchée est située dans la partie du tableau située entre les indices 0 et la taille du tableau moins un inclus (c’est le tableau entier !).\nConservation : supposons que la propriété est vraie à l’entrée dans une itération de la boucle while. Il y a trois possibilités :\n\ntableau[milieu] == valeur est vérifiée. Dans ce cas, la propriété est vraie à la sortie de l’itération de la boucle et l’algorithme retourne l’indice attendu.\ntableau[milieu] &lt; valeur est vérifiée. Dans ce cas, gauche est incrémenté de 1. La valeur recherchée est donc située dans la partie du tableau située entre les indices gauche et droite inclus, ou bien elle est absente du tableau.\ntableau[milieu] &gt; valeur est vérifiée. Dans ce cas, droite est décrémenté de 1. La valeur recherchée est donc située dans la partie du tableau située entre les indices gauche et droite inclus, ou bien elle est absente du tableau.\n\nConclusion : la propriété est donc un invariant de boucle.\nDeux cas sont à considérer pour conclure. Si le test tableau[milieu] == valeur est vérifié au cours des itérations, alors la valeur est trouvée dans le tableau et on retourne son indice milieu : c’est bien le comportement attendu. Si le test tableau[milieu] == valeur n’est jamais vérifié, alors l’algorithme se termine lorsque gauche &gt; droite. D’après notre invariant de boucle, soit la valeur est alors absente du tableau, soit elle est située dans la partie du tableau située entre les indices gauche et droite inclus. Mais cette partie du tableau est un tableau vide []. La valeur est donc absente du tableau et on retourne l’indice -1 : c’est bien le comportement attendu.\nL’algorithme est donc correct.\n\n\nComplexité\nPour évaluer la complexité de cet algorithme, nous allons évaluer le nombre d’itérations nécessaires en fonction de la taille \\(n\\) du tableau, dans le pire des cas, c’est-à-dire lorsque la valeur recherchée n’est pas dans le tableau.\nÀ chaque étape, la taille du sous-tableau contenant potentiellement la valeur recherchée est divisée par deux. Au bout de \\(k\\) étapes, la taille du sous-tableau est donc de \\(\\frac{n}{2^k}\\) environ. Si la valeur recherchée n’est pas dans le tableau, alors on finit par arriver à un tableau de taille 1 et la boucle se termine au tour suivant. Soit \\(k\\) le nombre d’itérations nécessaires pour que la taille du sous-tableau soit de 1. On a donc \\(\\frac{n}{2^k}\\approx 1\\), et par conséquent \\(n=2^k\\). On en déduit que \\(k=\\log_2 n\\).\nL’algorithme de recherche dichotomique est donc en \\(\\mathcal{O}(\\log n)\\). On parle de complexité logarithmique. Cette complexité est meilleure que la complexité linéaire.\n\n\n\n\n\n\nNotion de logarithme de base 2\n\n\n\nSi \\(x\\) est une puissance de 2, alors \\(\\log_2 x\\) est égal à l’exposant de cette puissance. Par exemple, \\(\\log_2 8 = 3\\) car \\(8 = 2^3\\).\n\n\nPour un tableau de départ de taille \\(16=2^4\\) dans lequel on cherche une valeur qui n’y est pas, on effectue 4 itérations :\n\nau premier tour, on divise le tableau en deux parties de taille \\(8=2^3\\) et on cherche dans la partie de gauche (par exemple) ;\nau deuxième tour, on divise la partie de gauche en deux parties de taille \\(4=2^2\\) et on cherche dans la partie de gauche (par exemple) ;\nau troisième tour, on divise la partie de gauche en deux parties de taille \\(2=2^1\\) et on cherche dans la partie de gauche (par exemple) ;\nau quatrième tour, on divise la partie de gauche en deux parties de taille \\(1=2^0\\) et on cherche dans la partie de gauche (par exemple).\n\nOn retrouve bien un nombre d’itérations de l’ordre de \\(\\log_2 n\\).\n\n\nComparaison expérimentale des deux algorithmes\n\nimport timeit\nimport matplotlib.pyplot as plt\n\ntailles = [i for i in range(1, 500)]\ntemps_naive = []\ntemps_dicho = []\n# on applique la recherche dans le pire des cas : valeur absente su tableau\nvaleur = 1000\nfor n in tailles:\n    temps_naive.append(timeit.timeit(\n        \"recherche_naive([k for k in range(n)], valeur)\",\n        globals=globals(),\n        number=100\n    ))\n    temps_dicho.append(timeit.timeit(\n        \"recherche_dichotomique([k for k in range(n)], valeur)\",\n        globals=globals(),\n        number=100\n    ))\nplt.plot(tailles,temps_naive, 'b', label=\"Recherche naïve\")\nplt.plot(tailles,temps_dicho, 'r', label=\"Recherche dichotomique\")\nplt.xlabel(\"Taille du tableau\")\nplt.ylabel(\"Temps d'exécution (en secondes)\")\nplt.legend()\nplt.show()",
+    "section": "2. Tri par sélection",
+    "text": "2. Tri par sélection\n\n\n\n\n\n\nLe principe\n\n\n\n\n\n\nPrincipe de l’algorithme\n\n\n\nEn commençant par le premier élément du tableau :\n\nOn recherche le plus petit élément parmi les éléments suivants du tableau.\nOn échange l’élément courant avec le plus petit élément.\n\n\n\nExemple : Soit à trier le tableau \\([5,2,3,7]\\).\n\nOn commence par le premier élément, 5. On recherche le plus petit élément parmi les éléments suivants du tableau, c’est-à-dire 2. On échange 5 et 2 : le tableau est maintenant \\([2,5,3,7]\\).\nL’élément courant est maintenant le deuxième du tableau, c’est donc encore 5. On recherche le plus petit élément parmi les éléments suivants du tableau, c’est-à-dire 3. On échange 5 et 3 : le tableau est maintenant \\([2,3,5,7]\\).\nL’élément courant est maintenant le troisième du tableau, c’est donc encore 5. On recherche le plus petit élément parmi les éléments suivants du tableau, mais aucun n’est plus petit que 5. On ne fait donc rien.\nL’élément courant est maintenant le dernier du tableau, c’est donc 7. On ne fait donc rien et le tableau est trié.\n\n\n\nProgrammation\n\ndef tri_selection(tableau: list) -&gt; list:\n    \"\"\"Trie en place par sélection le tableau passé en paramètre.\"\"\"\n1    for i in range(len(tableau)):\n2        min = i\n3        for j in range(i+1, len(tableau)):\n4            if tableau[j] &lt; tableau[min]:\n                min = j\n5        tableau[i], tableau[min] = tableau[min], tableau[i]\n    return tableau\n\n\n1\n\nOn commence à l’indice 0 qui correspond au premier élément du tableau.\n\n2\n\nOn stocke l’indice courant dans une variable min pour pouvoir le modifier.\n\n3\n\nOn parcourt le tableau à partir de l’indice i+1 jusqu’à la fin.\n\n4\n\nSi l’élément courant est plus petit que l’élément stocké dans min, on met à jour min.\n\n5\n\nOn échange les deux éléments.\n\n\n\n\nTest de l’algorithme :\n\ntri_selection([5, 2, 4, 6, 1, 3])\n\n[1, 2, 3, 4, 5, 6]\n\n\n\n\nPreuve de terminaison\nL’algorithme se termine puisqu’il comporte deux boucles for qui sont toutes deux bornées par nature.\n\n\nPreuve de correction\nMontrons que l’algorithme trie bien le tableau.\nPour cela, considérons la propriété suivante : à chaque itération, le sous-tableau composé des i premiers éléments est trié. Montrons que cette propriété est un invariant de boucle.\n\nInitialisation : au début de l’algorithme, le sous-tableau composé uniquement du premier élément est trié.\nConservation : supposons que le le sous-tableau composé des i premiers éléments est trié : \\([e_0, e_1, \\ldots, e_{i-1}]\\) avec \\(e_0\\leqslant e_1\\leqslant \\ldots \\leqslant e_{i-1}\\). Par construction, tous les éléments suivants sont supérieurs à \\(e_{i-1}\\). L’algorithme considère alors l’élément \\(e_i\\) et le compare avec les éléments suivants. Si un élément est plus petit que \\(e_i\\), on échange les deux éléments. Le sous-tableau composé des i+1 premiers éléments est alors trié.\nConslusion : à la fin de l’algorithme i a la valeur n-1 ce qui correspond à l’indice du dernier élément du tableau. Le sous-tableau composé des n premiers éléments est donc trié. Or, n est le nombre d’éléments du tableau, donc le tableau entier est trié.\n\nLa correction de l’algorithme est donc prouvée.\n\n\nComplexité\nOn recherche la complexité dans le pire des cas. Le pire des cas est le cas où le tableau de départ est rangé dans l’ordre décroissant.\nNotons \\(n\\) la taille du tableau de départ.\nLa boucle for i comporte \\(n-1\\) itérations. La boucle for j comporte \\(n-1\\) itérations pour la première itération, puis \\(n-2\\) itérations pour la seconde itération, etc. jusqu’à 1 opération pour la dernière itération. On obtient donc la somme suivante pour le nombre total d’opérations :\n\\[n-1+(n-2)+(n-3)+\\ldots+1=\\frac{n(n-1)}{2}\\]\nSachant que \\(\\frac{n(n-1)}{2} = \\frac{n^2-n}{2}\\), il s’agit donc d’une complexité quadratique, en \\(\\mathcal{O}(n^2)\\).",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 17 - Recherche dichotomique",
+      "Ch. 16 - Algorithmes de tris",
       "Cours"
     ]
   },
   {
-    "objectID": "17_recherche/index.html",
-    "href": "17_recherche/index.html",
+    "objectID": "16_tris/tris_cours.html#observation-expérimentale-de-la-complexité",
+    "href": "16_tris/tris_cours.html#observation-expérimentale-de-la-complexité",
+    "title": "Cours",
+    "section": "3. Observation expérimentale de la complexité",
+    "text": "3. Observation expérimentale de la complexité\n\nTri par insertion\n\nimport timeit\nimport matplotlib.pyplot as plt\n\ntailles = [i for i in range(1, 500)]\ntemps = []\n# on applique le tri dans le pire des cas : tableau trié dans l'ordre décroissant\nfor n in tailles:\n    temps.append(timeit.timeit(\n        \"tri_insertion([n-k for k in range(n)])\",\n        globals=globals(),\n        number=1\n    ))\nplt.plot(tailles, temps)\nplt.xlabel(\"Taille du tableau\")\nplt.ylabel(\"Temps d'exécution (en secondes)\")\nplt.show()\n\n\n\n\n\n\n\n\n\n\nTri par sélection\n\nimport timeit\nimport matplotlib.pyplot as plt\n\ntailles = [i for i in range(1, 500)]\ntemps = []\n# on applique le tri dans le pire des cas : tableau trié dans l'ordre décroissant\nfor n in tailles:\n    temps.append(timeit.timeit(\n        \"tri_selection([n-k for k in range(n)])\",\n        globals=globals(),\n        number=1\n    ))\nplt.plot(tailles, temps)\nplt.xlabel(\"Taille du tableau\")\nplt.ylabel(\"Temps d'exécution (en secondes)\")\nplt.show()\n\n\n\n\n\n\n\n\nDans les deux cas, la forme grossièrement parabolique de la courbe est caractéristique de la complexité quadratique.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 16 - Algorithmes de tris",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "16_tris/tris_cours.html#compléments",
+    "href": "16_tris/tris_cours.html#compléments",
+    "title": "Cours",
+    "section": "Compléments",
+    "text": "Compléments\nSur le site interstices.info un article très complet sur les algorithmes de tri, avec des animations pour mieux comprendre.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 16 - Algorithmes de tris",
+      "Cours"
+    ]
+  },
+  {
+    "objectID": "16_tris/index.html",
+    "href": "16_tris/index.html",
     "title": "Programme",
     "section": "",
     "text": "Le concept de méthode algorithmique est introduit ; de nouveaux exemples seront vus en terminale. Quelques algorithmes classiques sont étudiés. L’étude de leurs coûts respectifs prend tout son sens dans le cas de données nombreuses, qui peuvent être préférentiellement des données ouvertes.\nIl est nécessaire de montrer l’intérêt de prouver la correction d’un algorithme pour lequel on dispose d’une spécification précise, notamment en mobilisant la notion d’invariant sur des exemples simples. La nécessité de prouver la terminaison d’un programme est mise en évidence dès qu’on utilise une boucle non bornée (ou, en terminale, des fonctions récursives) grâce à la mobilisation de la notion de variant sur des exemples simples.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nParcours séquentiel d’un tableau\nÉcrire un algorithme de recherche d’une occurrence sur des valeurs de type quelconque. Écrire un algorithme de recherche d’un extremum, de calcul d’une moyenne.\nOn montre que le coût est linéaire.\n\n\nTris par insertion, par sélection\nÉcrire un algorithme de tri. Décrire un invariant de boucle qui prouve la correction des tris par insertion, par sélection.\nLa terminaison de ces algorithmes est à justifier. On montre que leur coût est quadratique dans le pire cas.\n\n\nRecherche dichotomique dans un tableau trié\nMontrer la terminaison de la recherche dichotomique à l’aide d’un variant de boucle.\nDes assertions peuvent être utilisées. La preuve de la correction peut être présentée par le professeur",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 17 - Recherche dichotomique",
+      "Ch. 16 - Algorithmes de tris",
       "Programme"
     ]
   },
   {
-    "objectID": "17_recherche/index.html#points-traités-dans-cette-séquence",
-    "href": "17_recherche/index.html#points-traités-dans-cette-séquence",
+    "objectID": "16_tris/index.html#points-traités-dans-cette-séquence",
+    "href": "16_tris/index.html#points-traités-dans-cette-séquence",
     "title": "Programme",
     "section": "",
     "text": "Le concept de méthode algorithmique est introduit ; de nouveaux exemples seront vus en terminale. Quelques algorithmes classiques sont étudiés. L’étude de leurs coûts respectifs prend tout son sens dans le cas de données nombreuses, qui peuvent être préférentiellement des données ouvertes.\nIl est nécessaire de montrer l’intérêt de prouver la correction d’un algorithme pour lequel on dispose d’une spécification précise, notamment en mobilisant la notion d’invariant sur des exemples simples. La nécessité de prouver la terminaison d’un programme est mise en évidence dès qu’on utilise une boucle non bornée (ou, en terminale, des fonctions récursives) grâce à la mobilisation de la notion de variant sur des exemples simples.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nParcours séquentiel d’un tableau\nÉcrire un algorithme de recherche d’une occurrence sur des valeurs de type quelconque. Écrire un algorithme de recherche d’un extremum, de calcul d’une moyenne.\nOn montre que le coût est linéaire.\n\n\nTris par insertion, par sélection\nÉcrire un algorithme de tri. Décrire un invariant de boucle qui prouve la correction des tris par insertion, par sélection.\nLa terminaison de ces algorithmes est à justifier. On montre que leur coût est quadratique dans le pire cas.\n\n\nRecherche dichotomique dans un tableau trié\nMontrer la terminaison de la recherche dichotomique à l’aide d’un variant de boucle.\nDes assertions peuvent être utilisées. La preuve de la correction peut être présentée par le professeur",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 17 - Recherche dichotomique",
+      "Ch. 16 - Algorithmes de tris",
       "Programme"
     ]
   },
   {
-    "objectID": "17_recherche/recherche_exos.html",
-    "href": "17_recherche/recherche_exos.html",
-    "title": "Exercices - Recherche dichotomique",
+    "objectID": "16_tris/tris_exos.html",
+    "href": "16_tris/tris_exos.html",
+    "title": "Exercices - Algorithmes de tris",
     "section": "",
     "text": "Les exercices précédés du symbole  sont à faire sur machine, en sauvegardant le fichier si nécessaire.\nLes exercices précédés du symbole  doivent être résolus par écrit.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 17 - Recherche dichotomique",
-      "Exercices - Recherche dichotomique"
+      "Ch. 16 - Algorithmes de tris",
+      "Exercices - Algorithmes de tris"
     ]
   },
   {
-    "objectID": "17_recherche/recherche_exos.html#t.p.-bilan-et-compléments",
-    "href": "17_recherche/recherche_exos.html#t.p.-bilan-et-compléments",
-    "title": "Exercices - Recherche dichotomique",
+    "objectID": "16_tris/tris_exos.html#exercice-1",
+    "href": "16_tris/tris_exos.html#exercice-1",
+    "title": "Exercices - Algorithmes de tris",
+    "section": " Exercice 1",
+    "text": "Exercice 1\nCet exercice est à faire dans Capytale.\nÉcrire une fonction trie_chaine qui prend en argument une liste de chaînes de caractères et qui modifie cette liste en la triant en fonction du nombre de lettres. Cette fonction ne renvoie rien.\nTester la fonction avec la liste [\"un\", \"deux\", \"trois\", \"quatre\", \"cinq\", \"six\", \"sept\", \"huit\", \"neuf\", \"dix\"].",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 16 - Algorithmes de tris",
+      "Exercices - Algorithmes de tris"
+    ]
+  },
+  {
+    "objectID": "16_tris/tris_exos.html#exercice-2-le-tri-à-bulles",
+    "href": "16_tris/tris_exos.html#exercice-2-le-tri-à-bulles",
+    "title": "Exercices - Algorithmes de tris",
+    "section": " Exercice 2 : le tri à bulles",
+    "text": "Exercice 2 : le tri à bulles\nCet exercice est à faire dans Capytale.\nL’algorithme de tri à bulles est le suivant :\n\nOn parcourt la liste de gauche à droite.\nSi deux éléments consécutifs sont dans le mauvais ordre, on les échange.\nSi, à l’étape précédente, au moins un échange a eu lieu, on recommence à l’étape 1.\nSinon, la liste est triée et on arrête.\n\n\nÉcrire toutes les étapes du tri à bulles pour la liste [5, 3, 2, 4, 1].\nSoit \\(n\\) un entier naturel non nul et \\(L\\) une liste de \\(n\\) entiers rangés dans l’ordre décroissant (pire des cas). Combien d’échanges sont nécessaires pour trier \\(L\\) dans l’ordre croissant ? En déduire une évaluation de la complexité de cet algorithme.\nÉcrire une fonction tri_bulles qui prend en argument une liste de nombres et qui modifie cette liste en la triant par ordre croissant en utilisant l’algorithme du tri à bulles. Cette fonction ne renvoie rien.\nAjouter une variable compteur dans la fonction tri_bulles qui compte le nombre d’échanges effectués. Ce nombre doit être renvoyé par la fonction. Tester la fonction avec la liste [5, 3, 2, 4, 1] et vérifier que le compteur vaut bien 6.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 16 - Algorithmes de tris",
+      "Exercices - Algorithmes de tris"
+    ]
+  },
+  {
+    "objectID": "16_tris/tris_exos.html#t.p.-bilan-et-compléments",
+    "href": "16_tris/tris_exos.html#t.p.-bilan-et-compléments",
+    "title": "Exercices - Algorithmes de tris",
     "section": " T.P. : Bilan et compléments",
     "text": "T.P. : Bilan et compléments\n\n\n\n\n\n\nImportant\n\n\n\nNotebook Capytale pour ce T.P. : Capytale \nCe T.P. est à faire dans Capytale en suivant le lien ci-dessus.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 17 - Recherche dichotomique",
-      "Exercices - Recherche dichotomique"
+      "Ch. 16 - Algorithmes de tris",
+      "Exercices - Algorithmes de tris"
     ]
   },
   {
@@ -3330,7 +3282,7 @@
     "href": "11_tableaux/TP_Stegano.html#1-le-module-pil",
     "title": "Mini-projet Stéganographie",
     "section": "1. Le module PIL",
-    "text": "1. Le module PIL\n\nQu’est-ce que la librairie PIL ?\nPIL est l’acronyme pour Python Imaging Library. Il s’agit d’une librairie additionnelle qui fournit des fonctions de traitement d’images et de manipulations graphiques à Python. Elle supporte de nombreux formats d’images.\nLa “véritable” bibliothèque PIL, c’est-à-dire la bibliothèque d’origine, n’a jamais été portée pour Python 3. Nous utiliserons donc une version dérivée, nommée Pillow (les informaticiens ont beaucoup d’humour...) qui est, elle, compatible avec les dernières versions de Python 3. On pourra consulter le site de Pillow. La bibliothèque Pillow est déjà installée dans la distribution EduPython.\n\n\n\n\n\n\nAttention\n\n\n\n\nToutes les images utilisées dans ce mini-projet sont téléchargeables en cliquant ici : images.zip.\nPour faire ce travail, il est nécessaire d’avoir téléchargé les images et de les avoir placées dans le même dossier que votre programme.\nLe travail pourra être fait dans EduPython, ou dans la console Python accessible dans le menu ci-dessus. Dans ce cas, les images devront être chargées dans la console en utilisant le bouton représentant un dossier.\n\n\n\n\n\n\nCommandes utiles pour une utilisation de base\nAvant toute chose, on importera la bibliothèque en ajoutant la ligne suivante en début de programme :\n\nfrom PIL import Image\n\n\nExemple d’ouverture d’un fichier et accès à ses informations\n\n\n# ouverture du fichier image\nimg = Image.open(\"chat.png\")\n# nom du fichier\nprint(img.filename)\n# taille du fichier\nprint(img.size)\nprint(img.width)\nprint(img.height)\n\nchat.png\n(640, 427)\n640\n427\n\n\n\n# Affichage de l'image\nimg.show()\n\n\n\nUn fichier image peut avoir trois modes différents :\n\n“l” (lettre l minuscule) pour un fichier en noir et blanc (uniquement deux couleurs) ;\n“L” pour un fichier en niveaux de gris ;\n“RGB” pour une image en couleur.\n\nUne image est représentée par un tableau de pixels. Chaque pixel est repéré par ses coordonnées \\((x;y)\\) où \\(x\\) est la ligne où se trouve le pixel et \\(y\\) la colonne. Chaque pixel possède une valeur.\nDans le cas d’une image en noir et blanc, la valeur d’un pixel est 0 (blanc) ou 1 (noir).\nDans le cas d’une image en niveaux de gris, la valeur d’un pixel est un entier compris entre 0 (noir) et 255 (blanc).\nDans le cas d’une image en couleurs RGB, la valeur d’un pixel est un 3-uplet \\((R, G, B)\\) dans lequel chaque élément est un entier compris entre 0 et 255 qui représente respectivement la prorportion de rouge, de vert et de bleu dans la couleur du pixel en question.\nAccéder à la valeur d’un pixel : img.getpixel((x, y)). Cette fonction retourne un entier (dans le cas d’une image noir et blanc ou en niveaux de gris) ou un triplet (dans le cas d’une image en couleurs). Attention à la syntaxe : il n’y a qu’un seul argument, qui est un couple de coordonnées (donc doubles parenthèses).\n\n\nprint(img.mode)\nimg.getpixel((48,75)) # attention aux parenthèses !\n\nL\n\n\n12\n\n\n\nCommandes pour créer un fichier image et définir la valeur de ses pixels :\n\n\nlargeur = 200\nhauteur = 100\n# Création d'une nouvelle image en niveaux de gris en mémoire\nnouvelle_image = Image.new(\"L\", (largeur, hauteur))\n# Définition de la valeur d'un pixel particulier\nnouvelle_image.putpixel((48,75), 189)\n\n# Double boucle pour parcourir tous les pixels et affecter une valeur aléatoire\nfrom random import randint\n\nfor i in range(largeur):\n    for j in range(hauteur):\n        nouvelle_image.putpixel((i,j), randint(0,255))\n\n# Enregistrement du fichier\nnouvelle_image.save(\"mon_image.png\")\n\n# Affichage dans le notebook\nnouvelle_image.show()",
+    "text": "1. Le module PIL\n\nQu’est-ce que la librairie PIL ?\nPIL est l’acronyme pour Python Imaging Library. Il s’agit d’une librairie additionnelle qui fournit des fonctions de traitement d’images et de manipulations graphiques à Python. Elle supporte de nombreux formats d’images.\nLa “véritable” bibliothèque PIL, c’est-à-dire la bibliothèque d’origine, n’a jamais été portée pour Python 3. Nous utiliserons donc une version dérivée, nommée Pillow (les informaticiens ont beaucoup d’humour...) qui est, elle, compatible avec les dernières versions de Python 3. On pourra consulter le site de Pillow. La bibliothèque Pillow est déjà installée dans la distribution EduPython.\n\n\n\n\n\n\nAttention\n\n\n\n\nToutes les images utilisées dans ce mini-projet sont téléchargeables en cliquant ici : images.zip.\nPour faire ce travail, il est nécessaire d’avoir téléchargé les images et de les avoir placées dans le même dossier que votre programme.\nLe travail pourra être fait dans EduPython, ou dans la console Python accessible dans le menu ci-dessus. Dans ce cas, les images devront être chargées dans la console en utilisant le bouton représentant un dossier.\n\n\n\n\n\n\nCommandes utiles pour une utilisation de base\nAvant toute chose, on importera la bibliothèque en ajoutant la ligne suivante en début de programme :\n\nfrom PIL import Image\n\n\nExemple d’ouverture d’un fichier et accès à ses informations\n\n\n# ouverture du fichier image\nimg = Image.open(\"chat.png\")\n# nom du fichier\nprint(img.filename)\n# taille du fichier\nprint(img.size)\nprint(img.width)\nprint(img.height)\n\n/mnt/data/DocsSync/Sites_Internet/quarto_PNSI/11_tableaux/chat.png\n(640, 427)\n640\n427\n\n\n\n# Affichage de l'image\nimg.show()\n\n\n\nUn fichier image peut avoir trois modes différents :\n\n“l” (lettre l minuscule) pour un fichier en noir et blanc (uniquement deux couleurs) ;\n“L” pour un fichier en niveaux de gris ;\n“RGB” pour une image en couleur.\n\nUne image est représentée par un tableau de pixels. Chaque pixel est repéré par ses coordonnées \\((x;y)\\) où \\(x\\) est la ligne où se trouve le pixel et \\(y\\) la colonne. Chaque pixel possède une valeur.\nDans le cas d’une image en noir et blanc, la valeur d’un pixel est 0 (blanc) ou 1 (noir).\nDans le cas d’une image en niveaux de gris, la valeur d’un pixel est un entier compris entre 0 (noir) et 255 (blanc).\nDans le cas d’une image en couleurs RGB, la valeur d’un pixel est un 3-uplet \\((R, G, B)\\) dans lequel chaque élément est un entier compris entre 0 et 255 qui représente respectivement la prorportion de rouge, de vert et de bleu dans la couleur du pixel en question.\nAccéder à la valeur d’un pixel : img.getpixel((x, y)). Cette fonction retourne un entier (dans le cas d’une image noir et blanc ou en niveaux de gris) ou un triplet (dans le cas d’une image en couleurs). Attention à la syntaxe : il n’y a qu’un seul argument, qui est un couple de coordonnées (donc doubles parenthèses).\n\n\nprint(img.mode)\nimg.getpixel((48,75)) # attention aux parenthèses !\n\nL\n\n\n12\n\n\n\nCommandes pour créer un fichier image et définir la valeur de ses pixels :\n\n\nlargeur = 200\nhauteur = 100\n# Création d'une nouvelle image en niveaux de gris en mémoire\nnouvelle_image = Image.new(\"L\", (largeur, hauteur))\n# Définition de la valeur d'un pixel particulier\nnouvelle_image.putpixel((48,75), 189)\n\n# Double boucle pour parcourir tous les pixels et affecter une valeur aléatoire\nfrom random import randint\n\nfor i in range(largeur):\n    for j in range(hauteur):\n        nouvelle_image.putpixel((i,j), randint(0,255))\n\n# Enregistrement du fichier\nnouvelle_image.save(\"mon_image.png\")\n\n# Affichage dans le notebook\nnouvelle_image.show()",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 11 - Tableaux",
@@ -3614,27 +3566,99 @@
     ]
   },
   {
-    "objectID": "13_vonNeumann/index.html",
-    "href": "13_vonNeumann/index.html",
-    "title": "Programme",
+    "objectID": "13_vonNeumann/exos_circuits.html",
+    "href": "13_vonNeumann/exos_circuits.html",
+    "title": "T.P. : circuits logiques",
     "section": "",
-    "text": "Exprimer un algorithme dans un langage de programmation a pour but de le rendre exécutable par une machine dans un contexte donné. La découverte de l’architecture des machines et de leur système d’exploitation constitue une étape importante.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nModèle d’architecture séquentielle (von Neumann)\nDistinguer les rôles et les caractéristiques des différents constituants d’une machine. Dérouler l’exécution d’une séquence d’instructions simples du type langage machine.\nLa présentation se limite aux concepts généraux. On distingue les architectures monoprocesseur et les architectures multiprocesseur. Des activités débranchées sont proposées. Les circuits combinatoires réalisent des fonctions booléennes.",
+    "text": "Les exercices de cette page sont à réaliser dans Capytale : un lien par exercice vous permettra de les ouvrir directement dans le simulateur. Les fenêtres interactives présentes dans cette page permettent de s’entraîner ou de revenir faire les exercices plus tard, mais les montages ne sont pas sauvegardés.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 13 - Modèle d'architecture de von Neumann",
-      "Programme"
+      "T.P. : circuits logiques"
     ]
   },
   {
-    "objectID": "13_vonNeumann/index.html#programme",
-    "href": "13_vonNeumann/index.html#programme",
-    "title": "Programme",
-    "section": "",
-    "text": "Exprimer un algorithme dans un langage de programmation a pour but de le rendre exécutable par une machine dans un contexte donné. La découverte de l’architecture des machines et de leur système d’exploitation constitue une étape importante.\n\n\n\n\n\n\n\n\nContenus\nCapacités attendues\nCommentaires\n\n\n\n\nModèle d’architecture séquentielle (von Neumann)\nDistinguer les rôles et les caractéristiques des différents constituants d’une machine. Dérouler l’exécution d’une séquence d’instructions simples du type langage machine.\nLa présentation se limite aux concepts généraux. On distingue les architectures monoprocesseur et les architectures multiprocesseur. Des activités débranchées sont proposées. Les circuits combinatoires réalisent des fonctions booléennes.",
+    "objectID": "13_vonNeumann/exos_circuits.html#exercice-1",
+    "href": "13_vonNeumann/exos_circuits.html#exercice-1",
+    "title": "T.P. : circuits logiques",
+    "section": " Exercice 1",
+    "text": "Exercice 1\nhttps://capytale2.ac-paris.fr/web/c/f050-5535104\nRéaliser un circuit logique à 4 entrées, à l’aide des portes disponibles à gauche, telle que Sortie vaut 1 si, et seulement si, au moins une des entrées est non nulle.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 13 - Modèle d'architecture de von Neumann",
-      "Programme"
+      "T.P. : circuits logiques"
+    ]
+  },
+  {
+    "objectID": "13_vonNeumann/exos_circuits.html#exercice-2",
+    "href": "13_vonNeumann/exos_circuits.html#exercice-2",
+    "title": "T.P. : circuits logiques",
+    "section": " Exercice 2",
+    "text": "Exercice 2\nhttps://capytale2.ac-paris.fr/web/c/16dc-5535233\nDessiner un circuit logique qui a 4 entrées A, B, C et D et dont la sortie O vaut 1 si, et seulement si, toutes les entrées sont nulles.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 13 - Modèle d'architecture de von Neumann",
+      "T.P. : circuits logiques"
+    ]
+  },
+  {
+    "objectID": "13_vonNeumann/exos_circuits.html#exercice-3",
+    "href": "13_vonNeumann/exos_circuits.html#exercice-3",
+    "title": "T.P. : circuits logiques",
+    "section": " Exercice 3",
+    "text": "Exercice 3\nhttps://capytale2.ac-paris.fr/web/c/2608-5535244\nDessiner un circuit logique correspondant à la table ci-dessous.\n\n\n\nA\nS\nO\n\n\n\n\n0\n0\n0\n\n\n1\n0\n1\n\n\n0\n1\n1\n\n\n1\n1\n0\n\n\n\nL’objectif est de renvoyer la valeur de A si S = 0 et de renvoyer (non A) sinon.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 13 - Modèle d'architecture de von Neumann",
+      "T.P. : circuits logiques"
+    ]
+  },
+  {
+    "objectID": "13_vonNeumann/exos_circuits.html#exercice-4",
+    "href": "13_vonNeumann/exos_circuits.html#exercice-4",
+    "title": "T.P. : circuits logiques",
+    "section": " Exercice 4",
+    "text": "Exercice 4\nhttps://capytale2.ac-paris.fr/web/c/27b6-5535245\nOn considère le circuit suivant :\n\n\nReproduire ce circuit dans le simulateur ci-dessous.\nEn vous aidant du simulateur, établir la table de vérité de ce circuit.\nQue fait ce circuit ?\n\nVotre réponse ci-dessous :\nVotre réponse ici ...",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 13 - Modèle d'architecture de von Neumann",
+      "T.P. : circuits logiques"
+    ]
+  },
+  {
+    "objectID": "13_vonNeumann/exos_circuits.html#exercice-5",
+    "href": "13_vonNeumann/exos_circuits.html#exercice-5",
+    "title": "T.P. : circuits logiques",
+    "section": " Exercice 5",
+    "text": "Exercice 5\nhttps://capytale2.ac-paris.fr/web/c/cbdf-5535252\nOn peut faire une porte NON avec une porte NAND.\nEn rajoutant les fils manquants, utilisez la porte NAND (non-et) pour que la valeur de Sortie soit la même que celle de Témoin, quelle que soit la valeur de Entrée.\n\nPour rajouter un fil, il suffit de cliquer sur la sortie d’une porte et de faire glisser le fil jusqu’à l’entrée d’une autre porte.\nPour changer la valeur de Entrée, il suffit de cliquer dessus.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 13 - Modèle d'architecture de von Neumann",
+      "T.P. : circuits logiques"
+    ]
+  },
+  {
+    "objectID": "13_vonNeumann/exos_circuits.html#exercice-6",
+    "href": "13_vonNeumann/exos_circuits.html#exercice-6",
+    "title": "T.P. : circuits logiques",
+    "section": " Exercice 6",
+    "text": "Exercice 6\nhttps://capytale2.ac-paris.fr/web/c/80e5-5535268\nEn rajoutant des portes NAND, disponibles à gauche, faites des circuits équivalents aux portes ET et OU déjà installées.\n\nEn cas d’erreur de manipulation, vous pouvez réinitialiser en utilisant le bouton à droite.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 13 - Modèle d'architecture de von Neumann",
+      "T.P. : circuits logiques"
+    ]
+  },
+  {
+    "objectID": "13_vonNeumann/exos_circuits.html#exercice-7",
+    "href": "13_vonNeumann/exos_circuits.html#exercice-7",
+    "title": "T.P. : circuits logiques",
+    "section": " Exercice 7",
+    "text": "Exercice 7\nhttps://capytale2.ac-paris.fr/web/c/d34d-5535004\nFaire un circuit équivalent à une porte XOR à l’aide de portes ET, OU et NON.\n\nVous pouvez rajouter une porte XOR et une nouvelle sortie pour tester votre circuit.\noptionnel Il y a 2 façons de faire une porte XOR, donc vous pouvez chercher la deuxième construction.\noptionnel Pour les plus courageux, vous pouvez essayer de faire le même circuit avec uniquement des portes NAND.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 13 - Modèle d'architecture de von Neumann",
+      "T.P. : circuits logiques"
     ]
   },
   {
@@ -3938,71 +3962,40 @@
     ]
   },
   {
-    "objectID": "16_tris/tris_cours.html",
-    "href": "16_tris/tris_cours.html",
+    "objectID": "17_recherche/recherche_cours.html",
+    "href": "17_recherche/recherche_cours.html",
     "title": "Cours",
     "section": "",
-    "text": "Dans cette partie du cours, nous allons étudier deux algorithmes de tris : le tri par insertion et le tri par sélection.\nÉtant donné un tableau de nombres, l’objectif est d’écrire une fonction qui renvoie un tableau contenant les mêmes nombres mais dans l’ordre croissant.",
+    "text": "On s’intéresse ici au problème de la recherche d’une valeur dans un tableau que l’on supposera triée dans l’ordre croissant.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 16 - Algorithmes de tris",
+      "Ch. 17 - Recherche dichotomique",
       "Cours"
     ]
   },
   {
-    "objectID": "16_tris/tris_cours.html#tri-par-insertion",
-    "href": "16_tris/tris_cours.html#tri-par-insertion",
+    "objectID": "17_recherche/recherche_cours.html#approche-naïve",
+    "href": "17_recherche/recherche_cours.html#approche-naïve",
     "title": "Cours",
-    "section": "1. Tri par insertion",
-    "text": "1. Tri par insertion\n\nLe principe\n\n\n\n\n\n\nPrincipe de l’algorithme\n\n\n\nEn commençant par le deuxième élément du tableau :\n\nOn compare l’élément courant avec l’élément précédent.\nSi l’élément courant est plus petit, on échange les deux éléments.\nOn continue à comparer et échanger l’élément courant avec les éléments précédents jusqu’à ce que l’élément courant soit plus grand que l’élément précédent.\n\n\n\n\n\n\n\n\nExemple : Soit à trier le tableau \\([5,2,7,3]\\).\n\nOn commence par le deuxième élément du tableau, c’est-à-dire l’élément 2. On compare l’élément 2 avec l’élément 5. L’élément 2 est plus petit que l’élément 5, on échange les deux éléments. Le tableau est donc \\([2,5,7,3]\\).\nOn continue avec l’élément 7. L’élément 7 est plus grand que l’élément 5, on ne fait rien.\nOn continue avec l’élément 3. L’élément 3 est plus petit que l’élément 7, on échange les deux éléments. Le tableau est donc \\([2,5,3,7]\\). On continue à comparer et échanger l’élément 3 avec les éléments précédents jusqu’à ce que l’élément 3 soit plus grand que l’élément 5. Le tableau est donc \\([2,3,5,7]\\). L’algorithme est terminé. Le tableau est trié.\n\n\n\nProgrammation\n\ndef tri_insertion(tableau: list) -&gt; list:\n    \"\"\"Trie en place par insertion le tableau passé en paramètre.\"\"\"\n1    for i in range(1, len(tableau)):\n2        j = i\n3        while j &gt; 0 and tableau[j] &lt; tableau[j-1]:\n4            tableau[j], tableau[j-1] = tableau[j-1], tableau[j]\n5            j -= 1\n    return tableau\n\n\n1\n\nOn commence à l’indice 1 qui correspond au deuxième élément du tableau.\n\n2\n\nOn stocke l’indice courant dans une variable j pour pouvoir le modifier.\n\n3\n\nTant que l’indice courant est supérieur à 0 et que l’élément courant est plus petit que l’élément précédent, on échange les deux éléments.\n\n4\n\nOn échange les deux éléments.\n\n5\n\nL’élément courant est maintenant l’élément précédent, on décrémente donc l’indice courant.\n\n\n\n\nTest de l’algorithme :\n\ntri_insertion([5, 2, 4, 6, 1, 3])\n\n[1, 2, 3, 4, 5, 6]\n\n\n\n\nPreuve de terminaison\nMontrons que l’algorithme se termine.\nD’une part, il est certain que la boucle for, boucle bornée par nature, se termine. D’autre part, la boucle while se termine aussi. La variable j est un variant de boucle. À chaque itération, sa valeur diminue de 1 : elle finit donc toujours par atteindre 0.\nLa terminaison de l’algorithme est donc prouvée.\n\n\nPreuve de correction\nMontrons que l’algorithme trie bien le tableau.\nPour cela, considérons la propriété suivante : à chaque itération, le sous-tableau composé des i premiers éléments est trié. Montrons que cette propriété est un invariant de boucle.\n\nInitialisation : au début de l’algorithme, le sous-tableau composé uniquement du premier élément est trié.\nConservation : supposons que le le sous-tableau composé des i premiers éléments est trié : \\([e_0, e_1, \\ldots, e_{i-1}]\\) avec \\(e_0\\leqslant e_1\\leqslant \\ldots \\leqslant e_{i-1}\\). L’algorithme considère alors l’élément \\(e_i\\) et le compare avec les éléments précédents. Si \\(e_i\\) est plus petit que \\(e_{i-1}\\), on échange les deux éléments. On continue alors à comparer \\(e_i\\) avec les éléments précédents jusqu’à ce que \\(e_i\\) soit plus grand que l’élément précédent. Le sous-tableau composé des i+1 premiers éléments est alors trié.\nConclusion : à la fin de l’algorithme i a la valeur n-1 ce qui correspond à l’indice du dernier élément du tableau. Le sous-tableau composé des n premiers éléments est donc trié. Or, n est le nombre d’éléments du tableau, donc le tableau entier est trié.\n\nLa correction de l’algorithme est donc prouvée.\n\n\nComplexité\nOn recherche la complexité dans le pire des cas. Le pire des cas est le cas où le tableau de départ est rangé dans l’ordre décroissant.\nNotons \\(n\\) la taille du tableau de départ.\nLa boucle for comporte \\(n-1\\) itérations.\nDans le cas où le tableau de départ est rangé dans l’ordre décroissant, la boucle while comporte 1 opération, puis 2, puis 3, etc. jusqu’à \\(n-1\\) opérations pour la dernière itération. On obtient donc la somme suivante pour le nombre total d’opérations :\n\\[1+2+3+\\ldots+(n-1)=\\frac{n(n-1)}{2}\\]\nSachant que \\(\\frac{n(n-1)}{2} = \\frac{n^2-n}{2}\\), il s’agit donc d’une complexité quadratique, en \\(\\mathcal{O}(n^2)\\).",
+    "section": "1. Approche naïve",
+    "text": "1. Approche naïve\nLa première idée qui peut venir à l’esprit est de considérer les éléments du tableau les uns après les autres et de les comparer avec l’élément recherché.\nOn peut ainsi écrire une fonction recherche_naive qui prend en paramètre un tableau tàbleau et une valeur valeur et qui renvoie l’indice de la première occurrence de valeur dans tableau ou -1 si valeur n’est pas dans tableau.\n\ndef recherche_naive(tableau, valeur):\n    for i in range(len(tableau)):\n        if tableau[i] == valeur:\n            return i\n    return -1\n\nTest de cette fonction :\n\nrecherche_naive([1, 2, 3, 4, 5], 3)\n\n2\n\n\n\nrecherche_naive([1, 2, 3, 4, 5], 6)\n\n-1\n\n\nLa complexité dans le pire des cas correspond ici au cas où la valeur recherchée n’est pas dans la liste. Il faut alors parcourir toutes les valeurs du tableau et faire \\(n\\) comparaisons, où \\(n\\) est la taille du tableau. L’algorithme naïf a donc une complexité linéaire en \\(\\mathcal{O}(n)\\).\nIl est possible d’être plus efficace en exploitant le fait que la liste est triée.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 16 - Algorithmes de tris",
+      "Ch. 17 - Recherche dichotomique",
       "Cours"
     ]
   },
   {
-    "objectID": "16_tris/tris_cours.html#tri-par-sélection",
-    "href": "16_tris/tris_cours.html#tri-par-sélection",
+    "objectID": "17_recherche/recherche_cours.html#recherche-dichotomique",
+    "href": "17_recherche/recherche_cours.html#recherche-dichotomique",
     "title": "Cours",
-    "section": "2. Tri par sélection",
-    "text": "2. Tri par sélection\n\n\n\n\n\n\nLe principe\n\n\n\n\n\n\nPrincipe de l’algorithme\n\n\n\nEn commençant par le premier élément du tableau :\n\nOn recherche le plus petit élément parmi les éléments suivants du tableau.\nOn échange l’élément courant avec le plus petit élément.\n\n\n\nExemple : Soit à trier le tableau \\([5,2,3,7]\\).\n\nOn commence par le premier élément, 5. On recherche le plus petit élément parmi les éléments suivants du tableau, c’est-à-dire 2. On échange 5 et 2 : le tableau est maintenant \\([2,5,3,7]\\).\nL’élément courant est maintenant le deuxième du tableau, c’est donc encore 5. On recherche le plus petit élément parmi les éléments suivants du tableau, c’est-à-dire 3. On échange 5 et 3 : le tableau est maintenant \\([2,3,5,7]\\).\nL’élément courant est maintenant le troisième du tableau, c’est donc encore 5. On recherche le plus petit élément parmi les éléments suivants du tableau, mais aucun n’est plus petit que 5. On ne fait donc rien.\nL’élément courant est maintenant le dernier du tableau, c’est donc 7. On ne fait donc rien et le tableau est trié.\n\n\n\nProgrammation\n\ndef tri_selection(tableau: list) -&gt; list:\n    \"\"\"Trie en place par sélection le tableau passé en paramètre.\"\"\"\n1    for i in range(len(tableau)):\n2        min = i\n3        for j in range(i+1, len(tableau)):\n4            if tableau[j] &lt; tableau[min]:\n                min = j\n5        tableau[i], tableau[min] = tableau[min], tableau[i]\n    return tableau\n\n\n1\n\nOn commence à l’indice 0 qui correspond au premier élément du tableau.\n\n2\n\nOn stocke l’indice courant dans une variable min pour pouvoir le modifier.\n\n3\n\nOn parcourt le tableau à partir de l’indice i+1 jusqu’à la fin.\n\n4\n\nSi l’élément courant est plus petit que l’élément stocké dans min, on met à jour min.\n\n5\n\nOn échange les deux éléments.\n\n\n\n\nTest de l’algorithme :\n\ntri_selection([5, 2, 4, 6, 1, 3])\n\n[1, 2, 3, 4, 5, 6]\n\n\n\n\nPreuve de terminaison\nL’algorithme se termine puisqu’il comporte deux boucles for qui sont toutes deux bornées par nature.\n\n\nPreuve de correction\nMontrons que l’algorithme trie bien le tableau.\nPour cela, considérons la propriété suivante : à chaque itération, le sous-tableau composé des i premiers éléments est trié. Montrons que cette propriété est un invariant de boucle.\n\nInitialisation : au début de l’algorithme, le sous-tableau composé uniquement du premier élément est trié.\nConservation : supposons que le le sous-tableau composé des i premiers éléments est trié : \\([e_0, e_1, \\ldots, e_{i-1}]\\) avec \\(e_0\\leqslant e_1\\leqslant \\ldots \\leqslant e_{i-1}\\). Par construction, tous les éléments suivants sont supérieurs à \\(e_{i-1}\\). L’algorithme considère alors l’élément \\(e_i\\) et le compare avec les éléments suivants. Si un élément est plus petit que \\(e_i\\), on échange les deux éléments. Le sous-tableau composé des i+1 premiers éléments est alors trié.\nConslusion : à la fin de l’algorithme i a la valeur n-1 ce qui correspond à l’indice du dernier élément du tableau. Le sous-tableau composé des n premiers éléments est donc trié. Or, n est le nombre d’éléments du tableau, donc le tableau entier est trié.\n\nLa correction de l’algorithme est donc prouvée.\n\n\nComplexité\nOn recherche la complexité dans le pire des cas. Le pire des cas est le cas où le tableau de départ est rangé dans l’ordre décroissant.\nNotons \\(n\\) la taille du tableau de départ.\nLa boucle for i comporte \\(n-1\\) itérations. La boucle for j comporte \\(n-1\\) itérations pour la première itération, puis \\(n-2\\) itérations pour la seconde itération, etc. jusqu’à 1 opération pour la dernière itération. On obtient donc la somme suivante pour le nombre total d’opérations :\n\\[n-1+(n-2)+(n-3)+\\ldots+1=\\frac{n(n-1)}{2}\\]\nSachant que \\(\\frac{n(n-1)}{2} = \\frac{n^2-n}{2}\\), il s’agit donc d’une complexité quadratique, en \\(\\mathcal{O}(n^2)\\).",
+    "section": "2. Recherche dichotomique",
+    "text": "2. Recherche dichotomique\n\nLe principe\nDe façon intuitive, la recherche dichotomique consiste à diviser par deux la zone de recherche à chaque étape.\nOn commence par considérer l’ensemble des éléments du tableau. On regarde ensuite la valeur de l’élément du milieu du tableau. Si cette valeur est inférieure à la valeur recherchée, alors on poursuit la recherche sur la moitié supérieure du tableau. Si la valeur est supérieure à la valeur recherchée, alors on poursuit la recherche sur la moitié inférieure. Si la valeur est égale à la valeur recherchée, on a trouvé l’élément recherché.\n\n\n\n\n\n\nPrincipe de l’algorithme\n\n\n\n\nOn considère le tableau tableau trié dans l’ordre croissant dans lequel on recherche la valeur valeur.\nOn définit les bornes gauche et droite du tableau : indices du premier et du dernier élément de la partie du tableau dans laquelle on recherche.\nTant que gauche est inférieur ou égal à droite :\n\nOn calcule l’indice milieu du milieu du tableau.\nSi tableau[milieu] est égal à valeur, on renvoie milieu.\nSi tableau[milieu] est inférieur à valeur, on met à jour gauche à milieu + 1. Lors de l’itération suivante, on ne considèrera donc que la partie du tableau située à droite de milieu.\nSi tableau[milieu] est supérieur à valeur, on met à jour droite à milieu - 1. Lors de l’itération suivante, on ne considèrera donc que la partie du tableau située à gauche de milieu.\n\nOn renvoie -1 si valeur n’est pas dans tableau.\n\n\n\nExemple\nOn considère le tableau [1,4,7,10,13,16,19,22,25] et on cherche la valeur 22.\nOn commence par considérer l’ensemble des éléments du tableau (gauche=0 et droite=8). On regarde ensuite la valeur de l’élément du milieu du tableau. Ici, il s’agit de l’élément d’indice 4 (milieu=4), qui vaut 13. La valeur recherchée est supérieure à 13, donc on ne considère que la partie du tableau située à droite de l’élément du milieu.\nOn répète alors l’opération sur la partie du tableau située à droite de l’élément du milieu (gauche=5 et droite=8). On obtient le tableau [16,19,22,25] et on cherche la valeur 22. L’élément du milieu de ce tableau vaut 19 (milieu=6), qui est inférieur à 22. On ne considère donc que la partie du tableau située à droite de l’élément du milieu.\nOn répète donc l’opération sur la partie du tableau située à droite (gauche=7 et droite=8). On obtient le tableau [22,25] et on cherche la valeur 22. L’élément du milieu de ce tableau vaut 22 (milieu=7), qui est égal à 22. On a donc trouvé la valeur recherchée et l’algorithme est terminé en trois étapes.\n\n\n\nRecherche dichotomique\n\n\n\n\nProgrammation\nÉcrivons une fonction recherche_dichotomique qui prend en paramètre un tableau tableau et une valeur valeur et qui renvoie l’indice d’une occurrence de valeur dans tableau ou -1 si valeur n’est pas dans tableau.\n\ndef recherche_dichotomique(tableau, valeur):\n    gauche = 0\n    droite = len(tableau) - 1\n    while gauche &lt;= droite:\n        milieu = (gauche + droite) // 2\n        if tableau[milieu] == valeur:\n            return milieu\n        elif tableau[milieu] &lt; valeur:\n            gauche = milieu + 1\n        else:\n            droite = milieu - 1\n    return -1\n\nTest de cette fonction :\n\nrecherche_dichotomique([1, 2, 3, 4, 5], 2)\n\n1\n\n\n\nrecherche_dichotomique([1, 2, 3, 4, 5], 6)\n\n-1\n\n\n\n\nPreuve de terminaison\nPour prouver que l’algorithme se termine, il faut prouver que la boucle while se termine, et donc que la condition d’arrêt gauche &gt; droite finit par être vérifiée ou bien que la condition tableau[milieu] == valeur est vérifiée.\nChoisissons comme variant de boucle la différence droite - gauche et plaçons-nous dans le cas le plus défavorable où la condition tableau[milieu] == valeur n’est jamais vérifiée. À chaque passage dans la boucle, soit gauche est incrémenté de 1, soit droite est décrémenté de 1. La différence droite - gauche est donc toujours diminuée de 1. Au bout d’un nombre fini d’itérations (au maximum égal à la taille du tableau moins un), la condition notre variant de boucle devient donc égal à zéro et la boucle se termine.\nLa terminaison de l’algorithme est donc prouvée.\n\n\nPreuve de correction\nConsidérons la propriété suivante : à chaque étape de l’algorithme, la valeur recherchée est située dans la partie du tableau située entre les indices gauche et droite inclus, ou bien elle n’est pas dans le tableau.\nMontrons que cette propriété est un invariant de boucle. C’est-à-dire que cette propriété est vraie avant l’exécution de la première itération de la boucle et qu’elle est vraie après l’exécution de chaque itération de la boucle.\nInitialisation : avant l’exécution de la première itération de la boucle, si la valeur est dans le tableau, alors elle est située dans la partie du tableau située entre les indices gauche et droite inclus. En effet, gauche vaut 0 et droite vaut la taille du tableau moins un, donc la valeur recherchée est située dans la partie du tableau située entre les indices 0 et la taille du tableau moins un inclus (c’est le tableau entier !).\nConservation : supposons que la propriété est vraie à l’entrée dans une itération de la boucle while. Il y a trois possibilités :\n\ntableau[milieu] == valeur est vérifiée. Dans ce cas, la propriété est vraie à la sortie de l’itération de la boucle et l’algorithme retourne l’indice attendu.\ntableau[milieu] &lt; valeur est vérifiée. Dans ce cas, gauche est incrémenté de 1. La valeur recherchée est donc située dans la partie du tableau située entre les indices gauche et droite inclus, ou bien elle est absente du tableau.\ntableau[milieu] &gt; valeur est vérifiée. Dans ce cas, droite est décrémenté de 1. La valeur recherchée est donc située dans la partie du tableau située entre les indices gauche et droite inclus, ou bien elle est absente du tableau.\n\nConclusion : la propriété est donc un invariant de boucle.\nDeux cas sont à considérer pour conclure. Si le test tableau[milieu] == valeur est vérifié au cours des itérations, alors la valeur est trouvée dans le tableau et on retourne son indice milieu : c’est bien le comportement attendu. Si le test tableau[milieu] == valeur n’est jamais vérifié, alors l’algorithme se termine lorsque gauche &gt; droite. D’après notre invariant de boucle, soit la valeur est alors absente du tableau, soit elle est située dans la partie du tableau située entre les indices gauche et droite inclus. Mais cette partie du tableau est un tableau vide []. La valeur est donc absente du tableau et on retourne l’indice -1 : c’est bien le comportement attendu.\nL’algorithme est donc correct.\n\n\nComplexité\nPour évaluer la complexité de cet algorithme, nous allons évaluer le nombre d’itérations nécessaires en fonction de la taille \\(n\\) du tableau, dans le pire des cas, c’est-à-dire lorsque la valeur recherchée n’est pas dans le tableau.\nÀ chaque étape, la taille du sous-tableau contenant potentiellement la valeur recherchée est divisée par deux. Au bout de \\(k\\) étapes, la taille du sous-tableau est donc de \\(\\frac{n}{2^k}\\) environ. Si la valeur recherchée n’est pas dans le tableau, alors on finit par arriver à un tableau de taille 1 et la boucle se termine au tour suivant. Soit \\(k\\) le nombre d’itérations nécessaires pour que la taille du sous-tableau soit de 1. On a donc \\(\\frac{n}{2^k}\\approx 1\\), et par conséquent \\(n=2^k\\). On en déduit que \\(k=\\log_2 n\\).\nL’algorithme de recherche dichotomique est donc en \\(\\mathcal{O}(\\log n)\\). On parle de complexité logarithmique. Cette complexité est meilleure que la complexité linéaire.\n\n\n\n\n\n\nNotion de logarithme de base 2\n\n\n\nSi \\(x\\) est une puissance de 2, alors \\(\\log_2 x\\) est égal à l’exposant de cette puissance. Par exemple, \\(\\log_2 8 = 3\\) car \\(8 = 2^3\\).\n\n\nPour un tableau de départ de taille \\(16=2^4\\) dans lequel on cherche une valeur qui n’y est pas, on effectue 4 itérations :\n\nau premier tour, on divise le tableau en deux parties de taille \\(8=2^3\\) et on cherche dans la partie de gauche (par exemple) ;\nau deuxième tour, on divise la partie de gauche en deux parties de taille \\(4=2^2\\) et on cherche dans la partie de gauche (par exemple) ;\nau troisième tour, on divise la partie de gauche en deux parties de taille \\(2=2^1\\) et on cherche dans la partie de gauche (par exemple) ;\nau quatrième tour, on divise la partie de gauche en deux parties de taille \\(1=2^0\\) et on cherche dans la partie de gauche (par exemple).\n\nOn retrouve bien un nombre d’itérations de l’ordre de \\(\\log_2 n\\).\n\n\nComparaison expérimentale des deux algorithmes\n\nimport timeit\nimport matplotlib.pyplot as plt\n\ntailles = [i for i in range(1, 500)]\ntemps_naive = []\ntemps_dicho = []\n# on applique la recherche dans le pire des cas : valeur absente su tableau\nvaleur = 1000\nfor n in tailles:\n    temps_naive.append(timeit.timeit(\n        \"recherche_naive([k for k in range(n)], valeur)\",\n        globals=globals(),\n        number=100\n    ))\n    temps_dicho.append(timeit.timeit(\n        \"recherche_dichotomique([k for k in range(n)], valeur)\",\n        globals=globals(),\n        number=100\n    ))\nplt.plot(tailles,temps_naive, 'b', label=\"Recherche naïve\")\nplt.plot(tailles,temps_dicho, 'r', label=\"Recherche dichotomique\")\nplt.xlabel(\"Taille du tableau\")\nplt.ylabel(\"Temps d'exécution (en secondes)\")\nplt.legend()\nplt.show()",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 16 - Algorithmes de tris",
+      "Ch. 17 - Recherche dichotomique",
       "Cours"
     ]
-  },
-  {
-    "objectID": "16_tris/tris_cours.html#observation-expérimentale-de-la-complexité",
-    "href": "16_tris/tris_cours.html#observation-expérimentale-de-la-complexité",
-    "title": "Cours",
-    "section": "3. Observation expérimentale de la complexité",
-    "text": "3. Observation expérimentale de la complexité\n\nTri par insertion\n\nimport timeit\nimport matplotlib.pyplot as plt\n\ntailles = [i for i in range(1, 500)]\ntemps = []\n# on applique le tri dans le pire des cas : tableau trié dans l'ordre décroissant\nfor n in tailles:\n    temps.append(timeit.timeit(\n        \"tri_insertion([n-k for k in range(n)])\",\n        globals=globals(),\n        number=1\n    ))\nplt.plot(tailles, temps)\nplt.xlabel(\"Taille du tableau\")\nplt.ylabel(\"Temps d'exécution (en secondes)\")\nplt.show()\n\n\n\n\n\n\n\n\n\n\nTri par sélection\n\nimport timeit\nimport matplotlib.pyplot as plt\n\ntailles = [i for i in range(1, 500)]\ntemps = []\n# on applique le tri dans le pire des cas : tableau trié dans l'ordre décroissant\nfor n in tailles:\n    temps.append(timeit.timeit(\n        \"tri_selection([n-k for k in range(n)])\",\n        globals=globals(),\n        number=1\n    ))\nplt.plot(tailles, temps)\nplt.xlabel(\"Taille du tableau\")\nplt.ylabel(\"Temps d'exécution (en secondes)\")\nplt.show()\n\n\n\n\n\n\n\n\nDans les deux cas, la forme grossièrement parabolique de la courbe est caractéristique de la complexité quadratique.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 16 - Algorithmes de tris",
-      "Cours"
-    ]
-  },
-  {
-    "objectID": "16_tris/tris_cours.html#compléments",
-    "href": "16_tris/tris_cours.html#compléments",
-    "title": "Cours",
-    "section": "Compléments",
-    "text": "Compléments\nSur le site interstices.info un article très complet sur les algorithmes de tri, avec des animations pour mieux comprendre.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 16 - Algorithmes de tris",
-      "Cours"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Spécialité NSI - Première",
-    "section": "",
-    "text": "Bienvenue !\nCe site est destiné à regrouper les cours et les exercices concernant l’enseignement de spécialité NSI de première du lycée Émile Duclaux d’Aurillac.\nLien vers l’ENT du lycée : https://cas.ent.auvergnerhonealpes.fr/login\nLien vers Capytale : https://capytale2.ac-paris.fr/web/c-auth/list\nLien vers Replit : https://replit.com/team/premiere-nsi\nLien vers le programme officiel : Programme officiel première NSI"
   },
   {
     "objectID": "18_html/acti1_HTML.html",
@@ -4606,5 +4599,12 @@
     "title": "Systèmes embarqués",
     "section": "Fiabilité et sécurité",
     "text": "Fiabilité et sécurité\nLes objets connectés permettent d’ajouter de l’intelligence dans notre environnement à tous les niveaux : le corps (mes indicateurs de santé, ma nourriture), la maison(appareils, système de chauffage), les réseaux (électrique, de circulation), les transports (véhicules autonomes), la prévention des risques (incendies) …De plus la collaboration entre objets connectés, leur connexion à des bases de données en ligne, augmente considérablement leur puissance même si chaque objet a des ressources matérielles limitées.\nNéanmoins les vulnérabilités des systèmes embarqués sont amplifiées s’ils sont connectés.\nLa cyberattaque d’un serveur DNS majeur par des milliers de caméras de surveillance transformées en bots, a gravement perturbé Internet en Octobre 2016. La prise de contrôle à distance par des hackers de la Jeep Cherokee en 2015 ou des failles détectées dans des pacemakers sont des exemples parmi bien d’autres illustrant le fait que la révolution de l’internet des objets ne pourra se faire sans des progrès sur le plan de leur sécurité.\nEnfin la moisson de données personnelles que peuvent collecter des objets connectés comme les assistants personnels proposés par les GAFAM doit absolument être contrôlée."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Spécialité NSI - Première",
+    "section": "",
+    "text": "Bienvenue !\nCe site est destiné à regrouper les cours et les exercices concernant l’enseignement de spécialité NSI de première du lycée Émile Duclaux d’Aurillac.\nLien vers l’ENT du lycée : https://cas.ent.auvergnerhonealpes.fr/login\nLien vers Capytale : https://capytale2.ac-paris.fr/web/c-auth/list\nLien vers Replit : https://replit.com/team/premiere-nsi\nLien vers le programme officiel : Programme officiel première NSI"
   }
 ]
