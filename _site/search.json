@@ -1059,7 +1059,7 @@
     "href": "13_vonNeumann/exos_circuits.html",
     "title": "T.P. : circuits logiques",
     "section": "",
-    "text": "Les exercices de cette page sont à réaliser à l’aide du simulateur inclus dans la page.\nUne fois les exercices terminés, imprimer la page dans un fichier PDF et la déposer dans le dossier réseau prévu à cet effet.",
+    "text": "Les exercices de cette page sont à réaliser dans Capytale : un lien par exercice vous permettra de les ouvrir directement dans le simulateur. Les fenêtres interactives présentes dans cette page permettent de s’entraîner ou de revenir faire les exercices plus tard, mais les montages ne sont pas sauvegardés.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 13 - Modèle d'architecture de von Neumann",
@@ -1071,7 +1071,7 @@
     "href": "13_vonNeumann/exos_circuits.html#exercice-1",
     "title": "T.P. : circuits logiques",
     "section": " Exercice 1",
-    "text": "Exercice 1\nRéaliser un circuit logique à 4 entrées, à l’aide des portes disponibles à gauche, telle que Sortie vaut 1 si, et seulement si, au moins une des entrées est non nulle.",
+    "text": "Exercice 1\nhttps://capytale2.ac-paris.fr/web/c/f050-5535104\nRéaliser un circuit logique à 4 entrées, à l’aide des portes disponibles à gauche, telle que Sortie vaut 1 si, et seulement si, au moins une des entrées est non nulle.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 13 - Modèle d'architecture de von Neumann",
@@ -1083,7 +1083,7 @@
     "href": "13_vonNeumann/exos_circuits.html#exercice-2",
     "title": "T.P. : circuits logiques",
     "section": " Exercice 2",
-    "text": "Exercice 2\nDessiner un circuit logique qui a 4 entrées A, B, C et D et dont la sortie O vaut 1 si, et seulement si, toutes les entrées sont nulles.",
+    "text": "Exercice 2\nhttps://capytale2.ac-paris.fr/web/c/16dc-5535233\nDessiner un circuit logique qui a 4 entrées A, B, C et D et dont la sortie O vaut 1 si, et seulement si, toutes les entrées sont nulles.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 13 - Modèle d'architecture de von Neumann",
@@ -1095,7 +1095,7 @@
     "href": "13_vonNeumann/exos_circuits.html#exercice-3",
     "title": "T.P. : circuits logiques",
     "section": " Exercice 3",
-    "text": "Exercice 3\nDessiner un circuit logique correspondant à la table ci-dessous.\n\n\n\nA\nS\nO\n\n\n\n\n0\n0\n0\n\n\n1\n0\n1\n\n\n0\n1\n1\n\n\n1\n1\n0\n\n\n\nL’objectif est de renvoyer la valeur de A si S = 0 et de renvoyer (non A) sinon.",
+    "text": "Exercice 3\nhttps://capytale2.ac-paris.fr/web/c/2608-5535244\nDessiner un circuit logique correspondant à la table ci-dessous.\n\n\n\nA\nS\nO\n\n\n\n\n0\n0\n0\n\n\n1\n0\n1\n\n\n0\n1\n1\n\n\n1\n1\n0\n\n\n\nL’objectif est de renvoyer la valeur de A si S = 0 et de renvoyer (non A) sinon.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 13 - Modèle d'architecture de von Neumann",
@@ -1107,7 +1107,7 @@
     "href": "13_vonNeumann/exos_circuits.html#exercice-4",
     "title": "T.P. : circuits logiques",
     "section": " Exercice 4",
-    "text": "Exercice 4\nOn considère le circuit suivant :\n\n\nReproduire ce circuit dans le simulateur ci-dessous.\nEn vous aidant du simulateur, établir la table de vérité de ce circuit.\nQue fait ce circuit ?\n\nVotre réponse ci-dessous :\nVotre réponse ici ...",
+    "text": "Exercice 4\nhttps://capytale2.ac-paris.fr/web/c/27b6-5535245\nOn considère le circuit suivant :\n\n\nReproduire ce circuit dans le simulateur ci-dessous.\nEn vous aidant du simulateur, établir la table de vérité de ce circuit.\nQue fait ce circuit ?\n\nVotre réponse ci-dessous :\nVotre réponse ici ...",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 13 - Modèle d'architecture de von Neumann",
@@ -1119,7 +1119,7 @@
     "href": "13_vonNeumann/exos_circuits.html#exercice-5",
     "title": "T.P. : circuits logiques",
     "section": " Exercice 5",
-    "text": "Exercice 5\nOn peut faire une porte NON avec une porte NAND.\nEn rajoutant les fils manquants, utilisez la porte NAND (non-et) pour que la valeur de Sortie soit la même que celle de Témoin, quelle que soit la valeur de Entrée.\n\nPour rajouter un fil, il suffit de cliquer sur la sortie d’une porte et de faire glisser le fil jusqu’à l’entrée d’une autre porte.\nPour changer la valeur de Entrée, il suffit de cliquer dessus.",
+    "text": "Exercice 5\nhttps://capytale2.ac-paris.fr/web/c/cbdf-5535252\nOn peut faire une porte NON avec une porte NAND.\nEn rajoutant les fils manquants, utilisez la porte NAND (non-et) pour que la valeur de Sortie soit la même que celle de Témoin, quelle que soit la valeur de Entrée.\n\nPour rajouter un fil, il suffit de cliquer sur la sortie d’une porte et de faire glisser le fil jusqu’à l’entrée d’une autre porte.\nPour changer la valeur de Entrée, il suffit de cliquer dessus.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 13 - Modèle d'architecture de von Neumann",
@@ -1131,7 +1131,7 @@
     "href": "13_vonNeumann/exos_circuits.html#exercice-6",
     "title": "T.P. : circuits logiques",
     "section": " Exercice 6",
-    "text": "Exercice 6\nEn rajoutant des portes NAND, disponibles à gauche, faites des circuits équivalents aux portes ET et OU déjà installées.\n\nEn cas d’erreur de manipulation, vous pouvez réinitialiser en utilisant le bouton à droite.",
+    "text": "Exercice 6\nhttps://capytale2.ac-paris.fr/web/c/80e5-5535268\nEn rajoutant des portes NAND, disponibles à gauche, faites des circuits équivalents aux portes ET et OU déjà installées.\n\nEn cas d’erreur de manipulation, vous pouvez réinitialiser en utilisant le bouton à droite.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 13 - Modèle d'architecture de von Neumann",
@@ -1143,7 +1143,7 @@
     "href": "13_vonNeumann/exos_circuits.html#exercice-7",
     "title": "T.P. : circuits logiques",
     "section": " Exercice 7",
-    "text": "Exercice 7\nFaire un circuit équivalent à une porte XOR à l’aide de portes ET, OU et NON.\n\nVous pouvez rajouter une porte XOR et une nouvelle sortie pour tester votre circuit.\noptionnel Il y a 2 façons de faire une porte XOR, donc vous pouvez chercher la deuxième construction.\noptionnel Pour les plus courageux, vous pouvez essayer de faire le même circuit avec uniquement des portes NAND.",
+    "text": "Exercice 7\nhttps://capytale2.ac-paris.fr/web/c/d34d-5535004\nFaire un circuit équivalent à une porte XOR à l’aide de portes ET, OU et NON.\n\nVous pouvez rajouter une porte XOR et une nouvelle sortie pour tester votre circuit.\noptionnel Il y a 2 façons de faire une porte XOR, donc vous pouvez chercher la deuxième construction.\noptionnel Pour les plus courageux, vous pouvez essayer de faire le même circuit avec uniquement des portes NAND.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 13 - Modèle d'architecture de von Neumann",
