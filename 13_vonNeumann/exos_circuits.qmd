@@ -2,12 +2,11 @@
 title: "T.P. : circuits logiques"
 ---
 
-Les exercices de cette page sont à réaliser à l'aide du simulateur inclus dans la page.
-
-**Une fois les exercices terminés, imprimer la page dans un fichier PDF et la déposer dans le dossier réseau prévu à cet effet.**
+Les exercices de cette page sont à réaliser dans Capytale : un lien par exercice vous permettra de les ouvrir directement dans le simulateur. Les fenêtres interactives présentes dans cette page permettent de s'entraîner ou de revenir faire les exercices plus tard, mais les montages ne sont pas sauvegardés.
 
 ## {{< fa desktop >}} Exercice 1 
 
+[https://capytale2.ac-paris.fr/web/c/f050-5535104](https://capytale2.ac-paris.fr/web/c/f050-5535104)
 
 Réaliser un circuit logique à 4 entrées, à l'aide des portes disponibles à gauche, telle que Sortie vaut 1 si, et seulement si, au moins une des entrées est non nulle.
 
@@ -30,6 +29,8 @@ Réaliser un circuit logique à 4 entrées, à l'aide des portes disponibles à 
 
 ## {{< fa desktop >}} Exercice 2
 
+[https://capytale2.ac-paris.fr/web/c/16dc-5535233](https://capytale2.ac-paris.fr/web/c/16dc-5535233)
+
 Dessiner un circuit logique qui a 4 entrées A, B, C et D et dont la sortie O vaut 1 si, et seulement si, toutes les entrées sont nulles.
 
 <div style="width: 100%; height: 430px">
@@ -50,6 +51,8 @@ Dessiner un circuit logique qui a 4 entrées A, B, C et D et dont la sortie O va
 </div>
 
 ## {{< fa desktop >}} Exercice 3
+
+[https://capytale2.ac-paris.fr/web/c/2608-5535244](https://capytale2.ac-paris.fr/web/c/2608-5535244)
 
 Dessiner un circuit logique correspondant à la table ci-dessous.
 
@@ -79,6 +82,8 @@ L'objectif est de renvoyer la valeur de A si S = 0 et de renvoyer (non A) sinon.
 
 ## {{< fa desktop >}} Exercice 4
 
+[https://capytale2.ac-paris.fr/web/c/27b6-5535245](https://capytale2.ac-paris.fr/web/c/27b6-5535245)
+
 On considère le circuit suivant : 
 
 ![](exos_circuitsFig1.png)
@@ -103,6 +108,8 @@ Votre réponse ci-dessous :
 
 ## {{< fa desktop >}} Exercice 5
 
+[https://capytale2.ac-paris.fr/web/c/cbdf-5535252](https://capytale2.ac-paris.fr/web/c/cbdf-5535252)
+
 On peut faire une porte NON avec une porte NAND.
 
 En rajoutant les fils manquants, utilisez la porte NAND (non-et) pour que la valeur de Sortie soit la même que celle de Témoin, quelle que soit la valeur de Entrée.
@@ -125,6 +132,8 @@ En rajoutant les fils manquants, utilisez la porte NAND (non-et) pour que la val
 </div>
 
 ## {{< fa desktop >}} Exercice 6
+
+[https://capytale2.ac-paris.fr/web/c/80e5-5535268](https://capytale2.ac-paris.fr/web/c/80e5-5535268)
 	
 En rajoutant des portes NAND, disponibles à gauche, faites des circuits équivalents aux portes ET et OU déjà installées.
 
@@ -155,6 +164,8 @@ En rajoutant des portes NAND, disponibles à gauche, faites des circuits équiva
 </div>
 
 ## {{< fa desktop >}} Exercice 7
+
+[https://capytale2.ac-paris.fr/web/c/d34d-5535004](https://capytale2.ac-paris.fr/web/c/d34d-5535004)
       
 Faire un circuit équivalent à une porte XOR à l'aide de portes ET, OU et NON.
 
