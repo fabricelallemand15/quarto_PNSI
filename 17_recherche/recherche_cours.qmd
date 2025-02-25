@@ -53,8 +53,8 @@ On commence par considérer l'ensemble des éléments du tableau. On regarde ens
 * Tant que `gauche` est inférieur ou égal à `droite` :
     * On calcule l'indice `milieu` du milieu du tableau.
     * Si `tableau[milieu]` est égal à `valeur`, on renvoie `milieu`.
-    * Si `tableau[milieu]` est inférieur à `valeur`, on met à jour `gauche` à `milieu + 1`. Lors de l'itération suivante, on ne considèrera donc que la partie du tableau située à droite de `milieu`.
-    * Si `tableau[milieu]` est supérieur à `valeur`, on met à jour `droite` à `milieu - 1`. Lors de l'itération suivante, on ne considèrera donc que la partie du tableau située à gauche de `milieu`.
+    * Si `tableau[milieu]` est inférieur à `valeur`, on met à jour `gauche` à `milieu + 1`. Lors de l'itération suivante, on ne considérera donc que la partie du tableau située à droite de `milieu`.
+    * Si `tableau[milieu]` est supérieur à `valeur`, on met à jour `droite` à `milieu - 1`. Lors de l'itération suivante, on ne considérera donc que la partie du tableau située à gauche de `milieu`.
 * On renvoie `-1` si `valeur` n'est pas dans `tableau`.
 :::
 
@@ -103,7 +103,7 @@ recherche_dichotomique([1, 2, 3, 4, 5], 6)
 
 Pour prouver que l'algorithme se termine, il faut prouver que la boucle `while` se termine, et donc que la condition d'arrêt `gauche > droite` finit par être vérifiée **ou bien** que la condition `tableau[milieu] == valeur` est vérifiée.
 
-Choisissons comme **variant de boucle** la différence `droite - gauche` et plaçons-nous dans le cas le plus défavorable où la condition `tableau[milieu] == valeur` n'est jamais vérifiée. À chaque passage dans la boucle, soit `gauche` est incrémenté de 1, soit `droite` est décrémenté de 1. La différence `droite - gauche` est donc toujours diminuée de 1. Au bout d'un nombre fini d'itérations (au maximum égal à la taille du tableau moins un), la condition notre variant de boucle devient donc égal à zéro et la boucle se termine.
+Choisissons comme **variant de boucle** la différence `droite - gauche` et plaçons-nous dans le cas le plus défavorable où la condition `tableau[milieu] == valeur` n'est jamais vérifiée. À chaque passage dans la boucle, soit `gauche` est remplacé par `milieu`, soit `droite` est remplacé par `milieu`. La différence `droite - gauche` est donc toujours au moins *diminuée de moitié*. Au bout d'un nombre fini d'itérations, notre variant de boucle devient donc inférieur ou égal à zéro et la boucle se termine.
 
 La terminaison de l'algorithme est donc prouvée.
 
@@ -118,8 +118,8 @@ Montrons que cette propriété est un **invariant de boucle**. C'est-à-dire que
 **Conservation** : supposons que la propriété est vraie à l'entrée dans une itération de la boucle `while`. Il y a trois possibilités :
 
 * `tableau[milieu] == valeur` est vérifiée. Dans ce cas, la propriété est vraie à la sortie de l'itération de la boucle et l'algorithme retourne l'indice attendu.
-* `tableau[milieu] < valeur` est vérifiée. Dans ce cas, `gauche` est incrémenté de 1. La valeur recherchée est donc située dans la partie du tableau située entre les indices `gauche` et `droite` inclus, ou bien elle est absente du tableau.
-* `tableau[milieu] > valeur` est vérifiée. Dans ce cas, `droite` est décrémenté de 1. La valeur recherchée est donc située dans la partie du tableau située entre les indices `gauche` et `droite` inclus, ou bien elle est absente du tableau.
+* `tableau[milieu] < valeur` est vérifiée. Dans ce cas, `gauche` est remplacé par `milieu`. La valeur recherchée est donc située dans la partie du tableau située entre les indices `gauche` et `droite` inclus, ou bien elle est absente du tableau.
+* `tableau[milieu] > valeur` est vérifiée. Dans ce cas, `droite` est remplacé par `milieu`. La valeur recherchée est donc située dans la partie du tableau située entre les indices `gauche` et `droite` inclus, ou bien elle est absente du tableau.
 
 **Conclusion** : la propriété est donc un invariant de boucle.
 

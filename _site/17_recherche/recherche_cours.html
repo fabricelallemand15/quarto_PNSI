@@ -237,6 +237,9 @@ window.Quarto = {
         </a>
     </div>
   </nav>
+  <div id="quarto-announcement" data-announcement-id="ce310377e890d36f0f56ede4b47c863d" class="alert alert-success hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Info</strong> - suite au changement d’URL, tous les liens internes ont été mis à jour. Si vous constatez des erreurs, merci de me les signaler.</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -320,12 +323,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_python/python_bases_quiz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices - Quiz</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../02_python/supplements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices supplémentaires</span></a>
   </div>
@@ -357,12 +354,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../03_spec/spec_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../03_spec/spec_quiz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quiz</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1231,8 +1222,8 @@ Principe de l’algorithme
 <ul>
 <li>On calcule l’indice <code>milieu</code> du milieu du tableau.</li>
 <li>Si <code>tableau[milieu]</code> est égal à <code>valeur</code>, on renvoie <code>milieu</code>.</li>
-<li>Si <code>tableau[milieu]</code> est inférieur à <code>valeur</code>, on met à jour <code>gauche</code> à <code>milieu + 1</code>. Lors de l’itération suivante, on ne considèrera donc que la partie du tableau située à droite de <code>milieu</code>.</li>
-<li>Si <code>tableau[milieu]</code> est supérieur à <code>valeur</code>, on met à jour <code>droite</code> à <code>milieu - 1</code>. Lors de l’itération suivante, on ne considèrera donc que la partie du tableau située à gauche de <code>milieu</code>.</li>
+<li>Si <code>tableau[milieu]</code> est inférieur à <code>valeur</code>, on met à jour <code>gauche</code> à <code>milieu + 1</code>. Lors de l’itération suivante, on ne considérera donc que la partie du tableau située à droite de <code>milieu</code>.</li>
+<li>Si <code>tableau[milieu]</code> est supérieur à <code>valeur</code>, on met à jour <code>droite</code> à <code>milieu - 1</code>. Lors de l’itération suivante, on ne considérera donc que la partie du tableau située à gauche de <code>milieu</code>.</li>
 </ul></li>
 <li>On renvoie <code>-1</code> si <code>valeur</code> n’est pas dans <code>tableau</code>.</li>
 </ul>
@@ -1284,7 +1275,7 @@ Principe de l’algorithme
 <section id="preuve-de-terminaison" class="level3">
 <h3 class="anchored" data-anchor-id="preuve-de-terminaison">Preuve de terminaison</h3>
 <p>Pour prouver que l’algorithme se termine, il faut prouver que la boucle <code>while</code> se termine, et donc que la condition d’arrêt <code>gauche &gt; droite</code> finit par être vérifiée <strong>ou bien</strong> que la condition <code>tableau[milieu] == valeur</code> est vérifiée.</p>
-<p>Choisissons comme <strong>variant de boucle</strong> la différence <code>droite - gauche</code> et plaçons-nous dans le cas le plus défavorable où la condition <code>tableau[milieu] == valeur</code> n’est jamais vérifiée. À chaque passage dans la boucle, soit <code>gauche</code> est incrémenté de 1, soit <code>droite</code> est décrémenté de 1. La différence <code>droite - gauche</code> est donc toujours diminuée de 1. Au bout d’un nombre fini d’itérations (au maximum égal à la taille du tableau moins un), la condition notre variant de boucle devient donc égal à zéro et la boucle se termine.</p>
+<p>Choisissons comme <strong>variant de boucle</strong> la différence <code>droite - gauche</code> et plaçons-nous dans le cas le plus défavorable où la condition <code>tableau[milieu] == valeur</code> n’est jamais vérifiée. À chaque passage dans la boucle, soit <code>gauche</code> est remplacé par <code>milieu</code>, soit <code>droite</code> est remplacé par <code>milieu</code>. La différence <code>droite - gauche</code> est donc toujours au moins <em>diminuée de moitié</em>. Au bout d’un nombre fini d’itérations, notre variant de boucle devient donc inférieur ou égal à zéro et la boucle se termine.</p>
 <p>La terminaison de l’algorithme est donc prouvée.</p>
 </section>
 <section id="preuve-de-correction" class="level3">
@@ -1295,8 +1286,8 @@ Principe de l’algorithme
 <p><strong>Conservation</strong> : supposons que la propriété est vraie à l’entrée dans une itération de la boucle <code>while</code>. Il y a trois possibilités :</p>
 <ul>
 <li><code>tableau[milieu] == valeur</code> est vérifiée. Dans ce cas, la propriété est vraie à la sortie de l’itération de la boucle et l’algorithme retourne l’indice attendu.</li>
-<li><code>tableau[milieu] &lt; valeur</code> est vérifiée. Dans ce cas, <code>gauche</code> est incrémenté de 1. La valeur recherchée est donc située dans la partie du tableau située entre les indices <code>gauche</code> et <code>droite</code> inclus, ou bien elle est absente du tableau.</li>
-<li><code>tableau[milieu] &gt; valeur</code> est vérifiée. Dans ce cas, <code>droite</code> est décrémenté de 1. La valeur recherchée est donc située dans la partie du tableau située entre les indices <code>gauche</code> et <code>droite</code> inclus, ou bien elle est absente du tableau.</li>
+<li><code>tableau[milieu] &lt; valeur</code> est vérifiée. Dans ce cas, <code>gauche</code> est remplacé par <code>milieu</code>. La valeur recherchée est donc située dans la partie du tableau située entre les indices <code>gauche</code> et <code>droite</code> inclus, ou bien elle est absente du tableau.</li>
+<li><code>tableau[milieu] &gt; valeur</code> est vérifiée. Dans ce cas, <code>droite</code> est remplacé par <code>milieu</code>. La valeur recherchée est donc située dans la partie du tableau située entre les indices <code>gauche</code> et <code>droite</code> inclus, ou bien elle est absente du tableau.</li>
 </ul>
 <p><strong>Conclusion</strong> : la propriété est donc un invariant de boucle.</p>
 <p>Deux cas sont à considérer pour conclure. Si le test <code>tableau[milieu] == valeur</code> est vérifié au cours des itérations, alors la valeur est trouvée dans le tableau et on retourne son indice <code>milieu</code> : c’est bien le comportement attendu. Si le test <code>tableau[milieu] == valeur</code> n’est jamais vérifié, alors l’algorithme se termine lorsque <code>gauche &gt; droite</code>. D’après notre invariant de boucle, soit la valeur est alors absente du tableau, soit elle est située dans la partie du tableau située entre les indices <code>gauche</code> et <code>droite</code> inclus. Mais cette partie du tableau est un tableau vide <code>[]</code>. La valeur est donc absente du tableau et on retourne l’indice <code>-1</code> : c’est bien le comportement attendu.</p>

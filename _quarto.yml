@@ -2,6 +2,12 @@ project:
   type: website
 
 website:
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    content: "**Info** - suite au changement d'URL, tous les liens internes ont été mis à jour. Si vous constatez des erreurs, merci de me les signaler."
+    type: success
+    position: below-navbar
   title: "NSI - Première"
   favicon: favicon.ico
   page-navigation: true

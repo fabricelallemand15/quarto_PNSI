@@ -237,6 +237,9 @@ window.Quarto = {
         </a>
     </div>
   </nav>
+  <div id="quarto-announcement" data-announcement-id="ce310377e890d36f0f56ede4b47c863d" class="alert alert-success hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Info</strong> - suite au changement d’URL, tous les liens internes ont été mis à jour. Si vous constatez des erreurs, merci de me les signaler.</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -320,12 +323,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_python/python_bases_quiz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices - Quiz</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../02_python/supplements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices supplémentaires</span></a>
   </div>
@@ -357,12 +354,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../03_spec/spec_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../03_spec/spec_quiz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quiz</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1212,13 +1203,13 @@ Attention
 <section id="commandes-utiles-pour-une-utilisation-de-base" class="level3">
 <h3 class="anchored" data-anchor-id="commandes-utiles-pour-une-utilisation-de-base">Commandes utiles pour une utilisation de base</h3>
 <p>Avant toute chose, on importera la bibliothèque en ajoutant la ligne suivante en début de programme :</p>
-<div id="be3d8451" class="cell" data-execution_count="1">
+<div id="c1696298" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Exemple d’ouverture d’un fichier et accès à ses informations</li>
 </ul>
-<div id="6a6e6568" class="cell" data-execution_count="2">
+<div id="305a360f" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ouverture du fichier image</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">"chat.png"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># nom du fichier</span></span>
@@ -1234,7 +1225,7 @@ Attention
 427</code></pre>
 </div>
 </div>
-<div id="1fdc95fe" class="cell" data-execution_count="3">
+<div id="9cf8af75" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage de l'image</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>img.show()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1252,7 +1243,7 @@ Attention
 <p>Dans le cas d’une image en couleurs RGB, la valeur d’un pixel est un <strong>3-uplet</strong> <span class="math inline">\((R, G, B)\)</span> dans lequel chaque élément est un entier compris entre 0 et 255 qui représente respectivement la prorportion de rouge, de vert et de bleu dans la couleur du pixel en question.</p></li>
 <li><p>Accéder à la valeur d’un pixel : <code>img.getpixel((x, y))</code>. Cette fonction retourne un entier (dans le cas d’une image noir et blanc ou en niveaux de gris) ou un triplet (dans le cas d’une image en couleurs). Attention à la syntaxe : il n’y a qu’un seul argument, qui est un couple de coordonnées (donc doubles parenthèses).</p></li>
 </ul>
-<div id="89eb55f0" class="cell" data-execution_count="4">
+<div id="4318731f" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(img.mode)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>img.getpixel((<span class="dv">48</span>,<span class="dv">75</span>)) <span class="co"># attention aux parenthèses !</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1265,7 +1256,7 @@ Attention
 <ul>
 <li>Commandes pour créer un fichier image et définir la valeur de ses pixels :</li>
 </ul>
-<div id="ccf3e652" class="cell" data-execution_count="5">
+<div id="14b8addd" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>largeur <span class="op">=</span> <span class="dv">200</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>hauteur <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Création d'une nouvelle image en niveaux de gris en mémoire</span></span>
