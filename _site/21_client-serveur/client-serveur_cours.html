@@ -204,11 +204,11 @@ window.Quarto = {
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/"> 
+    <a class="nav-link" href="https://python.sitelf.fr/"> 
 <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
+    <a class="nav-link" href="https://notebook.sitelf.fr/"> 
 <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
@@ -1255,7 +1255,7 @@ Remarque
 <li>la version du protocole <code>HTTP/1.1</code> ou <code>HTTP/2</code>.</li>
 <li>les en-têtes optionnels qui transmettent des informations supplémentaires pour les serveurs ;</li>
 </ul>
-<p>Considérons la page web <code>mapageweb.html</code> suivante, hébergée en ligne <a href="https://flallemand.fr/divers/mapageweb.html" target="_blank">à cette adresse</a>. :</p>
+<p>Considérons la page web <code>mapageweb.html</code> suivante, hébergée en ligne <a href="https://sitelf.fr/divers/mapageweb.html" target="_blank">à cette adresse</a>. :</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span> Ma page web <span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
@@ -1287,7 +1287,7 @@ Remarque
 <li>les en-têtes HTTP, comme pour les requêtes ;</li>
 <li>éventuellement un corps contenant la ressource récupérée.</li>
 </ul>
-<p>Dans l’exemple du chargement de la page <code>mapageweb.html</code> suivante, hébergée en ligne <a href="https://flallemand.fr/divers/mapageweb.html" target="_blank">à cette adresse</a>, voici la réponse du serveur :</p>
+<p>Dans l’exemple du chargement de la page <code>mapageweb.html</code> suivante, hébergée en ligne <a href="https://sitelf.fr/divers/mapageweb.html" target="_blank">à cette adresse</a>, voici la réponse du serveur :</p>
 <pre class="http"><code>HTTP/1.1 200 OK
 Accept-Ranges: bytes
 Connection: keep-alive
@@ -1554,7 +1554,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+      var filterRegex = new RegExp("https:\/\/sitelf\.fr\/PNSI");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

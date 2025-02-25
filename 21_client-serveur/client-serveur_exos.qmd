@@ -9,14 +9,14 @@ _Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être 
 
 ## {{< fa desktop >}} Exercice 1 : Utilisation des outils de développement du navigateur
 
-Avec un navigateur Web, demander la page  d'adresse [https://nsi.flallemand.fr/divers/mapageweb.html](https://nsi.flallemand.fr/divers/mapageweb.html). Ouvrir la fenêtre d'outils de développement en appuyant sur la touche de fonction `F12` et sélectionner l'onglet Réseau. On peut voir les entêtes de la requête et de la réponse HTTP. On s'intéresse ici à la requête concernant la page HTML elle-même.
+Avec un navigateur Web, demander la page  d'adresse [https://nsi.sitelf.fr/divers/mapageweb.html](https://nsi.sitelf.fr/divers/mapageweb.html). Ouvrir la fenêtre d'outils de développement en appuyant sur la touche de fonction `F12` et sélectionner l'onglet Réseau. On peut voir les entêtes de la requête et de la réponse HTTP. On s'intéresse ici à la requête concernant la page HTML elle-même.
 
 1. La requête a-t-elle abouti ? Justifier.
 1. La communication est-elle sécurisée ?
 1. Quelles informations **sur le client** sont transmises au serveur dans l'entête de la requête ?
 1. Quelles informations **sur le serveur** sont transmises au client dans l'entête de la réponse ?
-1. Effectuer une nouvelle requête avec l'URL [https://nsi.flallemand.fr/Divers/mapageweb.html](https://nsi.flallemand.fr/Divers/mapageweb.html). Quel est le code d'état de la réponse ? Explication ?
-1. Effectuer une nouvelle requête avec l'URL [https://nsi.flallemand.fr/divers/interdit/](https://nsi.flallemand.fr/divers/interdit/). Quel est le code d'état de la réponse ? Explication ?
+1. Effectuer une nouvelle requête avec l'URL [https://nsi.sitelf.fr/Divers/mapageweb.html](https://nsi.sitelf.fr/Divers/mapageweb.html). Quel est le code d'état de la réponse ? Explication ?
+1. Effectuer une nouvelle requête avec l'URL [https://nsi.sitelf.fr/divers/interdit/](https://nsi.sitelf.fr/divers/interdit/). Quel est le code d'état de la réponse ? Explication ?
 
 ## {{< fa desktop >}} Exercice 2 : HTTP et python
 

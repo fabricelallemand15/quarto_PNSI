@@ -5,7 +5,7 @@ website:
   title: "NSI - Première"
   favicon: favicon.ico
   page-navigation: true
-  site-url: https://flallemand.fr/PNSI
+  site-url: https://sitelf.fr/PNSI
   repo-url: https://github.com/fabricelallemand15/quarto_PNSI
   repo-actions: [issue]
   reader-mode: true
@@ -15,9 +15,9 @@ website:
     left:
       - href: index.qmd
         text: "{{< fa house-chimney-window >}} Accueil"
-      - href: https://python.flallemand.fr/
+      - href: https://python.sitelf.fr/
         text: "{{< fa brands python >}} Console Python"
-      - href: https://notebook.flallemand.fr/
+      - href: https://notebook.sitelf.fr/
         text: "{{< fa pen-to-square >}} Notebook Python"
       - href: ressources.qmd
         text: "{{< fa info >}} Sources utilisées"

@@ -204,11 +204,11 @@ window.Quarto = {
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/"> 
+    <a class="nav-link" href="https://python.sitelf.fr/"> 
 <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
+    <a class="nav-link" href="https://notebook.sitelf.fr/"> 
 <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
@@ -1257,7 +1257,7 @@ Principe
 </tbody>
 </table>
 <p>Sur la représentation ci-dessous, on a représenté les iris de la classe Setosa en vert, ceux de la classe Versicolor en bleu et ceux de la classe Virginica en rouge.</p>
-<div id="42006a9d" class="cell" data-execution_count="1">
+<div id="c5644172" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1286,7 +1286,7 @@ Principe
 </div>
 <p>Considérons maintenant une fleur d’iris “Iris X” dont les pétales ont une longueur de 3,5 cm et une largeur de 0,75 cm. On souhaite déterminer la classe de cette fleur.</p>
 <p>Ajoutons le point correspondant à “Iris X” sur le graphique précédent.</p>
-<div id="5d97e5bf" class="cell" data-execution_count="2">
+<div id="19854cac" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(X[y <span class="op">==</span> <span class="dv">0</span>, <span class="dv">0</span>], X[y <span class="op">==</span> <span class="dv">0</span>, <span class="dv">1</span>], color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Versicolor'</span>)</span>
@@ -1604,7 +1604,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+      var filterRegex = new RegExp("https:\/\/sitelf\.fr\/PNSI");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

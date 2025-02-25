@@ -156,10 +156,10 @@ Nous fournissons un attribut **name** pour chaque contrôle de formulaire. Les n
 
 Pour nommer les données dans un formulaire, vous devez utiliser l'attribut **name** sur chaque widget de formulaire qui collectera une donnée spécifique. 
 
-Regardons notre code de formulaire : modifiez comme indiqué ci-dessous la valeur de l'attribut **action** afin que les données soient envoyées à la page `http://nsi.flallemand.fr/divers/acti4_forms.php` :
+Regardons notre code de formulaire : modifiez comme indiqué ci-dessous la valeur de l'attribut **action** afin que les données soient envoyées à la page `http://nsi.sitelf.fr/divers/acti4_forms.php` :
 
 ```html
-<form action="http://nsi.flallemand.fr/divers/acti4_forms.php" method="get">
+<form action="http://nsi.sitelf.fr/divers/acti4_forms.php" method="get">
   <p>Mot de passe oublié</p>
   <label for="identifiant">Identifiant</label><br>
   <input type="text" id="identifiant" name="user_id" /><br>
@@ -169,9 +169,9 @@ Regardons notre code de formulaire : modifiez comme indiqué ci-dessous la valeu
 </form>
 ```
 
-Dans notre exemple, le formulaire enverra 2 données nommées "user_id" et " user_email". Ces données seront envoyées à l'URL `http://nsi.flallemand.fr/divers/acti4_forms.php` en utilisant la méthode HTTP GET.
+Dans notre exemple, le formulaire enverra 2 données nommées "user_id" et " user_email". Ces données seront envoyées à l'URL `http://nsi.sitelf.fr/divers/acti4_forms.php` en utilisant la méthode HTTP GET.
 
-Côté serveur, le script à l'URL `http://nsi.flallemand.fr/divers/acti4_forms.php` recevra les données sous la forme d'une liste de 2 éléments clé/valeur contenus dans la requête HTTP. La façon dont ce script traitera ces données dépend de vous. Chaque langage côté serveur (PHP, Python, Ruby, Java, C#, etc.) possède son propre mécanisme de gestion des données de formulaire. Nous n'allons pas approfondir ce sujet ici.
+Côté serveur, le script à l'URL `http://nsi.sitelf.fr/divers/acti4_forms.php` recevra les données sous la forme d'une liste de 2 éléments clé/valeur contenus dans la requête HTTP. La façon dont ce script traitera ces données dépend de vous. Chaque langage côté serveur (PHP, Python, Ruby, Java, C#, etc.) possède son propre mécanisme de gestion des données de formulaire. Nous n'allons pas approfondir ce sujet ici.
 
 Pour notre exemple, c'est le langage PHP qui est utilisé.
 
@@ -212,7 +212,7 @@ Pour éviter cet affichage dans la barre d'adresse, on utilise plutôt la métho
 Pour cela, modifier l'attribut **method** dans le fichier `index.html` :
 
 ```html
-<form action="http://nsi.flallemand.fr/divers/acti4_forms_bis.php" method="post">
+<form action="http://nsi.sitelf.fr/divers/acti4_forms_bis.php" method="post">
 ```
 
 On modifie aussi l'attribut **action** car le code PHP pour extraire les données transmises par la méthode POST n'est pas exactement le même.

@@ -204,11 +204,11 @@ window.Quarto = {
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://python.flallemand.fr/"> 
+    <a class="nav-link" href="https://python.sitelf.fr/"> 
 <span class="menu-text"><i class="fa-brands fa-python" aria-label="python"></i> Console Python</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://notebook.flallemand.fr/"> 
+    <a class="nav-link" href="https://notebook.sitelf.fr/"> 
 <span class="menu-text"><i class="fa-solid fa-pen-to-square" aria-label="pen-to-square"></i> Notebook Python</span></a>
   </li>  
   <li class="nav-item">
@@ -1311,8 +1311,8 @@ Objectifs de cette activité
 <p>La dernière partie, et peut-être la plus délicate, consiste à gérer les données du formulaire côté serveur. L’élément <strong><code>&lt;form&gt;</code></strong> définit où et comment envoyer les données grâce aux attributs <strong>action</strong> et <strong>method</strong>.</p>
 <p>Nous fournissons un attribut <strong>name</strong> pour chaque contrôle de formulaire. Les noms sont importants à la fois côté client et côté serveur ; ils indiquent au navigateur quel nom donner à chaque donnée et, côté serveur, ils laissent le serveur gérer chaque donnée par son nom. Les données du formulaire sont envoyées au serveur sous forme de paires nom/valeur.</p>
 <p>Pour nommer les données dans un formulaire, vous devez utiliser l’attribut <strong>name</strong> sur chaque widget de formulaire qui collectera une donnée spécifique.</p>
-<p>Regardons notre code de formulaire : modifiez comme indiqué ci-dessous la valeur de l’attribut <strong>action</strong> afin que les données soient envoyées à la page <code>http://nsi.flallemand.fr/divers/acti4_forms.php</code> :</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">"http://nsi.flallemand.fr/divers/acti4_forms.php"</span><span class="ot"> method</span><span class="op">=</span><span class="st">"get"</span><span class="dt">&gt;</span></span>
+<p>Regardons notre code de formulaire : modifiez comme indiqué ci-dessous la valeur de l’attribut <strong>action</strong> afin que les données soient envoyées à la page <code>http://nsi.sitelf.fr/divers/acti4_forms.php</code> :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">"http://nsi.sitelf.fr/divers/acti4_forms.php"</span><span class="ot"> method</span><span class="op">=</span><span class="st">"get"</span><span class="dt">&gt;</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Mot de passe oublié<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">label</span><span class="ot"> for</span><span class="op">=</span><span class="st">"identifiant"</span><span class="dt">&gt;</span>Identifiant<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"identifiant"</span><span class="ot"> name</span><span class="op">=</span><span class="st">"user_id"</span><span class="ot"> </span><span class="dt">/&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
@@ -1320,8 +1320,8 @@ Objectifs de cette activité
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"email"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"mail"</span><span class="ot"> name</span><span class="op">=</span><span class="st">"user_email"</span><span class="ot"> </span><span class="dt">/&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> type</span><span class="op">=</span><span class="st">"submit"</span><span class="dt">&gt;</span>Récupérer mon mot de passe<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Dans notre exemple, le formulaire enverra 2 données nommées “user_id” et ” user_email”. Ces données seront envoyées à l’URL <code>http://nsi.flallemand.fr/divers/acti4_forms.php</code> en utilisant la méthode HTTP GET.</p>
-<p>Côté serveur, le script à l’URL <code>http://nsi.flallemand.fr/divers/acti4_forms.php</code> recevra les données sous la forme d’une liste de 2 éléments clé/valeur contenus dans la requête HTTP. La façon dont ce script traitera ces données dépend de vous. Chaque langage côté serveur (PHP, Python, Ruby, Java, C#, etc.) possède son propre mécanisme de gestion des données de formulaire. Nous n’allons pas approfondir ce sujet ici.</p>
+<p>Dans notre exemple, le formulaire enverra 2 données nommées “user_id” et ” user_email”. Ces données seront envoyées à l’URL <code>http://nsi.sitelf.fr/divers/acti4_forms.php</code> en utilisant la méthode HTTP GET.</p>
+<p>Côté serveur, le script à l’URL <code>http://nsi.sitelf.fr/divers/acti4_forms.php</code> recevra les données sous la forme d’une liste de 2 éléments clé/valeur contenus dans la requête HTTP. La façon dont ce script traitera ces données dépend de vous. Chaque langage côté serveur (PHP, Python, Ruby, Java, C#, etc.) possède son propre mécanisme de gestion des données de formulaire. Nous n’allons pas approfondir ce sujet ici.</p>
 <p>Pour notre exemple, c’est le langage PHP qui est utilisé.</p>
 <p>Voici, pour information, le contenu du fichier <code>acti4_forms.php</code> (remarque : les éléments CSS sont ici directement inclus dans le fichier, ce qui n’est pas une bonne habitude) :</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!</span><span class="cn">DOCTYPE</span> html<span class="op">&gt;</span></span>
@@ -1351,7 +1351,7 @@ Objectifs de cette activité
 <p>Observer l’URL affichée dans la barre d’adresse du navigateur. Que constatez-vous ?</p>
 <p>Pour éviter cet affichage dans la barre d’adresse, on utilise plutôt la méthode HTTP POST pour l’envoi de données de formulaires.</p>
 <p>Pour cela, modifier l’attribut <strong>method</strong> dans le fichier <code>index.html</code> :</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">"http://nsi.flallemand.fr/divers/acti4_forms_bis.php"</span><span class="ot"> method</span><span class="op">=</span><span class="st">"post"</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">"http://nsi.sitelf.fr/divers/acti4_forms_bis.php"</span><span class="ot"> method</span><span class="op">=</span><span class="st">"post"</span><span class="dt">&gt;</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>On modifie aussi l’attribut <strong>action</strong> car le code PHP pour extraire les données transmises par la méthode POST n’est pas exactement le même.</p>
 <p>Tester à nouveau cette nouvelle version du formulaire et observer l’URL affiché dans la barre d’adresse.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1607,7 +1607,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/PNSI");
+      var filterRegex = new RegExp("https:\/\/sitelf\.fr\/PNSI");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

@@ -126,7 +126,7 @@ Nous comptons la complexité en termes d'opérations arithmétiques : additions 
 
 #### Visualisation graphique du temps d'exécution
 
-En utilisant le module `timeit` comme expliqué dans [cet article](https://flallemand.fr/blog/posts/timeexec/){target="_blank"}, on peut visualiser graphiquement le temps d'exécution de l'algorithme en fonction de la taille des données.
+En utilisant le module `timeit` comme expliqué dans [cet article](https://sitelf.fr/blog/posts/timeexec/){target="_blank"}, on peut visualiser graphiquement le temps d'exécution de l'algorithme en fonction de la taille des données.
 
 ```{python}
 import matplotlib.pyplot as plt

@@ -68,7 +68,7 @@ On trouve les éléments suivants :
 * la version du protocole `HTTP/1.1` ou `HTTP/2`.
 * les en-têtes optionnels qui transmettent des informations supplémentaires pour les serveurs ;
 
-Considérons la page web `mapageweb.html` suivante, hébergée en ligne [à cette adresse](https://flallemand.fr/divers/mapageweb.html){target="_blank"}. : 
+Considérons la page web `mapageweb.html` suivante, hébergée en ligne [à cette adresse](https://sitelf.fr/divers/mapageweb.html){target="_blank"}. : 
 
 ```html
 <html>
@@ -103,7 +103,7 @@ On trouve les éléments suivants :
 * les en-têtes HTTP, comme pour les requêtes ;
 * éventuellement un corps contenant la ressource récupérée.
 
-Dans l'exemple du chargement de la page `mapageweb.html` suivante, hébergée en ligne [à cette adresse](https://flallemand.fr/divers/mapageweb.html){target="_blank"}, voici la réponse du serveur :
+Dans l'exemple du chargement de la page `mapageweb.html` suivante, hébergée en ligne [à cette adresse](https://sitelf.fr/divers/mapageweb.html){target="_blank"}, voici la réponse du serveur :
 
 ```http
 HTTP/1.1 200 OK

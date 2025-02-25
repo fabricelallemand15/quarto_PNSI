@@ -47,4 +47,4 @@ Le développement des PC avec processeur Intel et dans une moindre mesure des or
 
 Le millénaire se termine avec la victoire aux échecs du calculateur [Deep Blue](https://fr.wikipedia.org/wiki/Deep_Blue){ target=_blank } contre le champion du monde et l'apparition du processeur Intel Pentium 3, comprenant 10 Millions de transistors de largeur de grille 200 nm. Il fonctionne avec une horloge à 1 GHz.
 
-Pour en savoir plus sur l'évolution des ordinateurs, voir [cet article](https://www.flallemand.fr/wp/2022/07/02/histoire-de-linformatique/).
+Pour en savoir plus sur l'évolution des ordinateurs, voir [cet article](https://www.sitelf.fr/wp/2022/07/02/histoire-de-linformatique/).

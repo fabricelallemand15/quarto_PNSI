@@ -8,15 +8,15 @@ _Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être 
 
 ## {{< fa solid pencil-alt >}} QCM
 
-<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=28" width="959" height="380" frameborder="0" allowfullscreen="allowfullscreen" title="linux 1"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+<iframe src="https://www.sitelf.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=28" width="959" height="380" frameborder="0" allowfullscreen="allowfullscreen" title="linux 1"></iframe><script src="https://www.sitelf.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=29" width="959" height="380" frameborder="0" allowfullscreen="allowfullscreen" title="linux 2"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+<iframe src="https://www.sitelf.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=29" width="959" height="380" frameborder="0" allowfullscreen="allowfullscreen" title="linux 2"></iframe><script src="https://www.sitelf.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=30" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="linux 3"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+<iframe src="https://www.sitelf.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=30" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="linux 3"></iframe><script src="https://www.sitelf.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=31" width="959" height="420" frameborder="0" allowfullscreen="allowfullscreen" title="linux 4"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+<iframe src="https://www.sitelf.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=31" width="959" height="420" frameborder="0" allowfullscreen="allowfullscreen" title="linux 4"></iframe><script src="https://www.sitelf.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
-<iframe src="https://www.flallemand.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=32" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="linux 5"></iframe><script src="https://www.flallemand.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+<iframe src="https://www.sitelf.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=32" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="linux 5"></iframe><script src="https://www.sitelf.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 ## {{< fa solid pencil-alt >}} Exercice 1
 
