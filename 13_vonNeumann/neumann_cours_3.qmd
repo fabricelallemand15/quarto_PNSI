@@ -110,4 +110,4 @@ Pour que les données circulent entre les différentes parties d'un ordinateur (
 
 ![](bus.png){ width="50%" }
 
-Pour en savoir plus, voir la vidéo "Comment fonctionne un ordinateur ?" dans [cet article](https://www.sitelf.fr/wp/2022/07/02/la-chaine-youtube-codeur-pro/).
+Pour en savoir plus, voir la vidéo "Comment fonctionne un ordinateur ?" dans [cet article](https://mathsinfolycee.sitelf.fr/posts/codeurpro/).

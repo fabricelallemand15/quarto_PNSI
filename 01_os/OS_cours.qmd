@@ -82,7 +82,7 @@ Voici la répartition des parts de marché des principaux OS utilisés sur les o
 
 **Compléments** : 
 
-* voir sur le blog la vidéo "Un système d'exploitation, c'est quoi ?" dans cet [article](https://www.sitelf.fr/wp/2022/07/02/la-chaine-youtube-codeur-pro/){target=_blank}.
+* voir sur le blog la vidéo "Un système d'exploitation, c'est quoi ?" dans cet [article](https://mathsinfolycee.sitelf.fr/posts/codeurpro/){target=_blank}.
 * des explications plus poussées dans [cette vidéo](https://youtu.be/SpCP2oaCx8A){target=_blank}.
 * vidéo présentant l'[histoire d'Unix](https://www.youtube.com/watch?v=Za6vGTLp-wg){target=_blank}.
 * vidéo présentant l'[histoire de Linux](https://www.youtube.com/watch?v=Uq5ddTUtDkM){target=_blank}.

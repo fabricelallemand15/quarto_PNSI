@@ -39,14 +39,12 @@ website:
           - 02_python/python_bases_exos_2.qmd
           - 02_python/python_bases_exos_3.qmd
           - 02_python/python_bases_exos_4.qmd
-          - 02_python/python_bases_quiz.qmd
           - 02_python/supplements.qmd
       - section: "Ch. 3 - Spécification et mise au point de programmes"
         contents: 
           - 03_spec/index.qmd
           - 03_spec/spec_cours.qmd
           - 03_spec/spec_exos.qmd
-          - 03_spec/spec_quiz.qmd
           - 03_spec/TP_dessine_ta_rue.qmd
       - section: "Ch. 4 - Diversité et unité des langages de programmation"
         contents: 

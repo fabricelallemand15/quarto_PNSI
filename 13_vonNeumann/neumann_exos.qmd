@@ -6,24 +6,6 @@ _Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machi
 
 _Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
 
-## Architecture
-
-## {{< fa solid pencil-alt >}} Exercice 1 (QCM)
-
-<iframe src="https://www.sitelf.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=22" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="von Neumann 1"></iframe><script src="https://www.sitelf.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
-
-<iframe src="https://www.sitelf.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=23" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="von Neumann 2"></iframe><script src="https://www.sitelf.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
-
-<iframe src="https://www.sitelf.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=24" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="von Neumann 3"></iframe><script src="https://www.sitelf.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
-
-<iframe src="https://www.sitelf.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=25" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="von Neumann 4"></iframe><script src="https://www.sitelf.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
-
-<iframe src="https://www.sitelf.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=26" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="von Neumann 5"></iframe><script src="https://www.sitelf.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
-
-<iframe src="https://www.sitelf.fr/wp/wp-admin/admin-ajax.php?action=h5p_embed&id=27" width="959" height="340" frameborder="0" allowfullscreen="allowfullscreen" title="von Neumann 6"></iframe><script src="https://www.sitelf.fr/wp/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
-
---------------------------------------------
-
 ## Assembleur
 
 ## {{< fa solid pencil-alt >}} Exercice 2

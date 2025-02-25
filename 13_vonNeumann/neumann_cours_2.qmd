@@ -36,7 +36,7 @@ Il s'agit de l'opérateur logique NAND, NON ET.
 
 On peut de la même façon créer des circuits réalisant toutes les opérations logiques.
 
-Pour en savoir plus sur les transistors voir [cet article](https://www.sitelf.fr/wp/2022/07/02/les-transistors-expliques/).
+Pour en savoir plus sur les transistors voir [cet article](https://mathsinfolycee.sitelf.fr/posts/transistors/index.html).
 
 ### 2. Les circuits logiques
 
@@ -131,4 +131,4 @@ Une chose est très importante à bien comprendre : à la base nous avons le tra
 
 Au sommet de cet édifice, nous allons trouver la mémoire vive (RAM) et le microprocesseur (CPU).
 
-Pour en savoir plus sur les portes logiques voir la vidéo "Les portes logiques" dans cet [article](https://www.sitelf.fr/wp/2022/07/02/la-chaine-youtube-codeur-pro/).
+Pour en savoir plus sur les portes logiques voir la vidéo "Les portes logiques" dans cet [article](https://mathsinfolycee.sitelf.fr/posts/codeurpro/).

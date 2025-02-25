@@ -134,7 +134,7 @@ En base 2, nous ne disposons donc que des deux chiffres 0 et 1. On parle de syst
 
 Un chiffre binaire, _binary digit_ en anglais est appelé en abrégé un **bit**.
 
-Voir [cet article du blog](https://www.sitelf.fr/wp/2022/06/19/mesurer-la-quantite-dinformation/){ target=_blank } au sujet des unités de mesures binaires.
+Voir [cet article du blog](https://mathsinfolycee.sitelf.fr/posts/mesurerinfo/index.html){ target=_blank } au sujet des unités de mesures binaires.
 
 Voici comment compter jusqu'à 10 en base 2 :
 
@@ -278,4 +278,4 @@ Exemple de l'addition de $11_{10}=1011_2$ et de $13_{10}=1101_2$ (les retenues s
 
 La somme obtenue $1\;1000_2$ correspond bien à l'entier $24_{10}$ codé en binaire. On remarque qu'il a fallu un bit supplémentaire pour coder la somme. Si on travaille avec une taille d'entiers fixe de 4 bits, alors le bit de poids fort sera ignoré, et on obtiendra seulement $1000_2$ comme résultat, c'est-à-dire 8. Autrement dit, sur 4 bits, quand on dépasse la capacité de $2^4-1=15$, on repart de zéro : $24=2^4+8$. On dit que le calcul se fait **modulo $2^4$**.
 
-En complément, vous pouvez regarder la vidéo "Le binaire, c'est quoi ?" dans cet [article](https://www.sitelf.fr/wp/2022/07/02/la-chaine-youtube-codeur-pro/).
+En complément, vous pouvez regarder la vidéo "Le binaire, c'est quoi ?" dans cet [article](https://mathsinfolycee.sitelf.fr/posts/codeurpro/).
