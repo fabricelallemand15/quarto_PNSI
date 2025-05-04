@@ -37,11 +37,11 @@ Par défaut, le protocole HTTP n'est pas sécurisé, les données (texte de la r
 ## Remarque
 En réalité, le client est également connecté à plusieurs serveurs. Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus. Ces différents éléments proviennent souvent de différents serveurs.
 
-![](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/fetching_a_page.png)
+![](https://mdn.github.io/shared-assets/images/diagrams/http/overview/fetching-a-page.svg)
 
 Autre simplification effectuée dans ce cours : en réalité, plusieurs machines se trouvent sur le chemin de l'information entre le client et le serveur. Ces machines sont désignées de façon générique sous le terme **proxies**. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme caches.
 
-![](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/client-server-chain.png)
+![](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
 <!--  -->
 :::
 
@@ -59,7 +59,7 @@ D'une part, un serveur n'est pas nécessairement une machine unique et d'autre p
 
 Voici un exemple de requête : 
 
-![Requête HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_request.png){width="50%"}
+![Requête HTTP](requete.png){width="50%"}
 
 On trouve les éléments suivants : 
 
@@ -93,7 +93,7 @@ Nous voyons qu'en fait deux requêtes ont été envoyées, car le navigateur cha
 
 Voici un exemple de réponse :
 
-![réponse HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http_response.png){width="50%"}
+![réponse HTTP](reponse.png){width="50%"}
 
 On trouve les éléments suivants :
 
