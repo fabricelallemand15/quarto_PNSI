@@ -2,4 +2,4 @@
 title: Exercices
 subtitle: Algorithmes gloutons
 ---
-Fiche d'exercices sur Capytale : [Cliquer ici !]()
+Fiche d'exercices sur Capytale : [Cliquer ici !](https://capytale2.ac-paris.fr/web/c/6d82-3500322)
