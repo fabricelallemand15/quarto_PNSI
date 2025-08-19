@@ -10,3 +10,8 @@ L’importance de la spécification, de la documentation et des tests est à pr�
 |------- |--------- |------ |
 | Constructions élémentaires | Mettre en évidence un corpus de constructions élémentaires. | Séquences, affectation, conditionnelles, boucles bornées, boucles non bornées, appels de fonction. |
 | Utilisation de bibliothèques | Utiliser la documentation d’une bibliothèque. | Aucune connaissance exhaustive d’une bibliothèque particulière n’est exigible. |
+
+| Contenus | Capacités attendues | Commentaires |
+|------- |--------- |------ |
+| Diversité et unité des langages de programmation | Repérer, dans un nouveau langage de programmation, les traits communs et les traits particuliers à ce langage. | Les manières dont un même programme simple s’écrit dans différents langages sont comparées. |
+

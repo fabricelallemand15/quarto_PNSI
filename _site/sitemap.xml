@@ -97,8 +97,8 @@
     <lastmod>2025-02-02T21:36:15.722Z</lastmod>
   </url>
   <url>
-    <loc>https://sitelf.fr/PNSI/15_parcours/parcours_cours.html</loc>
-    <lastmod>2025-02-02T21:36:15.530Z</lastmod>
+    <loc>https://sitelf.fr/PNSI/16_tris/tris_cours.html</loc>
+    <lastmod>2025-02-02T21:36:15.645Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/14_algo/index.html</loc>
@@ -118,7 +118,7 @@
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/13_vonNeumann/index.html</loc>
-    <lastmod>2025-02-02T21:36:15.498Z</lastmod>
+    <lastmod>2025-08-17T20:27:50.041Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/13_vonNeumann/neumann_cours_1.html</loc>
@@ -182,83 +182,75 @@
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/04_langages/langages.html</loc>
-    <lastmod>2025-02-02T21:36:15.293Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/03_spec/TP_dessine_ta_rue.html</loc>
-    <lastmod>2025-02-02T21:36:15.284Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/03_spec/spec_cours.html</loc>
-    <lastmod>2025-02-02T21:36:15.286Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/02_python/supplements.html</loc>
-    <lastmod>2025-02-25T05:19:18.622Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_4.html</loc>
-    <lastmod>2025-02-02T21:36:15.242Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_2.html</loc>
-    <lastmod>2025-02-02T21:36:15.241Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/02_python/index.html</loc>
-    <lastmod>2025-02-02T21:36:15.240Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/01_os/OS_exos.html</loc>
-    <lastmod>2025-02-25T05:02:45.185Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/01_os/index.html</loc>
-    <lastmod>2025-02-02T21:36:15.191Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/16_tris/tris_cours.html</loc>
-    <lastmod>2025-02-02T21:36:15.645Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/16_tris/index.html</loc>
-    <lastmod>2025-02-02T21:36:15.645Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/16_tris/tris_exos.html</loc>
-    <lastmod>2025-02-02T21:36:15.648Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/01_os/OS_cours.html</loc>
-    <lastmod>2025-02-25T05:02:16.839Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/01_os/quiz.html</loc>
-    <lastmod>2025-02-02T21:36:15.228Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_1.html</loc>
-    <lastmod>2025-02-02T21:36:15.241Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_3.html</loc>
-    <lastmod>2025-02-02T21:36:15.242Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/02_python/python_cours.html</loc>
-    <lastmod>2025-02-02T21:36:15.244Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/03_spec/index.html</loc>
-    <lastmod>2025-02-02T21:36:15.284Z</lastmod>
+    <lastmod>2025-08-19T19:31:03.210Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/03_spec/spec_exos.html</loc>
     <lastmod>2025-02-02T21:36:15.288Z</lastmod>
   </url>
   <url>
-    <loc>https://sitelf.fr/PNSI/04_langages/index.html</loc>
-    <lastmod>2025-02-02T21:36:15.292Z</lastmod>
+    <loc>https://sitelf.fr/PNSI/03_spec/index.html</loc>
+    <lastmod>2025-02-02T21:36:15.284Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/02_python/python_cours.html</loc>
+    <lastmod>2025-02-02T21:36:15.244Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_3.html</loc>
+    <lastmod>2025-02-02T21:36:15.242Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_1.html</loc>
+    <lastmod>2025-02-02T21:36:15.241Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/01_os/quiz.html</loc>
+    <lastmod>2025-02-02T21:36:15.228Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/01_os/OS_cours.html</loc>
+    <lastmod>2025-02-25T05:02:16.839Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/15_parcours/parcours_cours.html</loc>
+    <lastmod>2025-02-02T21:36:15.530Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/15_parcours/index.html</loc>
+    <lastmod>2025-02-02T21:36:15.529Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/15_parcours/parcours_exos.html</loc>
+    <lastmod>2025-02-02T21:36:15.530Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/01_os/OS_exos.html</loc>
+    <lastmod>2025-02-25T05:02:45.185Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/02_python/index.html</loc>
+    <lastmod>2025-08-17T20:23:32.824Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_2.html</loc>
+    <lastmod>2025-02-02T21:36:15.241Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_4.html</loc>
+    <lastmod>2025-02-02T21:36:15.242Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/02_python/supplements.html</loc>
+    <lastmod>2025-02-25T05:19:18.622Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/03_spec/spec_cours.html</loc>
+    <lastmod>2025-02-02T21:36:15.286Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/03_spec/TP_dessine_ta_rue.html</loc>
+    <lastmod>2025-02-02T21:36:15.284Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/05_base/base_cours.html</loc>
@@ -341,12 +333,12 @@
     <lastmod>2025-02-02T21:36:15.528Z</lastmod>
   </url>
   <url>
-    <loc>https://sitelf.fr/PNSI/15_parcours/index.html</loc>
-    <lastmod>2025-02-02T21:36:15.529Z</lastmod>
+    <loc>https://sitelf.fr/PNSI/16_tris/index.html</loc>
+    <lastmod>2025-02-02T21:36:15.645Z</lastmod>
   </url>
   <url>
-    <loc>https://sitelf.fr/PNSI/15_parcours/parcours_exos.html</loc>
-    <lastmod>2025-02-02T21:36:15.530Z</lastmod>
+    <loc>https://sitelf.fr/PNSI/16_tris/tris_exos.html</loc>
+    <lastmod>2025-02-02T21:36:15.648Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/17_recherche/recherche_cours.html</loc>

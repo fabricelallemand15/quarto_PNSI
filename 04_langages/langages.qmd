@@ -1,5 +1,5 @@
 ---
-title: Cours
+title: Exposé / Recherches - Diversité et unité des langages de programmation
 ---
 
 Il existe de très nombreux langages de programmation différents. Chaque langage a ses particularités propres, mais certaines ressemblances peuvent également être observées.
