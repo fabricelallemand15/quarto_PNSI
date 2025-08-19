@@ -1,0 +1,117 @@
+---
+title: Instructions conditionnelles
+---
+
+Dans les scripts précédents, les séquences d'instructions sont exécutées ligne après ligne, dans l'ordre où elles sont écrites, suivant un organigramme simple du type ci-dessous.
+
+![](flowchart_sequence.svg)
+
+Une instruction conditionnelle permet d'indiquer à python de ne pas exécuter une suite de commandes dans l'ordre où elles sont écrites, mais de suivre différents chemins selon les circonstances.
+
+L'idée de base est la suivante :
+
+```python
+if test:
+	instruction1
+else:
+	instruction2
+```
+
+Si "test" est True alors "instruction1" est exécutée et "instruction2" est ignorée.
+
+Sinon (sous-entendu que "test" est False) "instruction2" est exécutée et "instruction1" est ignorée.
+
+![](flowchart_if_else.svg)
+
+Plusieurs conditions peuvent être testées : on utilise pour cela le mot-clef `elif`, contraction de _else if_ :
+
+```python
+if test1:
+	instruction1
+elif test2:
+    instruction2
+elif test3:
+    instruction3
+else:
+	instruction4
+```
+
+Dans ce cas, si `test1` est True, `instruction1` est exécutée et tout le reste est ignoré. Sinon, si `test2` est True, alors `instruction2` est exécutée et tout le reste est ignoré. Si `test1` et `test2` sont False et `test3` True, alors `instruction3` est exécutée. Si les trois tests sont False, c'est `instruction4` qui est exécutée.
+
+![](flowchart_if_elif.svg)
+
+:::{.callout-note}
+## Remarques
+
+* Seul `if` est nécessaire dans une instruction conditionnelle. Les commandes `elif` et `else` sont optionnelles.
+* Le bloc d'instructions conditionnelles est introduit par une ligne se terminant par une instruction `if`, `elif` ou `else` suivie d'un double point.
+* Ce bloc est délimité par une **indentation** spécifique : décalage de 4 espaces vers la droite.
+* Dans tout éditeur de programme digne de ce nom, cette indentation se fait automatiquement quand on tape "Entrée" à la fin d'une ligne se terminant par un double point.
+:::
+
+Si on considère le programme suivant :
+
+```python
+a = 4
+b = 7
+if a < b:
+	print("Je suis toto.");
+	print("Je n'aime pas titi.")
+else:
+	print("Je suis titi.")
+	print("Je n'aime pas toto.")
+print("En revanche, j'aime le Python.")
+```
+nous avons `a < b` qui est True, nous allons donc exécuter les  2 lignes 
+
+```python
+print("Je suis toto.");
+print("Je n'aime pas titi.")
+```
+les lignes 
+
+```python
+print("Je suis titi.")
+print("Je n'aime pas toto.")
+```
+seront ignorées.
+
+En revanche la ligne 
+```python
+print("En revanche, j'aime le Python.")
+```
+sera systématiquement exécutée.
+
+L'exécution de ce programme permettra d'afficher à l'écran :
+
+```python
+Je suis toto.
+Je n'aime pas titi.
+En revanche, j'aime le Python.
+```
+
+Si maintenant on considère ce programme :
+
+```python
+a = 8
+b = 7
+if a < b:
+	print("Je suis toto.");
+	print("Je n'aime pas titi.")
+else:
+	print("Je suis titi.")
+	print("Je n'aime pas toto.")
+print("En revanche, j'aime le Python.")
+```
+L'exécution de ce programme entraînera l'affichage suivant  :
+
+```python
+Je suis titi.
+Je n'aime pas toto.
+En revanche, j'aime le Python.
+```
+:::{.callout-caution}
+## Exercices
+
+{{< fa person-digging >}} [Fiche d'exercices sur les instructions conditionnelles](python_bases_exos_2.qmd){target=_blank}.
+:::

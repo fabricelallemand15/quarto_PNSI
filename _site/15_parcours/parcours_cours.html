@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cours – NSI - Première</title>
+<title>Parcourir un tableau – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../15_parcours/parcours_exos.html" rel="next">
-<link href="../15_parcours/index.html" rel="prev">
+<link href="../04_langages/langages.html" rel="next">
+<link href="../11_tableaux/tableaux.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -394,7 +394,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../02_python/index.html">Ch. 1 - Python : les bases</a></li><li class="breadcrumb-item"><a href="../15_parcours/parcours_cours.html">Cours</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../02_python/python_bases.html">Ch. 1 - Python : les bases</a></li><li class="breadcrumb-item"><a href="../15_parcours/parcours_cours.html">Parcourir un tableau</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -417,14 +417,62 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_python/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
+  <a href="../02_python/python_bases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Variables et types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_python/python_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+  <a href="../02_python/python_if_else.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Instructions conditionnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_boucles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Instructions répétitives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_fonctions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonctions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../03_spec/spec_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mise au point de programmes, prendre de bonnes habitudes !</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_str.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zoom sur les chaînes de caractères</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../02_python/python_bool.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zoom sur les booléens</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../11_tableaux/tableaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zoom sur les tableaux (listes)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../15_parcours/parcours_cours.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Parcourir un tableau</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04_langages/langages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exposé / Recherches - Diversité et unité des langages de programmation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -459,32 +507,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../08_booleens/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../08_booleens/booleens_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../08_booleens/booleens_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../11_tableaux/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../11_tableaux/tableaux.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -501,38 +525,8 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../15_parcours/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../15_parcours/parcours_cours.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Cours</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../15_parcours/parcours_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../04_langages/langages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exposé / Recherches - Diversité et unité des langages de programmation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../03_spec/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../03_spec/spec_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -558,12 +552,6 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../13_vonNeumann/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_1.html" class="sidebar-item-text sidebar-link">
@@ -631,12 +619,6 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../18_html/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../18_html/acti1_HTML.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Activité : Page web et langage HTML</span></a>
   </div>
@@ -655,12 +637,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../19_css/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../19_css/acti2_CSS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Activité : Le couple HTML/CSS</span></a>
   </div>
@@ -673,12 +649,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../20_js/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../20_js/acti3_Javascript.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Activité : Page Web interactive avec Javascript</span></a>
   </div>
@@ -687,12 +657,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../20_js/js_cours.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cours</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../21_client-serveur/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -738,12 +702,6 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../05_base/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../05_base/base_cours.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cours</span></a>
   </div>
@@ -756,12 +714,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../06_relatif/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../06_relatif/relatifs_cours.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cours</span></a>
   </div>
@@ -770,12 +722,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../06_relatif/relatifs_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../07_flottants/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -794,12 +740,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../07_flottants/mini_tp_nombres.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TP : Bases 2, 10 et 16 en Python</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../09_texte/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -827,12 +767,6 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../10_p-uplets/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../10_p-uplets/p_uplets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cours</span></a>
   </div>
@@ -841,12 +775,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../10_p-uplets/exos_tuples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../12_dictionnaires/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -865,12 +793,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/quiz.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quiz</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../22_tables/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -904,12 +826,6 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../23_reseaux/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../23_reseaux/reseaux_cours.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cours</span></a>
   </div>
@@ -918,12 +834,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../23_reseaux/reseaux_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TP dans Capytale</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../24_protocoles/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -945,12 +855,6 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../14_algo/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../14_algo/algo_cours.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cours</span></a>
   </div>
@@ -959,12 +863,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../14_algo/algo_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../16_tris/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -981,12 +879,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../17_recherche/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../17_recherche/recherche_cours.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cours</span></a>
   </div>
@@ -999,12 +891,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../26_gloutons/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../26_gloutons/gloutons_cours.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cours</span></a>
   </div>
@@ -1013,12 +899,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../26_gloutons/gloutons_exos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercices</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../25_kppv/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1044,12 +924,6 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../27_ihm/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programme</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../27_ihm/ihm_cours.html" class="sidebar-item-text sidebar-link">
@@ -1084,9 +958,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../02_python/index.html">Ch. 1 - Python : les bases</a></li><li class="breadcrumb-item"><a href="../15_parcours/parcours_cours.html">Cours</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../02_python/python_bases.html">Ch. 1 - Python : les bases</a></li><li class="breadcrumb-item"><a href="../15_parcours/parcours_cours.html">Parcourir un tableau</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Cours</h1>
+<h1 class="title">Parcourir un tableau</h1>
 </div>
 
 
@@ -1107,7 +981,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="recherche-dune-occurrence">1. Recherche d’une occurrence</h2>
 <p>Considérons un tableau. On souhaite disposer d’un algorithme permettant de rechercher une occurrence d’une valeur donnée dans ce tableau. Plus précisément, nous allons définir une fonction qui recherche une valeur donnée dans un tableau et qui retourne le tableau des indices des occurrences de cette valeur dans le tableau. Dans le cas où la valeur n’est pas présente dans le tableau, la fonction retournera un tableau vide.</p>
 <p>La méthode est très simple. On parcourt le tableau en testant à chaque fois si la valeur courante est égale à la valeur recherchée. Si c’est le cas, on ajoute l’indice de la valeur courante dans le tableau des indices des occurrences.</p>
-<div id="61ebc71b" class="cell" data-execution_count="1">
+<div id="fb795e0c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> occurrences(tab, val):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Retourne un tableau contenant les indices des occurrences de val dans tab"""</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    indices <span class="op">=</span> []</span>
@@ -1117,7 +991,7 @@ window.Quarto = {
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> indices</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Exemple d’utilisation :</p>
-<div id="92e3309e" class="cell" data-execution_count="2">
+<div id="7e9df486" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> [<span class="st">"DO"</span>, <span class="st">"RE"</span>, <span class="st">"MI"</span>, <span class="st">"FA"</span>, <span class="st">"SOL"</span>, <span class="st">"LA"</span>, <span class="st">"SI"</span>, <span class="st">"DO"</span>]</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(occurrences(tab, <span class="st">"DO"</span>))</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(occurrences(tab, <span class="st">"MI"</span>))</span>
@@ -1133,7 +1007,7 @@ window.Quarto = {
 <section id="recherche-dun-extremum" class="level2">
 <h2 class="anchored" data-anchor-id="recherche-dun-extremum">2. Recherche d’un extremum</h2>
 <p>Dans cette partie, nous considérons un tableau dont les éléments sont des nombres. Nous allons définir une fonction qui recherche le plus grand élément du tableau. Pour cela, on commence par choisir comme maximum temporaire le premier élément du tableau. On parcourt ensuite le tableau en testant à chaque fois si la valeur courante est plus grande que le maximum temporaire. Si c’est le cas, on met à jour le maximum temporaire avec la valeur courante.</p>
-<div id="de480e5e" class="cell" data-execution_count="3">
+<div id="4e0299b0" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="bu">max</span>(tab):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Retourne le plus grand élément du tableau"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> tab[<span class="dv">0</span>]</span>
@@ -1143,7 +1017,7 @@ window.Quarto = {
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> m</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Exemple d’utilisation :</p>
-<div id="d06dce3e" class="cell" data-execution_count="4">
+<div id="950d0232" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> [<span class="dv">201</span>, <span class="dv">203</span>, <span class="dv">35</span>, <span class="dv">448</span>, <span class="dv">55</span>, <span class="dv">16</span>, <span class="dv">2023</span>, <span class="dv">14</span>, <span class="dv">999</span>, <span class="dv">100</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">max</span>(tab))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1155,7 +1029,7 @@ window.Quarto = {
 <section id="calcul-dune-moyenne" class="level2">
 <h2 class="anchored" data-anchor-id="calcul-dune-moyenne">3. Calcul d’une moyenne</h2>
 <p>Dans cette partie, nous considérons un tableau dont les éléments sont des nombres. Nous allons définir une fonction qui calcule la moyenne des éléments du tableau.</p>
-<div id="995821d7" class="cell" data-execution_count="5">
+<div id="8cb7ec61" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> moyenne(tab):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Retourne la moyenne des éléments du tableau"""</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> <span class="dv">0</span></span>
@@ -1164,7 +1038,7 @@ window.Quarto = {
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s <span class="op">/</span> <span class="bu">len</span>(tab)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Exemple d’utilisation :</p>
-<div id="63c302fd" class="cell" data-execution_count="6">
+<div id="e07a74ec" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> [<span class="dv">201</span>, <span class="dv">203</span>, <span class="dv">35</span>, <span class="dv">448</span>, <span class="dv">55</span>, <span class="dv">16</span>, <span class="dv">2023</span>, <span class="dv">14</span>, <span class="dv">999</span>, <span class="dv">100</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(moyenne(tab))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1593,13 +1467,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../15_parcours/index.html" class="pagination-link" aria-label="Programme">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programme</span>
+      <a href="../11_tableaux/tableaux.html" class="pagination-link" aria-label="Zoom sur les tableaux (listes)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Zoom sur les tableaux (listes)</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../15_parcours/parcours_exos.html" class="pagination-link" aria-label="Exercices">
-        <span class="nav-page-text">Exercices</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../04_langages/langages.html" class="pagination-link" aria-label="Exposé / Recherches - Diversité et unité des langages de programmation">
+        <span class="nav-page-text">Exposé / Recherches - Diversité et unité des langages de programmation</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

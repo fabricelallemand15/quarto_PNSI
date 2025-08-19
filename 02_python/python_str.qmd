@@ -1,0 +1,117 @@
+---
+title: Zoom sur les chaînes de caractères
+---
+
+L'utilisation du signe + ne se limite pas à l'addition. Appliqué à des chaînes de caractères, il réalise l'opération de **concaténation**.
+
+{{< fa book >}} **Concaténation**
+
+: Le terme concaténation (substantif féminin), du latin cum («avec») et catena («chaîne, liaison»), désigne l'action de mettre bout à bout au moins deux chaînes. (Wikipédia)
+
+Si on considère le programme suivant :
+
+```python
+a = "Hello"
+b = "World"
+mon_expression = a + b
+```
+après l'exécution de ce programme, la variable `mon_expression` aura pour valeur  `"HelloWorld"`.
+
+Il est aussi possible de concaténer une chaîne de caractères et une ou plusieurs variables de type `str` :
+
+```python
+ma_chaine_1 = "Bonjour "
+ma_chaine_2 = "le "
+res = ma_chaine_1 + ma_chaine_2 + "monde !"
+```
+Après l'exécution de ce programme, la variable  `res`  aura pour valeur `"Bonjour le  monde !`.
+
+Les deux noms `ma_chaine_1` et `ma_chaine_2` sont associés à deux chaînes de caractères, nous avons donc bien ici une concaténation.
+
+Que se passe-t-il si nous avons ce cas de figure :
+
+```python
+a = "Nombre de pommes : "
+b = 4 
+c = a + b
+```
+
+`a` est de type `str`, alors que `b` est de type `int`. Le signe `+` représente une addition ou une concaténation ? Ni l'un, ni l'autre, puisque Python vous renverra une erreur : il ne peut pas concaténer, ni additionner un entier et une chaîne de caractère.
+
+La solution : transformer le nombre 4 en caractère 4 à l'aide de la fonction `str()` :
+
+```python
+a = "Nombre de pommes : "
+b = 4 
+c = a + str(b)
+```
+Nous avons maintenant une concaténation, car `str(4)` est de type `string`.
+
+Autre solution pour faire cohabiter des variables de type `int` ou `float` avec des variables de type `str` : les **fstring** (attention les **fstring** sont uniquement disponible à partir de Python 3.5)
+
+Il est possible d'écrire :
+
+```python
+a = "Nombre de pommes :"
+b = 4 
+c = f"{a} {b}"
+```
+
+après l'exécution du programme ci-dessus, la variable `c` aura pour valeur `"Nombre de pommes : 4"`.
+
+Dans la chaîne de caractère, `{a}` sera remplacé par la valeur de la variable `a`, c'est-à-dire `"Nombre de pommes :"`. Même chose avec `{b}` qui sera remplacé par la valeur de `b`, c'est-à-dire 4.
+
+Autre exemple d'utilisation des fstring :
+
+```python
+num_train = 4232
+dest = "Paris" 
+c = f"Le train n°{num_train} à destination de {dest} entre en gare" 
+```
+
+Après l'exécution du programme ci-dessus, la variable `c` aura pour valeur `"Le train n°4232 à destination de Paris entre en gare"`.
+
+Notez la présence du "f" juste avant le guillemet et des accolades qui encadrent le nom de la variable. Il est nécessaire d'ajouter ce "f" pour avoir une fstring.
+
+:::{.callout-warning}
+## Entrées utilisateurs avec `input()`
+
+La fonction `input()` permet de demander à l'utilisateur d'entrer une valeur dans la console et de récupérer cette valeur en l'affectant à une variable.
+
+On pourra par exemple tester le script suivant :
+
+```python
+nom = input("Quel est votre nom ? : ")
+print("Bonjour", nom, " ! ")
+```
+
+Une erreur courante consiste à demander l'entrée d'une valeur numérique et à l'utiliser directement dans un calcul. Le script suivant, par exemple : 
+
+```python
+rayon = input("Entrer le rayon du cercle : ")
+peri = 2 * 3.14 * rayon
+print("La longueur du cercle est :", peri)
+```
+
+conduit à : 
+
+```python
+TypeError: can't multiply sequence by non-int of type 'float'
+```
+
+La fonction `input()` retourne toujours **une chaîne de caractères**. Pour une entrée numérique, cette chaîne de caractère doit être **évaluée**, par exemple avec la fonction `eval()` qui retournera un type numérique `int` ou `float` selon les cas.
+
+Le script ci-dessous produit le résultat attendu :
+
+```python
+rayon = eval(input("Entrer le rayon du cercle : "))
+peri = 2 * 3.14 * rayon
+print("La longueur du cercle est :", peri)
+```
+:::
+
+:::{.callout-caution}
+## Exercices
+
+{{< fa person-digging >}} [Fiche d'exercices sur les variables, les affectations et les chaînes de caractères](python_bases_exos_1.qmd){target=_blank}.
+:::

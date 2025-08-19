@@ -1,0 +1,132 @@
+---
+title: Instructions répétitives
+---
+
+## 1. Boucle `while`
+
+La notion de boucle est fondamentale en informatique. Une boucle permet d'exécuter plusieurs fois des instructions qui ne sont présentes qu'une seule fois dans le code.
+
+Deux types de boucles sont à distinguer : la **boucle conditionnelle**, introduite par le mot-clef `while` et le **boucle bornée**, introduite par le mot-clef `for`.
+
+La structure de la boucle `while` est la suivante :
+
+```python
+while expression:
+	instruction1
+	instruction2
+suite programme
+```
+
+Tant que `expression` sera `True`, on exécutera encore et encore `instruction1` et `instruction2`. Après chaque exécution de `instruction1` et `instruction2` (on dit souvent "après chaque tour de boucle"), `expression` sera de nouveau évaluée (pour savoir si elle est toujours `True` ou si elle est devenue `False`)
+
+Quand `expression` deviendra `False` on passera directement à `suite programme` (sans entrer de nouveau dans la boucle),  la  boucle sera terminée.
+
+![](flowchart_while.svg){width=30%}
+
+Que se passe-t-il si `expression` ne devient jamais `False` ?  On entre alors dans  une boucle "infinie" : c'est une erreur classique en programmation (aucun programme "bien fait" ne tombe dans une boucle infinie, s'il y a une boucle infinie, c'est qu'il y a forcément une erreur dans votre programme). C'est la raison pour laquelle on n'appelle pas ces boucles des boucles _non bornées_ : en effet, une boucle `while` est bornée, mais **on ne sait pas à l'avance combien de fois on va passer dans la boucle**. Ce nombre de passages dans la boucle dépend de l'évaluation de `expression`.
+
+Considérons le programme suivant :
+
+```python
+i = 0
+while i < 3  :
+	print(i)
+	i = i + 1
+print("FIN")
+```
+
+Voici comment analyser ce programme :
+
+* Au début de l'exécution de ce programme nous avons la variable i qui a pour valeur 0. 
+
+* Nous arrivons ensuite au niveau du while :  l'expression i < 3  est True, on "entre" donc dans la boucle : on  affiche la valeur de i : 0 et on incrémente  i de 1 (i a maintenant pour valeur 1)
+
+* Nous passons au  2e tour de boucle : l'expression i < 3  est True, on "entre" donc dans la boucle : on affiche la valeur de i : 1 et on incrémente  i de 1 (i a maintenant pour valeur 2).
+
+* Nous passons au  3e tour de boucle : l'expression i < 3  est True, on "entre" donc dans la boucle : on affiche la valeur de i :  2 et on incrémente  i de 1 (i a maintenant pour valeur 3).
+
+* Nous passons au  4e tour de boucle : l'expression i < 3  est False (3 n'est pas strictement inférieur à 3), on n'entre pas dans la  boucle et on passe à l'instruction qui suit immédiatement la boucle : on exécute `print("FIN")` et le programme s'arrête (il n'y a plus d'instruction après)
+
+Après l'exécution de ce programme, nous aurons à l'écran :
+
+```python
+0
+1
+2
+FIN
+```
+
+Il est très important que vous soyez capable d'effectuer l'analyse d'un programme comme nous venons de la faire ci-dessus, cela vous permettra d'éviter beaucoup d'erreurs. Cette analyse peut se faire à l'aide d'un tableau d'état (étape 0 : initialisation, étape 1 : état du programme **après** le premier passage dans la boucle): 
+
+| Etape | `i` | `i<3` |
+| --- | --- | --- |
+|0 | 0 | `True`|
+|1|1|`True`|
+|2|2|`True`|
+|3|3|`False`|
+
+## 2. Boucle `for`
+
+Une **boucle bornée** `for` peut être utilisée lorsque l'**on connaît le nombre d'itérations** au moment de la programmation.
+
+La structure de la boucle `for` est la suivante :
+
+```python
+for truc in machin:
+	instruction1
+	instruction2
+suite programme
+```
+
+Les instructions `instruction1` et `instruction2` sont exécutées autant de fois qu'il y a de `truc` dans `machin`. `machin` doit être un _objet itérable_, c'est-à-dire à partir duquel on peut générer une suite de valeurs bien déterminées. Pour l'instant, nous nous contenterons de deux situations :
+
+* itération sur une chaîne de caractère : la variable `truc` prend alors successivement pour valeur tous les caractères de la chaîne `machin` ;
+
+```python
+for lettre in "ciao":
+    print(lettre)
+```
+
+* itération sur une séquence d'entiers générée par la fonction `range()` : par exemple si `machin` est `range(10)`, alors `truc` prendra successivement toutes les valeurs entières de 0 à 9.
+
+```python
+for i in range(5):
+    print(3*i)
+```
+
+:::{.callout-important}
+## Utilisation de la fonction `range()`
+
+* `range(n)` génère une séquence de nombres entiers en commençant par 0 et jusqu'à $n$ **exclu** ;
+* `range(k, n)` génère une séquence de nombres entiers en commençant par $k$ et jusqu'à $n$ **exclu** ;
+* `range(k, n, p)`génère une séquence de nombres entiers en commençant par $k$ et jusqu'à $n$ **exclu**, avec un pas de $p$ ;
+:::
+
+Si $p$ est négatif et $k>n$, on peut définir une séquence décroissante d'entiers.
+
+**Remarques**
+
+* Une boucle `for` peut toujours être remplacée par une boucle `while`. Le programme suivant est équivalent au précédent :
+
+```python
+i = 0
+while i<5:
+    print(3*i)
+	i = i + 1
+```
+
+* La réciproque est fausse : pourquoi ?
+* Les boucles peuvent être **imbriquées**. Par exemple, le programme ci-dessous affichera la liste des couples d'entiers $(i;j)$ avec $0\leqslant i<j\leqslant 4$.
+
+```python
+for i in range(5):
+	for j in range(i+1,5):
+		print(i, j)
+```
+
+:::{.callout-caution}
+## Exercices
+
+{{< fa person-digging >}} [Fiche d'exercices sur boucles](python_bases_exos_3.qmd){target=_blank}.
+:::
+

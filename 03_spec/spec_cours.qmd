@@ -1,5 +1,5 @@
 ---
-title: Cours
+title: Mise au point de programmes, prendre de bonnes habitudes !
 ---
 
 ## 1. Prototyper une fonction

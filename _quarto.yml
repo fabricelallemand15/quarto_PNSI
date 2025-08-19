@@ -28,31 +28,29 @@ website:
     contents:
       - section: "Ch. 1 - Python : les bases"
         contents: 
-          - 02_python/index.qmd
-          - 02_python/python_cours.qmd
+          - 02_python/python_bases.qmd
+          - 02_python/python_if_else.qmd
+          - 02_python/python_boucles.qmd
+          - 02_python/python_fonctions.qmd
+          - 03_spec/spec_cours.qmd
+          - 02_python/python_str.qmd
+          - 02_python/python_bool.qmd
+          - 11_tableaux/tableaux.qmd
+          - 15_parcours/parcours_cours.qmd
+          - 04_langages/langages.qmd
           - 02_python/python_bases_exos_1.qmd
           - 02_python/python_bases_exos_2.qmd
           - 02_python/python_bases_exos_3.qmd
           - 02_python/python_bases_exos_4.qmd
           - 02_python/supplements.qmd
-          - 08_booleens/index.qmd
-          - 08_booleens/booleens_cours.qmd
           - 08_booleens/booleens_exos.qmd  
-          - 11_tableaux/index.qmd
-          - 11_tableaux/tableaux.qmd
           - 11_tableaux/exos_tabs.qmd
           - 11_tableaux/TP_Stegano.qmd
-          - 15_parcours/index.qmd
-          - 15_parcours/parcours_cours.qmd
           - 15_parcours/parcours_exos.qmd
-          - 04_langages/langages.qmd
-          - 03_spec/index.qmd
-          - 03_spec/spec_cours.qmd
           - 03_spec/spec_exos.qmd
           - 03_spec/TP_dessine_ta_rue.qmd
       - section: "Ch. 2 - Modèle d'architecture de von Neumann et Systèmes d'exploitation"
         contents: 
-          - 13_vonNeumann/index.qmd
           - 13_vonNeumann/neumann_cours_1.qmd
           - 13_vonNeumann/neumann_cours_2.qmd
           - 13_vonNeumann/neumann_cours_3.qmd
@@ -64,17 +62,13 @@ website:
           - 01_os/OS_exos.qmd
       - section: "Ch. 3 - Web"
         contents: 
-          - 18_html/index.qmd
           - 18_html/acti1_HTML.qmd
           - 18_html/html_cours.qmd
           - 18_html/ref_HTML.qmd
-          - 19_css/index.qmd
           - 19_css/acti2_CSS.qmd
           - 19_css/css_cours.qmd
-          - 20_js/index.qmd
           - 20_js/acti3_Javascript.qmd
           - 20_js/js_cours.qmd
-          - 21_client-serveur/index.qmd
           - 21_client-serveur/client-serveur_cours.qmd
           - 21_client-serveur/client-serveur_exos.qmd
           - 21_client-serveur/acti4_forms.qmd
@@ -82,59 +76,44 @@ website:
           - 21_client-serveur/exos_forms.qmd          
       - section: "Ch. 4 - Représentation numérique des nombres et du texte" 
         contents: 
-          - 05_base/index.qmd
           - 05_base/base_cours.qmd
           - 05_base/base_exos.qmd
-          - 06_relatif/index.qmd
           - 06_relatif/relatifs_cours.qmd
           - 06_relatif/relatifs_exos.qmd
-          - 07_flottants/index.qmd
           - 07_flottants/flottants_cours.qmd
           - 07_flottants/flottants_exos.qmd
           - 07_flottants/mini_tp_nombres.qmd
-          - 09_texte/index.qmd
           - 09_texte/textes_cours.qmd
           - 09_texte/textes_exos.qmd
       - section: "Ch. 5 - Python avancé"
         contents: 
-          - 10_p-uplets/index.qmd
           - 10_p-uplets/p_uplets.qmd
           - 10_p-uplets/exos_tuples.qmd
-          - 12_dictionnaires/index.qmd
           - 12_dictionnaires/dicos.qmd
           - 12_dictionnaires/exos_dicos.qmd
           - 12_dictionnaires/quiz.qmd
-          - 22_tables/index.qmd
           - 22_tables/tables_cours.qmd
           - 22_tables/tables_exos.qmd
           - 22_tables/tables_quiz.qmd
       - section: "Ch. 6 - Réseaux"
         contents: 
-          - 23_reseaux/index.qmd
           - 23_reseaux/reseaux_cours.qmd
           - 23_reseaux/reseaux_exos.qmd
-          - 24_protocoles/index.qmd
           - 24_protocoles/protocoles_cours.qmd
       - section: "Ch. 7 - Algorithmes"
         contents: 
-          - 14_algo/index.qmd
           - 14_algo/algo_cours.qmd
           - 14_algo/algo_exos.qmd          
-          - 16_tris/index.qmd
           - 16_tris/tris_cours.qmd
           - 16_tris/tris_exos.qmd
-          - 17_recherche/index.qmd
           - 17_recherche/recherche_cours.qmd
           - 17_recherche/recherche_exos.qmd
-          - 26_gloutons/index.qmd
           - 26_gloutons/gloutons_cours.qmd
           - 26_gloutons/gloutons_exos.qmd
-          - 25_kppv/index.qmd
           - 25_kppv/kppv_cours.qmd
           - 25_kppv/KNN-TP.ipynb
       - section: "Ch. 8 - Interfaces homme-machine et robotique"
         contents: 
-          - 27_ihm/index.qmd
           - 27_ihm/ihm_cours.qmd
           - 27_ihm/ihm_exos.qmd
   page-footer: 
