@@ -450,12 +450,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_python/python_str.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Zoom sur les chaînes de caractères</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../02_python/python_bool.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zoom sur les booléens</span></a>
   </div>
@@ -994,6 +988,28 @@ window.Quarto = {
 <p>Il existe de très nombreux langages de programmation différents. Chaque langage a ses particularités propres, mais certaines ressemblances peuvent également être observées.</p>
 <p>Voici un arbre généalogique des principaux langages, tiré des documents d’accompagnement du programme de première :</p>
 <p><a href="genea_langages.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="genea_langages.png" class="img-fluid"></a></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Travail à faire par groupes de deux
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Choisissez un des treize langages de programmation en tête du classement TIOBE ci-dessous (chaque groupe doit choisir un langage différent !).</li>
+<li><strong>En utilisant les informations de cette page</strong>, que vous pouvez compléter par des recherches personnelles, préparez un court exposé sur le langage choisi :
+<ul>
+<li>Présentation générale du langage (historique, utilisation, etc.)</li>
+<li>Points forts et faiblesses</li>
+<li>Exemples de code + comparaison avec Python</li>
+</ul></li>
+<li>Présentez votre exposé à la classe (5 min).</li>
+</ol>
+</div>
+</div>
 <section id="popularité-des-principaux-langages" class="level2">
 <h2 class="anchored" data-anchor-id="popularité-des-principaux-langages">1. Popularité des principaux langages</h2>
 <p>L’entreprise néerlandaise TIOBE propose un indice de popularité des principaux langages de programmation. Voici comment cet indice est présenté sur <a href="https://www.tiobe.com/tiobe-index/" target="_blank">son site</a> :</p>
@@ -1012,13 +1028,13 @@ Citation
 </div>
 </div>
 <p>Voici le classement des dix premiers langages selon l’indice TIOBE en septembre 2023 et le graphique de son évolution :</p>
-<p><a href="tiobe_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="tiobe_1.png" class="img-fluid"></a></p>
-<p><a href="tiobe_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="tiobe_2.png" class="img-fluid"></a></p>
+<p><a href="tiobe-index.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="tiobe-index.png" class="img-fluid"></a></p>
+<p><a href="tiobe-graph.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="tiobe-graph.png" class="img-fluid"></a></p>
 </section>
 <section id="différentes-implémentations-dun-même-algorithme" class="level2">
 <h2 class="anchored" data-anchor-id="différentes-implémentations-dun-même-algorithme">2. Différentes implémentations d’un même algorithme</h2>
 <p>Pour découvrir et comparer quelques langages de programmation, nous allons nous intéresser à l’algorithme suivant dont l’objet est de tester si un nombre entier positif <span class="math inline">\(n\)</span> donné en argument est premier ou non. On procède pour cela en testant la divisibilité par les entiers inférieurs ou égaux à <span class="math inline">\(\sqrt{n}\)</span>. Si <span class="math inline">\(n\)</span> ne possède aucun diviseur (autre que 1) inférieur ou égal à <span class="math inline">\(\sqrt{n}\)</span>, alors <span class="math inline">\(n\)</span> est premier.</p>
-<p>L’algorithme représenté ci dessous (on traite directement le cas <span class="math inline">\(n=2\)</span> et on élimine tous les multiples de 2):</p>
+<p>L’algorithme représenté ci-dessous (on traite directement le cas <span class="math inline">\(n=2\)</span> et on élimine tous les multiples de 2):</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1373,19 +1389,6 @@ Algorithme en pseudo-code
 </div>
 <iframe src="https://tio.run/##fZBNTsQwDIX3PcVjJMRUSCN@FkiE3oEDIFUtdSCaxClJupu7FycNZQWb5uU92/lq/z44u66WEkzs52AcgdE1gNFZ4AHpkxgpLCQm2Uhb8iLJ5SLC@Ulkh7utUA9S8lM50odhuQD5gUCzZ3E7UbpMRE21DziL/4jkcY9b8VPvda@tHxKO8SvIt1yyKyG4bTH50lxRM8d556gJ9kefux0N0smkirqqeSbmqVGqaTLqsS07yJIXN1LIcE8b7vYrcbFJzN@lbWWlQnhqwY7yGoRan@Zy4HA9gWLCwmDvxkCYAzlD4fTGhzqq7vCPbr7J/fMQ/5@h1Lp@Aw" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen="">
 </iframe>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercice
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Notre langage d’étude est Python. Repérer, dans les dix programmes ci-dessous des points communs et des différences. Vous présenterez vos résultats dans un tableau et vous effectuerez ce travail en présentant brièvement chacun des langages cités (date de création, domaine d’application, …).</p>
-</div>
-</div>
 </section>
 </section>
 <section id="compléments" class="level2">

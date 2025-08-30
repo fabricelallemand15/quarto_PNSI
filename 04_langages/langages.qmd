@@ -4,9 +4,20 @@ title: Exposé / Recherches - Diversité et unité des langages de programmation
 
 Il existe de très nombreux langages de programmation différents. Chaque langage a ses particularités propres, mais certaines ressemblances peuvent également être observées.
 
-Voici un arbre généalogique des principaux langages, tiré des documents d'accompagnement du programme de première :
+Voici un arbre généalogique des principaux langages, tiré des documents d’accompagnement du programme de première :
 
 ![](genea_langages.png)
+
+::: {.callout-tip}
+## Travail à faire par groupes de deux
+
+1. Choisissez un des treize langages de programmation en tête du classement TIOBE ci-dessous (chaque groupe doit choisir un langage différent !).
+2. **En utilisant les informations de cette page**, que vous pouvez compléter par des recherches personnelles, préparez un court exposé sur le langage choisi : 
+    * Présentation générale du langage (historique, utilisation, etc.)
+    * Points forts et faiblesses
+    * Exemples de code + comparaison avec Python
+3. Présentez votre exposé à la classe (5 min).
+:::
 
 ## 1. Popularité des principaux langages
 
@@ -22,15 +33,15 @@ L’indice peut être utilisé pour vérifier si vos compétences en programmati
 
 Voici le classement des dix premiers langages selon l'indice TIOBE en septembre 2023 et le graphique de son évolution :
 
-![](tiobe_1.png)
+![](tiobe-index.png)
 
-![](tiobe_2.png)
+![](tiobe-graph.png)
 
 ## 2. Différentes implémentations d'un même algorithme
 
 Pour découvrir et comparer quelques langages de programmation, nous allons nous intéresser à l'algorithme suivant dont l'objet est de tester si un nombre entier positif $n$ donné en argument est premier ou non. On procède pour cela en testant la divisibilité par les entiers inférieurs ou égaux à $\sqrt{n}$. Si $n$ ne possède aucun diviseur (autre que 1) inférieur ou égal à $\sqrt{n}$, alors $n$ est premier.
 
-L'algorithme représenté ci dessous (on traite directement le cas $n=2$ et on élimine tous les multiples de 2):
+L'algorithme représenté ci-dessous (on traite directement le cas $n=2$ et on élimine tous les multiples de 2):
 
 :::{.callout-tip}
 ## Algorithme en pseudo-code
@@ -362,12 +373,6 @@ let () =
 ````
 
 <iframe src="https://tio.run/##fZBNTsQwDIX3PcVjJMRUSCN@FkiE3oEDIFUtdSCaxClJupu7FycNZQWb5uU92/lq/z44u66WEkzs52AcgdE1gNFZ4AHpkxgpLCQm2Uhb8iLJ5SLC@Ulkh7utUA9S8lM50odhuQD5gUCzZ3E7UbpMRE21DziL/4jkcY9b8VPvda@tHxKO8SvIt1yyKyG4bTH50lxRM8d556gJ9kefux0N0smkirqqeSbmqVGqaTLqsS07yJIXN1LIcE8b7vYrcbFJzN@lbWWlQnhqwY7yGoRan@Zy4HA9gWLCwmDvxkCYAzlD4fTGhzqq7vCPbr7J/fMQ/5@h1Lp@Aw" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
-:::{.callout-caution}
-## Exercice
-
-Notre langage d'étude est Python. Repérer, dans les dix programmes ci-dessous des points communs et des différences. Vous présenterez vos résultats dans un tableau et vous effectuerez ce travail en présentant brièvement chacun des langages cités (date de création, domaine d'application, ...).
-:::
 
 ## Compléments
 
