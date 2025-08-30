@@ -6,7 +6,7 @@ title: Projet - Dessine ta rue !
 ## Objectifs
 * Explorer l'utilisation d'une bibliothèque (exemple de la bibliothèque `turtle`).
 * Utiliser la documentation d'une bibliothèque.
-* Appliquer les connaissances du cours : création de fonctions, spécifications, ...
+* Appliquer les connaissances du cours : création de fonctions, spécifications…
 * Travailler en autonomie, travailler en groupe.
 :::
 

@@ -1,5 +1,5 @@
 ---
-title: Exercices
+title: "Exercices - Spécification et mise au point des fonctions"
 ---
 
 _Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._

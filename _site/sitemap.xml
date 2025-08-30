@@ -138,7 +138,7 @@
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/11_tableaux/exos_tabs.html</loc>
-    <lastmod>2025-02-02T21:36:15.363Z</lastmod>
+    <lastmod>2025-08-30T15:37:04.589Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/10_p-uplets/index.html</loc>
@@ -154,7 +154,7 @@
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/08_booleens/booleens_exos.html</loc>
-    <lastmod>2025-02-02T21:36:15.319Z</lastmod>
+    <lastmod>2025-08-30T15:33:01.505Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/08_booleens/booleens_cours.html</loc>
@@ -186,15 +186,11 @@
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/03_spec/spec_exos.html</loc>
-    <lastmod>2025-02-02T21:36:15.288Z</lastmod>
+    <lastmod>2025-08-30T15:38:18.221Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/03_spec/index.html</loc>
     <lastmod>2025-02-02T21:36:15.284Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/02_python/python_str.html</loc>
-    <lastmod>2025-08-19T19:58:41.054Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/02_python/python_fonctions.html</loc>
@@ -205,16 +201,16 @@
     <lastmod>2025-08-30T14:31:05.130Z</lastmod>
   </url>
   <url>
+    <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_2.html</loc>
+    <lastmod>2025-08-30T15:28:49.060Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/02_python/python_bases.html</loc>
+    <lastmod>2025-08-30T12:37:14.312Z</lastmod>
+  </url>
+  <url>
     <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_3.html</loc>
     <lastmod>2025-08-30T15:29:17.146Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_1.html</loc>
-    <lastmod>2025-08-30T15:28:07.957Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/02_python/index.html</loc>
-    <lastmod>2025-08-17T20:23:32.824Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/01_os/OS_exos.html</loc>
@@ -222,7 +218,7 @@
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/15_parcours/parcours_exos.html</loc>
-    <lastmod>2025-02-02T21:36:15.530Z</lastmod>
+    <lastmod>2025-08-30T15:37:36.611Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/15_parcours/index.html</loc>
@@ -241,12 +237,12 @@
     <lastmod>2025-02-02T21:36:15.228Z</lastmod>
   </url>
   <url>
-    <loc>https://sitelf.fr/PNSI/02_python/python_bases.html</loc>
-    <lastmod>2025-08-30T12:37:14.312Z</lastmod>
+    <loc>https://sitelf.fr/PNSI/02_python/index.html</loc>
+    <lastmod>2025-08-17T20:23:32.824Z</lastmod>
   </url>
   <url>
-    <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_2.html</loc>
-    <lastmod>2025-08-30T15:28:49.060Z</lastmod>
+    <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_1.html</loc>
+    <lastmod>2025-08-30T15:28:07.957Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/02_python/python_bases_exos_4.html</loc>
@@ -261,16 +257,12 @@
     <lastmod>2025-08-30T13:04:52.024Z</lastmod>
   </url>
   <url>
-    <loc>https://sitelf.fr/PNSI/02_python/supplements.html</loc>
-    <lastmod>2025-02-25T05:19:18.622Z</lastmod>
-  </url>
-  <url>
     <loc>https://sitelf.fr/PNSI/03_spec/spec_cours.html</loc>
     <lastmod>2025-08-30T13:49:28.127Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/03_spec/TP_dessine_ta_rue.html</loc>
-    <lastmod>2025-02-02T21:36:15.284Z</lastmod>
+    <lastmod>2025-08-30T15:42:42.420Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/05_base/base_cours.html</loc>
@@ -322,7 +314,7 @@
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/11_tableaux/TP_Stegano.html</loc>
-    <lastmod>2025-02-02T21:36:15.336Z</lastmod>
+    <lastmod>2025-08-30T15:45:20.149Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/12_dictionnaires/exos_dicos.html</loc>

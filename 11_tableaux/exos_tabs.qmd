@@ -1,5 +1,5 @@
 ---
-title: "Exercices"
+title: "Exercices - Tableaux"
 ---
 
 _Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._

@@ -29,25 +29,25 @@ website:
       - section: "Ch. 1 - Python : les bases"
         contents: 
           - 02_python/python_bases.qmd
-          - 02_python/python_if_else.qmd
-          - 02_python/python_boucles.qmd
-          - 02_python/python_fonctions.qmd
-          - 03_spec/spec_cours.qmd
-          - 02_python/python_bool.qmd
-          - 11_tableaux/tableaux.qmd
-          - 15_parcours/parcours_cours.qmd
-          - 04_langages/langages.qmd
           - 02_python/python_bases_exos_1.qmd
+          - 02_python/python_if_else.qmd
           - 02_python/python_bases_exos_2.qmd
+          - 02_python/python_boucles.qmd
           - 02_python/python_bases_exos_3.qmd
+          - 02_python/python_fonctions.qmd
           - 02_python/python_bases_exos_4.qmd
-          - 02_python/supplements.qmd
-          - 08_booleens/booleens_exos.qmd  
-          - 11_tableaux/exos_tabs.qmd
-          - 11_tableaux/TP_Stegano.qmd
-          - 15_parcours/parcours_exos.qmd
+          - 03_spec/spec_cours.qmd
           - 03_spec/spec_exos.qmd
           - 03_spec/TP_dessine_ta_rue.qmd
+          - 02_python/python_bool.qmd
+          - 08_booleens/booleens_exos.qmd  
+          - 11_tableaux/tableaux.qmd
+          - 11_tableaux/exos_tabs.qmd
+          - 15_parcours/parcours_cours.qmd
+          - 15_parcours/parcours_exos.qmd
+          - 04_langages/langages.qmd
+          - 11_tableaux/TP_Stegano.qmd
+          
       - section: "Ch. 2 - Modèle d'architecture de von Neumann et Systèmes d'exploitation"
         contents: 
           - 13_vonNeumann/neumann_cours_1.qmd

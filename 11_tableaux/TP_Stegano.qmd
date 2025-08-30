@@ -1,5 +1,5 @@
 ---
-title: "Mini-projet Stéganographie"
+title: "Projet Stéganographie"
 ---
 
 Cette activité est fortement inspirée du dossier paru sur le site
@@ -43,7 +43,7 @@ installée dans la distribution EduPython.
 
 * Pour faire ce travail, il est nécessaire d'avoir téléchargé les images et de les avoir placées dans le même dossier que votre programme.
 
-* Le travail pourra être fait dans EduPython, ou dans la console Python accessible dans le menu ci-dessus. Dans ce cas, les images devront être chargées dans la console en utilisant le bouton représentant un dossier.
+* Le travail pourra être fait dans Thonny, ou dans la console Python accessible dans le menu ci-dessus. Dans ce cas, les images devront être chargées dans la console en utilisant le bouton représentant un dossier.
 :::
 
 ![](./pillow.png)
@@ -52,18 +52,12 @@ installée dans la distribution EduPython.
 
 Avant toute chose, on importera la bibliothèque en ajoutant la ligne
 suivante en début de programme :
-
-
  
 ``` {python}
 from PIL import Image
 ```
 
-
- 
 -   Exemple d'ouverture d'un fichier et accès à ses informations
-
-
  
 ``` {python}
 # ouverture du fichier image
@@ -76,8 +70,6 @@ print(img.width)
 print(img.height)
 ```
 
-
- 
 ``` {python}
 # Affichage de l'image
 img.show()
@@ -85,8 +77,6 @@ img.show()
 
 ![](./chat.png)
 
-
- 
 -   Un fichier image peut avoir trois **modes** différents :
 
     -   "l" (lettre l minuscule) pour un fichier en noir et blanc
@@ -115,20 +105,13 @@ img.show()
     couleurs). Attention à la syntaxe : il n'y a qu'un seul argument,
     qui est un couple de coordonnées (donc doubles parenthèses).
 
-
- 
 ``` {python}
 print(img.mode)
 img.getpixel((48,75)) # attention aux parenthèses !
 ```
-
-
- 
 -   Commandes pour créer un fichier image et définir la valeur de ses
     pixels :
 
-
-  
 ``` {python}
 largeur = 200
 hauteur = 100
@@ -154,7 +137,6 @@ nouvelle_image.show()
 ![](./mon_image.png)
  
 ## 2. Stéganographie dans une image en niveaux de gris {#2-stéganographie-dans-une-image-en-niveaux-de-gris}
-
 
 Le principe
 -----------
@@ -235,16 +217,12 @@ En cas de besoin, quelques indications :
     l'on part de la fin de la chaîne. Par exemple, si
     `mot = "indication"`, `mot[2:-2]` retourne `"dicati"`.
 
-
- 
 Une première étape dans la réalisation de ce projet consiste donc en
 l'écriture d'une fonction permettant d'obtenir la représentation
 binaire d'un entier compris entre 0 et 255 sous la forme d'une chaîne
 de caractères de longueur exactement 8. Tu peux compléter la fonction
 ci-dessous.
 
-
- 
 ``` {.python}
 def bin_8_car(x):
     """x est un entier compris entre 0 et 255
@@ -258,11 +236,7 @@ def bin_8_car(x):
     return nb
 ```
 
-
- 
 Exécute les tests ci-dessous pour vérifier la fonction.
-
-
  
 ``` {.python}
 # tests de la fonction bin_8_car
@@ -271,13 +245,9 @@ assert bin_8_car(255) == "11111111"
 print("Tests réussis !")
 ```
 
-
- 
 Complète ci-dessous la fonction `crypte` réalisant la première tâche
 demandée :
 
-
- 
 ``` {.python}
 def crypte(img1, img2):
     """Cette fonction cache l'image 2 dans l'image 1"""
@@ -293,8 +263,6 @@ def crypte(img1, img2):
             imgCrypt.putpixel((i,j), ...)
     return imgCrypt
 ```
-
-
  
 ``` {.python}
 # test de la fonction crypte : il est normal que cela prenne quelques secondes
@@ -306,12 +274,8 @@ image_cryptee.save("vache_perdue.pgm")
 image_cryptee
 ```
 
-
- 
 Complète ci-dessous la fonction `decrypte` réalisant la seconde tâche
 demandée :
-
-
  
 ``` {.python}
 def decrypte(imgCrypt):
@@ -322,15 +286,11 @@ def decrypte(imgCrypt):
     return img
 ```
 
-
- 
 Pour tester cette fonction, voici une image en niveaux de gris qui
 contient un message secret. Le fichier est nommé `image_crypte.pgm`.
 
 ![](./image_crypte.png)
 
-
- 
 ``` {.python}
 # test de la fonction decrypte
 # ou ouvre une image qui contient une image cryptée
@@ -340,16 +300,11 @@ image = decrypte(imageCryptee)
 # on affiche l'image qui était cachée
 image
 ```
-
-
  
 Maintenant, tu peux t'amuser à créer d'autres images cryptées et à les
 décrypter pour tester tes fonctions sur plusieurs exemples.
 
-
- 
 ## Défi !!! {#défi-}
-
 
 Dans une image en couleur au format `RGB`, chaque pixel est codé par
 trois entiers compris entre 0 et 255.
@@ -364,7 +319,6 @@ messages cachés ?
 ![](defi_steg.png)
 
 
- 
 ``` {.python}
 ### à compléter ...
 def decrypte_image_couleurs(img):
