@@ -22,7 +22,7 @@ Remarquons enfin que le mot _algorithme_ vient d'Al-Khwârizmî (en arabe : ال
 
 Il existe de nombreux langages de programmation et, même en utilisant un même langage, un algorithme peut être programmé de différentes façons. Un algorithme donné peut donc correspondre à de très nombreux programmes informatiques différents.
 
-Cependant, un ordinateur n'est qu'une machine électrique qui ne peut directement comprendre que des suites d'instructions exprimées en langage machine par des suites de 0 et de 1. Le rôle d'un langage de programmation est de fournir au programmeur une **syntaxe** et une **grammaire** pour lui permettre d'exprimer des instructions de manière plus facilement compréhensible pour un être humain. Ce programme est ensuite traduit en langage machine, puis exécuté.
+Cependant, un ordinateur n'est qu'une machine électrique qui ne peut directement comprendre que des suites d'instructions exprimées en langage machine par des suites de 0 et de 1. Le rôle d'un langage de programmation est de fournir au programmeur une **syntaxe** et une **grammaire** pour lui permettre d'exprimer des instructions de manière plus facilement compréhensible pour un être humain. Ce programme est ensuite traduit en langage machine puis exécuté.
 
 Cette traduction est faite, suivant les langages, par un **compilateur** (programme qui crée un fichier exécutable à partir du code source) ou par un **interpréteur** (programme qui lit, traduit et exécute immédiatement une à une les instructions du code source).
 
@@ -32,7 +32,7 @@ En NSI, nous allons nous focaliser sur le langage **Python**.
 
 Le langage Python a été créé en 1989 par l'informaticien néerlandais [Guido van Rossum](https://fr.wikipedia.org/wiki/Guido_van_Rossum){ target=_blank} qui l'a nommé ainsi en hommage à la série télévisée des [Monty Python](https://fr.wikipedia.org/wiki/Monty_Python){target=_blank} dont il était fan.
 
-![Guido van Rossum](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Guido-portrait-2014-drc.jpg/260px-Guido-portrait-2014-drc.jpg)
+![Guido van Rossum](Guido_van_Rossum.jpg)
 
 ## 2. Variables et affectation
 
@@ -58,7 +58,7 @@ L'instruction `pi = 3.14` a pour effet de :
 
 On dira donc qu'une variable est l'association d'un nom et d'une valeur
 
-En mode interactif, il suffit de taper le nom d'une variable et de valider pour afficher sa valeur. En mode programme, on utilisera la fonction `print()`pour afficher le contenu d'une variable à l'exécution.
+En mode interactif, il suffit de taper le nom d'une variable et de valider pour afficher sa valeur. En mode programme, on utilisera la fonction `print()` pour afficher le contenu d'une variable à l'exécution.
 
 Il est possible d'affecter des valeurs à plusieurs variables simultanément.
 
@@ -121,7 +121,7 @@ a = "Hello"
 b = "World"
 mon_expression = a + b
 ```
-après l'exécution de ce programme, la variable `mon_expression` aura pour valeur  `"HelloWorld"`.
+après l'exécution de ce programme, la variable `mon_expression` aura pour valeur `"HelloWorld"`.
 
 Il est aussi possible de concaténer une chaîne de caractères et une ou plusieurs variables de type `str` :
 
@@ -130,7 +130,7 @@ ma_chaine_1 = "Bonjour "
 ma_chaine_2 = "le "
 res = ma_chaine_1 + ma_chaine_2 + "monde !"
 ```
-Après l'exécution de ce programme, la variable  `res`  aura pour valeur `"Bonjour le  monde !`.
+Après l'exécution de ce programme, la variable `res` aura pour valeur `"Bonjour le  monde !`.
 
 Les deux noms `ma_chaine_1` et `ma_chaine_2` sont associés à deux chaînes de caractères, nous avons donc bien ici une concaténation.
 
@@ -153,7 +153,7 @@ c = a + str(b)
 ```
 Nous avons maintenant une concaténation, car `str(4)` est de type `string`.
 
-Autre solution pour faire cohabiter des variables de type `int` ou `float` avec des variables de type `str` : les **fstring** (attention les **fstring** sont uniquement disponible à partir de Python 3.5)
+Autre solution pour faire cohabiter des variables de type `int` ou `float` avec des variables de type `str` : les **fstring** (attention les **fstring** sont uniquement disponibles à partir de Python 3.5)
 
 Il est possible d'écrire :
 

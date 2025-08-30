@@ -62,7 +62,7 @@ else:
 	print("Je n'aime pas toto.")
 print("En revanche, j'aime le Python.")
 ```
-nous avons `a < b` qui est True, nous allons donc exécuter les  2 lignes 
+nous avons `a < b` qui est True, nous allons donc exécuter les 2 lignes 
 
 ```python
 print("Je suis toto.");
@@ -103,7 +103,7 @@ else:
 	print("Je n'aime pas toto.")
 print("En revanche, j'aime le Python.")
 ```
-L'exécution de ce programme entraînera l'affichage suivant  :
+L'exécution de ce programme entraînera l'affichage suivant :
 
 ```python
 Je suis titi.

@@ -968,14 +968,14 @@ Un programme informatique est un ensemble d’instructions et d’opérations de
 <p>Un algorithme ne relève donc pas a priori du domaine de l’informatique. Cependant, la plupart des programmes informatiques sont la traduction d’un algorithme dans un certain langage de programmation.</p>
 <p>Remarquons enfin que le mot <em>algorithme</em> vient d’Al-Khwârizmî (en arabe : الخوارزمي), nom d’un mathématicien persan du IXe siècle.</p>
 <p>Il existe de nombreux langages de programmation et, même en utilisant un même langage, un algorithme peut être programmé de différentes façons. Un algorithme donné peut donc correspondre à de très nombreux programmes informatiques différents.</p>
-<p>Cependant, un ordinateur n’est qu’une machine électrique qui ne peut directement comprendre que des suites d’instructions exprimées en langage machine par des suites de 0 et de 1. Le rôle d’un langage de programmation est de fournir au programmeur une <strong>syntaxe</strong> et une <strong>grammaire</strong> pour lui permettre d’exprimer des instructions de manière plus facilement compréhensible pour un être humain. Ce programme est ensuite traduit en langage machine, puis exécuté.</p>
+<p>Cependant, un ordinateur n’est qu’une machine électrique qui ne peut directement comprendre que des suites d’instructions exprimées en langage machine par des suites de 0 et de 1. Le rôle d’un langage de programmation est de fournir au programmeur une <strong>syntaxe</strong> et une <strong>grammaire</strong> pour lui permettre d’exprimer des instructions de manière plus facilement compréhensible pour un être humain. Ce programme est ensuite traduit en langage machine puis exécuté.</p>
 <p>Cette traduction est faite, suivant les langages, par un <strong>compilateur</strong> (programme qui crée un fichier exécutable à partir du code source) ou par un <strong>interpréteur</strong> (programme qui lit, traduit et exécute immédiatement une à une les instructions du code source).</p>
 <p>En NSI, nous allons nous focaliser sur le langage <strong>Python</strong>.</p>
 <p><a href="https://www.python.org/static/img/python-logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.python.org/static/img/python-logo.png" class="img-fluid"></a></p>
 <p>Le langage Python a été créé en 1989 par l’informaticien néerlandais <a href="https://fr.wikipedia.org/wiki/Guido_van_Rossum" target="_blank">Guido van Rossum</a> qui l’a nommé ainsi en hommage à la série télévisée des <a href="https://fr.wikipedia.org/wiki/Monty_Python" target="_blank">Monty Python</a> dont il était fan.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Guido-portrait-2014-drc.jpg/260px-Guido-portrait-2014-drc.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Guido van Rossum"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Guido-portrait-2014-drc.jpg/260px-Guido-portrait-2014-drc.jpg" class="img-fluid figure-img" alt="Guido van Rossum"></a></p>
+<p><a href="Guido_van_Rossum.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Guido van Rossum"><img src="Guido_van_Rossum.jpg" class="img-fluid figure-img" alt="Guido van Rossum"></a></p>
 <figcaption>Guido van Rossum</figcaption>
 </figure>
 </div>
@@ -1006,7 +1006,7 @@ Un programme informatique est un ensemble d’instructions et d’opérations de
 <li>établir un lien entre le nom <code>pi</code> et l’emplacement de la valeur <code>3.14</code> dans la mémoire de l’ordinateur.</li>
 </ol>
 <p>On dira donc qu’une variable est l’association d’un nom et d’une valeur</p>
-<p>En mode interactif, il suffit de taper le nom d’une variable et de valider pour afficher sa valeur. En mode programme, on utilisera la fonction <code>print()</code>pour afficher le contenu d’une variable à l’exécution.</p>
+<p>En mode interactif, il suffit de taper le nom d’une variable et de valider pour afficher sa valeur. En mode programme, on utilisera la fonction <code>print()</code> pour afficher le contenu d’une variable à l’exécution.</p>
 <p>Il est possible d’affecter des valeurs à plusieurs variables simultanément.</p>
 <p>La commande <code>a, b, c = 2, 2.5, "toto"</code> affecte par exemple la valeur <code>2</code> à la variable <code>a</code>, la valeur <code>2.5</code> à la variable <code>b</code> et la valeur <code>”toto”</code> à la variable <code>c</code> . Ces trois variables sont de <strong>types</strong> différents : <code>a</code> est un entier, <code>b</code> est un nombre à virgule et <code>c</code> est une chaîne de caractères.</p>
 <p>Lors de la définition d’une variable, ou lors d’une nouvelle affectation, python détecte automatiquement le type de variable à définir en fonction de la valeur affectée. On parle de <strong>typage dynamique</strong>. D’autres langages de programmation imposent que les noms des variables et leur type soient déclarés avant toute affectation : on parle alors de <strong>typage statique</strong>.</p>
@@ -1104,7 +1104,7 @@ Méthode utile
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span> </span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> a <span class="op">+</span> <span class="bu">str</span>(b)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Nous avons maintenant une concaténation, car <code>str(4)</code> est de type <code>string</code>.</p>
-<p>Autre solution pour faire cohabiter des variables de type <code>int</code> ou <code>float</code> avec des variables de type <code>str</code> : les <strong>fstring</strong> (attention les <strong>fstring</strong> sont uniquement disponible à partir de Python 3.5)</p>
+<p>Autre solution pour faire cohabiter des variables de type <code>int</code> ou <code>float</code> avec des variables de type <code>str</code> : les <strong>fstring</strong> (attention les <strong>fstring</strong> sont uniquement disponibles à partir de Python 3.5)</p>
 <p>Il est possible d’écrire :</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">"Nombre de pommes :"</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span> </span>

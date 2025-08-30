@@ -83,7 +83,7 @@ Dans ce qui précède, nous avons utilisé le terme **fonction** de manière tr�
 * un groupe d'instruction qui **retourne** une valeur au programme principal est appelé une **fonction**. Une fonction **ne réalise pas d'affichage** : elle communique avec le programme principal par ses arguments et la valeur retournée.
 * un groupe d'instruction qui **ne retourne pas de valeur** et qui peut éventuellement effectuer des affichages sera appelé une **procédure**.
 
-Par exemple, le script ci-dessus qui affiche une table de multiplication et celui qui est nommé `prixTTC` sont des procédures. Par contre `aire_triangle` est une fonction.
+Par exemple, le script ci-dessus qui affiche une table de multiplication et celui qui est nommé `prixTTC` sont des procédures. Par contre, `aire_triangle` est une fonction.
 :::
 
 ## 2. Utilisation de bibliothèques
@@ -205,9 +205,9 @@ def ma_fonc():
 ma_fonc()
 print (i)
 ```
-Nous commençons par définir une fonction `ma_fonc` qui ne prend aucun paramètre et qui ne renvoie aucune valeur (absence du mot-clef `return`). Cette fonction attribue juste la valeur 5 a la variable ayant pour nom `i`.
+Nous commençons par définir une fonction `ma_fonc` qui ne prend aucun paramètre et qui ne renvoie aucune valeur (absence du mot-clef `return`). Cette fonction attribue juste la valeur 5 à la variable ayant pour nom `i`.
 
-A la 3e ligne du programme, nous exécutons la fonction `ma_fonc`. 
+À la 3e ligne du programme, nous exécutons la fonction `ma_fonc`. 
 
 Rappelons que la fonction `print` permet d'afficher à l'écran la valeur qui lui est passée en paramètre. La 4e ligne de ce programme permet donc d'afficher la valeur de la variable `i` à l'écran.
 
@@ -217,7 +217,7 @@ On pourrait penser que ce programme va donc afficher 5 ! Pas du tout, nous avons
 NameError: name 'i' is not defined
 ```
 
-Le message d'erreur est suffisamment parlant, inutile de s'attarder dessus : la variable i n'est pas définie. A noter que cette erreur est déclenchée par la 4e ligne (le `print`).
+Le message d'erreur est suffisamment parlant, inutile de s'attarder dessus : la variable i n'est pas définie. À noter que cette erreur est déclenchée par la 4e ligne (le `print`).
 
 Pourquoi cette erreur, la variable i est bien définie dans la fonction `ma_fonc` et la fonction `ma_fonc` est bien exécutée, où est donc le problème ?
 
@@ -234,7 +234,7 @@ print (i)
 ```
 On pourrait s'attendre à voir s'afficher la valeur 5 à l'écran. Pas du tout, nous ne rencontrons pas d'erreur cette fois, mais c'est la valeur 3 qui s'affiche à l'écran.
 
-En fait dans cet exemple nous avons 2 variables i différentes : la variable i "**globale**" (celle qui a été définie en dehors de toute fonction) et la variable i "**locale**" (celle qui a été définie dans la fonction). Ces 2 variables portent le même nom, mais sont différentes (elles correspondent à des cases mémoire différentes). Au moment de l'exécution du `print` à la 5e ligne seule la variable globale existe encore (celle définie à la première ligne du programme), d'où l'affichage du 3.
+En fait dans cet exemple, nous avons 2 variables i différentes : la variable i "**globale**" (celle qui a été définie en dehors de toute fonction) et la variable i "**locale**" (celle qui a été définie dans la fonction). Ces 2 variables portent le même nom, mais sont différentes (elles correspondent à des cases mémoire différentes). Au moment de l'exécution du `print` à la 5e ligne seule la variable globale existe encore (celle définie à la première ligne du programme), d'où l'affichage du 3.
 
 Une variable globale peut être "utilisée" à l'intérieur d'une fonction :
 
@@ -292,7 +292,7 @@ On évitera également l'emploi du mot-clef `global` car cette utilisation peut 
 :::{.callout-important}
 ## À retenir
 
-Lorsqu'on écrit un programme, python crée un **espace de noms** ( _namespace_ ) dans lequel les noms des variables et des fonctions définies dans ce programme sont stockés.
+Lorsqu'on écrit un programme, python crée un **espace de noms** (namespace) dans lequel les noms des variables et des fonctions définies dans ce programme sont stockés.
 
 À l'intérieur de chaque fonction, il est possible de définir aussi des variables. Un nouvel espace de noms, **complètement indépendant** de l'espace de noms principal est créé pour chaque fonction.
 

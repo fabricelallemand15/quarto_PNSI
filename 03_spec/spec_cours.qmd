@@ -111,7 +111,7 @@ Lors du développement d'un programme, il est nécessaire de savoir localiser le
 
 Outre les messages d'erreurs standard retournés pas Python, l'utilisation d'**assertions sur des jeux de tests** permet aussi d'aider à la mise au point d'une fonction ou d'un programme.
 
-Il s'agit de tester les postconditions de la fonction sur une série d'exemples bien choisis. On parle alors de **tests unitaires**. Si l'un des tests unitaires est faux, alors il y a une erreur dans la fonction. Si tous les tests unitaires sont validés, il reste des risques de bugs car un **jeu de tests** ne peut en général pas couvrir toutes les possibilités existantes.
+Il s'agit de tester les postconditions de la fonction sur une série d'exemples bien choisis. On parle alors de **tests unitaires**. Si l'un des tests unitaires est faux, alors il y a une erreur dans la fonction. Si tous les tests unitaires sont validés, il reste des risques de bugs, car un **jeu de tests** ne peut en général pas couvrir toutes les possibilités existantes.
 
 On peut rassembler ces tests unitaires dans une fonction ou un module.
 

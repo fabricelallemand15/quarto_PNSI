@@ -1041,7 +1041,7 @@ Point de vocabulaire
 <li>un groupe d’instruction qui <strong>retourne</strong> une valeur au programme principal est appelé une <strong>fonction</strong>. Une fonction <strong>ne réalise pas d’affichage</strong> : elle communique avec le programme principal par ses arguments et la valeur retournée.</li>
 <li>un groupe d’instruction qui <strong>ne retourne pas de valeur</strong> et qui peut éventuellement effectuer des affichages sera appelé une <strong>procédure</strong>.</li>
 </ul>
-<p>Par exemple, le script ci-dessus qui affiche une table de multiplication et celui qui est nommé <code>prixTTC</code> sont des procédures. Par contre <code>aire_triangle</code> est une fonction.</p>
+<p>Par exemple, le script ci-dessus qui affiche une table de multiplication et celui qui est nommé <code>prixTTC</code> sont des procédures. Par contre, <code>aire_triangle</code> est une fonction.</p>
 </div>
 </div>
 </section>
@@ -1203,12 +1203,12 @@ Création d’une bibliothèque personnelle
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>ma_fonc()</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (i)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Nous commençons par définir une fonction <code>ma_fonc</code> qui ne prend aucun paramètre et qui ne renvoie aucune valeur (absence du mot-clef <code>return</code>). Cette fonction attribue juste la valeur 5 a la variable ayant pour nom <code>i</code>.</p>
-<p>A la 3e ligne du programme, nous exécutons la fonction <code>ma_fonc</code>.</p>
+<p>Nous commençons par définir une fonction <code>ma_fonc</code> qui ne prend aucun paramètre et qui ne renvoie aucune valeur (absence du mot-clef <code>return</code>). Cette fonction attribue juste la valeur 5 à la variable ayant pour nom <code>i</code>.</p>
+<p>À la 3e ligne du programme, nous exécutons la fonction <code>ma_fonc</code>.</p>
 <p>Rappelons que la fonction <code>print</code> permet d’afficher à l’écran la valeur qui lui est passée en paramètre. La 4e ligne de ce programme permet donc d’afficher la valeur de la variable <code>i</code> à l’écran.</p>
 <p>On pourrait penser que ce programme va donc afficher 5 ! Pas du tout, nous avons le droit à l’erreur suivante :</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="pp">NameError</span>: name <span class="st">'i'</span> <span class="kw">is</span> <span class="kw">not</span> defined</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Le message d’erreur est suffisamment parlant, inutile de s’attarder dessus : la variable i n’est pas définie. A noter que cette erreur est déclenchée par la 4e ligne (le <code>print</code>).</p>
+<p>Le message d’erreur est suffisamment parlant, inutile de s’attarder dessus : la variable i n’est pas définie. À noter que cette erreur est déclenchée par la 4e ligne (le <code>print</code>).</p>
 <p>Pourquoi cette erreur, la variable i est bien définie dans la fonction <code>ma_fonc</code> et la fonction <code>ma_fonc</code> est bien exécutée, où est donc le problème ?</p>
 <p>En fait, la variable i est une variable dite <strong>locale</strong> : elle a été définie dans une fonction et elle “restera” dans cette fonction. Une fois que l’exécution de la fonction sera terminée, la variable i sera “détruite” (supprimée de la mémoire). Elle n’est donc pas accessible depuis “l’extérieur” de la fonction (ce qui explique le message d’erreur que nous obtenons, car le <code>print</code> est en dehors la fonction <code>ma_fonc</code>, la variable <code>i</code> n’est donc plus accessible).</p>
 <p>Étudions maintenant un cas un peu plus complexe :</p>
@@ -1218,7 +1218,7 @@ Création d’une bibliothèque personnelle
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>ma_fonc()</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (i)  </span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>On pourrait s’attendre à voir s’afficher la valeur 5 à l’écran. Pas du tout, nous ne rencontrons pas d’erreur cette fois, mais c’est la valeur 3 qui s’affiche à l’écran.</p>
-<p>En fait dans cet exemple nous avons 2 variables i différentes : la variable i “<strong>globale</strong>” (celle qui a été définie en dehors de toute fonction) et la variable i “<strong>locale</strong>” (celle qui a été définie dans la fonction). Ces 2 variables portent le même nom, mais sont différentes (elles correspondent à des cases mémoire différentes). Au moment de l’exécution du <code>print</code> à la 5e ligne seule la variable globale existe encore (celle définie à la première ligne du programme), d’où l’affichage du 3.</p>
+<p>En fait dans cet exemple, nous avons 2 variables i différentes : la variable i “<strong>globale</strong>” (celle qui a été définie en dehors de toute fonction) et la variable i “<strong>locale</strong>” (celle qui a été définie dans la fonction). Ces 2 variables portent le même nom, mais sont différentes (elles correspondent à des cases mémoire différentes). Au moment de l’exécution du <code>print</code> à la 5e ligne seule la variable globale existe encore (celle définie à la première ligne du programme), d’où l’affichage du 3.</p>
 <p>Une variable globale peut être “utilisée” à l’intérieur d’une fonction :</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonc():</span>
@@ -1261,7 +1261,7 @@ Création d’une bibliothèque personnelle
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Lorsqu’on écrit un programme, python crée un <strong>espace de noms</strong> ( <em>namespace</em> ) dans lequel les noms des variables et des fonctions définies dans ce programme sont stockés.</p>
+<p>Lorsqu’on écrit un programme, python crée un <strong>espace de noms</strong> (namespace) dans lequel les noms des variables et des fonctions définies dans ce programme sont stockés.</p>
 <p>À l’intérieur de chaque fonction, il est possible de définir aussi des variables. Un nouvel espace de noms, <strong>complètement indépendant</strong> de l’espace de noms principal est créé pour chaque fonction.</p>
 <p>Par conséquent, une variable définie à l’intérieur d’une fonction n’est pas accessible depuis le programme principal et elle n’existe plus lorsque l’exécution de la fonction est terminée (même si elle porte le même nom qu’une variable du programme principal). On dit qu’il s’agit d’une variable <strong>locale</strong>.</p>
 </div>
