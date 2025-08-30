@@ -1,13 +1,11 @@
 ---
-title: Exercices - fiche 4
+title: Exercices - Fonctions et portée des variables
 ---
 
 
 _Les exercices précédés du symbole {{< fa desktop >}}  sont à faire sur machine, en sauvegardant le fichier si nécessaire._
 
 _Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
-
-**Fiche d'exercices sur fonctions et la portée des variables**
 
 ## {{< fa desktop >}}  Exercice 1
 

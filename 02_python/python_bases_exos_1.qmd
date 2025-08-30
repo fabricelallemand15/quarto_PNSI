@@ -1,12 +1,10 @@
 ---
-title: Exercices - fiche 1
+title: Exercices - Variables, affectations et chaînes de caractères
 ---
 
 _Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._
 
 _Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
-
-**Fiche d'exercices sur les variables, les affectations et les chaînes de caractères.**
 
 ## {{< fa desktop >}} Exercice 1
 

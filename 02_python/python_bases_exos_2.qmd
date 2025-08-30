@@ -1,12 +1,10 @@
 ---
-title: Exercices - fiche 2
+title: Exercices - Instructions conditionnelles
 ---
 
 _Les exercices précédés du symbole {{< fa desktop >}}  sont à faire sur machine, en sauvegardant le fichier si nécessaire._
 
 _Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
-
-**Fiche d'exercices sur les instructions conditionnelles.**
 
 ## {{< fa desktop >}}  Exercice 1
 Écrire un programme qui demande le poids, en grammes, d’une **lettre prioritaire destinée à la France** et qui retourne le prix du timbre adéquat. Vous pourrez consulter les tarifs postaux sur [le site de la Poste](https://www.laposte.fr/tarifs-postaux-courrier-lettres-timbres){target=_blank}.
