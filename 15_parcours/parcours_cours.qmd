@@ -28,7 +28,7 @@ print(occurrences(tab, "MI"))
 print(occurrences(tab, "UT"))
 ```
 
-**Complexité de l'algorithme** : Comptons le nombre d'itérations et de tests. Notons $n$ la taille du tableau, l'algorithme parcourt toutes les valeurs du tableau. Il y a donc au total $n$ itérations. De plus, nous avons $n$ tests. Il y a donc $2n$ opérations au total. On peut donc dire que l'algorithme est de complexité $\mathcal{O}(n)$.
+**Complexité de l'algorithme** : Comptons le nombre d'itérations et de tests. Notons $n$ la taille du tableau, l'algorithme parcourt toutes les valeurs du tableau. Il y a donc au total $n$ itérations. De plus, nous avons $n$ tests. Il y a donc $2n$ opérations au total. On peut donc dire la complexité de l'algorithme est **proportionnelle** à la taille $n$ du tableau. Dans ce cas, on note \(\mathcal{O}(n)\) la complexité de l'algorithme.
 
 ## 2. Recherche d'un extremum
 
@@ -51,7 +51,7 @@ tab = [201, 203, 35, 448, 55, 16, 2023, 14, 999, 100]
 print(max(tab))
 ```
 
-**Complexité de l'algorithme** : La boucle `for` parcourt toutes les valeurs du tableau, sauf la première. Il y a donc au total $n-1$ itérations. Nous avons aussi $n-1$ comparaisons. Au total, le nombre d'opérations est donc de $2n-2$. On peut donc dire que l'algorithme est de complexité $\mathcal{O}(n)$.
+**Complexité de l'algorithme** : La boucle `for` parcourt toutes les valeurs du tableau, sauf la première. Il y a donc au total $n-1$ itérations. Nous avons aussi $n-1$ comparaisons. Au total, le nombre d'opérations est donc de $2n-2$ (**fonction affine** de $n$). On peut donc dire que l'algorithme est de complexité $\mathcal{O}(n)$.
 
 ## 3. Calcul d'une moyenne
 

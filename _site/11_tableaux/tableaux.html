@@ -418,12 +418,6 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../02_python/python_str.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Zoom sur les chaînes de caractères</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../02_python/python_bool.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zoom sur les booléens</span></a>
   </div>
@@ -993,7 +987,7 @@ Définition
 </section>
 <section id="construction-par-compréhension" class="level2">
 <h2 class="anchored" data-anchor-id="construction-par-compréhension">2. Construction par compréhension</h2>
-<p>Il est aussi possible de créer un tableau <strong>par compréhension</strong>. Il s’agit de décrire les éléments du tableau par une boucle, des conditions, …</p>
+<p>Il est aussi possible de créer un tableau <strong>par compréhension</strong>. Il s’agit de décrire les éléments du tableau par une boucle, des conditions…</p>
 <p>L’instruction de base s’écrit sous la forme <code>[expression(i) for i in objet]</code>. Ce type de construction est très spécifique au langage Python. En voici deux exemples :</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>multiples_de_3 <span class="op">=</span> [<span class="dv">3</span> <span class="op">*</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>)]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>multiples_de_6 <span class="op">=</span> [<span class="dv">2</span> <span class="op">*</span> n <span class="cf">for</span> n <span class="kw">in</span> multiples_de_3]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1071,7 +1065,7 @@ Définition
 <div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2 <span class="op">=</span> <span class="bu">list</span>(tab1)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=tab1%20%3D%20%5B%22a%22,%20%22b%22,%20%22c%22%5D%0Atab2%20%3D%20list%28tab1%29%0Atab1%5B1%5D%20%3D%20%22d%22&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=3&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
 </iframe>
-<p>Pour des tableaux de tableaux, cependant, cette copie simple ne suffira pas car les éléments du tableau, qui sont eux-mêmes des tableaux, ne seront pas vraiment copiés. Pour y parvenir, si nécessaire, on utilise la fonction <code>deepcopy</code> de la bibliothèque <code>copy</code>.</p>
+<p>Pour des tableaux de tableaux, cependant, cette copie simple ne suffira pas, car les éléments du tableau, qui sont eux-mêmes des tableaux, ne seront pas vraiment copiés. Pour y parvenir, si nécessaire, on utilise la fonction <code>deepcopy</code> de la bibliothèque <code>copy</code>.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> copy <span class="im">import</span> deepcopy</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab1 <span class="op">=</span> [[<span class="st">"a"</span>, <span class="st">"b"</span>], [<span class="st">"c"</span>, <span class="st">"d"</span>]]</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2 <span class="op">=</span> deepcopy(liste1)</span>

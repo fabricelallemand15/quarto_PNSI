@@ -40,7 +40,7 @@ multiples_de_3.append(6) # [0, 3, 6]
 
 ## 2. Construction par compréhension
 
-Il est aussi possible de créer un tableau **par compréhension**. Il s'agit de décrire les éléments du tableau par une boucle, des conditions, ...
+Il est aussi possible de créer un tableau **par compréhension**. Il s'agit de décrire les éléments du tableau par une boucle, des conditions…
 
 L'instruction de base s'écrit sous la forme ``[expression(i) for i in objet]``. Ce type de construction est très spécifique au langage Python. En voici deux exemples :
 
@@ -162,7 +162,7 @@ Pour effectuer une vraie copie d'une liste simple, on peut entrer :
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=tab1%20%3D%20%5B%22a%22,%20%22b%22,%20%22c%22%5D%0Atab2%20%3D%20list%28tab1%29%0Atab1%5B1%5D%20%3D%20%22d%22&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=3&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 
-Pour des tableaux de tableaux, cependant, cette copie simple ne suffira pas car les éléments du tableau, qui sont eux-mêmes des tableaux, ne seront pas vraiment copiés. Pour y parvenir, si nécessaire, on utilise la fonction ``deepcopy`` de la bibliothèque ``copy``.
+Pour des tableaux de tableaux, cependant, cette copie simple ne suffira pas, car les éléments du tableau, qui sont eux-mêmes des tableaux, ne seront pas vraiment copiés. Pour y parvenir, si nécessaire, on utilise la fonction ``deepcopy`` de la bibliothèque ``copy``.
 
 ````python
 >>> from copy import deepcopy
