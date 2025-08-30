@@ -33,7 +33,6 @@ website:
           - 02_python/python_boucles.qmd
           - 02_python/python_fonctions.qmd
           - 03_spec/spec_cours.qmd
-          - 02_python/python_str.qmd
           - 02_python/python_bool.qmd
           - 11_tableaux/tableaux.qmd
           - 15_parcours/parcours_cours.qmd
