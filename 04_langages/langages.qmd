@@ -31,7 +31,7 @@ L’indice TIOBE Programming Community est un indicateur de la popularité des l
 L’indice peut être utilisé pour vérifier si vos compétences en programmation sont toujours à jour ou pour prendre une décision stratégique sur le langage de programmation à adopter lorsque vous commencez à construire un nouveau système logiciel. La définition de l’indice TIOBE peut être trouvée [ici](https://www.tiobe.com/tiobe-index/programminglanguages_definition/){target="_blank"}.
 :::
 
-Voici le classement des dix premiers langages selon l'indice TIOBE en septembre 2023 et le graphique de son évolution :
+Voici le classement des dix premiers langages selon l'indice TIOBE fin août 2025 et le graphique de son évolution :
 
 ![](tiobe-index.png)
 
