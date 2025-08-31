@@ -49,21 +49,6 @@ Exemple :
 
 ## Exercice 4
 
-Écrire une fonction ``RechercheMinMax`` qui prend en paramètre un tableau de nombres non triés ``tab``, et qui renvoie la plus petite et la plus grande valeur du tableau sous la forme d’un **dictionnaire** à deux clés ``‘min’`` et ``‘max’``.
-
-Exemples :
-
-```python
->>> RechercheMinMax([1,5,6,9,1,2,3,7,9,8])
-{'min': 1, 'max': 9}
->>> RechercheMinMax([2,2,2])
-{'min': 2, 'max': 2}
->>> RechercheMinMax([])
-{'min': None, 'max': None}
-```
-
-## Exercice 5
-
 On dit que dans un tableau de nombres, il y a un «saut en hauteur» lorsqu'une valeur est supérieure à la valeur précédente. Par exemple dans le tableau ``[7, 4, 3, 6, 7, 4, 3, 1, 8, 8]``, il y a trois sauts en hauteur :
 
 * entre les indices 2 et 3 (pour passer de la valeur 3 à la valeur 6),
@@ -111,7 +96,7 @@ Exemples :
 0
 ```
 
-## Exercice 6
+## Exercice 5
 
 On dispose ici de deux tableaux de même longueur. Il s'agit de calculer le nombre de différences entre les deux tableaux. Par exemple avec les deux tableaux suivants :
 
@@ -160,7 +145,7 @@ Exemples :
 0
 ```
 
-## Exercice 7
+## Exercice 6
 
 On dit qu'on **écrête** un signal lorsqu'on limite l'amplitude du signal entre deux valeurs $a$ et $b$. On peut également appliquer cela à des tableaux de valeurs. Voici par exemple un tableau ``tab`` que l'on a écrêté entre $- 150$ et $150$ pour donner le tableau ``tab_ec`` :
 

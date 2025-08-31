@@ -916,6 +916,7 @@ cookieconsent.run({
   <li><a href="#exercice-7" id="toc-exercice-7" class="nav-link" data-scroll-target="#exercice-7"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 7</a></li>
   <li><a href="#exercice-8" id="toc-exercice-8" class="nav-link" data-scroll-target="#exercice-8"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 8</a></li>
   <li><a href="#exercice-9-qcm" id="toc-exercice-9-qcm" class="nav-link" data-scroll-target="#exercice-9-qcm"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 9 : QCM</a></li>
+  <li><a href="#exercice-4-1" id="toc-exercice-4-1" class="nav-link" data-scroll-target="#exercice-4-1">Exercice 4</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
@@ -1170,6 +1171,17 @@ cookieconsent.run({
 <li><label><input type="checkbox"><code>['1', '3']</code></label></li>
 </ul></li>
 </ol>
+</section>
+<section id="exercice-4-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4-1">Exercice 4</h2>
+<p>Écrire une fonction <code>RechercheMinMax</code> qui prend en paramètre un tableau de nombres non triés <code>tab</code>, et qui renvoie la plus petite et la plus grande valeur du tableau sous la forme d’un <strong>dictionnaire</strong> à deux clés <code>‘min’</code> et <code>‘max’</code>.</p>
+<p>Exemples :</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> RechercheMinMax([<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">8</span>])</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>{<span class="st">'min'</span>: <span class="dv">1</span>, <span class="st">'max'</span>: <span class="dv">9</span>}</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> RechercheMinMax([<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>])</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>{<span class="st">'min'</span>: <span class="dv">2</span>, <span class="st">'max'</span>: <span class="dv">2</span>}</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> RechercheMinMax([])</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>{<span class="st">'min'</span>: <span class="va">None</span>, <span class="st">'max'</span>: <span class="va">None</span>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
