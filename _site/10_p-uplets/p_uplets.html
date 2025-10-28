@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,18 +72,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f90cbdadd06a7ce36d2760346202a0fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-16590c05cc97ba2c357b14febf002824.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-bce9cb50f68cdd09c1ecc98127863f69.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-16590c05cc97ba2c357b14febf002824.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-a9abdc8f23f02a1e69185ea0e4a1bf53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -326,7 +327,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -352,6 +353,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">NSI - Première</span>
     </a>
@@ -362,7 +365,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -404,6 +407,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -543,31 +550,31 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 1</span></a>
+ <span class="menu-text">Cours : Partie 1 - Un peu d’histoire</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 2</span></a>
+ <span class="menu-text">Cours : Partie 2 - Du transistor aux circuits logiques</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 3</span></a>
+ <span class="menu-text">Cours : Partie 3 - L’architecture de Von Neumann</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 4</span></a>
+ <span class="menu-text">Cours : Partie 4 - Du langage machine au processeur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01_os/OS_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours : Partie 5 - Les systèmes d’exploitation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -579,7 +586,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices - Assembleur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -591,7 +598,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01_os/OS_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices - Systèmes d’exploitation</span></a>
   </div>
 </li>
       </ul>
@@ -986,7 +993,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Définition
+<span class="screen-reader-only">Astuce</span>Définition
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1008,40 +1015,40 @@ Définition
 <h3 class="anchored" data-anchor-id="opérations">2.2. Opérations</h3>
 <p>Nous avons deux opérateurs de concaténation qui s’utilisent comme avec les chaînes de caractères, ce sont les opérateurs + et *.</p>
 <p>De nouveaux p-uplets sont créés.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t1 <span class="op">=</span> (<span class="st">"a"</span>, <span class="st">"b"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t1 <span class="op">=</span> (<span class="st">"a"</span>, <span class="st">"b"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t2 <span class="op">=</span> (<span class="st">"c"</span>, <span class="st">"d"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t1 <span class="op">+</span> t2</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>(<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>, <span class="st">'d'</span>)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span> <span class="op">*</span> t1</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>(<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'a'</span>, <span class="st">'b'</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>(<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'a'</span>, <span class="st">'b'</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="appartenance" class="level3">
 <h3 class="anchored" data-anchor-id="appartenance">2.3. Appartenance</h3>
 <p>Pour tester l’appartenance d’un élément à un tuple, on utilise l’opérateur <code>in</code> :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">"a"</span> <span class="kw">in</span> t</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="va">True</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">"d"</span> <span class="kw">in</span> t</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="va">False</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="va">False</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="utilisation-des-indices" class="level3">
 <h3 class="anchored" data-anchor-id="utilisation-des-indices">2.4. Utilisation des indices</h3>
 <p>Les indices permettent d’accéder aux différents éléments d’un tuple. Pour accéder à un élément d’indice <code>i</code> d’un tuple <code>t</code>, la syntaxe est <code>t[i]</code>. L’indice <code>i</code> peut prendre les valeurs entières de 0 à <span class="math inline">\(n − 1\)</span> où <span class="math inline">\(n\)</span> est la longueur du tuple. Cette longueur s’obtient avec la fonction <code>len</code>. Exemple :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="st">"a"</span>, <span class="dv">1</span>, <span class="st">"b"</span>, <span class="dv">2</span>, <span class="st">"c"</span>, <span class="dv">3</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="st">"a"</span>, <span class="dv">1</span>, <span class="st">"b"</span>, <span class="dv">2</span>, <span class="st">"c"</span>, <span class="dv">3</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(t)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t[<span class="dv">2</span>]</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">'b'</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">'b'</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Les indices commencent toujours à 0 et par exemple le troisième élément a pour indice 2. Le dernier élément d’un tuple <code>t</code> a pour indice <code>len(t)-1</code>. On accède ainsi au dernier élément avec <code>t[len(t)-1]</code> qui peut s’abréger en <code>t[-1]</code>. Les indices négatifs permettent donc d’accéder aux éléments du tuple “en partant de la fin”.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="st">"a"</span>, <span class="dv">1</span>, <span class="st">"b"</span>, <span class="dv">2</span>, <span class="st">"c"</span>, <span class="dv">3</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="st">"a"</span>, <span class="dv">1</span>, <span class="st">"b"</span>, <span class="dv">2</span>, <span class="st">"c"</span>, <span class="dv">3</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t[<span class="op">-</span><span class="dv">1</span>]</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t[<span class="op">-</span><span class="dv">2</span>]</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">'c'</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">'c'</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Exemple avec des tuples emboîtés (un tuple contenant des tuples) :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> ((<span class="st">"a"</span>, <span class="st">"b"</span>), (<span class="st">"c"</span>, <span class="st">"d"</span>))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> ((<span class="st">"a"</span>, <span class="st">"b"</span>), (<span class="st">"c"</span>, <span class="st">"d"</span>))</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t[<span class="dv">1</span>][<span class="dv">0</span>]</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">'c'</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">'c'</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Explication : <code>t[1]</code> est le tuple <code>("c", "d")</code> et <code>'c'</code> est l’élément d’indice 0 de ce tuple.</p>
 <p>Rappelons ce qui a été annoncé plus haut : les éléments d’un tuple ne sont pas modifiables par une affectation de la forme <code>t[i]=valeur</code> qui provoque une erreur et arrête le programme.</p>
 </section>
@@ -1050,13 +1057,13 @@ Définition
 <p>Prenons pour exemple l’affectation <code>a, b, c = 1, 2, 3</code>. Ceci signifie que le tuple <code>(a, b, c)</code> prend pour valeur le tuple <code>(1, 2, 3)</code>, autrement dit, les valeurs respectives des variables <code>a</code>, <code>b</code> et <code>c</code> sont 1, 2 et 3.</p>
 <p>En particulier, l’instruction <code>a, b = b, a</code> permet d’échanger les valeurs des deux variables <code>a</code> et <code>b</code>.</p>
 <p>Les valeurs des éléments d’un tuple peuvent ainsi être stockées dans des variables.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a, b, c <span class="op">=</span> t</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Cette syntaxe s’utilise souvent avec une fonction qui renvoie un tuple.</p>
 <p>Voici un exemple avec une fonction qui calcule et renvoie les longueurs des trois côtés d’un triangle ABC. La fonction prend en paramètres trois p-uplets représentant les coordonnées des trois points. On importe au préalable la fonction racine carrée <code>sqrt</code> du module <code>math</code>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
 <span id="cb7-2"><a href="#cb7-2"></a></span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="kw">def</span> longueurs(A, B, C):</span>
 <span id="cb7-4"><a href="#cb7-4"></a>    xA, yA <span class="op">=</span> A</span>
@@ -1065,33 +1072,33 @@ Définition
 <span id="cb7-7"><a href="#cb7-7"></a>    dAB <span class="op">=</span> sqrt((xB <span class="op">-</span> xA) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> (yB <span class="op">-</span> yA) <span class="op">**</span> <span class="dv">2</span>)</span>
 <span id="cb7-8"><a href="#cb7-8"></a>    dBC <span class="op">=</span> sqrt((xC <span class="op">-</span> xB) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> (yC <span class="op">-</span> yB) <span class="op">**</span> <span class="dv">2</span>)</span>
 <span id="cb7-9"><a href="#cb7-9"></a>    dAC <span class="op">=</span> sqrt((xC <span class="op">-</span> xA) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> (yC <span class="op">-</span> yA) <span class="op">**</span> <span class="dv">2</span>)</span>
-<span id="cb7-10"><a href="#cb7-10"></a>    <span class="cf">return</span> dAB, dBC, dAC</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-10"><a href="#cb7-10"></a>    <span class="cf">return</span> dAB, dBC, dAC</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Dans cette fonction, les variables <code>A</code>, <code>B</code> et <code>C</code> sont des 2-uplets représentant les coordonnées des points A, B et C. Aux lignes 4, 5, 6, on <strong>dépaquette</strong> ces 2-uplets pour procéder à une affectation multiple.</p>
 <p>La fonction étant définie, nous l’utilisons dans l’interpréteur :</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> M <span class="op">=</span> (<span class="fl">3.4</span>, <span class="fl">7.8</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> M <span class="op">=</span> (<span class="fl">3.4</span>, <span class="fl">7.8</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> N <span class="op">=</span> (<span class="dv">5</span>, <span class="fl">1.6</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> P <span class="op">=</span> (<span class="op">-</span><span class="fl">3.8</span>, <span class="fl">4.3</span>)</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> dMN, dNP, dMP <span class="op">=</span> longueurs(M, N, P)</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> dMN</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fl">6.403124237432848</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fl">6.403124237432848</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="parcours-dun-tuple-avec-une-boucle-for" class="level3">
 <h3 class="anchored" data-anchor-id="parcours-dun-tuple-avec-une-boucle-for">2.6. Parcours d’un tuple avec une boucle for</h3>
 <p>Une boucle <code>for</code> permet de parcourir chacun des éléments d’un tuple, comme le montre la suite d’instruction suivante, entrée dans la console Python :</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> k <span class="kw">in</span> t: </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(k)</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-À retenir
+<span class="screen-reader-only">Important</span>À retenir
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1109,14 +1116,14 @@ Définition
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Remarque : p-uplets nommés
+<span class="screen-reader-only">Note</span>Remarque : p-uplets nommés
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Dans le programme, il est fait mention de p-uplets nommés. Ce type de variable est semblable aux p-uplets, avec toutes leurs propriétés, mais les éléments ne sont pas indexés par un entier 0, 1, 2 …, mais par un descripteur qui peut par exemple être une chaîne de caractères :</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> monsieurX <span class="op">=</span> {<span class="st">"nom"</span>: <span class="st">"X"</span>, <span class="st">"́prenom"</span>: <span class="st">"Monsieur"</span>, <span class="st">"age"</span>: <span class="dv">47</span>}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> monsieurX <span class="op">=</span> {<span class="st">"nom"</span>: <span class="st">"X"</span>, <span class="st">"́prenom"</span>: <span class="st">"Monsieur"</span>, <span class="st">"age"</span>: <span class="dv">47</span>}</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> monsieurX[<span class="st">"age"</span>]</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dv">47</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dv">47</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Le type p-uplet nommé n’existe pas en Python (ou alors il faut utiliser une bibliothèque supplémentaire). Nous utiliserons à la place des dictionnaires (<a href="">voir le cours sur les dictionnaires</a>).</p>
 </div>
 </div>
@@ -1190,13 +1197,14 @@ Remarque : p-uplets nommés
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

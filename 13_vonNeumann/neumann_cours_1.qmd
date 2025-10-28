@@ -1,5 +1,5 @@
 ---
-title: "Cours : Partie 1"
+title: "Cours : Partie 1 - Un peu d'histoire"
 ---
 
 Ce panorama rapide est issu, à quelques modifications près, du cours de Anthony Juton, Professeur agrégé en Physique appliquée (MOOC NSI : les fondamentaux).

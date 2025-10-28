@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,18 +72,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f90cbdadd06a7ce36d2760346202a0fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-16590c05cc97ba2c357b14febf002824.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-bce9cb50f68cdd09c1ecc98127863f69.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-16590c05cc97ba2c357b14febf002824.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-a9abdc8f23f02a1e69185ea0e4a1bf53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -326,7 +327,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -352,6 +353,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">NSI - Première</span>
     </a>
@@ -362,7 +365,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -404,6 +407,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -543,31 +550,31 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 1</span></a>
+ <span class="menu-text">Cours : Partie 1 - Un peu d’histoire</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 2</span></a>
+ <span class="menu-text">Cours : Partie 2 - Du transistor aux circuits logiques</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 3</span></a>
+ <span class="menu-text">Cours : Partie 3 - L’architecture de Von Neumann</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 4</span></a>
+ <span class="menu-text">Cours : Partie 4 - Du langage machine au processeur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01_os/OS_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours : Partie 5 - Les systèmes d’exploitation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -579,7 +586,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices - Assembleur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -591,7 +598,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01_os/OS_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices - Systèmes d’exploitation</span></a>
   </div>
 </li>
       </ul>
@@ -974,10 +981,10 @@ window.Quarto = {
 <ol type="1">
 <li>Tester le programme ci-dessous et le corriger :</li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>date <span class="op">=</span> (<span class="dv">24</span>, <span class="dv">12</span>, <span class="dv">20</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>date <span class="op">=</span> (<span class="dv">24</span>, <span class="dv">12</span>, <span class="dv">20</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>jour, mois <span class="op">=</span> date</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> jour <span class="op">==</span> <span class="dv">24</span> <span class="kw">and</span> mois <span class="op">==</span> <span class="dv">12</span>:</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"C'est Noël demain, les petits !"</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"C'est Noël demain, les petits !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <ol start="2" type="1">
 <li>Écrire un programme qui à partir du tuple <code>date = (21,11,18)</code> affiche la date selon les deux formats :</li>
 </ol>
@@ -991,12 +998,12 @@ window.Quarto = {
 <p>Un point <span class="math inline">\(A\)</span> de coordonnées <span class="math inline">\(A(2 ; 7)\)</span> peut être représenté par un tuple : <code>A = (2,7)</code>.</p>
 <p>L’abscisse et l’ordonnée d’un point <span class="math inline">\(A\)</span> sont en général notées <span class="math inline">\(x_A\)</span> et <span class="math inline">\(y_A\)</span>.</p>
 <p>On considère la fonction :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> milieu(A, B):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> milieu(A, B):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    xA, yA <span class="op">=</span> A</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    xB, yB <span class="op">=</span> B</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    xM <span class="op">=</span> (xA <span class="op">+</span> xB) <span class="op">/</span> <span class="dv">2</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    yM <span class="op">=</span> (yA <span class="op">+</span> yB) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> xM, yM</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> xM, yM</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <ol type="1">
 <li><p>Parmi les appels suivants, quel est celui qui correct ?</p>
 <ol type="a">
@@ -1007,10 +1014,10 @@ window.Quarto = {
 </ol></li>
 <li><p>Quelle est la valeur retournée par l’appel suivant : <code>milieu((2,3),(4,9))</code> ?</p></li>
 <li><p>On utilise cette fonction dans le programme suivant :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> (<span class="dv">2</span>, <span class="dv">3</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> (<span class="dv">2</span>, <span class="dv">3</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> (<span class="dv">4</span>, <span class="dv">9</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>xE <span class="op">=</span> milieu(C, D)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Le milieu a pour abscisse :"</span>, xE)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Le milieu a pour abscisse :"</span>, xE)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Corriger ce programme pour qu’il fonctionne.</p></li>
 </ol>
 </section>
@@ -1081,9 +1088,9 @@ window.Quarto = {
 </tbody>
 </table>
 <p>On peut le représenter par <strong>un tableau de tuples</strong> (un tuple pour chaque adhérent) :</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ListeAdherents <span class="op">=</span> [(<span class="st">"BERNARD"</span>, <span class="st">"F"</span>, <span class="st">"Bebert"</span>, <span class="dv">19</span>, <span class="dv">2019</span>, <span class="st">"Bibi2019*"</span>), (<span class="st">"BONNET"</span>, <span class="st">"M"</span>, <span class="st">"Bonbon"</span>, <span class="dv">22</span>, <span class="dv">2017</span>, <span class="st">"45trd ;*</span><span class="sc">%G</span><span class="st">R"</span>),</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ListeAdherents <span class="op">=</span> [(<span class="st">"BERNARD"</span>, <span class="st">"F"</span>, <span class="st">"Bebert"</span>, <span class="dv">19</span>, <span class="dv">2019</span>, <span class="st">"Bibi2019*"</span>), (<span class="st">"BONNET"</span>, <span class="st">"M"</span>, <span class="st">"Bonbon"</span>, <span class="dv">22</span>, <span class="dv">2017</span>, <span class="st">"45trd ;*</span><span class="sc">%G</span><span class="st">R"</span>),</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                  (<span class="st">"DUBET"</span>, <span class="st">"M"</span>, <span class="st">"Bud"</span>, <span class="dv">17</span>, <span class="dv">2018</span>, <span class="st">"Bud17"</span>), (<span class="st">"DURAND"</span>, <span class="st">"M"</span>, <span class="st">"Rantanplan"</span>, <span class="dv">15</span>, <span class="dv">2018</span>, <span class="st">"OuahOuah"</span>),</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                  (<span class="st">"FOURNIER"</span>, <span class="st">"F"</span>, <span class="st">"Fifou"</span>, <span class="dv">21</span>, <span class="dv">2016</span>, <span class="st">"12051995"</span>), (<span class="st">"MARTIN"</span>, <span class="st">"M"</span>, <span class="st">"Tinmar"</span>, <span class="dv">23</span>, <span class="dv">2017</span>, <span class="st">"Titidu15"</span>)]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                  (<span class="st">"FOURNIER"</span>, <span class="st">"F"</span>, <span class="st">"Fifou"</span>, <span class="dv">21</span>, <span class="dv">2016</span>, <span class="st">"12051995"</span>), (<span class="st">"MARTIN"</span>, <span class="st">"M"</span>, <span class="st">"Tinmar"</span>, <span class="dv">23</span>, <span class="dv">2017</span>, <span class="st">"Titidu15"</span>)]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <ol type="1">
 <li><p>Sans utiliser l’ordinateur, prévoir ce qui est affiché par les instructions suivantes :</p>
 <ul>
@@ -1164,13 +1171,14 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

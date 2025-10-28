@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,18 +72,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f90cbdadd06a7ce36d2760346202a0fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-16590c05cc97ba2c357b14febf002824.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-bce9cb50f68cdd09c1ecc98127863f69.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-16590c05cc97ba2c357b14febf002824.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-a9abdc8f23f02a1e69185ea0e4a1bf53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -329,7 +330,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -355,6 +356,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">NSI - Première</span>
     </a>
@@ -365,7 +368,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -407,6 +410,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -546,31 +553,31 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 1</span></a>
+ <span class="menu-text">Cours : Partie 1 - Un peu d’histoire</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 2</span></a>
+ <span class="menu-text">Cours : Partie 2 - Du transistor aux circuits logiques</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 3</span></a>
+ <span class="menu-text">Cours : Partie 3 - L’architecture de Von Neumann</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 4</span></a>
+ <span class="menu-text">Cours : Partie 4 - Du langage machine au processeur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01_os/OS_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours : Partie 5 - Les systèmes d’exploitation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -582,7 +589,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices - Assembleur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -594,7 +601,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01_os/OS_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices - Systèmes d’exploitation</span></a>
   </div>
 </li>
       </ul>
@@ -975,17 +982,17 @@ window.Quarto = {
 <p>D’autre part, il arrivera souvent qu’une même séquence d’instructions doive être utilisée à plusieurs reprises dans un programme, et on souhaitera bien évidemment ne pas avoir à la reproduire systématiquement.</p>
 <p>Pour cela, nous pouvons définir de nouvelles <strong>fonctions</strong>, c’est-à-dire donner un nom à un groupe d’instructions, qui pourra être appelé à plusieurs reprises dans le programme principal. Cela revient à définir de nouvelles instructions.</p>
 <p>En python, la syntaxe est la suivante :</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonction(liste des arguments de la fonction) :</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonction(liste des arguments de la fonction) :</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># groupe d'instructions</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    ...</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    ...</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Remarquez les deux points et l’indentation. La première ligne, introduite par <code>def</code> est l’<strong>entête</strong> ou la <strong>signature</strong> de la fonction.</p>
 <p>Voici un premier exemple de fonction qui prend en paramètre un nombre entier <span class="math inline">\(n\)</span> :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> table(n) :</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> table(n) :</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>) :</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(n, <span class="st">"fois"</span>, k, <span class="st">"font"</span>, n <span class="op">*</span> k)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(n, <span class="st">"fois"</span>, k, <span class="st">"font"</span>, n <span class="op">*</span> k)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Pour exécuter cette fonction, il suffit d’écrire par exemple <code>table(4)</code> et on obtient l’affichage suivant :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> fois <span class="dv">0</span> font <span class="dv">0</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> fois <span class="dv">0</span> font <span class="dv">0</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> fois <span class="dv">1</span> font <span class="dv">4</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> fois <span class="dv">2</span> font <span class="dv">8</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> fois <span class="dv">3</span> font <span class="dv">12</span></span>
@@ -995,20 +1002,20 @@ window.Quarto = {
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> fois <span class="dv">7</span> font <span class="dv">28</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> fois <span class="dv">8</span> font <span class="dv">32</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> fois <span class="dv">9</span> font <span class="dv">36</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> fois <span class="dv">10</span> font <span class="dv">40</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> fois <span class="dv">10</span> font <span class="dv">40</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Une fonction peut avoir plusieurs paramètres. Ils doivent alors être séparés par des virgules.</p>
 <p>Par exemple, la fonction ci-dessous affiche le prix TTC en fonction du prix hors taxes et du taux de la taxe, donné en pourcentage :</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prixTTC(prixHT, taux) :</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(prixHT<span class="op">*</span>(<span class="dv">1</span><span class="op">+</span>taux<span class="op">/</span><span class="dv">100</span>))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prixTTC(prixHT, taux) :</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(prixHT<span class="op">*</span>(<span class="dv">1</span><span class="op">+</span>taux<span class="op">/</span><span class="dv">100</span>))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>On a souvent besoin de définir une fonction qui calcule une valeur ou qui retourne le résultat d’un algorithme. Il faut alors utiliser l’instruction <code>return</code> suivie du nom de la variable contenant la valeur à retourner.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># definition d'une fonction</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># definition d'une fonction</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> aire_triangle(base, hauteur) :</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    aire <span class="op">=</span> base <span class="op">*</span> hauteur <span class="op">/</span> <span class="dv">2</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> aire</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># programme principal</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> aire_triangle(<span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Remarque</strong> : Python propose des fonctions prêtes à être utilisées par le programmeur : les fonctions natives (<strong>built-in functions</strong> en anglais). Nous avons déjà eu l’occasion d’en voir deux avec <code>type</code> (qui renvoie le type d’une variable) et <code>str</code> qui renvoie la chaîne de caractère obtenue à partir d’un nombre (<code>str(4)</code> renvoie le caractère “4”). Il existe beaucoup d’autres fonctions natives Python (il en existe plus de 50). Nous pouvons en citer deux autres :</p>
 <ul>
 <li><p>la fonction <code>len</code> prend en paramètre une chaîne de caractères et renvoie le nombre de caractères présents dans cette chaîne de caractères (par exemple <code>len("azerty")</code> renvoie 5)</p></li>
@@ -1020,7 +1027,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Point de vocabulaire
+<span class="screen-reader-only">Note</span>Point de vocabulaire
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1039,19 +1046,19 @@ Point de vocabulaire
 <p>De nombreuses bibliothèques sont fournies avec une installation standard de Python, d’autres doivent être installées séparément.</p>
 <p>Le module <code>math</code> est un module très important puisqu’il comporte toutes les fonctions mathématiques classiques : cosinus, sinus, exposant, racine carrée…</p>
 <p>Pour utiliser les fonctions présentes dans un module, il est nécessaire d’<strong>importer</strong> le module dans notre programme. Par exemple, pour pouvoir utiliser les fonctions du module <code>math</code> il faudra écrire :</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>au début de son programme.</p>
 <p>Pour utiliser une fonction d’un module importé, il faudra préciser le nom du module qui propose cette fonction. Par exemple, pour déterminer le sinus de 3.14, il faudra écrire :</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>math.sin(<span class="fl">3.14</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>math.sin(<span class="fl">3.14</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Voici une série de calculs qui fait appel à des fonctions issues du module maths :</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">16</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="fl">3.14</span></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>puis <span class="op">=</span> math.<span class="bu">pow</span>(a,<span class="dv">3</span>)</span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>racine <span class="op">=</span> math.sqrt(b)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> math.sin(c)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> math.sin(c)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Après l’exécution de ce programme :</p>
 <ul>
 <li>la variable <code>puis</code> aura pour valeur <span class="math inline">\(5^3 = 125\)</span> ;</li>
@@ -1141,7 +1148,7 @@ Point de vocabulaire
 </table>
 <p>Pour connaître toutes les fonctions contenues dans une bibliothèque, on peut, après avoir tapé <code>import math</code> dans la console interactive, taper ensuite <code>help(math)</code>. On peut aussi consulter <a href="https://docs.python.org/3/library/math.html">la documentation officielle</a>.</p>
 <p>Voici par exemple un programme qui génère la figure ci-dessous :</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> turtle <span class="im">as</span> tt</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> turtle <span class="im">as</span> tt</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> spirale(n):</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    tt.penup()</span>
@@ -1154,7 +1161,7 @@ Point de vocabulaire
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>            c <span class="op">=</span> <span class="dv">10</span> <span class="op">+</span> c</span>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>            tt.left(<span class="dv">90</span>)</span>
 <span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>spirale(<span class="dv">4</span>)</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>tt.exitonclick()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>tt.exitonclick()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p><a href="turtle_01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="turtle_01.png" class="img-fluid" style="width:40.0%"></a></p>
 <p>Quelques remarques complémentaires sur ce programme :</p>
 <ul>
@@ -1167,7 +1174,7 @@ Point de vocabulaire
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Création d’une bibliothèque personnelle
+<span class="screen-reader-only">Important</span>Création d’une bibliothèque personnelle
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1187,55 +1194,55 @@ Création d’une bibliothèque personnelle
 <section id="variables-locales-et-variables-globales" class="level2">
 <h2 class="anchored" data-anchor-id="variables-locales-et-variables-globales">3. Variables locales et variables globales</h2>
 <p>Considérons le programme suivant :</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonc():</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonc():</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>ma_fonc()</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (i)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (i)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Nous commençons par définir une fonction <code>ma_fonc</code> qui ne prend aucun paramètre et qui ne renvoie aucune valeur (absence du mot-clef <code>return</code>). Cette fonction attribue juste la valeur 5 à la variable ayant pour nom <code>i</code>.</p>
 <p>À la 3e ligne du programme, nous exécutons la fonction <code>ma_fonc</code>.</p>
 <p>Rappelons que la fonction <code>print</code> permet d’afficher à l’écran la valeur qui lui est passée en paramètre. La 4e ligne de ce programme permet donc d’afficher la valeur de la variable <code>i</code> à l’écran.</p>
 <p>On pourrait penser que ce programme va donc afficher 5 ! Pas du tout, nous avons le droit à l’erreur suivante :</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="pp">NameError</span>: name <span class="st">'i'</span> <span class="kw">is</span> <span class="kw">not</span> defined</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="pp">NameError</span>: name <span class="st">'i'</span> <span class="kw">is</span> <span class="kw">not</span> defined</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Le message d’erreur est suffisamment parlant, inutile de s’attarder dessus : la variable i n’est pas définie. À noter que cette erreur est déclenchée par la 4e ligne (le <code>print</code>).</p>
 <p>Pourquoi cette erreur, la variable i est bien définie dans la fonction <code>ma_fonc</code> et la fonction <code>ma_fonc</code> est bien exécutée, où est donc le problème ?</p>
 <p>En fait, la variable i est une variable dite <strong>locale</strong> : elle a été définie dans une fonction et elle “restera” dans cette fonction. Une fois que l’exécution de la fonction sera terminée, la variable i sera “détruite” (supprimée de la mémoire). Elle n’est donc pas accessible depuis “l’extérieur” de la fonction (ce qui explique le message d’erreur que nous obtenons, car le <code>print</code> est en dehors la fonction <code>ma_fonc</code>, la variable <code>i</code> n’est donc plus accessible).</p>
 <p>Étudions maintenant un cas un peu plus complexe :</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">3</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonc():</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>ma_fonc()</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (i)  </span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (i)  </span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>On pourrait s’attendre à voir s’afficher la valeur 5 à l’écran. Pas du tout, nous ne rencontrons pas d’erreur cette fois, mais c’est la valeur 3 qui s’affiche à l’écran.</p>
 <p>En fait dans cet exemple, nous avons 2 variables i différentes : la variable i “<strong>globale</strong>” (celle qui a été définie en dehors de toute fonction) et la variable i “<strong>locale</strong>” (celle qui a été définie dans la fonction). Ces 2 variables portent le même nom, mais sont différentes (elles correspondent à des cases mémoire différentes). Au moment de l’exécution du <code>print</code> à la 5e ligne seule la variable globale existe encore (celle définie à la première ligne du programme), d’où l’affichage du 3.</p>
 <p>Une variable globale peut être “utilisée” à l’intérieur d’une fonction :</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">3</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonc():</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (i)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>ma_fonc()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>ma_fonc()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Attention, le <code>print</code> se situe dans la fonction (la ligne du <code>print</code> est bien indentée)</p>
 <p>Ce programme permet d’afficher la valeur 3 à l’écran.</p>
 <p>Quand on cherche à utiliser une variable dans une fonction, le système va d’abord chercher si cette variable se “trouve” dans l’espace local de la fonction, puis, s’il ne la trouve pas dans cet espace local, le système va aller rechercher la variable dans l’espace global. Pour le <code>print(i)</code> situé dans la fonction le système ne trouve pas de variable i dans l’espace local de la fonction <code>ma_fonc</code>, il passe donc à l’espace global et trouve la variable i (nous avons donc 3 qui s’affiche).</p>
 <p>Il est important de bien comprendre que dans le programme ci-dessous le système trouve une variable i dans l’espace local de la fonction, la “recherche” de la variable i se serait arrêtée là :</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">3</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonc():</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (i)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>ma_fonc()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>ma_fonc()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>et ce programme affiche la valeur 5 à l’écran. <code>i</code> a été trouvée dans l’espace local de la fonction <code>ma_fonc</code>, la recherche ne va donc pas plus loin (inutile de remonter jusqu’à l’espace global)</p>
 <p>En revanche le programme ci-dessous génère une erreur : “UnboundLocalError: local variable ‘i’ referenced before assignment”</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">3</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonc():</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>ma_fonc()</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Il n’est à priori pas possible de modifier une variable globale (ici la variable <code>i</code>) dans une fonction.</p>
 <p>Pour pouvoir modifier une variable globale dans une fonction, il faut le déclarer <strong>explicitement</strong> en utilisant le mot-clef <code>global</code> :</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">3</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ma_fonc():</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> i</span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>ma_fonc()</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Ici, aucune erreur la valeur 4 est bien affichée à l’écran.</p>
 <p>Il est fortement déconseillé de donner le même nom à une variable locale et à une variable globale pour éviter ce genre de confusions.</p>
 <p>On évitera également l’emploi du mot-clef <code>global</code> car cette utilisation peut entraîner des “effets de bord”.</p>
@@ -1245,7 +1252,7 @@ Création d’une bibliothèque personnelle
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-À retenir
+<span class="screen-reader-only">Important</span>À retenir
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1262,7 +1269,7 @@ Création d’une bibliothèque personnelle
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Exercices
+<span class="screen-reader-only">Mise en garde</span>Exercices
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1338,13 +1345,14 @@ Exercices
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

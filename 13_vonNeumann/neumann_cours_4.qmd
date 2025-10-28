@@ -1,5 +1,5 @@
 ---
-title: "Cours : Partie 4"
+title: "Cours : Partie 4 - Du langage machine au processeur"
 ---
 
 Nous avons vu comment un assemblage de transistors pouvait permettre de faire des opérations logiques, de construire des mémoires, des microprocesseurs, ...

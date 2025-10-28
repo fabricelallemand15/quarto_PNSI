@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,18 +72,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f90cbdadd06a7ce36d2760346202a0fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-16590c05cc97ba2c357b14febf002824.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-bce9cb50f68cdd09c1ecc98127863f69.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-16590c05cc97ba2c357b14febf002824.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-a9abdc8f23f02a1e69185ea0e4a1bf53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -329,7 +330,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -355,6 +356,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">NSI - Première</span>
     </a>
@@ -365,7 +368,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -407,6 +410,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -546,31 +553,31 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 1</span></a>
+ <span class="menu-text">Cours : Partie 1 - Un peu d’histoire</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 2</span></a>
+ <span class="menu-text">Cours : Partie 2 - Du transistor aux circuits logiques</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 3</span></a>
+ <span class="menu-text">Cours : Partie 3 - L’architecture de Von Neumann</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 4</span></a>
+ <span class="menu-text">Cours : Partie 4 - Du langage machine au processeur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01_os/OS_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours : Partie 5 - Les systèmes d’exploitation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -582,7 +589,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices - Assembleur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -594,7 +601,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01_os/OS_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices - Systèmes d’exploitation</span></a>
   </div>
 </li>
       </ul>
@@ -988,7 +995,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Travail à faire par groupes de deux
+<span class="screen-reader-only">Astuce</span>Travail à faire par groupes de deux
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1013,7 +1020,7 @@ Travail à faire par groupes de deux
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Citation
+<span class="screen-reader-only">Note</span>Citation
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1035,7 +1042,7 @@ Citation
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Algorithme en pseudo-code
+<span class="screen-reader-only">Astuce</span>Algorithme en pseudo-code
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1063,7 +1070,7 @@ Algorithme en pseudo-code
 <div class="code-with-filename-file">
 <pre><strong>Langage Python</strong></pre>
 </div>
-<div class="sourceCode" id="cb2" data-filename="Langage Python"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="Langage Python"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_prime(n):</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">2</span>:</span>
@@ -1075,7 +1082,7 @@ Algorithme en pseudo-code
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_prime(<span class="dv">37</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_prime(<span class="dv">37</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="c-c" class="level3">
@@ -1085,7 +1092,7 @@ Algorithme en pseudo-code
 <div class="code-with-filename-file">
 <pre><strong>Langage C</strong></pre>
 </div>
-<div class="sourceCode" id="cb3" data-filename="Langage C"><pre class="sourceCode C code-with-copy"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="Langage C"><pre class="sourceCode C code-with-copy"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdbool.h&gt;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;math.h&gt;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1110,7 +1117,7 @@ Algorithme en pseudo-code
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">"</span><span class="sc">%u</span><span class="st"> n'est pas un nombre premier.</span><span class="sc">\n</span><span class="st">"</span><span class="op">,</span> number<span class="op">);</span></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <iframe src="https://tio.run/##hZDNTsMwEITvfopRUYSjQlXKgUMSngQJ5WdDrcSb4p8T5dmDnaC0kYrwyfp2dnZ260dX1@N4p7jufUPIrWvUsDu@ihWqhqFfQ126YyQilqDs@8koTdKzVR9MDRQ7cCq@BMJb0S6bmGohGUWBQwpDzhuGM56uizkOOJ/BSMInKPeLsi17@yttBwPZocBzhg55AftpnOQUWzxFso0TJuXFOAn8L79Vlm8hYmRdKpY3l2GvKzJx@svcPp3DkPW9C3S5y6xLM7GsN2suyYKOXSs3iQdZF6aAB10ZCgXSiszujTcPWHxiC4XQt/r5PjqcSvuvy/XG@7DuOP4A" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen="">
 </iframe>
@@ -1122,7 +1129,7 @@ Algorithme en pseudo-code
 <div class="code-with-filename-file">
 <pre><strong>Langage C#</strong></pre>
 </div>
-<div class="sourceCode" id="cb4" data-filename="Langage C#"><pre class="sourceCode cs code-with-copy"><code class="sourceCode cs"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-filename="Langage C#"><pre class="sourceCode cs code-with-copy"><code class="sourceCode cs"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Program</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
@@ -1148,7 +1155,7 @@ Algorithme en pseudo-code
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Attendre une saisie pour que la console ne se ferme pas immédiatement</span></span>
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>        Console<span class="op">.</span><span class="fu">ReadLine</span><span class="op">();</span></span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <iframe src="https://tio.run/##jZJNTsMwEIX3OcVTRUWiipafBYs0C8QWpIouWCI3mRaL2G7HNhJqeyDOwcGCk4j0TyC8SeT55r03k@T2IjdMVeWt1AtMP6wjlUZRXgprMWGzYKGidYRwrBNO5pgZU0LalwlLRbHUDjpp6i1VHzlHrJFluE7A5DxrOPaUHgFjXGOzgUY/vAT6sqPnorR7@NwwGqc3ZLhJw2Oc4VG41@F0xS7WCQa4qq8HtWXXtnPq151/GJyE3Eb7I78bWQQ/qeOTSevxvZoR18lud4rNlpisL12odOtq2SSNDlbRcofB7422pqThM0tHD1JTfNZbt@1bkHXwGtqoGROWTEoSD3vJzp/CfP/X0@e14lLYX1Q7pdEId86RLgLgNcEKaWVgjWesPKEUyFsj1FXCnFhRoyyV@vospAg/GGkXHed6IlE0sZKfL7Ctqm8" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen="">
 </iframe>
@@ -1160,7 +1167,7 @@ Algorithme en pseudo-code
 <div class="code-with-filename-file">
 <pre><strong>Langage Java</strong></pre>
 </div>
-<div class="sourceCode" id="cb5" data-filename="Langage Java"><pre class="sourceCode Java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PrimeTest <span class="op">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="Langage Java"><pre class="sourceCode Java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PrimeTest <span class="op">{</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="dt">boolean</span> <span class="fu">isPrime</span><span class="op">(</span><span class="dt">int</span> n<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>n <span class="op">==</span> <span class="dv">2</span><span class="op">)</span> <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
@@ -1179,7 +1186,7 @@ Algorithme en pseudo-code
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span></span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>            <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span>number <span class="op">+</span> <span class="st">" n'est pas un nombre premier."</span><span class="op">);</span></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <iframe src="https://tio.run/##lZFRS8MwFIXf@ysOg2HLsOh88KHrTxCE@SY@pFs6szVpvbkZiOtvr8narU5hYF4Sku/ec8/JVuzF7Xa967pVJazFMyktX6RlfEUR/LIsWK1Q1HUlhYGyRyJWhmESD2FYqkRskOeYJyDJjgyYnMx@AQvMcTjAYOoPnr4706Wo7A@8rAlHlR1yPGR@W@R4Evye2g/i2GvPcB@uZ0HyXDYqTUPlFYE/Q7a94cYVlTc8@N7Xag0tlImXTMpsXt8gaGMvnIconC4khUkfR4VTZiStq9g/nsLr6SSLLsLpsUsry0/LUqe147Tx8lyZodi7nyB8kzMwtS5IoiGplaR0kowjSG/5Hw3NTWjZCHulbRu1Udd9Aw" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen="">
 </iframe>
@@ -1191,7 +1198,7 @@ Algorithme en pseudo-code
 <div class="code-with-filename-file">
 <pre><strong>Langage Javascript</strong></pre>
 </div>
-<div class="sourceCode" id="cb6" data-filename="Langage Javascript"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">is_prime</span>(n) {</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-filename="Langage Javascript"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">is_prime</span>(n) {</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="op">==</span> <span class="dv">2</span>) {</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> ((n <span class="op">&lt;</span> <span class="dv">2</span>) <span class="op">||</span> (n <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>)) {</span>
@@ -1205,7 +1212,7 @@ Algorithme en pseudo-code
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="fu">is_prime</span>(<span class="dv">37</span>))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="fu">is_prime</span>(<span class="dv">37</span>))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <iframe src="https://tio.run/##bY/BDoIwEETvfMVcSEqMxMBBE@gn@A2mIUWr2OK2cBG@HVtRQ9TTZmfnZWbPohe2ItW6db@bprrTlVNGQ9lDS@oqmU5wjwBVg2lwjmzeAZKuIw1HnSy8MEI2Vj593lgG3zAEJkYWuE3yBdbC@xfkfKwNgfWCcAFHXvhRcuyFO6X2Rs63CdJqUeNdLQ5EiHmpvzk@6W/xaIyiymhrGpk25sg@r@fbJJmmBw" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen="">
 </iframe>
@@ -1217,7 +1224,7 @@ Algorithme en pseudo-code
 <div class="code-with-filename-file">
 <pre><strong>Langage Visual Basic</strong></pre>
 </div>
-<div class="sourceCode" id="cb7" data-filename="Langage Visual Basic"><pre class="sourceCode vb code-with-copy"><code class="sourceCode monobasic"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">Module </span>MainModule</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="Langage Visual Basic"><pre class="sourceCode vb code-with-copy"><code class="sourceCode monobasic"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">Module </span>MainModule</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">Function </span>is_prime(n <span class="kw">As</span> <span class="dt">Integer</span>) <span class="kw">As</span> <span class="dt">Boolean</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">If </span>n = 2 <span class="kw">Then</span></span>
@@ -1249,7 +1256,7 @@ Algorithme en pseudo-code
 <span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        Console.ReadLine()</span>
 <span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">End Sub</span></span>
 <span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="kw">End Module</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="kw">End Module</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <iframe src="https://tio.run/##jVNNT8JAEL33V0w4SBsjUTx4kQMiJCSiiZB4NFs6yIbubNkPw1/yd/jD6m5LSxtQnNN0Z96bN/PSz/hqKRXm@UwmNkWYMU5lGgTgYmJpabgk4Po9U1xgSDDUMCWDH6ginz9ImSKjot3HdAUEA@jDYo2HVx8Vh6sulMW6Nk41Fqh7h3pRLnESXDqA6z9JJswBWyz/GlfsJRVsXOEWFhJGbp1wxsy6N98qE1IUwSXcwNxgBv0WrN7PC9ycFnhWaDPGO268mKPimBI3qfX8jDsTnKj7tPKpdG1u48LJMKr7H7kAsiJG1fDPH@Cu1aJQ29Q0bHUtB@sLfBQ0rd4Djq4wkqQdQe9NcYNPnCo0XEAHUBuwBCRFrBAyhYKj6nWi3738k466njBj@gxpebL6uwtDY5AS120JQTOuuQNKq2BrEVIGy3Iq@CrCCpVz04/hQnx/JZwZFEgHTyqRr8iSQmNU@@McCQKf7H@uPP8B" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen="">
 </iframe>
@@ -1261,7 +1268,7 @@ Algorithme en pseudo-code
 <div class="code-with-filename-file">
 <pre><strong>Langage Fortran</strong></pre>
 </div>
-<div class="sourceCode" id="cb8" data-filename="Langage Fortran"><pre class="sourceCode fortran code-with-copy"><code class="sourceCode fortranfixed"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">PROGRAM</span> Main</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" data-filename="Langage Fortran"><pre class="sourceCode fortran code-with-copy"><code class="sourceCode fortranfixed"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">PROGRAM</span> Main</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">IMPLICIT</span> <span class="kw">NONE</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">LOGICAL</span> <span class="dt">::</span> <span class="kw">result</span></span>
@@ -1299,7 +1306,7 @@ Algorithme en pseudo-code
 <span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>  <span class="kw">END FUNCTION</span> is_prime</span>
 <span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="kw">END PROGRAM</span> Main</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="kw">END PROGRAM</span> Main</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <iframe src="https://tio.run/##fVLBbsIwDL3nKywuS1hXbewwCY1D1QYWqU1YCNpuE0hhqlgDSuH7u6TpoNMGPcXP79nPdjc7e7Arc/e5CY@mmUsxk0kBxao0CIAV85ylTAEXnCIH5GLG0iSH8Risro9fB0/iis6o9Jg5VmttPTG8YAKPTy4KXBeV9cfelpXGIU88lU0BBwIB9UK5gwDeJFMUDyMYkq5WBAPQ9QGOBsyuWlsNe6urUtt44BQ0X9ArQnPjpftVfUnOM@cDoVRwlTC@8L6mS54qJnjPNGlb9Jbwk2rxbhFR@@AKM07apfSTHtiigLi5DUwmMOrNDaeSbluxkksat7ifr1M8wwhiIWMoRIZN5OWuyP3FItPEac9VrrYByARs/dnaKfDiVSosaZK72QmBW3hw/TpmmKAzsf3HxBUj4aPvTJ3C7gTnIBOoh3dH@nMUhDz8679tmm8" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen="">
 </iframe>
@@ -1311,7 +1318,7 @@ Algorithme en pseudo-code
 <div class="code-with-filename-file">
 <pre><strong>Langage Pascal</strong></pre>
 </div>
-<div class="sourceCode" id="cb9" data-filename="Langage Pascal"><pre class="sourceCode pascal code-with-copy"><code class="sourceCode pascal"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">program</span> PrimeTest;</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="Langage Pascal"><pre class="sourceCode pascal code-with-copy"><code class="sourceCode pascal"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">program</span> PrimeTest;</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> is_prime(n: <span class="dt">integer</span>): <span class="dt">boolean</span>;</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span></span>
@@ -1347,7 +1354,7 @@ Algorithme en pseudo-code
 <span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    writeln(number, <span class="st">' n''est pas un nombre premier.'</span>);</span>
 <span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>  readln;</span>
-<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span>.</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span>.</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <iframe src="https://tio.run/##dVLBUoNADL3zFe8GjNrRenCmtP/gwbuzQKg7LFkMi/XvcXcLtI71AsnLe8lLoFdDpcxD01fT1Is9iurwKrqjNxpckSTNyJXTlqGH9z7gGe@g2dGRJN@htNaQ4iL5UpIA7VorkpKOmj2mGzAO2MJ9UMixtsLuACcjeZDMQIGZMfbY5rASws7WXnfAY35b3CgvW9TLvL/9i4i2IX0@x6cPbcgj@0jgKhs@xWWc57jDE2p71WxeIFhpg5Xo5Ff9hqdiLdG3dktGXC9hNNP6adszMpfiKz7mg/LYlSRXVwWEhtG4q9MvXs7cuOXLhRjyy7eLlNy3j2vNjPW2J9GODM@0e6TwPwFGBtuuFEIv1GmSTZrPR/9HxWkahL0aborjeCFVG47bbpJp@gE" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen="">
 </iframe>
@@ -1359,7 +1366,7 @@ Algorithme en pseudo-code
 <div class="code-with-filename-file">
 <pre><strong>Langage OCaml</strong></pre>
 </div>
-<div class="sourceCode" id="cb10" data-filename="Langage OCaml"><pre class="sourceCode ocaml code-with-copy"><code class="sourceCode ocaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> is_prime n =</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-filename="Langage OCaml"><pre class="sourceCode ocaml code-with-copy"><code class="sourceCode ocaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> is_prime n =</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">if</span> n = <span class="dv">2</span> <span class="kw">then</span> <span class="kw">true</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">else</span> <span class="kw">if</span> n &lt; <span class="dv">2</span> || n <span class="kw">mod</span> <span class="dv">2</span> = <span class="dv">0</span> <span class="kw">then</span> <span class="kw">false</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">else</span> <span class="kw">begin</span></span>
@@ -1379,7 +1386,7 @@ Algorithme en pseudo-code
 <span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Printf</span>.printf <span class="st">"%d est un nombre premier.</span><span class="ch">\n</span><span class="st">"</span> number</span>
 <span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">else</span></span>
 <span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">Printf</span>.printf <span class="st">"%d n'est pas un nombre premier.</span><span class="ch">\n</span><span class="st">"</span> number</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>;;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>;;</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <iframe src="https://tio.run/##fZBNTsQwDIX3PcVjJMRUSCN@FkiE3oEDIFUtdSCaxClJupu7FycNZQWb5uU92/lq/z44u66WEkzs52AcgdE1gNFZ4AHpkxgpLCQm2Uhb8iLJ5SLC@Ulkh7utUA9S8lM50odhuQD5gUCzZ3E7UbpMRE21DziL/4jkcY9b8VPvda@tHxKO8SvIt1yyKyG4bTH50lxRM8d556gJ9kefux0N0smkirqqeSbmqVGqaTLqsS07yJIXN1LIcE8b7vYrcbFJzN@lbWWlQnhqwY7yGoRan@Zy4HA9gWLCwmDvxkCYAzlD4fTGhzqq7vCPbr7J/fMQ/5@h1Lp@Aw" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen="">
 </iframe>
@@ -1460,13 +1467,14 @@ Algorithme en pseudo-code
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

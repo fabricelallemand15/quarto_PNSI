@@ -1,0 +1,9 @@
+---
+title: "Terminus - Jouer avec le terminal"
+---
+
+Terminus est un jeu éducatif qui permet aux utilisateurs d'apprendre les commandes du terminal de manière ludique. Le jeu propose une série de défis et d'énigmes que les joueurs doivent résoudre en utilisant des commandes de terminal.
+
+Cliquer sur l'image ci-dessous pour accéder au jeu Terminus :
+
+[![Terminus Game](terminuns.png)](https://luffah.xyz/bidules/Terminus/)

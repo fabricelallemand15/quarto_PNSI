@@ -1,5 +1,5 @@
 ---
-title: "Cours : Partie 2"
+title: "Cours : Partie 2 - Du transistor aux circuits logiques"
 ---
 
 Dans cette partie, nous allons décrire comment on peut, à partir de transistors, réaliser des opérations logiques.

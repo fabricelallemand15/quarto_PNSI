@@ -1,5 +1,5 @@
 ---
-title: "Cours : Partie 3"
+title: "Cours : Partie 3 - L'architecture de Von Neumann"
 ---
 
 [John von Neumann](https://fr.wikipedia.org/wiki/John_von_Neumann){ target=_blank } (mathématicien et physicien américano-hongrois 1903-1957) a eu l'idée en 1945 d'utiliser une structure de stockage (mémoire) unique pour les données et les instructions : on parle d'architecture de von Neumann

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,18 +70,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f90cbdadd06a7ce36d2760346202a0fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-16590c05cc97ba2c357b14febf002824.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-bce9cb50f68cdd09c1ecc98127863f69.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-16590c05cc97ba2c357b14febf002824.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-a9abdc8f23f02a1e69185ea0e4a1bf53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -324,7 +325,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -350,6 +351,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">NSI - Première</span>
     </a>
@@ -360,7 +363,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -402,6 +405,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -541,31 +548,31 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 1</span></a>
+ <span class="menu-text">Cours : Partie 1 - Un peu d’histoire</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 2</span></a>
+ <span class="menu-text">Cours : Partie 2 - Du transistor aux circuits logiques</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 3</span></a>
+ <span class="menu-text">Cours : Partie 3 - L’architecture de Von Neumann</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 4</span></a>
+ <span class="menu-text">Cours : Partie 4 - Du langage machine au processeur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01_os/OS_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours : Partie 5 - Les systèmes d’exploitation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -577,7 +584,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices - Assembleur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -589,7 +596,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../01_os/OS_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices - Systèmes d’exploitation</span></a>
   </div>
 </li>
       </ul>
@@ -964,24 +971,24 @@ window.Quarto = {
 <p>!!! info le problème Un achat en espèces se traduit par un échange de pièces et de billets. Dans la zone euro, le système en vigueur, en mettant de côté les centimes d’euros, met à disposition des pièces ou billets de 1 €, 2 €, 5 €, 10 €, 20 €, 50 €, 100 €, 200 €, 500 €. Le problème du rendu de monnaie s’énonce alors de la façon suivante : en supposant que nous avons à notre disposition un nombre illimité de ces pièces ou billets, comment rendre une somme donnée de façon optimale, c’est-à-dire avec le nombre minimal de pièces ou billets ? !!!</p>
 <p><strong>Question 1</strong> : Supposons que la somme à rendre est de 7 €. Faire la liste de toutes les façons de rendre une telle somme. Quelle est la façon optimale ?</p>
 <div id="cell-2" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span> <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span><span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span><span class="dv">1</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span> <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span><span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span><span class="dv">1</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>La solution optimale est <span class="dv">7</span> <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="dv">2</span> : on n<span class="st">'utilise que deux pièces</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>La solution optimale est <span class="dv">7</span> <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="dv">2</span> : on n<span class="st">'utilise que deux pièces</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Sans s’en rendre compte, tout individu met généralement en œuvre un algorithme glouton. Il choisit d’abord la pièce ou le billet de valeur maximale qu’il peut rendre, sans rendre trop évidemment ! Puis il réitère cela tant qu’il reste quelque chose à rendre.</p>
 <p><strong>Question 2</strong> : Appliquer cette méthode pour déterminer la façon optimale de rendre 463 €.</p>
 <div id="cell-4" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">463</span> <span class="op">=</span> <span class="dv">200</span> <span class="op">+</span> <span class="dv">200</span> <span class="op">+</span> <span class="dv">50</span> <span class="op">+</span> <span class="dv">10</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">463</span> <span class="op">=</span> <span class="dv">200</span> <span class="op">+</span> <span class="dv">200</span> <span class="op">+</span> <span class="dv">50</span> <span class="op">+</span> <span class="dv">10</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Pour mettre en œuvre cet algorithme glouton en Python, on définit tout d’abord le système de monnaie via une liste contenant les valeurs des pièces et billets du système par valeurs décroissantes. Pour le système européen, on écrit par exemple l’instruction suivante.</p>
 <div id="cell-6" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>systeme_monnaie_europeen <span class="op">=</span> [<span class="dv">500</span>,<span class="dv">200</span>,<span class="dv">100</span>,<span class="dv">50</span>,<span class="dv">20</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">1</span>]</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>systeme_monnaie_europeen <span class="op">=</span> [<span class="dv">500</span>,<span class="dv">200</span>,<span class="dv">100</span>,<span class="dv">50</span>,<span class="dv">20</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">1</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>On utilise également une variable de type entier <code>somme_a_rendre</code> initialement égale à la somme à rendre.</p>
 <p>L’algorithme consiste alors à parcourir la liste précédente de gauche à droite. Pour chaque élément de cette liste, on vérifie qu’il est bien plus petit que la somme à rendre, auquel cas on le soustrait de la somme à rendre et on le stocke dans la liste des pièces et billets à rendre, sinon on passe à l’élément suivant. On s’arrête enfin lorsque la somme à rendre est égale à zéro.</p>
 <p>Nous mettons l’ensemble du code dans une fonction qui prend pour arguments la somme à rendre et le système de monnaie, puis renvoie la liste des pièces ou billets à rendre.</p>
 <div id="cell-8" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rendu(somme_a_rendre, systeme_monnaie):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rendu(somme_a_rendre, systeme_monnaie):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    liste_pieces <span class="op">=</span> [] <span class="co"># liste des pièces à rendre</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">0</span> <span class="co"># indice de la pièce à rendre dans la liste systeme_monnaie</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> somme_a_rendre <span class="op">&gt;</span> <span class="dv">0</span>: <span class="co"># tant qu'il reste quelque chose à rendre</span></span>
@@ -991,17 +998,17 @@ window.Quarto = {
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>: <span class="co"># la pièce peut être rendue</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>            liste_pieces.append(valeur) <span class="co"># on ajoute la pièce dans la liste des pièces à rendre</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>            somme_a_rendre <span class="op">=</span> somme_a_rendre <span class="op">-</span> valeur <span class="co"># on met à jour la somme à rendre</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> liste_pieces</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> liste_pieces</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Question 3</strong> : Compléter les deux lignes en pointillés du code précédent, puis exécuter les cellules ci-dessous pour tester le code.</p>
 <div id="cell-10" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>rendu(<span class="dv">7</span>,systeme_monnaie_europeen)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>rendu(<span class="dv">7</span>,systeme_monnaie_europeen)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>[5, 2]</code></pre>
 </div>
 </div>
 <div id="cell-11" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>rendu(<span class="dv">463</span>,systeme_monnaie_europeen)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>rendu(<span class="dv">463</span>,systeme_monnaie_europeen)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>[200, 200, 50, 10, 2, 1]</code></pre>
 </div>
@@ -1039,7 +1046,7 @@ window.Quarto = {
 </table>
 <p><strong>Question 4</strong> : Calculer ci-dessous la liste des rapports Valeurs/Masse <span class="math inline">\(\frac{v_i}{m_i}\)</span>, appelés efficacité de chaque objet. L’algorithme glouton que nous proposons consiste alors à classer les objets dans l’ordre décroissant de leur efficacité. On remplit ensuite le sac en prenant les objets un à un dans cet ordre, tant que le sac peut encore les contenir. Déterminer la combinaison d’objets fournie par cet algorithme. Quel est la valeur totale de cette combinaison ?</p>
 <div id="cell-13" class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>A : <span class="dv">70</span><span class="op">/</span><span class="dv">13</span> <span class="op">=</span> <span class="fl">5.4</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>A : <span class="dv">70</span><span class="op">/</span><span class="dv">13</span> <span class="op">=</span> <span class="fl">5.4</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>B : <span class="dv">40</span><span class="op">/</span><span class="dv">12</span> <span class="op">=</span> <span class="fl">3.3</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>C : <span class="dv">30</span><span class="op">/</span><span class="dv">8</span> <span class="op">=</span> <span class="fl">3.75</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>D : <span class="dv">30</span><span class="op">/</span><span class="dv">10</span> <span class="op">=</span> <span class="dv">3</span></span>
@@ -1049,7 +1056,7 @@ window.Quarto = {
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>On choisit l<span class="st">'objet A de masse 13 kg, la sac peut encore contenir 30 - 13 = 17 kg.</span></span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="er">On choisit l'objet C de masse 8 kg, le sac peut encore contenir 17 - 8 = 9 kg.</span></span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>Les objets B et D sont trop lourds, c<span class="st">'est terminé.</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="er">La valeur totale de cette combinaison </span>(A, C) est égale à <span class="dv">100</span> €.</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="er">La valeur totale de cette combinaison </span>(A, C) est égale à <span class="dv">100</span> €.</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Pour mettre en œuvre l’algorithme glouton que nous venons d’étudier pour le problème du sac à dos, nous créons tout d’abord une variable <code>Max</code> contenant la capacité maximale (en kilogrammes) du sac. Nous créons ensuite trois listes <code>liste_noms</code>, <code>liste_masses</code> et <code>liste_valeurs</code> qui contiennent respectivement les noms, masses et valeurs de chacun des objets.</p>
 <p>Considérons un sac de contenance maximale 10 kg et des objets dont les caractéristiques sont les suivantes :</p>
@@ -1088,46 +1095,46 @@ window.Quarto = {
 </table>
 <p>Nous écrivons alors les instructions suivantes :</p>
 <div id="cell-15" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Max <span class="op">=</span> <span class="dv">10</span> <span class="co"># contenance maximale du sac</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Max <span class="op">=</span> <span class="dv">10</span> <span class="co"># contenance maximale du sac</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>liste_noms <span class="op">=</span> [<span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span>,<span class="st">"D"</span>,<span class="st">"E"</span>,<span class="st">"F"</span>] <span class="co"># liste des noms des objets</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>liste_masses <span class="op">=</span> [<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>] <span class="co"># liste des masses des objets</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>liste_valeurs <span class="op">=</span> [<span class="dv">9100</span>,<span class="dv">6000</span>,<span class="dv">4800</span>,<span class="dv">2700</span>,<span class="dv">2800</span>,<span class="dv">200</span>] <span class="co"># liste des valeurs des objets</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>liste_valeurs <span class="op">=</span> [<span class="dv">9100</span>,<span class="dv">6000</span>,<span class="dv">4800</span>,<span class="dv">2700</span>,<span class="dv">2800</span>,<span class="dv">200</span>] <span class="co"># liste des valeurs des objets</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Question 5</strong> : Créer une liste <code>L</code> dont le i-ème élément est une liste contenant l’efficacité du i-ème élément, son nom, sa masse et sa valeur. Vérifier que L contient bien ce que l’on veut.</p>
 <div id="cell-17" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> [[liste_valeurs[i]<span class="op">/</span>liste_masses[i], liste_noms[i], liste_masses[i], liste_valeurs[i]] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(liste_noms))]</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(L)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> [[liste_valeurs[i]<span class="op">/</span>liste_masses[i], liste_noms[i], liste_masses[i], liste_valeurs[i]] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(liste_noms))]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(L)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1300.0, 'A', 7, 9100], [1000.0, 'B', 6, 6000], [1200.0, 'C', 4, 4800], [900.0, 'D', 3, 2700], [1400.0, 'E', 2, 2800], [200.0, 'F', 1, 200]]</code></pre>
 </div>
 </div>
 <p><strong>Question 6</strong> : Exécuter la cellule ci-dessous pour trier la liste de l’objet le plus “efficace” à l’objet le moins “efficace”.</p>
 <div id="cell-19" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>L_triee<span class="op">=</span><span class="bu">sorted</span>(L,reverse<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(L_triee)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>L_triee<span class="op">=</span><span class="bu">sorted</span>(L,reverse<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(L_triee)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1400.0, 'E', 2, 2800], [1300.0, 'A', 7, 9100], [1200.0, 'C', 4, 4800], [1000.0, 'B', 6, 6000], [900.0, 'D', 3, 2700], [200.0, 'F', 1, 200]]</code></pre>
 </div>
 </div>
 <p><strong>Question 7</strong> : Le code ci-dessous met en œuvre l’algorithme glouton. Compléter les lignes en pointillés.</p>
 <div id="cell-21" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>liste_objets <span class="op">=</span> [] <span class="co"># liste des noms des objets rangés dans le sac</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>liste_objets <span class="op">=</span> [] <span class="co"># liste des noms des objets rangés dans le sac</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>Somme_masses <span class="op">=</span> <span class="dv">0</span> <span class="co"># somme des masses des objets déjà rangés</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(L_triee)):</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> Max <span class="op">&gt;=</span> Somme_masses : <span class="co"># l'objet d'indice i peut être rangé</span></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        liste_objets.append(L_triee[i][<span class="dv">1</span>]) <span class="co"># on range l'objet d'indice i</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>        Somme_masses <span class="op">+=</span> L_triee[i][<span class="dv">2</span>] <span class="co"># on met à jour la somme des masses</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>        Somme_masses <span class="op">+=</span> L_triee[i][<span class="dv">2</span>] <span class="co"># on met à jour la somme des masses</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Question 8:</strong> : En déduire la combinaison fournie par l’algorithme glouton et la masse totale de cette combinaison.</p>
 <div id="cell-23" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste_objets)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste_objets)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>['E', 'A', 'C']</code></pre>
 </div>
 </div>
 <p><strong>Question 9</strong> : Modifier le code précédent afin de déterminer également la valeur totale de la combinaison trouvée.</p>
 <div id="cell-25" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>liste_objets <span class="op">=</span> [] <span class="co"># liste des noms des objets rangés dans le sac</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>liste_objets <span class="op">=</span> [] <span class="co"># liste des noms des objets rangés dans le sac</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>Somme_masses <span class="op">=</span> <span class="dv">0</span> <span class="co"># somme des masses des objets déjà rangés</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>valeur_totale <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(L_triee)):</span>
@@ -1137,7 +1144,7 @@ window.Quarto = {
 <span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>        valeur_totale <span class="op">=</span> valeur_totale <span class="op">+</span> L_triee[i][<span class="dv">3</span>]</span>
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Liste des objets dans le sac : "</span>, liste_objets)</span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Valeur totale de la combinaison trouvée : "</span>, valeur_totale)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Valeur totale de la combinaison trouvée : "</span>, valeur_totale)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Liste des objets dans le sac :  ['E', 'A', 'C']
 Valeur totale de la combinaison trouvée :  16700</code></pre>
@@ -1212,13 +1219,14 @@ Valeur totale de la combinaison trouvée :  16700</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
