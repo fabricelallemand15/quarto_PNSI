@@ -1,5 +1,5 @@
 ---
-title: "Cours : formulaires"
+title: "Cours (5) - Formulaires"
 ---
 
 Les formulaires Web sont l'un des principaux points d'interaction entre un utilisateur et un site Web. Les formulaires permettent aux utilisateurs de saisir des données, qui sont généralement envoyées à un serveur Web pour traitement et stockage, ou utilisées côté client pour mettre à jour immédiatement l'interface d'une manière ou d'une autre (par exemple, ajouter un autre élément à une liste, ou afficher ou masquer une fonctionnalité de l'interface utilisateur).

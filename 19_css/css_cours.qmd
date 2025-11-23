@@ -1,5 +1,5 @@
 ---
-title: Cours
+title: Cours (2) - Introduction au CSS
 ---
 
 <!-- Introduction avec historique -->

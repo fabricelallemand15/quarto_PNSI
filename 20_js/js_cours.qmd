@@ -1,5 +1,5 @@
 ---
-title: "Cours"
+title: "Cours (3) - Introduction au JavaScript"
 ---
 
 <!-- Introduction avec historique -->

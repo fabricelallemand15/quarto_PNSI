@@ -1,5 +1,5 @@
 ---
-title: "Cours"
+title: "Cours (4) - Le protocole HTTP et l'architecture client-serveur"
 ---
 
 ![logo HTTP](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_logo.svg/640px-HTTP_logo.svg.png){width="15%"}
