@@ -3869,18 +3869,6 @@
     ]
   },
   {
-    "objectID": "18_html/acti1_HTML.html#partie-3.-création-dune-page-web",
-    "href": "18_html/acti1_HTML.html#partie-3.-création-dune-page-web",
-    "title": "Activité : Page web et langage HTML",
-    "section": "Partie 3. Création d’une page Web",
-    "text": "Partie 3. Création d’une page Web\nUtiliser les observations faites au cours de cette activité pour créer une page Web sur le sujet de votre choix.\nCette page devra comporter différentes balises, des images, des listes, etc.\nEnregistrer votre travail dans Capytale en suivant ce lien et le soumettre.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 3 - Web",
-      "Activité : Page web et langage HTML"
-    ]
-  },
-  {
     "objectID": "18_html/index.html",
     "href": "18_html/index.html",
     "title": "Programme",
@@ -3917,18 +3905,6 @@
     "title": "Activité : Le couple HTML/CSS",
     "section": "Partie 2. Modification du fichier CSS",
     "text": "Partie 2. Modification du fichier CSS\n\nOuvrir l’activité Capytale correspondant à cette partie.\nVous trouverez la page Web et sa feuille de style. Modifier la feuille de style (et si nécessaire la page Web) :\n\nChanger les couleurs d’arrière-plan ;\nChanger la couleur du texte de tout le contenu de la section qui a pour identifiant “introduction” ;\nChanger la taille du texte de tous les éléments qui possèdent la classe “en_couleur” ;\nSupprimer l’indentation des paragraphes ;\nChanger les puces de la liste : vous utiliserez pour cela l’attribut list-style-type: square; ;\nDans la liste numérotée, changer les numéros en chiffres romains majuscules : vous utiliserez pour cela l’attribut list-style-type: upper-roman;.\n\nUne fois toutes ces modifications faites, enregistrer votre travail.",
-    "crumbs": [
-      "{{< fa house-chimney-window >}} Accueil",
-      "Ch. 3 - Web",
-      "Activité : Le couple HTML/CSS"
-    ]
-  },
-  {
-    "objectID": "19_css/acti2_CSS.html#partie-3.-création-dun-fichier-css",
-    "href": "19_css/acti2_CSS.html#partie-3.-création-dun-fichier-css",
-    "title": "Activité : Le couple HTML/CSS",
-    "section": "Partie 3. Création d’un fichier CSS",
-    "text": "Partie 3. Création d’un fichier CSS\nDans cette partie, vous allez reprendre la page Web créée lors de l’activité sur le langage HTML et créer une feuille de style afin de la mettre en forme. Quand vous serez satisfait du résultat, enregistrer votre travail dans l’activité Capytale prévue à cet effet.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 3 - Web",

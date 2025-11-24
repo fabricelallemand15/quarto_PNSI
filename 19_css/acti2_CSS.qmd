@@ -40,6 +40,6 @@ CSS signifie **Cascading Style Sheet** (feuilles de style en cascade). CSS est l
 
     Une fois toutes ces modifications faites, enregistrer votre travail.
 
-## Partie 3. Création d'un fichier CSS
+<!-- ## Partie 3. Création d'un fichier CSS
 
-Dans cette partie, vous allez reprendre la page Web créée lors de l'activité sur le langage HTML et créer une feuille de style afin de la mettre en forme. Quand vous serez satisfait du résultat, enregistrer votre travail dans l'activité [Capytale prévue à cet effet](https://capytale2.ac-paris.fr/web/c/ac8e-2973231).
+Dans cette partie, vous allez reprendre la page Web créée lors de l'activité sur le langage HTML et créer une feuille de style afin de la mettre en forme. Quand vous serez satisfait du résultat, enregistrer votre travail dans l'activité [Capytale prévue à cet effet](https://capytale2.ac-paris.fr/web/c/ac8e-2973231). -->

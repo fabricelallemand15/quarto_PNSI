@@ -624,7 +624,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../18_html/html_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours (1) - Introduction au HTML</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -642,7 +642,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../19_css/css_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours (2) - Introduction au CSS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -654,13 +654,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../20_js/js_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours (3) - Introduction au JavaScript</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../21_client-serveur/client-serveur_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours (4) - Le protocole HTTP et l’architecture client-serveur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -678,7 +678,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../21_client-serveur/cours_forms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : formulaires</span></a>
+ <span class="menu-text">Cours (5) - Formulaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1014,13 +1014,13 @@ window.Quarto = {
 <section id="commandes-utiles-pour-une-utilisation-de-base" class="level3">
 <h3 class="anchored" data-anchor-id="commandes-utiles-pour-une-utilisation-de-base">Commandes utiles pour une utilisation de base</h3>
 <p>Avant toute chose, on importera la bibliothèque en ajoutant la ligne suivante en début de programme :</p>
-<div id="cc05e896" class="cell" data-execution_count="1">
+<div id="b606847a" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>Exemple d’ouverture d’un fichier et accès à ses informations</li>
 </ul>
-<div id="5d4155cf" class="cell" data-execution_count="2">
+<div id="539acc03" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ouverture du fichier image</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">"chat.png"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># nom du fichier</span></span>
@@ -1036,7 +1036,7 @@ window.Quarto = {
 427</code></pre>
 </div>
 </div>
-<div id="10412ea4" class="cell" data-execution_count="3">
+<div id="eaa13fb9" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage de l'image</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>img.show()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -1054,7 +1054,7 @@ window.Quarto = {
 <p>Dans le cas d’une image en couleurs RGB, la valeur d’un pixel est un <strong>3-uplet</strong> <span class="math inline">\((R, G, B)\)</span> dans lequel chaque élément est un entier compris entre 0 et 255 qui représente respectivement la prorportion de rouge, de vert et de bleu dans la couleur du pixel en question.</p></li>
 <li><p>Accéder à la valeur d’un pixel : <code>img.getpixel((x, y))</code>. Cette fonction retourne un entier (dans le cas d’une image noir et blanc ou en niveaux de gris) ou un triplet (dans le cas d’une image en couleurs). Attention à la syntaxe : il n’y a qu’un seul argument, qui est un couple de coordonnées (donc doubles parenthèses).</p></li>
 </ul>
-<div id="690e3146" class="cell" data-execution_count="4">
+<div id="cae72ed9" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(img.mode)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>img.getpixel((<span class="dv">48</span>,<span class="dv">75</span>)) <span class="co"># attention aux parenthèses !</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1067,7 +1067,7 @@ window.Quarto = {
 <ul>
 <li>Commandes pour créer un fichier image et définir la valeur de ses pixels :</li>
 </ul>
-<div id="762d04fc" class="cell" data-execution_count="5">
+<div id="aede05d5" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>largeur <span class="op">=</span> <span class="dv">200</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>hauteur <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Création d'une nouvelle image en niveaux de gris en mémoire</span></span>

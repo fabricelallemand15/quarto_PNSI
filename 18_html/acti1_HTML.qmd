@@ -64,10 +64,10 @@ Il s'agit d'un premier exemple de dialogue **client-serveur**, cette notion sera
 
 3. Une fois toutes ces modifications effectuées, enregistrer votre travail dans Capytale.
 
-## Partie 3. Création d'une page Web
+<!-- ## Partie 3. Création d'une page Web
 
 Utiliser les observations faites au cours de cette activité pour créer une page Web sur le sujet de votre choix.
 
 Cette page devra comporter différentes balises, des images, des listes, etc.
 
-Enregistrer votre travail dans Capytale [en suivant ce lien](https://capytale2.ac-paris.fr/web/c/e64b-2973226) et le soumettre.
+Enregistrer votre travail dans Capytale [en suivant ce lien](https://capytale2.ac-paris.fr/web/c/e64b-2973226) et le soumettre. -->
