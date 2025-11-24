@@ -3916,21 +3916,36 @@
     "href": "19_css/challenge.html",
     "title": "Challenge CSS en ligne",
     "section": "",
-    "text": "CSS Diner"
+    "text": "CSS Diner",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 3 - Web",
+      "Challenge CSS en ligne"
+    ]
   },
   {
     "objectID": "19_css/challenge.html#niveau-1",
     "href": "19_css/challenge.html#niveau-1",
     "title": "Challenge CSS en ligne",
     "section": "",
-    "text": "CSS Diner"
+    "text": "CSS Diner",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 3 - Web",
+      "Challenge CSS en ligne"
+    ]
   },
   {
     "objectID": "19_css/challenge.html#niveau-2",
     "href": "19_css/challenge.html#niveau-2",
     "title": "Challenge CSS en ligne",
     "section": "Niveau 2",
-    "text": "Niveau 2\n\n\n\nFlexbox Froggy"
+    "text": "Niveau 2\n\n\n\nFlexbox Froggy",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 3 - Web",
+      "Challenge CSS en ligne"
+    ]
   },
   {
     "objectID": "19_css/index.html",

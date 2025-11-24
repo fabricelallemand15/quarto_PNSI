@@ -66,6 +66,7 @@ website:
           - 18_html/ref_HTML.qmd
           - 19_css/acti2_CSS.qmd
           - 19_css/css_cours.qmd
+          - 19_css/challenge.qmd
           - 20_js/acti3_Javascript.qmd
           - 20_js/js_cours.qmd
           - 21_client-serveur/client-serveur_cours.qmd
