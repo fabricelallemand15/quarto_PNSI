@@ -1148,7 +1148,7 @@ window.Quarto = {
 <section id="visualisation-graphique-du-temps-dexécution" class="level4">
 <h4 class="anchored" data-anchor-id="visualisation-graphique-du-temps-dexécution">Visualisation graphique du temps d’exécution</h4>
 <p>En utilisant le module <code>timeit</code> comme expliqué dans <a href="https://sitelf.fr/blog/posts/timeexec/" target="_blank">cet article</a>, on peut visualiser graphiquement le temps d’exécution de l’algorithme en fonction de la taille des données.</p>
-<div id="5ca9aa21" class="cell" data-execution_count="1">
+<div id="10878905" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> timeit</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1646,6 +1646,68 @@ window.Quarto = {
     </div>
   </div>
 </footer>
+<!-- snow.html -->
+<style>
+  .snowflake {
+    position: fixed;
+    top: -10px;
+    z-index: 9999;
+    color: #fff; /* Couleur blanche */
+    text-shadow: 0 0 5px #000; /* Ombre pour visibilité sur fond clair */
+    user-select: none;
+    pointer-events: none;
+    cursor: default;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-10vh) translateX(0);
+    }
+    100% {
+      transform: translateY(105vh) translateX(20px);
+    }
+  }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const symbol = "❄"; // Vous pouvez changer pour ❅ ou ❆
+  const flakeCount = 50; // Nombre max de flocons en même temps
+
+  function createFlake() {
+    const flake = document.createElement('div');
+    flake.innerHTML = symbol;
+    flake.className = 'snowflake';
+    
+    // Position horizontale aléatoire
+    flake.style.left = Math.random() * 100 + 'vw';
+    
+    // Taille aléatoire
+    const size = Math.random() * 1.5 + 0.5 + 'em';
+    flake.style.fontSize = size;
+    
+    // Durée de chute aléatoire (entre 3s et 8s)
+    const duration = Math.random() * 5 + 3 + 's';
+    flake.style.animationDuration = duration;
+    
+    // Opacité aléatoire
+    flake.style.opacity = Math.random() * 0.7 + 0.3;
+
+    document.body.appendChild(flake);
+
+    // Supprimer le flocon une fois l'animation finie
+    setTimeout(() => {
+      flake.remove();
+    }, parseFloat(duration) * 1000);
+  }
+
+  // Créer des flocons en continu
+  setInterval(createFlake, 200); 
+});
+</script>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
