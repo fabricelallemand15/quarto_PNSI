@@ -1,5 +1,5 @@
 ---
-title: Cours
+title: Cours (2) - Entiers relatifs
 ---
 
 Nous allons maintenant étudier la représentation des entiers relatifs en base 2.

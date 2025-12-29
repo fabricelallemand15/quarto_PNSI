@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.0">
+<meta name="generator" content="quarto-1.9.16">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cours – NSI - Première</title>
+<title>Cours (1) - Entiers naturels – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f90cbdadd06a7ce36d2760346202a0fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a67ac2868200dddf7a4f0e3ae403775c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-82d683e9f830cba069e3fb8cbfbea53b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a67ac2868200dddf7a4f0e3ae403775c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-a9abdc8f23f02a1e69185ea0e4a1bf53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-fbfa2d89a2548311c7c762f4ff972691.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b783d01425d450f6796a14d76de94524.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-fbfa2d89a2548311c7c762f4ff972691.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -87,10 +87,10 @@ ul.task-list li input[type="checkbox"] {
 document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({
   "notice_banner_type":"simple",
-  "consent_type":"implied",
+  "consent_type":"express",
   "palette":"light",
   "language":"en",
-  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "page_load_consent_levels":["strictly-necessary"],
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
@@ -321,8 +321,6 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">NSI - Première</span>
     </a>
@@ -333,7 +331,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -365,7 +363,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../05_base/base_cours.html">Ch. 4 - Représentation numérique des nombres et du texte</a></li><li class="breadcrumb-item"><a href="../05_base/base_cours.html">Cours</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../05_base/base_cours.html">Ch. 4 - Représentation numérique des nombres et du texte</a></li><li class="breadcrumb-item"><a href="../05_base/base_cours.html">Cours (1) - Entiers naturels</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -375,10 +373,6 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -672,37 +666,37 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../05_base/base_cours.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours (1) - Entiers naturels</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../05_base/base_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices (1) - Entiers naturels</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../06_relatif/relatifs_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours (2) - Entiers relatifs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../06_relatif/relatifs_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices (2) - Entiers relatifs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../07_flottants/flottants_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours (3) - Nombres flottants</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../07_flottants/flottants_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices (3) - Nombres flottants</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -714,13 +708,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../09_texte/textes_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">Cours (4) - Textes et encodage des caractères</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../09_texte/textes_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices (4) - Textes et encodage des caractères</span></a>
   </div>
 </li>
       </ul>
@@ -944,9 +938,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../05_base/base_cours.html">Ch. 4 - Représentation numérique des nombres et du texte</a></li><li class="breadcrumb-item"><a href="../05_base/base_cours.html">Cours</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../05_base/base_cours.html">Ch. 4 - Représentation numérique des nombres et du texte</a></li><li class="breadcrumb-item"><a href="../05_base/base_cours.html">Cours (1) - Entiers naturels</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Cours</h1>
+<h1 class="title">Cours (1) - Entiers naturels</h1>
 </div>
 
 
@@ -1157,7 +1151,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="la-base-2">4. La base 2</h2>
 <p>En base 2, nous ne disposons donc que des deux chiffres 0 et 1. On parle de système <strong>binaire</strong>.</p>
 <p>Un chiffre binaire, <em>binary digit</em> en anglais est appelé en abrégé un <strong>bit</strong>.</p>
-<p>Voir <a href="https://mathsinfolycee.sitelf.fr/posts/mesurerinfo/index.html" target="_blank">cet article du blog</a> au sujet des unités de mesures binaires.</p>
+<p>Voir <a href="https://mathsinfolycee.fr/posts/mesurerinfo/index.html" target="_blank">cet article du blog</a> au sujet des unités de mesures binaires.</p>
 <p>Voici comment compter jusqu’à 10 en base 2 :</p>
 <table class="caption-top table">
 <colgroup>
@@ -1440,7 +1434,7 @@ window.Quarto = {
 <p>Exemple de l’addition de <span class="math inline">\(11_{10}=1011_2\)</span> et de <span class="math inline">\(13_{10}=1101_2\)</span> (les retenues sont en rouge) :</p>
 <p><a href="add_bin3.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="add_bin3.svg" class="img-fluid"></a></p>
 <p>La somme obtenue <span class="math inline">\(1\;1000_2\)</span> correspond bien à l’entier <span class="math inline">\(24_{10}\)</span> codé en binaire. On remarque qu’il a fallu un bit supplémentaire pour coder la somme. Si on travaille avec une taille d’entiers fixe de 4 bits, alors le bit de poids fort sera ignoré, et on obtiendra seulement <span class="math inline">\(1000_2\)</span> comme résultat, c’est-à-dire 8. Autrement dit, sur 4 bits, quand on dépasse la capacité de <span class="math inline">\(2^4-1=15\)</span>, on repart de zéro : <span class="math inline">\(24=2^4+8\)</span>. On dit que le calcul se fait <strong>modulo <span class="math inline">\(2^4\)</span></strong>.</p>
-<p>En complément, vous pouvez regarder la vidéo “Le binaire, c’est quoi ?” dans cet <a href="https://mathsinfolycee.sitelf.fr/posts/codeurpro/">article</a>.</p>
+<p>En complément, vous pouvez regarder la vidéo “Le binaire, c’est quoi ?” dans cet <a href="https://mathsinfolycee.fr/posts/codeurpro/">article</a>.</p>
 
 
 </section>
@@ -1868,8 +1862,8 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../05_base/base_exos.html" class="pagination-link" aria-label="Exercices">
-        <span class="nav-page-text">Exercices</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../05_base/base_exos.html" class="pagination-link" aria-label="Exercices (1) - Entiers naturels">
+        <span class="nav-page-text">Exercices (1) - Entiers naturels</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

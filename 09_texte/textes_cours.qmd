@@ -1,5 +1,5 @@
 ---
-title: Cours
+title: Cours (4) - Textes et encodage des caractères
 ---
 
 Une chaîne de caractères est une suite ordonnée de caractères. Ces caractères peuvent être :
