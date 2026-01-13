@@ -987,7 +987,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="approche-naïve">1. Approche naïve</h2>
 <p>La première idée qui peut venir à l’esprit est de considérer les éléments du tableau les uns après les autres et de les comparer avec l’élément recherché.</p>
 <p>On peut ainsi écrire une fonction <code>recherche_naive</code> qui prend en paramètre un tableau <code>tàbleau</code> et une valeur <code>valeur</code> et qui renvoie l’indice de la première occurrence de <code>valeur</code> dans <code>tableau</code> ou <code>-1</code> si <code>valeur</code> n’est pas dans <code>tableau</code>.</p>
-<div id="bd464b22" class="cell" data-execution_count="1">
+<div id="3fb5e729" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recherche_naive(tableau, valeur):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(tableau)):</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> tableau[i] <span class="op">==</span> valeur:</span>
@@ -995,13 +995,13 @@ window.Quarto = {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Test de cette fonction :</p>
-<div id="3743fe90" class="cell" data-execution_count="2">
+<div id="9ddc51f1" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>recherche_naive([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">3</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>2</code></pre>
 </div>
 </div>
-<div id="c82d8f43" class="cell" data-execution_count="3">
+<div id="c04442f5" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>recherche_naive([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">6</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>-1</code></pre>
@@ -1055,7 +1055,7 @@ window.Quarto = {
 <section id="programmation" class="level3">
 <h3 class="anchored" data-anchor-id="programmation">Programmation</h3>
 <p>Écrivons une fonction <code>recherche_dichotomique</code> qui prend en paramètre un tableau <code>tableau</code> et une valeur <code>valeur</code> et qui renvoie l’indice d’une occurrence de <code>valeur</code> dans <code>tableau</code> ou <code>-1</code> si <code>valeur</code> n’est pas dans <code>tableau</code>.</p>
-<div id="912aba88" class="cell" data-execution_count="4">
+<div id="d0d1f2ff" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recherche_dichotomique(tableau, valeur):</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    gauche <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    droite <span class="op">=</span> <span class="bu">len</span>(tableau) <span class="op">-</span> <span class="dv">1</span></span>
@@ -1070,13 +1070,13 @@ window.Quarto = {
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Test de cette fonction :</p>
-<div id="e2570beb" class="cell" data-execution_count="5">
+<div id="8f096f22" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>recherche_dichotomique([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">2</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>1</code></pre>
 </div>
 </div>
-<div id="289afd74" class="cell" data-execution_count="6">
+<div id="9b611d7a" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>recherche_dichotomique([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">6</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>-1</code></pre>
@@ -1133,7 +1133,7 @@ window.Quarto = {
 </section>
 <section id="comparaison-expérimentale-des-deux-algorithmes" class="level3">
 <h3 class="anchored" data-anchor-id="comparaison-expérimentale-des-deux-algorithmes">Comparaison expérimentale des deux algorithmes</h3>
-<div id="60675e95" class="cell" data-execution_count="7">
+<div id="271e0aeb" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> timeit</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1632,68 +1632,6 @@ window.Quarto = {
     </div>
   </div>
 </footer>
-<!-- snow.html -->
-<style>
-  .snowflake {
-    position: fixed;
-    top: -10px;
-    z-index: 9999;
-    color: #fff; /* Couleur blanche */
-    text-shadow: 0 0 5px #000; /* Ombre pour visibilité sur fond clair */
-    user-select: none;
-    pointer-events: none;
-    cursor: default;
-    animation-name: fall;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes fall {
-    0% {
-      transform: translateY(-10vh) translateX(0);
-    }
-    100% {
-      transform: translateY(105vh) translateX(20px);
-    }
-  }
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const symbol = "❄"; // Vous pouvez changer pour ❅ ou ❆
-  const flakeCount = 50; // Nombre max de flocons en même temps
-
-  function createFlake() {
-    const flake = document.createElement('div');
-    flake.innerHTML = symbol;
-    flake.className = 'snowflake';
-    
-    // Position horizontale aléatoire
-    flake.style.left = Math.random() * 100 + 'vw';
-    
-    // Taille aléatoire
-    const size = Math.random() * 1.5 + 0.5 + 'em';
-    flake.style.fontSize = size;
-    
-    // Durée de chute aléatoire (entre 3s et 8s)
-    const duration = Math.random() * 5 + 3 + 's';
-    flake.style.animationDuration = duration;
-    
-    // Opacité aléatoire
-    flake.style.opacity = Math.random() * 0.7 + 0.3;
-
-    document.body.appendChild(flake);
-
-    // Supprimer le flocon une fois l'animation finie
-    setTimeout(() => {
-      flake.remove();
-    }, parseFloat(duration) * 1000);
-  }
-
-  // Créer des flocons en continu
-  setInterval(createFlake, 200); 
-});
-</script>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
