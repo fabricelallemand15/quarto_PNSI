@@ -161,7 +161,7 @@ Dans ce sens, la conversion est facile, il suffit d'appliquer la définition.
 
 Prenons le nombre $1101\; 0011_2$. Il s'étale sur 8 bits, on applique la méthode générale :
 
-$1101\; 0011_2 = 1\times 2^7 + 1\times 2^6 + 0\times 2^5 + 1\times 2^4 + 0\times 2^3 + 0\times 2^2 + 1\times 2^1 + 1\times 2^1 = 211_{10}$.
+$1101\; 0011_2 = 1\times 2^7 + 1\times 2^6 + 0\times 2^5 + 1\times 2^4 + 0\times 2^3 + 0\times 2^2 + 1\times 2^1 + 1\times 2^0 = 211_{10}$.
 
 ### Conversion de la base 10 à la base 2
 

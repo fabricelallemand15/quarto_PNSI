@@ -21,7 +21,7 @@ De plus, cette représentation pose un autre problème plus grave ! Considérons
 
 ![](add_bin.png)
 
-mais le résultat correspond à la représentation de $-4$ !
+mais le résultat correspond à la représentation de $-6$ !
 
 ## 2. Le complément à 2
 
