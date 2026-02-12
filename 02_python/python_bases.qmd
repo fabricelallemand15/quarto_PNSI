@@ -28,11 +28,11 @@ Cette traduction est faite, suivant les langages, par un **compilateur** (progra
 
 En NSI, nous allons nous focaliser sur le langage **Python**.
 
-![](https://www.python.org/static/img/python-logo.png)
+![](https://www.python.org/static/img/python-logo.png){width="50%"}
 
 Le langage Python a été créé en 1989 par l'informaticien néerlandais [Guido van Rossum](https://fr.wikipedia.org/wiki/Guido_van_Rossum){ target=_blank} qui l'a nommé ainsi en hommage à la série télévisée des [Monty Python](https://fr.wikipedia.org/wiki/Monty_Python){target=_blank} dont il était fan.
 
-![Guido van Rossum](Guido_van_Rossum.jpg)
+![Guido van Rossum](Guido_van_Rossum.jpg){width="30%"}
 
 ## 2. Variables et affectation
 
