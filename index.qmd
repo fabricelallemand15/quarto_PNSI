@@ -6,6 +6,12 @@ title: "Spécialité NSI - Première"
 
 Ce site est destiné à regrouper les cours et les exercices concernant l'enseignement de spécialité NSI de première du lycée Émile Duclaux d'Aurillac.
 
+::: {.callout-note .updates-box}
+## Dernières mises à jour
+
+- Janvier 2026 - Refonte du chapitre 4 : *Représentation numérique des nombres et du texte*
+:::
+
 Lien vers l'ENT du lycée : [https://cas.ent.auvergnerhonealpes.fr/login](https://cas.ent.auvergnerhonealpes.fr/login){target="_blank"}
 
 Lien vers Capytale : [https://capytale2.ac-paris.fr/web/c-auth/list](https://capytale2.ac-paris.fr/web/c-auth/list){target="_blank"}
