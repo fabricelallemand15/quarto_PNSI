@@ -1014,13 +1014,13 @@ window.Quarto = {
 <section id="commandes-utiles-pour-une-utilisation-de-base" class="level3">
 <h3 class="anchored" data-anchor-id="commandes-utiles-pour-une-utilisation-de-base">Commandes utiles pour une utilisation de base</h3>
 <p>Avant toute chose, on importera la bibliothèque en ajoutant la ligne suivante en début de programme :</p>
-<div id="14e96a63" class="cell" data-execution_count="1">
+<div id="4d06522a" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>Exemple d’ouverture d’un fichier et accès à ses informations</li>
 </ul>
-<div id="aa0bec3a" class="cell" data-execution_count="2">
+<div id="c2259cff" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ouverture du fichier image</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">"chat.png"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># nom du fichier</span></span>
@@ -1030,13 +1030,13 @@ window.Quarto = {
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(img.width)</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(img.height)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>D:\Cloud\Sites_Internet\quarto_PNSI\11_tableaux\chat.png
+<pre><code>chat.png
 (640, 427)
 640
 427</code></pre>
 </div>
 </div>
-<div id="a2a7f128" class="cell" data-execution_count="3">
+<div id="5ebe2e3e" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage de l'image</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>img.show()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -1054,7 +1054,7 @@ window.Quarto = {
 <p>Dans le cas d’une image en couleurs RGB, la valeur d’un pixel est un <strong>3-uplet</strong> <span class="math inline">\((R, G, B)\)</span> dans lequel chaque élément est un entier compris entre 0 et 255 qui représente respectivement la prorportion de rouge, de vert et de bleu dans la couleur du pixel en question.</p></li>
 <li><p>Accéder à la valeur d’un pixel : <code>img.getpixel((x, y))</code>. Cette fonction retourne un entier (dans le cas d’une image noir et blanc ou en niveaux de gris) ou un triplet (dans le cas d’une image en couleurs). Attention à la syntaxe : il n’y a qu’un seul argument, qui est un couple de coordonnées (donc doubles parenthèses).</p></li>
 </ul>
-<div id="00b9a924" class="cell" data-execution_count="4">
+<div id="4eb7a2df" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(img.mode)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>img.getpixel((<span class="dv">48</span>,<span class="dv">75</span>)) <span class="co"># attention aux parenthèses !</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1067,7 +1067,7 @@ window.Quarto = {
 <ul>
 <li>Commandes pour créer un fichier image et définir la valeur de ses pixels :</li>
 </ul>
-<div id="24df68cf" class="cell" data-execution_count="5">
+<div id="10299564" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>largeur <span class="op">=</span> <span class="dv">200</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>hauteur <span class="op">=</span> <span class="dv">100</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Création d'une nouvelle image en niveaux de gris en mémoire</span></span>
@@ -1657,6 +1657,9 @@ window.Quarto = {
 <p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
 </a>
   </li>  
+    <li class="nav-item">
+ <span id="page-views"></span>
+  </li>  
 </ul>
     </div>   
     <div class="nav-footer-center">
@@ -1679,6 +1682,142 @@ window.Quarto = {
     </div>
   </div>
 </footer>
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    var matomoBaseUrl = "https://sitelf.fr/matomo/";
+
+    var siteId = "3"; 
+
+    var domId = "page-views";
+
+
+
+    // 1. DÉTECTION DE L'URL CIBLE
+
+    // Si on est en local (preview), on simule l'URL de production pour voir les vraies stats
+
+    var isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+
+    var productionHost = "pnsi.sitelf.fr"; // L'URL publique de votre site
+
+    
+
+    var hostname = isLocal ? productionHost : window.location.hostname;
+
+    // Si on est en local on force https car le site prod est en https
+
+    var protocol = isLocal ? "https:" : window.location.protocol;
+
+    
+
+    // On enlève index.html si présent, car Matomo le fait parfois
+
+    var pathname = window.location.pathname; // .replace(/\/index\.html$/, '/'); 
+
+    
+
+    var targetUrl = protocol + '//' + hostname + pathname;
+
+    
+
+
+
+    // 2. MÉTHODE JSONP (Bypasse le blocage CORS)
+
+    var callbackName = 'matomo_jsonp_callback_' + Math.floor(Math.random() * 10000);
+
+
+
+    // Fonction qui recevra les données
+
+    window[callbackName] = function(data) {
+
+        var hits = 0;
+
+        console.log("Matomo response:", data); // Debug log
+
+        // Matomo renvoie un tableau ou un objet selon le contexte
+
+        if (Array.isArray(data) && data.length > 0 && data[0].nb_hits) {
+
+            hits = data[0].nb_hits;
+
+        } else if (typeof data === 'object' && data.nb_hits) {
+
+            hits = data.nb_hits;
+
+        }
+
+        
+
+        // Mise à jour de l'affichage
+
+        var element = document.getElementById(domId);
+
+        if (element) {
+
+            element.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + ' vues';
+
+            element.title = "Vues totales depuis la création (URL: " + targetUrl + ")";
+
+            // console.log("Matomo URL tested: " + targetUrl); // Debug
+
+        }
+
+        
+
+        // Nettoyage
+
+        delete window[callbackName];
+
+        var script = document.getElementById(callbackName);
+
+        if (script) script.remove();
+
+    };
+
+
+
+    // Construction de l'URL API avec callback
+
+    var apiUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl" + 
+
+                 "&idSite=" + siteId + 
+
+                 "&pageUrl=" + encodeURIComponent(targetUrl) + 
+
+                 "&format=JSON" + 
+
+                 "&period=range&date=2018-01-01,today" + 
+
+                 "&token_auth=anonymous" +
+
+                 "&jsoncallback=" + callbackName; // Le paramètre clé pour JSONP
+
+
+
+    // Injection du script
+
+    var script = document.createElement('script');
+
+    script.id = callbackName;
+
+    script.src = apiUrl;
+
+    script.onerror = function() {
+
+        console.log('Info: Impossible de récupérer les stats Matomo (Erreur réseau ou bloqueur)');
+
+    };
+
+    document.body.appendChild(script);
+
+});
+
+</script>
+
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

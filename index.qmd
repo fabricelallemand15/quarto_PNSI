@@ -10,8 +10,6 @@ Lien vers l'ENT du lycée : [https://cas.ent.auvergnerhonealpes.fr/login](https:
 
 Lien vers Capytale : [https://capytale2.ac-paris.fr/web/c-auth/list](https://capytale2.ac-paris.fr/web/c-auth/list){target="_blank"}
 
-Lien vers Replit : [https://replit.com/team/premiere-nsi](https://replit.com/team/premiere-nsi){target="_blank"}
-
 Lien vers le programme officiel : [Programme officiel première NSI](Programme_Prem_NSI.pdf)
 
 ![](Coding_Flatline.png)

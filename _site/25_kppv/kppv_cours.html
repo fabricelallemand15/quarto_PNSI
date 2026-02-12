@@ -1059,7 +1059,7 @@ window.Quarto = {
 </tbody>
 </table>
 <p>Sur la représentation ci-dessous, on a représenté les iris de la classe Setosa en vert, ceux de la classe Versicolor en bleu et ceux de la classe Virginica en rouge.</p>
-<div id="032de6b5" class="cell" data-execution_count="1">
+<div id="6a1fead8" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1088,7 +1088,7 @@ window.Quarto = {
 </div>
 <p>Considérons maintenant une fleur d’iris “Iris X” dont les pétales ont une longueur de 3,5 cm et une largeur de 0,75 cm. On souhaite déterminer la classe de cette fleur.</p>
 <p>Ajoutons le point correspondant à “Iris X” sur le graphique précédent.</p>
-<div id="ffc9942d" class="cell" data-execution_count="2">
+<div id="f0bd22aa" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(X[y <span class="op">==</span> <span class="dv">0</span>, <span class="dv">0</span>], X[y <span class="op">==</span> <span class="dv">0</span>, <span class="dv">1</span>], color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Versicolor'</span>)</span>
@@ -1609,6 +1609,9 @@ Important
 <p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
 </a>
   </li>  
+    <li class="nav-item">
+ <span id="page-views"></span>
+  </li>  
 </ul>
     </div>   
     <div class="nav-footer-center">
@@ -1631,6 +1634,142 @@ Important
     </div>
   </div>
 </footer>
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    var matomoBaseUrl = "https://sitelf.fr/matomo/";
+
+    var siteId = "3"; 
+
+    var domId = "page-views";
+
+
+
+    // 1. DÉTECTION DE L'URL CIBLE
+
+    // Si on est en local (preview), on simule l'URL de production pour voir les vraies stats
+
+    var isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+
+    var productionHost = "pnsi.sitelf.fr"; // L'URL publique de votre site
+
+    
+
+    var hostname = isLocal ? productionHost : window.location.hostname;
+
+    // Si on est en local on force https car le site prod est en https
+
+    var protocol = isLocal ? "https:" : window.location.protocol;
+
+    
+
+    // On enlève index.html si présent, car Matomo le fait parfois
+
+    var pathname = window.location.pathname; // .replace(/\/index\.html$/, '/'); 
+
+    
+
+    var targetUrl = protocol + '//' + hostname + pathname;
+
+    
+
+
+
+    // 2. MÉTHODE JSONP (Bypasse le blocage CORS)
+
+    var callbackName = 'matomo_jsonp_callback_' + Math.floor(Math.random() * 10000);
+
+
+
+    // Fonction qui recevra les données
+
+    window[callbackName] = function(data) {
+
+        var hits = 0;
+
+        console.log("Matomo response:", data); // Debug log
+
+        // Matomo renvoie un tableau ou un objet selon le contexte
+
+        if (Array.isArray(data) && data.length > 0 && data[0].nb_hits) {
+
+            hits = data[0].nb_hits;
+
+        } else if (typeof data === 'object' && data.nb_hits) {
+
+            hits = data.nb_hits;
+
+        }
+
+        
+
+        // Mise à jour de l'affichage
+
+        var element = document.getElementById(domId);
+
+        if (element) {
+
+            element.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + ' vues';
+
+            element.title = "Vues totales depuis la création (URL: " + targetUrl + ")";
+
+            // console.log("Matomo URL tested: " + targetUrl); // Debug
+
+        }
+
+        
+
+        // Nettoyage
+
+        delete window[callbackName];
+
+        var script = document.getElementById(callbackName);
+
+        if (script) script.remove();
+
+    };
+
+
+
+    // Construction de l'URL API avec callback
+
+    var apiUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl" + 
+
+                 "&idSite=" + siteId + 
+
+                 "&pageUrl=" + encodeURIComponent(targetUrl) + 
+
+                 "&format=JSON" + 
+
+                 "&period=range&date=2018-01-01,today" + 
+
+                 "&token_auth=anonymous" +
+
+                 "&jsoncallback=" + callbackName; // Le paramètre clé pour JSONP
+
+
+
+    // Injection du script
+
+    var script = document.createElement('script');
+
+    script.id = callbackName;
+
+    script.src = apiUrl;
+
+    script.onerror = function() {
+
+        console.log('Info: Impossible de récupérer les stats Matomo (Erreur réseau ou bloqueur)');
+
+    };
+
+    document.body.appendChild(script);
+
+});
+
+</script>
+
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
