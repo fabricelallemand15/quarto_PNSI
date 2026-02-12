@@ -1540,91 +1540,59 @@ cookieconsent.run({
 </footer>
 <script>
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
     var matomoBaseUrl = "https://sitelf.fr/matomo/";
 
-    var siteId = "3"; 
+    var siteId = "3";
 
-    var domId = "page-views";
+    var pageViewsElement = document.getElementById("page-views");
 
 
 
-    // 1. DÉTECTION DE L'URL CIBLE
+    if (!pageViewsElement) return;
 
-    // Si on est en local (preview), on simule l'URL de production pour voir les vraies stats
 
-    var isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
 
-    var productionHost = "pnsi.sitelf.fr"; // L'URL publique de votre site
+    var isLocal = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
 
-    
+    var productionHost = "sitelf.fr";
 
     var hostname = isLocal ? productionHost : window.location.hostname;
 
-    // Si on est en local on force https car le site prod est en https
-
     var protocol = isLocal ? "https:" : window.location.protocol;
 
-    
+    var pathname = window.location.pathname;
 
-    // On enlève index.html si présent, car Matomo le fait parfois
-
-    var pathname = window.location.pathname; // .replace(/\/index\.html$/, '/'); 
-
-    
-
-    var targetUrl = protocol + '//' + hostname + pathname;
-
-    
+    var targetUrl = protocol + "//" + hostname + pathname;
 
 
 
-    // 2. MÉTHODE JSONP (Bypasse le blocage CORS)
+    var normalizedPath = pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
 
-    var callbackName = 'matomo_jsonp_callback_' + Math.floor(Math.random() * 10000);
+    var pathParts = normalizedPath.split("/").filter(Boolean);
+
+    var isPostPage = pathParts.length >= 2 && pathParts[0] === "posts";
 
 
 
-    // Fonction qui recevra les données
+    function displayHits(hits) {
 
-    window[callbackName] = function(data) {
+        pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + " vues";
 
-        var hits = 0;
+    }
 
-        console.log("Matomo response:", data); // Debug log
 
-        // Matomo renvoie un tableau ou un objet selon le contexte
 
-        if (Array.isArray(data) && data.length > 0 && data[0].nb_hits) {
+    function displayUnavailable() {
 
-            hits = data[0].nb_hits;
+        pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> indisponible';
 
-        } else if (typeof data === 'object' && data.nb_hits) {
+    }
 
-            hits = data.nb_hits;
 
-        }
 
-        
-
-        // Mise à jour de l'affichage
-
-        var element = document.getElementById(domId);
-
-        if (element) {
-
-            element.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + ' vues';
-
-            element.title = "Vues totales depuis la création (URL: " + targetUrl + ")";
-
-            // console.log("Matomo URL tested: " + targetUrl); // Debug
-
-        }
-
-        
-
-        // Nettoyage
+    function cleanupCallback(callbackName) {
 
         delete window[callbackName];
 
@@ -1632,43 +1600,153 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (script) script.remove();
 
-    };
+    }
 
 
 
-    // Construction de l'URL API avec callback
+    function requestJsonp(url, onSuccess, onError) {
 
-    var apiUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl" + 
+        var callbackName = "matomoCb_" + Math.floor(Math.random() * 1e9);
 
-                 "&idSite=" + siteId + 
+        window[callbackName] = function (data) {
 
-                 "&pageUrl=" + encodeURIComponent(targetUrl) + 
+            cleanupCallback(callbackName);
 
-                 "&format=JSON" + 
+            onSuccess(data);
 
-                 "&period=range&date=2018-01-01,today" + 
-
-                 "&token_auth=anonymous" +
-
-                 "&jsoncallback=" + callbackName; // Le paramètre clé pour JSONP
+        };
 
 
 
-    // Injection du script
+        var script = document.createElement("script");
 
-    var script = document.createElement('script');
+        script.id = callbackName;
 
-    script.id = callbackName;
+        script.src = url + "&jsoncallback=" + callbackName;
 
-    script.src = apiUrl;
+        script.onerror = function () {
 
-    script.onerror = function() {
+            cleanupCallback(callbackName);
 
-        console.log('Info: Impossible de récupérer les stats Matomo (Erreur réseau ou bloqueur)');
+            onError();
 
-    };
+        };
 
-    document.body.appendChild(script);
+        document.body.appendChild(script);
+
+    }
+
+
+
+    function findHitsByLabel(nodes, label) {
+
+        if (!Array.isArray(nodes)) return null;
+
+        for (var i = 0; i < nodes.length; i += 1) {
+
+            var node = nodes[i];
+
+            if (node && node.label === label && typeof node.nb_hits === "number") return node.nb_hits;
+
+            var nested = findHitsByLabel(node && node.subtable, label);
+
+            if (nested !== null) return nested;
+
+        }
+
+        return null;
+
+    }
+
+
+
+    function fallbackExactUrl() {
+
+        var fallbackUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl"
+
+            + "&idSite=" + siteId
+
+            + "&pageUrl=" + encodeURIComponent(targetUrl)
+
+            + "&format=JSON"
+
+            + "&period=range&date=2018-01-01,today";
+
+
+
+        requestJsonp(fallbackUrl, function (data) {
+
+            var hits = 0;
+
+            if (Array.isArray(data) && data.length && typeof data[0].nb_hits === "number") {
+
+                hits = data[0].nb_hits;
+
+            } else if (data && typeof data.nb_hits === "number") {
+
+                hits = data.nb_hits;
+
+            }
+
+            displayHits(hits);
+
+        }, function () {
+
+            displayUnavailable();
+
+        });
+
+    }
+
+
+
+    if (!isPostPage) {
+
+        fallbackExactUrl();
+
+        return;
+
+    }
+
+
+
+    var slug = pathParts[1];
+
+    var segmentPath = "/posts/" + slug;
+
+    var groupedUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrls"
+
+        + "&idSite=" + siteId
+
+        + "&format=JSON"
+
+        + "&expanded=1"
+
+        + "&period=range&date=2018-01-01,today"
+
+        + "&segment=" + encodeURIComponent("pageUrl=@" + segmentPath);
+
+
+
+    requestJsonp(groupedUrl, function (data) {
+
+        var hits = findHitsByLabel(data, slug);
+
+        if (typeof hits === "number") {
+
+            displayHits(hits);
+
+        } else {
+
+            fallbackExactUrl();
+
+        }
+
+    }, function () {
+
+        fallbackExactUrl();
+
+    });
 
 });
 
