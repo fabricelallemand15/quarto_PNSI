@@ -1,14 +1,5 @@
 ---
-title: "Exercices - Traitements de données en tables"
-subtitle: "Ch. 23 - Traitement de données en tables"
-lang: fr
-tbl-cap-location: bottom
-crossref: 
-    eq-prefix: Éq.
-    tbl-prefix: Tableau
-    tbl-title: Tableau
-format:
-    html: default
+title: "Exercices (Traitements de données en tables)"
 execute: 
   cache: true
 ---
@@ -33,7 +24,7 @@ Dans cet exercice, on utilise le fichier [CSV listant les établissements scolai
 2. Combien d'enregistrements contient cette table ?
 3. Opérations de **sélection** :
 
-    3. En utilisant une boucle, écrire des instructions permettant de définir le tableau ``etab_AURILLAC`` contenant les enregistrements qui correspondent à des établissement situés à Aurillac.
+    3. En utilisant une boucle, écrire des instructions permettant de définir le tableau ``etab_AURILLAC`` contenant les enregistrements qui correspondent à des établissements situés à Aurillac.
     4. En utilisant une définition de tableau en compréhension, écrire une instruction permettant d'obtenir le tableau contenant les enregistrements de tous les établissements privés du Cantal.
 
 4. Opérations de **projection** :
@@ -44,15 +35,15 @@ Dans cet exercice, on utilise le fichier [CSV listant les établissements scolai
 
 4. Opérations de **tri** :
 
-    1. Trier les données par ordre croissant de code postaux.
-    2. Trier les données d'Ouest en Est, puis du Nord au Sud.
-    3. Trier les données suivant deux critères : d'abord la commune, puis à l'intérieur de chaque commmune, selin le statut : public en premier, privé en dernier.
+    1. Trier les données par ordre croissant de codes postaux.
+    2. Trier les données d'ouest en est puis du nord au sud.
+    3. Trier les données suivant deux critères : d'abord la commune, puis à l'intérieur de chaque commune, selon le statut : public en premier, privé en dernier.
 
 5. Opération de **jointure** :
 
     1. Importer le fichier CSV [``population_Cantal.csv``](population_Cantal.csv) et indexer les données sous la forme d'un tableau de dictionnaires nommé ``population`` (Source des données : Insee, Recensement de la population 2019). Ce fichier utilise l'encodage UTF-8. 
     
-        **Attention**: Ouvrir d'abord le fichier dans Notepad ++ et observer le délimiteur utilisé, le nom des attributs, ...
+        **Attention** : Ouvrir d'abord le fichier dans Notepad ++ et observer le délimiteur utilisé, le nom des attributs…,
     
     2. Combien d'enregistrements contient cette table ?
     3. Écrire les instructions permettant d'effectuer la jointure entre les tables ``table_educ`` et ``population`` sous la forme d'une table nommée ``new_table`` qui reprend tous les attributs de la table ``table_educ`` en ajoutant à chaque enregistrement la population de la commune considérée sous la forme d'un champ nommé "population".
@@ -62,7 +53,7 @@ Dans cet exercice, on utilise le fichier [CSV listant les établissements scolai
 ::: {.callout-important}
 ## À retenir
 
-Lorsqu'on rapproche deux tables, il faut toujours veiller à la cohérence des noms des attributs, des formats des données (domaines de valeurs), aux doublons, ...
+Lorsqu'on rapproche deux tables, il faut toujours veiller à la cohérence des noms des attributs, des formats des données (domaines de valeurs), aux doublons…,
 
 Cela implique souvent un travail préliminaire de **formatage** des données avant de passer à leur exploitation proprement dite. Ce formatage a été fait pour vous dans cet exercice, sauf pour le petit problème restant qui est apparu dans la dernière question.
 :::

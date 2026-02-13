@@ -1,37 +1,29 @@
 ---
-title: Cours
+title: 5.1 - Les p-uplets en Python
 ---
-
-## 1 Introduction : Les séquences en Python
-
-Nous connaissons les types de données simples en Python. Ce sont les type ``int`` (nombres entiers), ``float`` (nombres flottants), ``bool`` (booléens). Le type ``str`` est aussi utilisé. Il est un peu moins simple. Un objet de type ``str`` est une chaîne de caractères qui s'écrit entre des guillemets ou des apostrophes. Un caractère est, pour simplifier, ce que l'on obtient par exemple avec les touches d'un clavier. Dans une chaîne, chaque caractère est repéré par un indice qui commence à 0. Avec la chaîne ``ch ="exemple"``, ``ch[0]`` est le caractère "e", ``ch[1]`` est le caractère "x", et ainsi de suite.
-
-Ces types simples ne sont plus suffisants si nous avons besoin de garder en mémoire un grand nombre de valeurs comme dans le cas d'un traitement de données statistiques. Il en est de même si l'on souhaite regrouper des valeurs, par exemple afin d'avoir une variable représentant les coordonnées d'un point.
-
-L'objectif est donc de **construire un type de variable** capable de contenir plusieurs valeurs. Nous pouvons nous inspirer du type ``str`` et utiliser des indices pour repérer les éléments. Ceci amène à la construction des **p-uplets**, type ``tuple``, et des **tableaux**, type ``list``. Comme pour le type ``str``, un objet ``t`` de type ``tuple`` n'est pas modifiable par une affectation ``t[i]=valeur``. Un objet de type ``list`` est lui modifiable par une affectation ce qui autorise de nombreuses méthodes applicables à ces objets mais en contrepartie une grande vigilance sur leur utilisation. Un troisième type est présenté, le type ``dict`` pour les dictionnaires. La principale différence avec les listes est qu'un dictionnaire n'est pas ordonné. Un élément n'est pas repéré par un indice entier mais par une "clé".
-
-##  2. Les p-uplets en Python
 
 :::{.callout-tip}
 ## Définition
-Un objet de type tuple, un p-uplet, est une suite ordonnée d'éléments qui peuvent être chacun de n'importe quel type. On parlera indifféremment de **p-uplet** ou de **tuple**.
+Un objet de type tuple, un p-uplet, est une **suite ordonnée d'éléments** qui peuvent être chacun de n'importe quel type. On parlera indifféremment de **p-uplet** ou de **tuple**.
 :::
 
-### 2.1 Création d'un p-uplet
+Les p-uplets et les tableaux (listes), déjà étudiés, sont deux structures de données très semblables, mais il existe une différence importante : **les éléments d'un p-uplet ne sont pas modifiables**, alors que les éléments d'une liste sont modifiables. En particulier, **on ne peut pas** procéder à une affectation de la forme ``t[i]=valeur`` pour un p-uplet ``t`` (ce qui est possible pour une liste).
 
-Pour créer un p-uplet non vide, on écrit n valeurs séparées par des virgules et placées entre des **parenthèses**. Par exemple :
+## 1. Création d'un p-uplet
+
+Pour créer un p-uplet non vide, on écrit $n$ valeurs séparées par des virgules et placées entre des **parenthèses**. Par exemple :
 
 * ``t = ("a", "b", "c", 3)`` pour un tuple à 4 éléments ;
-* ``t = ("a", )``pour un tuple à 1 éléments (attention à la virgule) ;
+* ``t = ("a", )``pour un tuple à 1 élément (attention à la virgule) ;
 * ``t = ()`` pour un tuple à 0 éléments (ici, pas de virgule, mais des parenthèses).
 
 On peut aussi, quand il n'y a pas d'ambiguïté, ne pas écrire les parenthèses : ``t = 1, 2, 3, 4``. Mais les parenthèses peuvent améliorer la lisibilité et on les utilisera de préférence.
 
 On dit aussi qu'on **empaquette** les valeurs 1, 2, 3 et 4 dans le quadruplet ``t``.
 
-### 2.2. Opérations
+## 2. Opérations
 
-Nous avons deux opérateurs de concaténation qui s'utilisent comme avec les chaînes de caractères, ce sont les opérateurs + et *.
+Nous avons deux opérateurs de concaténation qui s'utilisent comme avec les chaînes de caractères, ce sont les opérateurs `+` et `*`.
 
 De nouveaux p-uplets sont créés.
 
@@ -44,7 +36,7 @@ De nouveaux p-uplets sont créés.
 ('a', 'b', 'a', 'b', 'a', 'b')
 ````
 
-### 2.3. Appartenance
+## 3. Appartenance
 
 Pour tester l'appartenance d'un élément à un tuple, on utilise l'opérateur ``in`` :
 
@@ -56,7 +48,7 @@ True
 False
 ````
 
-### 2.4. Utilisation des indices
+## 4. Utilisation des indices
 
 Les indices permettent d'accéder aux différents éléments d'un tuple. Pour accéder à un élément d'indice ``i`` d'un tuple ``t``, la syntaxe est ``t[i]``. L'indice ``i`` peut prendre les valeurs entières de 0 à $n − 1$ où $n$ est la longueur du tuple. Cette longueur s'obtient avec la fonction ``len``. Exemple :
 
@@ -90,9 +82,9 @@ Explication : ``t[1]`` est le tuple ``("c", "d")`` et ``'c'`` est l'élément d'
 
 Rappelons ce qui a été annoncé plus haut : les éléments d'un tuple ne sont pas modifiables par une affectation de la forme ``t[i]=valeur`` qui provoque une erreur et arrête le programme.
 
-### 2.5. Affectation multiple
+## 5. Affectation multiple
 
-Prenons pour exemple l'affectation ``a, b, c = 1, 2, 3``. Ceci signifie que le tuple ``(a, b, c)`` prend pour valeur le tuple ``(1, 2, 3)``, autrement dit, les valeurs respectives des variables ``a``, ``b`` et ``c`` sont 1, 2 et 3.
+Prenons pour exemple l'affectation ``a, b, c = 1, 2, 3``. Ceci signifie que le tuple ``(a, b, c)`` prend pour valeur le tuple ``(1, 2, 3)``, autrement dit les valeurs respectives des variables ``a``, ``b`` et ``c`` sont 1, 2 et 3.
 
 En particulier, l'instruction ``a, b = b, a`` permet d'échanger les valeurs des deux variables ``a`` et ``b``.
 
@@ -135,12 +127,22 @@ La fonction étant définie, nous l'utilisons dans l'interpréteur :
 6.403124237432848
 ````
 
-### 2.6. Parcours d'un tuple avec une boucle for
+## 6. Parcours d'un tuple avec une boucle for
 
-Une boucle ``for`` permet de parcourir chacun des éléments d'un tuple, comme le montre la suite d'instruction suivante, entrée dans la console Python :
+Une boucle ``for`` permet de parcourir chacun des éléments d'un tuple.
+
+Comme pour les tableaux, on peut parcourir un tuple en utilisant les indices, mais on peut aussi parcourir directement les éléments du tuple sans faire appel à des indices :
 
 ````python
 >>> t = (1,2,3,4)
+>>> # Parcours avec les indices
+>>> for i in range(len(t)):
+        print(t[i])
+1
+2
+3
+4
+>>> # Parcours direct des éléments
 >>> for k in t: 
         print(k)
 1
@@ -168,5 +170,5 @@ Dans le programme, il est fait mention de p-uplets nommés. Ce type de variable 
 47
 ````
 
-Le type p-uplet nommé n'existe pas en Python (ou alors il faut utiliser une bibliothèque supplémentaire). Nous utiliserons à la place des dictionnaires ([voir le cours sur les dictionnaires]()).
+Le type p-uplet nommé n'existe pas en Python (ou alors il faut utiliser une bibliothèque supplémentaire). Nous utiliserons à la place des dictionnaires ([voir le cours sur les dictionnaires](../12_dictionnaires/dicos.qmd)).
 :::

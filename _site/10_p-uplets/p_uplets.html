@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cours – NSI - Première</title>
+<title>5.1 - Les p-uplets en Python – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -395,7 +395,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../10_p-uplets/p_uplets.html">Ch. 5 - Python avancé</a></li><li class="breadcrumb-item"><a href="../10_p-uplets/p_uplets.html">Cours</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../10_p-uplets/p_uplets.html">Ch. 5 - Python avancé</a></li><li class="breadcrumb-item"><a href="../10_p-uplets/p_uplets.html">5.1 - Les p-uplets en Python</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -763,43 +763,43 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../10_p-uplets/p_uplets.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">5.1 - Les p-uplets en Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../10_p-uplets/exos_tuples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices (p-uplets)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/dicos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">5.2 - Les dictionnaires en Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/exos_dicos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices (dictionnaires)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/quiz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quiz</span></a>
+ <span class="menu-text">Quiz (tableaux, p-uplets et dictionnaires)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../22_tables/tables_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Traitements de données en tables (cours)</span></a>
+ <span class="menu-text">5.3 - Traitements de données en tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../22_tables/tables_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices - Traitements de données en tables</span></a>
+ <span class="menu-text">Exercices (Traitements de données en tables)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -943,16 +943,12 @@ window.Quarto = {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#introduction-les-séquences-en-python" id="toc-introduction-les-séquences-en-python" class="nav-link active" data-scroll-target="#introduction-les-séquences-en-python">1 Introduction : Les séquences en Python</a></li>
-  <li><a href="#les-p-uplets-en-python" id="toc-les-p-uplets-en-python" class="nav-link" data-scroll-target="#les-p-uplets-en-python">2. Les p-uplets en Python</a>
-  <ul class="collapse">
-  <li><a href="#création-dun-p-uplet" id="toc-création-dun-p-uplet" class="nav-link" data-scroll-target="#création-dun-p-uplet">2.1 Création d’un p-uplet</a></li>
-  <li><a href="#opérations" id="toc-opérations" class="nav-link" data-scroll-target="#opérations">2.2. Opérations</a></li>
-  <li><a href="#appartenance" id="toc-appartenance" class="nav-link" data-scroll-target="#appartenance">2.3. Appartenance</a></li>
-  <li><a href="#utilisation-des-indices" id="toc-utilisation-des-indices" class="nav-link" data-scroll-target="#utilisation-des-indices">2.4. Utilisation des indices</a></li>
-  <li><a href="#affectation-multiple" id="toc-affectation-multiple" class="nav-link" data-scroll-target="#affectation-multiple">2.5. Affectation multiple</a></li>
-  <li><a href="#parcours-dun-tuple-avec-une-boucle-for" id="toc-parcours-dun-tuple-avec-une-boucle-for" class="nav-link" data-scroll-target="#parcours-dun-tuple-avec-une-boucle-for">2.6. Parcours d’un tuple avec une boucle for</a></li>
-  </ul></li>
+  <li><a href="#création-dun-p-uplet" id="toc-création-dun-p-uplet" class="nav-link active" data-scroll-target="#création-dun-p-uplet">1. Création d’un p-uplet</a></li>
+  <li><a href="#opérations" id="toc-opérations" class="nav-link" data-scroll-target="#opérations">2. Opérations</a></li>
+  <li><a href="#appartenance" id="toc-appartenance" class="nav-link" data-scroll-target="#appartenance">3. Appartenance</a></li>
+  <li><a href="#utilisation-des-indices" id="toc-utilisation-des-indices" class="nav-link" data-scroll-target="#utilisation-des-indices">4. Utilisation des indices</a></li>
+  <li><a href="#affectation-multiple" id="toc-affectation-multiple" class="nav-link" data-scroll-target="#affectation-multiple">5. Affectation multiple</a></li>
+  <li><a href="#parcours-dun-tuple-avec-une-boucle-for" id="toc-parcours-dun-tuple-avec-une-boucle-for" class="nav-link" data-scroll-target="#parcours-dun-tuple-avec-une-boucle-for">6. Parcours d’un tuple avec une boucle for</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
@@ -960,9 +956,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../10_p-uplets/p_uplets.html">Ch. 5 - Python avancé</a></li><li class="breadcrumb-item"><a href="../10_p-uplets/p_uplets.html">Cours</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../10_p-uplets/p_uplets.html">Ch. 5 - Python avancé</a></li><li class="breadcrumb-item"><a href="../10_p-uplets/p_uplets.html">5.1 - Les p-uplets en Python</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Cours</h1>
+<h1 class="title">5.1 - Les p-uplets en Python</h1>
 </div>
 
 
@@ -979,14 +975,6 @@ window.Quarto = {
 </header>
 
 
-<section id="introduction-les-séquences-en-python" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-les-séquences-en-python">1 Introduction : Les séquences en Python</h2>
-<p>Nous connaissons les types de données simples en Python. Ce sont les type <code>int</code> (nombres entiers), <code>float</code> (nombres flottants), <code>bool</code> (booléens). Le type <code>str</code> est aussi utilisé. Il est un peu moins simple. Un objet de type <code>str</code> est une chaîne de caractères qui s’écrit entre des guillemets ou des apostrophes. Un caractère est, pour simplifier, ce que l’on obtient par exemple avec les touches d’un clavier. Dans une chaîne, chaque caractère est repéré par un indice qui commence à 0. Avec la chaîne <code>ch ="exemple"</code>, <code>ch[0]</code> est le caractère “e”, <code>ch[1]</code> est le caractère “x”, et ainsi de suite.</p>
-<p>Ces types simples ne sont plus suffisants si nous avons besoin de garder en mémoire un grand nombre de valeurs comme dans le cas d’un traitement de données statistiques. Il en est de même si l’on souhaite regrouper des valeurs, par exemple afin d’avoir une variable représentant les coordonnées d’un point.</p>
-<p>L’objectif est donc de <strong>construire un type de variable</strong> capable de contenir plusieurs valeurs. Nous pouvons nous inspirer du type <code>str</code> et utiliser des indices pour repérer les éléments. Ceci amène à la construction des <strong>p-uplets</strong>, type <code>tuple</code>, et des <strong>tableaux</strong>, type <code>list</code>. Comme pour le type <code>str</code>, un objet <code>t</code> de type <code>tuple</code> n’est pas modifiable par une affectation <code>t[i]=valeur</code>. Un objet de type <code>list</code> est lui modifiable par une affectation ce qui autorise de nombreuses méthodes applicables à ces objets mais en contrepartie une grande vigilance sur leur utilisation. Un troisième type est présenté, le type <code>dict</code> pour les dictionnaires. La principale différence avec les listes est qu’un dictionnaire n’est pas ordonné. Un élément n’est pas repéré par un indice entier mais par une “clé”.</p>
-</section>
-<section id="les-p-uplets-en-python" class="level2">
-<h2 class="anchored" data-anchor-id="les-p-uplets-en-python">2. Les p-uplets en Python</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -997,23 +985,24 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Un objet de type tuple, un p-uplet, est une suite ordonnée d’éléments qui peuvent être chacun de n’importe quel type. On parlera indifféremment de <strong>p-uplet</strong> ou de <strong>tuple</strong>.</p>
+<p>Un objet de type tuple, un p-uplet, est une <strong>suite ordonnée d’éléments</strong> qui peuvent être chacun de n’importe quel type. On parlera indifféremment de <strong>p-uplet</strong> ou de <strong>tuple</strong>.</p>
 </div>
 </div>
-<section id="création-dun-p-uplet" class="level3">
-<h3 class="anchored" data-anchor-id="création-dun-p-uplet">2.1 Création d’un p-uplet</h3>
-<p>Pour créer un p-uplet non vide, on écrit n valeurs séparées par des virgules et placées entre des <strong>parenthèses</strong>. Par exemple :</p>
+<p>Les p-uplets et les tableaux (listes), déjà étudiés, sont deux structures de données très semblables, mais il existe une différence importante : <strong>les éléments d’un p-uplet ne sont pas modifiables</strong>, alors que les éléments d’une liste sont modifiables. En particulier, <strong>on ne peut pas</strong> procéder à une affectation de la forme <code>t[i]=valeur</code> pour un p-uplet <code>t</code> (ce qui est possible pour une liste).</p>
+<section id="création-dun-p-uplet" class="level2">
+<h2 class="anchored" data-anchor-id="création-dun-p-uplet">1. Création d’un p-uplet</h2>
+<p>Pour créer un p-uplet non vide, on écrit <span class="math inline">\(n\)</span> valeurs séparées par des virgules et placées entre des <strong>parenthèses</strong>. Par exemple :</p>
 <ul>
 <li><code>t = ("a", "b", "c", 3)</code> pour un tuple à 4 éléments ;</li>
-<li><code>t = ("a", )</code>pour un tuple à 1 éléments (attention à la virgule) ;</li>
+<li><code>t = ("a", )</code>pour un tuple à 1 élément (attention à la virgule) ;</li>
 <li><code>t = ()</code> pour un tuple à 0 éléments (ici, pas de virgule, mais des parenthèses).</li>
 </ul>
 <p>On peut aussi, quand il n’y a pas d’ambiguïté, ne pas écrire les parenthèses : <code>t = 1, 2, 3, 4</code>. Mais les parenthèses peuvent améliorer la lisibilité et on les utilisera de préférence.</p>
 <p>On dit aussi qu’on <strong>empaquette</strong> les valeurs 1, 2, 3 et 4 dans le quadruplet <code>t</code>.</p>
 </section>
-<section id="opérations" class="level3">
-<h3 class="anchored" data-anchor-id="opérations">2.2. Opérations</h3>
-<p>Nous avons deux opérateurs de concaténation qui s’utilisent comme avec les chaînes de caractères, ce sont les opérateurs + et *.</p>
+<section id="opérations" class="level2">
+<h2 class="anchored" data-anchor-id="opérations">2. Opérations</h2>
+<p>Nous avons deux opérateurs de concaténation qui s’utilisent comme avec les chaînes de caractères, ce sont les opérateurs <code>+</code> et <code>*</code>.</p>
 <p>De nouveaux p-uplets sont créés.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t1 <span class="op">=</span> (<span class="st">"a"</span>, <span class="st">"b"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t2 <span class="op">=</span> (<span class="st">"c"</span>, <span class="st">"d"</span>)</span>
@@ -1022,8 +1011,8 @@ window.Quarto = {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span> <span class="op">*</span> t1</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>(<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'a'</span>, <span class="st">'b'</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="appartenance" class="level3">
-<h3 class="anchored" data-anchor-id="appartenance">2.3. Appartenance</h3>
+<section id="appartenance" class="level2">
+<h2 class="anchored" data-anchor-id="appartenance">3. Appartenance</h2>
 <p>Pour tester l’appartenance d’un élément à un tuple, on utilise l’opérateur <code>in</code> :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">"a"</span> <span class="kw">in</span> t</span>
@@ -1031,8 +1020,8 @@ window.Quarto = {
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">"d"</span> <span class="kw">in</span> t</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="va">False</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="utilisation-des-indices" class="level3">
-<h3 class="anchored" data-anchor-id="utilisation-des-indices">2.4. Utilisation des indices</h3>
+<section id="utilisation-des-indices" class="level2">
+<h2 class="anchored" data-anchor-id="utilisation-des-indices">4. Utilisation des indices</h2>
 <p>Les indices permettent d’accéder aux différents éléments d’un tuple. Pour accéder à un élément d’indice <code>i</code> d’un tuple <code>t</code>, la syntaxe est <code>t[i]</code>. L’indice <code>i</code> peut prendre les valeurs entières de 0 à <span class="math inline">\(n − 1\)</span> où <span class="math inline">\(n\)</span> est la longueur du tuple. Cette longueur s’obtient avec la fonction <code>len</code>. Exemple :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="st">"a"</span>, <span class="dv">1</span>, <span class="st">"b"</span>, <span class="dv">2</span>, <span class="st">"c"</span>, <span class="dv">3</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(t)</span>
@@ -1052,9 +1041,9 @@ window.Quarto = {
 <p>Explication : <code>t[1]</code> est le tuple <code>("c", "d")</code> et <code>'c'</code> est l’élément d’indice 0 de ce tuple.</p>
 <p>Rappelons ce qui a été annoncé plus haut : les éléments d’un tuple ne sont pas modifiables par une affectation de la forme <code>t[i]=valeur</code> qui provoque une erreur et arrête le programme.</p>
 </section>
-<section id="affectation-multiple" class="level3">
-<h3 class="anchored" data-anchor-id="affectation-multiple">2.5. Affectation multiple</h3>
-<p>Prenons pour exemple l’affectation <code>a, b, c = 1, 2, 3</code>. Ceci signifie que le tuple <code>(a, b, c)</code> prend pour valeur le tuple <code>(1, 2, 3)</code>, autrement dit, les valeurs respectives des variables <code>a</code>, <code>b</code> et <code>c</code> sont 1, 2 et 3.</p>
+<section id="affectation-multiple" class="level2">
+<h2 class="anchored" data-anchor-id="affectation-multiple">5. Affectation multiple</h2>
+<p>Prenons pour exemple l’affectation <code>a, b, c = 1, 2, 3</code>. Ceci signifie que le tuple <code>(a, b, c)</code> prend pour valeur le tuple <code>(1, 2, 3)</code>, autrement dit les valeurs respectives des variables <code>a</code>, <code>b</code> et <code>c</code> sont 1, 2 et 3.</p>
 <p>En particulier, l’instruction <code>a, b = b, a</code> permet d’échanger les valeurs des deux variables <code>a</code> et <code>b</code>.</p>
 <p>Les valeurs des éléments d’un tuple peuvent ainsi être stockées dans des variables.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
@@ -1082,16 +1071,25 @@ window.Quarto = {
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> dMN</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fl">6.403124237432848</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="parcours-dun-tuple-avec-une-boucle-for" class="level3">
-<h3 class="anchored" data-anchor-id="parcours-dun-tuple-avec-une-boucle-for">2.6. Parcours d’un tuple avec une boucle for</h3>
-<p>Une boucle <code>for</code> permet de parcourir chacun des éléments d’un tuple, comme le montre la suite d’instruction suivante, entrée dans la console Python :</p>
+<section id="parcours-dun-tuple-avec-une-boucle-for" class="level2">
+<h2 class="anchored" data-anchor-id="parcours-dun-tuple-avec-une-boucle-for">6. Parcours d’un tuple avec une boucle for</h2>
+<p>Une boucle <code>for</code> permet de parcourir chacun des éléments d’un tuple.</p>
+<p>Comme pour les tableaux, on peut parcourir un tuple en utilisant les indices, mais on peut aussi parcourir directement les éléments du tuple sans faire appel à des indices :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> k <span class="kw">in</span> t: </span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(k)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Parcours avec les indices</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(t)):</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(t[i])</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># Parcours direct des éléments</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> k <span class="kw">in</span> t: </span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(k)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1124,12 +1122,11 @@ window.Quarto = {
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> monsieurX <span class="op">=</span> {<span class="st">"nom"</span>: <span class="st">"X"</span>, <span class="st">"́prenom"</span>: <span class="st">"Monsieur"</span>, <span class="st">"age"</span>: <span class="dv">47</span>}</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> monsieurX[<span class="st">"age"</span>]</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dv">47</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Le type p-uplet nommé n’existe pas en Python (ou alors il faut utiliser une bibliothèque supplémentaire). Nous utiliserons à la place des dictionnaires (<a href="">voir le cours sur les dictionnaires</a>).</p>
+<p>Le type p-uplet nommé n’existe pas en Python (ou alors il faut utiliser une bibliothèque supplémentaire). Nous utiliserons à la place des dictionnaires (<a href="../12_dictionnaires/dicos.html">voir le cours sur les dictionnaires</a>).</p>
 </div>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1555,8 +1552,8 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../10_p-uplets/exos_tuples.html" class="pagination-link" aria-label="Exercices">
-        <span class="nav-page-text">Exercices</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../10_p-uplets/exos_tuples.html" class="pagination-link" aria-label="Exercices (p-uplets)">
+        <span class="nav-page-text">Exercices (p-uplets)</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

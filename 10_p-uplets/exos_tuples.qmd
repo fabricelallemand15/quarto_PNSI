@@ -1,12 +1,14 @@
 ---
-title: "Exercices"
+title: "Exercices (p-uplets)"
 ---
 
-_Les exercices précédés du symbole {{< fa desktop >}}  sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+**Lien vers Capytale pour faire les exercices en ligne :** [Capytale](https://capytale2.ac-paris.fr/web/c/f61e-2534118)
+
+_Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._
 
 _Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
 
-## {{< fa desktop >}}  Exercice 1
+## {{< fa desktop >}} Exercice 1
 
 La notation française pour les dates est jj/mm/aa, alors que la notation anglaise est aa/mm/jj.
 
@@ -26,11 +28,9 @@ if jour == 24 and mois == 12:
 * Format français : 21/11/18
 * Format anglais : 18/11/21
 
-
-
 ## {{< fa solid pencil-alt >}} Exercice 2
 
-Un point $A$ de coordonnées $A(2 ; 7)$ peut être représenté par un tuple :  ``A = (2,7)``.
+Un point $A$ de coordonnées $A(2 ; 7)$ peut être représenté par un tuple : ``A = (2,7)``.
 
 L'abscisse et l'ordonnée d'un point $A$ sont en général notées $x_A$ et $y_A$.
 
@@ -52,7 +52,7 @@ def milieu(A, B):
     c. ``milieu((2, 3), (4, 9))``
     d. ``milieu((2 ; 3), (4 ; 9))``
 
-2. Quelle est la valeur retournée par l'appel suivant  : ``milieu((2,3),(4,9))`` ?
+2. Quelle est la valeur retournée par l'appel suivant : ``milieu((2,3),(4,9))`` ?
 3. On utilise cette fonction dans le programme suivant :
 
     ````python
@@ -64,11 +64,7 @@ def milieu(A, B):
 
     Corriger ce programme pour qu'il fonctionne.
 
-
-
-## {{< fa desktop >}}  Exercice 3
-
-**Cet exercice doit être fait après avoir étudié les tableaux.**
+## {{< fa desktop >}} Exercice 3
 
 Voici un tableau qui répertorie des informations sur les adhérents d'un site internet :
 

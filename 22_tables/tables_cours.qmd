@@ -1,14 +1,5 @@
 ---
-title: "Traitements de données en tables (cours)"
-subtitle: "Ch. 23 - Traitement de données en tables"
-lang: fr
-tbl-cap-location: bottom
-crossref: 
-    eq-prefix: Éq.
-    tbl-prefix: Tableau
-    tbl-title: Tableau
-format:
-    html: default
+title: "5.3 - Traitements de données en tables"
 execute: 
   cache: true
 ---
@@ -16,7 +7,7 @@ execute:
 :::{.callout-important}
 ## Ce cours dans Capytale
 
-[Cliquer ici](https://capytale2.ac-paris.fr/web/c/eb73-3484435)
+Avec quelques exercices à faire en ligne : [Cliquer ici](https://capytale2.ac-paris.fr/web/c/eb73-3484435)
 :::
 
 ## 1. Table de données et indexation
@@ -32,7 +23,7 @@ Des données, numériques ou non, sont souvent représentées sous forme de tabl
 
 * Une __table__, représentée sous forme de tableau, est une collection d'éléments qui sont les lignes du tableau.
 * Chaque élément de la __table__, ou ligne de sa représentation sous forme de tableau, s'appelle un __enregistrement__.    
-* Tous les  __enregistrements__ d'une même __table__ sont des  __p-uplets nommés__ qui partagent les mêmes __descripteurs__, appelés aussi __attributs__. Dans une représentation de la __table__ sous forme de tableau, chaque __attribut__ correspond à une colonne. Chaque __attribut__ est caractérisé par son __type__ et son  __domaine de valeurs__ (les valeurs que peut prendre cet attribut).    
+* Tous les __enregistrements__ d'une même __table__ sont des __p-uplets nommés__ qui partagent les mêmes __descripteurs__, appelés aussi __attributs__. Dans une représentation de la __table__ sous forme de tableau, chaque __attribut__ correspond à une colonne. Chaque __attribut__ est caractérisé par son __type__ et son __domaine de valeurs__ (les valeurs que peut prendre cet attribut).    
 * Dans une représentation sous forme de tableau, les __descripteurs__ ou __attributs__ sont en général placés comme en-tête de colonnes sur la première ligne.
 :::
 
@@ -46,7 +37,7 @@ La table représentée ci-dessus est affichée dans un tableur. Nous voyons les 
 
 Les attributs de cette table sont :
 
-* le _code_ UAI (Unité Administrative Immatriculée) avec un domaine de valeurs particulier ;
+* Le _code_ UAI (Unité Administrative Immatriculée) avec un domaine de valeurs particulier ;
 * le _nom_ avec pour domaine de valeur les chaînes de caractères ;
 * le _statut_ avec pour domaine de valeur les deux chaînes {"Public", "Privé"} ;
 * le _codepostal_ avec un domaine de valeurs particulier ;
@@ -56,15 +47,15 @@ Les attributs de cette table sont :
 
 ### 1.2. Échange de table de données avec un fichier CSV
 
-Pour échanger des __données tabulaires__  entre les programmes qui doivent les manipuler, on les exporte puis les importe sous la forme de fichiers textes, c'est-à-dire lisibles par l'être humain.  
+Pour échanger des __données tabulaires__ entre les programmes qui doivent les manipuler, on les exporte puis les importe sous la forme de fichiers textes, c'est-à-dire lisibles par l'être humain.  
 
 Afin d'assurer l'interopérabilité entre différents programmes, un fichier doit respecter un __format__ normalisé.
 
 L'un des formats les plus répandus pour l'échange de __données tabulaires__ est le format [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) pour _Comma Separated Values_ :
 
-* un fichier [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) est un fichier texte donc éditable avec un éditeur de textes comme [Notepad++](https://notepad-plus-plus.org/downloads/). On peut aussi l'éditer dans un tableur ;
+* Un fichier [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) est un fichier texte donc éditable avec un éditeur de textes comme [Notepad++](https://notepad-plus-plus.org/downloads/). On peut aussi l'éditer dans un tableur ;
 * chaque ligne du fichier correspond à un __enregistrement__ de la table ;
-* pour un  __enregistrement__ donné, les valeurs des différents __attributs__ sont séparées en __champs__ par un __délimiteur__ qui est en général l'un des symboles `,` ou `;` ou `:` ;
+* pour un __enregistrement__ donné, les valeurs des différents __attributs__ sont séparées en __champs__ par un __délimiteur__ qui est en général l'un des symboles `,` ou `;` ou `:` ;
 * la première ligne contient en général les noms des __attributs__.
 
 Voici la même table que celle qui est affichée dans un tableur ci-dessus, au format CSV :
@@ -94,7 +85,7 @@ code,nom,statut,codepostal,commune,latitude,longitude
 
 On observe que le délimiteur de champ est le symbole `,` et que les champs peuvent contenir des espaces.
 
-Dans un tel jeu de données, il peut y avoir des champs vides dans certains enregistrements et il se peut aussi que le nombre de champs pour un ne corresponde pas au nombre d'attributs ! Pour traiter un tel fichier avec un programme, il faut d'abord analyser sa structure, ses particularités et prévoir d'éventuelles irrégularités dans les données (absence, erreurs de type, de saisie, corruption du fichier ...). Le __contrôle de la  validité__ des données doit donc être une composante du programme de traitement : recherche de doublons, tests de cohérence.
+Dans un tel jeu de données, il peut y avoir des champs vides dans certains enregistrements et il se peut aussi que le nombre de champs pour un ne corresponde pas au nombre d'attributs ! Pour traiter un tel fichier avec un programme, il faut d'abord analyser sa structure, ses particularités et prévoir d'éventuelles irrégularités dans les données (absence, erreurs de type, de saisie, corruption du fichier ...). Le __contrôle de la validité__ des données doit donc être une composante du programme de traitement : recherche de doublons, tests de cohérence.
 
 ### 1.3. Manipulation de fichiers CSV en Python
 
@@ -106,12 +97,12 @@ __L'indexation de table__ est la création d'une structure de données à partir
 L'indexation d'une table extraite d'un fichier CSV peut se faire vers une structure de données du langage Python : **tableau de tableaux** ou (mieux) **tableau de dictionnaires**.
 :::
 
-Dans cette section, on considère le fichier [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values),  [`educ_cantal.csv`](educ_cantal.csv),  contenant les enregistrements des établissements scolaires primaires et secondaires dans le Cantal.
+Dans cette section, on considère le fichier [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values), [`educ_cantal.csv`](educ_cantal.csv), contenant les enregistrements des établissements scolaires primaires et secondaires dans le Cantal.
 
 Présentons deux méthodes de lecture de fichiers [CSV](https://fr.wikipedia.org/wiki/Comma-separated_values) qui utilisent les outils standards de Python. 
 
-On fait les hypothèses suivantes :  la première ligne du fichier contient les attributs
-et on connaît  le délimiteur, ici le symbole `,`.
+On fait les hypothèses suivantes : la première ligne du fichier contient les attributs
+et on connaît le délimiteur, ici le symbole `,`.
 
 ### Avec un tableau de tableaux
 
@@ -130,7 +121,7 @@ table = [ligne.rstrip().split(',') for ligne in fichier]
 fichier.close()
 ```
 
-La fonction `open` permet de créer un objet `fichier` qu'on peut parcourir ligne par ligne avec un curseur : d'abord la première ligne avec `fichier.readline()` puis les lignes suivantes en itérant sur `fichier`. Il est important de préciser __l'encodage du fichier__, par défaut c'est celui du système d'exploitation.
+La fonction `open` permet de créer un objet `fichier` qu'on peut parcourir ligne par ligne avec un curseur : d'abord la première ligne avec `fichier.readline()` puis les lignes suivantes en itérant sur `fichier`. Il est important de préciser __l'encodage du fichier__, par défaut, c'est celui du système d'exploitation.
 
 Chaque ligne est une chaîne de caractères découpée en liste de champs selon le délimiteur passé en paramètre à la méthode `split`. Le caractère de saut de lignes a d'abord été supprimé avec la méthode `rstrip`.
 
@@ -157,11 +148,11 @@ g.close()
 
 La méthode `join` permet de concaténer les éléments d'un tableau de chaînes de caractères avec un délimiteur.
 
-* Avec ces méthodes, une table est donc représentée par **un tableau de tableaux**. On accède à un enregistrement par son index dans la table et à la valeur d'un attribut par son index dans le tableau des attributs (séparé de la table). C'est incommode et  le code produit est peu lisible. Ainsi, pour accéder à l'adresse mail du premier enregistrement il faut saisir `table[0][2]`. On aimerait écrire `table[0]['email']`. Pour cela, chaque enregistrement devrait être un p-uplet nommé que nous représenterons par dictionnaire avec pour clefs les attributs de la table. C'est possible en utilisant le [module `csv`](https://docs.python.org/fr/3/library/csv.html).
+* Avec ces méthodes, une table est donc représentée par **un tableau de tableaux**. On accède à un enregistrement par son index dans la table et à la valeur d'un attribut par son index dans le tableau des attributs (séparé de la table). C'est incommode et le code produit est peu lisible. Ainsi, pour accéder à l'adresse mail du premier enregistrement, il faut saisir `table[0][2]`. On aimerait écrire `table[0]['email']`. Pour cela, chaque enregistrement devrait être un p-uplet nommé que nous représenterons par dictionnaire avec pour clefs les attributs de la table. C'est possible en utilisant le [module `csv`](https://docs.python.org/fr/3/library/csv.html).
 
 ### Avec un tableau de dictionnaires
 
-Le [module `csv`](https://docs.python.org/fr/3/library/csv.html)  est disponible dans la bibliothèque standard et peut donc être  utilisé sans installation spécifique. À partir de la table contenue dans le même fichier CSV `'educ_cantal.csv'`, ce module permet de créer une structure de données d'un accès plus facile.
+Le [module `csv`](https://docs.python.org/fr/3/library/csv.html) est disponible dans la bibliothèque standard et peut donc être utilisé sans installation spécifique. À partir de la table contenue dans le même fichier CSV `'educ_cantal.csv'`, ce module permet de créer une structure de données d'un accès plus facile.
 
 * **Lecture**
 
@@ -178,12 +169,12 @@ table = [enregistrement for enregistrement in reader]
 f.close()
 ```	
 
-La structure de données représentant la table est un __tableau de dictionnaires__ : l'accès aux enregistrements se fait par index et à leurs attributs par clef : très efficace (coût constant) et code lisible. Notons que toutes les valeurs restent des chaînes de caractères et qu'il faudra convertir certaines pour les traiter !
+La structure de données représentant la table est un __tableau de dictionnaires__ : l'accès aux enregistrements se fait par index et à leurs attributs par clef : très efficace (coût constant) et code lisible. Notons que toutes les valeurs restent des chaînes de caractères et qu'il faudra en convertir certaines pour les traiter !
 
 ```{python}
 # premier enregistrement de type dictionnaire
 print(table[18])
-# tableu de dictionnaires : extrait
+# tableau de dictionnaires : extrait
 print(table[:2])
 # nombre d'enregistrements
 print(len(table))
@@ -193,7 +184,7 @@ print(table[18]["nom"])
 
 * **Écriture**
 
-L'écriture d'un tableau de dictionnaires partageant les mêmes clefs sous forme de table dans un fichier CSV, s'effectue de façon symétrique à travers un objet `DictWriter`. À titre, d'exemple, on recopie la table extraite précédemment dans un autre fichier CSV. Depuis Python 3.7, le parcours des clefs d'un dictionnaire est garanti dans le même ordre que celui d'insertion donc on peut récupérer la liste des attributs avec `list(table[0].keys())`
+L'écriture d'un tableau de dictionnaires partageant les mêmes clefs sous forme de table dans un fichier CSV, s'effectue de façon symétrique à travers un objet `DictWriter`. À titre, d'exemple, on recopie la table extraite précédemment dans un autre fichier CSV. Depuis Python 3.7, le parcours des clefs d'un dictionnaire est garanti dans le même ordre que celui d'insertion donc on peut récupérer la liste des attributs avec `list(table[0].keys())`.
 
 ```{python}
 g = open('educ_cantal_copie2.csv', mode='w', encoding='utf8', newline='')
@@ -224,7 +215,7 @@ Pour accéder aux données, il faut les rechercher et les regrouper suivant diff
 ## Définition
 
 * Lorsqu'on souhaite accéder à un ou plusieurs enregistrements vérifiant un critère, on réalise une **sélection**.
-* Lorsqu'on souhaite accéder à toutes les données d'une colonne on réalise une **projection**.
+* Lorsqu'on souhaite accéder à toutes les données d'une colonne, on réalise une **projection**.
 :::
 
 ### Exemple de sélection
@@ -271,7 +262,7 @@ Cette fois, on souhaite récupérer toutes les valeurs pour un champ donné, par
 
 L'approche est similaire, on crée une liste, on parcourt la table et on ajoute à la liste tous les éléments qui nous intéressent.
 
-* à la main :
+* À la main :
 
 ```{python}
 notes_maths = []
@@ -291,7 +282,7 @@ Dans les deux cas le résultat est la liste ['16', '19', '14', '10'].
 ## Exercices
 
 1. Adapter la sélection afin de récupérer tous les enregistrements des élèves dont le nom comporte un "o".
-2. Projeter afin de construire la liste des noms puis celle des paires de notes d'info et de maths :
+2. Projeter pour construire la liste des noms puis celle des paires de notes d'info et de maths :
 
     [(18, 16), (17, 19), (13, 14), (16, 10)]
 :::
@@ -343,7 +334,7 @@ liste_paires = [(enre['Info'], enre['Maths']) for enre in Table1]
 
 ### 3.1. Tri d'une table selon une colonne
 
-Il s'agit ici de trier les données d'une table selon un des attributs de la table, c'est-à-dire selon une colonne. Il faut bien sûr pour cela que les données de cet attribut soient "triables", c'est-à-dire qu'un ordre puisse être défini sur ces données. Pour des données numériques, on peut penser à l'ordre croissant ou à l'ordre décroissant. Pour des données textuelles, à l'ordre alphabétique. On peut aussi vouloir trier les données selon plusieurs champs.
+Il s'agit ici de trier les données d'une table selon un des attributs de la table, c'est-à-dire selon une colonne. Il faut bien sûr pour cela que les données de cet attribut soient "triables", autrement dit qu'un ordre peut être défini sur ces données. Pour des données numériques, on peut penser à l'ordre croissant ou à l'ordre décroissant. Pour des données textuelles, à l'ordre alphabétique. On peut aussi vouloir trier les données selon plusieurs champs.
 
 Nous allons pour cela utiliser la fonction Python ``sorted`` qui s'applique à un objet de type ``list`` et qui renvoie une nouvelle ``list`` triée. Outre la table à trier, cette fonction peut prendre deux arguments nommés facultatifs :
 
@@ -381,7 +372,7 @@ table = [{'élève' : 'guido', 'langage' : 'python', 'note' : 19},
          {'élève' : 'brian', 'langage' : 'c', 'note' : 20}]
 ```
 
-On souhaite trier en fonction du langage dans l'ordre alphabétique, puis de la note dans l'ordre croissant. La fonction donnée en argument ``key`` doit alors retourner la couple ordonné des deux attributs voulus :
+On souhaite trier en fonction du langage dans l'ordre alphabétique, puis de la note dans l'ordre croissant. La fonction donnée en argument ``key`` doit alors retourner le couple ordonné des deux attributs voulus :
 
 ```{python}
 def cle_langage_note(enre):
@@ -413,7 +404,7 @@ Le cas le plus simple est lorsque nous disposons de deux tables, par exemple sou
 
 Une simple **concaténation** des tableaux permet cette fusion, en prenant garde néanmoins :
 
-* à ne pas conserver deux fois la définition des descripteurs ;
+* À ne pas conserver deux fois la définition des descripteurs ;
 * à éviter les doublons : cas d'un enregistrement qui se trouverait dans les deux tables initiales.
 
 Sous l'hypothèse qu'il n'y a pas de doublons, le code ci-dessous procède à cette fusion :
@@ -454,7 +445,7 @@ On voudrait regrouper les données des deux tables. Elles ont l'attribut ``Nom``
 | 	Joe |	16 	|joe@info.fr |	17 |	18 |	16|
 | 	Zoé |	15 	|zoe@info.fr |	15 |	17 	|19|
 
-On choisit d'exclure la ligne concernant Max car il n'est pas présent dans la seconde table.
+On choisit d'exclure la ligne concernant `Max`, car il n'est pas présent dans la seconde table.
 
 ::: {.callout-tip}
 ## Définition

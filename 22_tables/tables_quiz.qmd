@@ -53,7 +53,7 @@ un fichier texte.
 
     Que va produire l'exécution de ce code ?
 
-    * [ ] **Réponse A :**  L'affichage de la troisième colonne à savoir le nom du département
+    * [ ] **Réponse A :** L'affichage de la troisième colonne, à savoir le nom du département
     avec une majuscule initiale
     * [ ] **Réponse B :** L'affichage de tout le contenu du fichier
     * [ ] **Réponse C :** L'affichage du nombre total de départements figurant dans le fichier
@@ -82,10 +82,10 @@ un fichier texte.
 
     Les index des lignes de ce tableau vont :
 
-    * [ ] **Réponse A :**  de 0 à 3
+    * [ ] **Réponse A :** de 0 à 3
     * [ ] **Réponse B :** de 1 à 4
-    * [ ] **Réponse C :**  de 0 à 4
-    * [ ] **Réponse D :** de 0 à 5
+    * [ ] **Réponse C :** de 0 à 4
+    * [ ] **Réponse D :** de 0 à 5.
 
 3. Quelle expression Python permet d'accéder au numéro de téléphone de Tournesol, sachant que le répertoire a été défini par l'affectation suivante :
 
@@ -95,7 +95,7 @@ un fichier texte.
               {'nom': 'Dupond', 'tel': '3452'}]
     ~~~
 
-    * [ ] **Réponse A :**  `repertoire['Tournesol']`
-    * [ ] **Réponse B :**  `repertoire['tel'][1]`
-    * [ ] **Réponse C :**  `repertoire[1]['tel']`
-    * [ ] **Réponse D :**   `repertoire['Tournesol'][tel]`
+    * [ ] **Réponse B :** `repertoire['tel'][1]`
+    * [ ] **Réponse A :** `repertoire['Tournesol']`
+    * [ ] **Réponse C :** `repertoire[1]['tel']`
+    * [ ] **Réponse D :**  `repertoire['Tournesol'][tel]`

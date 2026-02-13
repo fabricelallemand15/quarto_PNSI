@@ -1,5 +1,5 @@
 ---
-title: Cours
+title: 5.2 - Les dictionnaires en Python
 ---
 
 Tout comme les p-uplets et les tableaux, les dictionnaires sont un type construit de données pouvant contenir plusieurs éléments. Mais à la différence des deux autres structures étudiées, les éléments contenus dans un dictionnaire ne sont pas **ordonnés** et ils ne sont pas indexés par un entier, mais par une **clé** qui peut être de différents types.
@@ -24,7 +24,7 @@ On peut définir un dictionnaire de différentes façons :
 <class 'dict'>  
 ````
 
-* en compréhension, comme avec les tableaux.
+* En compréhension, comme avec les tableaux.
 
 ````python
 >>> d = {chr(65+i): i for i in range(26)}
@@ -32,7 +32,7 @@ On peut définir un dictionnaire de différentes façons :
 {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7, 'I': 8, 'J': 9, 'K': 10, 'L': 11, 'M': 12, 'N': 13, 'O': 14, 'P': 15, 'Q': 16, 'R': 17, 'S': 18, 'T': 19, 'U': 20, 'V': 21, 'W': 22, 'X': 23, 'Y': 24, 'Z': 25}
 ````
 
-* élément par élément après avoir défini un dictionnaire vide.
+* Élément par élément après avoir défini un dictionnaire vide.
 
 ````python
 >>> superficie = {}
@@ -123,14 +123,14 @@ L'instruction ``del`` permet de supprimer une valeur désignée par sa clé.
 {'Allemagne': 357588, 'Espagne': 505992}
 ````
 
-La fonction ``len`` renvoie le nombre de valeurs contenues dans le dictionnaire.
+La fonction ``len`` renvoie le nombre de couples (clé, valeur) contenus dans le dictionnaire.
 
 ````python
 >>> len(capitales)
 9
 ````
 
-Copie d'un dictionnaire : Les comportements sont similaires à ceux rencontrés avec les tableaux en particulier si les valeurs sont des tableaux. Il est donc conseillé d'utiliser la fonction ``deepcopy`` du module ``copy`` pour être certain d'obtenir une "vraie" copie.
+Copie d'un dictionnaire : Les comportements sont similaires à ceux rencontrés avec les tableaux, en particulier si les valeurs sont des tableaux. Il est donc conseillé d'utiliser la fonction ``deepcopy`` du module ``copy`` pour être certain d'obtenir une "vraie" copie.
 
 ## 3. Itérer sur les éléments d'un dictionnaire
 

@@ -1,8 +1,9 @@
 ---
-title: Quiz
+title: Quiz (tableaux, p-uplets et dictionnaires)
+format: live-html
 ---
 
-_Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._
+_Les exercices précédés du symbole {{< fa desktop >}} sont à faire directement sur cette page._
 
 _Les exercices précédés du symbole {{< fa solid pencil-alt >}} doivent être résolus par écrit._
 
@@ -107,16 +108,19 @@ Tester votre code.
 
 Par exemple, ``recherche_max([4, 3, 0, 5])`` renvoie 5.
 
-```python
+````{pyodide}
 def recherche_max(tab: list) -> int:
     """Retourne la plus grande valeur contenue dans le tableau
     tab: tableau d'entiers naturels"""
-	maxi = ...
+	maxi = ____
 	for t in tab :
-		if ... > maxi :
-			maxi = ...
-	return ...
-```
+		if ____ > maxi :
+			maxi = ____
+	return ____
+
+# Tester la fonction ci-dessous
+print(recherche_max([4, 3, 0, 5]))
+````
 
 
 ## {{< fa desktop >}} Exercice 5
@@ -124,21 +128,18 @@ def recherche_max(tab: list) -> int:
 Compléter la fonction ci-dessous pour qu'elle réponde à sa spécification.
 Tester votre code.
 
-````python
+````{pyodide}
 def somme(tab: list) -> int:
     """Retourne la somme des éléments du tableau
     tab: tableau d'entiers"""
-	s = ...
-	for t in ... :
-		s = s + ...
-	return ...
-````
+	s = ____
+	for t in ____: :
+		s = s + ____
+	return ____
 
-````python
->>> somme([3,5,8,4])
-20
+# Tester la fonction ci-dessous
+print(somme([3,5,8,4]))
 ````
-
 
 ## {{< fa solid pencil-alt >}} Exercice 6
 
@@ -183,4 +184,16 @@ On utilise un tableau contenant des dictionnaires afin de stocker les notes des 
 
 La fonction ``moyenne`` prend en paramètre un tableau contenant des dictionnaires (comme celui ci-dessus) et renvoie la moyenne des notes.
 
-Écrivez la fonction ``moyenne``.
+Écrivez la fonction ``moyenne`` et testez-la avec le tableau ci-dessus.
+
+````{pyodide}
+def moyenne(tab: list) -> float:
+    """Retourne la moyenne des notes contenues dans le tableau
+    tab: tableau de dictionnaires contenant les notes des élèves"""
+    # votre code ici
+
+
+# Tester la fonction ci-dessous
+
+print(moyenne([{'nom':'Titi', 'note':12}, {'nom':'Tutu', 'note':11}, {'nom':'Toto', 'note':17}]))
+````

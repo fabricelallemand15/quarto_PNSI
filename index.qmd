@@ -9,6 +9,7 @@ Ce site est destiné à regrouper les cours et les exercices concernant l'enseig
 ::: {.callout-note .updates-box}
 ## Dernières mises à jour
 
+- Février 2026 - Refonte du chapitre 5 : [*Python avancé*](10_p-uplets/p_uplets.qmd)
 - Janvier 2026 - Refonte du chapitre 4 : *Représentation numérique des nombres et du texte*
 :::
 

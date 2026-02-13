@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cours – NSI - Première</title>
+<title>5.2 - Les dictionnaires en Python – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -366,7 +366,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../10_p-uplets/p_uplets.html">Ch. 5 - Python avancé</a></li><li class="breadcrumb-item"><a href="../12_dictionnaires/dicos.html">Cours</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../10_p-uplets/p_uplets.html">Ch. 5 - Python avancé</a></li><li class="breadcrumb-item"><a href="../12_dictionnaires/dicos.html">5.2 - Les dictionnaires en Python</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -734,43 +734,43 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../10_p-uplets/p_uplets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">5.1 - Les p-uplets en Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../10_p-uplets/exos_tuples.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices (p-uplets)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/dicos.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">5.2 - Les dictionnaires en Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/exos_dicos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">Exercices (dictionnaires)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../12_dictionnaires/quiz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quiz</span></a>
+ <span class="menu-text">Quiz (tableaux, p-uplets et dictionnaires)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../22_tables/tables_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Traitements de données en tables (cours)</span></a>
+ <span class="menu-text">5.3 - Traitements de données en tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../22_tables/tables_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices - Traitements de données en tables</span></a>
+ <span class="menu-text">Exercices (Traitements de données en tables)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -928,9 +928,9 @@ cookieconsent.run({
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../10_p-uplets/p_uplets.html">Ch. 5 - Python avancé</a></li><li class="breadcrumb-item"><a href="../12_dictionnaires/dicos.html">Cours</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../10_p-uplets/p_uplets.html">Ch. 5 - Python avancé</a></li><li class="breadcrumb-item"><a href="../12_dictionnaires/dicos.html">5.2 - Les dictionnaires en Python</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Cours</h1>
+<h1 class="title">5.2 - Les dictionnaires en Python</h1>
 </div>
 
 
@@ -973,13 +973,13 @@ cookieconsent.run({
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(capitales)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">'dict'</span><span class="op">&gt;</span>  </span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>en compréhension, comme avec les tableaux.</li>
+<li>En compréhension, comme avec les tableaux.</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> d <span class="op">=</span> {<span class="bu">chr</span>(<span class="dv">65</span><span class="op">+</span>i): i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">26</span>)}</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> d</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>{<span class="st">'A'</span>: <span class="dv">0</span>, <span class="st">'B'</span>: <span class="dv">1</span>, <span class="st">'C'</span>: <span class="dv">2</span>, <span class="st">'D'</span>: <span class="dv">3</span>, <span class="st">'E'</span>: <span class="dv">4</span>, <span class="st">'F'</span>: <span class="dv">5</span>, <span class="st">'G'</span>: <span class="dv">6</span>, <span class="st">'H'</span>: <span class="dv">7</span>, <span class="st">'I'</span>: <span class="dv">8</span>, <span class="st">'J'</span>: <span class="dv">9</span>, <span class="st">'K'</span>: <span class="dv">10</span>, <span class="st">'L'</span>: <span class="dv">11</span>, <span class="st">'M'</span>: <span class="dv">12</span>, <span class="st">'N'</span>: <span class="dv">13</span>, <span class="st">'O'</span>: <span class="dv">14</span>, <span class="st">'P'</span>: <span class="dv">15</span>, <span class="st">'Q'</span>: <span class="dv">16</span>, <span class="st">'R'</span>: <span class="dv">17</span>, <span class="st">'S'</span>: <span class="dv">18</span>, <span class="st">'T'</span>: <span class="dv">19</span>, <span class="st">'U'</span>: <span class="dv">20</span>, <span class="st">'V'</span>: <span class="dv">21</span>, <span class="st">'W'</span>: <span class="dv">22</span>, <span class="st">'X'</span>: <span class="dv">23</span>, <span class="st">'Y'</span>: <span class="dv">24</span>, <span class="st">'Z'</span>: <span class="dv">25</span>}</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>élément par élément après avoir défini un dictionnaire vide.</li>
+<li>Élément par élément après avoir défini un dictionnaire vide.</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie <span class="op">=</span> {}</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie[<span class="st">"France"</span>] <span class="op">=</span> <span class="dv">543940</span></span>
@@ -1060,10 +1060,10 @@ cookieconsent.run({
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">del</span> superficie[<span class="st">"France"</span>]</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> superficie</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>{<span class="st">'Allemagne'</span>: <span class="dv">357588</span>, <span class="st">'Espagne'</span>: <span class="dv">505992</span>}</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>La fonction <code>len</code> renvoie le nombre de valeurs contenues dans le dictionnaire.</p>
+<p>La fonction <code>len</code> renvoie le nombre de couples (clé, valeur) contenus dans le dictionnaire.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(capitales)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Copie d’un dictionnaire : Les comportements sont similaires à ceux rencontrés avec les tableaux en particulier si les valeurs sont des tableaux. Il est donc conseillé d’utiliser la fonction <code>deepcopy</code> du module <code>copy</code> pour être certain d’obtenir une “vraie” copie.</p>
+<p>Copie d’un dictionnaire : Les comportements sont similaires à ceux rencontrés avec les tableaux, en particulier si les valeurs sont des tableaux. Il est donc conseillé d’utiliser la fonction <code>deepcopy</code> du module <code>copy</code> pour être certain d’obtenir une “vraie” copie.</p>
 </section>
 </section>
 <section id="itérer-sur-les-éléments-dun-dictionnaire" class="level2">
@@ -1529,13 +1529,13 @@ cookieconsent.run({
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../10_p-uplets/exos_tuples.html" class="pagination-link" aria-label="Exercices">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercices</span>
+      <a href="../10_p-uplets/exos_tuples.html" class="pagination-link" aria-label="Exercices (p-uplets)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercices (p-uplets)</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../12_dictionnaires/exos_dicos.html" class="pagination-link" aria-label="Exercices">
-        <span class="nav-page-text">Exercices</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../12_dictionnaires/exos_dicos.html" class="pagination-link" aria-label="Exercices (dictionnaires)">
+        <span class="nav-page-text">Exercices (dictionnaires)</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
