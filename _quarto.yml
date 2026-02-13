@@ -95,6 +95,7 @@ website:
           - 22_tables/tables_cours.qmd
           - 22_tables/tables_exos.qmd
           - 22_tables/tables_quiz.qmd
+          - 22_tables/TP_Evaluation.qmd
       - section: "Ch. 6 - Réseaux"
         contents: 
           - 23_reseaux/reseaux_cours.qmd

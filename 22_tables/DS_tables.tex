@@ -1,0 +1,259 @@
+\documentclass[a4paper,11pt]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{multirow}
+\usepackage{array}
+
+% --- Style des listings Python ---
+\lstdefinestyle{python}{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{red!70!black},
+    commentstyle=\color{green!50!black}\itshape,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=8pt,
+    frame=single,
+    framerule=0.5pt,
+    rulecolor=\color{gray},
+    backgroundcolor=\color{gray!5},
+    breaklines=true,
+    tabsize=4,
+    literate=
+        {é}{{\'e}}1 {è}{{\`e}}1 {ê}{{\^e}}1 {ë}{{\"e}}1
+        {à}{{\`a}}1 {â}{{\^a}}1
+        {î}{{\^i}}1 {ï}{{\"i}}1
+        {ô}{{\^o}}1
+        {ù}{{\`u}}1 {û}{{\^u}}1 {ü}{{\"u}}1
+        {ç}{{\c{c}}}1
+        {É}{{\'E}}1 {È}{{\`E}}1
+}
+
+\lstdefinestyle{csv}{
+    basicstyle=\ttfamily\small,
+    showstringspaces=false,
+    frame=single,
+    framerule=0.5pt,
+    rulecolor=\color{gray},
+    backgroundcolor=\color{gray!5},
+    breaklines=true,
+}
+
+\lstset{style=python}
+
+% --- En-tête / Pied de page ---
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Première NSI}
+\chead{DS -- Traitements de données en tables}
+\rhead{\thepage/\pageref{LastPage}}
+\lfoot{Année 2025--2026}
+\rfoot{Durée : 2 heures}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% --- Commandes personnalisées ---
+\newcommand{\baremeq}[1]{\hfill\textit{(#1 pt\ifnum#1>1 s\fi)}}
+\newcommand{\bareme}[1]{\hfill\textit{(#1 pt\ifnum#1>1 s\fi)}}
+
+\begin{document}
+
+% --- Titre ---
+\begin{center}
+    {\LARGE \textbf{Devoir Surveillé}}\\[6pt]
+    {\Large Traitements de données en tables}\\[6pt]
+    {\large Durée : 2 heures \quad---\quad Barème indicatif sur 20 points}\\[4pt]
+    \textit{La calculatrice n'est pas autorisée. L'usage de tout document ou appareil électronique est interdit.}\\[2pt]
+    \textit{La qualité de la rédaction et la clarté des explications seront prises en compte.}
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent\textbf{Nom :} \dotfill \quad \textbf{Prénom :} \dotfill \quad \textbf{Classe :} \dotfill
+
+\vspace{0.8cm}
+
+% ============================================================
+%  EXERCICE 1 : Vocabulaire et format CSV (4 points)
+% ============================================================
+\section*{Exercice 1 -- Vocabulaire et format CSV \bareme{4}}
+
+On considère l'extrait ci-dessous d'un fichier \texttt{meteo.csv} contenant des relevés météorologiques quotidiens dans plusieurs villes :
+
+\begin{lstlisting}[style=csv]
+ville;date;temperature;humidite;vent
+Paris;2025-01-15;3.2;82;12
+Lyon;2025-01-15;1.8;75;8
+Marseille;2025-01-15;8.5;60;25
+Paris;2025-01-16;2.1;88;15
+Lyon;2025-01-16;0.5;79;6
+Marseille;2025-01-16;9.1;58;30
+\end{lstlisting}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Que signifie l'acronyme CSV ? Quel est le délimiteur utilisé dans ce fichier ?\bareme{1}
+    \item Donner la liste des \textbf{attributs} (ou descripteurs) de cette table. Combien d'\textbf{enregistrements} contient-elle ?\bareme{1}
+    \item Pour chaque attribut, préciser son \textbf{domaine de valeurs} (type et ensemble de valeurs possibles).\bareme{1}
+    \item On souhaite ajouter un nouvel enregistrement correspondant à un relevé à Toulouse le 15 janvier 2025 avec une température de 5.3°C, une humidité de 70\% et un vent de 18 km/h. Écrire la ligne à ajouter au fichier CSV.\bareme{1}
+\end{enumerate}
+
+\vspace{0.8cm}
+
+% ============================================================
+%  EXERCICE 2 : Lecture et indexation (4 points)
+% ============================================================
+\section*{Exercice 2 -- Lecture et indexation d'un fichier CSV en Python \bareme{4}}
+
+On souhaite exploiter le fichier \texttt{meteo.csv} décrit dans l'exercice~1.
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Compléter le code suivant qui lit le fichier \texttt{meteo.csv} et stocke les données dans un \textbf{tableau de tableaux} (sans utiliser le module \texttt{csv}).\bareme{1,5}
+
+\begin{lstlisting}
+fichier = open('meteo.csv', mode='r', encoding=______, newline='')
+attributs = fichier.____________.rstrip().___________(______)
+table = [ligne.____________.____________(______) for ligne in fichier]
+fichier.close()
+\end{lstlisting}
+
+    \item On utilise maintenant le module \texttt{csv} pour obtenir un \textbf{tableau de dictionnaires}. Compléter le code suivant :\bareme{1}
+
+\begin{lstlisting}
+import csv
+
+f = open('meteo.csv', mode='r', encoding='utf8', newline='')
+reader = csv.____________(f, delimiter=______)
+table = [enregistrement for enregistrement in reader]
+f.close()
+\end{lstlisting}
+
+    \item Après exécution du code de la question 2, quelle est la valeur de chacune des expressions suivantes ?\bareme{1}
+
+    \begin{enumerate}[label=\alph*)]
+        \item \lstinline|len(table)|
+        \item \lstinline|table[0]['ville']|
+        \item \lstinline|table[2]['temperature']|
+        \item \lstinline|type(table[2]['temperature'])|
+    \end{enumerate}
+
+    \item Expliquer pourquoi, pour comparer des températures stockées dans cette table, il est nécessaire d'effectuer une conversion. Quelle fonction Python utiliser pour cette conversion ?\bareme{0,5}
+\end{enumerate}
+
+\vspace{0.8cm}
+
+% ============================================================
+%  EXERCICE 3 : Sélection et Projection (4,5 points)
+% ============================================================
+\section*{Exercice 3 -- Sélection et projection \bareme{4,5}}
+
+On suppose que le fichier \texttt{meteo.csv} a été correctement chargé dans un tableau de dictionnaires nommé \texttt{table}, comme à la question~2 de l'exercice~2.
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{Sélection}
+
+    \begin{enumerate}[label=\alph*)]
+        \item Écrire, en utilisant \textbf{une boucle \texttt{for}}, les instructions Python permettant de construire un tableau \texttt{releves\_paris} contenant tous les enregistrements correspondant à la ville de Paris.\bareme{1}
+
+        \item Écrire, en utilisant \textbf{une liste en compréhension}, une instruction Python permettant de construire un tableau \texttt{jours\_chauds} contenant tous les enregistrements pour lesquels la température est strictement supérieure à 5°C. On n'oubliera pas d'effectuer la conversion de type nécessaire.\bareme{1}
+    \end{enumerate}
+
+    \item \textbf{Projection}
+
+    \begin{enumerate}[label=\alph*)]
+        \item Écrire, en utilisant \textbf{une liste en compréhension}, une instruction Python permettant de construire le tableau \texttt{toutes\_villes} contenant toutes les valeurs de l'attribut \texttt{ville} apparaissant dans la table.\bareme{0,5}
+
+        \item Le tableau \texttt{toutes\_villes} contient des doublons. Proposer une solution en Python pour obtenir un tableau \texttt{villes\_uniques} ne contenant chaque nom de ville qu'une seule fois.\bareme{1}
+    \end{enumerate}
+
+    \item Écrire, en utilisant \textbf{une liste en compréhension}, une instruction Python permettant d'obtenir le tableau des couples \texttt{(ville, temperature)} de tous les enregistrements de la table, la température étant convertie en flottant.\bareme{1}
+\end{enumerate}
+
+\vspace{0.8cm}
+
+% ============================================================
+%  EXERCICE 4 : Tri (3,5 points)
+% ============================================================
+\section*{Exercice 4 -- Tri d'une table \bareme{3,5}}
+
+On travaille toujours avec le tableau de dictionnaires \texttt{table} de l'exercice précédent.
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Rappeler le rôle des deux paramètres nommés \texttt{key} et \texttt{reverse} de la fonction \texttt{sorted}.\bareme{1}
+
+    \item On souhaite trier la table par ordre croissant de température. Écrire la fonction \texttt{cle\_temperature} à passer en argument \texttt{key}, puis l'instruction de tri. On veillera à effectuer la conversion de type adéquate.\bareme{1}
+
+    \item On souhaite trier la table selon \textbf{deux critères} : d'abord par ville dans l'ordre alphabétique, puis à l'intérieur de chaque ville, par température décroissante. On procède en deux étapes.
+
+    \begin{enumerate}[label=\alph*)]
+        \item Écrire la fonction \texttt{cle\_ville} et effectuer le premier tri (par ville, ordre alphabétique).\bareme{0,5}
+        \item Écrire la fonction \texttt{cle\_temp} et effectuer le second tri (par température décroissante) sur le résultat du premier tri.\bareme{1}
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{0.8cm}
+
+% ============================================================
+%  EXERCICE 5 : Jointure et écriture CSV (4 points)
+% ============================================================
+\section*{Exercice 5 -- Jointure et écriture CSV \bareme{4}}
+
+On dispose d'une seconde table, stockée dans un tableau de dictionnaires nommé \texttt{infos\_villes}, qui contient des informations sur les villes :
+
+\begin{lstlisting}
+infos_villes = [
+    {'ville': 'Paris', 'region': 'Île-de-France', 'population': 2165423},
+    {'ville': 'Lyon', 'region': 'Auvergne-Rhône-Alpes', 'population': 522250},
+    {'ville': 'Marseille', 'region': 'PACA', 'population': 870731},
+    {'ville': 'Toulouse', 'region': 'Occitanie', 'population': 493465}
+]
+\end{lstlisting}
+
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item Qu'appelle-t-on une \textbf{jointure} entre deux tables ? Quel est l'attribut commun qui permet de réaliser la jointure entre les tables \texttt{table} et \texttt{infos\_villes} ?\bareme{1}
+
+    \item Compléter la fonction suivante qui réalise la jointure entre deux tables selon un attribut commun. La table résultante contient, pour chaque couple d'enregistrements ayant la même valeur pour l'attribut commun, la fusion de tous les attributs.\bareme{2}
+
+\begin{lstlisting}
+from copy import deepcopy
+
+def jointure(t1, t2, attribut):
+    resultat = []
+    for enreg1 in ______:
+        for enreg2 in ______:
+            if ______ == ______:
+                new = deepcopy(______)
+                for cle in ______:
+                    if cle != ______:
+                        new[______] = ______
+                resultat.append(______)
+    return resultat
+\end{lstlisting}
+
+    \item Donner l'instruction permettant d'appeler cette fonction pour effectuer la jointure entre \texttt{table} et \texttt{infos\_villes} selon l'attribut \texttt{'ville'}. On stockera le résultat dans une variable \texttt{table\_complete}.\bareme{0,5}
+
+    \item Écrire les instructions Python utilisant le module \texttt{csv} permettant d'enregistrer le contenu de \texttt{table\_complete} dans un fichier \texttt{meteo\_complete.csv} avec le délimiteur \texttt{';'}. On écrira d'abord la ligne des attributs puis les enregistrements.\bareme{0,5}
+\end{enumerate}
+
+\vspace{1cm}
+
+\begin{center}
+    \rule{0.5\textwidth}{0.4pt}\\[6pt]
+    \textit{Fin du sujet}
+\end{center}
+
+\end{document}

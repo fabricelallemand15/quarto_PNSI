@@ -1,0 +1,9 @@
+---
+title: "TP - Évaluation"
+---
+
+## Statistiques des jeux olympiques d'été de Paris 2024
+
+Ce TP est à réaliser dans Capytale : [Capytale](https://capytale2.ac-paris.fr/web/c/befe-9695027)
+
+[![](JO2024.png){width="80%"}](https://capytale2.ac-paris.fr/web/c/befe-9695027)
