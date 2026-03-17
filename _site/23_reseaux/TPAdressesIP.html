@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Programme – NSI - Première</title>
+<title>tpadressesip – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,6 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../24_protocoles/protocoles_cours.html" rel="next">
+<link href="../23_reseaux/TP_reseaux.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -331,7 +368,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Programme</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/TPAdressesIP.html">TPAdressesIP.html</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -758,13 +795,13 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Ch. 6 - Réseaux</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../23_reseaux/reseaux_cours.html" class="sidebar-item-text sidebar-link">
@@ -785,7 +822,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../23_reseaux/TPAdressesIP.html" class="sidebar-item-text sidebar-link">
+  <a href="../23_reseaux/TPAdressesIP.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">TPAdressesIP.html</span></a>
   </div>
 </li>
@@ -906,77 +943,59 @@ cookieconsent.run({
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/TPAdressesIP.html">TPAdressesIP.html</a></li></ol></nav></header>
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Programme</h1>
+
+
+
+<h1 style="font-size:2.5em;text-align:center">
+Adressage IP, réseaux, masques
+</h1>
+<hr>
+<p><strong>L’objectif est d’écrire une fonction <code>meme_sous_reseau(ip_a, ip_b, masque)</code> qui renvoie un booléen indiquant si les machines A et B font partie du même sous-réseau.</strong>On rappelle quelques instructions qui pourront s’avérer utiles :</p>
+<div id="cell-2" class="cell" data-trusted="false" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">bin</span>(<span class="dv">45</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>'0b101101'</code></pre>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Les langages de programmation Turing-complets sont caractérisés par un corpus de « constructions élémentaires ». Sans introduire cette terminologie, il s’agit de montrer qu’il existe de nombreux langages de programmation, différents par leur style (impératif, fonctionnel, objet, logique, événementiel, etc.), ainsi que des langages formalisés de description ou de requêtes qui ne sont pas des langages de programmation.</p>
-<p>L’importance de la spécification, de la documentation et des tests est à présenter, ainsi que l’intérêt de la modularisation qui permet la réutilisation de programmes et la mise à disposition de bibliothèques. Pour les programmes simples écrits par les élèves, on peut se contenter d’une spécification rapide mais précise.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 31%">
-<col style="width: 40%">
-<col style="width: 27%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Contenus</th>
-<th>Capacités attendues</th>
-<th>Commentaires</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Constructions élémentaires</td>
-<td>Mettre en évidence un corpus de constructions élémentaires.</td>
-<td>Séquences, affectation, conditionnelles, boucles bornées, boucles non bornées, appels de fonction.</td>
-</tr>
-<tr class="even">
-<td>Utilisation de bibliothèques</td>
-<td>Utiliser la documentation d’une bibliothèque.</td>
-<td>Aucune connaissance exhaustive d’une bibliothèque particulière n’est exigible.</td>
-</tr>
-</tbody>
-</table>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 31%">
-<col style="width: 40%">
-<col style="width: 27%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Contenus</th>
-<th>Capacités attendues</th>
-<th>Commentaires</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Diversité et unité des langages de programmation</td>
-<td>Repérer, dans un nouveau langage de programmation, les traits communs et les traits particuliers à ce langage.</td>
-<td>Les manières dont un même programme simple s’écrit dans différents langages sont comparées.</td>
-</tr>
-</tbody>
-</table>
+</div>
+<div id="cell-3" class="cell" data-trusted="false" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>chaine <span class="op">=</span> <span class="st">"bonjour à tous !"</span>chaine.split(<span class="st">' '</span>)  <span class="co"># on sépare la chaîne selon le caractère espace</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>['bonjour', 'à', 'tous', '!']</code></pre>
+</div>
+</div>
+<div id="cell-4" class="cell" data-trusted="false" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> et_logique(bit1, bit2):    <span class="st">"""    Renvoie le résultat de l'opération logique bit1 ET bit2.        Entrées : deux string d'1 caractère ('0' ou '1')    Sortie : string     """</span>    <span class="co"># à vous de jouer !    passassert et_logique('0', '0') == '0'assert et_logique('0', '1') == '0'assert et_logique('1', '0') == '0'assert et_logique('1', '1') == '1'print("Tests réussis !")</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Traceback (most recent call last):
+  File "&lt;input&gt;", line 18, in &lt;module&gt;
+  File "&lt;input&gt;", line 12, in test_et_logique
+AssertionError</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: </code></pre>
+</div>
+</div>
+<div id="cell-5" class="cell" data-trusted="false">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> entier_en_mot_binaire(entier, longueur_mot_binaire):    <span class="st">"""    Renvoie un mot binaire correspondant à l'entier.        Entrées :        entier : int        longueur_mot_binaire : int de longueur supérieure ou égale au nombre de bits nécessaires    pour convertir entier en base 2        Sortie : string de longueur longueur_mot_binaire                """</span>    <span class="co"># à vous de jouer !    passassert entier_en_mot_binaire(1, 8) == '00000001'assert entier_en_mot_binaire(192, 8) == '11000000'assert entier_en_mot_binaire(168, 8) == '10101000'print("Tests réussis !")</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-6" class="cell" data-trusted="false">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> masque_en_mot_binaire(masque):    <span class="st">"""    Renvoie la conversion du masque en un mot binaire.        Entrée : masque (int)    Sortie : string de 32 caractères    """</span>    <span class="co"># à vous de jouer !    passassert masque_en_mot_binaire(24) == '11111111111111111111111100000000'print("Tests réussis !")</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-7" class="cell" data-trusted="false">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ip_en_liste(ip):    <span class="st">"""    Renvoie une liste dont les éléments sont les 4 octets de l'adresse ip.        Entrée : ip (string)     Sortie : liste d'entiers    """</span>    <span class="co"># à vous de jouer !    passassert ip_en_liste('192.168.0.1') == [192, 168, 0, 1]print("Tests réussis !")</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-8" class="cell" data-trusted="false">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ip_en_mot_binaire(ip):    <span class="st">"""    Renvoie la conversion d'une ip en un mot binaire.        Entrée : string contenant une IP (ex "192.168.0.1")    Sortie : string de 32 caractères    """</span>    <span class="co"># à vous de jouer !    pass    assert ip_en_mot_binaire("192.168.0.1") == '11000000101010000000000000000001'print("Tests réussis !")</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-9" class="cell" data-trusted="false">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> adresse_reseau_ip(ip, masque):    <span class="st">"""    Renvoie l'adresse réseau de l'adresse ip avec le masque masque.        Entrées :        ip : string contenant une IP (ex "192.168.0.1")        masque : entier du masque en notation CIDR (ex : 24)    Sortie : string de 32 caractères        """</span>    <span class="co"># à vous de jouer !    pass       assert adresse_reseau_ip("192.168.0.1", 24) == '11000000101010000000000000000000'assert adresse_reseau_ip("192.168.1.3", 24) == '11000000101010000000000100000000'assert adresse_reseau_ip("192.168.0.1", 20) == '11000000101010000000000000000000'assert adresse_reseau_ip("192.168.1.3", 20) == '11000000101010000000000000000000'print("Tests réussis !")</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cell-10" class="cell" data-trusted="false">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> meme_sous_reseau(ip_a, ip_b, masque):    <span class="st">"""    Renvoie un booléen indiquant si ip_a et ip_b sont dans un même réseau de masque masque.        Entrées :    ip_a:  string contenant une IP (ex "192.168.0.1")    ip_b : string contenant une IP    masque : entier du masque en notation CIDR (ex : 24)    """</span>    <span class="co"># à vous de jouer !    passassert meme_sous_reseau("192.168.0.1", "192.168.1.3", 24) == Falseassert meme_sous_reseau("192.168.0.1", "192.168.1.3", 20) == Trueassert meme_sous_reseau("192.168.0.1", "192.168.0.3", 30) == Trueprint("Tests réussis !")</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 
 
 
@@ -1396,6 +1415,18 @@ cookieconsent.run({
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../23_reseaux/TP_reseaux.html" class="pagination-link" aria-label="TP Filius">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP Filius</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../24_protocoles/protocoles_cours.html" class="pagination-link" aria-label="6.2 - Protocoles de communication">
+        <span class="nav-page-text">6.2 - Protocoles de communication</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
