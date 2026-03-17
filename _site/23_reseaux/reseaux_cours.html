@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.16">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cours – NSI - Première</title>
+<title>6.1 - Adresses IP et masques de sous-réseau – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a67ac2868200dddf7a4f0e3ae403775c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-82d683e9f830cba069e3fb8cbfbea53b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a67ac2868200dddf7a4f0e3ae403775c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f90cbdadd06a7ce36d2760346202a0fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fbfa2d89a2548311c7c762f4ff972691.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-b783d01425d450f6796a14d76de94524.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-fbfa2d89a2548311c7c762f4ff972691.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-a9abdc8f23f02a1e69185ea0e4a1bf53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -87,10 +87,10 @@ ul.task-list li input[type="checkbox"] {
 document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({
   "notice_banner_type":"simple",
-  "consent_type":"express",
+  "consent_type":"implied",
   "palette":"light",
   "language":"en",
-  "page_load_consent_levels":["strictly-necessary"],
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
@@ -321,6 +321,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">NSI - Première</span>
     </a>
@@ -331,7 +333,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -363,7 +365,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Cours</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">6.1 - Adresses IP et masques de sous-réseau</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -373,6 +375,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -796,19 +802,31 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../23_reseaux/reseaux_cours.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">6.1 - Adresses IP et masques de sous-réseau</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../23_reseaux/reseaux_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">TP dans Capytale</span></a>
+ <span class="menu-text">6.1 - Fiche d’exercices : Adresses IP et masques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../23_reseaux/TP_reseaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TP Filius</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../24_protocoles/protocoles_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">6.2 - Protocoles de communication</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../24_protocoles/exercices_protocoles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 – Protocoles de communication</span></a>
   </div>
 </li>
       </ul>
@@ -921,6 +939,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#la-carte-réseau-et-son-adresse-mac" id="toc-la-carte-réseau-et-son-adresse-mac" class="nav-link" data-scroll-target="#la-carte-réseau-et-son-adresse-mac">1.1. La carte réseau et son adresse MAC</a></li>
   <li><a href="#switch-hub-quelle-différence" id="toc-switch-hub-quelle-différence" class="nav-link" data-scroll-target="#switch-hub-quelle-différence">1.2. Switch, hub, quelle différence ?</a></li>
+  <li><a href="#simulateur-interactif-de-switch" id="toc-simulateur-interactif-de-switch" class="nav-link" data-scroll-target="#simulateur-interactif-de-switch">Simulateur interactif de switch</a></li>
   </ul></li>
   <li><a href="#un-deuxième-sous-réseau" id="toc-un-deuxième-sous-réseau" class="nav-link" data-scroll-target="#un-deuxième-sous-réseau">2. Un deuxième sous-réseau</a>
   <ul class="collapse">
@@ -940,10 +959,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Cours</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">6.1 - Adresses IP et masques de sous-réseau</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Cours</h1>
-<p class="subtitle lead">Architecture d’un réseau</p>
+<h1 class="title">6.1 - Adresses IP et masques de sous-réseau</h1>
 </div>
 
 
@@ -999,6 +1017,51 @@ window.Quarto = {
 <li>Au sein d’un <strong>switch Ethernet</strong>, une analyse est effectuée sur la trame qui est à distribuer. Lors d’un branchement d’un nouvel ordinateur sur le switch, celui-ci récupère son adresse MAC, ce qui lui permet de <strong>trier</strong> les messages et de ne les distribuer qu’au bon destinataire.</li>
 </ul>
 <p><a href="switch.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="switch.png" class="img-fluid"></a></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Activité débranchée : simuler un switch
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Par groupes de 3 — une personne joue le rôle du switch, deux autres sont les machines A et B.</p>
+<p>Ici, <strong>SAT</strong> signifie <strong>Source Address Table</strong> : c’est la table d’association entre un <strong>port</strong> du switch et une <strong>adresse MAC</strong> observée sur ce port.</p>
+<ol type="1">
+<li>A envoie un message à B (écrit sur papier). Le switch ne connaît encore personne : il retransmet à <strong>tout le monde</strong> et note l’adresse MAC de A sur le port 1.</li>
+<li>B répond à A. Le switch note l’adresse MAC de B (port 2). Sa <strong>table SAT</strong> est désormais complète.</li>
+<li>A envoie à nouveau un message à B. Le switch l’achemine cette fois <strong>directement</strong> vers B.</li>
+</ol>
+<p><strong>Table SAT à construire au fur et à mesure :</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Port</th>
+<th>Adresse MAC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Question :</strong> un troisième ordinateur C est branché sur le port 3 mais n’a encore rien envoyé. Le switch peut-il lui adresser directement un message ?</p>
+</div>
+</div>
+</section>
+<section id="simulateur-interactif-de-switch" class="level3">
+<h3 class="anchored" data-anchor-id="simulateur-interactif-de-switch">Simulateur interactif de switch</h3>
+<p><a href="https://sitelf.fr/divers/simulateur_switch/index.html" target="_blank">Voir en pleine page</a></p>
+<iframe src="https://sitelf.fr/divers/simulateur_switch/index.html" width="100%" height="800">
+</iframe>
 </section>
 </section>
 <section id="un-deuxième-sous-réseau" class="level2">
@@ -1009,25 +1072,6 @@ window.Quarto = {
 <p>Une réponse pas si bête : avec un câble entre les deux switchs !</p>
 <p><a href="f3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="f3.png" class="img-fluid"></a></p>
 <p>Testons cette hypothèse en essayant d’envoyer un ping à la machine <code>192.168.1.2</code> depuis la machine <code>192.168.0.1</code>.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Astuce</span>Résultat du ping
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="ft2.png" class="img-fluid"></a></p>
-<p>Cela ne marche pas. L’ordinateur <strong>refuse</strong> d’envoyer le ping vers la machine <code>192.168.1.2</code>.</p>
-<p><em>(nous le verrons plus loin : car elle n’est pas dans son sous-réseau)</em></p>
-</div>
-</div>
-</div>
-<p>Temporairement, renommons la machine <code>192.168.1.2</code> en <code>192.168.0.33</code>. Testons à nouveau le ping depuis la machine <code>192.168.0.1</code>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1040,6 +1084,25 @@ window.Quarto = {
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="ft2.png" class="img-fluid"></a></p>
+<p>Cela ne marche pas. L’ordinateur <strong>refuse</strong> d’envoyer le ping vers la machine <code>192.168.1.2</code>.</p>
+<p><em>(nous le verrons plus loin : car elle n’est pas dans son sous-réseau)</em></p>
+</div>
+</div>
+</div>
+<p>Temporairement, renommons la machine <code>192.168.1.2</code> en <code>192.168.0.33</code>. Testons à nouveau le ping depuis la machine <code>192.168.0.1</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Résultat du ping
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p><a href="ft3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="ft3.png" class="img-fluid"></a></p>
 <p>Cela marche. Les paquets sont bien acheminés.</p>
 </div>
@@ -1050,8 +1113,8 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="notion-de-masque-de-sous-réseau">2.1. Notion de masque de sous-réseau</h3>
 <p>Dans Filius, lors de l’attribution de l’adresse IP à une machine, une ligne nous permet de spécifier le <strong>masque de sous-réseau</strong> (appelé simplement « Masque » dans Filius). C’est ce masque qui va permettre de déterminer si une machine appartient à un sous-réseau ou non, en fonction de son adresse IP.</p>
 <p><a href="f4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="f4.png" class="img-fluid"></a></p>
-<section id="explication-basique" class="level4">
-<h4 class="anchored" data-anchor-id="explication-basique">2.1.1 Explication basique</h4>
+<section id="lecture-intuitive" class="level4">
+<h4 class="anchored" data-anchor-id="lecture-intuitive">2.1.1 Lecture intuitive</h4>
 <ul>
 <li>Si le masque est <code>255.255.255.0</code>, toutes les machines partageant les mêmes <strong>trois</strong> premiers nombres de leur adresse IP appartiendront au même sous-réseau. Comme ceci est le réglage par défaut de Filius, cela explique pourquoi <code>192.168.0.33</code> et <code>192.168.0.1</code> sont sur le même sous-réseau, et pourquoi <code>192.168.1.2</code> et <code>192.168.0.1</code> ne sont pas sur le même sous-réseau.</li>
 </ul>
@@ -1067,7 +1130,7 @@ window.Quarto = {
 <li>Testons le ping de <code>192.168.0.1</code> vers <code>192.168.1.2</code>.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1076,7 +1139,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><a href="ft4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="ft4.png" class="img-fluid"></a></p>
 <p>Cela marche. Les deux machines appartiennent maintenant au même sous-réseau.</p>
@@ -1084,17 +1147,20 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="explication-avancée" class="level4">
-<h4 class="anchored" data-anchor-id="explication-avancée">2.1.2 Explication avancée</h4>
+<section id="lopérateur-et-bit-à-bit" class="level4">
+<h4 class="anchored" data-anchor-id="lopérateur-et-bit-à-bit">2.1.2 L’opérateur ET bit à bit</h4>
 <p>Lorsqu’une machine A veut envoyer un message à une machine B, elle doit déterminer si cette machine :</p>
 <ul>
-<li>appartient au même sous-réseau : auquel cas le message est envoyé directement via un ou plusieurs switchs.</li>
-<li>n’appartient pas au même sous-réseau : auquel cas le message doit d’abord transiter par un routeur (voir 3.)</li>
+<li>appartient au même sous-réseau : le message peut être envoyé directement via un ou plusieurs switchs.</li>
+<li>n’appartient pas au même sous-réseau : le message doit d’abord transiter par un routeur (voir 3.)</li>
 </ul>
-<p>Quelle opération permet de distinguer cette appartenance à un même sous-réseau ?</p>
-<p>Appelons <code>IP_A</code> et <code>IP_B</code> les adresses IP respectives des machines A et B.</p>
-<p>Appelons <code>M</code> le masque de sous-réseau.</p>
-<p>Nommons <code>&amp;</code> l’opérateur de conjonction entre nombres binaires : il s’agit d’un <code>ET</code> bit à bit.</p>
+<p>L’opération qui permet cette décision est le <strong>ET bit à bit</strong> (noté <code>&amp;</code>) : pour deux octets, on compare les bits un à un suivant la règle <code>1 &amp; 1 = 1</code>, et <code>0 &amp; x = 0</code> dans tous les autres cas.</p>
+<p><strong>Deux raccourcis utiles :</strong> pour tout octet <code>x</code>, <code>x &amp; 255 = x</code> (le masque <code>255</code> laisse tous les bits intacts) et <code>x &amp; 0 = 0</code> (le masque <code>0</code> efface tout).</p>
+<p><strong>Exemple sur un octet non trivial :</strong> <code>129 &amp; 248</code></p>
+<pre><code>  129 = 10000001
+  248 = 11111000
+  &amp;   = 10000000 = 128</code></pre>
+<p>Notant <code>IP_A</code>, <code>IP_B</code> les adresses des machines A et B, et <code>M</code> le masque de sous-réseau :</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1105,10 +1171,10 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A et B appartiennent au même sous-réseau ⇔ <code>IP_A &amp; M = IP_B &amp; M</code></p>
+<p>A et B appartiennent au même sous-réseau ⟺ <code>IP_A &amp; M = IP_B &amp; M</code></p>
 </div>
 </div>
-<p><strong>Exemple</strong> : considérons trois machines A, B, C d’IP respectives <code>192.168.129.10</code>, <code>192.168.135.200</code> et <code>192.168.145.1</code>, configurées avec un masque de sous-réseau égal à <code>255.255.248.0</code>.</p>
+<p><strong>Exemple d’application :</strong> trois machines A, B, C configurées avec le masque <code>255.255.248.0</code> :</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1139,16 +1205,56 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>Règles de calcul pour le <code>ET</code> bit à bit :</p>
-<ul>
-<li>pour tout octet <code>x</code>, <code>x &amp; 255 = x</code> et <code>x &amp; 0 = 0</code>.</li>
-<li><code>129 &amp; 248</code> s’écrit en binaire <code>10000001 &amp; 11111000</code> qui vaut <code>10000000</code>, soit <code>128</code> en décimal.</li>
-</ul>
-<p><strong>Conclusion</strong> : les machines A et B sont sous le même sous-réseau, mais pas la machine C.</p>
+<p>Seul le 3ème octet est non trivial : <code>129 &amp; 248 = 128</code>, <code>135 &amp; 248 = 128</code>, <code>145 &amp; 248 = 144</code>.</p>
+<p><strong>Conclusion :</strong> A et B sont dans le même sous-réseau ; C ne l’est pas.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mêmes questions avec les machines suivantes, masque <code>255.255.252.0</code> :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>machine D</th>
+<th>machine E</th>
+<th>machine F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>IP</td>
+<td>172.16.12.5</td>
+<td>172.16.14.200</td>
+<td>172.16.16.1</td>
+</tr>
+<tr class="even">
+<td>M</td>
+<td>255.255.252.0</td>
+<td>255.255.252.0</td>
+<td>255.255.252.0</td>
+</tr>
+<tr class="odd">
+<td>IP &amp; M</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Rappel :</em> <code>252 = 11111100₂</code>. Quelles machines sont dans le même sous-réseau ?</p>
+</div>
+</div>
 </section>
-<section id="cohérence-entre-les-deux-explications" class="level4">
-<h4 class="anchored" data-anchor-id="cohérence-entre-les-deux-explications">2.1.3 Cohérence entre les deux explications</h4>
-<p>Lorsqu’un masque de sous-réseau est égal à <code>255.255.255.0</code>, l’opération de conjonction <code>&amp;</code> avec chaque IP ne laissera intacts que les 3 premiers octets, le dernier sera égal à 0. Donc si deux adresses s’écrivent <code>A.B.C.X</code> et <code>A.B.C.Y</code>, elles appartiendront au même sous-réseau (c’est le cas de <code>192.168.0.33</code> et <code>192.168.0.1</code>).</p>
+<section id="vérification-sur-lexemple-initial" class="level4">
+<h4 class="anchored" data-anchor-id="vérification-sur-lexemple-initial">2.1.3 Vérification sur l’exemple initial</h4>
+<p>Avec un masque <code>255.255.255.0</code>, appliquer le ET bit à bit revient exactement à conserver les 3 premiers octets et forcer le dernier à 0. Les adresses <code>192.168.0.33</code> et <code>192.168.0.1</code> donnent toutes deux <code>192.168.0.0</code> : même sous-réseau. Les adresses <code>192.168.0.1</code> et <code>192.168.1.2</code> donnent <code>192.168.0.0</code> et <code>192.168.1.0</code> : sous-réseaux différents — ce qui confirme les observations de Filius du début.</p>
 </section>
 </section>
 <section id="écriture-des-masques-de-sous-réseau-notation-cidr" class="level3">
@@ -1192,6 +1298,19 @@ window.Quarto = {
 </section>
 <section id="un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur" class="level2">
 <h2 class="anchored" data-anchor-id="un-vrai-réseau-contenant-deux-sous-réseaux-distincts-la-nécessité-dun-routeur">3. Un vrai réseau contenant deux sous-réseaux distincts : la nécessité d’un routeur</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Ce que vous avez déjà chez vous
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La <strong>box</strong> de votre opérateur joue simultanément le rôle de <strong>switch</strong> (elle répartit la connexion entre tous les appareils du foyer : PC, smartphones, TV…) et de <strong>routeur</strong> (elle relie votre sous-réseau domestique à Internet). Sans elle, vos appareils pourraient se parler entre eux, mais ne pourraient pas accéder au Web. C’est exactement le problème que nous allons résoudre ici.</p>
+</div>
+</div>
 <p>Notre solution initiale (relier les deux switchs par un câble pour unifier les deux sous-réseaux) n’est pas viable à l’échelle d’un réseau planétaire.</p>
 <p>Pour que les machines de deux réseaux différents puissent être connectées, on va utiliser un dispositif équipé de <strong>deux cartes réseaux</strong>, situé à cheval entre les deux sous-réseaux. Cet équipement de réseau est appelé <strong>routeur</strong> ou <strong>passerelle</strong>.</p>
 <p><a href="routeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="routeur.png" class="img-fluid"></a></p>
@@ -1225,7 +1344,7 @@ window.Quarto = {
 </ul></li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1234,7 +1353,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><a href="ft2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="ft2.png" class="img-fluid"></a></p>
 <p>Cela ne marche pas. La carte réseau refuse d’envoyer les paquets, car elle ne sait pas où les envoyer.</p>
@@ -1247,7 +1366,7 @@ window.Quarto = {
 Testons à nouveau le ping… Cette fois cela marche.</p>
 <p>Plus intéressant : effectuons un <code>traceroute</code> entre <code>192.168.0.1</code> et <code>192.168.1.2</code>.</p>
 <p><a href="traceroute.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="traceroute.png" class="img-fluid"></a></p>
-<p>On constate que la machine <code>192.168.1.2</code> est atteignable en deux sauts depuis <code>192.168.0.1</code>, en passant par la passerelle <code>192.168.0.254</code></p>
+<p>On constate que la machine <code>192.168.1.2</code> est atteignable en <strong>deux sauts</strong> depuis <code>192.168.0.1</code>. Chaque <strong>saut</strong> correspond au passage par un routeur — ici un seul (<code>192.168.0.254</code>) est traversé. À chaque saut, le routeur décrémente le <strong>TTL</strong> (<em>Time To Live</em>) du paquet ; si cette valeur atteint 0, le paquet est détruit, ce qui évite à des paquets perdus de circuler indéfiniment sur le réseau.</p>
 <p><strong>Cas d’un réseau domestique</strong></p>
 <p>Chez vous, la box de votre opérateur joue simultanément le rôle de switch et de routeur :</p>
 <ul>
@@ -1685,8 +1804,8 @@ Testons à nouveau le ping… Cette fois cela marche.</p>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../23_reseaux/reseaux_exos.html" class="pagination-link" aria-label="TP dans Capytale">
-        <span class="nav-page-text">TP dans Capytale</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../23_reseaux/reseaux_exos.html" class="pagination-link" aria-label="6.1 - Fiche d'exercices : Adresses IP et masques">
+        <span class="nav-page-text">6.1 - Fiche d’exercices : Adresses IP et masques</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1726,219 +1845,112 @@ Testons à nouveau le ping… Cette fois cela marche.</p>
   </div>
 </footer>
 <script>
-
 document.addEventListener("DOMContentLoaded", function () {
-
     var matomoBaseUrl = "https://sitelf.fr/matomo/";
-
     var siteId = "3";
-
     var pageViewsElement = document.getElementById("page-views");
-
-
 
     if (!pageViewsElement) return;
 
-
-
     var isLocal = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
-
     var productionHost = "sitelf.fr";
-
     var hostname = isLocal ? productionHost : window.location.hostname;
-
     var protocol = isLocal ? "https:" : window.location.protocol;
-
     var pathname = window.location.pathname;
-
     var targetUrl = protocol + "//" + hostname + pathname;
 
-
-
     var normalizedPath = pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
-
     var pathParts = normalizedPath.split("/").filter(Boolean);
-
     var isPostPage = pathParts.length >= 2 && pathParts[0] === "posts";
 
-
-
     function displayHits(hits) {
-
         pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + " vues";
-
     }
-
-
 
     function displayUnavailable() {
-
         pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> indisponible';
-
     }
-
-
 
     function cleanupCallback(callbackName) {
-
         delete window[callbackName];
-
         var script = document.getElementById(callbackName);
-
         if (script) script.remove();
-
     }
-
-
 
     function requestJsonp(url, onSuccess, onError) {
-
         var callbackName = "matomoCb_" + Math.floor(Math.random() * 1e9);
-
         window[callbackName] = function (data) {
-
             cleanupCallback(callbackName);
-
             onSuccess(data);
-
         };
-
-
 
         var script = document.createElement("script");
-
         script.id = callbackName;
-
         script.src = url + "&jsoncallback=" + callbackName;
-
         script.onerror = function () {
-
             cleanupCallback(callbackName);
-
             onError();
-
         };
-
         document.body.appendChild(script);
-
     }
-
-
 
     function findHitsByLabel(nodes, label) {
-
         if (!Array.isArray(nodes)) return null;
-
         for (var i = 0; i < nodes.length; i += 1) {
-
             var node = nodes[i];
-
             if (node && node.label === label && typeof node.nb_hits === "number") return node.nb_hits;
-
             var nested = findHitsByLabel(node && node.subtable, label);
-
             if (nested !== null) return nested;
-
         }
-
         return null;
-
     }
-
-
 
     function fallbackExactUrl() {
-
         var fallbackUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl"
-
             + "&idSite=" + siteId
-
             + "&pageUrl=" + encodeURIComponent(targetUrl)
-
             + "&format=JSON"
-
             + "&period=range&date=2018-01-01,today";
 
-
-
         requestJsonp(fallbackUrl, function (data) {
-
             var hits = 0;
-
             if (Array.isArray(data) && data.length && typeof data[0].nb_hits === "number") {
-
                 hits = data[0].nb_hits;
-
             } else if (data && typeof data.nb_hits === "number") {
-
                 hits = data.nb_hits;
-
             }
-
             displayHits(hits);
-
         }, function () {
-
             displayUnavailable();
-
         });
-
     }
-
-
 
     if (!isPostPage) {
-
         fallbackExactUrl();
-
         return;
-
     }
 
-
-
     var slug = pathParts[1];
-
     var segmentPath = "/posts/" + slug;
-
     var groupedUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrls"
-
         + "&idSite=" + siteId
-
         + "&format=JSON"
-
         + "&expanded=1"
-
         + "&period=range&date=2018-01-01,today"
-
         + "&segment=" + encodeURIComponent("pageUrl=@" + segmentPath);
 
-
-
     requestJsonp(groupedUrl, function (data) {
-
         var hits = findHitsByLabel(data, slug);
-
         if (typeof hits === "number") {
-
             displayHits(hits);
-
         } else {
-
             fallbackExactUrl();
-
         }
-
     }, function () {
-
         fallbackExactUrl();
-
     });
-
 });
-
 </script>
-
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

@@ -1,0 +1,152 @@
+---
+title: "6.2 – Protocoles de communication"
+---
+
+## QCM
+
+Pour chacune des questions suivantes, entourer la (ou les) bonne(s) réponse(s).
+
+**1.** Le modèle OSI comporte :
+
+a. 4 couches
+b. 5 couches
+c. **7 couches**
+d. 8 couches
+
+**2.** L'encapsulation désigne :
+
+a. La compression d'un message avant envoi
+b. **L'ajout successif d'en-têtes à chaque couche lors de l'émission d'un message**
+c. Le chiffrement d'un message
+d. La segmentation d'un message en plusieurs paquets
+
+**3.** À la réception d'un message, les couches sont traversées :
+
+a. Dans le même ordre qu'à l'émission
+b. **Dans l'ordre inverse de l'émission**
+c. Dans un ordre aléatoire
+d. Seulement les couches 1 à 3
+
+---
+
+## Questions de cours
+
+**4.** Compléter le tableau récapitulatif du pipeline d'encapsulation :
+
+| Couche (OSI) | Nom de la couche | Protocole(s) | Unité produite |
+|:---:|:---|:---|:---|
+| 7–5 | Application/Présentation/Session | HTTP, FTP, POP… | |
+| 4 | | TCP | |
+| 3 | | | Paquet |
+| 2 | | Ethernet | |
+| 1 | Physique | — | |
+
+**5.** Qu'est-ce qui distingue le rôle des adresses MAC et des adresses IP dans l'acheminement d'un message sur un réseau ?
+
+**6.** À quelle(s) couche(s) du modèle OSI un routeur doit-il remonter pour traiter un paquet ? Justifier.
+
+---
+
+# Protocole ARP et communication dans un sous-réseau
+
+## Mise en situation
+
+On considère le réseau suivant :
+
+- Machine A : IP `10.0.0.1`, MAC `AA:AA:AA:AA:AA:01`
+- Machine B : IP `10.0.0.2`, MAC `BB:BB:BB:BB:BB:02`
+- Machine C : IP `10.0.0.3`, MAC `CC:CC:CC:CC:CC:03`
+
+Les trois machines sont reliées par un switch dont la table SAT est initialement vide.
+
+**7.** La machine A souhaite envoyer un ping à la machine C. Elle ne connaît pas l'adresse MAC de C.
+
+a. Quel protocole va-t-elle utiliser pour obtenir cette information ?
+
+b. Décrire précisément le message qu'elle va envoyer (adresse MAC source, adresse MAC de destination, contenu).
+
+c. Que va faire le switch avec ce message ? Pourquoi ?
+
+**8.** Après l'échange ARP et l'envoi du ping de A vers C, compléter la table SAT du switch :
+
+| Adresse MAC | Port |
+|:---|:---:|
+| | |
+| | |
+
+**9.** La machine B envoie ensuite un message à la machine A. Le switch va-t-il diffuser ce message à tout le réseau ? Justifier.
+
+---
+
+# Ping à travers un routeur
+
+## Analyse de trames
+
+On considère le réseau suivant :
+
+- Sous-réseau A : `192.168.0.0/24`
+  - Machine A1 : IP `192.168.0.1`, MAC `F1:F1:F1:F1:F1:01`
+  - Interface du routeur côté A : IP `192.168.0.254`, MAC `R0:R0:R0:R0:R0:0A`
+- Sous-réseau B : `192.168.1.0/24`
+  - Machine B1 : IP `192.168.1.1`, MAC `E2:E2:E2:E2:E2:01`
+  - Interface du routeur côté B : IP `192.168.1.254`, MAC `R0:R0:R0:R0:R0:0B`
+
+**10.** La machine A1 envoie un ping vers B1. Compléter les deux trames Ethernet successives :
+
+**Trame 1** (de A1 vers le routeur) :
+
+| Champ | Valeur |
+|:---|:---|
+| MAC destination | |
+| MAC source | |
+| IP source | `192.168.0.1` |
+| IP destination | `192.168.1.1` |
+| TTL | 64 |
+
+**Trame 2** (du routeur vers B1) :
+
+| Champ | Valeur |
+|:---|:---|
+| MAC destination | |
+| MAC source | |
+| IP source | `192.168.0.1` |
+| IP destination | `192.168.1.1` |
+| TTL | |
+
+**11.** Pourquoi les adresses IP source et destination ne changent-elles pas entre les deux trames, alors que les adresses MAC changent ?
+
+**12.** À quoi sert le champ TTL (*Time To Live*) ? Que se passe-t-il si sa valeur atteint 0 ?
+
+---
+
+# Protocole du bit alterné
+
+## Questions de cours
+
+**13.** Expliquer en une phrase pourquoi la solution naïve (ACK sans bit de contrôle) peut conduire à des doublons.
+
+**14.** Dans le protocole du bit alterné, quel est le rôle du FLAG côté Alice ? Quel est le rôle du FLAG côté Bob ?
+
+## Exercice de simulation
+
+**15.** Alice envoie les sous-messages M0, M1, M2 à Bob. On suppose que le ACK répondant à M1 est perdu.
+
+Compléter le diagramme de séquence ci-dessous en indiquant pour chaque message : le FLAG envoyé, le ACK reçu ou non, et la décision de Bob (accepter ou rejeter le message).
+
+```
+Alice                        Bob
+  |                           |
+  |--- M0 (FLAG=0) ---------->|  FLAG attendu : 0 / FLAG reçu : 0 → Accept M0
+  |<-- ACK=0 -----------------|
+  |                           |
+  |--- M1 (FLAG=1) ---------->|  FLAG attendu : ___ / FLAG reçu : ___ → ________
+  |<-- ACK=1 ----✗  (perdu)  |
+  |                           |
+  |--- M1 (FLAG=?) ---------->|  FLAG attendu : ___ / FLAG reçu : ___ → ________
+  |<-- ACK=? -----------------|
+  |                           |
+  |--- M2 (FLAG=?) ---------->|  FLAG attendu : ___ / FLAG reçu : ___ → ________
+  |<-- ACK=? -----------------|
+```
+
+**16.** Quelle est la principale limite du protocole du bit alterné ? Quel protocole le remplace dans les usages modernes, et quel avantage apporte-t-il ?

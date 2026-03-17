@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.16">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Cours – NSI - Première</title>
+<title>6.2 - Protocoles de communication – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../14_algo/algo_cours.html" rel="next">
-<link href="../23_reseaux/reseaux_exos.html" rel="prev">
+<link href="../24_protocoles/exercices_protocoles.html" rel="next">
+<link href="../23_reseaux/TP_reseaux.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -42,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a67ac2868200dddf7a4f0e3ae403775c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-82d683e9f830cba069e3fb8cbfbea53b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a67ac2868200dddf7a4f0e3ae403775c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f90cbdadd06a7ce36d2760346202a0fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fbfa2d89a2548311c7c762f4ff972691.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-b783d01425d450f6796a14d76de94524.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-fbfa2d89a2548311c7c762f4ff972691.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-a9abdc8f23f02a1e69185ea0e4a1bf53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -87,10 +87,10 @@ ul.task-list li input[type="checkbox"] {
 document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({
   "notice_banner_type":"simple",
-  "consent_type":"express",
+  "consent_type":"implied",
   "palette":"light",
   "language":"en",
-  "page_load_consent_levels":["strictly-necessary"],
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
@@ -292,6 +292,8 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">NSI - Première</span>
     </a>
@@ -302,7 +304,7 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -334,7 +336,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../24_protocoles/protocoles_cours.html">Cours</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../24_protocoles/protocoles_cours.html">6.2 - Protocoles de communication</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -344,6 +346,10 @@ cookieconsent.run({
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -767,19 +773,31 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../23_reseaux/reseaux_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">6.1 - Adresses IP et masques de sous-réseau</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../23_reseaux/reseaux_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">TP dans Capytale</span></a>
+ <span class="menu-text">6.1 - Fiche d’exercices : Adresses IP et masques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../23_reseaux/TP_reseaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TP Filius</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../24_protocoles/protocoles_cours.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">6.2 - Protocoles de communication</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../24_protocoles/exercices_protocoles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 – Protocoles de communication</span></a>
   </div>
 </li>
       </ul>
@@ -888,7 +906,7 @@ cookieconsent.run({
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#modèle-osi-modèle-internet" id="toc-modèle-osi-modèle-internet" class="nav-link active" data-scroll-target="#modèle-osi-modèle-internet">1. Modèle OSI, modèle Internet</a></li>
+  <li><a href="#modèles-en-couches-et-encapsulation" id="toc-modèles-en-couches-et-encapsulation" class="nav-link active" data-scroll-target="#modèles-en-couches-et-encapsulation">1. Modèles en couches et encapsulation</a></li>
   <li><a href="#observation-des-trames-avec-filius" id="toc-observation-des-trames-avec-filius" class="nav-link" data-scroll-target="#observation-des-trames-avec-filius">2. Observation des trames avec Filius</a>
   <ul class="collapse">
   <li><a href="#ping-à-travers-un-switch" id="toc-ping-à-travers-un-switch" class="nav-link" data-scroll-target="#ping-à-travers-un-switch">2.1. Ping à travers un switch</a></li>
@@ -911,10 +929,9 @@ cookieconsent.run({
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../24_protocoles/protocoles_cours.html">Cours</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../24_protocoles/protocoles_cours.html">6.2 - Protocoles de communication</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Cours</h1>
-<p class="subtitle lead">Protocoles de communication</p>
+<h1 class="title">6.2 - Protocoles de communication</h1>
 </div>
 
 
@@ -931,15 +948,11 @@ cookieconsent.run({
 </header>
 
 
-<section id="modèle-osi-modèle-internet" class="level2">
-<h2 class="anchored" data-anchor-id="modèle-osi-modèle-internet">1. Modèle OSI, modèle Internet</h2>
-<p>Les bits transmis d’un ordinateur à un autre contiennent, en plus des données <em>utiles</em> (le mot «bonjour» dans un email), une multitude de données (tout aussi utiles) qui vont aider à l’acheminement de ces bits au bon endroit, puis au bon ordinateur, puis au bon logiciel. Les différents protocoles qui régissent cette transmission sont regroupés dans ce qui est appelé un <strong>modèle</strong>. Deux modèles synthétisent ces protocoles :</p>
-<ul>
-<li>le <strong>modèle Internet</strong> (ou modèle <strong>TCP/IP</strong>, 1974), organisé en <strong>4</strong> couches : liaison, réseau, transport, application.</li>
-<li>le <strong>modèle OSI</strong> (Open Systems Interconnection, 1984), organisé en <strong>7</strong> couches : physique, liaison, réseau, transport, session, présentation,application.</li>
-</ul>
-<p>Ces deux modèles coïncident suivant le schéma ci-dessus. Ce sont des modèles théoriques. Leur utilisation dans la pratique est parfois plus floue, avec des protocoles à cheval sur plusieurs couches.</p>
-<p>Dans la suite de ce cours, nous évoquerons les couches par leur numéro dans le modèle OSI.</p>
+<section id="modèles-en-couches-et-encapsulation" class="level2">
+<h2 class="anchored" data-anchor-id="modèles-en-couches-et-encapsulation">1. Modèles en couches et encapsulation</h2>
+<p>Lorsqu’un message est envoyé d’un ordinateur à un autre, des informations sont <strong>ajoutées successivement</strong> à ce message à chaque étape, pour permettre son acheminement vers le bon réseau, le bon ordinateur, puis le bon logiciel. Ce mécanisme s’appelle l’<strong>encapsulation</strong>.</p>
+<p>Les protocoles qui interviennent à chaque étape sont organisés en <strong>couches</strong>. Le modèle de référence pratique est le <strong>modèle Internet</strong> (ou modèle <strong>TCP/IP</strong>, 1974), organisé en <strong>4</strong> couches : liaison, réseau, transport, application. Le <strong>modèle OSI</strong> (1984) en distingue <strong>7</strong>, avec une granularité plus fine — c’est le modèle théorique normalisé.</p>
+<p>Ces deux modèles s’articulent suivant la correspondance ci-dessous. Dans la suite du cours, nous utiliserons la numérotation OSI.</p>
 <p><a href="OSI.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="OSI.png" class="img-fluid"></a></p>
 <p>Lors de son émission, un message va subir successivement toutes les transformations effectuées par chaque couche, depuis sa création (couche 7) jusqu’à sa transmission physique (couche 1).</p>
 <p>Lorsque ce même message sera réceptionné, les transformations seront effectuées dans l’ordre inverse, jusqu’à la présentation du message au destinataire.</p>
@@ -962,13 +975,83 @@ Les éléments échangés avec la couche inférieure sont des <strong>trames</st
 <li><p><strong>couche 1 — couche physique :</strong><br>
 C’est la couche où le message est transmis physiquement d’un point à un autre. Par signal lumineux (fibre optique), par ondes (wifi), par courant électrique (Ethernet)… Les éléments transmis sont les <strong>bits</strong>.</p></li>
 </ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Résumé : pipeline d’encapsulation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>À l’<strong>émission</strong>, chaque couche ajoute une en-tête au message reçu de la couche supérieure :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Couche</th>
+<th>Protocole</th>
+<th>Action</th>
+<th>Unité produite</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Application</td>
+<td>HTTP, FTP…</td>
+<td>Crée le message</td>
+<td>Données</td>
+</tr>
+<tr class="even">
+<td>Transport</td>
+<td>TCP</td>
+<td>Ajoute n° segment, ports</td>
+<td><strong>Segment</strong></td>
+</tr>
+<tr class="odd">
+<td>Réseau</td>
+<td>IP</td>
+<td>Ajoute adresses IP source/dest</td>
+<td><strong>Paquet</strong></td>
+</tr>
+<tr class="even">
+<td>Liaison</td>
+<td>Ethernet</td>
+<td>Ajoute adresses MAC source/dest</td>
+<td><strong>Trame</strong></td>
+</tr>
+<tr class="odd">
+<td>Physique</td>
+<td>—</td>
+<td>Encode en signal</td>
+<td><strong>Bits</strong></td>
+</tr>
+</tbody>
+</table>
+<p>À la <strong>réception</strong>, les couches sont traversées en sens inverse : chaque en-tête est lue puis retirée (<strong>décapsulation</strong>).</p>
+</div>
+</div>
 <p>Lors de son parcours, une trame peut être partiellement décapsulée et remonter à la couche 3, avant de redescendre et de continuer son chemin. C’est le cas notamment lors du passage dans un routeur. Mais jamais, lors de son acheminement, le contenu réel du message n’est ouvert : les paquets transmis sont acheminés de manière identique, qu’ils contiennent les éléments constitutifs d’une vidéo YouTube ou d’un email à votre cousin.</p>
 </section>
 <section id="observation-des-trames-avec-filius" class="level2">
 <h2 class="anchored" data-anchor-id="observation-des-trames-avec-filius">2. Observation des trames avec Filius</h2>
 <section id="ping-à-travers-un-switch" class="level3">
 <h3 class="anchored" data-anchor-id="ping-à-travers-un-switch">2.1. Ping à travers un switch</h3>
-<p>Vous pouvez télécharger le fichier <a href="ping_switch.fls">ping_switch.fls</a>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Problème préalable : pourquoi l’adresse IP ne suffit pas dans un sous-réseau ?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le switch (couche 2) <strong>ne lit pas les adresses IP</strong> : il ne travaille qu’avec les adresses <strong>MAC</strong>. Pourtant, lorsqu’on lance un <code>ping</code> vers <code>192.168.0.11</code>, on connaît l’IP de destination — mais pas son adresse MAC.</p>
+<p><strong>Question :</strong> comment la machine émettrice va-t-elle obtenir l’adresse MAC de sa cible avant d’envoyer quoi que ce soit ?</p>
+<p>C’est le problème que résout le protocole <strong>ARP</strong> (<em>Address Resolution Protocol</em>), que nous allons observer ci-dessous.</p>
+</div>
+</div>
 <ul>
 <li>Relions une machine <code>192.168.0.10</code> d’adresse MAC <code>BC:81:81:42:9C:31</code> à une machine <code>192.168.0.11</code> d’adresse MAC <code>2A:AB:AC:27:D6:A7</code> à travers un switch.</li>
 </ul>
@@ -1010,7 +1093,6 @@ C’est la couche où le message est transmis physiquement d’un point à un au
 </section>
 <section id="ping-à-travers-un-routeur" class="level3">
 <h3 class="anchored" data-anchor-id="ping-à-travers-un-routeur">2.2. Ping à travers un routeur</h3>
-<p>Vous pouvez télécharger le fichier <a href="ping_routeur.fls">ping_routeur.fls</a>.</p>
 <p><a href="schema_routeur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="schema_routeur.png" class="img-fluid"></a></p>
 <p>L’objectif est d’observer les différentes trames lors d’un ping entre :</p>
 <ul>
@@ -1042,20 +1124,6 @@ C’est la couche où le message est transmis physiquement d’un point à un au
 <p>Le routeur est un équipement de réseau de couche 3 (couche réseau). Il doit observer le contenu du paquet IP (sans remonter jusqu’au contenu du message) pour savoir, suivant le procédé de <strong>routage</strong> (voir cours de Terminale), où acheminer ce paquet.</p>
 <p>Dans notre cas, l’adresse IP <code>192.168.1.1</code>de destination lui est accessible : elle fait partie de son sous-réseau B.</p>
 <p>Le routeur va modifier la valeur du TTL (Time To Live), en la décrémentant de 1. Si, après de multiples routages, cette valeur devenait égale à 0, ce paquet serait détruit. Ceci a pour but d’éviter l’encombrement des réseaux avec des paquets ne trouvant pas leur destination.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Astuce</span>NAT : translation d’adresse
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Dans notre cas, le routeur va laisser intacte l’adresse IP Source. Ce n’est pas toujours le cas. Dans le cas classique de la box qui relie votre domicile à internet, le routeur contenu dans celle-ci va remplacer l’adresse locale de votre ordinateur ou smartphone (ex <code>192.168.0.26</code>) par son IP publique (celle apparaissant sur <a href="http://whatsmyip.com">whatsmyip.com</a>, par exemple). Elle effectue ce qu’on appelle une translation d’adresse (NAT).</p>
-<p>Pourquoi ? Parce que sinon la réponse du serveur distant que vous interrogez serait envoyée sur une adresse locale (votre adresse <code>192.168.0.26</code>), qui est introuvable depuis un réseau extérieur. Il faut donc remplacer toutes les adresses locales par l’IP publique de votre box. Pour éviter que la réponse du serveur web que vous avez interrogé ne soit affichée sur l’ordinateur de vos parents, le routeur affecte des ports différents à chaque machine de son sous-réseau. Ce port est inclus dans le message transmis au serveur, et il l’est aussi dans sa réponse : le routeur peut donc rediriger le trafic vers la bonne machine du sous-réseau.</p>
-</div>
-</div>
 <p>Le routeur va ré-encapsuler le paquet IP modifié, et créer une nouvelle trame Ethernet en modifiant :</p>
 <ul>
 <li>l’adresse MAC source : il va mettre l’adresse MAC de son interface dans le sous-réseau B.</li>
@@ -1125,12 +1193,12 @@ C’est la couche où le message est transmis physiquement d’un point à un au
 <section id="cas-où-un-sous-message-est-en-retard" class="level5">
 <h5 class="anchored" data-anchor-id="cas-où-un-sous-message-est-en-retard">5.3 Cas où un sous-message est en retard</h5>
 <p><a href="alt3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="alt3.png" class="img-fluid"></a></p>
-<p>Le protocole a bien détecté le doublon du sous-message M1… mais que se passerait-il si notre premier sous-message M1 était <em>encore plus</em> en retard ?</p>
+<p>Le protocole a bien détecté le doublon du sous-message M1. Cependant, si le retard du premier M1 était supérieur à la cadence d’envoi d’Alice, il pourrait être confondu avec le M1 d’une prochaine itération. C’est une <strong>limite</strong> de ce protocole : il suppose que les délais de transmission restent bornés.</p>
 </section>
 </section>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">6. Conclusion</h3>
-<p>Le protocole du bit alterné a longtemps été utilisé au sein de la couche 2 du modèle OSI (distribution des trames Ethernet). Simple et léger, il peut toutefois être facilement mis en défaut, ce qui explique qu’il ait été remplacé par des protocoles plus performants.</p>
+<p>Le protocole du bit alterné a longtemps été utilisé au sein de la couche 2 du modèle OSI (distribution des trames Ethernet). Simple et léger, il peut être mis en défaut lorsque les délais de transmission sont trop variables. C’est le protocole <strong>TCP</strong> (couche transport) qui le remplace dans les usages modernes : en <strong>numérotant chaque segment</strong>, il gère les pertes, les doublons et les retards de manière bien plus robuste — au prix d’une charge réseau plus importante.</p>
 
 
 </section>
@@ -1554,13 +1622,13 @@ C’est la couche où le message est transmis physiquement d’un point à un au
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../23_reseaux/reseaux_exos.html" class="pagination-link" aria-label="TP dans Capytale">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP dans Capytale</span>
+      <a href="../23_reseaux/TP_reseaux.html" class="pagination-link" aria-label="TP Filius">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">TP Filius</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../14_algo/algo_cours.html" class="pagination-link" aria-label="Cours">
-        <span class="nav-page-text">Cours</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../24_protocoles/exercices_protocoles.html" class="pagination-link" aria-label="6.2 – Protocoles de communication">
+        <span class="nav-page-text">6.2 – Protocoles de communication</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1600,219 +1668,112 @@ C’est la couche où le message est transmis physiquement d’un point à un au
   </div>
 </footer>
 <script>
-
 document.addEventListener("DOMContentLoaded", function () {
-
     var matomoBaseUrl = "https://sitelf.fr/matomo/";
-
     var siteId = "3";
-
     var pageViewsElement = document.getElementById("page-views");
-
-
 
     if (!pageViewsElement) return;
 
-
-
     var isLocal = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
-
     var productionHost = "sitelf.fr";
-
     var hostname = isLocal ? productionHost : window.location.hostname;
-
     var protocol = isLocal ? "https:" : window.location.protocol;
-
     var pathname = window.location.pathname;
-
     var targetUrl = protocol + "//" + hostname + pathname;
 
-
-
     var normalizedPath = pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
-
     var pathParts = normalizedPath.split("/").filter(Boolean);
-
     var isPostPage = pathParts.length >= 2 && pathParts[0] === "posts";
 
-
-
     function displayHits(hits) {
-
         pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + " vues";
-
     }
-
-
 
     function displayUnavailable() {
-
         pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> indisponible';
-
     }
-
-
 
     function cleanupCallback(callbackName) {
-
         delete window[callbackName];
-
         var script = document.getElementById(callbackName);
-
         if (script) script.remove();
-
     }
-
-
 
     function requestJsonp(url, onSuccess, onError) {
-
         var callbackName = "matomoCb_" + Math.floor(Math.random() * 1e9);
-
         window[callbackName] = function (data) {
-
             cleanupCallback(callbackName);
-
             onSuccess(data);
-
         };
-
-
 
         var script = document.createElement("script");
-
         script.id = callbackName;
-
         script.src = url + "&jsoncallback=" + callbackName;
-
         script.onerror = function () {
-
             cleanupCallback(callbackName);
-
             onError();
-
         };
-
         document.body.appendChild(script);
-
     }
-
-
 
     function findHitsByLabel(nodes, label) {
-
         if (!Array.isArray(nodes)) return null;
-
         for (var i = 0; i < nodes.length; i += 1) {
-
             var node = nodes[i];
-
             if (node && node.label === label && typeof node.nb_hits === "number") return node.nb_hits;
-
             var nested = findHitsByLabel(node && node.subtable, label);
-
             if (nested !== null) return nested;
-
         }
-
         return null;
-
     }
-
-
 
     function fallbackExactUrl() {
-
         var fallbackUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl"
-
             + "&idSite=" + siteId
-
             + "&pageUrl=" + encodeURIComponent(targetUrl)
-
             + "&format=JSON"
-
             + "&period=range&date=2018-01-01,today";
 
-
-
         requestJsonp(fallbackUrl, function (data) {
-
             var hits = 0;
-
             if (Array.isArray(data) && data.length && typeof data[0].nb_hits === "number") {
-
                 hits = data[0].nb_hits;
-
             } else if (data && typeof data.nb_hits === "number") {
-
                 hits = data.nb_hits;
-
             }
-
             displayHits(hits);
-
         }, function () {
-
             displayUnavailable();
-
         });
-
     }
-
-
 
     if (!isPostPage) {
-
         fallbackExactUrl();
-
         return;
-
     }
 
-
-
     var slug = pathParts[1];
-
     var segmentPath = "/posts/" + slug;
-
     var groupedUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrls"
-
         + "&idSite=" + siteId
-
         + "&format=JSON"
-
         + "&expanded=1"
-
         + "&period=range&date=2018-01-01,today"
-
         + "&segment=" + encodeURIComponent("pageUrl=@" + segmentPath);
 
-
-
     requestJsonp(groupedUrl, function (data) {
-
         var hits = findHitsByLabel(data, slug);
-
         if (typeof hits === "number") {
-
             displayHits(hits);
-
         } else {
-
             fallbackExactUrl();
-
         }
-
     }, function () {
-
         fallbackExactUrl();
-
     });
-
 });
-
 </script>
-
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

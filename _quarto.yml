@@ -100,7 +100,9 @@ website:
         contents: 
           - 23_reseaux/reseaux_cours.qmd
           - 23_reseaux/reseaux_exos.qmd
+          - 23_reseaux/TP_reseaux.qmd
           - 24_protocoles/protocoles_cours.qmd
+          - 24_protocoles/exercices_protocoles.qmd
       - section: "Ch. 7 - Algorithmes"
         contents: 
           - 14_algo/algo_cours.qmd

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.16">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TP dans Capytale – NSI - Première</title>
+<title>6.1 - Fiche d’exercices : Adresses IP et masques – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../24_protocoles/protocoles_cours.html" rel="next">
+<link href="../23_reseaux/TP_reseaux.html" rel="next">
 <link href="../23_reseaux/reseaux_cours.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
@@ -42,14 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a67ac2868200dddf7a4f0e3ae403775c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-82d683e9f830cba069e3fb8cbfbea53b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a67ac2868200dddf7a4f0e3ae403775c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f90cbdadd06a7ce36d2760346202a0fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fbfa2d89a2548311c7c762f4ff972691.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-b783d01425d450f6796a14d76de94524.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-fbfa2d89a2548311c7c762f4ff972691.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-a9abdc8f23f02a1e69185ea0e4a1bf53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -84,10 +84,10 @@ ul.task-list li input[type="checkbox"] {
 document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({
   "notice_banner_type":"simple",
-  "consent_type":"express",
+  "consent_type":"implied",
   "palette":"light",
   "language":"en",
-  "page_load_consent_levels":["strictly-necessary"],
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
@@ -289,6 +289,8 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">NSI - Première</span>
     </a>
@@ -299,7 +301,7 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -331,7 +333,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_exos.html">TP dans Capytale</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_exos.html">6.1 - Fiche d’exercices : Adresses IP et masques</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -341,6 +343,10 @@ cookieconsent.run({
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -764,19 +770,31 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../23_reseaux/reseaux_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">6.1 - Adresses IP et masques de sous-réseau</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../23_reseaux/reseaux_exos.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">TP dans Capytale</span></a>
+ <span class="menu-text">6.1 - Fiche d’exercices : Adresses IP et masques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../23_reseaux/TP_reseaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TP Filius</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../24_protocoles/protocoles_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">6.2 - Protocoles de communication</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../24_protocoles/exercices_protocoles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.2 – Protocoles de communication</span></a>
   </div>
 </li>
       </ul>
@@ -880,16 +898,26 @@ cookieconsent.run({
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#exercice-1---même-sous-réseau-ou-non" id="toc-exercice-1---même-sous-réseau-ou-non" class="nav-link active" data-scroll-target="#exercice-1---même-sous-réseau-ou-non">✏️ Exercice 1 - Même sous-réseau ou non ?</a></li>
+  <li><a href="#exercice-2---et-bit-à-bit" id="toc-exercice-2---et-bit-à-bit" class="nav-link" data-scroll-target="#exercice-2---et-bit-à-bit">✏️ Exercice 2 - ET bit à bit</a></li>
+  <li><a href="#exercice-3---masques-et-notation-cidr" id="toc-exercice-3---masques-et-notation-cidr" class="nav-link" data-scroll-target="#exercice-3---masques-et-notation-cidr">✏️ Exercice 3 - Masques et notation CIDR</a></li>
+  <li><a href="#exercice-4---diagnostic-dun-problème-de-communication" id="toc-exercice-4---diagnostic-dun-problème-de-communication" class="nav-link" data-scroll-target="#exercice-4---diagnostic-dun-problème-de-communication">✏️ Exercice 4 - Diagnostic d’un problème de communication</a></li>
+  <li><a href="#exercice-5" id="toc-exercice-5" class="nav-link" data-scroll-target="#exercice-5">✏️ Exercice 5</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_exos.html">TP dans Capytale</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_exos.html">6.1 - Fiche d’exercices : Adresses IP et masques</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">TP dans Capytale</h1>
+<h1 class="title">6.1 - Fiche d’exercices : Adresses IP et masques</h1>
 </div>
 
 
@@ -906,9 +934,149 @@ cookieconsent.run({
 </header>
 
 
-<p>Cliquer sur le lien suivant pour accéder au TP dans Capytale : <a href="https://capytale2.ac-paris.fr/web/c/aa58-1299451">Accès au TP</a></p>
+<section id="exercice-1---même-sous-réseau-ou-non" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1---même-sous-réseau-ou-non">✏️ Exercice 1 - Même sous-réseau ou non ?</h2>
+<p>On considère le masque <code>255.255.255.0</code>.</p>
+<p>Pour chaque paire, indiquer si les machines sont dans le même sous-réseau. Justifier avec le calcul de <code>IP &amp; M</code>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Paire</th>
+<th>Machine A</th>
+<th>Machine B</th>
+<th>Même sous-réseau ?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>192.168.0.12</td>
+<td>192.168.0.201</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>192.168.1.5</td>
+<td>192.168.2.5</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>10.0.4.2</td>
+<td>10.0.4.254</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>172.16.3.10</td>
+<td>172.16.4.10</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exercice-2---et-bit-à-bit" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2---et-bit-à-bit">✏️ Exercice 2 - ET bit à bit</h2>
+<ol type="1">
+<li>Calculer en binaire puis en décimal :</li>
+</ol>
+<ul>
+<li><code>173 &amp; 240</code></li>
+<li><code>77 &amp; 252</code></li>
+<li><code>201 &amp; 248</code></li>
+</ul>
+<ol start="2" type="1">
+<li>En déduire la valeur de l’octet réseau obtenu dans chaque cas.</li>
+</ol>
+</section>
+<section id="exercice-3---masques-et-notation-cidr" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3---masques-et-notation-cidr">✏️ Exercice 3 - Masques et notation CIDR</h2>
+<p>Compléter le tableau :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Écriture CIDR</th>
+<th>Masque décimal</th>
+<th>Nombre total d’adresses du sous-réseau</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>/8</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>/16</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>/24</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>/25</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>/27</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>/30</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Puis répondre :</p>
+<ol type="1">
+<li>Quelle notation CIDR correspond au masque <code>255.255.248.0</code> ?</li>
+<li>Quelle notation CIDR correspond au masque <code>255.255.252.0</code> ?</li>
+</ol>
+</section>
+<section id="exercice-4---diagnostic-dun-problème-de-communication" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-4---diagnostic-dun-problème-de-communication">✏️ Exercice 4 - Diagnostic d’un problème de communication</h2>
+<p>On dispose du réseau suivant :</p>
+<ul>
+<li>PC1 : <code>192.168.10.20 /24</code>, passerelle <code>192.168.10.254</code></li>
+<li>PC2 : <code>192.168.20.30 /24</code>, passerelle <code>192.168.20.254</code></li>
+<li>Routeur interface A : <code>192.168.10.254 /24</code></li>
+<li>Routeur interface B : <code>192.168.20.254 /24</code></li>
+</ul>
+<ol type="1">
+<li>PC1 peut-il joindre PC2 sans routeur ? Expliquer.</li>
+<li>Si la passerelle de PC1 est erronée et vaut <code>192.168.10.1</code>, que se passe-t-il ?</li>
+<li>Quelle commande permet de visualiser les sauts entre PC1 et PC2 ?</li>
+<li>Combien de sauts attend-on dans cette topologie ?</li>
+</ol>
+</section>
+<section id="exercice-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-5">✏️ Exercice 5</h2>
+<p>On donne les machines suivantes, toutes avec le masque <code>255.255.252.0</code> :</p>
+<ul>
+<li>M1 : <code>172.16.8.10</code></li>
+<li>M2 : <code>172.16.9.200</code></li>
+<li>M3 : <code>172.16.10.7</code></li>
+<li>M4 : <code>172.16.12.4</code></li>
+</ul>
+<ol type="1">
+<li>Calculer <code>IP &amp; M</code> pour chaque machine.</li>
+<li>Regrouper les machines appartenant au même sous-réseau.</li>
+<li>Proposer une adresse de passerelle valide pour chaque sous-réseau trouvé.</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1328,13 +1496,13 @@ cookieconsent.run({
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../23_reseaux/reseaux_cours.html" class="pagination-link" aria-label="Cours">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Cours</span>
+      <a href="../23_reseaux/reseaux_cours.html" class="pagination-link" aria-label="6.1 - Adresses IP et masques de sous-réseau">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">6.1 - Adresses IP et masques de sous-réseau</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../24_protocoles/protocoles_cours.html" class="pagination-link" aria-label="Cours">
-        <span class="nav-page-text">Cours</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../23_reseaux/TP_reseaux.html" class="pagination-link" aria-label="TP Filius">
+        <span class="nav-page-text">TP Filius</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1355,7 +1523,7 @@ cookieconsent.run({
     </div>   
     <div class="nav-footer-center">
 
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1374,219 +1542,112 @@ cookieconsent.run({
   </div>
 </footer>
 <script>
-
 document.addEventListener("DOMContentLoaded", function () {
-
     var matomoBaseUrl = "https://sitelf.fr/matomo/";
-
     var siteId = "3";
-
     var pageViewsElement = document.getElementById("page-views");
-
-
 
     if (!pageViewsElement) return;
 
-
-
     var isLocal = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
-
     var productionHost = "sitelf.fr";
-
     var hostname = isLocal ? productionHost : window.location.hostname;
-
     var protocol = isLocal ? "https:" : window.location.protocol;
-
     var pathname = window.location.pathname;
-
     var targetUrl = protocol + "//" + hostname + pathname;
 
-
-
     var normalizedPath = pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
-
     var pathParts = normalizedPath.split("/").filter(Boolean);
-
     var isPostPage = pathParts.length >= 2 && pathParts[0] === "posts";
 
-
-
     function displayHits(hits) {
-
         pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + " vues";
-
     }
-
-
 
     function displayUnavailable() {
-
         pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> indisponible';
-
     }
-
-
 
     function cleanupCallback(callbackName) {
-
         delete window[callbackName];
-
         var script = document.getElementById(callbackName);
-
         if (script) script.remove();
-
     }
-
-
 
     function requestJsonp(url, onSuccess, onError) {
-
         var callbackName = "matomoCb_" + Math.floor(Math.random() * 1e9);
-
         window[callbackName] = function (data) {
-
             cleanupCallback(callbackName);
-
             onSuccess(data);
-
         };
-
-
 
         var script = document.createElement("script");
-
         script.id = callbackName;
-
         script.src = url + "&jsoncallback=" + callbackName;
-
         script.onerror = function () {
-
             cleanupCallback(callbackName);
-
             onError();
-
         };
-
         document.body.appendChild(script);
-
     }
-
-
 
     function findHitsByLabel(nodes, label) {
-
         if (!Array.isArray(nodes)) return null;
-
         for (var i = 0; i < nodes.length; i += 1) {
-
             var node = nodes[i];
-
             if (node && node.label === label && typeof node.nb_hits === "number") return node.nb_hits;
-
             var nested = findHitsByLabel(node && node.subtable, label);
-
             if (nested !== null) return nested;
-
         }
-
         return null;
-
     }
-
-
 
     function fallbackExactUrl() {
-
         var fallbackUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl"
-
             + "&idSite=" + siteId
-
             + "&pageUrl=" + encodeURIComponent(targetUrl)
-
             + "&format=JSON"
-
             + "&period=range&date=2018-01-01,today";
 
-
-
         requestJsonp(fallbackUrl, function (data) {
-
             var hits = 0;
-
             if (Array.isArray(data) && data.length && typeof data[0].nb_hits === "number") {
-
                 hits = data[0].nb_hits;
-
             } else if (data && typeof data.nb_hits === "number") {
-
                 hits = data.nb_hits;
-
             }
-
             displayHits(hits);
-
         }, function () {
-
             displayUnavailable();
-
         });
-
     }
-
-
 
     if (!isPostPage) {
-
         fallbackExactUrl();
-
         return;
-
     }
 
-
-
     var slug = pathParts[1];
-
     var segmentPath = "/posts/" + slug;
-
     var groupedUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrls"
-
         + "&idSite=" + siteId
-
         + "&format=JSON"
-
         + "&expanded=1"
-
         + "&period=range&date=2018-01-01,today"
-
         + "&segment=" + encodeURIComponent("pageUrl=@" + segmentPath);
 
-
-
     requestJsonp(groupedUrl, function (data) {
-
         var hits = findHitsByLabel(data, slug);
-
         if (typeof hits === "number") {
-
             displayHits(hits);
-
         } else {
-
             fallbackExactUrl();
-
         }
-
     }, function () {
-
         fallbackExactUrl();
-
     });
-
 });
-
 </script>
-
 
 
 

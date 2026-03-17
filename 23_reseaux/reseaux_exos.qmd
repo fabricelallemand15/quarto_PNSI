@@ -1,5 +1,72 @@
 ---
-title: TP dans Capytale
+title: "6.1 - Fiche d'exercices : Adresses IP et masques"
 ---
 
-Cliquer sur le lien suivant pour accéder au TP dans Capytale : [Accès au TP](https://capytale2.ac-paris.fr/web/c/aa58-1299451)
+## ✏️ Exercice 1 - Même sous-réseau ou non ?
+
+On considère le masque `255.255.255.0`.
+
+Pour chaque paire, indiquer si les machines sont dans le même sous-réseau. Justifier avec le calcul de `IP & M`.
+
+| Paire | Machine A | Machine B | Même sous-réseau ? |
+|---|---|---|---|
+| 1 | 192.168.0.12 | 192.168.0.201 | |
+| 2 | 192.168.1.5 | 192.168.2.5 | |
+| 3 | 10.0.4.2 | 10.0.4.254 | |
+| 4 | 172.16.3.10 | 172.16.4.10 | |
+
+## ✏️ Exercice 2 - ET bit à bit
+
+1. Calculer en binaire puis en décimal :
+
+- `173 & 240`
+- `77 & 252`
+- `201 & 248`
+
+2. En déduire la valeur de l'octet réseau obtenu dans chaque cas.
+
+## ✏️ Exercice 3 - Masques et notation CIDR
+
+Compléter le tableau :
+
+| Écriture CIDR | Masque décimal | Nombre total d'adresses du sous-réseau |
+|---|---|---|
+| /8  |  |  |
+| /16 |  |  |
+| /24 |  |  |
+| /25 |  |  |
+| /27 |  |  |
+| /30 |  |  |
+
+Puis répondre :
+
+1. Quelle notation CIDR correspond au masque `255.255.248.0` ?
+2. Quelle notation CIDR correspond au masque `255.255.252.0` ?
+
+## ✏️ Exercice 4 - Diagnostic d'un problème de communication
+
+On dispose du réseau suivant :
+
+- PC1 : `192.168.10.20 /24`, passerelle `192.168.10.254`
+- PC2 : `192.168.20.30 /24`, passerelle `192.168.20.254`
+- Routeur interface A : `192.168.10.254 /24`
+- Routeur interface B : `192.168.20.254 /24`
+
+1. PC1 peut-il joindre PC2 sans routeur ? Expliquer.
+2. Si la passerelle de PC1 est erronée et vaut `192.168.10.1`, que se passe-t-il ?
+3. Quelle commande permet de visualiser les sauts entre PC1 et PC2 ?
+4. Combien de sauts attend-on dans cette topologie ?
+
+## ✏️ Exercice 5
+
+On donne les machines suivantes, toutes avec le masque `255.255.252.0` :
+
+- M1 : `172.16.8.10`
+- M2 : `172.16.9.200`
+- M3 : `172.16.10.7`
+- M4 : `172.16.12.4`
+
+1. Calculer `IP & M` pour chaque machine.
+2. Regrouper les machines appartenant au même sous-réseau.
+3. Proposer une adresse de passerelle valide pour chaque sous-réseau trouvé.
+

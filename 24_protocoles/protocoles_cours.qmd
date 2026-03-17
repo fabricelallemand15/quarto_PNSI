@@ -1,30 +1,20 @@
 ---
-title: "Cours"
-subtitle: "Protocoles de communication"
-lang: fr
-execute: 
-  cache: true
+title: "6.2 - Protocoles de communication"
 ---
 
-## 1. Modèle OSI, modèle Internet
+## 1. Modèles en couches et encapsulation
 
-Les bits transmis d'un ordinateur à un autre contiennent, en plus des données _utiles_ (le mot «bonjour» dans un email), une multitude de données (tout aussi utiles) qui vont aider à l'acheminement de ces bits au bon endroit, puis au bon ordinateur, puis au bon logiciel. 
-Les différents protocoles qui régissent cette transmission sont regroupés dans ce qui est appelé un **modèle**. Deux modèles synthétisent ces protocoles :
+Lorsqu'un message est envoyé d'un ordinateur à un autre, des informations sont **ajoutées successivement** à ce message à chaque étape, pour permettre son acheminement vers le bon réseau, le bon ordinateur, puis le bon logiciel. Ce mécanisme s'appelle l'**encapsulation**.
 
-- le **modèle Internet** (ou modèle **TCP/IP**, 1974), organisé en **4** couches : liaison, réseau, transport, application.
-- le **modèle OSI** (Open Systems Interconnection, 1984), organisé en **7** couches : physique, liaison, réseau, transport, session, présentation,application.
+Les protocoles qui interviennent à chaque étape sont organisés en **couches**. Le modèle de référence pratique est le **modèle Internet** (ou modèle **TCP/IP**, 1974), organisé en **4** couches : liaison, réseau, transport, application. Le **modèle OSI** (1984) en distingue **7**, avec une granularité plus fine — c'est le modèle théorique normalisé.
 
-Ces deux modèles coïncident suivant le schéma ci-dessus. Ce sont des modèles théoriques. Leur utilisation dans la pratique est parfois plus floue, avec des protocoles à cheval sur plusieurs couches.  
-
-Dans la suite de ce cours, nous évoquerons les couches par leur numéro dans le modèle OSI.
+Ces deux modèles s'articulent suivant la correspondance ci-dessous. Dans la suite du cours, nous utiliserons la numérotation OSI.
 
 ![](OSI.png)
 
 Lors de son émission, un message va subir successivement toutes les transformations effectuées par chaque couche, depuis sa création (couche 7) jusqu'à sa transmission physique (couche 1).  
 
 Lorsque ce même message sera réceptionné, les transformations seront effectuées dans l'ordre inverse, jusqu'à la présentation du message au destinataire.
-
-
 
 ![](memeOSI.jpeg)
 
@@ -53,6 +43,22 @@ Les éléments échangés avec la couche inférieure sont des **trames**.
 - **couche 1 — couche physique :**  
 C'est la couche où le message est transmis physiquement d'un point à un autre. Par signal lumineux (fibre optique), par ondes (wifi), par courant électrique (Ethernet)... Les éléments transmis sont les **bits**. 
 
+::: {.callout-important}
+## Résumé : pipeline d'encapsulation
+
+À l'**émission**, chaque couche ajoute une en-tête au message reçu de la couche supérieure :
+
+| Couche | Protocole | Action | Unité produite |
+|--------|-----------|--------|----------------|
+| Application | HTTP, FTP... | Crée le message | Données |
+| Transport | TCP | Ajoute n° segment, ports | **Segment** |
+| Réseau | IP | Ajoute adresses IP source/dest | **Paquet** |
+| Liaison | Ethernet | Ajoute adresses MAC source/dest | **Trame** |
+| Physique | — | Encode en signal | **Bits** |
+
+À la **réception**, les couches sont traversées en sens inverse : chaque en-tête est lue puis retirée (**décapsulation**).
+:::
+
  
 
 
@@ -61,7 +67,16 @@ Lors de son parcours, une trame peut être partiellement décapsulée et remonte
 ## 2. Observation des trames avec Filius
 
 ### 2.1. Ping à travers un switch
-Vous pouvez télécharger le fichier [ping_switch.fls](ping_switch.fls).
+
+::: {.callout-note}
+## Problème préalable : pourquoi l'adresse IP ne suffit pas dans un sous-réseau ?
+
+Le switch (couche 2) **ne lit pas les adresses IP** : il ne travaille qu'avec les adresses **MAC**. Pourtant, lorsqu'on lance un `ping` vers `192.168.0.11`, on connaît l'IP de destination — mais pas son adresse MAC.
+
+**Question :** comment la machine émettrice va-t-elle obtenir l'adresse MAC de sa cible avant d'envoyer quoi que ce soit ?
+
+C'est le problème que résout le protocole **ARP** (_Address Resolution Protocol_), que nous allons observer ci-dessous.
+:::
 
 - Relions une machine ```192.168.0.10``` d'adresse MAC ```BC:81:81:42:9C:31```  à une machine ```192.168.0.11``` d'adresse MAC ```2A:AB:AC:27:D6:A7``` à travers un switch.  
  
@@ -130,8 +145,6 @@ Schématisons cette trame Ethernet (couche 2 du modèle OSI) :
 
 ### 2.2. Ping à travers un routeur
 
-Vous pouvez télécharger le fichier [ping_routeur.fls](ping_routeur.fls).
-
 ![](schema_routeur.png) 
 
 L'objectif est d'observer les différentes trames lors d'un ping entre :
@@ -177,15 +190,6 @@ Le routeur est un équipement de réseau de couche 3 (couche réseau). Il doit o
 Dans notre cas, l'adresse IP ```192.168.1.1```de destination lui est accessible : elle fait partie de son sous-réseau B.
 
 Le routeur va modifier la valeur du TTL (Time To Live), en la décrémentant de 1. Si, après de multiples routages, cette valeur devenait égale à 0, ce paquet serait détruit. Ceci a pour but d'éviter l'encombrement des réseaux avec des paquets ne trouvant pas leur destination.
-
-::: {.callout-tip}
-## NAT : translation d'adresse
-
-Dans notre cas, le routeur va laisser intacte l'adresse IP Source. Ce n'est pas toujours le cas. Dans le cas classique de la box qui relie votre domicile à internet, le routeur contenu dans celle-ci va remplacer l'adresse locale de votre ordinateur ou smartphone (ex ```192.168.0.26```) par son IP publique (celle apparaissant sur [whatsmyip.com](http://whatsmyip.com), par exemple). Elle effectue ce qu'on appelle une translation d'adresse (NAT). 
-
-Pourquoi ? Parce que sinon la réponse du serveur distant que vous interrogez serait envoyée sur une adresse locale (votre adresse ```192.168.0.26```), qui est introuvable depuis un réseau extérieur. Il faut donc remplacer toutes les adresses locales par l'IP publique de votre box.
-Pour éviter que la réponse du serveur web que vous avez interrogé ne soit affichée sur l'ordinateur de vos parents, le routeur affecte des ports différents à chaque machine de son sous-réseau. Ce port est inclus dans le message transmis au serveur, et il l'est aussi dans sa réponse : le routeur peut donc rediriger le trafic vers la bonne machine du sous-réseau.
-:::
 
 Le routeur va ré-encapsuler le paquet IP modifié, et créer une nouvelle trame Ethernet en modifiant :
 
@@ -278,8 +282,8 @@ Le protocole a bien détecté le doublon du sous-message M1.
 
 ![](alt3.png) 
 
-Le protocole a bien détecté le doublon du sous-message M1... mais que se passerait-il si notre premier sous-message M1 était _encore plus_ en retard ?
+Le protocole a bien détecté le doublon du sous-message M1. Cependant, si le retard du premier M1 était supérieur à la cadence d'envoi d'Alice, il pourrait être confondu avec le M1 d'une prochaine itération. C'est une **limite** de ce protocole : il suppose que les délais de transmission restent bornés.
 
 
 ### 6. Conclusion
-Le protocole du bit alterné a longtemps été utilisé au sein de la couche 2 du modèle OSI (distribution des trames Ethernet). Simple et léger, il peut toutefois être facilement mis en défaut, ce qui explique qu'il ait été remplacé par des protocoles plus performants.
+Le protocole du bit alterné a longtemps été utilisé au sein de la couche 2 du modèle OSI (distribution des trames Ethernet). Simple et léger, il peut être mis en défaut lorsque les délais de transmission sont trop variables. C'est le protocole **TCP** (couche transport) qui le remplace dans les usages modernes : en **numérotant chaque segment**, il gère les pertes, les doublons et les retards de manière bien plus robuste — au prix d'une charge réseau plus importante.
