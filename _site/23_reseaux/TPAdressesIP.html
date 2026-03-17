@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tpadressesip – NSI - Première</title>
+<title>TP - Adressage IP, réseaux, masques – NSI - Première</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -368,7 +368,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/TPAdressesIP.html">TPAdressesIP.html</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/TPAdressesIP.html">TP - Adressage IP, réseaux, masques</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -823,7 +823,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../23_reseaux/TPAdressesIP.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">TPAdressesIP.html</span></a>
+ <span class="menu-text">TP - Adressage IP, réseaux, masques</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -943,33 +943,46 @@ cookieconsent.run({
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/TPAdressesIP.html">TPAdressesIP.html</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../23_reseaux/reseaux_cours.html">Ch. 6 - Réseaux</a></li><li class="breadcrumb-item"><a href="../23_reseaux/TPAdressesIP.html">TP - Adressage IP, réseaux, masques</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">TP - Adressage IP, réseaux, masques</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<h1 style="font-size:2.5em;text-align:center">
-TP - Adressage IP, réseaux, masques
-</h1>
+</header>
+
+
 <hr>
 <p><a href="https://capytale2.ac-paris.fr/web/c/aa58-1299451">Ce TP dans Capytale</a></p>
 <p><strong>L’objectif est d’écrire une fonction <code>meme_sous_reseau(ip_a, ip_b, masque)</code> qui renvoie un booléen indiquant si les machines A et B font partie du même sous-réseau.</strong></p>
 <p>On rappelle quelques instructions qui pourront s’avérer utiles :</p>
-<div id="cell-2" class="cell" data-trusted="false" data-execution_count="1">
+<div id="cell-3" class="cell" data-trusted="false" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">bin</span>(<span class="dv">45</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>'0b101101'</code></pre>
 </div>
 </div>
-<div id="cell-3" class="cell" data-trusted="false" data-execution_count="2">
+<div id="cell-4" class="cell" data-trusted="false" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>chaine <span class="op">=</span> <span class="st">"bonjour à tous !"</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>chaine.split(<span class="st">' '</span>)  <span class="co"># on sépare la chaîne selon le caractère espace</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>['bonjour', 'à', 'tous', '!']</code></pre>
 </div>
 </div>
-<div id="cell-4" class="cell" data-trusted="false" data-execution_count="1">
+<div id="cell-5" class="cell" data-trusted="false" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> et_logique(bit1, bit2):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie le résultat de l'opération logique bit1 ET bit2.</span></span>
@@ -995,7 +1008,7 @@ AssertionError</code></pre>
 <pre><code>Error: </code></pre>
 </div>
 </div>
-<div id="cell-5" class="cell" data-trusted="false">
+<div id="cell-6" class="cell" data-trusted="false">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> entier_en_mot_binaire(entier, longueur_mot_binaire):</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie un mot binaire correspondant à l'entier.</span></span>
@@ -1016,7 +1029,7 @@ AssertionError</code></pre>
 <span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> entier_en_mot_binaire(<span class="dv">168</span>, <span class="dv">8</span>) <span class="op">==</span> <span class="st">'10101000'</span></span>
 <span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Tests réussis !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-6" class="cell" data-trusted="false">
+<div id="cell-7" class="cell" data-trusted="false">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> masque_en_mot_binaire(masque):</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie la conversion du masque en un mot binaire.</span></span>
@@ -1031,7 +1044,7 @@ AssertionError</code></pre>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> masque_en_mot_binaire(<span class="dv">24</span>) <span class="op">==</span> <span class="st">'11111111111111111111111100000000'</span></span>
 <span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Tests réussis !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-7" class="cell" data-trusted="false">
+<div id="cell-8" class="cell" data-trusted="false">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ip_en_liste(ip):</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie une liste dont les éléments sont les 4 octets de l'adresse ip.</span></span>
@@ -1046,7 +1059,7 @@ AssertionError</code></pre>
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> ip_en_liste(<span class="st">'192.168.0.1'</span>) <span class="op">==</span> [<span class="dv">192</span>, <span class="dv">168</span>, <span class="dv">0</span>, <span class="dv">1</span>]</span>
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Tests réussis !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-8" class="cell" data-trusted="false">
+<div id="cell-9" class="cell" data-trusted="false">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ip_en_mot_binaire(ip):</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie la conversion d'une ip en un mot binaire.</span></span>
@@ -1061,7 +1074,7 @@ AssertionError</code></pre>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> ip_en_mot_binaire(<span class="st">"192.168.0.1"</span>) <span class="op">==</span> <span class="st">'11000000101010000000000000000001'</span></span>
 <span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Tests réussis !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-9" class="cell" data-trusted="false">
+<div id="cell-10" class="cell" data-trusted="false">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> adresse_reseau_ip(ip, masque):</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie l'adresse réseau de l'adresse ip avec le masque masque.</span></span>
@@ -1082,7 +1095,7 @@ AssertionError</code></pre>
 <span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> adresse_reseau_ip(<span class="st">"192.168.1.3"</span>, <span class="dv">20</span>) <span class="op">==</span> <span class="st">'11000000101010000000000000000000'</span></span>
 <span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Tests réussis !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-10" class="cell" data-trusted="false">
+<div id="cell-11" class="cell" data-trusted="false">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> meme_sous_reseau(ip_a, ip_b, masque):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie un booléen indiquant si ip_a et ip_b sont dans un même réseau de masque masque.</span></span>
