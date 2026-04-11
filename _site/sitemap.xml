@@ -117,6 +117,10 @@
     <lastmod>2025-08-30T15:37:04.000Z</lastmod>
   </url>
   <url>
+    <loc>https://sitelf.fr/PNSI/25_kppv/kppv_cours.html</loc>
+    <lastmod>2026-04-11T19:33:38.000Z</lastmod>
+  </url>
+  <url>
     <loc>https://sitelf.fr/PNSI/23_reseaux/TPAdressesIP.html</loc>
     <lastmod>2026-03-17T10:10:49.000Z</lastmod>
   </url>
@@ -231,6 +235,10 @@
   <url>
     <loc>https://sitelf.fr/PNSI/16_tris/tris_exos.html</loc>
     <lastmod>2026-04-10T20:12:21.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/16_tris/tris_cours.html</loc>
+    <lastmod>2026-04-11T19:44:06.000Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/17_recherche/index.html</loc>
@@ -386,7 +394,7 @@
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/index.html</loc>
-    <lastmod>2026-04-11T19:27:52.000Z</lastmod>
+    <lastmod>2026-04-11T19:49:42.000Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/07_flottants/flottants_exos.html</loc>
@@ -455,13 +463,5 @@
   <url>
     <loc>https://sitelf.fr/PNSI/21_client-serveur/TP_forms.html</loc>
     <lastmod>2025-02-02T21:36:15.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/16_tris/tris_cours.html</loc>
-    <lastmod>2026-04-11T19:32:06.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sitelf.fr/PNSI/25_kppv/kppv_cours.html</loc>
-    <lastmod>2026-04-11T19:33:38.000Z</lastmod>
   </url>
 </urlset>
