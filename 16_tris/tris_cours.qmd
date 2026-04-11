@@ -1,10 +1,5 @@
 ---
 title: "7.2 - Tris - Cours"
-lang: fr
-tbl-cap-location: bottom
-format: pdf
-keep-tex: True
-papersize: a4
 ---
 
 Dans cette partie du cours, nous allons étudier deux algorithmes de tris : le tri par insertion et le tri par sélection.
