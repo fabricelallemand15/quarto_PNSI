@@ -20,10 +20,7 @@ En commençant par le deuxième élément du tableau :
   * On continue à comparer et échanger l'élément courant avec les éléments précédents jusqu'à ce que l'élément courant soit plus grand que l'élément précédent.
 :::
 
-<script type="module" crossorigin src="assets_insertion/index.a606aa25.js"></script>
-<link rel="stylesheet" href="assets_insertion/index.df145779.css">
-
-<div id="insertion"></div>
+<iframe src="./tri_insertion/index.html" width="100%" height="600px" frameborder="0"></iframe>
 
 **Exemple** : Soit à trier le tableau $[5,2,7,3]$.
 
@@ -91,11 +88,6 @@ Sachant que $\frac{n(n-1)}{2} = \frac{n^2-n}{2}$, il s'agit donc d'une **complex
 
 ## 2. Tri par sélection
 
-<script type="module" crossorigin src="assets_selection/index.25db421e.js"></script>
-<link rel="stylesheet" href="assets_selection/index.df145779.css">
-
-<div id="selection"></div>
-
 ### Le principe
 
 ::: {.callout-important}
@@ -106,6 +98,8 @@ En commençant par le premier élément du tableau :
   * On recherche le plus petit élément parmi les éléments suivants du tableau.
   * On échange l'élément courant avec le plus petit élément.
 :::
+
+<iframe src="./tri_selection/index.html" width="100%" height="600px" frameborder="0"></iframe>
 
 **Exemple** : Soit à trier le tableau $[5,2,3,7]$.
 

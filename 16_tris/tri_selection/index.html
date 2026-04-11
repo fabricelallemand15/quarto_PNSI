@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tri par sélection</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --primary: #4361ee;
+    --primary-light: #e0e7ff;
+    --accent: #f72585;
+    --success: #06d6a0;
+    --warning: #ffd166;
+    --sorted: #06d6a0;
+    --current: #f72585;
+    --compare: #ffd166;
+    --minimum: #7209b7;
+    --default-bar: #4361ee;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.07);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 720px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem 2rem 2rem;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: .25rem;
+    color: var(--primary);
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: .85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+  }
+
+  /* ---- Barre de visualisation ---- */
+  .bars-wrapper {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .bar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 6px 6px 0 0;
+    transition: height .3s ease, background .3s ease, transform .35s ease;
+    min-width: 28px;
+    flex: 1;
+    max-width: 56px;
+    cursor: default;
+  }
+
+  .bar-label {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.25);
+    user-select: none;
+  }
+
+  .bar.state-default  { background: var(--default-bar); }
+  .bar.state-sorted   { background: var(--sorted); }
+  .bar.state-current  { background: var(--current); }
+  .bar.state-compare  { background: var(--compare); }
+  .bar.state-minimum  { background: var(--minimum); }
+
+  @keyframes pulse {
+    0%, 100% { transform: scaleY(1); }
+    50%      { transform: scaleY(1.06); }
+  }
+  .bar.anim-swap { animation: pulse .35s ease; }
+
+  /* Légende */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem 1.2rem;
+    font-size: .75rem;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+  }
+  .legend-dot {
+    width: 12px; height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  /* Zone d'explication */
+  .explanation {
+    background: var(--primary-light);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: .65rem 1rem;
+    font-size: .82rem;
+    line-height: 1.45;
+    min-height: 3.2rem;
+    margin-bottom: 1.2rem;
+    transition: background .3s;
+  }
+
+  /* Contrôles */
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+    margin-bottom: .8rem;
+  }
+
+  button {
+    border: none;
+    border-radius: 8px;
+    padding: .5rem 1.1rem;
+    font-size: .82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .15s, transform .1s;
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+  }
+  button:active { transform: scale(.96); }
+  button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+  }
+
+  .btn-primary   { background: var(--primary); color: #fff; }
+  .btn-primary:hover:not(:disabled) { background: #3a56d4; }
+  .btn-accent    { background: var(--accent); color: #fff; }
+  .btn-accent:hover:not(:disabled) { background: #d61e73; }
+  .btn-success   { background: var(--success); color: #fff; }
+  .btn-success:hover:not(:disabled) { background: #05b88a; }
+
+  .speed-control {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: .78rem;
+    color: var(--text-muted);
+  }
+  .speed-control input[type=range] {
+    width: 80px;
+    accent-color: var(--primary);
+  }
+
+  /* Compteurs */
+  .counters {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: .78rem;
+    color: var(--text-muted);
+    margin-top: .3rem;
+  }
+  .counters span { font-weight: 700; color: var(--text); }
+
+  /* Séparateur trié / non trié */
+  .separator {
+    position: absolute;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--sorted) 0, var(--sorted) 4px,
+      transparent 4px, transparent 8px
+    );
+    opacity: .6;
+    transition: left .35s ease;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  /* Flèche indicateur élément courant */
+  .arrow-indicator {
+    position: absolute;
+    top: 2px;
+    font-size: 1.1rem;
+    color: var(--current);
+    transition: left .35s ease;
+    pointer-events: none;
+    z-index: 5;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .container { padding: 1rem 1rem 1.2rem; }
+    .bars-wrapper { height: 200px; }
+    .bar { min-width: 22px; }
+    .bar-label { font-size: .7rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🔍 Tri par sélection</h1>
+  <p class="subtitle">Visualisation interactive pas-à-pas</p>
+
+  <div class="bars-wrapper" id="barsWrapper">
+    <div class="separator" id="separator"></div>
+    <div class="arrow-indicator" id="arrow">▼</div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--sorted)"></div> Trié</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--current)"></div> Élément courant</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--compare)"></div> Comparé</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--minimum)"></div> Minimum trouvé</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--default-bar)"></div> Non trié</div>
+  </div>
+
+  <div class="explanation" id="explanation">
+    Cliquez sur <strong>Étape suivante</strong> ou <strong>▶ Lancer</strong> pour démarrer le tri.
+  </div>
+
+  <div class="controls">
+    <button class="btn-primary" id="btnStep" onclick="step()">Étape suivante ⏭</button>
+    <button class="btn-success" id="btnPlay" onclick="togglePlay()">▶ Lancer</button>
+    <button class="btn-accent" id="btnReset" onclick="resetArray()">🔀 Nouveau tableau</button>
+    <div class="speed-control">
+      <label for="speedRange">Vitesse</label>
+      <input type="range" id="speedRange" min="1" max="10" value="5">
+    </div>
+  </div>
+
+  <div class="counters">
+    Comparaisons : <span id="cmpCount">0</span> &nbsp;|&nbsp; Échanges : <span id="swapCount">0</span>
+  </div>
+  <footer style="text-align:center; margin-top:1.5rem; font-size:.75rem; color:var(--text-muted);">
+  © 2026 Fabrice LALLEMAND avec l'aide de Claude. Code source sous licence MIT
+  <br>
+  Utilisation, modification et distribution libres — attribution requise
+</footer>
+</div>
+
+<script>
+(() => {
+  /* ---- État ---- */
+  const SIZE = 10;
+  let arr = [];
+  let states = [];        // 'default' | 'sorted' | 'current' | 'compare' | 'minimum'
+  let i = 0;              // position courante (boucle externe)
+  let scanIdx = -1;       // index de scan dans la partie non triée
+  let minIdx = -1;        // index du minimum trouvé
+  // Phases : 'idle' | 'startPass' | 'scan' | 'foundMin' | 'swap' | 'done'
+  let phase = 'idle';
+  let playing = false;
+  let timerId = null;
+  let comparisons = 0;
+  let swaps = 0;
+
+  /* ---- DOM ---- */
+  const wrapper = document.getElementById('barsWrapper');
+  const sepEl = document.getElementById('separator');
+  const arrowEl = document.getElementById('arrow');
+  const explEl = document.getElementById('explanation');
+  const btnStep = document.getElementById('btnStep');
+  const btnPlay = document.getElementById('btnPlay');
+  const speedRange = document.getElementById('speedRange');
+  const cmpEl = document.getElementById('cmpCount');
+  const swapEl = document.getElementById('swapCount');
+
+  function getDelay() {
+    const v = parseInt(speedRange.value);
+    return 1100 - v * 100;
+  }
+
+  /* ---- Génération ---- */
+  function generate() {
+    const a = [];
+    for (let k = 0; k < SIZE; k++) a.push(Math.floor(Math.random() * 95) + 5);
+    return a;
+  }
+
+  /* ---- Rendu ---- */
+  function render() {
+    const maxVal = Math.max(...arr);
+    wrapper.querySelectorAll('.bar').forEach(b => b.remove());
+
+    arr.forEach((val, idx) => {
+      const bar = document.createElement('div');
+      bar.className = 'bar state-' + (states[idx] || 'default');
+      bar.style.height = (val / maxVal * 88 + 10) + '%';
+      const lbl = document.createElement('span');
+      lbl.className = 'bar-label';
+      lbl.textContent = val;
+      bar.appendChild(lbl);
+      wrapper.appendChild(bar);
+    });
+
+    updateSeparator();
+    updateArrow();
+    cmpEl.textContent = comparisons;
+    swapEl.textContent = swaps;
+  }
+
+  function updateSeparator() {
+    if (phase === 'done' || i <= 0) {
+      sepEl.style.display = 'none';
+      return;
+    }
+    const bars = wrapper.querySelectorAll('.bar');
+    if (i >= arr.length) { sepEl.style.display = 'none'; return; }
+    sepEl.style.display = 'block';
+    const barEl = bars[i - 1];
+    if (barEl) {
+      const rect = barEl.getBoundingClientRect();
+      const wrapRect = wrapper.getBoundingClientRect();
+      sepEl.style.left = (rect.right - wrapRect.left + 1) + 'px';
+    }
+  }
+
+  function updateArrow() {
+    if (phase === 'idle' || phase === 'done') {
+      arrowEl.style.display = 'none';
+      return;
+    }
+    const bars = wrapper.querySelectorAll('.bar');
+    const target = i;
+    if (target < 0 || target >= arr.length) { arrowEl.style.display = 'none'; return; }
+    arrowEl.style.display = 'block';
+    const barEl = bars[target];
+    if (barEl) {
+      const rect = barEl.getBoundingClientRect();
+      const wrapRect = wrapper.getBoundingClientRect();
+      arrowEl.style.left = (rect.left - wrapRect.left + rect.width / 2 - 8) + 'px';
+    }
+  }
+
+  function setExplanation(html) {
+    explEl.innerHTML = html;
+  }
+
+  function buildStates() {
+    return arr.map((_, idx) => idx < i ? 'sorted' : 'default');
+  }
+
+  /* ---- Logique pas-à-pas ---- */
+  function step() {
+    if (phase === 'done') return;
+
+    if (phase === 'idle') {
+      i = 0;
+      phase = 'startPass';
+      step();
+      return;
+    }
+
+    if (phase === 'startPass') {
+      // Début d'un nouveau passage : on sélectionne l'élément courant
+      states = buildStates();
+      states[i] = 'current';
+      minIdx = i;
+      scanIdx = i + 1;
+      setExplanation(`<strong>Passe ${i + 1}</strong> — On cherche le minimum parmi les éléments de la position ${i + 1} à ${arr.length}. L'élément courant est <strong>${arr[i]}</strong>.`);
+      phase = 'scan';
+      render();
+      return;
+    }
+
+    if (phase === 'scan') {
+      if (scanIdx >= arr.length) {
+        // Fin du scan
+        phase = 'foundMin';
+        step();
+        return;
+      }
+
+      // Comparer arr[scanIdx] avec arr[minIdx]
+      comparisons++;
+      states = buildStates();
+      states[i] = 'current';
+      // Marquer le minimum courant (sauf si c'est i, déjà en current)
+      if (minIdx !== i) states[minIdx] = 'minimum';
+      states[scanIdx] = 'compare';
+
+      if (arr[scanIdx] < arr[minIdx]) {
+        setExplanation(`On compare <strong>${arr[scanIdx]}</strong> (pos. ${scanIdx + 1}) &lt; <strong>${arr[minIdx]}</strong> (pos. ${minIdx + 1}) → nouveau minimum ! 🟣`);
+        minIdx = scanIdx;
+      } else {
+        setExplanation(`On compare <strong>${arr[scanIdx]}</strong> (pos. ${scanIdx + 1}) ≥ <strong>${arr[minIdx]}</strong> (pos. ${minIdx + 1}) → on garde le minimum.`);
+      }
+      scanIdx++;
+      render();
+      return;
+    }
+
+    if (phase === 'foundMin') {
+      states = buildStates();
+      states[i] = 'current';
+      if (minIdx !== i) {
+        states[minIdx] = 'minimum';
+        setExplanation(`Le minimum est <strong>${arr[minIdx]}</strong> (pos. ${minIdx + 1}). On va l'échanger avec l'élément courant <strong>${arr[i]}</strong> (pos. ${i + 1}). 🔄`);
+        phase = 'swap';
+      } else {
+        setExplanation(`L'élément courant <strong>${arr[i]}</strong> (pos. ${i + 1}) est déjà le minimum. Pas d'échange nécessaire. ✅`);
+        phase = 'swap'; // on va quand même passer à la suite
+      }
+      render();
+      return;
+    }
+
+    if (phase === 'swap') {
+      if (minIdx !== i) {
+        swaps++;
+        [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
+      }
+      // L'élément en position i est maintenant trié
+      states = buildStates();
+      states[i] = 'sorted';
+      i++;
+
+      if (i >= arr.length - 1) {
+        // Dernier élément forcément trié
+        states = arr.map(() => 'sorted');
+        phase = 'done';
+        setExplanation('🎉 <strong>Tri terminé !</strong> Le tableau est entièrement trié par sélection.');
+        stopPlay();
+        btnStep.disabled = true;
+        render();
+        return;
+      }
+
+      setExplanation(`Échange effectué. L'élément <strong>${arr[i - 1]}</strong> est placé définitivement en position ${i}. On passe à la position suivante.`);
+      phase = 'startPass';
+      render();
+      return;
+    }
+  }
+
+  /* ---- Animation automatique ---- */
+  function togglePlay() {
+    if (playing) {
+      stopPlay();
+    } else {
+      playing = true;
+      btnPlay.textContent = '⏸ Pause';
+      btnStep.disabled = true;
+      tick();
+    }
+  }
+
+  function tick() {
+    if (!playing) return;
+    step();
+    if (phase === 'done') { stopPlay(); return; }
+    timerId = setTimeout(tick, getDelay());
+  }
+
+  function stopPlay() {
+    playing = false;
+    clearTimeout(timerId);
+    btnPlay.textContent = '▶ Lancer';
+    if (phase !== 'done') btnStep.disabled = false;
+  }
+
+  /* ---- Reset ---- */
+  function resetArray() {
+    stopPlay();
+    arr = generate();
+    states = arr.map(() => 'default');
+    i = 0;
+    scanIdx = -1;
+    minIdx = -1;
+    phase = 'idle';
+    comparisons = 0;
+    swaps = 0;
+    btnStep.disabled = false;
+    setExplanation('Cliquez sur <strong>Étape suivante</strong> ou <strong>▶ Lancer</strong> pour démarrer le tri.');
+    render();
+  }
+
+  /* ---- Resize ---- */
+  window.addEventListener('resize', () => { if (arr.length) render(); });
+
+  /* ---- Exposer au global pour les onclick ---- */
+  window.step = step;
+  window.togglePlay = togglePlay;
+  window.resetArray = resetArray;
+
+  /* ---- Init ---- */
+  resetArray();
+})();
+</script>
+</body>
+</html>
