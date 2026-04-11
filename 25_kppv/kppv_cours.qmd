@@ -1,6 +1,8 @@
 ---
-title : "Présentation"
-code-fold: true
+title : "7.5 - KNN - Cours"
+format: pdf
+keep-tex: true
+papersize: a4
 ---
 
 ## Introduction
@@ -93,7 +95,7 @@ On décide de donner au paramètre $k$ la valeur 3. Cela signifie que l'on cherc
 
 D'après le tableau ci-dessus, les trois fleurs les plus proches de "Iris X" sont "Iris Versicolor 2", "Iris Versicolor 1" et "Iris Setosa 2". On détermine donc que "Iris X" est de la classe Versicolor.
 
-**Remarque : en réalité, le nombre d'élément de l'ensemble E doit être le plus grand possible pour que l'algorithme soit efficace.**
+**Remarque : en réalité, le nombre d'éléments de l'ensemble E doit être le plus grand possible pour que l'algorithme soit efficace.**
 
 :::{.callout-important}
 Deux points importants influent sur le résultat de l'algorithme :

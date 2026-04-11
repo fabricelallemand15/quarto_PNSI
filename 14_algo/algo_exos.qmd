@@ -1,6 +1,5 @@
 ---
-title: Exercices
-lang: fr
+title: "7.1 - Algorithmique - Exercices"
 ---
 
 _Les exercices précédés du symbole {{< fa desktop >}} sont à faire sur machine, en sauvegardant le fichier si nécessaire._

@@ -1,10 +1,5 @@
 ---
-title: Cours
-lang: fr
-format:
-    html: default
-execute: 
-  cache: true
+title: "7.3 - Recherche - Cours"
 ---
 
 On s'intéresse ici au problème de la recherche d'une valeur dans un tableau que l'on supposera **triée** dans l'ordre croissant.
@@ -13,7 +8,7 @@ On s'intéresse ici au problème de la recherche d'une valeur dans un tableau qu
 
 La première idée qui peut venir à l'esprit est de considérer les éléments du tableau les uns après les autres et de les comparer avec l'élément recherché.
 
-On peut ainsi écrire une fonction `recherche_naive` qui prend en paramètre un tableau `tàbleau` et une valeur `valeur` et qui renvoie l'indice de la première occurrence de `valeur` dans `tableau` ou `-1` si `valeur` n'est pas dans `tableau`.
+On peut ainsi écrire une fonction `recherche_naive` qui prend en paramètre un tableau `tableau` et une valeur `valeur` et qui renvoie l'indice de la première occurrence de `valeur` dans `tableau` ou `-1` si `valeur` n'est pas dans `tableau`.
 
 ```{python}
 def recherche_naive(tableau, valeur):

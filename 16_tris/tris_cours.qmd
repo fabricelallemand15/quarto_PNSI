@@ -1,16 +1,15 @@
 ---
-title: Cours
+title: "7.2 - Tris - Cours"
 lang: fr
 tbl-cap-location: bottom
-format:
-    html: default
-execute: 
-  cache: true
+format: pdf
+keep-tex: True
+papersize: a4
 ---
 
 Dans cette partie du cours, nous allons étudier deux algorithmes de tris : le tri par insertion et le tri par sélection.
 
-Étant donné un tableau de nombres, l'objectif est d'écrire une fonction qui renvoie un tableau contenant les mêmes nombres mais dans l'ordre croissant.
+Étant donné un tableau de nombres, l'objectif est d'écrire une fonction qui renvoie un tableau contenant les mêmes nombres, mais dans l'ordre croissant.
 
 ## 1. Tri par insertion
 
@@ -35,7 +34,7 @@ En commençant par le deuxième élément du tableau :
 
 * On commence par le deuxième élément du tableau, c'est-à-dire l'élément 2. On compare l'élément 2 avec l'élément 5. L'élément 2 est plus petit que l'élément 5, on échange les deux éléments. Le tableau est donc $[2,5,7,3]$.
 * On continue avec l'élément 7. L'élément 7 est plus grand que l'élément 5, on ne fait rien.
-* On continue avec l'élément 3. L'élément 3 est plus petit que l'élément 7, on échange les deux éléments. Le tableau est donc $[2,5,3,7]$. On continue à comparer et échanger l'élément 3 avec les éléments précédents jusqu'à ce que l'élément 3 soit plus grand que l'élément 5. Le tableau est donc $[2,3,5,7]$. L'algorithme est terminé. Le tableau est trié.
+* On continue avec l'élément 3. L'élément 3 est plus petit que l'élément 7, on échange les deux éléments. Le tableau est donc $[2,5,3,7]$. On continue à comparer et échanger l'élément 3 avec les éléments précédents jusqu'à ce que l'élément 3 soit plus grand que celui qui le précède. Le tableau est donc $[2,3,5,7]$. L'algorithme est terminé. Le tableau est trié.
 
 ### Programmation
 
@@ -76,7 +75,7 @@ Montrons que l'algorithme trie bien le tableau.
 Pour cela, considérons la propriété suivante : à chaque itération, le sous-tableau composé des `i` premiers éléments est trié. Montrons que cette propriété est un **invariant de boucle**.
 
 * **Initialisation** : au début de l'algorithme, le sous-tableau composé uniquement du premier élément est trié.
-* **Conservation** : supposons que le le sous-tableau composé des `i` premiers éléments est trié : $[e_0, e_1, \ldots, e_{i-1}]$ avec $e_0\leqslant e_1\leqslant \ldots \leqslant e_{i-1}$. L'algorithme considère alors l'élément $e_i$ et le compare avec les éléments précédents. Si $e_i$ est plus petit que $e_{i-1}$, on échange les deux éléments. On continue alors à comparer $e_i$ avec les éléments précédents jusqu'à ce que $e_i$ soit plus grand que l'élément précédent. Le sous-tableau composé des `i+1` premiers éléments est alors trié.
+* **Conservation** : supposons que le sous-tableau composé des `i` premiers éléments est trié : $[e_0, e_1, \ldots, e_{i-1}]$ avec $e_0\leqslant e_1\leqslant \ldots \leqslant e_{i-1}$. L'algorithme considère alors l'élément $e_i$ et le compare avec les éléments précédents. Si $e_i$ est plus petit que $e_{i-1}$, on échange les deux éléments. On continue alors à comparer $e_i$ avec les éléments précédents jusqu'à ce que $e_i$ soit plus grand que l'élément précédent. Le sous-tableau composé des `i+1` premiers éléments est alors trié.
 * **Conclusion** : à la fin de l'algorithme `i` a la valeur `n-1` ce qui correspond à l'indice du dernier élément du tableau. Le sous-tableau composé des `n` premiers éléments est donc trié. Or, `n` est le nombre d'éléments du tableau, donc le tableau entier est trié.
 
 La correction de l'algorithme est donc prouvée.
@@ -156,7 +155,7 @@ Montrons que l'algorithme trie bien le tableau.
 Pour cela, considérons la propriété suivante : à chaque itération, le sous-tableau composé des `i` premiers éléments est trié. Montrons que cette propriété est un **invariant de boucle**.
 
 * **Initialisation** : au début de l'algorithme, le sous-tableau composé uniquement du premier élément est trié.
-* **Conservation** : supposons que le le sous-tableau composé des `i` premiers éléments est trié : $[e_0, e_1, \ldots, e_{i-1}]$ avec $e_0\leqslant e_1\leqslant \ldots \leqslant e_{i-1}$. Par construction, tous les éléments suivants sont supérieurs à $e_{i-1}$. L'algorithme considère alors l'élément $e_i$ et le compare avec les éléments suivants. Si un élément est plus petit que $e_i$, on échange les deux éléments. Le sous-tableau composé des `i+1` premiers éléments est alors trié.
+* **Conservation** : supposons que le sous-tableau composé des `i` premiers éléments est trié : $[e_0, e_1, \ldots, e_{i-1}]$ avec $e_0\leqslant e_1\leqslant \ldots \leqslant e_{i-1}$. Par construction, tous les éléments suivants sont supérieurs à $e_{i-1}$. L'algorithme considère alors l'élément $e_i$ et le compare avec les éléments suivants. Si un élément est plus petit que $e_i$, on échange les deux éléments. Le sous-tableau composé des `i+1` premiers éléments est alors trié.
 * **Conslusion** : à la fin de l'algorithme `i` a la valeur `n-1` ce qui correspond à l'indice du dernier élément du tableau. Le sous-tableau composé des `n` premiers éléments est donc trié. Or, `n` est le nombre d'éléments du tableau, donc le tableau entier est trié.
 
 La correction de l'algorithme est donc prouvée.

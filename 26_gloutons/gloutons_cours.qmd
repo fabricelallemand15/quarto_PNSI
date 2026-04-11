@@ -1,6 +1,5 @@
 ---
-title: "Cours"
-subtitle: "Ch. 22 - Algorithmes gloutons"
+title: "7.4 - Algorithmes gloutons - Cours"
 ---
 
 # 1. Exemple introductif
@@ -84,8 +83,8 @@ On dispose d'un sac à dos pouvant contenir une masse maximale de 5.
     - Il reste à remplir $5 - 2 = 3$.
     - On prend l'objet 4.
     - Il reste à remplir $3 - 1 = 2$.
-    - On ne peut pas prendre l'objet 2 car son poids est trop grand.
-    - On ne peut pas prendre l'objet 3 car son poids est trop grand.
+    - On ne peut pas prendre l'objet 2, car son poids est trop grand.
+    - On ne peut pas prendre l'objet 3, car son poids est trop grand.
 
 On a donc rempli le sac à dos avec les objets 1 et 4, pour une valeur totale de 12. Cette solution n'est pas optimale.
 

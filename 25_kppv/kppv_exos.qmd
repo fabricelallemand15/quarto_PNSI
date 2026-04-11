@@ -1,3 +1,0 @@
----
-title : "TP : Reconnaissance optique de chiffres"
----

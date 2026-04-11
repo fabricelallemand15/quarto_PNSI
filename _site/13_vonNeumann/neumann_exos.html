@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.0">
+<meta name="generator" content="quarto-1.10.1">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Exercices - Assembleur – NSI - Première</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -72,19 +75,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f90cbdadd06a7ce36d2760346202a0fd.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc6d6016adaf1c7a86dcaac46e77afcc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-36444e392d2fb3c2a85f57417f5a8c5a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc6d6016adaf1c7a86dcaac46e77afcc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-a9abdc8f23f02a1e69185ea0e4a1bf53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-093f79a5711547dd0ba61740630feaf3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-ce627959744dbe174f47eef0b696c0dd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -119,10 +121,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({
   "notice_banner_type":"simple",
-  "consent_type":"implied",
+  "consent_type":"express",
   "palette":"light",
   "language":"en",
-  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "page_load_consent_levels":["strictly-necessary"],
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
@@ -324,8 +326,6 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">NSI - Première</span>
     </a>
@@ -336,7 +336,7 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text"><i class="fa-solid fa-house-chimney-window" aria-label="house-chimney-window"></i> Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -378,10 +378,6 @@ cookieconsent.run({
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -852,61 +848,61 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../14_algo/algo_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">7.1 - Algorithmique - Généralités</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../14_algo/algo_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">7.1 - Algorithmique - Exercices</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../16_tris/tris_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+  <a href="../16_tris/tris_cours.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.2 - Tris - Cours</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../16_tris/tris_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices - Algorithmes de tris</span></a>
+ <span class="menu-text">7.2 - Tris - Exercices</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../17_recherche/recherche_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">7.3 - Recherche - Cours</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../17_recherche/recherche_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices - Recherche dichotomique</span></a>
+ <span class="menu-text">7.3 - Recherche - Exercices</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../26_gloutons/gloutons_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">7.4 - Algorithmes gloutons - Cours</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../26_gloutons/gloutons_exos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercices</span></a>
+ <span class="menu-text">7.4 - Algorithmes gloutons - Exercices</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../25_kppv/kppv_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Présentation</span></a>
+  <a href="../25_kppv/kppv_cours.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.5 - KNN - Cours</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../25_kppv/KNN-TP.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">TP : Reconnaissance optique de chiffres</span></a>
+ <span class="menu-text">7.5 - TP KNN : Reconnaissance optique de chiffres</span></a>
   </div>
 </li>
       </ul>
@@ -945,9 +941,9 @@ cookieconsent.run({
    
   <ul>
   <li><a href="#assembleur" id="toc-assembleur" class="nav-link active" data-scroll-target="#assembleur">Assembleur</a></li>
-  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</a></li>
-  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</a></li>
-  <li><a href="#exercice-4" id="toc-exercice-4" class="nav-link" data-scroll-target="#exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</a></li>
+  <li><a href="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642070656e63696c2d616c74203e7d7d-exercice-2" id="toc-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642070656e63696c2d616c74203e7d7d-exercice-2" class="nav-link" data-scroll-target="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642070656e63696c2d616c74203e7d7d-exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</a></li>
+  <li><a href="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642070656e63696c2d616c74203e7d7d-exercice-3" id="toc-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642070656e63696c2d616c74203e7d7d-exercice-3" class="nav-link" data-scroll-target="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642070656e63696c2d616c74203e7d7d-exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</a></li>
+  <li><a href="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206465736b746f70203e7d7d-exercice-4" id="toc-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206465736b746f70203e7d7d-exercice-4" class="nav-link" data-scroll-target="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206465736b746f70203e7d7d-exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
@@ -979,8 +975,8 @@ cookieconsent.run({
 <section id="assembleur" class="level2">
 <h2 class="anchored" data-anchor-id="assembleur">Assembleur</h2>
 </section>
-<section id="exercice-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</h2>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642070656e63696c2d616c74203e7d7d-exercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642070656e63696c2d616c74203e7d7d-exercice-2"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 2</h2>
 <ol type="1">
 <li><p>Expliquez brièvement par une phrase, les instructions suivantes :</p>
 <ul>
@@ -1002,8 +998,8 @@ cookieconsent.run({
 </ol>
 <hr>
 </section>
-<section id="exercice-3" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</h2>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642070656e63696c2d616c74203e7d7d-exercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736f6c69642070656e63696c2d616c74203e7d7d-exercice-3"><i class="fa-solid fa-pencil-alt" aria-label="pencil-alt"></i> Exercice 3</h2>
 <p>On considère le programme Python donné à la fin du cours et sa traduction en Python.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">4</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">8</span></span>
@@ -1042,8 +1038,8 @@ cookieconsent.run({
 </ol>
 <hr>
 </section>
-<section id="exercice-4" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</h2>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206465736b746f70203e7d7d-exercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206465736b746f70203e7d7d-exercice-4"><i class="fa-solid fa-desktop" aria-label="desktop"></i> Exercice 4</h2>
 <p>Le module <code>dis</code> de Python permet de “désassembler” du code Python, c’est-à-dire d’afficher les instructions machines correspondant à des instructions Python.</p>
 <ol type="1">
 <li><p>En console interactive, entrer les lignes suivantes et interpréter le résultat.</p>

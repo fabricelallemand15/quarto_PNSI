@@ -1,6 +1,5 @@
 ---
-title: Cours
-lang: fr
+title: "7.1 - Algorithmique - Généralités"
 ---
 
 ## 1. Introduction
