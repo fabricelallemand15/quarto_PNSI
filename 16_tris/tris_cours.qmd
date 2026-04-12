@@ -20,7 +20,7 @@ En commençant par le deuxième élément du tableau :
   * On continue à comparer et échanger l'élément courant avec les éléments précédents jusqu'à ce que l'élément courant soit plus grand que l'élément précédent.
 :::
 
-<iframe src="./tri_insertion/index.html" width="100%" height="600px" frameborder="0"></iframe>
+<iframe src="./tri_insertion/index.html" width="100%" height="650px" frameborder="0"></iframe>
 
 **Exemple** : Soit à trier le tableau $[5,2,7,3]$.
 
@@ -99,7 +99,7 @@ En commençant par le premier élément du tableau :
   * On échange l'élément courant avec le plus petit élément.
 :::
 
-<iframe src="./tri_selection/index.html" width="100%" height="600px" frameborder="0"></iframe>
+<iframe src="./tri_selection/index.html" width="100%" height="650px" frameborder="0"></iframe>
 
 **Exemple** : Soit à trier le tableau $[5,2,3,7]$.
 
