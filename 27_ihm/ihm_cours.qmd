@@ -1,6 +1,5 @@
 ---
-title: Cours
-subtitle: "Ch. 27 : Interfaces homme-machine"
+title: 8 - IHM (Cours)
 ---
 
 ## Architecture d'un système embarqué
@@ -69,10 +68,6 @@ Tant que Vrai
 ```
 :::
 
-### QCM
-
-<div style="width:100%; height:500px; overflow:hidden"><iframe allowfullscreen src="https://ladigitale.dev/digiquiz/q/665dc270f0c1a/" frameborder="0" width="100%" height="500" style="overflow:hidden; background:#fff"></iframe></div>
-
 ## Interface Homme Machine
 
 ::: {.callout-tip}
@@ -131,16 +126,12 @@ antidémarrage. [L'attaque par
 relais](https://interstices.info/la-securite-des-systemes-informatiques-ubiquitaires/)
 permet de déjouer ce protocole en relayant la communication : un
 pirate se trouve près de la voiture et l'autre près de la carte et
-par un leurre technologique ils font croire aux deux parties
+par un leurre technologique, ils font croire aux deux parties
 qu'elles sont à proximité. Tous les systèmes embarqués qui
 communiquent sans contact (carte bancaire, carte d'accès ...) sont
 vulnérables à cette attaque.
 
 ![*Source : Image : Martial Régereau \[CC BY-SA 3.0\], via Wikimedia Commons*](Attaque_par_relais.png)
-
-### QCM 
-
-<div style="width:100%; height:500px; overflow:hidden"><iframe allowfullscreen src="https://ladigitale.dev/digiquiz/q/665dc4df816dc/" frameborder="0" width="100%" height="500" style="overflow:hidden; background:#fff"></iframe></div>
 
 ## Objets connectés
 
@@ -170,7 +161,7 @@ On estime à 50 milliards le nombre d'objets connectés en 2020.
 
 Les objets connectés permettent d'ajouter de l'intelligence dans notre
 environnement à tous les niveaux : le corps (mes indicateurs de santé,
-ma nourriture), la maison(appareils, système de chauffage), les réseaux
+ma nourriture), la maison (appareils, système de chauffage), les réseaux
 (électrique, de circulation), les transports (véhicules autonomes), la
 prévention des risques (incendies) ... De plus la collaboration entre
 objets connectés, leur connexion à des bases de données en ligne,

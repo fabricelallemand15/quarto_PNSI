@@ -1,0 +1,166 @@
+---
+title: "État de l'art en robotique (2026)"
+---
+
+### Introduction
+
+Le domaine de la robotique n'est pas nouveau, mais il est actuellement en pleine effervescence, avec des avancées technologiques majeures qui redéfinissent les interactions homme-machine (IHM). En 2026, la robotique se caractérise par une diversification rapide des applications, une intégration accrue de l'intelligence artificielle (IA) et une compétition géopolitique intense, notamment entre les États-Unis, la Chine et l'Europe.
+
+# 1. Robotique humanoïde : locomotion dynamique et déploiement
+
+## 1.1. Humanoïdes occidentaux
+
+Les humanoïdes occidentaux savent aujourd'hui marcher de façon plus stable, garder leur équilibre quand la situation change et utiliser leurs deux mains dans des lieux complexes. La technologie progresse bien, mais elle reste surtout au stade de démonstration et n'est pas encore utilisée partout. Pour les interfaces homme-machine, cela demande des outils de téléopération simples, un bon retour d'effort et des écrans de suivi clairs. Les principales difficultés restent la sécurité près des personnes, le coût élevé d'intégration et le manque de normes communes entre les systèmes.
+
+### Atlas de Boston Dynamics (filiale d’Hyundai) 
+
+Atlas est un exemple emblématique de ces avancées, avec des capacités de locomotion et de manipulation impressionnantes, mais encore limitées à des environnements contrôlés.
+
+Caractéristiques techniques :
+
+* 56 degrés de liberté, joints à rotation complète 360°
+* Portée de 2,3 m, charge utile certifiée 50 kg (110 lbs)
+* Vision à 360° grâce aux caméras en tête
+* Remplacement autonome de batteries pour une opération continue
+
+Déploiements confirmés chez Hyundai (usine RMAC à Savannah, Géorgie) et Google DeepMind. Hyundai prévoit une usine capable de produire 30 000 Atlas par an à l’horizon 2028.
+
+  <iframe src="https://www.youtube.com/embed/tF4DML7FIWk" 
+          title="Boston Dynamics Atlas - Next-Gen Humanoid Robot" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+
+### Figure AI (filiale de Meta)
+
+Figure AI a déployé son robot Figure 02 dans l’usine BMW de Spartanburg (Caroline du Sud), où il a contribué à l’assemblage de plus de 30 000 véhicules X3 sur 10 mois. BMW déploie désormais le nouveau Figure 03 dans son usine de Leipzig.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Eu5mYMavctM?si=5AvIPBRyhls7qLHc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Tesla Optimus
+
+Tesla a présenté Optimus Gen 2, un humanoïde de 1,75 m pour la manipulation d’objets dans des environnements non structurés. Bien que les démonstrations soient impressionnantes, Tesla n’a pas encore annoncé de déploiement commercial concret. Plusieurs médias ont documenté des démos Optimus potentiellement téléopérées plutôt qu’entièrement autonome.
+
+## 1.2. Humanoïdes chinois
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UTq2o7RQs0A?si=Os1A-5i9sT7F6hwm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+La Chine domine actuellement le monde de la robotique. De nombreux progrès sont obervés, comme une accélération forte sur l'agilité dynamique, la course longue distance et l'industrialisation à grande échelle. L'organisation industrielle du pays permet un passage rapide du prototype à des productions en série, avec des objectifs de production ambitieux. De plus, le rapport performance/prix des robots chinois est très agressif.
+
+### Unitree G1/H1
+
+Plateformes bipèdes réalisant des sauts, mouvements dynamiques et atteignant 15 km/h en course.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v1Q4Su54iho?si=Sutr4sSXV2zyd9Je" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Marathon humanoïde de Pékin (2025-2026)
+
+Premier semi-marathon officiel réservé aux robots bipèdes (21,1 km). Le robot *Tien Kung Ultra* a remporté l'épreuve en 2h40, tandis que *Flash* (Honor) a établi un record de 50:26 en autonomie partielle.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GcWspgOJpqo?si=kkxPwpGytWXN9Mfh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### AgiBot & Galbot
+
+Architectures modulaires avec IA embarquée, visant une production de masse. **AgiBot** (Shanghai, fondée par un ancien talent « génie » de Huawei) a livré **5 000 humanoïdes en 2025** et produit son **10 000e robot en mars 2026**, avec une accélération : les 5 000 derniers ont été fabriqués en seulement 3 mois.
+
+**Record Guinness, novembre 2025 :** L'AgiBot A2 a parcouru **106,286 km en 3 jours** (Suzhou → Bund de Shanghai), établissant le record mondial de la plus longue marche jamais effectuée par un robot humanoïde. Le robot n'a jamais été éteint grâce à un système de batteries chaudes remplaçables à la volée.
+
+En avril 2026, AgiBot a déployé ses robots **G2** dans une usine d'électronique (Longcheer, Nanchang) : les robots assemblent des tablettes avec un taux de succès de **99 %** et une intégration en seulement **4 mois**.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kBGNvPq0Iyg?si=PhPDs4bOB9lXof_C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### UBTech Robotics — Première livraison en masse mondiale
+
+**UBTech** (Shenzhen, cotée à Hong Kong depuis déc. 2023) a réalisé la **première livraison en masse mondiale de robots humanoïdes industriels** en novembre 2025 : des centaines de **Walker S2** livrés simultanément à BYD, Foxconn, Geely, FAW-Volkswagen et d'autres.
+
+Caractéristique unique du **Walker S2** : il est le **premier humanoïde au monde à remplacer sa propre batterie de façon autonome en 3 minutes**, permettant un fonctionnement continu 24h/24 sans intervention humaine.
+
+En janvier 2026, **Airbus** a commandé des Walker S2 pour ses sites de production aéronautique — signal fort de confiance d'un acteur occidental majeur.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mHP1WGlw5Wk?si=99mDEELrA6qFOF05" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# 2. Robots quadrupèdes : agilité et applications industrielles
+
+Les robots quadrupèdes ont atteint une agilité remarquable, avec des capacités de saut, de course et de franchissement d’obstacles. Ils sont de plus en plus utilisés dans des environnements industriels pour des tâches de surveillance, d’inspection et de logistique, notamment dans les zones difficiles d’accès ou dangereuses pour les humains.
+
+### Boston Dynamics Spot — Inspection industrielle
+
+Spot est le robot quadrupède de référence pour l’inspection industrielle (usines, chantiers, plateformes pétrolières). Sa commercialisation depuis 2020 en a fait la plateforme la plus déployée dans ce segment.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zFUHi3_oiXk?si=OfqPoFcH5tVsl2bb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bKDhmENcKto?si=Tf3gLU5YhpTzvIX6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Unitree
+
+Unitree a développé une gamme de quadrupèdes (Go1, Go2, Go3) avec des capacités de saut et de course améliorées pour des applications industrielles et de recherche.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ve9USu7zpLU?si=SDcKr7rCZsm9vQPD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# 3. Cobotique et interaction physique sécurisée
+
+Le terme *cobotique* désigne la collaboration homme-robot : interaction directe ou téléopérée entre homme et robot pour atteindre un objectif commun. Un cobot (ou robot collaboratif) est un type de robot conçu pour pouvoir être utilisé dans le même espace de travail que les opérateurs humains sans risque pour ces derniers, même sans barrière de protection physique, grâce à des capteurs et de programmes (intégrant éventuellement de l'intelligence artificielle) déclenchant un ralentissement du mouvement ou un arrêt complet si un risque de collision est détecté.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sJREGiW6RM4?si=BbfRWLax4ym82lR6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Robotique médicale
+
+Le système Da Vinci d’Intuitive Surgical est la référence mondiale de la chirurgie robotique téléopérée. Principe de fonctionnement :
+
+* Le chirurgien pilote depuis une console ergonomique avec vue 3D haute définition
+* Mouvements des mains traduits avec filtration des tremblements
+* 4 bras articulés : 3 pour les instruments, 1 pour la caméra
+* Incisions de la taille d’une pièce de monnaie
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TGjnb86HndU?si=n5ZWJJyGiupG6tMN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Une autre application médicale des robots collaboratifs est la rééducation assistée : des exosquelettes comme le **Lokomat** de Hocoma permettent une thérapie de marche intensive pour les patients atteints de lésions médullaires ou d’AVC, avec un feedback en temps réel pour ajuster les paramètres de mouvement.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8FZWYGm_mEc?si=EsX7WcbHKnthq0Ub" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# 4. Robots nageurs et plateformes aquatiques bio-inspirées
+
+L'exploration sous-marine, la surveillance environnementale et les opérations de sauvetage motivent le développement de robots nageurs autonomes. Ceux-ci sont encore le plus souvent de prototypes de recherche. Deux approches dominent en 2025-2026 :
+
+## 4.1. Bio-inspiration morphologique : serpents aquatiques et nage anguilliforme
+
+Des chercheurs développent des robots serpents aquatiques stabilisés par contrôle morphologique et perception électrique, capables de nager en surface avec une fluidité inspirée des espèces naturelles.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3DR9jNiErf8?si=cb5wUrQ7mGu7TqDN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+
+## 4.2. Soft robots sous-marins et principes biouniversels
+
+Une approche émergente extrait des règles de conception transversales à plusieurs espèces (nageoires de manchots, corps fuselés, ventouses) pour créer des robots mous adaptables à différents milieux aquatiques. Des prototypes de préhension spiralée permettent une manipulation robuste sous courant.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i_E0EYjBtTg?si=iR2xA821Wi3Ah99o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# 5. Robotique spatiale
+
+
+### Perseverance — Exploration martienne autonome
+
+Le rover Perseverance (NASA, en mission depuis février 2021) continue son exploration du cratère Jezero sur Mars. En 2025, il a collecté des échantillons présentant ce qui pourrait être des traces d’une vie passée.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wd3EEd2nz14?si=9Z2vMl1-Ubc4WmAm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+ExoMars / Rosalind Franklin — Mission ESA vers Mars
+
+Le rover Rosalind Franklin (ESA/Thales Alenia Space) est prévu pour un lancement en octobre 2028 et un atterrissage le 30 novembre 2030 sur Oxia Planum.23
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aj7xNrbfCKw?si=L9iJOuGDg5orh-KH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# 6. Autres robots
+
+### General Robotics Lab
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Nd-I4YNQEuY?si=-4fUJADdpPGRE5WY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+###  Spherical robot joins police patrols in China
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9HkTMNukOwk?si=-zu7wgniIRwTp9Rn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Pour approfondir la réflexion...
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4ZP943-gARQ?si=dEITsM-lMm35zIZ_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+

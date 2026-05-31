@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/27_ihm/ihm_cours.html</loc>
-    <lastmod>2025-02-02T21:36:16.000Z</lastmod>
+    <lastmod>2026-05-26T18:48:47.000Z</lastmod>
   </url>
   <url>
     <loc>https://sitelf.fr/PNSI/27_ihm/ihm_exos.html</loc>
@@ -463,5 +463,9 @@
   <url>
     <loc>https://sitelf.fr/PNSI/21_client-serveur/TP_forms.html</loc>
     <lastmod>2025-02-02T21:36:15.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sitelf.fr/PNSI/27_ihm/robotique.html</loc>
+    <lastmod>2026-05-31T19:12:37.137Z</lastmod>
   </url>
 </urlset>

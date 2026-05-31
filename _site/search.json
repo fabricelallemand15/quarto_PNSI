@@ -955,49 +955,49 @@
   {
     "objectID": "27_ihm/ihm_cours.html",
     "href": "27_ihm/ihm_cours.html",
-    "title": "Cours",
+    "title": "8 - IHM (Cours)",
     "section": "",
     "text": "AstuceDéfinition\n\n\n\nUn système informatique embarqué est un système de traitement de l’information autonome ne possédant pas d’entrée et sortie standard comme le clavier et l’écran. Les informations sont reçues de l’extérieur par le biais de capteurs, elles sont traitées par un processeur et selon le programme du système des actions physiques peuvent être déclenchées avec des actionneurs. Les capteurs sont des périphériques d’entrée et les actionneurs des périphériques de sortie.\n\n\nLes signaux capturés sont analogiques, analogues au phénomène : par exemple la rotation de l’axe d’un anémomètre qui mesure la vitesse du vent sur une station météo. Pour être traités par le processeur, ils sont numérisés transformés en un nombre fini d’informations codées par des 0 et des 1 par échantillonnage (nombre fini de relevés) et quantification (nombre fini de valeurs possibles).\nLes microcontrôleurs sont des circuits intégrés qui concentrent une mémoire, un processeur, des entrées-sorties comme un ordinateur, mais se caractérisent par une miniaturisation accrue, une plus faible consommation électrique et des performances moindres, mais suffisantes pour des applications toujours plus nombreuses avec les progrès techniques.\nLes systèmes informatiques embarqués sont utilisés dans tous les domaines : l’industrie (robots), le transport (avionique, automobile, métro …), la médecine (stimulateurs cardiaques, imagerie …), la maison (domotique, appareils ménagers …), les télécommunications (téléphonie …), le monde du travail (contrôle d’accès …), les loisirs (vélo électrique …).\nOn parle d’informatique ubiquitaire pour désigner cette omniprésence de l’informatique dans notre environnement.\nLes smartphones modernes ne sont pas des microcontrôleurs, mais des ordinateurs miniatures bien plus puissants que les systèmes de guidage des premières missions Apollo qui ont amené l’homme sur la lune ! Ils sont dotés de nombreux capteurs.\n\n\n\nSource : flickr / Intel Free Press\n\n\n\n\n\n\n\nSource : Yassine Haddab Université de Montpellier\n\n\n\n\n\n\n\n\nImportantMéthode\n\n\n\nUn algorithme de contrôle fréquent sur un système informatique embarqué consiste en une boucle infinie où s’enchaînent capture d’événements par les émetteurs, traitement puis action par les actionneurs.\nInitialiser les actionneurs à leur position de départ\nTant que Vrai \n    Lire les informations des capteurs\n    Traiter ces informations\n    Calculer des informations sur les actionneurs\n    Transmettre ces informations aux actionneurs",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 8 - Interfaces homme-machine et robotique",
-      "Cours"
+      "8 - IHM (Cours)"
     ]
   },
   {
     "objectID": "27_ihm/ihm_cours.html#architecture-dun-système-embarqué",
     "href": "27_ihm/ihm_cours.html#architecture-dun-système-embarqué",
-    "title": "Cours",
+    "title": "8 - IHM (Cours)",
     "section": "",
     "text": "AstuceDéfinition\n\n\n\nUn système informatique embarqué est un système de traitement de l’information autonome ne possédant pas d’entrée et sortie standard comme le clavier et l’écran. Les informations sont reçues de l’extérieur par le biais de capteurs, elles sont traitées par un processeur et selon le programme du système des actions physiques peuvent être déclenchées avec des actionneurs. Les capteurs sont des périphériques d’entrée et les actionneurs des périphériques de sortie.\n\n\nLes signaux capturés sont analogiques, analogues au phénomène : par exemple la rotation de l’axe d’un anémomètre qui mesure la vitesse du vent sur une station météo. Pour être traités par le processeur, ils sont numérisés transformés en un nombre fini d’informations codées par des 0 et des 1 par échantillonnage (nombre fini de relevés) et quantification (nombre fini de valeurs possibles).\nLes microcontrôleurs sont des circuits intégrés qui concentrent une mémoire, un processeur, des entrées-sorties comme un ordinateur, mais se caractérisent par une miniaturisation accrue, une plus faible consommation électrique et des performances moindres, mais suffisantes pour des applications toujours plus nombreuses avec les progrès techniques.\nLes systèmes informatiques embarqués sont utilisés dans tous les domaines : l’industrie (robots), le transport (avionique, automobile, métro …), la médecine (stimulateurs cardiaques, imagerie …), la maison (domotique, appareils ménagers …), les télécommunications (téléphonie …), le monde du travail (contrôle d’accès …), les loisirs (vélo électrique …).\nOn parle d’informatique ubiquitaire pour désigner cette omniprésence de l’informatique dans notre environnement.\nLes smartphones modernes ne sont pas des microcontrôleurs, mais des ordinateurs miniatures bien plus puissants que les systèmes de guidage des premières missions Apollo qui ont amené l’homme sur la lune ! Ils sont dotés de nombreux capteurs.\n\n\n\nSource : flickr / Intel Free Press\n\n\n\n\n\n\n\nSource : Yassine Haddab Université de Montpellier\n\n\n\n\n\n\n\n\nImportantMéthode\n\n\n\nUn algorithme de contrôle fréquent sur un système informatique embarqué consiste en une boucle infinie où s’enchaînent capture d’événements par les émetteurs, traitement puis action par les actionneurs.\nInitialiser les actionneurs à leur position de départ\nTant que Vrai \n    Lire les informations des capteurs\n    Traiter ces informations\n    Calculer des informations sur les actionneurs\n    Transmettre ces informations aux actionneurs",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 8 - Interfaces homme-machine et robotique",
-      "Cours"
+      "8 - IHM (Cours)"
     ]
   },
   {
     "objectID": "27_ihm/ihm_cours.html#interface-homme-machine",
     "href": "27_ihm/ihm_cours.html#interface-homme-machine",
-    "title": "Cours",
+    "title": "8 - IHM (Cours)",
     "section": "Interface Homme Machine",
-    "text": "Interface Homme Machine\n\n\n\n\n\n\nAstuceDéfinition\n\n\n\nUne Interface Homme Machine est un ensemble de moyens physiques (boutons, manettes) ou logiciels (interface graphique) qui permettent à un humain d’échanger des informations avec une machine.\nLes moyens matériels permettant l’interaction sont appelés périphériques : on distingue les périphériques d’entrée ou de sortie.\nDouglas Engelbart est un des pionniers des IHM en informatique avec son système NLS qui introduit la première souris.\n\n\n\n\n\n\n\n\nMise en gardeExercice\n\n\n\nCompléter la légende de la figure ci-dessous représentant différents composants et périphériques d’un ordinateur :\n\n\n\nSource : Gustavb / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)\n\n\n\n\n\nFiabilité et sécurité\n\nLa sûreté est la garantie qu’un système fait ce qu’il doit faire et ne fait pas ce qu’il ne doit pas faire. Les programmes des systèmes embarqués doivent parfois s’exécuter avec des contraintes fortes (manque de ressource, temps de réaction très rapide) et ils ne sont pas toujours développés avec la rigueur nécessaire. Les bugs sont donc fréquents. Parfois bénins (une mauvaise gestion des années bissextiles a provoqué l’arrêt du lecteur MP3 Zune de Microsoft le 31/12/2008), ils peuvent aussi avoir a des conséquences dramatiques : les bugs du Therac 25 (appareil de radiographie) ou du contrôle moteur sur les Toyota Camry ont provoqué plusieurs morts.\nLa confidentialité est une problématique majeure des systèmes embarqués qui collectent des données personnelles sur leurs utilisateurs, comme les cartes électroniques de transport en commun.\nLa sécurité est souvent un point faible des systèmes embarqués, qui manquent de ressources matérielles, ont des cycles de vie longs sans mise à jour et mettent en jeu des modes de communication sans contact particulièrement vulnérables.\n\nPar exemple, une voiture ne peut démarrer que si la carte de démarrage se trouve à proximité, car la carte et la voiture partagent un secret commun permettant de déverrouiller le système antidémarrage. L’attaque par relais permet de déjouer ce protocole en relayant la communication : un pirate se trouve près de la voiture et l’autre près de la carte et par un leurre technologique ils font croire aux deux parties qu’elles sont à proximité. Tous les systèmes embarqués qui communiquent sans contact (carte bancaire, carte d’accès …) sont vulnérables à cette attaque.\n\n\n\nSource : Image : Martial Régereau [CC BY-SA 3.0], via Wikimedia Commons\n\n\n\n\nQCM",
+    "text": "Interface Homme Machine\n\n\n\n\n\n\nAstuceDéfinition\n\n\n\nUne Interface Homme Machine est un ensemble de moyens physiques (boutons, manettes) ou logiciels (interface graphique) qui permettent à un humain d’échanger des informations avec une machine.\nLes moyens matériels permettant l’interaction sont appelés périphériques : on distingue les périphériques d’entrée ou de sortie.\nDouglas Engelbart est un des pionniers des IHM en informatique avec son système NLS qui introduit la première souris.\n\n\n\n\n\n\n\n\nMise en gardeExercice\n\n\n\nCompléter la légende de la figure ci-dessous représentant différents composants et périphériques d’un ordinateur :\n\n\n\nSource : Gustavb / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)\n\n\n\n\n\nFiabilité et sécurité\n\nLa sûreté est la garantie qu’un système fait ce qu’il doit faire et ne fait pas ce qu’il ne doit pas faire. Les programmes des systèmes embarqués doivent parfois s’exécuter avec des contraintes fortes (manque de ressource, temps de réaction très rapide) et ils ne sont pas toujours développés avec la rigueur nécessaire. Les bugs sont donc fréquents. Parfois bénins (une mauvaise gestion des années bissextiles a provoqué l’arrêt du lecteur MP3 Zune de Microsoft le 31/12/2008), ils peuvent aussi avoir a des conséquences dramatiques : les bugs du Therac 25 (appareil de radiographie) ou du contrôle moteur sur les Toyota Camry ont provoqué plusieurs morts.\nLa confidentialité est une problématique majeure des systèmes embarqués qui collectent des données personnelles sur leurs utilisateurs, comme les cartes électroniques de transport en commun.\nLa sécurité est souvent un point faible des systèmes embarqués, qui manquent de ressources matérielles, ont des cycles de vie longs sans mise à jour et mettent en jeu des modes de communication sans contact particulièrement vulnérables.\n\nPar exemple, une voiture ne peut démarrer que si la carte de démarrage se trouve à proximité, car la carte et la voiture partagent un secret commun permettant de déverrouiller le système antidémarrage. L’attaque par relais permet de déjouer ce protocole en relayant la communication : un pirate se trouve près de la voiture et l’autre près de la carte et par un leurre technologique, ils font croire aux deux parties qu’elles sont à proximité. Tous les systèmes embarqués qui communiquent sans contact (carte bancaire, carte d’accès …) sont vulnérables à cette attaque.\n\n\n\nSource : Image : Martial Régereau [CC BY-SA 3.0], via Wikimedia Commons",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 8 - Interfaces homme-machine et robotique",
-      "Cours"
+      "8 - IHM (Cours)"
     ]
   },
   {
     "objectID": "27_ihm/ihm_cours.html#objets-connectés",
     "href": "27_ihm/ihm_cours.html#objets-connectés",
-    "title": "Cours",
+    "title": "8 - IHM (Cours)",
     "section": "Objets connectés",
-    "text": "Objets connectés\n\nInternet des objets\n\n\n\n\n\n\nAstuceDéfinition\n\n\n\nUn objet connecté est un système informatique embarqué disposant d’une connexion à un réseau local ou à L’Internet.\nLes Interfaces Homme Machine des objets connectés sont souvent des applications Web disponibles sur Smartphone.\n\n\n\n\n\nSource : Yassine Haddab Université de Montpellier\n\n\nAvec la baisse des coûts des microcontrôleurs et des puces Wifi, les objets connectés se multiplient. Actuellement, il existe plus d’objets que d’humains connectés à Internet et leur nombre va augmenter fortement dans les prochaines années avec la baisse de coût des puces. On parle d’IOT pour Internet Of Things pour désigner l’ensemble des objets connectés à l’Internet.\nOn estime à 50 milliards le nombre d’objets connectés en 2020.\n\n\nFiabilité et sécurité\nLes objets connectés permettent d’ajouter de l’intelligence dans notre environnement à tous les niveaux : le corps (mes indicateurs de santé, ma nourriture), la maison(appareils, système de chauffage), les réseaux (électrique, de circulation), les transports (véhicules autonomes), la prévention des risques (incendies) … De plus la collaboration entre objets connectés, leur connexion à des bases de données en ligne, augmente considérablement leur puissance même si chaque objet a des ressources matérielles limitées.\nNéanmoins, les vulnérabilités des systèmes embarqués sont amplifiées s’ils sont connectés.\nLa cyberattaque d’un serveur DNS majeur par des milliers de caméras de surveillance transformées en bots, a gravement perturbé Internet en octobre 2016. La prise de contrôle à distance par des hackers de la Jeep Cherokee en 2015 ou des failles détectées dans des stimulateurs cardiaques sont des exemples parmi bien d’autres illustrant le fait que la révolution de l’internet des objets ne pourra se faire sans des progrès sur le plan de leur sécurité.\nEnfin la moisson de données personnelles que peuvent collecter des objets connectés comme les assistants personnels proposés par les GAFAM doit absolument être contrôlée.",
+    "text": "Objets connectés\n\nInternet des objets\n\n\n\n\n\n\nAstuceDéfinition\n\n\n\nUn objet connecté est un système informatique embarqué disposant d’une connexion à un réseau local ou à L’Internet.\nLes Interfaces Homme Machine des objets connectés sont souvent des applications Web disponibles sur Smartphone.\n\n\n\n\n\nSource : Yassine Haddab Université de Montpellier\n\n\nAvec la baisse des coûts des microcontrôleurs et des puces Wifi, les objets connectés se multiplient. Actuellement, il existe plus d’objets que d’humains connectés à Internet et leur nombre va augmenter fortement dans les prochaines années avec la baisse de coût des puces. On parle d’IOT pour Internet Of Things pour désigner l’ensemble des objets connectés à l’Internet.\nOn estime à 50 milliards le nombre d’objets connectés en 2020.\n\n\nFiabilité et sécurité\nLes objets connectés permettent d’ajouter de l’intelligence dans notre environnement à tous les niveaux : le corps (mes indicateurs de santé, ma nourriture), la maison (appareils, système de chauffage), les réseaux (électrique, de circulation), les transports (véhicules autonomes), la prévention des risques (incendies) … De plus la collaboration entre objets connectés, leur connexion à des bases de données en ligne, augmente considérablement leur puissance même si chaque objet a des ressources matérielles limitées.\nNéanmoins, les vulnérabilités des systèmes embarqués sont amplifiées s’ils sont connectés.\nLa cyberattaque d’un serveur DNS majeur par des milliers de caméras de surveillance transformées en bots, a gravement perturbé Internet en octobre 2016. La prise de contrôle à distance par des hackers de la Jeep Cherokee en 2015 ou des failles détectées dans des stimulateurs cardiaques sont des exemples parmi bien d’autres illustrant le fait que la révolution de l’internet des objets ne pourra se faire sans des progrès sur le plan de leur sécurité.\nEnfin la moisson de données personnelles que peuvent collecter des objets connectés comme les assistants personnels proposés par les GAFAM doit absolument être contrôlée.",
     "crumbs": [
       "{{< fa house-chimney-window >}} Accueil",
       "Ch. 8 - Interfaces homme-machine et robotique",
-      "Cours"
+      "8 - IHM (Cours)"
     ]
   },
   {
@@ -4636,5 +4636,112 @@
     "title": "T.P. Formulaires",
     "section": "",
     "text": "Ce T. P. est constitué de deux exercices à réaliser dans Replit.\nÀ chaque fois, le code JavaScript doit être complété afin que la page web interactive se comporte comme attendu.\nPour un bon rendu de la page web, il faut l’ouvrir dans un autre onglet du navigateur.\nExercice 1 : Couleurs - https://replit.com/team/premiere-nsi/TP-Couleurs\nExercice 2 : Températures - https://replit.com/team/premiere-nsi/TP-Temperature"
+  },
+  {
+    "objectID": "27_ihm/robotique.html",
+    "href": "27_ihm/robotique.html",
+    "title": "État de l’art en robotique (2026)",
+    "section": "",
+    "text": "Le domaine de la robotique n’est pas nouveau, mais il est actuellement en pleine effervescence, avec des avancées technologiques majeures qui redéfinissent les interactions homme-machine (IHM). En 2026, la robotique se caractérise par une diversification rapide des applications, une intégration accrue de l’intelligence artificielle (IA) et une compétition géopolitique intense, notamment entre les États-Unis, la Chine et l’Europe."
+  },
+  {
+    "objectID": "27_ihm/robotique.html#humanoïdes-occidentaux",
+    "href": "27_ihm/robotique.html#humanoïdes-occidentaux",
+    "title": "État de l’art en robotique (2026)",
+    "section": "1.1. Humanoïdes occidentaux",
+    "text": "1.1. Humanoïdes occidentaux\nLes humanoïdes occidentaux savent aujourd’hui marcher de façon plus stable, garder leur équilibre quand la situation change et utiliser leurs deux mains dans des lieux complexes. La technologie progresse bien, mais elle reste surtout au stade de démonstration et n’est pas encore utilisée partout. Pour les interfaces homme-machine, cela demande des outils de téléopération simples, un bon retour d’effort et des écrans de suivi clairs. Les principales difficultés restent la sécurité près des personnes, le coût élevé d’intégration et le manque de normes communes entre les systèmes.\n\nAtlas de Boston Dynamics (filiale d’Hyundai)\nAtlas est un exemple emblématique de ces avancées, avec des capacités de locomotion et de manipulation impressionnantes, mais encore limitées à des environnements contrôlés.\nCaractéristiques techniques :\n\n56 degrés de liberté, joints à rotation complète 360°\nPortée de 2,3 m, charge utile certifiée 50 kg (110 lbs)\nVision à 360° grâce aux caméras en tête\nRemplacement autonome de batteries pour une opération continue\n\nDéploiements confirmés chez Hyundai (usine RMAC à Savannah, Géorgie) et Google DeepMind. Hyundai prévoit une usine capable de produire 30 000 Atlas par an à l’horizon 2028.\n\n\n\nFigure AI (filiale de Meta)\nFigure AI a déployé son robot Figure 02 dans l’usine BMW de Spartanburg (Caroline du Sud), où il a contribué à l’assemblage de plus de 30 000 véhicules X3 sur 10 mois. BMW déploie désormais le nouveau Figure 03 dans son usine de Leipzig.\n\n\n\n\nTesla Optimus\nTesla a présenté Optimus Gen 2, un humanoïde de 1,75 m pour la manipulation d’objets dans des environnements non structurés. Bien que les démonstrations soient impressionnantes, Tesla n’a pas encore annoncé de déploiement commercial concret. Plusieurs médias ont documenté des démos Optimus potentiellement téléopérées plutôt qu’entièrement autonome."
+  },
+  {
+    "objectID": "27_ihm/robotique.html#humanoïdes-chinois",
+    "href": "27_ihm/robotique.html#humanoïdes-chinois",
+    "title": "État de l’art en robotique (2026)",
+    "section": "1.2. Humanoïdes chinois",
+    "text": "1.2. Humanoïdes chinois\n\n\nLa Chine domine actuellement le monde de la robotique. De nombreux progrès sont obervés, comme une accélération forte sur l’agilité dynamique, la course longue distance et l’industrialisation à grande échelle. L’organisation industrielle du pays permet un passage rapide du prototype à des productions en série, avec des objectifs de production ambitieux. De plus, le rapport performance/prix des robots chinois est très agressif.\n\nUnitree G1/H1\nPlateformes bipèdes réalisant des sauts, mouvements dynamiques et atteignant 15 km/h en course.\n\n\n\n\nMarathon humanoïde de Pékin (2025-2026)\nPremier semi-marathon officiel réservé aux robots bipèdes (21,1 km). Le robot Tien Kung Ultra a remporté l’épreuve en 2h40, tandis que Flash (Honor) a établi un record de 50:26 en autonomie partielle.\n\n\n\n\nAgiBot & Galbot\nArchitectures modulaires avec IA embarquée, visant une production de masse. AgiBot (Shanghai, fondée par un ancien talent « génie » de Huawei) a livré 5 000 humanoïdes en 2025 et produit son 10 000e robot en mars 2026, avec une accélération : les 5 000 derniers ont été fabriqués en seulement 3 mois.\nRecord Guinness, novembre 2025 : L’AgiBot A2 a parcouru 106,286 km en 3 jours (Suzhou → Bund de Shanghai), établissant le record mondial de la plus longue marche jamais effectuée par un robot humanoïde. Le robot n’a jamais été éteint grâce à un système de batteries chaudes remplaçables à la volée.\nEn avril 2026, AgiBot a déployé ses robots G2 dans une usine d’électronique (Longcheer, Nanchang) : les robots assemblent des tablettes avec un taux de succès de 99 % et une intégration en seulement 4 mois.\n\n\n\n\nUBTech Robotics — Première livraison en masse mondiale\nUBTech (Shenzhen, cotée à Hong Kong depuis déc. 2023) a réalisé la première livraison en masse mondiale de robots humanoïdes industriels en novembre 2025 : des centaines de Walker S2 livrés simultanément à BYD, Foxconn, Geely, FAW-Volkswagen et d’autres.\nCaractéristique unique du Walker S2 : il est le premier humanoïde au monde à remplacer sa propre batterie de façon autonome en 3 minutes, permettant un fonctionnement continu 24h/24 sans intervention humaine.\nEn janvier 2026, Airbus a commandé des Walker S2 pour ses sites de production aéronautique — signal fort de confiance d’un acteur occidental majeur."
+  },
+  {
+    "objectID": "27_ihm/robotique.html#bio-inspiration-morphologique-serpents-aquatiques-et-nage-anguilliforme",
+    "href": "27_ihm/robotique.html#bio-inspiration-morphologique-serpents-aquatiques-et-nage-anguilliforme",
+    "title": "État de l’art en robotique (2026)",
+    "section": "4.1. Bio-inspiration morphologique : serpents aquatiques et nage anguilliforme",
+    "text": "4.1. Bio-inspiration morphologique : serpents aquatiques et nage anguilliforme\nDes chercheurs développent des robots serpents aquatiques stabilisés par contrôle morphologique et perception électrique, capables de nager en surface avec une fluidité inspirée des espèces naturelles."
+  },
+  {
+    "objectID": "27_ihm/robotique.html#soft-robots-sous-marins-et-principes-biouniversels",
+    "href": "27_ihm/robotique.html#soft-robots-sous-marins-et-principes-biouniversels",
+    "title": "État de l’art en robotique (2026)",
+    "section": "4.2. Soft robots sous-marins et principes biouniversels",
+    "text": "4.2. Soft robots sous-marins et principes biouniversels\nUne approche émergente extrait des règles de conception transversales à plusieurs espèces (nageoires de manchots, corps fuselés, ventouses) pour créer des robots mous adaptables à différents milieux aquatiques. Des prototypes de préhension spiralée permettent une manipulation robuste sous courant."
+  },
+  {
+    "objectID": "27_ihm/robotique.html#sécurité-et-partage-dautorité",
+    "href": "27_ihm/robotique.html#sécurité-et-partage-dautorité",
+    "title": "État de l’art en robotique (2026) : Perspectives pour les IHM",
+    "section": "7.1. Sécurité et partage d’autorité",
+    "text": "7.1. Sécurité et partage d’autorité\nLa sûreté en interaction humain-robot impose des mécanismes explicites de reprise en main, de limitation dynamique de puissance et de gestion des modes dégradés.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 8 - Interfaces homme-machine et robotique",
+      "État de l'art en robotique (2026) : Perspectives pour les IHM"
+    ]
+  },
+  {
+    "objectID": "27_ihm/robotique.html#explicabilité-et-confiance-opérationnelle",
+    "href": "27_ihm/robotique.html#explicabilité-et-confiance-opérationnelle",
+    "title": "État de l’art en robotique (2026) : Perspectives pour les IHM",
+    "section": "7.2. Explicabilité et confiance opérationnelle",
+    "text": "7.2. Explicabilité et confiance opérationnelle\nLes utilisateurs ont besoin d’indicateurs compréhensibles sur l’intention, l’incertitude et les limites du robot pour calibrer leur confiance.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 8 - Interfaces homme-machine et robotique",
+      "État de l'art en robotique (2026) : Perspectives pour les IHM"
+    ]
+  },
+  {
+    "objectID": "27_ihm/robotique.html#charge-cognitive-et-conception-des-interfaces",
+    "href": "27_ihm/robotique.html#charge-cognitive-et-conception-des-interfaces",
+    "title": "État de l’art en robotique (2026) : Perspectives pour les IHM",
+    "section": "7.3. Charge cognitive et conception des interfaces",
+    "text": "7.3. Charge cognitive et conception des interfaces\nLa multiplication des flux de supervision exige des interfaces hiérarchisées, contextuelles et résistantes à la fatigue décisionnelle.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 8 - Interfaces homme-machine et robotique",
+      "État de l'art en robotique (2026) : Perspectives pour les IHM"
+    ]
+  },
+  {
+    "objectID": "27_ihm/robotique.html#acceptabilité-sociale-éthique-et-régulation",
+    "href": "27_ihm/robotique.html#acceptabilité-sociale-éthique-et-régulation",
+    "title": "État de l’art en robotique (2026) : Perspectives pour les IHM",
+    "section": "7.4. Acceptabilité sociale, éthique et régulation",
+    "text": "7.4. Acceptabilité sociale, éthique et régulation\nL’acceptabilité dépend de la transparence des finalités, du respect de la vie privée, et de l’alignement avec les cadres normatifs et culturels.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 8 - Interfaces homme-machine et robotique",
+      "État de l'art en robotique (2026) : Perspectives pour les IHM"
+    ]
+  },
+  {
+    "objectID": "27_ihm/robotique.html#vidéos-et-démonstrations-institutionnelles",
+    "href": "27_ihm/robotique.html#vidéos-et-démonstrations-institutionnelles",
+    "title": "État de l’art en robotique (2026) : Perspectives pour les IHM",
+    "section": "Vidéos et démonstrations institutionnelles",
+    "text": "Vidéos et démonstrations institutionnelles\n\nBoston Dynamics. (2025). Atlas: Next-Gen Humanoid Robot. YouTube. https://www.youtube.com/watch?v=tF4DML7FIWk\nUnitree Robotics. (2026). G1 Humanoid: Agility & Running Demo. YouTube. https://www.youtube.com/(UnitreeRobotics?)\nUniversal Robots. (2024). e-Series Cobots in Action: Safe Human-Robot Collaboration. YouTube. https://www.youtube.com/watch?v=4b1X2Y3Z4A5\nFigure AI. (2025). Figure 02: Conversational Humanoid. YouTube. https://www.youtube.com/watch?v=5p3QJ6X9Y0I\nTesla. (2024). Optimus Gen 2: Foundation Model-Powered Manipulation. YouTube. https://www.youtube.com/watch?v=7a8B9C0D1E2\nSynchron. (2025). Stentrode BCI: Hands-Free Control of Robotic Arm. YouTube. https://www.youtube.com/watch?v=9c0D1E2F3G4\nIMT Atlantique. (2024). Aquatic Snake Robot. YouTube. https://www.youtube.com/(IMTAtlantique?)\nPliant Energy Systems. (2025). Sea Ray: Amphibious Swimming Robot. https://www.pliantenergy.com",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 8 - Interfaces homme-machine et robotique",
+      "État de l'art en robotique (2026) : Perspectives pour les IHM"
+    ]
+  },
+  {
+    "objectID": "27_ihm/robotique.html#articles-scientifiques-et-techniques",
+    "href": "27_ihm/robotique.html#articles-scientifiques-et-techniques",
+    "title": "État de l’art en robotique (2026) : Perspectives pour les IHM",
+    "section": "Articles scientifiques et techniques",
+    "text": "Articles scientifiques et techniques\n\nTechXplore. (2025). Images: Humanoid robots run a Chinese half-marathon. https://techxplore.com/news/2025-04-images-humanoid-robots-chinese-marathon.html\nL’Usine Digitale. (2026). La Chine en avance dans les robots humanoïdes. https://www.usine-digitale.fr\nWang, Y. et al. (2026). Biouniversal-inspired robotics: Cross-species design rules for underwater soft robots. Nature Machine Intelligence, 8, 44182. https://doi.org/10.1038/s44182-026-00088-x\nBillard, A., & Kragic, D. (2023). Trends and challenges in robot manipulation. Science, 381(6663), eadk5321.\nYang, W. et al. (2025). Vision-Language-Action Models for Embodied AI: A Survey. arXiv preprint arXiv:2503.11245.\nISO/TS 15066:2023. Robots and robotic devices — Collaborative robots.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 8 - Interfaces homme-machine et robotique",
+      "État de l'art en robotique (2026) : Perspectives pour les IHM"
+    ]
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8 - IHM (Cours) – NSI - Première</title>
+<title>État de l’art en robotique (2026) – NSI - Première</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -68,8 +33,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../27_ihm/ihm_exos.html" rel="next">
-<link href="../25_kppv/KNN-TP.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
@@ -89,9 +52,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -371,7 +331,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../27_ihm/ihm_cours.html">Ch. 8 - Interfaces homme-machine et robotique</a></li><li class="breadcrumb-item"><a href="../27_ihm/ihm_cours.html">8 - IHM (Cours)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">État de l’art en robotique (2026)</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -912,16 +872,16 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
  <span class="menu-text">Ch. 8 - Interfaces homme-machine et robotique</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../27_ihm/ihm_cours.html" class="sidebar-item-text sidebar-link active">
+  <a href="../27_ihm/ihm_cours.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">8 - IHM (Cours)</span></a>
   </div>
 </li>
@@ -943,18 +903,46 @@ cookieconsent.run({
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#architecture-dun-système-embarqué" id="toc-architecture-dun-système-embarqué" class="nav-link active" data-scroll-target="#architecture-dun-système-embarqué">Architecture d’un système embarqué</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#robotique-humanoïde-locomotion-dynamique-et-déploiement" id="toc-robotique-humanoïde-locomotion-dynamique-et-déploiement" class="nav-link" data-scroll-target="#robotique-humanoïde-locomotion-dynamique-et-déploiement">1. Robotique humanoïde : locomotion dynamique et déploiement</a>
   <ul class="collapse">
-  <li><a href="#programmation" id="toc-programmation" class="nav-link" data-scroll-target="#programmation">Programmation</a></li>
+  <li><a href="#humanoïdes-occidentaux" id="toc-humanoïdes-occidentaux" class="nav-link" data-scroll-target="#humanoïdes-occidentaux">1.1. Humanoïdes occidentaux</a>
+  <ul class="collapse">
+  <li><a href="#atlas-de-boston-dynamics-filiale-dhyundai" id="toc-atlas-de-boston-dynamics-filiale-dhyundai" class="nav-link" data-scroll-target="#atlas-de-boston-dynamics-filiale-dhyundai">Atlas de Boston Dynamics (filiale d’Hyundai)</a></li>
+  <li><a href="#figure-ai-filiale-de-meta" id="toc-figure-ai-filiale-de-meta" class="nav-link" data-scroll-target="#figure-ai-filiale-de-meta">Figure AI (filiale de Meta)</a></li>
+  <li><a href="#tesla-optimus" id="toc-tesla-optimus" class="nav-link" data-scroll-target="#tesla-optimus">Tesla Optimus</a></li>
   </ul></li>
-  <li><a href="#interface-homme-machine" id="toc-interface-homme-machine" class="nav-link" data-scroll-target="#interface-homme-machine">Interface Homme Machine</a>
+  <li><a href="#humanoïdes-chinois" id="toc-humanoïdes-chinois" class="nav-link" data-scroll-target="#humanoïdes-chinois">1.2. Humanoïdes chinois</a>
   <ul class="collapse">
-  <li><a href="#fiabilité-et-sécurité" id="toc-fiabilité-et-sécurité" class="nav-link" data-scroll-target="#fiabilité-et-sécurité">Fiabilité et sécurité</a></li>
+  <li><a href="#unitree-g1h1" id="toc-unitree-g1h1" class="nav-link" data-scroll-target="#unitree-g1h1">Unitree G1/H1</a></li>
+  <li><a href="#marathon-humanoïde-de-pékin-2025-2026" id="toc-marathon-humanoïde-de-pékin-2025-2026" class="nav-link" data-scroll-target="#marathon-humanoïde-de-pékin-2025-2026">Marathon humanoïde de Pékin (2025-2026)</a></li>
+  <li><a href="#agibot-galbot" id="toc-agibot-galbot" class="nav-link" data-scroll-target="#agibot-galbot">AgiBot &amp; Galbot</a></li>
+  <li><a href="#ubtech-robotics-première-livraison-en-masse-mondiale" id="toc-ubtech-robotics-première-livraison-en-masse-mondiale" class="nav-link" data-scroll-target="#ubtech-robotics-première-livraison-en-masse-mondiale">UBTech Robotics — Première livraison en masse mondiale</a></li>
   </ul></li>
-  <li><a href="#objets-connectés" id="toc-objets-connectés" class="nav-link" data-scroll-target="#objets-connectés">Objets connectés</a>
+  </ul></li>
+  <li><a href="#robots-quadrupèdes-agilité-et-applications-industrielles" id="toc-robots-quadrupèdes-agilité-et-applications-industrielles" class="nav-link" data-scroll-target="#robots-quadrupèdes-agilité-et-applications-industrielles">2. Robots quadrupèdes : agilité et applications industrielles</a>
   <ul class="collapse">
-  <li><a href="#internet-des-objets" id="toc-internet-des-objets" class="nav-link" data-scroll-target="#internet-des-objets">Internet des objets</a></li>
-  <li><a href="#fiabilité-et-sécurité-1" id="toc-fiabilité-et-sécurité-1" class="nav-link" data-scroll-target="#fiabilité-et-sécurité-1">Fiabilité et sécurité</a></li>
+  <li><a href="#boston-dynamics-spot-inspection-industrielle" id="toc-boston-dynamics-spot-inspection-industrielle" class="nav-link" data-scroll-target="#boston-dynamics-spot-inspection-industrielle">Boston Dynamics Spot — Inspection industrielle</a></li>
+  <li><a href="#unitree" id="toc-unitree" class="nav-link" data-scroll-target="#unitree">Unitree</a></li>
+  </ul></li>
+  <li><a href="#cobotique-et-interaction-physique-sécurisée" id="toc-cobotique-et-interaction-physique-sécurisée" class="nav-link" data-scroll-target="#cobotique-et-interaction-physique-sécurisée">3. Cobotique et interaction physique sécurisée</a>
+  <ul class="collapse">
+  <li><a href="#robotique-médicale" id="toc-robotique-médicale" class="nav-link" data-scroll-target="#robotique-médicale">Robotique médicale</a></li>
+  </ul></li>
+  <li><a href="#robots-nageurs-et-plateformes-aquatiques-bio-inspirées" id="toc-robots-nageurs-et-plateformes-aquatiques-bio-inspirées" class="nav-link" data-scroll-target="#robots-nageurs-et-plateformes-aquatiques-bio-inspirées">4. Robots nageurs et plateformes aquatiques bio-inspirées</a>
+  <ul class="collapse">
+  <li><a href="#bio-inspiration-morphologique-serpents-aquatiques-et-nage-anguilliforme" id="toc-bio-inspiration-morphologique-serpents-aquatiques-et-nage-anguilliforme" class="nav-link" data-scroll-target="#bio-inspiration-morphologique-serpents-aquatiques-et-nage-anguilliforme">4.1. Bio-inspiration morphologique : serpents aquatiques et nage anguilliforme</a></li>
+  <li><a href="#soft-robots-sous-marins-et-principes-biouniversels" id="toc-soft-robots-sous-marins-et-principes-biouniversels" class="nav-link" data-scroll-target="#soft-robots-sous-marins-et-principes-biouniversels">4.2. Soft robots sous-marins et principes biouniversels</a></li>
+  </ul></li>
+  <li><a href="#robotique-spatiale" id="toc-robotique-spatiale" class="nav-link" data-scroll-target="#robotique-spatiale">5. Robotique spatiale</a>
+  <ul class="collapse">
+  <li><a href="#perseverance-exploration-martienne-autonome" id="toc-perseverance-exploration-martienne-autonome" class="nav-link" data-scroll-target="#perseverance-exploration-martienne-autonome">Perseverance — Exploration martienne autonome</a></li>
+  </ul></li>
+  <li><a href="#autres-robots" id="toc-autres-robots" class="nav-link" data-scroll-target="#autres-robots">6. Autres robots</a>
+  <ul class="collapse">
+  <li><a href="#general-robotics-lab" id="toc-general-robotics-lab" class="nav-link" data-scroll-target="#general-robotics-lab">General Robotics Lab</a></li>
+  <li><a href="#spherical-robot-joins-police-patrols-in-china" id="toc-spherical-robot-joins-police-patrols-in-china" class="nav-link" data-scroll-target="#spherical-robot-joins-police-patrols-in-china">Spherical robot joins police patrols in China</a></li>
+  <li><a href="#pour-approfondir-la-réflexion" id="toc-pour-approfondir-la-réflexion" class="nav-link" data-scroll-target="#pour-approfondir-la-réflexion">Pour approfondir la réflexion…</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/quarto_PNSI/issues/new" class="toc-action"><i class="bi bi-github"></i>Faire part d'un problème</a></li></ul></div></nav>
@@ -963,9 +951,9 @@ cookieconsent.run({
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../27_ihm/ihm_cours.html">Ch. 8 - Interfaces homme-machine et robotique</a></li><li class="breadcrumb-item"><a href="../27_ihm/ihm_cours.html">8 - IHM (Cours)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">8 - IHM (Cours)</h1>
+<h1 class="title">État de l’art en robotique (2026)</h1>
 </div>
 
 
@@ -982,146 +970,158 @@ cookieconsent.run({
 </header>
 
 
-<section id="architecture-dun-système-embarqué" class="level2">
-<h2 class="anchored" data-anchor-id="architecture-dun-système-embarqué">Architecture d’un système embarqué</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Astuce</span>Définition
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Un <strong>système informatique embarqué</strong> est un système de traitement de l’information autonome ne possédant pas d’entrée et sortie standard comme le clavier et l’écran. Les informations sont reçues de l’extérieur par le biais de <strong>capteurs</strong>, elles sont traitées par un <strong>processeur</strong> et selon le programme du système des actions physiques peuvent être déclenchées avec des <strong>actionneurs</strong>. Les capteurs sont des <strong>périphériques d’entrée</strong> et les actionneurs des <strong>périphériques de sortie</strong>.</p>
-</div>
-</div>
-<p>Les signaux capturés sont <strong>analogiques</strong>, analogues au phénomène : par exemple la rotation de l’axe d’un anémomètre qui mesure la vitesse du vent sur une station météo. Pour être traités par le processeur, ils sont numérisés transformés en un nombre fini d’informations codées par des 0 et des 1 par <strong>échantillonnage</strong> (nombre fini de relevés) et <strong>quantification</strong> (nombre fini de valeurs possibles).</p>
-<p>Les <strong>microcontrôleurs</strong> sont des circuits intégrés qui concentrent une mémoire, un processeur, des entrées-sorties comme un ordinateur, mais se caractérisent par une miniaturisation accrue, une plus faible consommation électrique et des performances moindres, mais suffisantes pour des applications toujours plus nombreuses avec les progrès techniques.</p>
-<p>Les systèmes informatiques embarqués sont utilisés dans tous les domaines : l’industrie (robots), le transport (avionique, automobile, métro …), la médecine (stimulateurs cardiaques, imagerie …), la maison (domotique, appareils ménagers …), les télécommunications (téléphonie …), le monde du travail (contrôle d’accès …), les loisirs (vélo électrique …).</p>
-<p>On parle d’<strong>informatique ubiquitaire</strong> pour désigner cette omniprésence de l’informatique dans notre environnement.</p>
-<p>Les smartphones modernes ne sont pas des microcontrôleurs, mais des ordinateurs miniatures bien plus puissants que les systèmes de guidage des premières missions Apollo qui ont amené l’homme sur la lune ! Ils sont dotés de nombreux capteurs.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="smartphone.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Source : flickr / Intel Free Press"><img src="smartphone.png" class="img-fluid figure-img" style="width:60.0%" alt="Source : flickr / Intel Free Press"></a></p>
-<figcaption><em>Source : flickr / Intel Free Press</em></figcaption>
-</figure>
-</div>
-<section id="programmation" class="level3">
-<h3 class="anchored" data-anchor-id="programmation">Programmation</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="systeme_embarque.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Source : Yassine Haddab Université de Montpellier"><img src="systeme_embarque.png" class="img-fluid figure-img" style="width:60.0%" alt="Source : Yassine Haddab Université de Montpellier"></a></p>
-<figcaption><em>Source : Yassine Haddab Université de Montpellier</em></figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Méthode
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Un algorithme de contrôle fréquent sur un système informatique embarqué consiste en une boucle infinie où s’enchaînent capture d’événements par les émetteurs, traitement puis action par les actionneurs.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Initialiser les actionneurs à leur position de départ</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Tant que Vrai </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    Lire les informations des capteurs</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    Traiter ces informations</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    Calculer des informations sur les actionneurs</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    Transmettre ces informations aux actionneurs</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>Le domaine de la robotique n’est pas nouveau, mais il est actuellement en pleine effervescence, avec des avancées technologiques majeures qui redéfinissent les interactions homme-machine (IHM). En 2026, la robotique se caractérise par une diversification rapide des applications, une intégration accrue de l’intelligence artificielle (IA) et une compétition géopolitique intense, notamment entre les États-Unis, la Chine et l’Europe.</p>
 </section>
-</section>
-<section id="interface-homme-machine" class="level2">
-<h2 class="anchored" data-anchor-id="interface-homme-machine">Interface Homme Machine</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Astuce</span>Définition
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Une <strong>Interface Homme Machine</strong> est un ensemble de moyens physiques (boutons, manettes) ou logiciels (interface graphique) qui permettent à un humain d’échanger des informations avec une machine.</p>
-<p>Les moyens matériels permettant l’interaction sont appelés <strong>périphériques</strong> : on distingue les <strong>périphériques d’entrée</strong> ou de <strong>sortie</strong>.</p>
-<p><a href="https://interstices.info/50-ans-dinteraction-homme-machine-retours-vers-le-futur/">Douglas Engelbart</a> est un des pionniers des IHM en informatique avec son système <em>NLS</em> qui introduit la première souris.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Mise en garde</span>Exercice
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Compléter la légende de la figure ci-dessous représentant différents composants et périphériques d’un ordinateur :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="446px-Personal_computer,_exploded_4.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Source : Gustavb / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)"><img src="446px-Personal_computer,_exploded_4.svg.png" class="img-fluid figure-img" alt="Source : Gustavb / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)"></a></p>
-<figcaption><em>Source : Gustavb / CC BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)</em></figcaption>
-</figure>
-</div>
-</div>
-</div>
-<section id="fiabilité-et-sécurité" class="level3">
-<h3 class="anchored" data-anchor-id="fiabilité-et-sécurité">Fiabilité et sécurité</h3>
+<section id="robotique-humanoïde-locomotion-dynamique-et-déploiement" class="level1">
+<h1>1. Robotique humanoïde : locomotion dynamique et déploiement</h1>
+<section id="humanoïdes-occidentaux" class="level2">
+<h2 class="anchored" data-anchor-id="humanoïdes-occidentaux">1.1. Humanoïdes occidentaux</h2>
+<p>Les humanoïdes occidentaux savent aujourd’hui marcher de façon plus stable, garder leur équilibre quand la situation change et utiliser leurs deux mains dans des lieux complexes. La technologie progresse bien, mais elle reste surtout au stade de démonstration et n’est pas encore utilisée partout. Pour les interfaces homme-machine, cela demande des outils de téléopération simples, un bon retour d’effort et des écrans de suivi clairs. Les principales difficultés restent la sécurité près des personnes, le coût élevé d’intégration et le manque de normes communes entre les systèmes.</p>
+<section id="atlas-de-boston-dynamics-filiale-dhyundai" class="level3">
+<h3 class="anchored" data-anchor-id="atlas-de-boston-dynamics-filiale-dhyundai">Atlas de Boston Dynamics (filiale d’Hyundai)</h3>
+<p>Atlas est un exemple emblématique de ces avancées, avec des capacités de locomotion et de manipulation impressionnantes, mais encore limitées à des environnements contrôlés.</p>
+<p>Caractéristiques techniques :</p>
 <ul>
-<li><p>La <strong>sûreté</strong> est la garantie qu’un système fait ce qu’il doit faire et ne fait pas ce qu’il ne doit pas faire. Les programmes des systèmes embarqués doivent parfois s’exécuter avec des contraintes fortes (manque de ressource, temps de réaction très rapide) et ils ne sont pas toujours développés avec la rigueur nécessaire. Les bugs sont donc fréquents. Parfois bénins (une mauvaise gestion des années bissextiles a provoqué l’arrêt du lecteur MP3 Zune de Microsoft le 31/12/2008), ils peuvent aussi avoir a des conséquences dramatiques : les bugs du Therac 25 (appareil de radiographie) ou du contrôle moteur sur les Toyota Camry ont provoqué plusieurs morts.</p></li>
-<li><p>La <strong>confidentialité</strong> est une problématique majeure des systèmes embarqués qui collectent des données personnelles sur leurs utilisateurs, comme les cartes électroniques de transport en commun.</p></li>
-<li><p>La <strong>sécurité</strong> est souvent un point faible des systèmes embarqués, qui manquent de ressources matérielles, ont des cycles de vie longs sans mise à jour et mettent en jeu des modes de communication sans contact particulièrement vulnérables.</p></li>
+<li>56 degrés de liberté, joints à rotation complète 360°</li>
+<li>Portée de 2,3 m, charge utile certifiée 50 kg (110 lbs)</li>
+<li>Vision à 360° grâce aux caméras en tête</li>
+<li>Remplacement autonome de batteries pour une opération continue</li>
 </ul>
-<p>Par exemple, une voiture ne peut démarrer que si la carte de démarrage se trouve à proximité, car la carte et la voiture partagent un secret commun permettant de déverrouiller le système antidémarrage. <a href="https://interstices.info/la-securite-des-systemes-informatiques-ubiquitaires/">L’attaque par relais</a> permet de déjouer ce protocole en relayant la communication : un pirate se trouve près de la voiture et l’autre près de la carte et par un leurre technologique, ils font croire aux deux parties qu’elles sont à proximité. Tous les systèmes embarqués qui communiquent sans contact (carte bancaire, carte d’accès …) sont vulnérables à cette attaque.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Attaque_par_relais.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Source : Image : Martial Régereau [CC BY-SA 3.0], via Wikimedia Commons"><img src="Attaque_par_relais.png" class="img-fluid figure-img" alt="Source : Image : Martial Régereau [CC BY-SA 3.0], via Wikimedia Commons"></a></p>
-<figcaption><em>Source : Image : Martial Régereau [CC BY-SA 3.0], via Wikimedia Commons</em></figcaption>
-</figure>
-</div>
+<p>Déploiements confirmés chez Hyundai (usine RMAC à Savannah, Géorgie) et Google DeepMind. Hyundai prévoit une usine capable de produire 30 000 Atlas par an à l’horizon 2028.</p>
+<p><iframe src="https://www.youtube.com/embed/tF4DML7FIWk" title="Boston Dynamics Atlas - Next-Gen Humanoid Robot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></p>
+</section>
+<section id="figure-ai-filiale-de-meta" class="level3">
+<h3 class="anchored" data-anchor-id="figure-ai-filiale-de-meta">Figure AI (filiale de Meta)</h3>
+<p>Figure AI a déployé son robot Figure 02 dans l’usine BMW de Spartanburg (Caroline du Sud), où il a contribué à l’assemblage de plus de 30 000 véhicules X3 sur 10 mois. BMW déploie désormais le nouveau Figure 03 dans son usine de Leipzig.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Eu5mYMavctM?si=5AvIPBRyhls7qLHc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="tesla-optimus" class="level3">
+<h3 class="anchored" data-anchor-id="tesla-optimus">Tesla Optimus</h3>
+<p>Tesla a présenté Optimus Gen 2, un humanoïde de 1,75 m pour la manipulation d’objets dans des environnements non structurés. Bien que les démonstrations soient impressionnantes, Tesla n’a pas encore annoncé de déploiement commercial concret. Plusieurs médias ont documenté des démos Optimus potentiellement téléopérées plutôt qu’entièrement autonome.</p>
 </section>
 </section>
-<section id="objets-connectés" class="level2">
-<h2 class="anchored" data-anchor-id="objets-connectés">Objets connectés</h2>
-<section id="internet-des-objets" class="level3">
-<h3 class="anchored" data-anchor-id="internet-des-objets">Internet des objets</h3>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Astuce</span>Définition
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Un <strong>objet connecté</strong> est un système informatique embarqué disposant d’une connexion à un réseau local ou à L’Internet.</p>
-<p>Les Interfaces Homme Machine des objets connectés sont souvent des applications Web disponibles sur Smartphone.</p>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="objet-connecte.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Source : Yassine Haddab Université de Montpellier"><img src="objet-connecte.png" class="img-fluid figure-img" alt="Source : Yassine Haddab Université de Montpellier"></a></p>
-<figcaption><em>Source : Yassine Haddab Université de Montpellier</em></figcaption>
-</figure>
-</div>
-<p>Avec la baisse des coûts des microcontrôleurs et des puces Wifi, les objets connectés se multiplient. Actuellement, il existe plus d’objets que d’humains connectés à Internet et leur nombre va augmenter fortement dans les prochaines années avec la baisse de coût des puces. On parle d’<code>IOT</code> pour <a href="https://fr.wikipedia.org/wiki/Internet_des_objets">Internet Of Things</a> pour désigner l’ensemble des objets connectés à l’Internet.</p>
-<p>On estime à 50 milliards le nombre d’objets connectés en 2020.</p>
+<section id="humanoïdes-chinois" class="level2">
+<h2 class="anchored" data-anchor-id="humanoïdes-chinois">1.2. Humanoïdes chinois</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UTq2o7RQs0A?si=Os1A-5i9sT7F6hwm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p>La Chine domine actuellement le monde de la robotique. De nombreux progrès sont obervés, comme une accélération forte sur l’agilité dynamique, la course longue distance et l’industrialisation à grande échelle. L’organisation industrielle du pays permet un passage rapide du prototype à des productions en série, avec des objectifs de production ambitieux. De plus, le rapport performance/prix des robots chinois est très agressif.</p>
+<section id="unitree-g1h1" class="level3">
+<h3 class="anchored" data-anchor-id="unitree-g1h1">Unitree G1/H1</h3>
+<p>Plateformes bipèdes réalisant des sauts, mouvements dynamiques et atteignant 15 km/h en course.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v1Q4Su54iho?si=Sutr4sSXV2zyd9Je" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
 </section>
-<section id="fiabilité-et-sécurité-1" class="level3">
-<h3 class="anchored" data-anchor-id="fiabilité-et-sécurité-1">Fiabilité et sécurité</h3>
-<p>Les objets connectés permettent d’ajouter de l’intelligence dans notre environnement à tous les niveaux : le corps (mes indicateurs de santé, ma nourriture), la maison (appareils, système de chauffage), les réseaux (électrique, de circulation), les transports (véhicules autonomes), la prévention des risques (incendies) … De plus la collaboration entre objets connectés, leur connexion à des bases de données en ligne, augmente considérablement leur puissance même si chaque objet a des ressources matérielles limitées.</p>
-<p>Néanmoins, les vulnérabilités des systèmes embarqués sont amplifiées s’ils sont connectés.</p>
-<p><a href="https://fr.wikipedia.org/wiki/Cyberattaque_de_2016_contre_Dyn">La cyberattaque d’un serveur DNS majeur</a> par des milliers de caméras de surveillance transformées en bots, a gravement perturbé Internet en octobre 2016. La prise de contrôle à distance par des hackers de la <a href="https://www.wired.com/2015/07/hackers-remotely-kill-jeep-highway/">Jeep Cherokee</a> en 2015 ou des failles détectées dans des stimulateurs cardiaques sont des exemples parmi bien d’autres illustrant le fait que la révolution de l’internet des objets ne pourra se faire sans des progrès sur le plan de leur sécurité.</p>
-<p>Enfin la moisson de données personnelles que peuvent collecter des objets connectés comme les assistants personnels proposés par les <a href="https://fr.wikipedia.org/wiki/GAFAM">GAFAM</a> doit absolument être contrôlée.</p>
+<section id="marathon-humanoïde-de-pékin-2025-2026" class="level3">
+<h3 class="anchored" data-anchor-id="marathon-humanoïde-de-pékin-2025-2026">Marathon humanoïde de Pékin (2025-2026)</h3>
+<p>Premier semi-marathon officiel réservé aux robots bipèdes (21,1 km). Le robot <em>Tien Kung Ultra</em> a remporté l’épreuve en 2h40, tandis que <em>Flash</em> (Honor) a établi un record de 50:26 en autonomie partielle.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GcWspgOJpqo?si=kkxPwpGytWXN9Mfh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="agibot-galbot" class="level3">
+<h3 class="anchored" data-anchor-id="agibot-galbot">AgiBot &amp; Galbot</h3>
+<p>Architectures modulaires avec IA embarquée, visant une production de masse. <strong>AgiBot</strong> (Shanghai, fondée par un ancien talent « génie » de Huawei) a livré <strong>5 000 humanoïdes en 2025</strong> et produit son <strong>10 000e robot en mars 2026</strong>, avec une accélération : les 5 000 derniers ont été fabriqués en seulement 3 mois.</p>
+<p><strong>Record Guinness, novembre 2025 :</strong> L’AgiBot A2 a parcouru <strong>106,286 km en 3 jours</strong> (Suzhou → Bund de Shanghai), établissant le record mondial de la plus longue marche jamais effectuée par un robot humanoïde. Le robot n’a jamais été éteint grâce à un système de batteries chaudes remplaçables à la volée.</p>
+<p>En avril 2026, AgiBot a déployé ses robots <strong>G2</strong> dans une usine d’électronique (Longcheer, Nanchang) : les robots assemblent des tablettes avec un taux de succès de <strong>99 %</strong> et une intégration en seulement <strong>4 mois</strong>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kBGNvPq0Iyg?si=PhPDs4bOB9lXof_C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="ubtech-robotics-première-livraison-en-masse-mondiale" class="level3">
+<h3 class="anchored" data-anchor-id="ubtech-robotics-première-livraison-en-masse-mondiale">UBTech Robotics — Première livraison en masse mondiale</h3>
+<p><strong>UBTech</strong> (Shenzhen, cotée à Hong Kong depuis déc. 2023) a réalisé la <strong>première livraison en masse mondiale de robots humanoïdes industriels</strong> en novembre 2025 : des centaines de <strong>Walker S2</strong> livrés simultanément à BYD, Foxconn, Geely, FAW-Volkswagen et d’autres.</p>
+<p>Caractéristique unique du <strong>Walker S2</strong> : il est le <strong>premier humanoïde au monde à remplacer sa propre batterie de façon autonome en 3 minutes</strong>, permettant un fonctionnement continu 24h/24 sans intervention humaine.</p>
+<p>En janvier 2026, <strong>Airbus</strong> a commandé des Walker S2 pour ses sites de production aéronautique — signal fort de confiance d’un acteur occidental majeur.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mHP1WGlw5Wk?si=99mDEELrA6qFOF05" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+</section>
+</section>
+<section id="robots-quadrupèdes-agilité-et-applications-industrielles" class="level1">
+<h1>2. Robots quadrupèdes : agilité et applications industrielles</h1>
+<p>Les robots quadrupèdes ont atteint une agilité remarquable, avec des capacités de saut, de course et de franchissement d’obstacles. Ils sont de plus en plus utilisés dans des environnements industriels pour des tâches de surveillance, d’inspection et de logistique, notamment dans les zones difficiles d’accès ou dangereuses pour les humains.</p>
+<section id="boston-dynamics-spot-inspection-industrielle" class="level3">
+<h3 class="anchored" data-anchor-id="boston-dynamics-spot-inspection-industrielle">Boston Dynamics Spot — Inspection industrielle</h3>
+<p>Spot est le robot quadrupède de référence pour l’inspection industrielle (usines, chantiers, plateformes pétrolières). Sa commercialisation depuis 2020 en a fait la plateforme la plus déployée dans ce segment.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zFUHi3_oiXk?si=OfqPoFcH5tVsl2bb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bKDhmENcKto?si=Tf3gLU5YhpTzvIX6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="unitree" class="level3">
+<h3 class="anchored" data-anchor-id="unitree">Unitree</h3>
+<p>Unitree a développé une gamme de quadrupèdes (Go1, Go2, Go3) avec des capacités de saut et de course améliorées pour des applications industrielles et de recherche.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ve9USu7zpLU?si=SDcKr7rCZsm9vQPD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+</section>
+<section id="cobotique-et-interaction-physique-sécurisée" class="level1">
+<h1>3. Cobotique et interaction physique sécurisée</h1>
+<p>Le terme <em>cobotique</em> désigne la collaboration homme-robot : interaction directe ou téléopérée entre homme et robot pour atteindre un objectif commun. Un cobot (ou robot collaboratif) est un type de robot conçu pour pouvoir être utilisé dans le même espace de travail que les opérateurs humains sans risque pour ces derniers, même sans barrière de protection physique, grâce à des capteurs et de programmes (intégrant éventuellement de l’intelligence artificielle) déclenchant un ralentissement du mouvement ou un arrêt complet si un risque de collision est détecté.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sJREGiW6RM4?si=BbfRWLax4ym82lR6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<section id="robotique-médicale" class="level3">
+<h3 class="anchored" data-anchor-id="robotique-médicale">Robotique médicale</h3>
+<p>Le système Da Vinci d’Intuitive Surgical est la référence mondiale de la chirurgie robotique téléopérée. Principe de fonctionnement :</p>
+<ul>
+<li>Le chirurgien pilote depuis une console ergonomique avec vue 3D haute définition</li>
+<li>Mouvements des mains traduits avec filtration des tremblements</li>
+<li>4 bras articulés : 3 pour les instruments, 1 pour la caméra</li>
+<li>Incisions de la taille d’une pièce de monnaie</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TGjnb86HndU?si=n5ZWJJyGiupG6tMN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p>Une autre application médicale des robots collaboratifs est la rééducation assistée : des exosquelettes comme le <strong>Lokomat</strong> de Hocoma permettent une thérapie de marche intensive pour les patients atteints de lésions médullaires ou d’AVC, avec un feedback en temps réel pour ajuster les paramètres de mouvement.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8FZWYGm_mEc?si=EsX7WcbHKnthq0Ub" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+</section>
+<section id="robots-nageurs-et-plateformes-aquatiques-bio-inspirées" class="level1">
+<h1>4. Robots nageurs et plateformes aquatiques bio-inspirées</h1>
+<p>L’exploration sous-marine, la surveillance environnementale et les opérations de sauvetage motivent le développement de robots nageurs autonomes. Ceux-ci sont encore le plus souvent de prototypes de recherche. Deux approches dominent en 2025-2026 :</p>
+<section id="bio-inspiration-morphologique-serpents-aquatiques-et-nage-anguilliforme" class="level2">
+<h2 class="anchored" data-anchor-id="bio-inspiration-morphologique-serpents-aquatiques-et-nage-anguilliforme">4.1. Bio-inspiration morphologique : serpents aquatiques et nage anguilliforme</h2>
+<p>Des chercheurs développent des robots serpents aquatiques stabilisés par contrôle morphologique et perception électrique, capables de nager en surface avec une fluidité inspirée des espèces naturelles.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3DR9jNiErf8?si=cb5wUrQ7mGu7TqDN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="soft-robots-sous-marins-et-principes-biouniversels" class="level2">
+<h2 class="anchored" data-anchor-id="soft-robots-sous-marins-et-principes-biouniversels">4.2. Soft robots sous-marins et principes biouniversels</h2>
+<p>Une approche émergente extrait des règles de conception transversales à plusieurs espèces (nageoires de manchots, corps fuselés, ventouses) pour créer des robots mous adaptables à différents milieux aquatiques. Des prototypes de préhension spiralée permettent une manipulation robuste sous courant.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i_E0EYjBtTg?si=iR2xA821Wi3Ah99o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+</section>
+<section id="robotique-spatiale" class="level1">
+<h1>5. Robotique spatiale</h1>
+<section id="perseverance-exploration-martienne-autonome" class="level3">
+<h3 class="anchored" data-anchor-id="perseverance-exploration-martienne-autonome">Perseverance — Exploration martienne autonome</h3>
+<p>Le rover Perseverance (NASA, en mission depuis février 2021) continue son exploration du cratère Jezero sur Mars. En 2025, il a collecté des échantillons présentant ce qui pourrait être des traces d’une vie passée.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wd3EEd2nz14?si=9Z2vMl1-Ubc4WmAm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p>ExoMars / Rosalind Franklin — Mission ESA vers Mars</p>
+<p>Le rover Rosalind Franklin (ESA/Thales Alenia Space) est prévu pour un lancement en octobre 2028 et un atterrissage le 30 novembre 2030 sur Oxia Planum.23</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aj7xNrbfCKw?si=L9iJOuGDg5orh-KH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+</section>
+<section id="autres-robots" class="level1">
+<h1>6. Autres robots</h1>
+<section id="general-robotics-lab" class="level3">
+<h3 class="anchored" data-anchor-id="general-robotics-lab">General Robotics Lab</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Nd-I4YNQEuY?si=-4fUJADdpPGRE5WY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="spherical-robot-joins-police-patrols-in-china" class="level3">
+<h3 class="anchored" data-anchor-id="spherical-robot-joins-police-patrols-in-china">Spherical robot joins police patrols in China</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9HkTMNukOwk?si=-zu7wgniIRwTp9Rn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="pour-approfondir-la-réflexion" class="level3">
+<h3 class="anchored" data-anchor-id="pour-approfondir-la-réflexion">Pour approfondir la réflexion…</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4ZP943-gARQ?si=dEITsM-lMm35zIZ_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
 
 
 </section>
@@ -1543,18 +1543,6 @@ cookieconsent.run({
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../25_kppv/KNN-TP.html" class="pagination-link" aria-label="7.5 - TP KNN : Reconnaissance optique de chiffres">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">7.5 - TP KNN : Reconnaissance optique de chiffres</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../27_ihm/ihm_exos.html" class="pagination-link" aria-label="Activités">
-        <span class="nav-page-text">Activités</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1697,38 +1685,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
