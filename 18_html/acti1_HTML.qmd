@@ -30,7 +30,7 @@ Lorsque vous chargez la page web, celle-ci se trouve physiquement enregistrée s
 
 Cette page, une fois reçue par votre navigateur dans l'ordinateur local, appelé **client**, est lue par le navigateur qui interprète le langage HTML et produit l'affichage correspondant.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png)
+![](modele-client-serveur.png)
 
 Il s'agit d'un premier exemple de dialogue **client-serveur**, cette notion sera approfondie dans la suite.
 :::

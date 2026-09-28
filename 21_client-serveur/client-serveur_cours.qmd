@@ -2,7 +2,7 @@
 title: "Cours (4) - Le protocole HTTP et l'architecture client-serveur"
 ---
 
-![logo HTTP](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_logo.svg/640px-HTTP_logo.svg.png){width="15%"}
+![logo HTTP](http-logo.svg){width="15%"}
 
 **HTTP** signifie *HyperText Transfer Protocol* : avec le langage HTML et les adresses web (URL), ce protocole est l'une des trois fondations du World Wide Web.
 
@@ -19,7 +19,7 @@ De façon schématique, Internet fonctionne selon le modèle d'architecture clie
 
 Remarquons que le serveur reçoit simultanément des requêtes de plusieurs clients.
 
-![Architecture client - serveur](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png){width="50%"}
+![Architecture client - serveur](modele-client-serveur.png){width="50%"}
 
 **Le protocole HTTP est donc l'ensemble des règles qui permettent le dialogue entre le serveur et les clients.**
 
@@ -37,11 +37,11 @@ Par défaut, le protocole HTTP n'est pas sécurisé, les données (texte de la r
 ## Remarque
 En réalité, le client est également connecté à plusieurs serveurs. Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus. Ces différents éléments proviennent souvent de différents serveurs.
 
-![](https://mdn.github.io/shared-assets/images/diagrams/http/overview/fetching-a-page.svg)
+![](fetching-a-page.svg)
 
 Autre simplification effectuée dans ce cours : en réalité, plusieurs machines se trouvent sur le chemin de l'information entre le client et le serveur. Ces machines sont désignées de façon générique sous le terme **proxies**. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme caches.
 
-![](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
+![](client-server-chain.svg)
 <!--  -->
 :::
 

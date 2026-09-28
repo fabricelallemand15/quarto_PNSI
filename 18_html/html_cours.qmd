@@ -16,7 +16,7 @@ Le langage HTML a vu le jour en 1991 et fut créé à partir d'un autre langage 
 
 Plusieurs évolutions du langage ont ensuite été développées. Depuis 2014, la version HTML5 est la version officiellement recommandée pour la rédaction de pages Web.
 
-![logo HTML 5](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/langfr-1024px-HTML5_logo_and_wordmark.svg.png){width="20%"}
+![logo HTML 5](html5-logo.svg){width="20%"}
 
 ## 1. Notion de balise
 

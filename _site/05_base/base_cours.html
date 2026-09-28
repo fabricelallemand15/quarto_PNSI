@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.1">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -44,14 +44,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc6d6016adaf1c7a86dcaac46e77afcc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-36444e392d2fb3c2a85f57417f5a8c5a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc6d6016adaf1c7a86dcaac46e77afcc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-ce627959744dbe174f47eef0b696c0dd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-cf885d0f3921957c9354b0b86a3d537f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -103,21 +103,54 @@ cookieconsent.run({
 </script> 
   
 
-<!-- Matomo -->
-<script>
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="//sitelf.fr/matomo/";
-      _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '3']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
+  <script defer="" src="../libs/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-  <noscript></noscript></head><body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+  <link rel="stylesheet" href="../libs/katex/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -279,44 +312,7 @@ cookieconsent.run({
     } else {
       toggleColorMode(false);
     }
-  </script><p><img referrerpolicy="no-referrer-when-downgrade" src="//sitelf.fr/matomo/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p>
-  <!-- End Matomo Code -->
-  
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
-
-
-
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -916,7 +912,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../27_ihm/ihm_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">8 - IHM (Cours)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -941,8 +937,8 @@ window.Quarto = {
   <li><a href="#la-base-10" id="toc-la-base-10" class="nav-link" data-scroll-target="#la-base-10">2. La base 10</a></li>
   <li><a href="#généralisation" id="toc-généralisation" class="nav-link" data-scroll-target="#généralisation">3. Généralisation</a>
   <ul class="collapse">
-  <li><a href="#passage-de-la-base-b-à-la-base-10" id="toc-passage-de-la-base-b-à-la-base-10" class="nav-link" data-scroll-target="#passage-de-la-base-b-à-la-base-10">Passage de la base <span class="math inline">\(b\)</span> à la base 10</a></li>
-  <li><a href="#passage-de-la-base-10-à-la-base-b" id="toc-passage-de-la-base-10-à-la-base-b" class="nav-link" data-scroll-target="#passage-de-la-base-10-à-la-base-b">Passage de la base 10 à la base <span class="math inline">\(b\)</span></a></li>
+  <li><a href="#passage-de-la-base-b-à-la-base-10" id="toc-passage-de-la-base-b-à-la-base-10" class="nav-link" data-scroll-target="#passage-de-la-base-b-à-la-base-10">Passage de la base <span class="math inline">b</span> à la base 10</a></li>
+  <li><a href="#passage-de-la-base-10-à-la-base-b" id="toc-passage-de-la-base-10-à-la-base-b" class="nav-link" data-scroll-target="#passage-de-la-base-10-à-la-base-b">Passage de la base 10 à la base <span class="math inline">b</span></a></li>
   </ul></li>
   <li><a href="#la-base-2" id="toc-la-base-2" class="nav-link" data-scroll-target="#la-base-2">4. La base 2</a>
   <ul class="collapse">
@@ -954,7 +950,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#chiffres-de-poids-fort-de-poids-faible" id="toc-chiffres-de-poids-fort-de-poids-faible" class="nav-link" data-scroll-target="#chiffres-de-poids-fort-de-poids-faible">Chiffres de poids fort, de poids faible</a></li>
   <li><a href="#multiplier-par-la-base" id="toc-multiplier-par-la-base" class="nav-link" data-scroll-target="#multiplier-par-la-base">Multiplier par la base</a></li>
-  <li><a href="#combien-de-nombres-représentables-sur-n-bits" id="toc-combien-de-nombres-représentables-sur-n-bits" class="nav-link" data-scroll-target="#combien-de-nombres-représentables-sur-n-bits">Combien de nombres représentables sur <span class="math inline">\(n\)</span> bits ?</a></li>
+  <li><a href="#combien-de-nombres-représentables-sur-n-bits" id="toc-combien-de-nombres-représentables-sur-n-bits" class="nav-link" data-scroll-target="#combien-de-nombres-représentables-sur-n-bits">Combien de nombres représentables sur <span class="math inline">n</span> bits ?</a></li>
   </ul></li>
   <li><a href="#addition-posée-en-binaire" id="toc-addition-posée-en-binaire" class="nav-link" data-scroll-target="#addition-posée-en-binaire">7. Addition posée en binaire</a></li>
   </ul>
@@ -993,7 +989,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="la-base-10">2. La base 10</h2>
 <p>La représentation usuelle des nombres est une représentation <strong>décimale</strong> et <strong>positionnelle</strong>. Cela signifie :</p>
 <ol type="1">
-<li><p>que les nombres sont représentés par une séquence de <em>chiffres</em> de <span class="math inline">\(0\)</span> à <span class="math inline">\(9\)</span> inclus. Il y a bien <em>dix</em> chiffres différents utilisés, d’où le terme <em>décimal</em> ;</p></li>
+<li><p>que les nombres sont représentés par une séquence de <em>chiffres</em> de <span class="math inline">0</span> à <span class="math inline">9</span> inclus. Il y a bien <em>dix</em> chiffres différents utilisés, d’où le terme <em>décimal</em> ;</p></li>
 <li><p>que la <em>position</em> de chaque chiffre dans la séquence permet d’associer ce chiffre à une <em>puissance de 10</em>.</p></li>
 </ol>
 <p>Dans cette représentation usuelle, 10 est appelé la <strong>base</strong>. On parle aussi de représentation en base 10.</p>
@@ -1008,30 +1004,30 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Par exemple, la représentation :</p>
-<p><span class="math display">\[1234\]</span></p>
+<p><span class="math display">1234</span></p>
 <p>signifie que le nombre est composé de:</p>
 <ul>
-<li><span class="math inline">\(4\)</span> unités, ou <span class="math inline">\(4\times 10^0\)</span>;</li>
-<li><span class="math inline">\(3\)</span> dizaines, ou <span class="math inline">\(3\times 10^1\)</span>;</li>
-<li><span class="math inline">\(2\)</span> centaines, ou <span class="math inline">\(2\times 10^2\)</span>;</li>
-<li><span class="math inline">\(1\)</span> millier, ou <span class="math inline">\(1\times 10^3\)</span>;</li>
+<li><span class="math inline">4</span> unités, ou <span class="math inline">4\times 10^0</span>;</li>
+<li><span class="math inline">3</span> dizaines, ou <span class="math inline">3\times 10^1</span>;</li>
+<li><span class="math inline">2</span> centaines, ou <span class="math inline">2\times 10^2</span>;</li>
+<li><span class="math inline">1</span> millier, ou <span class="math inline">1\times 10^3</span>;</li>
 </ul>
-<p>Ce qui s’écrit : <span class="math inline">\(1234 = 1\times 10^3 + 2\times 10^2 + 3\times 10^1 + 4\times 10^0\)</span></p>
+<p>Ce qui s’écrit : <span class="math inline">1234 = 1\times 10^3 + 2\times 10^2 + 3\times 10^1 + 4\times 10^0</span></p>
 </div>
 </div>
-<p>On voit donc que les puissances de <span class="math inline">\(10\)</span> associées aux différentes positions (aux différents chiffres) vont en décroissant quand on lit le nombre de gauche à droite, et que la puissance <span class="math inline">\(10^0\)</span> correspond au chiffre des unités.</p>
-<p>On note également que la base donne le nombre de chiffres que l’on peut utiliser pour représenter les nombres. En base 10, on peut utiliser 10 chiffres différents, à savoir les chiffres de <span class="math inline">\(0\)</span> à <span class="math inline">\(9\)</span> inclus.</p>
+<p>On voit donc que les puissances de <span class="math inline">10</span> associées aux différentes positions (aux différents chiffres) vont en décroissant quand on lit le nombre de gauche à droite, et que la puissance <span class="math inline">10^0</span> correspond au chiffre des unités.</p>
+<p>On note également que la base donne le nombre de chiffres que l’on peut utiliser pour représenter les nombres. En base 10, on peut utiliser 10 chiffres différents, à savoir les chiffres de <span class="math inline">0</span> à <span class="math inline">9</span> inclus.</p>
 </section>
 <section id="généralisation" class="level2">
 <h2 class="anchored" data-anchor-id="généralisation">3. Généralisation</h2>
-<p>Ces idées se généralisent dans n’importe quelle base. Fixons à partir de maintenant une base <span class="math inline">\(b\geq 2\)</span>.</p>
-<p>Nous allons maintenant rencontrer des nombres écrits dans différentes bases. Pour éviter les confusions, nous indiquerons la base utilisée en indice. Le nombre de l’exemple ci-dessous s’écrit donc <span class="math inline">\(1234_{10}\)</span>.</p>
-<p>En base <span class="math inline">\(b\)</span>, nous utiliserons <span class="math inline">\(b\)</span> chiffres : <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, …, <span class="math inline">\(b-1\)</span>.</p>
+<p>Ces idées se généralisent dans n’importe quelle base. Fixons à partir de maintenant une base <span class="math inline">b\geq 2</span>.</p>
+<p>Nous allons maintenant rencontrer des nombres écrits dans différentes bases. Pour éviter les confusions, nous indiquerons la base utilisée en indice. Le nombre de l’exemple ci-dessous s’écrit donc <span class="math inline">1234_{10}</span>.</p>
+<p>En base <span class="math inline">b</span>, nous utiliserons <span class="math inline">b</span> chiffres : <span class="math inline">0</span>, <span class="math inline">1</span>, <span class="math inline">2</span>, …, <span class="math inline">b-1</span>.</p>
 <p>Le nombre :</p>
-<p><span class="math display">\[{d_n\cdots d_0}_b\]</span></p>
+<p><span class="math display">{d_n\cdots d_0}_b</span></p>
 <p>représente la valeur :</p>
-<p><span class="math display">\[N = d_n\times b^n + d_{n-1}\times b^{n-1}+\cdots+d_0\times b^0\]</span></p>
-<p>où tous les <span class="math inline">\(d_i\)</span> sont des chiffres dans <span class="math inline">\(\{0,\ldots b-1\}\)</span>.</p>
+<p><span class="math display">N = d_n\times b^n + d_{n-1}\times b^{n-1}+\cdots+d_0\times b^0</span></p>
+<p>où tous les <span class="math inline">d_i</span> sont des chiffres dans <span class="math inline">\{0,\ldots b-1\}</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1131,9 +1127,9 @@ window.Quarto = {
 </div>
 </div>
 <section id="passage-de-la-base-b-à-la-base-10" class="level3">
-<h3 class="anchored" data-anchor-id="passage-de-la-base-b-à-la-base-10">Passage de la base <span class="math inline">\(b\)</span> à la base 10</h3>
-<p>Pour passer de la base <span class="math inline">\(b\)</span> à la base 10, c’est facile, il suffit d’utiliser la définition :</p>
-<p><span class="math display">\[{d_n\cdots d_0}_b = (d_n\times b^n + d_{n-1}\times b^{n-1}+\cdots+d_0\times b^0)_{10}\]</span></p>
+<h3 class="anchored" data-anchor-id="passage-de-la-base-b-à-la-base-10">Passage de la base <span class="math inline">b</span> à la base 10</h3>
+<p>Pour passer de la base <span class="math inline">b</span> à la base 10, c’est facile, il suffit d’utiliser la définition :</p>
+<p><span class="math display">{d_n\cdots d_0}_b = (d_n\times b^n + d_{n-1}\times b^{n-1}+\cdots+d_0\times b^0)_{10}</span></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1145,14 +1141,14 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>Exemple avec la base 5.</p>
-<p>Considérons le nombre <span class="math inline">\(N=134_5\)</span>. Par définition, on a :</p>
-<p><span class="math display">\[N=4\times 5^0 + 3\times 5^1 + 1\times 5^2 = 4+15+25=44_{10}\]</span></p>
+<p>Considérons le nombre <span class="math inline">N=134_5</span>. Par définition, on a :</p>
+<p><span class="math display">N=4\times 5^0 + 3\times 5^1 + 1\times 5^2 = 4+15+25=44_{10}</span></p>
 </div>
 </div>
 </section>
 <section id="passage-de-la-base-10-à-la-base-b" class="level3">
-<h3 class="anchored" data-anchor-id="passage-de-la-base-10-à-la-base-b">Passage de la base 10 à la base <span class="math inline">\(b\)</span></h3>
-<p>C’est un peu plus difficile. Pour convertir un nombre donné en base 10 dans une base <span class="math inline">\(b\)</span>, on procède par <strong>divisions euclidiennes successives par <span class="math inline">\(b\)</span></strong>. Les restes obtenus sont les chiffres de l’écriture du nombre en base <span class="math inline">\(b\)</span>.</p>
+<h3 class="anchored" data-anchor-id="passage-de-la-base-10-à-la-base-b">Passage de la base 10 à la base <span class="math inline">b</span></h3>
+<p>C’est un peu plus difficile. Pour convertir un nombre donné en base 10 dans une base <span class="math inline">b</span>, on procède par <strong>divisions euclidiennes successives par <span class="math inline">b</span></strong>. Les restes obtenus sont les chiffres de l’écriture du nombre en base <span class="math inline">b</span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1163,11 +1159,11 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>On reste avec <span class="math inline">\(b=5\)</span>. Soit <span class="math inline">\(N=64_{10}\)</span> : on souhaite écrire <span class="math inline">\(N\)</span> en base 5.</p>
+<p>On reste avec <span class="math inline">b=5</span>. Soit <span class="math inline">N=64_{10}</span> : on souhaite écrire <span class="math inline">N</span> en base 5.</p>
 <p>On effectue pour cela la suite de divisions suivante :</p>
 <p><a href="chgt_base.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="chgt_base.svg" class="img-fluid"></a></p>
 <p>On continue les divisions successives jusqu’à obtenir un quotient nul.</p>
-<p>Les restes successifs (sur fond bleu) forment le nombre en base 5, <strong>en les lisant de la droite vers la gauche</strong> : <span class="math inline">\(64_{10}=224_5\)</span>.</p>
+<p>Les restes successifs (sur fond bleu) forment le nombre en base 5, <strong>en les lisant de la droite vers la gauche</strong> : <span class="math inline">64_{10}=224_5</span>.</p>
 </div>
 </div>
 <p>Voyons maintenant les exemples de la base 2 et de la base 16 qui sont les plus utilisées en informatique.</p>
@@ -1259,15 +1255,15 @@ window.Quarto = {
 <section id="conversion-de-la-base-2-à-la-base-10" class="level3">
 <h3 class="anchored" data-anchor-id="conversion-de-la-base-2-à-la-base-10">Conversion de la base 2 à la base 10</h3>
 <p>Dans ce sens, la conversion est facile, il suffit d’appliquer la définition.</p>
-<p>Prenons le nombre <span class="math inline">\(1101\; 0011_2\)</span>. Il s’étale sur 8 bits, on applique la méthode générale :</p>
-<p><span class="math inline">\(1101\; 0011_2 = 1\times 2^7 + 1\times 2^6 + 0\times 2^5 + 1\times 2^4 + 0\times 2^3 + 0\times 2^2 + 1\times 2^1 + 1\times 2^0 = 211_{10}\)</span>.</p>
+<p>Prenons le nombre <span class="math inline">1101\; 0011_2</span>. Il s’étale sur 8 bits, on applique la méthode générale :</p>
+<p><span class="math inline">1101\; 0011_2 = 1\times 2^7 + 1\times 2^6 + 0\times 2^5 + 1\times 2^4 + 0\times 2^3 + 0\times 2^2 + 1\times 2^1 + 1\times 2^0 = 211_{10}</span>.</p>
 </section>
 <section id="conversion-de-la-base-10-à-la-base-2" class="level3">
 <h3 class="anchored" data-anchor-id="conversion-de-la-base-10-à-la-base-2">Conversion de la base 10 à la base 2</h3>
 <p>On procède par divisions euclidiennes successives.</p>
-<p>Convertissons <span class="math inline">\(47_{10}\)</span> en base 2 :</p>
+<p>Convertissons <span class="math inline">47_{10}</span> en base 2 :</p>
 <p><a href="chgt_base2.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="chgt_base2.svg" class="img-fluid"></a></p>
-<p>On a donc <span class="math inline">\(47_{10}=10\;1111_2\)</span>.</p>
+<p>On a donc <span class="math inline">47_{10}=10\;1111_2</span>.</p>
 </section>
 </section>
 <section id="la-base-16" class="level2">
@@ -1365,7 +1361,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>On observe que <strong>tous</strong> les chiffres de la base 16 sont <strong>tous</strong> les nombres que l’on peut coder en binaire sur 4 bits. Dans l’écriture en base 2 d’un nombre, on a vu que les bits sont regroupés par quatre pour plus de lisibilité : <span class="math inline">\(1101\; 0011_2\)</span>. Chaque groupe de quatre correspond donc à un chiffre en base 16. On a donc <span class="math inline">\(1101\; 0011_2 = D3_{16}\)</span>.</p>
+<p>On observe que <strong>tous</strong> les chiffres de la base 16 sont <strong>tous</strong> les nombres que l’on peut coder en binaire sur 4 bits. Dans l’écriture en base 2 d’un nombre, on a vu que les bits sont regroupés par quatre pour plus de lisibilité : <span class="math inline">1101\; 0011_2</span>. Chaque groupe de quatre correspond donc à un chiffre en base 16. On a donc <span class="math inline">1101\; 0011_2 = D3_{16}</span>.</p>
 <p>Les méthodes de conversion restent les mêmes.</p>
 </section>
 <section id="quelques-remarques-pour-finir" class="level2">
@@ -1387,19 +1383,19 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Dans toute base <span class="math inline">\(b\)</span>, ajouter <span class="math inline">\(k\)</span> zéros <strong>à droite</strong> revient à <strong>multiplier</strong> par <span class="math inline">\(b^k\)</span>.</p>
+<p>Dans toute base <span class="math inline">b</span>, ajouter <span class="math inline">k</span> zéros <strong>à droite</strong> revient à <strong>multiplier</strong> par <span class="math inline">b^k</span>.</p>
 </div>
 </div>
 <p>Par exemple, en binaire, multiplier par 2 revient à ajouter un zéro à la fin du nombre tout comme on ajoute un zéro à la fin du nombre écrit en base 10 quand on la multiplie par 10.</p>
 </section>
 <section id="combien-de-nombres-représentables-sur-n-bits" class="level3">
-<h3 class="anchored" data-anchor-id="combien-de-nombres-représentables-sur-n-bits">Combien de nombres représentables sur <span class="math inline">\(n\)</span> bits ?</h3>
+<h3 class="anchored" data-anchor-id="combien-de-nombres-représentables-sur-n-bits">Combien de nombres représentables sur <span class="math inline">n</span> bits ?</h3>
 <p>Enfin, l’observation suivante aura toute son importance dans la suite.</p>
-<p>Considérons par exemple la base 2 : combien de nombres différents peut-on écrire avec <span class="math inline">\(n\)</span> bits ?</p>
-<p>Chaque bit ayant deux valeurs possibles (0 ou 1), nous obtenons <span class="math inline">\(2^n\)</span> nombres distincts.</p>
-<p><span class="math display">\[\underbrace{0\cdots 0_2}_{n\text{ chiffres}} = 0\]</span></p>
+<p>Considérons par exemple la base 2 : combien de nombres différents peut-on écrire avec <span class="math inline">n</span> bits ?</p>
+<p>Chaque bit ayant deux valeurs possibles (0 ou 1), nous obtenons <span class="math inline">2^n</span> nombres distincts.</p>
+<p><span class="math display">\underbrace{0\cdots 0_2}_{n\text{ chiffres}} = 0</span></p>
 <p>à:</p>
-<p><span class="math display">\[\underbrace{1\cdots 1_b}_{n\text{ chiffres}} = 2^n-1.\]</span></p>
+<p><span class="math display">\underbrace{1\cdots 1_b}_{n\text{ chiffres}} = 2^n-1.</span></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1410,7 +1406,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>En base <span class="math inline">\(2\)</span>, il y a <span class="math inline">\(2^n\)</span> nombres (entiers positifs) représentables sur <span class="math inline">\(n\)</span> bits : les nombres de <span class="math inline">\(0\)</span> à <span class="math inline">\(2^n-1\)</span>.</p>
+<p>En base <span class="math inline">2</span>, il y a <span class="math inline">2^n</span> nombres (entiers positifs) représentables sur <span class="math inline">n</span> bits : les nombres de <span class="math inline">0</span> à <span class="math inline">2^n-1</span>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -1423,7 +1419,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Démontrer que <span class="math inline">\(\underbrace{1\cdots 1_2}_{n\text{ chiffres}} = 2^n-1.\)</span></p>
+<p>Démontrer que <span class="math inline">\underbrace{1\cdots 1_2}_{n\text{ chiffres}} = 2^n-1.</span></p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -1438,11 +1434,11 @@ window.Quarto = {
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Nous allons démontrer le résultat général en base <span class="math inline">\(b\)</span>.</p>
-<p>On a : <span class="math inline">\(\underbrace{(b-1)\cdots (b-1)_b}_{n\text{ chiffres}} = (b-1)\times b^{n-1}+\ldots+(b-1)\times b^1+(b-1)\times b^0\)</span>. D’où, en développant chacun des produits :</p>
-<p><span class="math display">\[\underbrace{(b-1)\cdots (b-1)_b}_{n\text{ chiffres}} = b^{n}-b^{n-1}+b^{n-1}-b^{n-2}+\ldots+b^2-b+b-1.\]</span></p>
+<p>Nous allons démontrer le résultat général en base <span class="math inline">b</span>.</p>
+<p>On a : <span class="math inline">\underbrace{(b-1)\cdots (b-1)_b}_{n\text{ chiffres}} = (b-1)\times b^{n-1}+\ldots+(b-1)\times b^1+(b-1)\times b^0</span>. D’où, en développant chacun des produits :</p>
+<p><span class="math display">\underbrace{(b-1)\cdots (b-1)_b}_{n\text{ chiffres}} = b^{n}-b^{n-1}+b^{n-1}-b^{n-2}+\ldots+b^2-b+b-1.</span></p>
 <p>Les termes se simplifient tous, sauf le premier et le dernier. On a donc :</p>
-<p><span class="math display">\[\underbrace{(b-1)\cdots (b-1)_b}_{n\text{ chiffres}} = b^n-1.\]</span></p>
+<p><span class="math display">\underbrace{(b-1)\cdots (b-1)_b}_{n\text{ chiffres}} = b^n-1.</span></p>
 </div>
 </div>
 </div>
@@ -1452,14 +1448,14 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="addition-posée-en-binaire">7. Addition posée en binaire</h2>
 <p>On peut poser une addition en base 2 avec la même technique que pour l’addition des nombres écrits en base 10. L’addition des bits suit les règles suivantes :</p>
 <ul>
-<li><span class="math inline">\(0+0\)</span> donne <span class="math inline">\(0\)</span> avec une retenue égale à <span class="math inline">\(0\)</span> ;</li>
-<li><span class="math inline">\(0+1\)</span> donne <span class="math inline">\(1\)</span> avec une retenue égale à <span class="math inline">\(0\)</span> ;</li>
-<li><span class="math inline">\(1+0\)</span> donne <span class="math inline">\(1\)</span> avec une retenue égale à <span class="math inline">\(0\)</span> ;</li>
-<li><span class="math inline">\(1+1\)</span> donne <span class="math inline">\(0\)</span> avec une retenue égale à <span class="math inline">\(1\)</span>.</li>
+<li><span class="math inline">0+0</span> donne <span class="math inline">0</span> avec une retenue égale à <span class="math inline">0</span> ;</li>
+<li><span class="math inline">0+1</span> donne <span class="math inline">1</span> avec une retenue égale à <span class="math inline">0</span> ;</li>
+<li><span class="math inline">1+0</span> donne <span class="math inline">1</span> avec une retenue égale à <span class="math inline">0</span> ;</li>
+<li><span class="math inline">1+1</span> donne <span class="math inline">0</span> avec une retenue égale à <span class="math inline">1</span>.</li>
 </ul>
-<p>Exemple de l’addition de <span class="math inline">\(11_{10}=1011_2\)</span> et de <span class="math inline">\(13_{10}=1101_2\)</span> (les retenues sont en rouge) :</p>
+<p>Exemple de l’addition de <span class="math inline">11_{10}=1011_2</span> et de <span class="math inline">13_{10}=1101_2</span> (les retenues sont en rouge) :</p>
 <p><a href="add_bin3.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="add_bin3.svg" class="img-fluid"></a></p>
-<p>La somme obtenue <span class="math inline">\(1\;1000_2\)</span> correspond bien à l’entier <span class="math inline">\(24_{10}\)</span> codé en binaire. On remarque qu’il a fallu un bit supplémentaire pour coder la somme. Si on travaille avec une taille d’entiers fixe de 4 bits, alors le bit de poids fort sera ignoré, et on obtiendra seulement <span class="math inline">\(1000_2\)</span> comme résultat, c’est-à-dire 8. Autrement dit, sur 4 bits, quand on dépasse la capacité de <span class="math inline">\(2^4-1=15\)</span>, on repart de zéro : <span class="math inline">\(24=2^4+8\)</span>. On dit que le calcul se fait <strong>modulo <span class="math inline">\(2^4\)</span></strong>.</p>
+<p>La somme obtenue <span class="math inline">1\;1000_2</span> correspond bien à l’entier <span class="math inline">24_{10}</span> codé en binaire. On remarque qu’il a fallu un bit supplémentaire pour coder la somme. Si on travaille avec une taille d’entiers fixe de 4 bits, alors le bit de poids fort sera ignoré, et on obtiendra seulement <span class="math inline">1000_2</span> comme résultat, c’est-à-dire 8. Autrement dit, sur 4 bits, quand on dépasse la capacité de <span class="math inline">2^4-1=15</span>, on repart de zéro : <span class="math inline">24=2^4+8</span>. On dit que le calcul se fait <strong>modulo <span class="math inline">2^4</span></strong>.</p>
 <p>En complément, vous pouvez regarder la vidéo “Le binaire, c’est quoi ?” dans cet <a href="https://mathsinfolycee.fr/posts/codeurpro/">article</a>.</p>
 
 
@@ -1928,113 +1924,6 @@ window.Quarto = {
     </div>
   </div>
 </footer>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    var matomoBaseUrl = "https://sitelf.fr/matomo/";
-    var siteId = "3";
-    var pageViewsElement = document.getElementById("page-views");
-
-    if (!pageViewsElement) return;
-
-    var isLocal = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
-    var productionHost = "sitelf.fr";
-    var hostname = isLocal ? productionHost : window.location.hostname;
-    var protocol = isLocal ? "https:" : window.location.protocol;
-    var pathname = window.location.pathname;
-    var targetUrl = protocol + "//" + hostname + pathname;
-
-    var normalizedPath = pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
-    var pathParts = normalizedPath.split("/").filter(Boolean);
-    var isPostPage = pathParts.length >= 2 && pathParts[0] === "posts";
-
-    function displayHits(hits) {
-        pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + " vues";
-    }
-
-    function displayUnavailable() {
-        pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> indisponible';
-    }
-
-    function cleanupCallback(callbackName) {
-        delete window[callbackName];
-        var script = document.getElementById(callbackName);
-        if (script) script.remove();
-    }
-
-    function requestJsonp(url, onSuccess, onError) {
-        var callbackName = "matomoCb_" + Math.floor(Math.random() * 1e9);
-        window[callbackName] = function (data) {
-            cleanupCallback(callbackName);
-            onSuccess(data);
-        };
-
-        var script = document.createElement("script");
-        script.id = callbackName;
-        script.src = url + "&jsoncallback=" + callbackName;
-        script.onerror = function () {
-            cleanupCallback(callbackName);
-            onError();
-        };
-        document.body.appendChild(script);
-    }
-
-    function findHitsByLabel(nodes, label) {
-        if (!Array.isArray(nodes)) return null;
-        for (var i = 0; i < nodes.length; i += 1) {
-            var node = nodes[i];
-            if (node && node.label === label && typeof node.nb_hits === "number") return node.nb_hits;
-            var nested = findHitsByLabel(node && node.subtable, label);
-            if (nested !== null) return nested;
-        }
-        return null;
-    }
-
-    function fallbackExactUrl() {
-        var fallbackUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl"
-            + "&idSite=" + siteId
-            + "&pageUrl=" + encodeURIComponent(targetUrl)
-            + "&format=JSON"
-            + "&period=range&date=2018-01-01,today";
-
-        requestJsonp(fallbackUrl, function (data) {
-            var hits = 0;
-            if (Array.isArray(data) && data.length && typeof data[0].nb_hits === "number") {
-                hits = data[0].nb_hits;
-            } else if (data && typeof data.nb_hits === "number") {
-                hits = data.nb_hits;
-            }
-            displayHits(hits);
-        }, function () {
-            displayUnavailable();
-        });
-    }
-
-    if (!isPostPage) {
-        fallbackExactUrl();
-        return;
-    }
-
-    var slug = pathParts[1];
-    var segmentPath = "/posts/" + slug;
-    var groupedUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrls"
-        + "&idSite=" + siteId
-        + "&format=JSON"
-        + "&expanded=1"
-        + "&period=range&date=2018-01-01,today"
-        + "&segment=" + encodeURIComponent("pageUrl=@" + segmentPath);
-
-    requestJsonp(groupedUrl, function (data) {
-        var hits = findHitsByLabel(data, slug);
-        if (typeof hits === "number") {
-            displayHits(hits);
-        } else {
-            fallbackExactUrl();
-        }
-    }, function () {
-        fallbackExactUrl();
-    });
-});
-</script>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

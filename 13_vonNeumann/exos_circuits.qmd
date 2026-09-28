@@ -190,4 +190,4 @@ Faire un circuit équivalent à une porte XOR à l'aide de portes ET, OU et NON.
   </logic-editor>
 </div>
 
-<script src="https://logic.modulo-info.ch/simulator/lib/bundle.js""></script>
+<script src="simulator/bundle.js"></script>

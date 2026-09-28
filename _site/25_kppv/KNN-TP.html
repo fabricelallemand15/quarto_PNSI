@@ -84,9 +84,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-ce627959744dbe174f47eef0b696c0dd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-cf885d0f3921957c9354b0b86a3d537f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -138,21 +138,54 @@ cookieconsent.run({
 </script> 
   
 
-<!-- Matomo -->
-<script>
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="//sitelf.fr/matomo/";
-      _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '3']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
+  <script defer="" src="../libs/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-  <noscript></noscript></head><body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+  <link rel="stylesheet" href="../libs/katex/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -314,44 +347,7 @@ cookieconsent.run({
     } else {
       toggleColorMode(false);
     }
-  </script><p><img referrerpolicy="no-referrer-when-downgrade" src="//sitelf.fr/matomo/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p>
-  <!-- End Matomo Code -->
-  
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
-
-
-
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -951,7 +947,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../27_ihm/ihm_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">8 - IHM (Cours)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -981,7 +977,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#la-distance-entre-deux-images" id="toc-la-distance-entre-deux-images" class="nav-link" data-scroll-target="#la-distance-entre-deux-images">2.1 La distance entre deux images</a></li>
   <li><a href="#liste-des-distances" id="toc-liste-des-distances" class="nav-link" data-scroll-target="#liste-des-distances">2.2 Liste des distances</a></li>
-  <li><a href="#liste-des-k-plus-proches-voisins." id="toc-liste-des-k-plus-proches-voisins." class="nav-link" data-scroll-target="#liste-des-k-plus-proches-voisins.">2.3 Liste des <span class="math inline">\(k\)</span> plus proches voisins.</a></li>
+  <li><a href="#liste-des-k-plus-proches-voisins." id="toc-liste-des-k-plus-proches-voisins." class="nav-link" data-scroll-target="#liste-des-k-plus-proches-voisins.">2.3 Liste des <span class="math inline">k</span> plus proches voisins.</a></li>
   <li><a href="#prédiction-de-la-classe-de-limage-inconnue" id="toc-prédiction-de-la-classe-de-limage-inconnue" class="nav-link" data-scroll-target="#prédiction-de-la-classe-de-limage-inconnue">2.4 Prédiction de la classe de l’image inconnue</a></li>
   </ul></li>
   <li><a href="#testez-maintenant-votre-écriture" id="toc-testez-maintenant-votre-écriture" class="nav-link" data-scroll-target="#testez-maintenant-votre-écriture"><span style="color: orangered;">3. Testez maintenant votre écriture</span></a>
@@ -1094,7 +1090,7 @@ window.Quarto = {
 <li>les paramètres de la fonction seront deux listes de même taille</li>
 </ul>
 <p><strong>Rappel</strong> : distance euclidienne</p>
-<p><span class="math display">\[d(x,y) = \sqrt{\sum_{i=0}^{n} (yi - xi)^2}\]</span></p>
+<p><span class="math display">d(x,y) = \sqrt{\sum_{i=0}^{n} (yi - xi)^2}</span></p>
 <div id="cell-15" class="cell" data-trusted="true">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1126,8 +1122,8 @@ window.Quarto = {
 </div>
 </section>
 <section id="liste-des-k-plus-proches-voisins." class="level3">
-<h3 class="anchored" data-anchor-id="liste-des-k-plus-proches-voisins.">2.3 Liste des <span class="math inline">\(k\)</span> plus proches voisins.</h3>
-<p>Considérons un entier <span class="math inline">\(k&gt;3\)</span>. Compléter la fonction ci-dessous qui retourne la liste de <span class="math inline">\(k\)</span> plus proches voisins de l’image représentée par <code>image_inconnue</code>.</p>
+<h3 class="anchored" data-anchor-id="liste-des-k-plus-proches-voisins.">2.3 Liste des <span class="math inline">k</span> plus proches voisins.</h3>
+<p>Considérons un entier <span class="math inline">k&gt;3</span>. Compléter la fonction ci-dessous qui retourne la liste de <span class="math inline">k</span> plus proches voisins de l’image représentée par <code>image_inconnue</code>.</p>
 <div id="cell-19" class="cell" data-trusted="true">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cleDeTri(dico:<span class="bu">dict</span>)<span class="op">-&gt;</span><span class="bu">float</span>:</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
@@ -1154,7 +1150,7 @@ window.Quarto = {
 </section>
 <section id="prédiction-de-la-classe-de-limage-inconnue" class="level3">
 <h3 class="anchored" data-anchor-id="prédiction-de-la-classe-de-limage-inconnue">2.4 Prédiction de la classe de l’image inconnue</h3>
-<p>Compléter la fonction ci-dessous qui retourne la classe la plus fréquente parmi les <span class="math inline">\(k\)</span> plus proches voisins.</p>
+<p>Compléter la fonction ci-dessous qui retourne la classe la plus fréquente parmi les <span class="math inline">k</span> plus proches voisins.</p>
 <div id="cell-21" class="cell" data-trusted="true">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prediction(image_inconnue:<span class="bu">list</span>, k:<span class="bu">int</span>) <span class="op">-&gt;</span><span class="bu">int</span>:</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
@@ -1671,8 +1667,8 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../27_ihm/ihm_cours.html" class="pagination-link" aria-label="Cours">
-        <span class="nav-page-text">Cours</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../27_ihm/ihm_cours.html" class="pagination-link" aria-label="8 - IHM (Cours)">
+        <span class="nav-page-text">8 - IHM (Cours)</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1711,113 +1707,6 @@ window.Quarto = {
     </div>
   </div>
 </footer>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    var matomoBaseUrl = "https://sitelf.fr/matomo/";
-    var siteId = "3";
-    var pageViewsElement = document.getElementById("page-views");
-
-    if (!pageViewsElement) return;
-
-    var isLocal = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
-    var productionHost = "sitelf.fr";
-    var hostname = isLocal ? productionHost : window.location.hostname;
-    var protocol = isLocal ? "https:" : window.location.protocol;
-    var pathname = window.location.pathname;
-    var targetUrl = protocol + "//" + hostname + pathname;
-
-    var normalizedPath = pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
-    var pathParts = normalizedPath.split("/").filter(Boolean);
-    var isPostPage = pathParts.length >= 2 && pathParts[0] === "posts";
-
-    function displayHits(hits) {
-        pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + " vues";
-    }
-
-    function displayUnavailable() {
-        pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> indisponible';
-    }
-
-    function cleanupCallback(callbackName) {
-        delete window[callbackName];
-        var script = document.getElementById(callbackName);
-        if (script) script.remove();
-    }
-
-    function requestJsonp(url, onSuccess, onError) {
-        var callbackName = "matomoCb_" + Math.floor(Math.random() * 1e9);
-        window[callbackName] = function (data) {
-            cleanupCallback(callbackName);
-            onSuccess(data);
-        };
-
-        var script = document.createElement("script");
-        script.id = callbackName;
-        script.src = url + "&jsoncallback=" + callbackName;
-        script.onerror = function () {
-            cleanupCallback(callbackName);
-            onError();
-        };
-        document.body.appendChild(script);
-    }
-
-    function findHitsByLabel(nodes, label) {
-        if (!Array.isArray(nodes)) return null;
-        for (var i = 0; i < nodes.length; i += 1) {
-            var node = nodes[i];
-            if (node && node.label === label && typeof node.nb_hits === "number") return node.nb_hits;
-            var nested = findHitsByLabel(node && node.subtable, label);
-            if (nested !== null) return nested;
-        }
-        return null;
-    }
-
-    function fallbackExactUrl() {
-        var fallbackUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl"
-            + "&idSite=" + siteId
-            + "&pageUrl=" + encodeURIComponent(targetUrl)
-            + "&format=JSON"
-            + "&period=range&date=2018-01-01,today";
-
-        requestJsonp(fallbackUrl, function (data) {
-            var hits = 0;
-            if (Array.isArray(data) && data.length && typeof data[0].nb_hits === "number") {
-                hits = data[0].nb_hits;
-            } else if (data && typeof data.nb_hits === "number") {
-                hits = data.nb_hits;
-            }
-            displayHits(hits);
-        }, function () {
-            displayUnavailable();
-        });
-    }
-
-    if (!isPostPage) {
-        fallbackExactUrl();
-        return;
-    }
-
-    var slug = pathParts[1];
-    var segmentPath = "/posts/" + slug;
-    var groupedUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrls"
-        + "&idSite=" + siteId
-        + "&format=JSON"
-        + "&expanded=1"
-        + "&period=range&date=2018-01-01,today"
-        + "&segment=" + encodeURIComponent("pageUrl=@" + segmentPath);
-
-    requestJsonp(groupedUrl, function (data) {
-        var hits = findHitsByLabel(data, slug);
-        if (typeof hits === "number") {
-            displayHits(hits);
-        } else {
-            fallbackExactUrl();
-        }
-    }, function () {
-        fallbackExactUrl();
-    });
-});
-</script>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

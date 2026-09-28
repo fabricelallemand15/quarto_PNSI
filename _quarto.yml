@@ -1,5 +1,10 @@
 project:
   type: website
+  resources:
+    - fonts/
+    - libs/
+    - 13_vonNeumann/simulator/
+    - "**/Tim_Berners-Lee_closeup.jpg"
 
 website:
   title: "NSI - Première"
@@ -142,6 +147,10 @@ format:
       light: [flatly, theme_light.scss]
       dark: [darkly, theme_dark.scss]
     css: styles.css
+    # KaTeX auto-hébergé (chemin relatif valable pour les pages situées dans un sous-dossier)
+    html-math-method:
+      method: katex
+      url: "../libs/katex/"
     toc: true
     toc-location: right
     page-layout: article
@@ -152,8 +161,3 @@ format:
     lightbox: auto
     code-block-border-left: "#31BAE9"
     code-block-bg: true
-    include-in-header: 
-      file: matomo.html
-    include-after-body: 
-      file: matomo_stats.html
-      # file: snow.html

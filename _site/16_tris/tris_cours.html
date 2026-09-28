@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.1">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -79,14 +79,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc6d6016adaf1c7a86dcaac46e77afcc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-36444e392d2fb3c2a85f57417f5a8c5a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc6d6016adaf1c7a86dcaac46e77afcc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-ce627959744dbe174f47eef0b696c0dd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-cf885d0f3921957c9354b0b86a3d537f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -138,21 +138,54 @@ cookieconsent.run({
 </script> 
   
 
-<!-- Matomo -->
-<script>
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="//sitelf.fr/matomo/";
-      _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '3']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
+  <script defer="" src="../libs/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-  <noscript></noscript></head><body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+  <link rel="stylesheet" href="../libs/katex/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -314,44 +347,7 @@ cookieconsent.run({
     } else {
       toggleColorMode(false);
     }
-  </script><p><img referrerpolicy="no-referrer-when-downgrade" src="//sitelf.fr/matomo/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p>
-  <!-- End Matomo Code -->
-  
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
-
-
-
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -951,7 +947,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../27_ihm/ihm_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">8 - IHM (Cours)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1047,16 +1043,16 @@ window.Quarto = {
 <p><a href="./tri_insertion/index.html" target="_blank">Visualiser l’animation en pleine page</a></p>
 <iframe src="./tri_insertion/index.html" width="100%" height="650px" frameborder="0">
 </iframe>
-<p><strong>Exemple</strong> : Soit à trier le tableau <span class="math inline">\([5,2,7,3]\)</span>.</p>
+<p><strong>Exemple</strong> : Soit à trier le tableau <span class="math inline">[5,2,7,3]</span>.</p>
 <ul>
-<li>On commence par le deuxième élément du tableau, c’est-à-dire l’élément 2. On compare l’élément 2 avec l’élément 5. L’élément 2 est plus petit que l’élément 5, on échange les deux éléments. Le tableau est donc <span class="math inline">\([2,5,7,3]\)</span>.</li>
+<li>On commence par le deuxième élément du tableau, c’est-à-dire l’élément 2. On compare l’élément 2 avec l’élément 5. L’élément 2 est plus petit que l’élément 5, on échange les deux éléments. Le tableau est donc <span class="math inline">[2,5,7,3]</span>.</li>
 <li>On continue avec l’élément 7. L’élément 7 est plus grand que l’élément 5, on ne fait rien.</li>
-<li>On continue avec l’élément 3. L’élément 3 est plus petit que l’élément 7, on échange les deux éléments. Le tableau est donc <span class="math inline">\([2,5,3,7]\)</span>. On continue à comparer et échanger l’élément 3 avec les éléments précédents jusqu’à ce que l’élément 3 soit plus grand que celui qui le précède. Le tableau est donc <span class="math inline">\([2,3,5,7]\)</span>. L’algorithme est terminé. Le tableau est trié.</li>
+<li>On continue avec l’élément 3. L’élément 3 est plus petit que l’élément 7, on échange les deux éléments. Le tableau est donc <span class="math inline">[2,5,3,7]</span>. On continue à comparer et échanger l’élément 3 avec les éléments précédents jusqu’à ce que l’élément 3 soit plus grand que celui qui le précède. Le tableau est donc <span class="math inline">[2,3,5,7]</span>. L’algorithme est terminé. Le tableau est trié.</li>
 </ul>
 </section>
 <section id="programmation" class="level3">
 <h3 class="anchored" data-anchor-id="programmation">Programmation</h3>
-<div id="19dd9603" class="cell" data-execution_count="1">
+<div id="37cc4ca4" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-1-1"><a href="#annotated-cell-1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tri_insertion(tableau: <span class="bu">list</span>) <span class="op">-&gt;</span> <span class="bu">list</span>:</span>
 <span id="annotated-cell-1-2"><a href="#annotated-cell-1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Trie en place par insertion le tableau passé en paramètre."""</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-1-3" class="code-annotation-target"><a href="#annotated-cell-1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(tableau)):</span>
@@ -1091,7 +1087,7 @@ window.Quarto = {
 </div>
 </div>
 <p>Test de l’algorithme :</p>
-<div id="acdd4915" class="cell" data-execution_count="2">
+<div id="17e25eee" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>tri_insertion([<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">3</span>])</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
@@ -1110,7 +1106,7 @@ window.Quarto = {
 <p>Pour cela, considérons la propriété suivante : à chaque itération, le sous-tableau composé des <code>i</code> premiers éléments est trié. Montrons que cette propriété est un <strong>invariant de boucle</strong>.</p>
 <ul>
 <li><strong>Initialisation</strong> : au début de l’algorithme, le sous-tableau composé uniquement du premier élément est trié.</li>
-<li><strong>Conservation</strong> : supposons que le sous-tableau composé des <code>i</code> premiers éléments est trié : <span class="math inline">\([e_0, e_1, \ldots, e_{i-1}]\)</span> avec <span class="math inline">\(e_0\leqslant e_1\leqslant \ldots \leqslant e_{i-1}\)</span>. L’algorithme considère alors l’élément <span class="math inline">\(e_i\)</span> et le compare avec les éléments précédents. Si <span class="math inline">\(e_i\)</span> est plus petit que <span class="math inline">\(e_{i-1}\)</span>, on échange les deux éléments. On continue alors à comparer <span class="math inline">\(e_i\)</span> avec les éléments précédents jusqu’à ce que <span class="math inline">\(e_i\)</span> soit plus grand que l’élément précédent. Le sous-tableau composé des <code>i+1</code> premiers éléments est alors trié.</li>
+<li><strong>Conservation</strong> : supposons que le sous-tableau composé des <code>i</code> premiers éléments est trié : <span class="math inline">[e_0, e_1, \ldots, e_{i-1}]</span> avec <span class="math inline">e_0\leqslant e_1\leqslant \ldots \leqslant e_{i-1}</span>. L’algorithme considère alors l’élément <span class="math inline">e_i</span> et le compare avec les éléments précédents. Si <span class="math inline">e_i</span> est plus petit que <span class="math inline">e_{i-1}</span>, on échange les deux éléments. On continue alors à comparer <span class="math inline">e_i</span> avec les éléments précédents jusqu’à ce que <span class="math inline">e_i</span> soit plus grand que l’élément précédent. Le sous-tableau composé des <code>i+1</code> premiers éléments est alors trié.</li>
 <li><strong>Conclusion</strong> : à la fin de l’algorithme <code>i</code> a la valeur <code>n-1</code> ce qui correspond à l’indice du dernier élément du tableau. Le sous-tableau composé des <code>n</code> premiers éléments est donc trié. Or, <code>n</code> est le nombre d’éléments du tableau, donc le tableau entier est trié.</li>
 </ul>
 <p>La correction de l’algorithme est donc prouvée.</p>
@@ -1118,11 +1114,11 @@ window.Quarto = {
 <section id="complexité" class="level3">
 <h3 class="anchored" data-anchor-id="complexité">Complexité</h3>
 <p>On recherche la complexité dans <strong>le pire des cas</strong>. Le pire des cas est le cas où le tableau de départ est rangé dans l’ordre décroissant.</p>
-<p>Notons <span class="math inline">\(n\)</span> la taille du tableau de départ.</p>
-<p>La boucle <code>for</code> comporte <span class="math inline">\(n-1\)</span> itérations.</p>
-<p>Dans le cas où le tableau de départ est rangé dans l’ordre décroissant, la boucle <code>while</code> comporte 1 opération, puis 2, puis 3, etc. jusqu’à <span class="math inline">\(n-1\)</span> opérations pour la dernière itération. On obtient donc la somme suivante pour le nombre total d’opérations :</p>
-<p><span class="math display">\[1+2+3+\ldots+(n-1)=\frac{n(n-1)}{2}\]</span></p>
-<p>Sachant que <span class="math inline">\(\frac{n(n-1)}{2} = \frac{n^2-n}{2}\)</span>, il s’agit donc d’une <strong>complexité quadratique</strong>, en <span class="math inline">\(\mathcal{O}(n^2)\)</span>.</p>
+<p>Notons <span class="math inline">n</span> la taille du tableau de départ.</p>
+<p>La boucle <code>for</code> comporte <span class="math inline">n-1</span> itérations.</p>
+<p>Dans le cas où le tableau de départ est rangé dans l’ordre décroissant, la boucle <code>while</code> comporte 1 opération, puis 2, puis 3, etc. jusqu’à <span class="math inline">n-1</span> opérations pour la dernière itération. On obtient donc la somme suivante pour le nombre total d’opérations :</p>
+<p><span class="math display">1+2+3+\ldots+(n-1)=\frac{n(n-1)}{2}</span></p>
+<p>Sachant que <span class="math inline">\frac{n(n-1)}{2} = \frac{n^2-n}{2}</span>, il s’agit donc d’une <strong>complexité quadratique</strong>, en <span class="math inline">\mathcal{O}(n^2)</span>.</p>
 </section>
 </section>
 <section id="tri-par-sélection" class="level2">
@@ -1149,17 +1145,17 @@ window.Quarto = {
 <p><a href="./tri_selection/index.html" target="_blank">Visualiser l’animation en pleine page</a></p>
 <iframe src="./tri_selection/index.html" width="100%" height="650px" frameborder="0">
 </iframe>
-<p><strong>Exemple</strong> : Soit à trier le tableau <span class="math inline">\([5,2,3,7]\)</span>.</p>
+<p><strong>Exemple</strong> : Soit à trier le tableau <span class="math inline">[5,2,3,7]</span>.</p>
 <ul>
-<li>On commence par le premier élément, 5. On recherche le plus petit élément parmi les éléments suivants du tableau, c’est-à-dire 2. On échange 5 et 2 : le tableau est maintenant <span class="math inline">\([2,5,3,7]\)</span>.</li>
-<li>L’élément courant est maintenant le deuxième du tableau, c’est donc encore 5. On recherche le plus petit élément parmi les éléments suivants du tableau, c’est-à-dire 3. On échange 5 et 3 : le tableau est maintenant <span class="math inline">\([2,3,5,7]\)</span>.</li>
+<li>On commence par le premier élément, 5. On recherche le plus petit élément parmi les éléments suivants du tableau, c’est-à-dire 2. On échange 5 et 2 : le tableau est maintenant <span class="math inline">[2,5,3,7]</span>.</li>
+<li>L’élément courant est maintenant le deuxième du tableau, c’est donc encore 5. On recherche le plus petit élément parmi les éléments suivants du tableau, c’est-à-dire 3. On échange 5 et 3 : le tableau est maintenant <span class="math inline">[2,3,5,7]</span>.</li>
 <li>L’élément courant est maintenant le troisième du tableau, c’est donc encore 5. On recherche le plus petit élément parmi les éléments suivants du tableau, mais aucun n’est plus petit que 5. On ne fait donc rien.</li>
 <li>L’élément courant est maintenant le dernier du tableau, c’est donc 7. On ne fait donc rien et le tableau est trié.</li>
 </ul>
 </section>
 <section id="programmation-1" class="level3">
 <h3 class="anchored" data-anchor-id="programmation-1">Programmation</h3>
-<div id="0a3f366e" class="cell" data-execution_count="3">
+<div id="5566f995" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode python code-annotation-code code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tri_selection(tableau: <span class="bu">list</span>) <span class="op">-&gt;</span> <span class="bu">list</span>:</span>
 <span id="annotated-cell-3-2"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Trie en place par sélection le tableau passé en paramètre."""</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-3-3" class="code-annotation-target"><a href="#annotated-cell-3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(tableau)):</span>
@@ -1195,7 +1191,7 @@ window.Quarto = {
 </div>
 </div>
 <p>Test de l’algorithme :</p>
-<div id="29dfbd89" class="cell" data-execution_count="4">
+<div id="7d64dfaa" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tri_selection([<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">1</span>, <span class="dv">3</span>])</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
@@ -1212,7 +1208,7 @@ window.Quarto = {
 <p>Pour cela, considérons la propriété suivante : à chaque itération, le sous-tableau composé des <code>i</code> premiers éléments est trié. Montrons que cette propriété est un <strong>invariant de boucle</strong>.</p>
 <ul>
 <li><strong>Initialisation</strong> : au début de l’algorithme, le sous-tableau composé uniquement du premier élément est trié.</li>
-<li><strong>Conservation</strong> : supposons que le sous-tableau composé des <code>i</code> premiers éléments est trié : <span class="math inline">\([e_0, e_1, \ldots, e_{i-1}]\)</span> avec <span class="math inline">\(e_0\leqslant e_1\leqslant \ldots \leqslant e_{i-1}\)</span>. Par construction, tous les éléments suivants sont supérieurs à <span class="math inline">\(e_{i-1}\)</span>. L’algorithme considère alors l’élément <span class="math inline">\(e_i\)</span> et le compare avec les éléments suivants. Si un élément est plus petit que <span class="math inline">\(e_i\)</span>, on échange les deux éléments. Le sous-tableau composé des <code>i+1</code> premiers éléments est alors trié.</li>
+<li><strong>Conservation</strong> : supposons que le sous-tableau composé des <code>i</code> premiers éléments est trié : <span class="math inline">[e_0, e_1, \ldots, e_{i-1}]</span> avec <span class="math inline">e_0\leqslant e_1\leqslant \ldots \leqslant e_{i-1}</span>. Par construction, tous les éléments suivants sont supérieurs à <span class="math inline">e_{i-1}</span>. L’algorithme considère alors l’élément <span class="math inline">e_i</span> et le compare avec les éléments suivants. Si un élément est plus petit que <span class="math inline">e_i</span>, on échange les deux éléments. Le sous-tableau composé des <code>i+1</code> premiers éléments est alors trié.</li>
 <li><strong>Conslusion</strong> : à la fin de l’algorithme <code>i</code> a la valeur <code>n-1</code> ce qui correspond à l’indice du dernier élément du tableau. Le sous-tableau composé des <code>n</code> premiers éléments est donc trié. Or, <code>n</code> est le nombre d’éléments du tableau, donc le tableau entier est trié.</li>
 </ul>
 <p>La correction de l’algorithme est donc prouvée.</p>
@@ -1220,17 +1216,17 @@ window.Quarto = {
 <section id="complexité-1" class="level3">
 <h3 class="anchored" data-anchor-id="complexité-1">Complexité</h3>
 <p>On recherche la complexité dans <strong>le pire des cas</strong>. Le pire des cas est le cas où le tableau de départ est rangé dans l’ordre décroissant.</p>
-<p>Notons <span class="math inline">\(n\)</span> la taille du tableau de départ.</p>
-<p>La boucle <code>for i</code> comporte <span class="math inline">\(n-1\)</span> itérations. La boucle <code>for j</code> comporte <span class="math inline">\(n-1\)</span> itérations pour la première itération, puis <span class="math inline">\(n-2\)</span> itérations pour la seconde itération, etc. jusqu’à 1 opération pour la dernière itération. On obtient donc la somme suivante pour le nombre total d’opérations :</p>
-<p><span class="math display">\[n-1+(n-2)+(n-3)+\ldots+1=\frac{n(n-1)}{2}\]</span></p>
-<p>Sachant que <span class="math inline">\(\frac{n(n-1)}{2} = \frac{n^2-n}{2}\)</span>, il s’agit donc d’une <strong>complexité quadratique</strong>, en <span class="math inline">\(\mathcal{O}(n^2)\)</span>.</p>
+<p>Notons <span class="math inline">n</span> la taille du tableau de départ.</p>
+<p>La boucle <code>for i</code> comporte <span class="math inline">n-1</span> itérations. La boucle <code>for j</code> comporte <span class="math inline">n-1</span> itérations pour la première itération, puis <span class="math inline">n-2</span> itérations pour la seconde itération, etc. jusqu’à 1 opération pour la dernière itération. On obtient donc la somme suivante pour le nombre total d’opérations :</p>
+<p><span class="math display">n-1+(n-2)+(n-3)+\ldots+1=\frac{n(n-1)}{2}</span></p>
+<p>Sachant que <span class="math inline">\frac{n(n-1)}{2} = \frac{n^2-n}{2}</span>, il s’agit donc d’une <strong>complexité quadratique</strong>, en <span class="math inline">\mathcal{O}(n^2)</span>.</p>
 </section>
 </section>
 <section id="observation-expérimentale-de-la-complexité" class="level2">
 <h2 class="anchored" data-anchor-id="observation-expérimentale-de-la-complexité">3. Observation expérimentale de la complexité</h2>
 <section id="tri-par-insertion-1" class="level3">
 <h3 class="anchored" data-anchor-id="tri-par-insertion-1">Tri par insertion</h3>
-<div id="b154c03d" class="cell" data-execution_count="5">
+<div id="c3bf4271" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> timeit</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1258,7 +1254,7 @@ window.Quarto = {
 </section>
 <section id="tri-par-sélection-1" class="level3">
 <h3 class="anchored" data-anchor-id="tri-par-sélection-1">Tri par sélection</h3>
-<div id="7e23d159" class="cell" data-execution_count="6">
+<div id="0280f566" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> timeit</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1756,113 +1752,6 @@ window.Quarto = {
     </div>
   </div>
 </footer>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    var matomoBaseUrl = "https://sitelf.fr/matomo/";
-    var siteId = "3";
-    var pageViewsElement = document.getElementById("page-views");
-
-    if (!pageViewsElement) return;
-
-    var isLocal = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
-    var productionHost = "sitelf.fr";
-    var hostname = isLocal ? productionHost : window.location.hostname;
-    var protocol = isLocal ? "https:" : window.location.protocol;
-    var pathname = window.location.pathname;
-    var targetUrl = protocol + "//" + hostname + pathname;
-
-    var normalizedPath = pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
-    var pathParts = normalizedPath.split("/").filter(Boolean);
-    var isPostPage = pathParts.length >= 2 && pathParts[0] === "posts";
-
-    function displayHits(hits) {
-        pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + " vues";
-    }
-
-    function displayUnavailable() {
-        pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> indisponible';
-    }
-
-    function cleanupCallback(callbackName) {
-        delete window[callbackName];
-        var script = document.getElementById(callbackName);
-        if (script) script.remove();
-    }
-
-    function requestJsonp(url, onSuccess, onError) {
-        var callbackName = "matomoCb_" + Math.floor(Math.random() * 1e9);
-        window[callbackName] = function (data) {
-            cleanupCallback(callbackName);
-            onSuccess(data);
-        };
-
-        var script = document.createElement("script");
-        script.id = callbackName;
-        script.src = url + "&jsoncallback=" + callbackName;
-        script.onerror = function () {
-            cleanupCallback(callbackName);
-            onError();
-        };
-        document.body.appendChild(script);
-    }
-
-    function findHitsByLabel(nodes, label) {
-        if (!Array.isArray(nodes)) return null;
-        for (var i = 0; i < nodes.length; i += 1) {
-            var node = nodes[i];
-            if (node && node.label === label && typeof node.nb_hits === "number") return node.nb_hits;
-            var nested = findHitsByLabel(node && node.subtable, label);
-            if (nested !== null) return nested;
-        }
-        return null;
-    }
-
-    function fallbackExactUrl() {
-        var fallbackUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl"
-            + "&idSite=" + siteId
-            + "&pageUrl=" + encodeURIComponent(targetUrl)
-            + "&format=JSON"
-            + "&period=range&date=2018-01-01,today";
-
-        requestJsonp(fallbackUrl, function (data) {
-            var hits = 0;
-            if (Array.isArray(data) && data.length && typeof data[0].nb_hits === "number") {
-                hits = data[0].nb_hits;
-            } else if (data && typeof data.nb_hits === "number") {
-                hits = data.nb_hits;
-            }
-            displayHits(hits);
-        }, function () {
-            displayUnavailable();
-        });
-    }
-
-    if (!isPostPage) {
-        fallbackExactUrl();
-        return;
-    }
-
-    var slug = pathParts[1];
-    var segmentPath = "/posts/" + slug;
-    var groupedUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrls"
-        + "&idSite=" + siteId
-        + "&format=JSON"
-        + "&expanded=1"
-        + "&period=range&date=2018-01-01,today"
-        + "&segment=" + encodeURIComponent("pageUrl=@" + segmentPath);
-
-    requestJsonp(groupedUrl, function (data) {
-        var hits = findHitsByLabel(data, slug);
-        if (typeof hits === "number") {
-            displayHits(hits);
-        } else {
-            fallbackExactUrl();
-        }
-    }, function () {
-        fallbackExactUrl();
-    });
-});
-</script>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

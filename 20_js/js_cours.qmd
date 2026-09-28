@@ -4,7 +4,7 @@ title: "Cours (3) - Introduction au JavaScript"
 
 <!-- Introduction avec historique -->
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png){width=15%}
+![](javascript-logo.svg){width=15%}
 
 Les scripts JavaScript permettent des interactions entre l'utilisateur et une page web à partir d'éléments graphiques inclus dans la page et de l'interception d'événements auxquels sont associés des fonctions.
 

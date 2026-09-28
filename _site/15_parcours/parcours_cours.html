@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.1">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -79,14 +79,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc6d6016adaf1c7a86dcaac46e77afcc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-36444e392d2fb3c2a85f57417f5a8c5a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc6d6016adaf1c7a86dcaac46e77afcc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-ce627959744dbe174f47eef0b696c0dd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-cf885d0f3921957c9354b0b86a3d537f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -135,21 +135,54 @@ cookieconsent.run({
 </script> 
   
 
-<!-- Matomo -->
-<script>
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="//sitelf.fr/matomo/";
-      _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '3']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
+  <script defer="" src="../libs/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-  <noscript></noscript></head><body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+  <link rel="stylesheet" href="../libs/katex/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -311,44 +344,7 @@ cookieconsent.run({
     } else {
       toggleColorMode(false);
     }
-  </script><p><img referrerpolicy="no-referrer-when-downgrade" src="//sitelf.fr/matomo/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p>
-  <!-- End Matomo Code -->
-  
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
-
-
-
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -948,7 +944,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../27_ihm/ihm_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">8 - IHM (Cours)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1002,7 +998,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="recherche-dune-occurrence">1. Recherche d’une occurrence</h2>
 <p>Considérons un tableau. On souhaite disposer d’un algorithme permettant de rechercher une occurrence d’une valeur donnée dans ce tableau. Plus précisément, nous allons définir une fonction qui recherche une valeur donnée dans un tableau et qui retourne le tableau des indices des occurrences de cette valeur dans le tableau. Dans le cas où la valeur n’est pas présente dans le tableau, la fonction retournera un tableau vide.</p>
 <p>La méthode est très simple. On parcourt le tableau en testant à chaque fois si la valeur courante est égale à la valeur recherchée. Si c’est le cas, on ajoute l’indice de la valeur courante dans le tableau des indices des occurrences.</p>
-<div id="bc46da3e" class="cell" data-execution_count="1">
+<div id="213f9080" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> occurrences(tab, val):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Retourne un tableau contenant les indices des occurrences de val dans tab"""</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    indices <span class="op">=</span> []</span>
@@ -1012,7 +1008,7 @@ window.Quarto = {
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> indices</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Exemple d’utilisation :</p>
-<div id="e28555db" class="cell" data-execution_count="2">
+<div id="ee89576a" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> [<span class="st">"DO"</span>, <span class="st">"RE"</span>, <span class="st">"MI"</span>, <span class="st">"FA"</span>, <span class="st">"SOL"</span>, <span class="st">"LA"</span>, <span class="st">"SI"</span>, <span class="st">"DO"</span>]</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(occurrences(tab, <span class="st">"DO"</span>))</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(occurrences(tab, <span class="st">"MI"</span>))</span>
@@ -1023,12 +1019,12 @@ window.Quarto = {
 []</code></pre>
 </div>
 </div>
-<p><strong>Complexité de l’algorithme</strong> : Comptons le nombre d’itérations et de tests. Notons <span class="math inline">\(n\)</span> la taille du tableau, l’algorithme parcourt toutes les valeurs du tableau. Il y a donc au total <span class="math inline">\(n\)</span> itérations. De plus, nous avons <span class="math inline">\(n\)</span> tests. Il y a donc <span class="math inline">\(2n\)</span> opérations au total. On peut donc dire la complexité de l’algorithme est <strong>proportionnelle</strong> à la taille <span class="math inline">\(n\)</span> du tableau. Dans ce cas, on note ((n)) la complexité de l’algorithme.</p>
+<p><strong>Complexité de l’algorithme</strong> : Comptons le nombre d’itérations et de tests. Notons <span class="math inline">n</span> la taille du tableau, l’algorithme parcourt toutes les valeurs du tableau. Il y a donc au total <span class="math inline">n</span> itérations. De plus, nous avons <span class="math inline">n</span> tests. Il y a donc <span class="math inline">2n</span> opérations au total. On peut donc dire la complexité de l’algorithme est <strong>proportionnelle</strong> à la taille <span class="math inline">n</span> du tableau. Dans ce cas, on note ((n)) la complexité de l’algorithme.</p>
 </section>
 <section id="recherche-dun-extremum" class="level2">
 <h2 class="anchored" data-anchor-id="recherche-dun-extremum">2. Recherche d’un extremum</h2>
 <p>Dans cette partie, nous considérons un tableau dont les éléments sont des nombres. Nous allons définir une fonction qui recherche le plus grand élément du tableau. Pour cela, on commence par choisir comme maximum temporaire le premier élément du tableau. On parcourt ensuite le tableau en testant à chaque fois si la valeur courante est plus grande que le maximum temporaire. Si c’est le cas, on met à jour le maximum temporaire avec la valeur courante.</p>
-<div id="76e152dc" class="cell" data-execution_count="3">
+<div id="edb2d27c" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="bu">max</span>(tab):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Retourne le plus grand élément du tableau"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> tab[<span class="dv">0</span>]</span>
@@ -1038,19 +1034,19 @@ window.Quarto = {
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> m</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Exemple d’utilisation :</p>
-<div id="72db2a76" class="cell" data-execution_count="4">
+<div id="bacce6d9" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> [<span class="dv">201</span>, <span class="dv">203</span>, <span class="dv">35</span>, <span class="dv">448</span>, <span class="dv">55</span>, <span class="dv">16</span>, <span class="dv">2023</span>, <span class="dv">14</span>, <span class="dv">999</span>, <span class="dv">100</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">max</span>(tab))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2023</code></pre>
 </div>
 </div>
-<p><strong>Complexité de l’algorithme</strong> : La boucle <code>for</code> parcourt toutes les valeurs du tableau, sauf la première. Il y a donc au total <span class="math inline">\(n-1\)</span> itérations. Nous avons aussi <span class="math inline">\(n-1\)</span> comparaisons. Au total, le nombre d’opérations est donc de <span class="math inline">\(2n-2\)</span> (<strong>fonction affine</strong> de <span class="math inline">\(n\)</span>). On peut donc dire que l’algorithme est de complexité <span class="math inline">\(\mathcal{O}(n)\)</span>.</p>
+<p><strong>Complexité de l’algorithme</strong> : La boucle <code>for</code> parcourt toutes les valeurs du tableau, sauf la première. Il y a donc au total <span class="math inline">n-1</span> itérations. Nous avons aussi <span class="math inline">n-1</span> comparaisons. Au total, le nombre d’opérations est donc de <span class="math inline">2n-2</span> (<strong>fonction affine</strong> de <span class="math inline">n</span>). On peut donc dire que l’algorithme est de complexité <span class="math inline">\mathcal{O}(n)</span>.</p>
 </section>
 <section id="calcul-dune-moyenne" class="level2">
 <h2 class="anchored" data-anchor-id="calcul-dune-moyenne">3. Calcul d’une moyenne</h2>
 <p>Dans cette partie, nous considérons un tableau dont les éléments sont des nombres. Nous allons définir une fonction qui calcule la moyenne des éléments du tableau.</p>
-<div id="35b65010" class="cell" data-execution_count="5">
+<div id="65b81e28" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> moyenne(tab):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Retourne la moyenne des éléments du tableau"""</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> <span class="dv">0</span></span>
@@ -1059,14 +1055,14 @@ window.Quarto = {
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s <span class="op">/</span> <span class="bu">len</span>(tab)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Exemple d’utilisation :</p>
-<div id="32fbf236" class="cell" data-execution_count="6">
+<div id="f7ef6bf0" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> [<span class="dv">201</span>, <span class="dv">203</span>, <span class="dv">35</span>, <span class="dv">448</span>, <span class="dv">55</span>, <span class="dv">16</span>, <span class="dv">2023</span>, <span class="dv">14</span>, <span class="dv">999</span>, <span class="dv">100</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(moyenne(tab))</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>409.4</code></pre>
 </div>
 </div>
-<p><strong>Complexité de l’algorithme</strong> : La boucle <code>for</code> parcourt toutes les valeurs du tableau. Il y a donc au total <span class="math inline">\(n\)</span> itérations. Nous avons aussi <span class="math inline">\(n\)</span> additions et une division. Au total, le nombre d’opérations est donc de <span class="math inline">\(2n+1\)</span>. On peut donc dire que l’algorithme est encore de complexité <span class="math inline">\(\mathcal{O}(n)\)</span>.</p>
+<p><strong>Complexité de l’algorithme</strong> : La boucle <code>for</code> parcourt toutes les valeurs du tableau. Il y a donc au total <span class="math inline">n</span> itérations. Nous avons aussi <span class="math inline">n</span> additions et une division. Au total, le nombre d’opérations est donc de <span class="math inline">2n+1</span>. On peut donc dire que l’algorithme est encore de complexité <span class="math inline">\mathcal{O}(n)</span>.</p>
 
 
 </section>
@@ -1534,113 +1530,6 @@ window.Quarto = {
     </div>
   </div>
 </footer>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    var matomoBaseUrl = "https://sitelf.fr/matomo/";
-    var siteId = "3";
-    var pageViewsElement = document.getElementById("page-views");
-
-    if (!pageViewsElement) return;
-
-    var isLocal = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
-    var productionHost = "sitelf.fr";
-    var hostname = isLocal ? productionHost : window.location.hostname;
-    var protocol = isLocal ? "https:" : window.location.protocol;
-    var pathname = window.location.pathname;
-    var targetUrl = protocol + "//" + hostname + pathname;
-
-    var normalizedPath = pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
-    var pathParts = normalizedPath.split("/").filter(Boolean);
-    var isPostPage = pathParts.length >= 2 && pathParts[0] === "posts";
-
-    function displayHits(hits) {
-        pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + " vues";
-    }
-
-    function displayUnavailable() {
-        pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> indisponible';
-    }
-
-    function cleanupCallback(callbackName) {
-        delete window[callbackName];
-        var script = document.getElementById(callbackName);
-        if (script) script.remove();
-    }
-
-    function requestJsonp(url, onSuccess, onError) {
-        var callbackName = "matomoCb_" + Math.floor(Math.random() * 1e9);
-        window[callbackName] = function (data) {
-            cleanupCallback(callbackName);
-            onSuccess(data);
-        };
-
-        var script = document.createElement("script");
-        script.id = callbackName;
-        script.src = url + "&jsoncallback=" + callbackName;
-        script.onerror = function () {
-            cleanupCallback(callbackName);
-            onError();
-        };
-        document.body.appendChild(script);
-    }
-
-    function findHitsByLabel(nodes, label) {
-        if (!Array.isArray(nodes)) return null;
-        for (var i = 0; i < nodes.length; i += 1) {
-            var node = nodes[i];
-            if (node && node.label === label && typeof node.nb_hits === "number") return node.nb_hits;
-            var nested = findHitsByLabel(node && node.subtable, label);
-            if (nested !== null) return nested;
-        }
-        return null;
-    }
-
-    function fallbackExactUrl() {
-        var fallbackUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl"
-            + "&idSite=" + siteId
-            + "&pageUrl=" + encodeURIComponent(targetUrl)
-            + "&format=JSON"
-            + "&period=range&date=2018-01-01,today";
-
-        requestJsonp(fallbackUrl, function (data) {
-            var hits = 0;
-            if (Array.isArray(data) && data.length && typeof data[0].nb_hits === "number") {
-                hits = data[0].nb_hits;
-            } else if (data && typeof data.nb_hits === "number") {
-                hits = data.nb_hits;
-            }
-            displayHits(hits);
-        }, function () {
-            displayUnavailable();
-        });
-    }
-
-    if (!isPostPage) {
-        fallbackExactUrl();
-        return;
-    }
-
-    var slug = pathParts[1];
-    var segmentPath = "/posts/" + slug;
-    var groupedUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrls"
-        + "&idSite=" + siteId
-        + "&format=JSON"
-        + "&expanded=1"
-        + "&period=range&date=2018-01-01,today"
-        + "&segment=" + encodeURIComponent("pageUrl=@" + segmentPath);
-
-    requestJsonp(groupedUrl, function (data) {
-        var hits = findHitsByLabel(data, slug);
-        if (typeof hits === "number") {
-            displayHits(hits);
-        } else {
-            fallbackExactUrl();
-        }
-    }, function () {
-        fallbackExactUrl();
-    });
-});
-</script>
 
 
 

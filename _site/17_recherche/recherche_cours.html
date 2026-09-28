@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.1">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -79,14 +79,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc6d6016adaf1c7a86dcaac46e77afcc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-36444e392d2fb3c2a85f57417f5a8c5a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc6d6016adaf1c7a86dcaac46e77afcc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-ce627959744dbe174f47eef0b696c0dd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-313227f74d014579a7db24b533d0f457.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-cf885d0f3921957c9354b0b86a3d537f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -138,21 +138,54 @@ cookieconsent.run({
 </script> 
   
 
-<!-- Matomo -->
-<script>
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="//sitelf.fr/matomo/";
-      _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '3']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
+  <script defer="" src="../libs/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
   </script>
-  <noscript></noscript></head><body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+  <link rel="stylesheet" href="../libs/katex/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -314,44 +347,7 @@ cookieconsent.run({
     } else {
       toggleColorMode(false);
     }
-  </script><p><img referrerpolicy="no-referrer-when-downgrade" src="//sitelf.fr/matomo/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p>
-  <!-- End Matomo Code -->
-  
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
-
-
-
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -951,7 +947,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../27_ihm/ihm_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours</span></a>
+ <span class="menu-text">8 - IHM (Cours)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1013,7 +1009,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="approche-naïve">1. Approche naïve</h2>
 <p>La première idée qui peut venir à l’esprit est de considérer les éléments du tableau les uns après les autres et de les comparer avec l’élément recherché.</p>
 <p>On peut ainsi écrire une fonction <code>recherche_naive</code> qui prend en paramètre un tableau <code>tableau</code> et une valeur <code>valeur</code> et qui renvoie l’indice de la première occurrence de <code>valeur</code> dans <code>tableau</code> ou <code>-1</code> si <code>valeur</code> n’est pas dans <code>tableau</code>.</p>
-<div id="4dac7808" class="cell" data-execution_count="1">
+<div id="751684aa" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recherche_naive(tableau, valeur):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(tableau)):</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> tableau[i] <span class="op">==</span> valeur:</span>
@@ -1021,19 +1017,19 @@ window.Quarto = {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Test de cette fonction :</p>
-<div id="3a13f020" class="cell" data-execution_count="2">
+<div id="19bf6cb2" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>recherche_naive([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">3</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>2</code></pre>
 </div>
 </div>
-<div id="40fe2b44" class="cell" data-execution_count="3">
+<div id="e0facd9a" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>recherche_naive([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">6</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>-1</code></pre>
 </div>
 </div>
-<p>La complexité dans le pire des cas correspond ici au cas où la valeur recherchée n’est pas dans la liste. Il faut alors parcourir toutes les valeurs du tableau et faire <span class="math inline">\(n\)</span> comparaisons, où <span class="math inline">\(n\)</span> est la taille du tableau. L’algorithme naïf a donc une <strong>complexité linéaire</strong> en <span class="math inline">\(\mathcal{O}(n)\)</span>.</p>
+<p>La complexité dans le pire des cas correspond ici au cas où la valeur recherchée n’est pas dans la liste. Il faut alors parcourir toutes les valeurs du tableau et faire <span class="math inline">n</span> comparaisons, où <span class="math inline">n</span> est la taille du tableau. L’algorithme naïf a donc une <strong>complexité linéaire</strong> en <span class="math inline">\mathcal{O}(n)</span>.</p>
 <p>Il est possible d’être plus efficace en exploitant le fait que la liste est triée.</p>
 </section>
 <section id="recherche-dichotomique" class="level2">
@@ -1081,7 +1077,7 @@ window.Quarto = {
 <section id="programmation" class="level3">
 <h3 class="anchored" data-anchor-id="programmation">Programmation</h3>
 <p>Écrivons une fonction <code>recherche_dichotomique</code> qui prend en paramètre un tableau <code>tableau</code> et une valeur <code>valeur</code> et qui renvoie l’indice d’une occurrence de <code>valeur</code> dans <code>tableau</code> ou <code>-1</code> si <code>valeur</code> n’est pas dans <code>tableau</code>.</p>
-<div id="c3944def" class="cell" data-execution_count="4">
+<div id="19cf5ea8" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recherche_dichotomique(tableau, valeur):</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    gauche <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    droite <span class="op">=</span> <span class="bu">len</span>(tableau) <span class="op">-</span> <span class="dv">1</span></span>
@@ -1096,13 +1092,13 @@ window.Quarto = {
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Test de cette fonction :</p>
-<div id="a3ab6b40" class="cell" data-execution_count="5">
+<div id="6fbad96c" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>recherche_dichotomique([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">2</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>1</code></pre>
 </div>
 </div>
-<div id="0081b6da" class="cell" data-execution_count="6">
+<div id="923f26c1" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>recherche_dichotomique([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], <span class="dv">6</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>-1</code></pre>
@@ -1132,9 +1128,9 @@ window.Quarto = {
 </section>
 <section id="complexité" class="level3">
 <h3 class="anchored" data-anchor-id="complexité">Complexité</h3>
-<p>Pour évaluer la complexité de cet algorithme, nous allons évaluer le nombre d’itérations nécessaires en fonction de la taille <span class="math inline">\(n\)</span> du tableau, dans le pire des cas, c’est-à-dire lorsque la valeur recherchée n’est pas dans le tableau.</p>
-<p>À chaque étape, la taille du sous-tableau contenant potentiellement la valeur recherchée est divisée par deux. Au bout de <span class="math inline">\(k\)</span> étapes, la taille du sous-tableau est donc de <span class="math inline">\(\frac{n}{2^k}\)</span> environ. Si la valeur recherchée n’est pas dans le tableau, alors on finit par arriver à un tableau de taille 1 et la boucle se termine au tour suivant. Soit <span class="math inline">\(k\)</span> le nombre d’itérations nécessaires pour que la taille du sous-tableau soit de 1. On a donc <span class="math inline">\(\frac{n}{2^k}\approx 1\)</span>, et par conséquent <span class="math inline">\(n=2^k\)</span>. On en déduit que <span class="math inline">\(k=\log_2 n\)</span>.</p>
-<p>L’algorithme de recherche dichotomique est donc en <span class="math inline">\(\mathcal{O}(\log n)\)</span>. On parle de <strong>complexité logarithmique</strong>. Cette complexité est meilleure que la complexité linéaire.</p>
+<p>Pour évaluer la complexité de cet algorithme, nous allons évaluer le nombre d’itérations nécessaires en fonction de la taille <span class="math inline">n</span> du tableau, dans le pire des cas, c’est-à-dire lorsque la valeur recherchée n’est pas dans le tableau.</p>
+<p>À chaque étape, la taille du sous-tableau contenant potentiellement la valeur recherchée est divisée par deux. Au bout de <span class="math inline">k</span> étapes, la taille du sous-tableau est donc de <span class="math inline">\frac{n}{2^k}</span> environ. Si la valeur recherchée n’est pas dans le tableau, alors on finit par arriver à un tableau de taille 1 et la boucle se termine au tour suivant. Soit <span class="math inline">k</span> le nombre d’itérations nécessaires pour que la taille du sous-tableau soit de 1. On a donc <span class="math inline">\frac{n}{2^k}\approx 1</span>, et par conséquent <span class="math inline">n=2^k</span>. On en déduit que <span class="math inline">k=\log_2 n</span>.</p>
+<p>L’algorithme de recherche dichotomique est donc en <span class="math inline">\mathcal{O}(\log n)</span>. On parle de <strong>complexité logarithmique</strong>. Cette complexité est meilleure que la complexité linéaire.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1145,21 +1141,21 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Si <span class="math inline">\(x\)</span> est une puissance de 2, alors <span class="math inline">\(\log_2 x\)</span> est égal à l’<strong>exposant</strong> de cette puissance. Par exemple, <span class="math inline">\(\log_2 8 = 3\)</span> car <span class="math inline">\(8 = 2^3\)</span>.</p>
+<p>Si <span class="math inline">x</span> est une puissance de 2, alors <span class="math inline">\log_2 x</span> est égal à l’<strong>exposant</strong> de cette puissance. Par exemple, <span class="math inline">\log_2 8 = 3</span> car <span class="math inline">8 = 2^3</span>.</p>
 </div>
 </div>
-<p>Pour un tableau de départ de taille <span class="math inline">\(16=2^4\)</span> dans lequel on cherche une valeur qui n’y est pas, on effectue 4 itérations :</p>
+<p>Pour un tableau de départ de taille <span class="math inline">16=2^4</span> dans lequel on cherche une valeur qui n’y est pas, on effectue 4 itérations :</p>
 <ul>
-<li>au premier tour, on divise le tableau en deux parties de taille <span class="math inline">\(8=2^3\)</span> et on cherche dans la partie de gauche (par exemple) ;</li>
-<li>au deuxième tour, on divise la partie de gauche en deux parties de taille <span class="math inline">\(4=2^2\)</span> et on cherche dans la partie de gauche (par exemple) ;</li>
-<li>au troisième tour, on divise la partie de gauche en deux parties de taille <span class="math inline">\(2=2^1\)</span> et on cherche dans la partie de gauche (par exemple) ;</li>
-<li>au quatrième tour, on divise la partie de gauche en deux parties de taille <span class="math inline">\(1=2^0\)</span> et on cherche dans la partie de gauche (par exemple).</li>
+<li>au premier tour, on divise le tableau en deux parties de taille <span class="math inline">8=2^3</span> et on cherche dans la partie de gauche (par exemple) ;</li>
+<li>au deuxième tour, on divise la partie de gauche en deux parties de taille <span class="math inline">4=2^2</span> et on cherche dans la partie de gauche (par exemple) ;</li>
+<li>au troisième tour, on divise la partie de gauche en deux parties de taille <span class="math inline">2=2^1</span> et on cherche dans la partie de gauche (par exemple) ;</li>
+<li>au quatrième tour, on divise la partie de gauche en deux parties de taille <span class="math inline">1=2^0</span> et on cherche dans la partie de gauche (par exemple).</li>
 </ul>
-<p>On retrouve bien un nombre d’itérations de l’ordre de <span class="math inline">\(\log_2 n\)</span>.</p>
+<p>On retrouve bien un nombre d’itérations de l’ordre de <span class="math inline">\log_2 n</span>.</p>
 </section>
 <section id="comparaison-expérimentale-des-deux-algorithmes" class="level3">
 <h3 class="anchored" data-anchor-id="comparaison-expérimentale-des-deux-algorithmes">Comparaison expérimentale des deux algorithmes</h3>
-<div id="71454572" class="cell" data-execution_count="7">
+<div id="ecd0841b" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> timeit</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1188,7 +1184,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="recherche_cours_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="recherche_cours_files/figure-html/cell-8-output-1.png" width="607" height="429" class="figure-img"></a></p>
+<p><a href="recherche_cours_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="recherche_cours_files/figure-html/cell-8-output-1.png" width="607" height="431" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -1661,113 +1657,6 @@ window.Quarto = {
     </div>
   </div>
 </footer>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    var matomoBaseUrl = "https://sitelf.fr/matomo/";
-    var siteId = "3";
-    var pageViewsElement = document.getElementById("page-views");
-
-    if (!pageViewsElement) return;
-
-    var isLocal = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
-    var productionHost = "sitelf.fr";
-    var hostname = isLocal ? productionHost : window.location.hostname;
-    var protocol = isLocal ? "https:" : window.location.protocol;
-    var pathname = window.location.pathname;
-    var targetUrl = protocol + "//" + hostname + pathname;
-
-    var normalizedPath = pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
-    var pathParts = normalizedPath.split("/").filter(Boolean);
-    var isPostPage = pathParts.length >= 2 && pathParts[0] === "posts";
-
-    function displayHits(hits) {
-        pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + " vues";
-    }
-
-    function displayUnavailable() {
-        pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> indisponible';
-    }
-
-    function cleanupCallback(callbackName) {
-        delete window[callbackName];
-        var script = document.getElementById(callbackName);
-        if (script) script.remove();
-    }
-
-    function requestJsonp(url, onSuccess, onError) {
-        var callbackName = "matomoCb_" + Math.floor(Math.random() * 1e9);
-        window[callbackName] = function (data) {
-            cleanupCallback(callbackName);
-            onSuccess(data);
-        };
-
-        var script = document.createElement("script");
-        script.id = callbackName;
-        script.src = url + "&jsoncallback=" + callbackName;
-        script.onerror = function () {
-            cleanupCallback(callbackName);
-            onError();
-        };
-        document.body.appendChild(script);
-    }
-
-    function findHitsByLabel(nodes, label) {
-        if (!Array.isArray(nodes)) return null;
-        for (var i = 0; i < nodes.length; i += 1) {
-            var node = nodes[i];
-            if (node && node.label === label && typeof node.nb_hits === "number") return node.nb_hits;
-            var nested = findHitsByLabel(node && node.subtable, label);
-            if (nested !== null) return nested;
-        }
-        return null;
-    }
-
-    function fallbackExactUrl() {
-        var fallbackUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl"
-            + "&idSite=" + siteId
-            + "&pageUrl=" + encodeURIComponent(targetUrl)
-            + "&format=JSON"
-            + "&period=range&date=2018-01-01,today";
-
-        requestJsonp(fallbackUrl, function (data) {
-            var hits = 0;
-            if (Array.isArray(data) && data.length && typeof data[0].nb_hits === "number") {
-                hits = data[0].nb_hits;
-            } else if (data && typeof data.nb_hits === "number") {
-                hits = data.nb_hits;
-            }
-            displayHits(hits);
-        }, function () {
-            displayUnavailable();
-        });
-    }
-
-    if (!isPostPage) {
-        fallbackExactUrl();
-        return;
-    }
-
-    var slug = pathParts[1];
-    var segmentPath = "/posts/" + slug;
-    var groupedUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrls"
-        + "&idSite=" + siteId
-        + "&format=JSON"
-        + "&expanded=1"
-        + "&period=range&date=2018-01-01,today"
-        + "&segment=" + encodeURIComponent("pageUrl=@" + segmentPath);
-
-    requestJsonp(groupedUrl, function (data) {
-        var hits = findHitsByLabel(data, slug);
-        if (typeof hits === "number") {
-            displayHits(hits);
-        } else {
-            fallbackExactUrl();
-        }
-    }, function () {
-        fallbackExactUrl();
-    });
-});
-</script>
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;

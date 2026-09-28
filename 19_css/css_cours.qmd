@@ -4,7 +4,7 @@ title: Cours (2) - Introduction au CSS
 
 <!-- Introduction avec historique -->
 
-![logo CSS](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/langfr-800px-CSS3_logo_and_wordmark.svg.png){width="15%"}
+![logo CSS](css3-logo.svg){width="15%"}
 
 Le principe du couple HTML/CSS est de bien séparer la définition du **contenu** d'une page Web de la définition de son **apparence**.
 

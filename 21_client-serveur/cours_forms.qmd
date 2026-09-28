@@ -18,7 +18,7 @@ Il existe bien d'autres éléments de formulaire, il n'est pas question d'en fai
 
 Pour comprendre le fonctionnement d'un formulaire, il faut se souvenir de l'architecture client/serveur déjà évoquée.
 
-![Architecture client - serveur](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1920px-Mod%C3%A8le-client-serveur.svg.png){width="50%"}
+![Architecture client - serveur](modele-client-serveur.png){width="50%"}
 
 Le formulaire, permet de transmettre des informations à un **serveur**. Ces informations sont envoyées par le **client** (le navigateur) lorsque le bouton de type `submit` est cliqué.
 

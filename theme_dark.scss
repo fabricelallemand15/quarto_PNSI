@@ -1,4 +1,6 @@
 /*-- scss:defaults --*/
+// Police Lato auto-hébergée (voir styles.css) : pas d'appel à Google Fonts
+$web-font-path: false;
 // Base document colors
 $body-bg: #181818;
 $body-color: #fffafa;

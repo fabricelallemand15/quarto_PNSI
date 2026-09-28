@@ -15,7 +15,7 @@ Du côté matériel, un ordinateur est composé de:
 * La Mémoire Centrale (MC) pour le stockage
 * Les Périphériques : disque dur, clavier, souris, ... , carte réseau... accessibles via des pilotes de périphériques
 
-Cet aspect matériel sera étudié plus en détail dans le chapitre [Modèle d'architecture de von Neumann](../10_vonNeumann/index.qmd).
+Cet aspect matériel sera étudié plus en détail dans le chapitre [Modèle d'architecture de von Neumann](../13_vonNeumann/neumann_cours_3.qmd).
 
 Du côté logiciel, il existe deux niveaux bien distincts : **le système d'exploitation** et les applications.
 
