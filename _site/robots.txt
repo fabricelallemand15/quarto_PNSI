@@ -1,1 +1,1 @@
-Sitemap: https://sitelf.fr/PNSI/sitemap.xml
+Sitemap: https://pnsi.mathsinfolycee.fr/sitemap.xml

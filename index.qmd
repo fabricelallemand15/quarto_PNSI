@@ -9,17 +9,18 @@ Ce site est destiné à regrouper les cours et les exercices concernant l'enseig
 ::: {.callout-note .updates-box}
 ## Dernières mises à jour
 
+- Septembre 2026 - Migration des sources du site vers la Forge + changement des polices de caractères pour des polices libres + auto-hébergement de KaTeX pour les formules mathématiques.
 - Avril 2026 - Mise en place du mode Reader pleine page (bouton en haut à droite)
 - Avril 2026 - Mise à jour et correction de coquilles dans le chapitre 7 : [*Algorithmes*](14_algo/algo_cours.qmd)
 - Mars 2026 - Refonte du chapitre 6 : [*Réseaux et protocoles*](23_reseaux/reseaux_cours.qmd)
 - Février 2026 - Refonte du chapitre 5 : [*Python avancé*](10_p-uplets/p_uplets.qmd)
-- Janvier 2026 - Refonte du chapitre 4 : *Représentation numérique des nombres et du texte*
 :::
 
-Lien vers l'ENT du lycée : [https://cas.ent.auvergnerhonealpes.fr/login](https://cas.ent.auvergnerhonealpes.fr/login){target="_blank"}
+Lien vers l'ENT du lycée : [https://cas.ent.auvergnerhonealpes.fr/login](https://cas.ent.auvergnerhonealpes.fr/login){target="_blank"}{target="_blank"}
 
-Lien vers Capytale : [https://capytale2.ac-paris.fr/web/c-auth/list](https://capytale2.ac-paris.fr/web/c-auth/list){target="_blank"}
+Lien vers le programme officiel : [Programme officiel première NSI](Programme_Prem_NSI.pdf){target="_blank"}
 
-Lien vers le programme officiel : [Programme officiel première NSI](Programme_Prem_NSI.pdf)
+Lien vers La Forge des communs numériques éducatifs : [Forge des communs numériques éducatifs](https://forge.apps.education.fr/){target="_blank"}
+
 
 ![](Coding_Flatline.png)

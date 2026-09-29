@@ -10,8 +10,8 @@ website:
   title: "NSI - Première"
   favicon: favicon.ico
   page-navigation: true
-  site-url: https://sitelf.fr/PNSI
-  repo-url: https://github.com/fabricelallemand15/quarto_PNSI
+  site-url: https://pnsi.mathsinfolycee.fr/
+  repo-url: https://forge.apps.education.fr/lallemandfabrice/quarto_pnsi
   repo-actions: [issue]
   reader-mode: true
   navbar:
@@ -133,9 +133,9 @@ website:
     right: 
       - text: "Mentions légales"
         href: about.qmd
-      - icon: github
-        href: https://github.com/fabricelallemand15/quarto_PNSI
-  cookie-consent: true
+      - icon: gitlab
+        href: https://forge.apps.education.fr/lallemandfabrice/quarto_pnsi
+  cookie-consent: false
 
 bibliography: references.bib 
 
