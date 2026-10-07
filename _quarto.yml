@@ -48,7 +48,7 @@ website:
           - 08_booleens/booleens_exos.qmd  
           - 11_tableaux/tableaux.qmd
           - 11_tableaux/exos_tabs.qmd
-          - 15_parcours/parcours_cours.qmd
+          - 15_parcours/08_parcourir_un_tableau.ipynb
           - 15_parcours/parcours_exos.qmd
           - 04_langages/langages.qmd
           - 11_tableaux/TP_Stegano.qmd

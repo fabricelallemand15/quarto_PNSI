@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Terminus - Jouer avec le terminal – NSI - Première</title>
+<title>TP — Parcourir un tableau – NSI - Première</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -33,6 +68,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../15_parcours/parcours_exos.html" rel="next">
+<link href="../11_tableaux/exos_tabs.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -50,9 +87,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -296,7 +330,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Terminus - Jouer avec le terminal</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../02_python/python_bases.html">Ch. 1 - Python : les bases</a></li><li class="breadcrumb-item"><a href="../15_parcours/08_parcourir_un_tableau.html">TP — Parcourir un tableau</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -310,13 +344,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Ch. 1 - Python : les bases</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Basculer la section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Basculer la section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../02_python/python_bases.html" class="sidebar-item-text sidebar-link">
@@ -409,7 +443,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../15_parcours/08_parcourir_un_tableau.html" class="sidebar-item-text sidebar-link">
+  <a href="../15_parcours/08_parcourir_un_tableau.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">TP — Parcourir un tableau</span></a>
   </div>
 </li>
@@ -863,16 +897,40 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#démarrer-parcourir-par-indices" id="toc-démarrer-parcourir-par-indices" class="nav-link active" data-scroll-target="#démarrer-parcourir-par-indices">1. Démarrer : parcourir par indices</a></li>
+  <li><a href="#rechercher-toutes-les-occurrences" id="toc-rechercher-toutes-les-occurrences" class="nav-link" data-scroll-target="#rechercher-toutes-les-occurrences">2. Rechercher toutes les occurrences</a>
+  <ul class="collapse">
+  <li><a href="#construire-lalgorithme" id="toc-construire-lalgorithme" class="nav-link" data-scroll-target="#construire-lalgorithme">2.1 Construire l’algorithme</a></li>
+  <li><a href="#tester-sur-les-notes" id="toc-tester-sur-les-notes" class="nav-link" data-scroll-target="#tester-sur-les-notes">2.2 Tester sur les notes</a></li>
+  </ul></li>
+  <li><a href="#rechercher-un-maximum" id="toc-rechercher-un-maximum" class="nav-link" data-scroll-target="#rechercher-un-maximum">3. Rechercher un maximum</a>
+  <ul class="collapse">
+  <li><a href="#faire-une-trace-avant-de-coder" id="toc-faire-une-trace-avant-de-coder" class="nav-link" data-scroll-target="#faire-une-trace-avant-de-coder">3.1 Faire une trace avant de coder</a></li>
+  <li><a href="#tester-et-varier-les-données" id="toc-tester-et-varier-les-données" class="nav-link" data-scroll-target="#tester-et-varier-les-données">3.2 Tester et varier les données</a></li>
+  <li><a href="#estimer-le-nombre-dopérations" id="toc-estimer-le-nombre-dopérations" class="nav-link" data-scroll-target="#estimer-le-nombre-dopérations">3.3 Estimer le nombre d’opérations</a></li>
+  </ul></li>
+  <li><a href="#calculer-une-moyenne" id="toc-calculer-une-moyenne" class="nav-link" data-scroll-target="#calculer-une-moyenne">4. Calculer une moyenne</a>
+  <ul class="collapse">
+  <li><a href="#construire-la-fonction" id="toc-construire-la-fonction" class="nav-link" data-scroll-target="#construire-la-fonction">4.1 Construire la fonction</a></li>
+  <li><a href="#tester-la-fonction" id="toc-tester-la-fonction" class="nav-link" data-scroll-target="#tester-la-fonction">4.2 Tester la fonction</a></li>
+  <li><a href="#estimer-le-coût" id="toc-estimer-le-coût" class="nav-link" data-scroll-target="#estimer-le-coût">4.3 Estimer le coût</a></li>
+  </ul></li>
+  <li><a href="#défi-compter-les-valeurs-supérieures-à-un-seuil" id="toc-défi-compter-les-valeurs-supérieures-à-un-seuil" class="nav-link" data-scroll-target="#défi-compter-les-valeurs-supérieures-à-un-seuil">5. Défi — compter les valeurs supérieures à un seuil</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://forge.apps.education.fr/lallemandfabrice/quarto_pnsi/issues/new" class="toc-action"><i class="bi bi-git"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../02_python/python_bases.html">Ch. 1 - Python : les bases</a></li><li class="breadcrumb-item"><a href="../15_parcours/08_parcourir_un_tableau.html">TP — Parcourir un tableau</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Terminus - Jouer avec le terminal</h1>
+<h1 class="title">TP — Parcourir un tableau</h1>
 </div>
 
 
@@ -889,16 +947,164 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Terminus est un jeu éducatif qui permet aux utilisateurs d’apprendre les commandes du terminal de manière ludique. Le jeu propose une série de défis et d’énigmes que les joueurs doivent résoudre en utilisant des commandes de terminal.</p>
-<p>Cliquer sur l’image ci-dessous pour accéder au jeu Terminus :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="terminuns.png" class="img-fluid figure-img"></p>
-<figcaption>Terminus Game</figcaption>
-</figure>
+<p>Lien vers ce notebook dans Capytale : <a href="https://capytale2.ac-paris.fr/web/c/b62b-12111866/mcer">https://capytale2.ac-paris.fr/web/c/b62b-12111866/mcer</a></p>
+<p>Dans ce TP, vous allez programmer trois traitements classiques : rechercher des occurrences, trouver un maximum et calculer une moyenne. Vous construirez les algorithmes progressivement, les testerez et estimerez leur nombre d’opérations.</p>
+<p><strong>Travail individuel sur ordinateur.</strong> Exécutez les cellules dans l’ordre. Avant chaque exécution, lisez la question et prévoyez le résultat. Complétez les zones <code>À FAIRE</code>, puis décommentez les tests proposés.</p>
+<p><strong>Prérequis :</strong> indices, <code>len</code>, boucles <code>for</code>, conditions, listes et fonctions.</p>
+<section id="démarrer-parcourir-par-indices" class="level2">
+<h2 class="anchored" data-anchor-id="démarrer-parcourir-par-indices">1. Démarrer : parcourir par indices</h2>
+<p>On veut afficher chaque note de musique avec sa position. Complétez la boucle : <code>i</code> doit prendre toutes les valeurs d’indice valides. Prévoyez d’abord ce qui sera affiché.</p>
+<div id="explorer-indices" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>notes <span class="op">=</span> [<span class="st">"DO"</span>, <span class="st">"RE"</span>, <span class="st">"MI"</span>, <span class="st">"FA"</span>, <span class="st">"SOL"</span>, <span class="st">"LA"</span>, <span class="st">"SI"</span>, <span class="st">"DO"</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># À FAIRE : parcourir les indices et afficher l'indice puis la note.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(...):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(..., ...)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Après l’exécution, vérifiez : combien d’itérations la boucle a-t-elle effectuées ? Dans la suite, nous utiliserons un parcours par indices lorsque l’indice est nécessaire (par exemple pour le retourner ou modifier une case).</p>
+</section>
+<section id="rechercher-toutes-les-occurrences" class="level2">
+<h2 class="anchored" data-anchor-id="rechercher-toutes-les-occurrences">2. Rechercher toutes les occurrences</h2>
+<p>La fonction recherchée reçoit un tableau et une valeur. Elle doit <strong>renvoyer la liste des indices</strong> où cette valeur apparaît. Si elle n’apparaît pas, le résultat est une liste vide.</p>
+<section id="construire-lalgorithme" class="level3">
+<h3 class="anchored" data-anchor-id="construire-lalgorithme">2.1 Construire l’algorithme</h3>
+<p>Au départ, aucun indice n’a été trouvé : l’accumulateur <code>indices</code> est donc une liste vide. À chaque position, testez la valeur et ajoutez l’indice courant si elle correspond à la valeur recherchée. Complétez les deux zones <code>À FAIRE</code>.</p>
+<div id="coder-occurrences" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> occurrences(tab, valeur):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Renvoie les indices où valeur apparaît dans tab."""</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    indices <span class="op">=</span> []</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(tab)):</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="co"># À FAIRE : si la case i contient valeur, ajouter i à indices.</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> indices</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="tester-sur-les-notes" class="level3">
+<h3 class="anchored" data-anchor-id="tester-sur-les-notes">2.2 Tester sur les notes</h3>
+<p>Sans exécuter d’abord, prévoyez les trois résultats : la première note apparaît deux fois, une autre une fois, et <code>UT</code> n’apparaît pas. Exécutez ensuite et comparez.</p>
+<div id="essais-occurrences" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>notes <span class="op">=</span> [<span class="st">"DO"</span>, <span class="st">"RE"</span>, <span class="st">"MI"</span>, <span class="st">"FA"</span>, <span class="st">"SOL"</span>, <span class="st">"LA"</span>, <span class="st">"SI"</span>, <span class="st">"DO"</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(occurrences(notes, <span class="st">"DO"</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(occurrences(notes, <span class="st">"MI"</span>))</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(occurrences(notes, <span class="st">"UT"</span>))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Test automatiques : ne pas modifier le code ci-dessous</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> occurrences(notes, <span class="st">"DO"</span>) <span class="op">==</span> [<span class="dv">0</span>, <span class="dv">7</span>]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> occurrences(notes, <span class="st">"MI"</span>) <span class="op">==</span> [<span class="dv">2</span>]</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> occurrences(notes, <span class="st">"UT"</span>) <span class="op">==</span> []</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> occurrences([], <span class="st">"DO"</span>) <span class="op">==</span> []</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bravo ! Tous les tests sont passés."</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="rechercher-un-maximum" class="level2">
+<h2 class="anchored" data-anchor-id="rechercher-un-maximum">3. Rechercher un maximum</h2>
+<p>On cherche maintenant la plus grande valeur d’un tableau de nombres. La stratégie : prendre la première valeur comme maximum temporaire, puis examiner les suivantes et mettre à jour le maximum si nécessaire.</p>
+<p>Le tableau fourni à cette fonction doit être <strong>non vide</strong>. On choisit le nom <code>maximum</code> pour ne pas masquer la fonction intégrée <code>max</code> de Python.</p>
+<section id="faire-une-trace-avant-de-coder" class="level3">
+<h3 class="anchored" data-anchor-id="faire-une-trace-avant-de-coder">3.1 Faire une trace avant de coder</h3>
+<p>Pour <code>[201, 203, 35, 448, 55]</code>, notez le maximum temporaire après chaque valeur examinée. Le premier maximum temporaire est-il <code>0</code> ou la première valeur du tableau ? Expliquez pourquoi cette distinction compte si toutes les valeurs sont négatives.</p>
+<div id="72f05e41" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Répondez ici</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="coder-maximum" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> maximum(tab):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Renvoie la plus grande valeur de tab ; tab doit être non vide."""</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(tab) <span class="op">&gt;</span> <span class="dv">0</span>, <span class="st">"Le tableau doit être non vide"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> tab[<span class="dv">0</span>]</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(tab)):</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># À FAIRE : comparer tab[i] à m et mettre m à jour si besoin.</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> m</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="tester-et-varier-les-données" class="level3">
+<h3 class="anchored" data-anchor-id="tester-et-varier-les-données">3.2 Tester et varier les données</h3>
+<p>Prévoyez le maximum avant d’exécuter. Les tests couvrent un tableau de plusieurs valeurs, des valeurs négatives et un tableau à un seul élément.</p>
+<div id="essais-maximum" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mesures <span class="op">=</span> [<span class="dv">201</span>, <span class="dv">203</span>, <span class="dv">35</span>, <span class="dv">448</span>, <span class="dv">55</span>, <span class="dv">16</span>, <span class="dv">2023</span>, <span class="dv">14</span>, <span class="dv">999</span>, <span class="dv">100</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(maximum(mesures))</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Test automatiques : ne pas modifier le code ci-dessous</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> maximum(mesures) <span class="op">==</span> <span class="dv">2023</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> maximum([<span class="op">-</span><span class="dv">8</span>, <span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="dv">11</span>]) <span class="op">==</span> <span class="op">-</span><span class="dv">3</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> maximum([<span class="dv">6</span>]) <span class="op">==</span> <span class="dv">6</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bravo ! Tous les tests sont passés."</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="estimer-le-nombre-dopérations" class="level3">
+<h3 class="anchored" data-anchor-id="estimer-le-nombre-dopérations">3.3 Estimer le nombre d’opérations</h3>
+<p>La première valeur sert d’initialisation : la boucle commence donc à l’indice <code>1</code>. Pour un tableau de taille <code>n</code>, combien d’itérations et de comparaisons sont effectuées ?</p>
+<div id="d2abdf88" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Répondez ici</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="calculer-une-moyenne" class="level2">
+<h2 class="anchored" data-anchor-id="calculer-une-moyenne">4. Calculer une moyenne</h2>
+<p>Pour calculer une moyenne, on commence par additionner toutes les valeurs à l’aide d’un accumulateur <code>somme</code>, initialisé à <code>0</code>. On divise ensuite cette somme par le nombre de valeurs. Comme pour le maximum, le tableau est supposé non vide.</p>
+<section id="construire-la-fonction" class="level3">
+<h3 class="anchored" data-anchor-id="construire-la-fonction">4.1 Construire la fonction</h3>
+<p>Complétez la boucle pour ajouter chaque valeur à <code>somme</code>, puis retournez la somme divisée par le nombre de valeurs. Suivez l’évolution de <code>somme</code> pour <code>[10, 14, 16]</code> : elle doit contenir la somme des valeurs déjà parcourues.</p>
+<div id="coder-moyenne" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> moyenne(tab):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Renvoie la moyenne des valeurs de tab ; tab doit être non vide."""</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(tab) <span class="op">&gt;</span> <span class="dv">0</span>, <span class="st">"Le tableau doit être non vide"</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    somme <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(tab)):</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># À FAIRE : ajouter la valeur d'indice i à somme.</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># À FAIRE : renvoyer la moyenne.</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ...</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="tester-la-fonction" class="level3">
+<h3 class="anchored" data-anchor-id="tester-la-fonction">4.2 Tester la fonction</h3>
+<p>Pour <code>[10, 14, 16]</code>, la somme vaut 40. Préparez-vous à obtenir une moyenne décimale, puis lancez les tests.</p>
+<div id="essais-moyenne" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mesures <span class="op">=</span> [<span class="dv">201</span>, <span class="dv">203</span>, <span class="dv">35</span>, <span class="dv">448</span>, <span class="dv">55</span>, <span class="dv">16</span>, <span class="dv">2023</span>, <span class="dv">14</span>, <span class="dv">999</span>, <span class="dv">100</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(moyenne(mesures))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Test automatiques : ne pas modifier le code ci-dessous</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> moyenne([<span class="dv">10</span>, <span class="dv">14</span>, <span class="dv">16</span>]) <span class="op">==</span> <span class="dv">40</span> <span class="op">/</span> <span class="dv">3</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> moyenne([<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>]) <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> moyenne([<span class="dv">7</span>]) <span class="op">==</span> <span class="dv">7</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bravo ! Tous les tests sont passés."</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="estimer-le-coût" class="level3">
+<h3 class="anchored" data-anchor-id="estimer-le-coût">4.3 Estimer le coût</h3>
+<p>Pour un tableau de taille <code>n</code>, la boucle effectue <code>n</code> itérations et <code>n</code> additions. Il faut encore une division. Écrivez le nombre total de ces opérations. Comparez avec la recherche d’occurrences et la recherche du maximum.</p>
+<div id="cac20cbe" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Répondez ici</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="défi-compter-les-valeurs-supérieures-à-un-seuil" class="level2">
+<h2 class="anchored" data-anchor-id="défi-compter-les-valeurs-supérieures-à-un-seuil">5. Défi — compter les valeurs supérieures à un seuil</h2>
+<p>Réutilisez le principe de parcours et d’accumulateur pour écrire <code>compter_superieurs(tab, seuil)</code>, qui renvoie le nombre de valeurs strictement supérieures au seuil. Testez votre fonction sur les mesures ci-dessous, puis sur un tableau vide.</p>
+<p>Avant de coder, réfléchissez : quel est le type d’accumulateur à utiliser, comment l’initialiser et quand l’incrémenter ?</p>
+<div id="coder-defi" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compter_superieurs(tab, seuil):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Renvoie le nombre de valeurs strictement supérieures à seuil."""</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    compteur <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(tab)):</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="co"># À FAIRE : compléter le code pour compter les valeurs supérieures à seuil.</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ...</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>mesures <span class="op">=</span> [<span class="dv">201</span>, <span class="dv">203</span>, <span class="dv">35</span>, <span class="dv">448</span>, <span class="dv">55</span>, <span class="dv">16</span>, <span class="dv">2023</span>, <span class="dv">14</span>, <span class="dv">999</span>, <span class="dv">100</span>]</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(compter_superieurs(mesures, <span class="dv">200</span>))</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Test automatiques : ne pas modifier le code ci-dessous</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> compter_superieurs(mesures, <span class="dv">200</span>) <span class="op">==</span> <span class="dv">6</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> compter_superieurs([<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>], <span class="dv">3</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> compter_superieurs([], <span class="dv">0</span>) <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bravo ! Tous les tests sont passés."</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1316,6 +1522,18 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../11_tableaux/exos_tabs.html" class="pagination-link" aria-label="Exercices - Tableaux">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercices - Tableaux</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../15_parcours/parcours_exos.html" class="pagination-link" aria-label="Exercices - Parcours">
+        <span class="nav-page-text">Exercices - Parcours</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1333,7 +1551,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://forge.apps.education.fr/lallemandfabrice/quarto_pnsi/issues/new" class="toc-action"><i class="bi bi-git"></i>Faire part d'un problème</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://forge.apps.education.fr/lallemandfabrice/quarto_pnsi/issues/new" class="toc-action"><i class="bi bi-git"></i>Faire part d'un problème</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -1351,38 +1569,6 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
