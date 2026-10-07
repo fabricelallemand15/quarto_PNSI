@@ -902,13 +902,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#création-dun-tableau" id="toc-création-dun-tableau" class="nav-link active" data-scroll-target="#création-dun-tableau">1. Création d’un tableau</a></li>
-  <li><a href="#construction-par-compréhension" id="toc-construction-par-compréhension" class="nav-link" data-scroll-target="#construction-par-compréhension">2. Construction par compréhension</a></li>
-  <li><a href="#utilisation-des-tableaux" id="toc-utilisation-des-tableaux" class="nav-link" data-scroll-target="#utilisation-des-tableaux">3. Utilisation des tableaux</a></li>
-  <li><a href="#opérations-sur-les-tableaux" id="toc-opérations-sur-les-tableaux" class="nav-link" data-scroll-target="#opérations-sur-les-tableaux">4. Opérations sur les tableaux</a></li>
-  <li><a href="#copie-dun-tableau" id="toc-copie-dun-tableau" class="nav-link" data-scroll-target="#copie-dun-tableau">5. Copie d’un tableau</a></li>
-  <li><a href="#parcours-dun-tableau-avec-une-boucle-for" id="toc-parcours-dun-tableau-avec-une-boucle-for" class="nav-link" data-scroll-target="#parcours-dun-tableau-avec-une-boucle-for">6. Parcours d’un tableau avec une boucle for</a></li>
-  <li><a href="#remarques-sur-les-tableaux-de-tableaux" id="toc-remarques-sur-les-tableaux-de-tableaux" class="nav-link" data-scroll-target="#remarques-sur-les-tableaux-de-tableaux">7. Remarques sur les tableaux de tableaux</a></li>
+  <li><a href="#création-dun-tableau-et-indices" id="toc-création-dun-tableau-et-indices" class="nav-link active" data-scroll-target="#création-dun-tableau-et-indices">1. Création d’un tableau et indices</a></li>
+  <li><a href="#lire-et-modifier-un-élément" id="toc-lire-et-modifier-un-élément" class="nav-link" data-scroll-target="#lire-et-modifier-un-élément">2. Lire et modifier un élément</a></li>
+  <li><a href="#parcourir-un-tableau-avec-une-boucle-for" id="toc-parcourir-un-tableau-avec-une-boucle-for" class="nav-link" data-scroll-target="#parcourir-un-tableau-avec-une-boucle-for">3. Parcourir un tableau avec une boucle for</a></li>
+  <li><a href="#construire-un-tableau" id="toc-construire-un-tableau" class="nav-link" data-scroll-target="#construire-un-tableau">4. Construire un tableau</a>
+  <ul class="collapse">
+  <li><a href="#avec-une-boucle-et-append" id="toc-avec-une-boucle-et-append" class="nav-link" data-scroll-target="#avec-une-boucle-et-append">Avec une boucle et <code>append</code></a></li>
+  <li><a href="#par-compréhension" id="toc-par-compréhension" class="nav-link" data-scroll-target="#par-compréhension">Par compréhension</a></li>
+  </ul></li>
+  <li><a href="#concaténer-et-répéter-les-opérateurs-et" id="toc-concaténer-et-répéter-les-opérateurs-et" class="nav-link" data-scroll-target="#concaténer-et-répéter-les-opérateurs-et">5. Concaténer et répéter : les opérateurs <code>+</code> et <code>*</code></a></li>
+  <li><a href="#méthodes-la-boîte-à-outils" id="toc-méthodes-la-boîte-à-outils" class="nav-link" data-scroll-target="#méthodes-la-boîte-à-outils">6. Méthodes : la boîte à outils</a></li>
+  <li><a href="#mutation-références-et-copies" id="toc-mutation-références-et-copies" class="nav-link" data-scroll-target="#mutation-références-et-copies">7. Mutation, références et copies</a>
+  <ul class="collapse">
+  <li><a href="#copie-superficielle" id="toc-copie-superficielle" class="nav-link" data-scroll-target="#copie-superficielle">Copie superficielle</a></li>
+  <li><a href="#copie-profonde" id="toc-copie-profonde" class="nav-link" data-scroll-target="#copie-profonde">Copie profonde</a></li>
+  </ul></li>
+  <li><a href="#tableaux-de-tableaux" id="toc-tableaux-de-tableaux" class="nav-link" data-scroll-target="#tableaux-de-tableaux">8. Tableaux de tableaux</a>
+  <ul class="collapse">
+  <li><a href="#un-piège-classique-créer-un-tableau-2d" id="toc-un-piège-classique-créer-un-tableau-2d" class="nav-link" data-scroll-target="#un-piège-classique-créer-un-tableau-2d">Un piège classique : créer un tableau 2D</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://forge.apps.education.fr/lallemandfabrice/quarto_pnsi/issues/new" class="toc-action"><i class="bi bi-git"></i>Faire part d'un problème</a></li></ul></div></nav>
     </div>
@@ -958,171 +970,499 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Un tableau est une suite ordonnée d’éléments qui sont <strong>tous du même type</strong>.</p>
+<p>Un tableau est une suite ordonnée d’éléments repérés par leur <strong>indice</strong> (leur position, en commençant à 0).</p>
+<p>Dans le modèle de tableau utilisé en NSI, les éléments sont <strong>tous du même type</strong>. Python représente ces tableaux par des objets <code>list</code>, qui peuvent en réalité contenir des objets de types différents : <code>[1, "a", True]</code> est une <code>list</code> valide. Dans ce cours, nous n’utiliserons que des tableaux dont les éléments sont du même type.</p>
 </div>
 </div>
-<section id="création-dun-tableau" class="level2">
-<h2 class="anchored" data-anchor-id="création-dun-tableau">1. Création d’un tableau</h2>
-<p>Pour créer un tableau en Python, nous utilisons un objet de type <code>list</code>. Un tel objet ressemble à un p-uplet : un ensemble ordonné d’éléments avec des indices pour les repérer. Les éléments d’un tableau sont séparés par des virgules et <strong>entourés de crochets</strong>.</p>
+<section id="création-dun-tableau-et-indices" class="level2">
+<h2 class="anchored" data-anchor-id="création-dun-tableau-et-indices">1. Création d’un tableau et indices</h2>
+<p>Pour créer un tableau en Python, nous utilisons un objet de type <code>list</code>. Un tel objet est une collection ordonnée d’éléments, repérés par des indices. Les éléments d’un tableau sont séparés par des virgules et <strong>entourés de crochets</strong>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab1 <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>] <span class="co"># un tableau à 3 éléments</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2 <span class="op">=</span> [<span class="dv">1</span>] <span class="co"># un tableau contenant un seul élément</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab3 <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]] <span class="co"># un tableau de tableaux</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab_vide <span class="op">=</span> [] <span class="co"># un tableau vide</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Les indices commencent à <strong>0</strong> : il ne faut pas confondre la <strong>valeur</strong> d’un élément et son <strong>indice</strong> (sa position).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>indice</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>valeur</td>
+<td>“a”</td>
+<td>“b”</td>
+<td>“c”</td>
+</tr>
+</tbody>
+</table>
 <p>Pour créer rapidement un tableau d’entiers, nous pouvons utiliser les fonctions <code>list</code> et <code>range</code>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">3</span>)) <span class="co"># [2, 5, 8]</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Pour ajouter les éléments un par un en fin de tableau, nous pouvons utiliser la méthode <code>append</code> :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>multiples_de_3 <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">3</span>]</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>multiples_de_3.append(<span class="dv">6</span>) <span class="co"># [0, 3, 6]</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="construction-par-compréhension" class="level2">
-<h2 class="anchored" data-anchor-id="construction-par-compréhension">2. Construction par compréhension</h2>
-<p>Il est aussi possible de créer un tableau <strong>par compréhension</strong>. Il s’agit de décrire les éléments du tableau par une boucle, des conditions…</p>
-<p>L’instruction de base s’écrit sous la forme <code>[expression(i) for i in objet]</code>. Ce type de construction est très spécifique au langage Python. En voici deux exemples :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>multiples_de_3 <span class="op">=</span> [<span class="dv">3</span> <span class="op">*</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>)]</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>multiples_de_6 <span class="op">=</span> [<span class="dv">2</span> <span class="op">*</span> n <span class="cf">for</span> n <span class="kw">in</span> multiples_de_3]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Si on dispose d’une fonction <code>f</code> et d’un tableau d’abscisses <code>x</code> :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>images <span class="op">=</span> [f(x) <span class="cf">for</span> x <span class="kw">in</span> abscisses]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>On peut aussi ajouter des conditions. Par exemple l’instruction ci-dessous est une autre façon de définir le tableau des multiples de 3 :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>multiples_de_3 <span class="op">=</span> [n <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">301</span>) <span class="cf">if</span> n <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="lire-et-modifier-un-élément" class="level2">
+<h2 class="anchored" data-anchor-id="lire-et-modifier-un-élément">2. Lire et modifier un élément</h2>
+<p>La fonction <code>len</code> renvoie la longueur d’un tableau, c’est-à-dire le nombre de ses éléments. Les indices valides vont donc de <code>0</code> à <code>len(tab) - 1</code>.</p>
+<p>On accède à un élément avec son indice, entre crochets, comme pour les chaînes de caractères. Un indice négatif compte à partir de la fin : <code>tab[-1]</code> est le dernier élément.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(tab)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab[<span class="dv">1</span>]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">'b'</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">'c'</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab[<span class="dv">3</span>]</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="pp">IndexError</span>: <span class="bu">list</span> index out of <span class="bu">range</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>À la différence des chaînes de caractères, un tableau est un objet <strong>modifiable</strong> (on dit <strong>mutable</strong> en anglais). On peut donc réaffecter un élément d’un tableau déjà créé.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">17</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">17</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>À vous de prédire
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Que contient <code>tab</code> après les trois instructions suivantes ?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tab <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>tab[<span class="dv">1</span>] <span class="op">=</span> tab[<span class="dv">0</span>] <span class="op">+</span> tab[<span class="dv">2</span>]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>tab[<span class="dv">2</span>] <span class="op">=</span> <span class="bu">len</span>(tab)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Réponse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><code>tab</code> vaut <code>[5, 7, 3]</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="utilisation-des-tableaux" class="level2">
-<h2 class="anchored" data-anchor-id="utilisation-des-tableaux">3. Utilisation des tableaux</h2>
-<p>La fonction <code>len</code> renvoie la longueur d’un tableau, le nombre d’éléments du tableau.</p>
-<p>On accède aux différents éléments d’un tableau avec les indices comme pour les p-uplets. Dans le cas d’un tableau de tableaux, on utilise des doubles crochets : <code>tab[1][0]</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab[<span class="dv">1</span>]</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">'b'</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> [[<span class="st">"a"</span>, <span class="st">"b"</span>], [<span class="st">"c"</span>, <span class="st">"d"</span>]]</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab[<span class="dv">1</span>][<span class="dv">0</span>]</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">'c'</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>À la différence des tuples, un tableau est un objet <strong>modifiable</strong> (on dit <strong>mutable</strong> en anglais). On peut donc réaffecter un élément d’un tableau déjà créé.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">17</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">17</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="opérations-sur-les-tableaux" class="level2">
-<h2 class="anchored" data-anchor-id="opérations-sur-les-tableaux">4. Opérations sur les tableaux</h2>
-<p>Le type d’une variable définit les valeurs qui peuvent être affectées à cette variable ainsi que les opérateurs et les fonctions utilisables. Les fonctions propres à un type donné sont appelées des <strong>méthodes</strong>. La fonction <code>len</code> par exemple, s’applique aux chaînes de caractères, aux p-uplets, aux tableaux. La méthode <code>append</code>, présentée plus haut, est par contre propre aux tableaux.</p>
-<p><strong>Attention à la syntaxe</strong> : on écrit <code>len(tab)</code>, mais <code>tab.append(...)</code>. Le nom de la variable est suivi d’un point puis du nom de la méthode. Cette notation est issue de la <strong>programmation orientée objets</strong> qui sera abordée en terminale.</p>
-<p>Voici quelques méthodes pour le tableau :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab.insert(<span class="dv">1</span>, <span class="st">"d"</span>) <span class="co"># insertion à l'indice 1 de l'élément "d"</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>[<span class="st">'a'</span>, <span class="st">'d'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab.remove(<span class="st">"b"</span>) <span class="co"># suppression de la première occurrence de l'élément "b"</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>[<span class="st">'a'</span>, <span class="st">'d'</span>, <span class="st">'c'</span>]</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> tab.pop() <span class="co"># supprime et retourne le dernier élément</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> x</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">'c'</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>[<span class="st">'a'</span>, <span class="st">'d'</span>]</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab.reverse() <span class="co"># renverse l'ordre des éléments</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>[<span class="st">'d'</span>, <span class="st">'a'</span>]</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab.sort() <span class="co"># trie les éléments dans l'ordre croissant ou alphabétique</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>[<span class="st">'a'</span>, <span class="st">'d'</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Toutes ces méthodes modifient la liste initiale contrairement aux opérateurs de concaténation + et * avec lesquels une nouvelle liste est créée. Ces deux opérateurs s’utilisent comme avec les p-uplets.</p>
-<p>Notons qu’il est aussi possible de trier une liste sans la modifier avec la fonction sorted qui crée une nouvelle liste.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">4</span>]</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tri <span class="op">=</span> <span class="bu">sorted</span>(tab)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">4</span>]</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tri</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">7</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="copie-dun-tableau" class="level2">
-<h2 class="anchored" data-anchor-id="copie-dun-tableau">5. Copie d’un tableau</h2>
-<p>Un tableau peut donc être modifié par une méthode. On peut aussi modifier l’un de ses éléments par affectation.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab[<span class="dv">1</span>] <span class="op">=</span> <span class="st">"d"</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>[<span class="st">"a"</span>, <span class="st">"d"</span>, <span class="st">"c"</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Ceci oblige à une grande attention en particulier dans la création de copie de tableau. Observons le code suivant :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab1 <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2 <span class="op">=</span> tab1</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab1[<span class="dv">1</span>] <span class="op">=</span> <span class="st">"d"</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>[<span class="st">"a"</span>, <span class="st">"d"</span>, <span class="st">"c"</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Dans cet exemple, un même tableau a deux noms et <code>tab2</code> n’est pas une copie de <code>tab1</code> : il s’agit juste d’une nouvelle étiquette qui pointe vers le même contenu de la mémoire.</p>
-<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=tab1%20%3D%20%5B%22a%22,%20%22b%22,%20%22c%22%5D%0Atab2%20%3D%20tab1%0Atab1%5B1%5D%20%3D%20%22d%22&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=3&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
-</iframe>
-<p>Pour obtenir une vraie copie, il faut créer un nouveau tableau.</p>
-<p>Pour effectuer une vraie copie d’une liste simple, on peut entrer :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2 <span class="op">=</span> <span class="bu">list</span>(tab1)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=tab1%20%3D%20%5B%22a%22,%20%22b%22,%20%22c%22%5D%0Atab2%20%3D%20list%28tab1%29%0Atab1%5B1%5D%20%3D%20%22d%22&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=3&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
-</iframe>
-<p>Pour des tableaux de tableaux, cependant, cette copie simple ne suffira pas, car les éléments du tableau, qui sont eux-mêmes des tableaux, ne seront pas vraiment copiés. Pour y parvenir, si nécessaire, on utilise la fonction <code>deepcopy</code> de la bibliothèque <code>copy</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> copy <span class="im">import</span> deepcopy</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab1 <span class="op">=</span> [[<span class="st">"a"</span>, <span class="st">"b"</span>], [<span class="st">"c"</span>, <span class="st">"d"</span>]]</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2 <span class="op">=</span> deepcopy(liste1)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2[<span class="dv">1</span>][<span class="dv">0</span>] <span class="op">=</span> <span class="st">"e"</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>[[<span class="st">"a"</span>, <span class="st">"b"</span>], [<span class="st">"e"</span>, <span class="st">"d"</span>]]</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab1</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>[[<span class="st">"a"</span>, <span class="st">"b"</span>], [<span class="st">"c"</span>, <span class="st">"d"</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="parcours-dun-tableau-avec-une-boucle-for" class="level2">
-<h2 class="anchored" data-anchor-id="parcours-dun-tableau-avec-une-boucle-for">6. Parcours d’un tableau avec une boucle for</h2>
-<p>Une boucle <code>for</code> permet de parcourir chacun des éléments d’un tableau. On peut soit boucler sur les indices des éléments du tableau, soit sur les éléments eux-mêmes.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>]</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> k <span class="kw">in</span> t:  <span class="co"># boucle sur les éléments</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(k)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(t)): <span class="co"># boucle sur les indices</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(t[i])</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="parcourir-un-tableau-avec-une-boucle-for" class="level2">
+<h2 class="anchored" data-anchor-id="parcourir-un-tableau-avec-une-boucle-for">3. Parcourir un tableau avec une boucle for</h2>
+<p>Une boucle <code>for</code> permet de parcourir chacun des éléments d’un tableau. On peut soit boucler sur les éléments eux-mêmes, soit sur les indices.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> k <span class="kw">in</span> t:  <span class="co"># boucle sur les éléments</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(k)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(t)): <span class="co"># boucle sur les indices</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(t[i])</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>À retenir
+<span class="screen-reader-only">Important</span>Quel parcours choisir ?
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Un <strong>tableau</strong> une structure ordonnée qui permet de contenir plusieurs éléments qui sont tous accessibles.</li>
-<li>Tous les éléments d’un tableau sont du même type. Un tableau peut contenir d’autres tableaux.</li>
-<li>Un tableau est <strong>modifiable</strong> : on peut procéder à une affectation de la forme <code>t[i]=valeur</code></li>
+<li>Si on a seulement besoin des <strong>valeurs</strong>, on parcourt directement les éléments : <code>for x in t</code>.</li>
+<li>Si on doit connaître ou <strong>modifier une position</strong>, on parcourt les indices : <code>for i in range(len(t))</code>.</li>
 </ul>
 </div>
 </div>
+<p>Par exemple, modifier la valeur <code>k</code> ne change pas le tableau, alors que modifier <code>t[i]</code> le change :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> k <span class="kw">in</span> t:</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        k <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> k   <span class="co"># ne modifie pas t</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(t)):</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        t[i] <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> t[i]   <span class="co"># modifie t</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p><em>Pour aller plus loin</em> : la fonction <code>enumerate</code> permet d’obtenir en même temps l’indice et la valeur (ce n’est pas un attendu du programme).</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> i, x <span class="kw">in</span> <span class="bu">enumerate</span>([<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(i, x)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span> a</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> b</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> c</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>À vous de prédire
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Que fait ce programme ? Quelle est la valeur de <code>s</code> à la fin ?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">1</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> t:</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> s <span class="op">+</span> x</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Réponse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Il calcule la somme des éléments de <code>t</code> : <code>s</code> vaut <code>12</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="remarques-sur-les-tableaux-de-tableaux" class="level2">
-<h2 class="anchored" data-anchor-id="remarques-sur-les-tableaux-de-tableaux">7. Remarques sur les tableaux de tableaux</h2>
+<section id="construire-un-tableau" class="level2">
+<h2 class="anchored" data-anchor-id="construire-un-tableau">4. Construire un tableau</h2>
+<section id="avec-une-boucle-et-append" class="level3">
+<h3 class="anchored" data-anchor-id="avec-une-boucle-et-append">Avec une boucle et <code>append</code></h3>
+<p>Pour ajouter les éléments un par un en fin de tableau, nous pouvons utiliser la méthode <code>append</code> :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>multiples_de_3 <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">3</span>]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>multiples_de_3.append(<span class="dv">6</span>) <span class="co"># [0, 3, 6]</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Pour construire un tableau avec une boucle, on part d’un tableau vide :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>multiples <span class="op">=</span> []</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    multiples.append(<span class="dv">3</span> <span class="op">*</span> i)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="par-compréhension" class="level3">
+<h3 class="anchored" data-anchor-id="par-compréhension">Par compréhension</h3>
+<p>Python permet de condenser ce schéma « tableau vide + boucle + <code>append</code> » en une seule ligne : c’est la construction <strong>par compréhension</strong>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>multiples <span class="op">=</span> [<span class="dv">3</span> <span class="op">*</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>)]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>L’instruction de base s’écrit sous la forme <code>[expression(i) for i in objet]</code>. Ce type de construction est très spécifique au langage Python. En voici d’autres exemples :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>multiples_de_3 <span class="op">=</span> [<span class="dv">3</span> <span class="op">*</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>)]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>multiples_de_6 <span class="op">=</span> [<span class="dv">2</span> <span class="op">*</span> n <span class="cf">for</span> n <span class="kw">in</span> multiples_de_3]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Si on dispose d’une fonction <code>f</code> et d’un tableau d’abscisses <code>x</code> :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>images <span class="op">=</span> [f(x) <span class="cf">for</span> x <span class="kw">in</span> abscisses]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>On peut aussi ajouter des conditions. Par exemple l’instruction ci-dessous est une autre façon de définir le tableau des multiples de 3 :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>multiples_de_3 <span class="op">=</span> [n <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">301</span>) <span class="cf">if</span> n <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>qui remplace la boucle :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>multiples_de_3 <span class="op">=</span> []</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">301</span>):</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>        multiples_de_3.append(n)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="concaténer-et-répéter-les-opérateurs-et" class="level2">
+<h2 class="anchored" data-anchor-id="concaténer-et-répéter-les-opérateurs-et">5. Concaténer et répéter : les opérateurs <code>+</code> et <code>*</code></h2>
+<p>Avec les tableaux, l’opérateur <code>+</code> réalise la <strong>concaténation</strong> : il « met bout à bout » deux tableaux. L’opérateur <code>*</code> réalise la <strong>répétition</strong> : il répète un tableau un certain nombre de fois (le deuxième opérande est un entier).</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">2</span>] <span class="op">+</span> [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]    <span class="co"># concaténation</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">4</span>               <span class="co"># répétition</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">2</span>] <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">0</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>[]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ces deux opérateurs <strong>créent un nouveau tableau</strong> et ne modifient pas les tableaux de départ :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> [<span class="dv">3</span>]</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> c <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> c</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Pour « ajouter » un élément avec <code>+</code>, il faut donc <strong>réaffecter</strong> le résultat (alors que <code>append</code> modifie directement le tableau) :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t <span class="op">=</span> t <span class="op">+</span> [<span class="dv">3</span>]    <span class="co"># crée un nouveau tableau, qu'on affecte à t</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t.append(<span class="dv">4</span>)    <span class="co"># modifie t</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> t</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>L’opérateur <code>*</code> est très pratique pour créer un tableau de taille donnée rempli d’une même valeur :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> notes <span class="op">=</span> [<span class="dv">0</span>] <span class="op">*</span> <span class="dv">5</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> notes</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Avertissement
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Les opérandes doivent être de même nature : <code>[1, 2] + 3</code> provoque une erreur (<code>TypeError</code>), il faut écrire <code>[1, 2] + [3]</code>. De même, <code>[1, 2] * [3]</code> n’a pas de sens.</p>
+<p>Attention aussi : <code>[0] * 3</code> est sans danger, mais nous verrons à la section 8 que <code>[[0] * 3] * 4</code> est un piège !</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>À vous de prédire
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quelle est la valeur de <code>len([1, 2] * 3 + [0])</code> ?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Réponse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><code>[1, 2] * 3</code> vaut <code>[1, 2, 1, 2, 1, 2]</code> (6 éléments), auquel on concatène <code>[0]</code> : le résultat est <code>[1, 2, 1, 2, 1, 2, 0]</code> et sa longueur est <code>7</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="méthodes-la-boîte-à-outils" class="level2">
+<h2 class="anchored" data-anchor-id="méthodes-la-boîte-à-outils">6. Méthodes : la boîte à outils</h2>
+<p>Le type d’une variable définit les valeurs qui peuvent être affectées à cette variable ainsi que les opérateurs et les fonctions utilisables. Les fonctions propres à un type donné sont appelées des <strong>méthodes</strong>. La fonction <code>len</code> par exemple, s’applique aux chaînes de caractères comme aux tableaux. <code>append</code> est une méthode du type <code>list</code>.</p>
+<p><strong>Attention à la syntaxe</strong> : on écrit <code>len(tab)</code>, mais <code>tab.append(...)</code>. Le nom de la variable est suivi d’un point puis du nom de la méthode. Cette notation est issue de la <strong>programmation orientée objets</strong> qui sera abordée en terminale.</p>
+<p>Les méthodes essentielles à maîtriser sont <code>append</code> et la fonction <code>len</code>. Les autres sont rassemblées dans la « boîte à outils » ci-dessous : il n’est pas utile de les apprendre par cœur, mais il faut savoir qu’elles existent et les retrouver dans la documentation.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Boîte à outils : autres méthodes des tableaux
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab.insert(<span class="dv">1</span>, <span class="st">"d"</span>) <span class="co"># insertion à l'indice 1 de l'élément "d"</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>[<span class="st">'a'</span>, <span class="st">'d'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>]</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab.remove(<span class="st">"b"</span>) <span class="co"># suppression de la première occurrence de l'élément "b"</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>[<span class="st">'a'</span>, <span class="st">'d'</span>, <span class="st">'c'</span>]</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> tab.pop() <span class="co"># supprime et retourne le dernier élément</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> x</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co">'c'</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>[<span class="st">'a'</span>, <span class="st">'d'</span>]</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab.reverse() <span class="co"># renverse l'ordre des éléments</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>[<span class="st">'d'</span>, <span class="st">'a'</span>]</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab.sort() <span class="co"># trie les éléments dans l'ordre croissant ou alphabétique</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>[<span class="st">'a'</span>, <span class="st">'d'</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>On peut aussi tester l’appartenance d’un élément avec <code>in</code> :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">"a"</span> <span class="kw">in</span> tab</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="va">True</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">"z"</span> <span class="kw">in</span> tab</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="va">False</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p>Toutes les méthodes ci-dessus modifient le tableau initial, contrairement à la concaténation avec <code>+</code> et à la répétition avec <code>*</code> qui créent un nouveau tableau. Une conséquence importante : ces méthodes <strong>ne renvoient rien</strong> (<code>append</code>, <code>insert</code>, <code>reverse</code> et <code>sort</code> renvoient <code>None</code>). L’erreur suivante est très fréquente :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> tab.sort()   <span class="co"># ERREUR : sort() modifie tab et renvoie None</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(tab)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="va">None</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Il est aussi possible de trier un tableau sans le modifier avec la fonction <code>sorted</code>, qui crée un nouveau tableau.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">4</span>]</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tri <span class="op">=</span> <span class="bu">sorted</span>(tab)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>[<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">4</span>]</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tri</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>[<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">7</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="mutation-références-et-copies" class="level2">
+<h2 class="anchored" data-anchor-id="mutation-références-et-copies">7. Mutation, références et copies</h2>
+<p>Un tableau peut donc être modifié par une méthode. On peut aussi modifier l’un de ses éléments par affectation.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab[<span class="dv">1</span>] <span class="op">=</span> <span class="st">"d"</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>[<span class="st">'a'</span>, <span class="st">'d'</span>, <span class="st">'c'</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ceci oblige à une grande attention, en particulier lorsqu’on veut copier un tableau.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>À vous de prédire
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Observons le code suivant. À votre avis, que contiendra <code>tab2</code> à la fin ?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>tab1 <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>tab2 <span class="op">=</span> tab1</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>tab1[<span class="dv">1</span>] <span class="op">=</span> <span class="st">"d"</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>Vérifions-le :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab1 <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>]</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2 <span class="op">=</span> tab1</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab1[<span class="dv">1</span>] <span class="op">=</span> <span class="st">"d"</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>[<span class="st">'a'</span>, <span class="st">'d'</span>, <span class="st">'c'</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=tab1%20%3D%20%5B%22a%22,%20%22b%22,%20%22c%22%5D%0Atab2%20%3D%20tab1%0Atab1%5B1%5D%20%3D%20%22d%22&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=3&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+<p>Une variable ne contient pas le tableau lui-même mais une <strong>référence</strong> vers celui-ci (une « étiquette » qui pointe vers un emplacement de la mémoire). Dans cet exemple, un même tableau a deux noms : <code>tab2 = tab1</code> <strong>ne copie pas</strong> le tableau, c’est un <strong>alias</strong>. Modifier le tableau par l’un des noms le modifie pour l’autre.</p>
+<section id="copie-superficielle" class="level3">
+<h3 class="anchored" data-anchor-id="copie-superficielle">Copie superficielle</h3>
+<p>Pour obtenir un nouveau tableau, on peut utiliser <code>list</code>. Si <code>tab1</code> est un tableau de nombres ou de chaînes de caractères, cela fonctionne :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2 <span class="op">=</span> <span class="bu">list</span>(tab1)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=tab1%20%3D%20%5B%22a%22,%20%22b%22,%20%22c%22%5D%0Atab2%20%3D%20list%28tab1%29%0Atab1%5B1%5D%20%3D%20%22d%22&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=3&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+<p>Mais cette copie est dite <strong>superficielle</strong> : un nouveau tableau est créé, mais ses éléments sont les <strong>mêmes objets</strong> que ceux de l’ancien tableau (on recopie les références). Lorsque les éléments sont eux-mêmes des tableaux, ils sont donc partagés.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>À vous de prédire
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Que contiendra <code>tab1</code> après l’exécution de ces instructions ?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>tab1 <span class="op">=</span> [[<span class="st">"a"</span>, <span class="st">"b"</span>], [<span class="st">"c"</span>, <span class="st">"d"</span>]]</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>tab2 <span class="op">=</span> <span class="bu">list</span>(tab1)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>tab2[<span class="dv">1</span>][<span class="dv">0</span>] <span class="op">=</span> <span class="st">"e"</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Observez ensuite le schéma ci-dessous.</p>
+</div>
+</div>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=tab1%20%3D%20%5B%5B%22a%22,%20%22b%22%5D,%20%5B%22c%22,%20%22d%22%5D%5D%0Atab2%20%3D%20list%28tab1%29%0Atab2%5B1%5D%5B0%5D%20%3D%20%22e%22&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=3&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+<p><code>tab1</code> vaut <code>[["a", "b"], ["e", "d"]]</code> : les deux tableaux partagent leurs sous-tableaux.</p>
+</section>
+<section id="copie-profonde" class="level3">
+<h3 class="anchored" data-anchor-id="copie-profonde">Copie profonde</h3>
+<p>Pour copier récursivement tous les objets contenus, on utilise la fonction <code>deepcopy</code> de la bibliothèque <code>copy</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">from</span> copy <span class="im">import</span> deepcopy</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab1 <span class="op">=</span> [[<span class="st">"a"</span>, <span class="st">"b"</span>], [<span class="st">"c"</span>, <span class="st">"d"</span>]]</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2 <span class="op">=</span> deepcopy(tab1)</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2[<span class="dv">1</span>][<span class="dv">0</span>] <span class="op">=</span> <span class="st">"e"</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab2</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'a'</span>, <span class="st">'b'</span>], [<span class="st">'e'</span>, <span class="st">'d'</span>]]</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tab1</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>[[<span class="st">'a'</span>, <span class="st">'b'</span>], [<span class="st">'c'</span>, <span class="st">'d'</span>]]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20copy%20import%20deepcopy%0Atab1%20%3D%20%5B%5B%22a%22,%20%22b%22%5D,%20%5B%22c%22,%20%22d%22%5D%5D%0Atab2%20%3D%20deepcopy%28tab1%29%0Atab2%5B1%5D%5B0%5D%20%3D%20%22e%22&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=4&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Récapitulatif : trois façons de « copier »
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 56%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Instruction</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>tab2 = tab1</code></td>
+<td>aucune copie : un seul tableau, deux noms (alias)</td>
+</tr>
+<tr class="even">
+<td><code>tab2 = list(tab1)</code></td>
+<td>nouveau tableau, mais les éléments sont partagés (copie superficielle)</td>
+</tr>
+<tr class="odd">
+<td><code>tab2 = deepcopy(tab1)</code></td>
+<td>nouveau tableau et nouveaux éléments (copie profonde)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="tableaux-de-tableaux" class="level2">
+<h2 class="anchored" data-anchor-id="tableaux-de-tableaux">8. Tableaux de tableaux</h2>
 <p>Voici un exemple de tableau de tableaux :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span> ,<span class="dv">6</span> ,<span class="dv">8</span>], [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>], [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">15</span>]]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span> ,<span class="dv">6</span> ,<span class="dv">8</span>], [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>], [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">15</span>]]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Le premier élément du tableau ci-dessus est bien un tableau (<code>[1, 3, 4]</code>), le deuxième élément est aussi un tableau (<code>[5, 6, 8]</code>)…</p>
 <p>Il est souvent plus pratique de présenter ces “tableaux de tableaux” comme ci-dessous :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>],</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>],</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>],</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">15</span>]]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>],</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>],</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>],</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">15</span>]]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Nous obtenons ainsi quelque chose qui ressemble beaucoup à un “objet mathématique” très utilisé : <strong>une matrice</strong>, tableau de nombres composé de lignes et de colonnes.</p>
 <p>L’instruction <code>m[1]</code> retourne le deuxième élément du tableau <code>m</code>, c’est-à-dire le tableau <code>[5, 6, 8]</code>.</p>
 <p>Pour accéder au troisième élément de ce dernier tableau, il faut donc entrer l’instruction <code>m[1][2]</code> qui va renvoyer 8.</p>
 <p>On accède donc aux éléments du tableau de nombres en indexant <code>m</code> avec le numéro de la ligne puis le numéro de la colonne (comptés à partir de zéro).</p>
-<p>Il est possible de parcourir l’ensemble des éléments d’une matrice à l’aide d’une “double boucle for” :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>],</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>],</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>],</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">15</span>]]</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>nb_colonne <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>nb_ligne <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, nb_ligne):</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, nb_colonne):</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>        a <span class="op">=</span> m[i][j]</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>À vous de prédire
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour le tableau <code>m</code> ci-dessus, que valent <code>len(m)</code>, <code>len(m[0])</code> et <code>m[2][1]</code> ?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Réponse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><code>len(m)</code> vaut <code>4</code> (nombre de lignes), <code>len(m[0])</code> vaut <code>3</code> (nombre de colonnes) et <code>m[2][1]</code> vaut <code>1</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Il est possible de parcourir l’ensemble des éléments d’une matrice à l’aide d’une “double boucle for”. Le nombre de lignes est <code>len(m)</code> et le nombre de colonnes de la ligne <code>i</code> est <code>len(m[i])</code> :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>],</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>],</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>],</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>     [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">15</span>]]</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>nb_lignes <span class="op">=</span> <span class="bu">len</span>(m)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(nb_lignes):</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>    nb_colonnes <span class="op">=</span> <span class="bu">len</span>(m[i])</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(nb_colonnes):</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>        a <span class="op">=</span> m[i][j]</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>L’exécution de ce programme donnera le résultat suivant :</p>
 <pre class="title=&quot;sortie&quot;"><code>1
 3
@@ -1137,10 +1477,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 8
 15</code></pre>
 <p>Nous avons bien parcouru l’ensemble des éléments du tableau <code>m</code>.</p>
-<p>Cette double boucle <code>for</code> est une structure complexe, mais pourtant assez répandue. N’hésitez pas à consacrer quelques minutes à son analyse.</p>
+<p>Cette double boucle <code>for</code> est une structure complexe, mais pourtant assez répandue. N’hésitez pas à consacrer quelques minutes à son analyse. Lorsqu’on n’a pas besoin des indices, on peut aussi parcourir directement les lignes puis les éléments de chaque ligne :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ligne <span class="kw">in</span> m:</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> a <span class="kw">in</span> ligne:</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(a)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="un-piège-classique-créer-un-tableau-2d" class="level3">
+<h3 class="anchored" data-anchor-id="un-piège-classique-créer-un-tableau-2d">Un piège classique : créer un tableau 2D</h3>
+<p>Pour créer une matrice de zéros à 4 lignes et 3 colonnes, on pourrait être tenté d’utiliser la répétition <code>*</code> :</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>À vous de prédire
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quel sera le contenu de <code>m</code> après ces instructions ?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> [[<span class="dv">0</span>] <span class="op">*</span> <span class="dv">3</span>] <span class="op">*</span> <span class="dv">4</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>m[<span class="dv">0</span>][<span class="dv">0</span>] <span class="op">=</span> <span class="dv">1</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>Observons le résultat :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> m <span class="op">=</span> [[<span class="dv">0</span>] <span class="op">*</span> <span class="dv">3</span>] <span class="op">*</span> <span class="dv">4</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> m[<span class="dv">0</span>][<span class="dv">0</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> m</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>]]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Les quatre lignes sont en réalité <strong>le même tableau</strong> (<code>[[0] * 3] * 4</code> répète quatre fois la <em>référence</em> vers un unique tableau <code>[0, 0, 0]</code>). Modifier une case d’une ligne modifie donc toutes les lignes.</p>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=m%20%3D%20%5B%5B0%5D%20%2A%203%5D%20%2A%204%0Am%5B0%5D%5B0%5D%20%3D%201&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=2&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
+<p>La construction correcte crée <strong>une nouvelle ligne à chaque tour de boucle</strong>, grâce à une compréhension :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> m <span class="op">=</span> [[<span class="dv">0</span> <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>)] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>)]</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> m[<span class="dv">0</span>][<span class="dv">0</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> m</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=m%20%3D%20%5B%5B0%20for%20j%20in%20range%283%29%5D%20for%20i%20in%20range%284%29%5D%0Am%5B0%5D%5B0%5D%20%3D%201&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=2&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">
+</iframe>
 <p>Ce type de tableau à deux dimensions est utilisé pour coder les images sous forme d’<strong>images matricielles</strong>. Les curieux peuvent en apprendre plus à ce sujet en étudiant <a href="http://www.lumni.fr/video/notion-de-listes-en-informatique-et-application-aux-images-numeriques" target="_blank">la vidéo suivante proposée sur Lumni</a> (dans laquelle le narrateur dit “liste” au lieu de “tableau”).</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>À retenir
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Les <strong>indices</strong> d’un tableau commencent à <strong>0</strong> ; le dernier indice valide est <code>len(t) - 1</code>. Il ne faut pas confondre la <strong>valeur</strong> d’un élément et son <strong>indice</strong>.</li>
+<li>On sait <strong>créer</strong> un tableau (<code>[...]</code>, <code>append</code>, compréhension, <code>[v] * n</code>), <strong>parcourir</strong> ses éléments (<code>for x in t</code> ou <code>for i in range(len(t))</code>) et <strong>modifier</strong> un élément (<code>t[i] = valeur</code>).</li>
+<li><code>+</code> concatène et <code>*</code> répète : ils créent un <strong>nouveau</strong> tableau, alors que <code>append</code>, <code>sort</code>… <strong>modifient</strong> le tableau et ne renvoient rien.</li>
+<li>Une <code>list</code> Python est <strong>mutable</strong>. Un tableau peut contenir d’autres tableaux (tableau à deux dimensions : <code>m[i][j]</code>).</li>
+<li><code>b = a</code> <strong>ne copie pas</strong> un tableau : les deux noms désignent le même objet. <code>list(a)</code> fait une copie superficielle, <code>deepcopy(a)</code> une copie profonde.</li>
+<li>Pour créer un tableau 2D, on n’écrit pas <code>[[0] * 3] * 4</code> mais <code>[[0 for j in range(3)] for i in range(4)]</code>.</li>
+</ul>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

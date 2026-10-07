@@ -4031,7 +4031,7 @@
     "href": "index.html",
     "title": "Spécialité NSI - Première",
     "section": "",
-    "text": "Bienvenue !\nCe site est destiné à regrouper les cours et les exercices concernant l’enseignement de spécialité NSI de première du lycée Émile Duclaux d’Aurillac.\n\n\n\n\n\n\nNoteDernières mises à jour\n\n\n\n\nSeptembre 2026 - Migration des sources du site vers la Forge + changement des polices de caractères pour des polices libres + auto-hébergement de KaTeX pour les formules mathématiques.\nAvril 2026 - Mise en place du mode Reader pleine page (bouton en haut à droite)\nAvril 2026 - Mise à jour et correction de coquilles dans le chapitre 7 : Algorithmes\nMars 2026 - Refonte du chapitre 6 : Réseaux et protocoles\nFévrier 2026 - Refonte du chapitre 5 : Python avancé\n\n\n\nLien vers l’ENT du lycée : https://cas.ent.auvergnerhonealpes.fr/login{target=“_blank”}\nLien vers le programme officiel : Programme officiel première NSI\nLien vers La Forge des communs numériques éducatifs : Forge des communs numériques éducatifs"
+    "text": "Bienvenue !\nCe site est destiné à regrouper les cours et les exercices concernant l’enseignement de spécialité NSI de première du lycée Émile Duclaux d’Aurillac.\n\n\n\n\n\n\nNoteDernières mises à jour\n\n\n\n\nOctobre 2026 - Correction d’imprécisions dans le chapitre 1 Python, partie tableaux.\nSeptembre 2026 - Migration des sources du site vers la Forge + changement des polices de caractères pour des polices libres + auto-hébergement de KaTeX pour les formules mathématiques.\nAvril 2026 - Mise en place du mode Reader pleine page (bouton en haut à droite)\nAvril 2026 - Mise à jour et correction de coquilles dans le chapitre 7 : Algorithmes\nMars 2026 - Refonte du chapitre 6 : Réseaux et protocoles\nFévrier 2026 - Refonte du chapitre 5 : Python avancé\n\n\n\nLien vers l’ENT du lycée : https://cas.ent.auvergnerhonealpes.fr/login{target=“_blank”}\nLien vers le programme officiel : Programme officiel première NSI\nLien vers La Forge des communs numériques éducatifs : Forge des communs numériques éducatifs"
   },
   {
     "objectID": "07_flottants/flottants_exos.html",
@@ -4671,5 +4671,101 @@
     "title": "T.P. Formulaires",
     "section": "",
     "text": "Ce T. P. est constitué de deux exercices à réaliser dans Replit.\nÀ chaque fois, le code JavaScript doit être complété afin que la page web interactive se comporte comme attendu.\nPour un bon rendu de la page web, il faut l’ouvrir dans un autre onglet du navigateur.\nExercice 1 : Couleurs - https://replit.com/team/premiere-nsi/TP-Couleurs\nExercice 2 : Températures - https://replit.com/team/premiere-nsi/TP-Temperature"
+  },
+  {
+    "objectID": "11_tableaux/tableaux.html#création-dun-tableau-et-indices",
+    "href": "11_tableaux/tableaux.html#création-dun-tableau-et-indices",
+    "title": "Zoom sur les tableaux (listes)",
+    "section": "1. Création d’un tableau et indices",
+    "text": "1. Création d’un tableau et indices\nPour créer un tableau en Python, nous utilisons un objet de type list. Un tel objet est une collection ordonnée d’éléments, repérés par des indices. Les éléments d’un tableau sont séparés par des virgules et entourés de crochets.\n&gt;&gt;&gt; tab1 = [\"a\", \"b\", \"c\"] # un tableau à 3 éléments\n&gt;&gt;&gt; tab2 = [1] # un tableau contenant un seul élément\n&gt;&gt;&gt; tab3 = [[1, 2], [3, 4]] # un tableau de tableaux\n&gt;&gt;&gt; tab_vide = [] # un tableau vide\nLes indices commencent à 0 : il ne faut pas confondre la valeur d’un élément et son indice (sa position).\n\n\n\nindice\n0\n1\n2\n\n\n\n\nvaleur\n“a”\n“b”\n“c”\n\n\n\nPour créer rapidement un tableau d’entiers, nous pouvons utiliser les fonctions list et range.\n&gt;&gt;&gt; tab = list(range(2, 10, 3)) # [2, 5, 8]",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 1 - Python : les bases",
+      "Zoom sur les tableaux (listes)"
+    ]
+  },
+  {
+    "objectID": "11_tableaux/tableaux.html#lire-et-modifier-un-élément",
+    "href": "11_tableaux/tableaux.html#lire-et-modifier-un-élément",
+    "title": "Zoom sur les tableaux (listes)",
+    "section": "2. Lire et modifier un élément",
+    "text": "2. Lire et modifier un élément\nLa fonction len renvoie la longueur d’un tableau, c’est-à-dire le nombre de ses éléments. Les indices valides vont donc de 0 à len(tab) - 1.\nOn accède à un élément avec son indice, entre crochets, comme pour les chaînes de caractères. Un indice négatif compte à partir de la fin : tab[-1] est le dernier élément.\n&gt;&gt;&gt; tab = [\"a\", \"b\", \"c\"]\n&gt;&gt;&gt; len(tab)\n3\n&gt;&gt;&gt; tab[1]\n'b'\n&gt;&gt;&gt; tab[-1]\n'c'\n&gt;&gt;&gt; tab[3]\nIndexError: list index out of range\nÀ la différence des chaînes de caractères, un tableau est un objet modifiable (on dit mutable en anglais). On peut donc réaffecter un élément d’un tableau déjà créé.\n&gt;&gt;&gt; tab = [1, 2, 3, 4]\n&gt;&gt;&gt; tab[0] = 17\n&gt;&gt;&gt; tab\n[17, 2, 3, 4]\n\n\n\n\n\n\nNoteÀ vous de prédire\n\n\n\nQue contient tab après les trois instructions suivantes ?\ntab = [5, 8, 2]\ntab[1] = tab[0] + tab[2]\ntab[2] = len(tab)\n\n\n\n\n\n\nAstuceRéponse\n\n\n\n\n\ntab vaut [5, 7, 3].",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 1 - Python : les bases",
+      "Zoom sur les tableaux (listes)"
+    ]
+  },
+  {
+    "objectID": "11_tableaux/tableaux.html#parcourir-un-tableau-avec-une-boucle-for",
+    "href": "11_tableaux/tableaux.html#parcourir-un-tableau-avec-une-boucle-for",
+    "title": "Zoom sur les tableaux (listes)",
+    "section": "3. Parcourir un tableau avec une boucle for",
+    "text": "3. Parcourir un tableau avec une boucle for\nUne boucle for permet de parcourir chacun des éléments d’un tableau. On peut soit boucler sur les éléments eux-mêmes, soit sur les indices.\n&gt;&gt;&gt; t = [1, 2, 3, 4]\n&gt;&gt;&gt; for k in t:  # boucle sur les éléments\n        print(k)\n1\n2\n3\n4\n&gt;&gt;&gt; for i in range(len(t)): # boucle sur les indices\n        print(t[i])\n1\n2\n3\n4\n\n\n\n\n\n\nImportantQuel parcours choisir ?\n\n\n\n\nSi on a seulement besoin des valeurs, on parcourt directement les éléments : for x in t.\nSi on doit connaître ou modifier une position, on parcourt les indices : for i in range(len(t)).\n\n\n\nPar exemple, modifier la valeur k ne change pas le tableau, alors que modifier t[i] le change :\n&gt;&gt;&gt; t = [1, 2, 3]\n&gt;&gt;&gt; for k in t:\n        k = 2 * k   # ne modifie pas t\n&gt;&gt;&gt; t\n[1, 2, 3]\n&gt;&gt;&gt; for i in range(len(t)):\n        t[i] = 2 * t[i]   # modifie t\n&gt;&gt;&gt; t\n[2, 4, 6]\nPour aller plus loin : la fonction enumerate permet d’obtenir en même temps l’indice et la valeur (ce n’est pas un attendu du programme).\n&gt;&gt;&gt; for i, x in enumerate([\"a\", \"b\", \"c\"]):\n        print(i, x)\n0 a\n1 b\n2 c\n\n\n\n\n\n\nNoteÀ vous de prédire\n\n\n\nQue fait ce programme ? Quelle est la valeur de s à la fin ?\nt = [4, 7, 1]\ns = 0\nfor x in t:\n    s = s + x\n\n\n\n\n\n\nAstuceRéponse\n\n\n\n\n\nIl calcule la somme des éléments de t : s vaut 12.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 1 - Python : les bases",
+      "Zoom sur les tableaux (listes)"
+    ]
+  },
+  {
+    "objectID": "11_tableaux/tableaux.html#construire-un-tableau",
+    "href": "11_tableaux/tableaux.html#construire-un-tableau",
+    "title": "Zoom sur les tableaux (listes)",
+    "section": "4. Construire un tableau",
+    "text": "4. Construire un tableau\n\nAvec une boucle et append\nPour ajouter les éléments un par un en fin de tableau, nous pouvons utiliser la méthode append :\nmultiples_de_3 = [0, 3]\nmultiples_de_3.append(6) # [0, 3, 6]\nPour construire un tableau avec une boucle, on part d’un tableau vide :\nmultiples = []\nfor i in range(100):\n    multiples.append(3 * i)\n\n\nPar compréhension\nPython permet de condenser ce schéma « tableau vide + boucle + append » en une seule ligne : c’est la construction par compréhension.\nmultiples = [3 * i for i in range(100)]\nL’instruction de base s’écrit sous la forme [expression(i) for i in objet]. Ce type de construction est très spécifique au langage Python. En voici d’autres exemples :\nmultiples_de_3 = [3 * i for i in range(100)]\nmultiples_de_6 = [2 * n for n in multiples_de_3]\nSi on dispose d’une fonction f et d’un tableau d’abscisses x :\nimages = [f(x) for x in abscisses]\nOn peut aussi ajouter des conditions. Par exemple l’instruction ci-dessous est une autre façon de définir le tableau des multiples de 3 :\nmultiples_de_3 = [n for n in range(301) if n % 3 == 0]\nqui remplace la boucle :\nmultiples_de_3 = []\nfor n in range(301):\n    if n % 3 == 0:\n        multiples_de_3.append(n)",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 1 - Python : les bases",
+      "Zoom sur les tableaux (listes)"
+    ]
+  },
+  {
+    "objectID": "11_tableaux/tableaux.html#concaténer-et-répéter-les-opérateurs-et",
+    "href": "11_tableaux/tableaux.html#concaténer-et-répéter-les-opérateurs-et",
+    "title": "Zoom sur les tableaux (listes)",
+    "section": "5. Concaténer et répéter : les opérateurs + et *",
+    "text": "5. Concaténer et répéter : les opérateurs + et *\nAvec les tableaux, l’opérateur + réalise la concaténation : il « met bout à bout » deux tableaux. L’opérateur * réalise la répétition : il répète un tableau un certain nombre de fois (le deuxième opérande est un entier).\n&gt;&gt;&gt; [1, 2] + [3, 4, 5]    # concaténation\n[1, 2, 3, 4, 5]\n&gt;&gt;&gt; [0] * 4               # répétition\n[0, 0, 0, 0]\n&gt;&gt;&gt; [1, 2] * 3\n[1, 2, 1, 2, 1, 2]\n&gt;&gt;&gt; [0] * 0\n[]\nCes deux opérateurs créent un nouveau tableau et ne modifient pas les tableaux de départ :\n&gt;&gt;&gt; a = [1, 2]\n&gt;&gt;&gt; b = [3]\n&gt;&gt;&gt; c = a + b\n&gt;&gt;&gt; a\n[1, 2]\n&gt;&gt;&gt; c\n[1, 2, 3]\nPour « ajouter » un élément avec +, il faut donc réaffecter le résultat (alors que append modifie directement le tableau) :\n&gt;&gt;&gt; t = [1, 2]\n&gt;&gt;&gt; t = t + [3]    # crée un nouveau tableau, qu'on affecte à t\n&gt;&gt;&gt; t.append(4)    # modifie t\n&gt;&gt;&gt; t\n[1, 2, 3, 4]\nL’opérateur * est très pratique pour créer un tableau de taille donnée rempli d’une même valeur :\n&gt;&gt;&gt; notes = [0] * 5\n&gt;&gt;&gt; notes\n[0, 0, 0, 0, 0]\n\n\n\n\n\n\nAvertissement\n\n\n\nLes opérandes doivent être de même nature : [1, 2] + 3 provoque une erreur (TypeError), il faut écrire [1, 2] + [3]. De même, [1, 2] * [3] n’a pas de sens.\nAttention aussi : [0] * 3 est sans danger, mais nous verrons à la section 8 que [[0] * 3] * 4 est un piège !\n\n\n\n\n\n\n\n\nNoteÀ vous de prédire\n\n\n\nQuelle est la valeur de len([1, 2] * 3 + [0]) ?\n\n\n\n\n\n\nAstuceRéponse\n\n\n\n\n\n[1, 2] * 3 vaut [1, 2, 1, 2, 1, 2] (6 éléments), auquel on concatène [0] : le résultat est [1, 2, 1, 2, 1, 2, 0] et sa longueur est 7.",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 1 - Python : les bases",
+      "Zoom sur les tableaux (listes)"
+    ]
+  },
+  {
+    "objectID": "11_tableaux/tableaux.html#méthodes-la-boîte-à-outils",
+    "href": "11_tableaux/tableaux.html#méthodes-la-boîte-à-outils",
+    "title": "Zoom sur les tableaux (listes)",
+    "section": "6. Méthodes : la boîte à outils",
+    "text": "6. Méthodes : la boîte à outils\nLe type d’une variable définit les valeurs qui peuvent être affectées à cette variable ainsi que les opérateurs et les fonctions utilisables. Les fonctions propres à un type donné sont appelées des méthodes. La fonction len par exemple, s’applique aux chaînes de caractères comme aux tableaux. append est une méthode du type list.\nAttention à la syntaxe : on écrit len(tab), mais tab.append(...). Le nom de la variable est suivi d’un point puis du nom de la méthode. Cette notation est issue de la programmation orientée objets qui sera abordée en terminale.\nLes méthodes essentielles à maîtriser sont append et la fonction len. Les autres sont rassemblées dans la « boîte à outils » ci-dessous : il n’est pas utile de les apprendre par cœur, mais il faut savoir qu’elles existent et les retrouver dans la documentation.\n\n\n\n\n\n\nNoteBoîte à outils : autres méthodes des tableaux\n\n\n\n\n\n&gt;&gt;&gt; tab = [\"a\", \"b\", \"c\"]\n&gt;&gt;&gt; tab.insert(1, \"d\") # insertion à l'indice 1 de l'élément \"d\"\n&gt;&gt;&gt; tab\n['a', 'd', 'b', 'c']\n&gt;&gt;&gt; tab.remove(\"b\") # suppression de la première occurrence de l'élément \"b\"\n&gt;&gt;&gt; tab\n['a', 'd', 'c']\n&gt;&gt;&gt; x = tab.pop() # supprime et retourne le dernier élément\n&gt;&gt;&gt; x\n'c'\n&gt;&gt;&gt; tab\n['a', 'd']\n&gt;&gt;&gt; tab.reverse() # renverse l'ordre des éléments\n&gt;&gt;&gt; tab\n['d', 'a']\n&gt;&gt;&gt; tab.sort() # trie les éléments dans l'ordre croissant ou alphabétique\n&gt;&gt;&gt; tab\n['a', 'd']\nOn peut aussi tester l’appartenance d’un élément avec in :\n&gt;&gt;&gt; \"a\" in tab\nTrue\n&gt;&gt;&gt; \"z\" in tab\nFalse\n\n\n\nToutes les méthodes ci-dessus modifient le tableau initial, contrairement à la concaténation avec + et à la répétition avec * qui créent un nouveau tableau. Une conséquence importante : ces méthodes ne renvoient rien (append, insert, reverse et sort renvoient None). L’erreur suivante est très fréquente :\n&gt;&gt;&gt; tab = [3, 1, 2]\n&gt;&gt;&gt; tab = tab.sort()   # ERREUR : sort() modifie tab et renvoie None\n&gt;&gt;&gt; print(tab)\nNone\nIl est aussi possible de trier un tableau sans le modifier avec la fonction sorted, qui crée un nouveau tableau.\n&gt;&gt;&gt; tab = [5, 2, 7, 4]\n&gt;&gt;&gt; tri = sorted(tab)\n&gt;&gt;&gt; tab\n[5, 2, 7, 4]\n&gt;&gt;&gt; tri\n[2, 4, 5, 7]",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 1 - Python : les bases",
+      "Zoom sur les tableaux (listes)"
+    ]
+  },
+  {
+    "objectID": "11_tableaux/tableaux.html#mutation-références-et-copies",
+    "href": "11_tableaux/tableaux.html#mutation-références-et-copies",
+    "title": "Zoom sur les tableaux (listes)",
+    "section": "7. Mutation, références et copies",
+    "text": "7. Mutation, références et copies\nUn tableau peut donc être modifié par une méthode. On peut aussi modifier l’un de ses éléments par affectation.\n&gt;&gt;&gt; tab = [\"a\", \"b\", \"c\"]\n&gt;&gt;&gt; tab[1] = \"d\"\n&gt;&gt;&gt; tab\n['a', 'd', 'c']\nCeci oblige à une grande attention, en particulier lorsqu’on veut copier un tableau.\n\n\n\n\n\n\nNoteÀ vous de prédire\n\n\n\nObservons le code suivant. À votre avis, que contiendra tab2 à la fin ?\ntab1 = [\"a\", \"b\", \"c\"]\ntab2 = tab1\ntab1[1] = \"d\"\n\n\nVérifions-le :\n&gt;&gt;&gt; tab1 = [\"a\", \"b\", \"c\"]\n&gt;&gt;&gt; tab2 = tab1\n&gt;&gt;&gt; tab1[1] = \"d\"\n&gt;&gt;&gt; tab2\n['a', 'd', 'c']\n\n\nUne variable ne contient pas le tableau lui-même mais une référence vers celui-ci (une « étiquette » qui pointe vers un emplacement de la mémoire). Dans cet exemple, un même tableau a deux noms : tab2 = tab1 ne copie pas le tableau, c’est un alias. Modifier le tableau par l’un des noms le modifie pour l’autre.\n\nCopie superficielle\nPour obtenir un nouveau tableau, on peut utiliser list. Si tab1 est un tableau de nombres ou de chaînes de caractères, cela fonctionne :\n&gt;&gt;&gt; tab2 = list(tab1)\n\n\nMais cette copie est dite superficielle : un nouveau tableau est créé, mais ses éléments sont les mêmes objets que ceux de l’ancien tableau (on recopie les références). Lorsque les éléments sont eux-mêmes des tableaux, ils sont donc partagés.\n\n\n\n\n\n\nNoteÀ vous de prédire\n\n\n\nQue contiendra tab1 après l’exécution de ces instructions ?\ntab1 = [[\"a\", \"b\"], [\"c\", \"d\"]]\ntab2 = list(tab1)\ntab2[1][0] = \"e\"\nObservez ensuite le schéma ci-dessous.\n\n\n\n\ntab1 vaut [[\"a\", \"b\"], [\"e\", \"d\"]] : les deux tableaux partagent leurs sous-tableaux.\n\n\nCopie profonde\nPour copier récursivement tous les objets contenus, on utilise la fonction deepcopy de la bibliothèque copy.\n&gt;&gt;&gt; from copy import deepcopy\n&gt;&gt;&gt; tab1 = [[\"a\", \"b\"], [\"c\", \"d\"]]\n&gt;&gt;&gt; tab2 = deepcopy(tab1)\n&gt;&gt;&gt; tab2[1][0] = \"e\"\n&gt;&gt;&gt; tab2\n[['a', 'b'], ['e', 'd']]\n&gt;&gt;&gt; tab1\n[['a', 'b'], ['c', 'd']]\n\n\n\n\n\n\n\n\nImportantRécapitulatif : trois façons de « copier »\n\n\n\n\n\n\n\n\n\n\nInstruction\nRésultat\n\n\n\n\ntab2 = tab1\naucune copie : un seul tableau, deux noms (alias)\n\n\ntab2 = list(tab1)\nnouveau tableau, mais les éléments sont partagés (copie superficielle)\n\n\ntab2 = deepcopy(tab1)\nnouveau tableau et nouveaux éléments (copie profonde)",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 1 - Python : les bases",
+      "Zoom sur les tableaux (listes)"
+    ]
+  },
+  {
+    "objectID": "11_tableaux/tableaux.html#tableaux-de-tableaux",
+    "href": "11_tableaux/tableaux.html#tableaux-de-tableaux",
+    "title": "Zoom sur les tableaux (listes)",
+    "section": "8. Tableaux de tableaux",
+    "text": "8. Tableaux de tableaux\nVoici un exemple de tableau de tableaux :\nm = [[1, 3, 4], [5 ,6 ,8], [2, 1, 3], [7, 8, 15]]\nLe premier élément du tableau ci-dessus est bien un tableau ([1, 3, 4]), le deuxième élément est aussi un tableau ([5, 6, 8])…\nIl est souvent plus pratique de présenter ces “tableaux de tableaux” comme ci-dessous :\nm = [[1, 3, 4],\n     [5, 6, 8],\n     [2, 1, 3],\n     [7, 8, 15]]\nNous obtenons ainsi quelque chose qui ressemble beaucoup à un “objet mathématique” très utilisé : une matrice, tableau de nombres composé de lignes et de colonnes.\nL’instruction m[1] retourne le deuxième élément du tableau m, c’est-à-dire le tableau [5, 6, 8].\nPour accéder au troisième élément de ce dernier tableau, il faut donc entrer l’instruction m[1][2] qui va renvoyer 8.\nOn accède donc aux éléments du tableau de nombres en indexant m avec le numéro de la ligne puis le numéro de la colonne (comptés à partir de zéro).\n\n\n\n\n\n\nNoteÀ vous de prédire\n\n\n\nPour le tableau m ci-dessus, que valent len(m), len(m[0]) et m[2][1] ?\n\n\n\n\n\n\nAstuceRéponse\n\n\n\n\n\nlen(m) vaut 4 (nombre de lignes), len(m[0]) vaut 3 (nombre de colonnes) et m[2][1] vaut 1.\n\n\n\n\n\nIl est possible de parcourir l’ensemble des éléments d’une matrice à l’aide d’une “double boucle for”. Le nombre de lignes est len(m) et le nombre de colonnes de la ligne i est len(m[i]) :\nm = [[1, 3, 4],\n     [5, 6, 8],\n     [2, 1, 3],\n     [7, 8, 15]]\nnb_lignes = len(m)\nfor i in range(nb_lignes):\n    nb_colonnes = len(m[i])\n    for j in range(nb_colonnes):\n        a = m[i][j]\n        print(a)\nL’exécution de ce programme donnera le résultat suivant :\n1\n3\n4\n5\n6\n8\n2\n1\n3\n7\n8\n15\nNous avons bien parcouru l’ensemble des éléments du tableau m.\nCette double boucle for est une structure complexe, mais pourtant assez répandue. N’hésitez pas à consacrer quelques minutes à son analyse. Lorsqu’on n’a pas besoin des indices, on peut aussi parcourir directement les lignes puis les éléments de chaque ligne :\nfor ligne in m:\n    for a in ligne:\n        print(a)\n\nUn piège classique : créer un tableau 2D\nPour créer une matrice de zéros à 4 lignes et 3 colonnes, on pourrait être tenté d’utiliser la répétition * :\n\n\n\n\n\n\nNoteÀ vous de prédire\n\n\n\nQuel sera le contenu de m après ces instructions ?\nm = [[0] * 3] * 4\nm[0][0] = 1\n\n\nObservons le résultat :\n&gt;&gt;&gt; m = [[0] * 3] * 4\n&gt;&gt;&gt; m[0][0] = 1\n&gt;&gt;&gt; m\n[[1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0]]\nLes quatre lignes sont en réalité le même tableau ([[0] * 3] * 4 répète quatre fois la référence vers un unique tableau [0, 0, 0]). Modifier une case d’une ligne modifie donc toutes les lignes.\n\n\nLa construction correcte crée une nouvelle ligne à chaque tour de boucle, grâce à une compréhension :\n&gt;&gt;&gt; m = [[0 for j in range(3)] for i in range(4)]\n&gt;&gt;&gt; m[0][0] = 1\n&gt;&gt;&gt; m\n[[1, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]\n\n\nCe type de tableau à deux dimensions est utilisé pour coder les images sous forme d’images matricielles. Les curieux peuvent en apprendre plus à ce sujet en étudiant la vidéo suivante proposée sur Lumni (dans laquelle le narrateur dit “liste” au lieu de “tableau”).\n\n\n\n\n\n\nImportantÀ retenir\n\n\n\n\nLes indices d’un tableau commencent à 0 ; le dernier indice valide est len(t) - 1. Il ne faut pas confondre la valeur d’un élément et son indice.\nOn sait créer un tableau ([...], append, compréhension, [v] * n), parcourir ses éléments (for x in t ou for i in range(len(t))) et modifier un élément (t[i] = valeur).\n+ concatène et * répète : ils créent un nouveau tableau, alors que append, sort… modifient le tableau et ne renvoient rien.\nUne list Python est mutable. Un tableau peut contenir d’autres tableaux (tableau à deux dimensions : m[i][j]).\nb = a ne copie pas un tableau : les deux noms désignent le même objet. list(a) fait une copie superficielle, deepcopy(a) une copie profonde.\nPour créer un tableau 2D, on n’écrit pas [[0] * 3] * 4 mais [[0 for j in range(3)] for i in range(4)].",
+    "crumbs": [
+      "{{< fa house-chimney-window >}} Accueil",
+      "Ch. 1 - Python : les bases",
+      "Zoom sur les tableaux (listes)"
+    ]
   }
 ]

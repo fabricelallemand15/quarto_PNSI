@@ -9,6 +9,7 @@ Ce site est destiné à regrouper les cours et les exercices concernant l'enseig
 ::: {.callout-note .updates-box}
 ## Dernières mises à jour
 
+- Octobre 2026 - Correction d'imprécisions dans le chapitre 1 Python, partie tableaux.
 - Septembre 2026 - Migration des sources du site vers la Forge + changement des polices de caractères pour des polices libres + auto-hébergement de KaTeX pour les formules mathématiques.
 - Avril 2026 - Mise en place du mode Reader pleine page (bouton en haut à droite)
 - Avril 2026 - Mise à jour et correction de coquilles dans le chapitre 7 : [*Algorithmes*](14_algo/algo_cours.qmd)
