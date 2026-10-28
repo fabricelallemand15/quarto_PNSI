@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="460" viewBox="0 0 820 460" font-family="Arial, Helvetica, sans-serif">
+<title>Modèle de von Neumann monoprocesseur</title>
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+</defs>
+<rect x="0" y="0" width="820" height="460" fill="#ffffff" stroke="#999"/>
+<text x="410" y="30" text-anchor="middle" font-size="20" font-weight="bold">Modèle de von Neumann (monoprocesseur) — à légender</text>
+<!-- CPU -->
+<rect x="40" y="60" width="340" height="330" rx="10" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
+<text x="210" y="88" text-anchor="middle" font-size="16" font-weight="bold">PROCESSEUR (CPU)</text>
+<rect x="60" y="105" width="300" height="80" rx="6" fill="#BBDEFB" stroke="#1565C0"/>
+<text x="210" y="130" text-anchor="middle" font-size="15" font-weight="bold">UC — Unité de Commande</text>
+<text x="210" y="150" text-anchor="middle" font-size="12">lit, décode, orchestre (PC, IR)</text>
+<text x="210" y="166" text-anchor="middle" font-size="12">cycle Fetch-Decode-Execute</text>
+<rect x="60" y="195" width="300" height="80" rx="6" fill="#BBDEFB" stroke="#1565C0"/>
+<text x="210" y="220" text-anchor="middle" font-size="15" font-weight="bold">UAL — Unité Arithmétique et Logique</text>
+<text x="210" y="242" text-anchor="middle" font-size="12">calculs (+ −) et comparaisons</text>
+<text x="210" y="258" text-anchor="middle" font-size="12">(AND, OR, NOT, &lt;, =, &gt;)</text>
+<rect x="60" y="285" width="300" height="80" rx="6" fill="#BBDEFB" stroke="#1565C0"/>
+<text x="210" y="310" text-anchor="middle" font-size="15" font-weight="bold">Registres (R0, R1… PC, IR)</text>
+<text x="210" y="332" text-anchor="middle" font-size="12">variables ultra-rapides du CPU</text>
+<text x="210" y="348" text-anchor="middle" font-size="12">PC = prochaine instruction</text>
+<!-- Mémoire -->
+<rect x="440" y="60" width="340" height="150" rx="10" fill="#FFF3E0" stroke="#EF6C00" stroke-width="2"/>
+<text x="610" y="88" text-anchor="middle" font-size="16" font-weight="bold">MÉMOIRE CENTRALE (RAM)</text>
+<text x="610" y="112" text-anchor="middle" font-size="12">programme + données en cours</text>
+<text x="610" y="130" text-anchor="middle" font-size="12">cases adressées (adresse → contenu)</text>
+<text x="610" y="150" text-anchor="middle" font-size="12" font-weight="bold">programme enregistré (binaire)</text>
+<text x="610" y="170" text-anchor="middle" font-size="12">volatile — identique pour code/données</text>
+<!-- E/S -->
+<rect x="440" y="240" width="340" height="150" rx="10" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+<text x="610" y="268" text-anchor="middle" font-size="16" font-weight="bold">ENTRÉES / SORTIES</text>
+<text x="610" y="292" text-anchor="middle" font-size="12">clavier, souris, écran, disque (SSD/HDD),</text>
+<text x="610" y="310" text-anchor="middle" font-size="12">réseau… via contrôleurs / pilotes</text>
+<text x="610" y="330" text-anchor="middle" font-size="12">gérés par le système d'exploitation</text>
+<text x="610" y="350" text-anchor="middle" font-size="12">(voir partie B du chapitre)</text>
+<!-- Bus CPU <-> Mémoire -->
+<line x1="380" y1="110" x2="440" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arr)" marker-start="url(#arr)"/>
+<text x="410" y="102" text-anchor="middle" font-size="11" font-weight="bold">données</text>
+<line x1="380" y1="140" x2="440" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+<text x="410" y="132" text-anchor="middle" font-size="11" font-weight="bold">adresses</text>
+<line x1="380" y1="170" x2="440" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arr)" marker-start="url(#arr)"/>
+<text x="410" y="190" text-anchor="middle" font-size="11" font-weight="bold">contrôle</text>
+<text x="410" y="205" text-anchor="middle" font-size="12" font-weight="bold">BUS</text>
+<!-- CPU <-> E/S -->
+<line x1="380" y1="300" x2="440" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arr)" marker-start="url(#arr)"/>
+<text x="410" y="292" text-anchor="middle" font-size="11" font-weight="bold">bus</text>
+<!-- UC-UAL-Registres links -->
+<line x1="210" y1="185" x2="210" y2="195" stroke="#1565C0" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="230" y1="275" x2="230" y2="285" stroke="#1565C0" stroke-width="2" marker-end="url(#arr)"/>
+<text x="20" y="440" font-size="12">Horloge cadence l'ensemble • Monoprocesseur : 1 instruction à la fois • Multicœur : plusieurs CPU en parallèle</text>
+</svg>

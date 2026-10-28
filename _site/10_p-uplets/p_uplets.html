@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -77,14 +80,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-cf885d0f3921957c9354b0b86a3d537f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-ae65a95110bfb2804384608b621e0a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-f7ecc17cd2795e044d6bf0f011417244.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b47eb47272b45c9ff155f5987848fc07.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-f7ecc17cd2795e044d6bf0f011417244.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -528,25 +531,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../13_vonNeumann/neumann_cours_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 2 - Du transistor aux circuits logiques</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../13_vonNeumann/neumann_cours_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 3 - L’architecture de Von Neumann</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../13_vonNeumann/neumann_cours_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 4 - Du langage machine au processeur</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../01_os/OS_cours.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cours : Partie 5 - Les systèmes d’exploitation</span></a>
+ <span class="menu-text">Cours : Partie 2 - Modèle de von Neumann et systèmes d’exploitation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1054,16 +1039,16 @@ window.Quarto = {
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Cette syntaxe s’utilise souvent avec une fonction qui renvoie un tuple.</p>
 <p>Voici un exemple avec une fonction qui calcule et renvoie les longueurs des trois côtés d’un triangle ABC. La fonction prend en paramètres trois p-uplets représentant les coordonnées des trois points. On importe au préalable la fonction racine carrée <code>sqrt</code> du module <code>math</code>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
-<span id="cb7-2"><a href="#cb7-2"></a></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="kw">def</span> longueurs(A, B, C):</span>
-<span id="cb7-4"><a href="#cb7-4"></a>    xA, yA <span class="op">=</span> A</span>
-<span id="cb7-5"><a href="#cb7-5"></a>    xB, yB <span class="op">=</span> B</span>
-<span id="cb7-6"><a href="#cb7-6"></a>    xC, yC <span class="op">=</span> C</span>
-<span id="cb7-7"><a href="#cb7-7"></a>    dAB <span class="op">=</span> sqrt((xB <span class="op">-</span> xA) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> (yB <span class="op">-</span> yA) <span class="op">**</span> <span class="dv">2</span>)</span>
-<span id="cb7-8"><a href="#cb7-8"></a>    dBC <span class="op">=</span> sqrt((xC <span class="op">-</span> xB) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> (yC <span class="op">-</span> yB) <span class="op">**</span> <span class="dv">2</span>)</span>
-<span id="cb7-9"><a href="#cb7-9"></a>    dAC <span class="op">=</span> sqrt((xC <span class="op">-</span> xA) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> (yC <span class="op">-</span> yA) <span class="op">**</span> <span class="dv">2</span>)</span>
-<span id="cb7-10"><a href="#cb7-10"></a>    <span class="cf">return</span> dAB, dBC, dAC</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-label="1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
+<span id="cb7-2"><a href="#cb7-2" aria-label="2"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-label="3"></a><span class="kw">def</span> longueurs(A, B, C):</span>
+<span id="cb7-4"><a href="#cb7-4" aria-label="4"></a>    xA, yA <span class="op">=</span> A</span>
+<span id="cb7-5"><a href="#cb7-5" aria-label="5"></a>    xB, yB <span class="op">=</span> B</span>
+<span id="cb7-6"><a href="#cb7-6" aria-label="6"></a>    xC, yC <span class="op">=</span> C</span>
+<span id="cb7-7"><a href="#cb7-7" aria-label="7"></a>    dAB <span class="op">=</span> sqrt((xB <span class="op">-</span> xA) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> (yB <span class="op">-</span> yA) <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-label="8"></a>    dBC <span class="op">=</span> sqrt((xC <span class="op">-</span> xB) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> (yC <span class="op">-</span> yB) <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-label="9"></a>    dAC <span class="op">=</span> sqrt((xC <span class="op">-</span> xA) <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> (yC <span class="op">-</span> yA) <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-label="10"></a>    <span class="cf">return</span> dAB, dBC, dAC</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Dans cette fonction, les variables <code>A</code>, <code>B</code> et <code>C</code> sont des 2-uplets représentant les coordonnées des points A, B et C. Aux lignes 4, 5, 6, on <strong>dépaquette</strong> ces 2-uplets pour procéder à une affectation multiple.</p>
 <p>La fonction étant définie, nous l’utilisons dans l’interpréteur :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> M <span class="op">=</span> (<span class="fl">3.4</span>, <span class="fl">7.8</span>)</span>

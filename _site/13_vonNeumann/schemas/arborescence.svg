@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" font-family="Arial, Helvetica, sans-serif">
+<title>Arborescence Linux simplifiée</title>
+<rect x="0" y="0" width="760" height="430" fill="#fff" stroke="#999"/>
+<text x="380" y="28" text-anchor="middle" font-size="18" font-weight="bold">Arborescence Linux simplifiée (dossiers = rectangles, fichiers = texte)</text>
+<g font-size="13" text-anchor="middle">
+<rect x="350" y="45" width="60" height="32" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/><text x="380" y="66" font-weight="bold">/</text>
+<rect x="40" y="120" width="70" height="30" rx="6" fill="#E3F2FD" stroke="#1565C0"/><text x="75" y="140">bin</text>
+<rect x="125" y="120" width="70" height="30" rx="6" fill="#E3F2FD" stroke="#1565C0"/><text x="160" y="140">boot</text>
+<rect x="210" y="120" width="70" height="30" rx="6" fill="#E3F2FD" stroke="#1565C0"/><text x="245" y="140">dev</text>
+<rect x="295" y="120" width="70" height="30" rx="6" fill="#E3F2FD" stroke="#1565C0"/><text x="330" y="140">etc</text>
+<rect x="380" y="120" width="70" height="30" rx="6" fill="#FFF3E0" stroke="#EF6C00" stroke-width="2"/><text x="415" y="140" font-weight="bold">home</text>
+<rect x="465" y="120" width="60" height="30" rx="6" fill="#E3F2FD" stroke="#1565C0"/><text x="495" y="140">lib</text>
+<rect x="540" y="120" width="70" height="30" rx="6" fill="#E3F2FD" stroke="#1565C0"/><text x="575" y="140">media</text>
+<rect x="625" y="120" width="60" height="30" rx="6" fill="#E3F2FD" stroke="#1565C0"/><text x="655" y="140">tmp</text>
+<rect x="330" y="195" width="90" height="30" rx="6" fill="#FFF3E0" stroke="#EF6C00"/><text x="375" y="215">fabrice</text>
+<rect x="440" y="195" width="90" height="30" rx="6" fill="#FFF3E0" stroke="#EF6C00"/><text x="485" y="215">marie</text>
+<rect x="300" y="270" width="90" height="30" rx="6" fill="#E8F5E9" stroke="#2E7D32"/><text x="345" y="290">Images</text>
+<rect x="410" y="270" width="105" height="30" rx="6" fill="#E8F5E9" stroke="#2E7D32"/><text x="462" y="290">Documents</text>
+<rect x="530" y="270" width="90" height="30" rx="6" fill="#E8F5E9" stroke="#2E7D32"/><text x="575" y="290">Vidéos</text>
+<text x="345" y="330">img_486.jpg</text>
+<text x="462" y="330">img_751.jpg</text>
+<text x="462" y="352">compte_rendu.odt</text>
+<text x="575" y="330">mon_film.mp4</text>
+<text x="160" y="190">grub.cfg</text>
+</g>
+<g stroke="#555" stroke-width="1.5">
+<line x1="380" y1="77" x2="75" y2="120"/><line x1="380" y1="77" x2="160" y2="120"/><line x1="380" y1="77" x2="245" y2="120"/><line x1="380" y1="77" x2="330" y2="120"/><line x1="380" y1="77" x2="415" y2="120"/><line x1="380" y1="77" x2="495" y2="120"/><line x1="380" y1="77" x2="575" y2="120"/><line x1="380" y1="77" x2="655" y2="120"/>
+<line x1="415" y1="150" x2="375" y2="195"/><line x1="415" y1="150" x2="485" y2="195"/>
+<line x1="375" y1="225" x2="345" y2="270"/>
+<line x1="485" y1="225" x2="462" y2="270"/><line x1="485" y1="225" x2="575" y2="270"/>
+<line x1="345" y1="300" x2="345" y2="315"/><line x1="462" y1="300" x2="462" y2="315"/><line x1="575" y1="300" x2="575" y2="315"/>
+<line x1="160" y1="150" x2="160" y2="175"/>
+</g>
+<text x="380" y="390" text-anchor="middle" font-size="12">Absolu : /home/marie/Documents/compte_rendu.odt • Relatif (depuis Documents) : ../Vidéos/mon_film.mp4 • ~ = /home/login</text>
+<text x="380" y="410" text-anchor="middle" font-size="12">sensible à la casse • pas d'accents/espaces • Tab = complétion • .. = parent • . = courant</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" font-family="Arial, Helvetica, sans-serif">
+<title>Couches du système d'exploitation</title>
+<rect x="0" y="0" width="640" height="420" fill="#fff" stroke="#999"/>
+<text x="320" y="30" text-anchor="middle" font-size="19" font-weight="bold">Les couches : à quoi sert le système d'exploitation ?</text>
+<rect x="90" y="55" width="460" height="55" rx="8" fill="#E1F5FE" stroke="#0277BD" stroke-width="2"/>
+<text x="320" y="78" text-anchor="middle" font-size="15" font-weight="bold">Utilisateur (humain)</text>
+<text x="320" y="97" text-anchor="middle" font-size="12">clavier, souris, écran — interface graphique ou terminal</text>
+<rect x="90" y="118" width="460" height="55" rx="8" fill="#FFF9C4" stroke="#F9A825" stroke-width="2"/>
+<text x="320" y="141" text-anchor="middle" font-size="15" font-weight="bold">Applications (Firefox, Thonny, LibreOffice…)</text>
+<text x="320" y="160" text-anchor="middle" font-size="12">demandent des services au système (ouvrir, afficher…)</text>
+<rect x="90" y="181" width="460" height="60" rx="8" fill="#FFE0B2" stroke="#EF6C00" stroke-width="2"/>
+<text x="320" y="204" text-anchor="middle" font-size="15" font-weight="bold">Shell &amp; services (bash, fenêtres, fichiers)</text>
+<text x="320" y="223" text-anchor="middle" font-size="12">interprète les commandes : ls, cd, cp, chmod…</text>
+<rect x="90" y="249" width="460" height="65" rx="8" fill="#FFCDD2" stroke="#C62828" stroke-width="2"/>
+<text x="320" y="272" text-anchor="middle" font-size="15" font-weight="bold">Noyau / Kernel (cœur du SE — ex. noyau Linux)</text>
+<text x="320" y="291" text-anchor="middle" font-size="12">processus • mémoire • fichiers • pilotes • droits</text>
+<rect x="90" y="322" width="460" height="55" rx="8" fill="#E0E0E0" stroke="#424242" stroke-width="2"/>
+<text x="320" y="345" text-anchor="middle" font-size="15" font-weight="bold">Matériel (CPU, RAM, disque, périphériques)</text>
+<text x="320" y="364" text-anchor="middle" font-size="12">modèle de von Neumann (partie A)</text>
+<line x1="70" y1="330" x2="70" y2="80" stroke="#333" stroke-width="2" marker-end="url(#a)" marker-start="url(#a)"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<text x="60" y="210" text-anchor="middle" font-size="12" transform="rotate(-90 60,210)">demandes / réponses</text>
+<text x="320" y="400" text-anchor="middle" font-size="12">5 verbes : exécuter • ranger • mémoriser • piloter • protéger</text>
+</svg>

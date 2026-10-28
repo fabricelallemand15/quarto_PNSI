@@ -57,9 +57,9 @@ website:
         contents: 
           - 13_vonNeumann/neumann_cours_1.qmd
           - 13_vonNeumann/neumann_cours_2.qmd
-          - 13_vonNeumann/neumann_cours_3.qmd
-          - 13_vonNeumann/neumann_cours_4.qmd
-          - 01_os/OS_cours.qmd
+          # - 13_vonNeumann/neumann_cours_3.qmd
+          # - 13_vonNeumann/neumann_cours_4.qmd
+          # - 01_os/OS_cours.qmd
           - 13_vonNeumann/exos_circuits.qmd
           - 13_vonNeumann/neumann_exos.qmd
           - 13_vonNeumann/neumann_TP.qmd
