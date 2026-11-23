@@ -357,6 +357,14 @@ Exemples de logiciels libres : GNU/Linux (Debian, Ubuntu…), Firefox et LibreOf
 
 Linux est utilisé en NSI car il permet d’étudier et d’utiliser un système libre, propose des outils en ligne de commande et est très répandu sur les serveurs et dans les systèmes embarqués.
 
+::: {.callout-tip}
+## Pour approfondir
+
+* [Notion de logiciel libre](logiciel_libre.pdf)
+* [Historique de Linux](histoire_linux.pdf)
+* [Qui utilisent Linux ?](usages_linux.pdf)
+:::
+
 ## Linux en ligne de commande
 
 Le **terminal** affiche une interface permettant d’écrire des commandes. Le **shell** (par exemple `bash`) interprète ces commandes et demande au système de réaliser les opérations.
